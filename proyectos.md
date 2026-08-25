@@ -1,0 +1,302 @@
+- Acceso a datos
+    - Manejo de ficheros
+        - Clases asociadas a las operaciones de gestión de ficheros
+        - Formas de acceso a un fichero. Ventajas
+        - Clases para gestión de flujos de datos desdehacia ficheros
+        - Operaciones sobre ficheros secuenciales y aleatorios
+        - Serializacióndeserialización de objetos
+        - Trabajo con ficheros
+        - Excepciones detección y tratamiento
+        - Desarrollo de aplicaciones que utilizan ficheros
+    - Manejo de conectores
+        - El desfase objeto-relacional
+        - Protocolos de acceso a bases de datos
+        - Establecimiento de conexiones
+        - Ejecución de sentencias de descripción de datos
+        - Ejecución de sentencias de modificación de datos
+        - Ejecución de consultas. Manipulación del resultado
+        - Ejecución de procedimientos almacenados en la base de datos
+        - Gestión de transacciones
+        - Desarrollo de programas que utilizan bases de datos
+    - Herramientas de mapeo objeto relacional (ORM)
+        - Concepto de mapeo objeto relacional
+        - Características de las herramientas ORM
+        - Instalación de una herramienta ORM. Configuración
+        - Estructura de un fichero de mapeo
+        - Mapeo basado en anotaciones
+        - Clases persistentes
+        - Sesiones; estados de un objeto
+        - Carga, almacenamiento y modificación de objetos
+        - Consultas SQL
+        - Gestión de transacciones
+        - Desarrollo de programas que utilizan bases de datos a través de herramientas ORM
+    - Bases de datos objeto relacionales y orientadas a objetos
+        - Gestores de bases de datos objeto relacionales
+        - Gestión de objetos con SQL; ANSI SQL
+        - Acceso a las funciones del gestor de base de datos objeto-relacional
+        - Gestores de bases de datos orientadas a objetos
+        - Gestión de la persistencia de objetos
+        - El interfaz de programación de aplicaciones de la base de datos orientada a objetos
+        - Gestión de transacciones
+        - Desarrollo de programas que gestionan objetos en bases de datos
+    - Bases de datos documentales
+        - Bases de datos documentales nativas
+        - Establecimiento y cierre de conexiones
+        - Colecciones y documentos
+        - Creación y borrado de colecciones
+        - Añadir, modificar y eliminar documentos
+        - Lenguajes de consulta. Realización de consultas
+        - Desarrollo de programas que utilizan bases de datos documentales
+    - Programación de componentes de acceso a datos
+        - Concepto de componente
+        - Propiedades y atributos
+        - Eventos; asociación de acciones a eventos
+        - Persistencia del componente
+        - Herramientas para desarrollo de componentes
+        - Desarrollo, empaquetado y utilización de componentes
+- Desarrollo de interfaces
+    - Generación de interfaces de usuario
+        - Patrones de arquitectura de las aplicaciones gráficas
+        - Librerías de componentes nativas y multiplataforma
+        - Herramientas propietarias y libres de edición de interfaces
+        - Lenguajes descriptivos para la definición de interfaces
+        - Componentes características y campo de aplicación
+        - Enlace de componentes a orígenes de datos
+        - Asociación de acciones a eventos
+        - Edición del código generado por la herramienta de diseño
+        - Clases, propiedades, métodos
+        - Eventos; escuchadores
+    - Generación de interfaces naturales de usuario
+        - Herramientas para el aprendizaje automático
+        - Interfaces naturales
+        - Voz y Habla
+        - Partes y movimientos del cuerpo
+        - Realidad aumentada
+    - Creación de componentes visuales
+        - Concepto de componente
+        - Propiedades, atributos y métodos
+        - Eventos; asociación de acciones a eventos
+        - Persistencia del componente
+        - Herramientas para desarrollo de componentes visuales
+        - Prueba de los componentes
+        - Empaquetado de componentes
+    - Diseño de interfaces gráficas
+        - Usabilidad y accesibilidad
+        - Medidas de usabilidad y accesibilidad de las aplicaciones
+        - Esquemas (Wireframes) y Maquetas (Mockups)
+        - Pautas de diseño de la estructura de la interfaz de usuario
+        - Pautas de diseño del aspecto de la interfaz de usuario
+        - Pautas de diseño
+        - Pautas de diseño de la secuencia de control de la aplicación
+    - Creación de informes
+        - Informes incrustados y no incrustados en la aplicación
+        - Herramientas gráficas integradas en el IDE y externas al mismo
+        - Estructura general. Secciones
+        - Filtrado de datos
+        - Numeración de líneas, recuentos y totales
+        - Gráficos
+        - Librerías para generación de informes. Clases, métodos y atributos
+        - Conexión con las fuentes de datos. Ejecución de consultas
+    - Documentación de aplicaciones
+        - Ficheros de ayuda. Formatos
+        - Herramientas de generación de ayudas
+        - Tablas de contenidos, índices, sistemas de búsqueda, entre otros
+        - Tipos de manuales
+        - Elaboración de tutoriales
+    - Distribución de aplicaciones
+        - Componentes de una aplicación. Empaquetado
+        - Instaladores
+        - Paquetes autoinstalables
+        - Firma digital de aplicaciones
+        - Herramientas para crear paquetes de instalación
+        - Personalización de la instalación
+        - Asistentes de instalación y desinstalación
+        - Canales de distribución repositorios
+    - Realización de pruebas
+        - Objetivo, importancia y limitaciones del proceso de prueba
+        - Pruebas de integración ascendentes y descendentes
+        - Pruebas de sistema configuración, recuperación, entre otras
+        - Pruebas de uso de recursos
+        - Pruebas de seguridad
+        - Pruebas manuales y automáticas
+- Programación de servicios y procesos
+    - Programación multiproceso
+        - Ejecutables. Procesos. Servicios
+        - Estados de un proceso. Planificación de procesos
+        - Hilos
+        - Programación concurrente
+        - Programación paralela y distribuida
+        - Comunicación entre procesos
+        - Gestión de procesos. Herramientas de monitorización
+        - Sincronización entre procesos
+        - Programación de aplicaciones multiproceso
+    - Programación multihilo
+        - Contexto de ejecución de los hilos
+        - Estados de un hilo. Cambios de estado
+        - Librerías y clases
+        - Gestión de hilos. Prioridades
+        - Sincronización de hilos
+        - Compartición de información entre hilos
+        - Programación de aplicaciones multihilo
+    - Programación de comunicaciones en red
+        - Comunicación entre aplicaciones
+        - Roles cliente y servidor
+        - Librerías y clases
+        - Sockets. Tipos. Características
+        - Creación de sockets
+        - Enlazado y establecimiento de conexiones
+        - Utilización de sockets para la transmisión y recepción de información
+        - Programación de aplicaciones cliente y servidor
+        - Utilización de hilos para la implementación de comunicaciones simultáneas con el servidor
+    - Generación de servicios en red
+        - Protocolos estándar de comunicación en red a nivel de aplicación
+        - Servicios web
+        - Librerías de clases y componentes
+        - Programación de servidores
+        - Establecimiento y finalización de conexiones
+        - Transmisión de información
+        - Implementación de comunicaciones simultáneas
+        - Utilización de aplicaciones clientes
+        - Monitorización del servicio. Herramientas
+    - Utilización de técnicas de programación segura
+        - Prácticas de programación segura
+        - Criptografía de clave pública y clave privada
+        - Principales aplicaciones de la criptografía
+        - Protocolos criptográficos
+        - Política de seguridad. Roles
+        - Programación de mecanismos de control de acceso
+        - Encriptación de información
+        - Protocolos seguros de comunicaciones
+        - Programación de aplicaciones con comunicaciones seguras
+- Programación multimedia y dispositivos móviles
+    - Análisis de motores de juegos
+        - Animación 2D y 3D
+        - Arquitectura del juego. Componentes
+        - Motores de juegos Tipos y utilización
+        - Áreas de especialización, librerías utilizadas y lenguajes de programación
+        - Componentes de un motor de juegos
+        - Librerías que proporcionan las funciones básicas de un Motor 2D3D
+        - Estudio de juegos existentes
+        - Aplicación de modificaciones sobre juegos existentes
+    - Desarrollo de juegos 2D y 3D
+        - Técnicas de programación 2D3D
+        - Fases de desarrollo
+        - Componentes de los objetos
+        - Fuentes de audio. Propiedades
+        - Cámaras e iluminación
+        - Creación de escenas.
+        - Análisis de ejecución
+    - Utilización de librerías multimedia integradas
+        - Conceptos sobre aplicaciones multimedia
+        - Arquitectura del API utilizado
+        - Fuentes de datos multimedia. Clases
+        - Procesamiento de objetos multimedia
+        - Reproducción de objetos multimedia
+        - Animación de objetos
+    - Análisis de tecnologías para aplicaciones en dispositivos móviles
+        - Dispositivos móviles
+        - Hardware para dispositivos móviles
+        - Tecnologías de desarrollo
+        - Emuladores. Configuraciones
+        - Aplicaciones móviles
+        - Modelo de estados de una aplicación móvil activo, pausa y destruido
+        - Ciclo de vida de una aplicación
+        - Modificación de aplicaciones existentes
+        - Utilización del entorno de ejecución del administrador de aplicaciones
+    - Desarrollo de aplicaciones para dispositivos móviles
+        - Herramientas. Flujo de trabajo
+        - Componentes de una aplicación. Recursos
+        - Interfaces de usuario. Clases asociadas
+        - Contexto gráfico. Imágenes
+        - Métodos de entrada. Eventos
+        - Gestión de las preferencias de la aplicación
+        - Bases de datos y almacenamiento
+        - Persistencia
+        - Tareas en segundo plano. Servicios
+        - Seguridad y permisos
+        - Conectividad. Tipos.
+        - Manejo de conexiones HTTP y HTTPS
+        - Sensores
+        - Posicionamiento. Localización. Mapas
+- Proyecto Intermodular II
+    - Introduccion
+    - Análisis
+        - Recopilación de información
+        - Identificación y priorización de necesidades.
+        - Identificación de los aspectos que facilitan o dificultan el desarrollo de la posible intervención
+    - Diseño
+        - Definición o adaptación de la intervención
+        - Priorización y secuenciación de las acciones.
+        - La planificación de la intervención
+        - Determinación de recursos.
+        - Planificación de la evaluación
+        - Diseño de documentación
+        - Plan de atención al cliente
+    - Organizacion
+        - Detección de demandas y necesidades
+        - Programación
+        - Gestión
+        - Coordinación y supervisión de la intervención
+        - Elaboración de informes
+        - Seguimiento y control
+    - Actividades profesionales
+        - Áreas de sistemas y departamentos de informática en cualquier sector de actividad
+        - Sector de servicios tecnológicos y comunicaciones
+        - Área comercial con gestión de transacciones por Internet
+    - Lineas de actuación
+        - La ejecución de trabajos en equipo
+        - La autoevaluación del trabajo realizado
+        - La autonomía y la iniciativa
+        - El uso de las TIC
+    - Bibliografía
+- Sistemas de gestión empresarial
+    - Identificación de sistemas ERP-CRM
+        - Concepto de ERP
+        - Revisión de los ERP actuales
+        - Concepto de CRM
+        - Revisión de los CRM actuales
+        - Tipos de licencias de los ERP-CRM
+        - Sistemas gestores de bases de datos compatibles con el software
+        - Instalación y configuración del sistema informático
+        - Verificación de la instalación y configuración
+        - Documentación de las operaciones realizadas
+    - Instalación y configuración de sistemas ERP-CRM
+        - Tipos de instalación.
+        - Módulos de un sistema ERP-CRM
+        - Procesos de instalación del sistema ERP-CRM
+        - Parámetros de configuración del sistema ERP-CRM
+        - Actualización del sistema ERP-CRM y aplicación de actualizaciones
+        - Servicios de acceso al sistema ERP-CRM
+        - Entornos de desarrollo, pruebas y explotación
+    - Organización y consulta de la información
+        - Definición de campos
+        - Consultas de acceso a datos
+        - Interfaces de entrada de datos y de procesos.
+        - Informes y listados de la aplicación
+        - Gestión de pedidos
+        - Gráficos
+        - Herramientas de monitorización y de evaluación del rendimiento
+        - Incidencias identificación y resolución
+        - Procesos de extracción de datos en sistemas de ERP-CRM y almacenes de datos
+        - Inteligencia de negocio (Business Intelligence)
+    - Implantación de sistemas ERP-CRM en una empresa
+        - Tipos de empresa. Necesidades de la empresa
+        - Selección de los módulos del sistema ERP-CRM
+        - Tablas y vistas que es preciso adaptar
+        - Consultas necesarias para obtener información
+        - Creación de formularios personalizados
+        - Creación de informes personalizados
+        - Paneles de control (Dashboards)
+        - Integración con otros sistemas de gestión
+    - Desarrollo de componentes
+        - Arquitectura del ERP-CRM
+        - Lenguaje proporcionado
+        - Entornos de desarrollo y herramientas del sistema ERP y CRM
+        - Inserción, modificación y eliminación de datos en los objetos
+        - Operaciones de consulta. Herramientas
+        - Formularios e informes
+        - Procesamiento de datos y obtención de la información
+        - Llamadas a funciones, librerías de funciones (APIs)
+        - Depuración y tratamiento de errores
+
+
