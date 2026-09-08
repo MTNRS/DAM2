@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <style>
+    .jocarsa-alerta{
+    	position:absolute;
+      width:200px;
+      height:100px;
+      margin-left:-100px;
+      top:20px;
+      left:50%;
+      border:1px solid grey;
+      padding:20px;
+      text-align:center;
+      display:none;
+    }
+  </style>
+</head>
+<body>
+  <div class="jocarsa-alerta">
+    <p>Este es mi mensaje</p>
+  </div>
+  <button>Pulsame</button>
+  <script>
+    let boton = document.querySelector("button")
+    boton.onclick = function(){
+    	document.querySelector(".jocarsa-alerta").style.display = "block"
+    }
+  </script>
+</body>
+</html>

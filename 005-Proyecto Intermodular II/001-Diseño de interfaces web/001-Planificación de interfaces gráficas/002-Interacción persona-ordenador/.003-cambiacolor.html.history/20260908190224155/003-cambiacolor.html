@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <body>
+    <button>Comenzar a escuchar</button>
+    <div id="objetivo"></div>
+    <script>
+      document.querySelector('button').addEventListener('click', function() {
+        const recognition = new webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'es-ES';
+
+        recognition.onresult = function(event) {
+          const result = event.results[0][0].transcript;
+          document.getElementById('objetivo').textContent = result;
+        };
+
+        recognition.start();
+      });
+    </script>
+  </body>
+</html>

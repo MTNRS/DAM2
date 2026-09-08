@@ -1,2 +1,0 @@
-# Elaboración de informes
-

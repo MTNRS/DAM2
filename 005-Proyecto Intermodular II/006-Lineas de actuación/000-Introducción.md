@@ -1,2 +1,0 @@
-# Lineas de actuación
-

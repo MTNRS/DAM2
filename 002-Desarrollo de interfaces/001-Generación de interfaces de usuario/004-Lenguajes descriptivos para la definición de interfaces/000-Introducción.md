@@ -1,2 +1,14 @@
 # Lenguajes descriptivos para la definición de interfaces
-
+- Lenguajes de definición:
+	- Web
+		-Estructura en HTML
+		-Estilo en CSS
+	- Ejemplo Android
+		- Estructura en XML (esto se verá en profundidad en Programación Multimedia y en Dispositivos)
+		- Estilo en XML
+	- Elementos web
+		- body
+		- header, footer, main
+		- div genérico
+		- section y article
+		- aside

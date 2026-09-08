@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas{border:1px solid black;}
+    </style>
+  </head>
+  <body>
+    <canvas width=400px height=400px>
+    </canvas>
+    <script>
+      const lienzo = document.querySelector("canvas");
+      const contexto = lienzo.getContext("2d");
+      let x = 40;
+      let y = 40;
+      let temporizador = setTimeout("bucle()",1000) // Llamo al bucle por primera vez
+      function bucle(){	// Este es el bucle
+        contexto.clearRect(0,0,400,400)							// Borramos el canvas
+        x += Math.random()-0.5 											// Varía un poco la x
+        y += Math.random()-0.5											// Varia un poco la y
+      	contexto.fillRect(x,y,x+5,y+5)
+        clearTimeout(temporizador)									// Elimino el temporizador
+        temporizador = setTimeout("bucle()",100)		// Vuelvo a ejecutar el bucle
+      }
+      
+    </script>
+  </body>
+</html>

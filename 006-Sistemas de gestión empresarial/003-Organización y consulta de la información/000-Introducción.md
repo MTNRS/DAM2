@@ -1,2 +1,11 @@
 # Organización y consulta de la información
-
+- Definición de campos
+- Consultas de acceso a datos
+- Interfaces de entrada de datos y de procesos.
+- Informes y listados de la aplicación
+- Gestión de pedidos
+- Gráficos
+- Herramientas de monitorización y de evaluación del rendimiento
+- Incidencias identificación y resolución
+- Procesos de extracción de datos en sistemas de ERP-CRM y almacenes de datos
+- Inteligencia de negocio (Business Intelligence)

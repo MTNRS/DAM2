@@ -1,0 +1,7 @@
+Datetime: 2026-09-07T15:23:56.589Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros
+Command: python3 001-escritura.py
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de fichero
+s/001-Clases asociadas a las operaciones de gestión de ficheros$ 

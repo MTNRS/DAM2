@@ -1,2 +1,11 @@
 # Generación de interfaces de usuario
-
+- Patrones de arquitectura de las aplicaciones gráficas
+- Librerías de componentes nativas y multiplataforma
+- Herramientas propietarias y libres de edición de interfaces
+- Lenguajes descriptivos para la definición de interfaces
+- Componentes características y campo de aplicación
+- Enlace de componentes a orígenes de datos
+- Asociación de acciones a eventos
+- Edición del código generado por la herramienta de diseño
+- Clases, propiedades, métodos
+- Eventos; escuchadores

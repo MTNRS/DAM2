@@ -1,0 +1,9 @@
+Datetime: 2026-09-07T15:49:57.264Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros
+Command: python3 007-leer\ pickle.py
+
+Result:
+Objeto guardado en 'persona.pkl'
+Objeto cargado desde 'persona.pkl': Persona(nombre='Juan', edad=30)
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases as
+ociadas a las operaciones de gestión de ficheros$ 

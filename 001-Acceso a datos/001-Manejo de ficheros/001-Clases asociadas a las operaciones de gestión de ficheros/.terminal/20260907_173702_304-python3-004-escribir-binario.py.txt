@@ -1,0 +1,26 @@
+Datetime: 2026-09-07T15:37:02.304Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros
+Command: python3 004-escribir\ binario.py
+
+Result:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros/004-escribir binario.py", line 4, in <module>
+    archivo.write(nombre)
+TypeError: a bytes-like object is required, not 'str'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_001-Manejo de ficheros_001-Clases asociadas a las operaciones de gestión de ficheros_004-escribir binario.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros/004-escribir binario.py", line 4, in <module>
+    archivo.write(nombre)
+TypeError: a bytes-like object is required, not 'str'
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de fichero
+s/001-Clases asociadas a las operaciones de gestión de ficheros$ 

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body{background:blue;}
+    </style>
+  </head>
+  <body>
+    <button>Comenzar a escuchar</button>
+    <div id="objetivo"></div>
+    <script>
+      document.querySelector('button').addEventListener('click', function() {
+        let cuerpo = document.querySelector("body")
+        const recognition = new webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-EN';
+
+        recognition.onresult = function(event) {
+          const result = event.results[0][0].transcript;
+          document.getElementById('objetivo').textContent = result;
+          cuerpo.style.backgroundColor = result
+        };
+
+        recognition.start();
+      });
+    </script>
+  </body>
+</html>

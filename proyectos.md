@@ -186,14 +186,14 @@
         - Cámaras e iluminación
         - Creación de escenas.
         - Análisis de ejecución
-    - Utilización de librerías multimedia integradas
+    - Utilización de librerías multimedia integradas - creación de un reproductor de video extendido - portal de videos como youtube
         - Conceptos sobre aplicaciones multimedia
         - Arquitectura del API utilizado
         - Fuentes de datos multimedia. Clases
         - Procesamiento de objetos multimedia
         - Reproducción de objetos multimedia
         - Animación de objetos
-    - Análisis de tecnologías para aplicaciones en dispositivos móviles
+    - Análisis de tecnologías para aplicaciones en dispositivos móviles - creación de un framework para aplicaciones móviles
         - Dispositivos móviles
         - Hardware para dispositivos móviles
         - Tecnologías de desarrollo
@@ -203,7 +203,7 @@
         - Ciclo de vida de una aplicación
         - Modificación de aplicaciones existentes
         - Utilización del entorno de ejecución del administrador de aplicaciones
-    - Desarrollo de aplicaciones para dispositivos móviles
+    - Desarrollo de aplicaciones para dispositivos móviles 
         - Herramientas. Flujo de trabajo
         - Componentes de una aplicación. Recursos
         - Interfaces de usuario. Clases asociadas

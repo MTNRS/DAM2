@@ -1,0 +1,12 @@
+Datetime: 2026-09-07T18:40:35.503Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/001-Ejecutables. Procesos. Servicios
+Command: gcc 007-decimales.c
+
+Result:
+007-decimales.c: In function ‘main’:
+007-decimales.c:5:43: error: ‘edad’ undeclared (first use in this function)
+    5 |     printf("Mi altura es de %d metros \n",edad);
+      |                                           ^~~~
+007-decimales.c:5:43: note: each undeclared identifier is reported only once for each function it appears in
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y 
+procesos/001-Programación multiproceso/001-Ejecutables. Procesos. Servicios$ 

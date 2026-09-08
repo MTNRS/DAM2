@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas{border:1px solid black;}
+    </style>
+  </head>
+  <body>
+    <canvas width=400px height=400px>
+    </canvas>
+    <script>
+      const lienzo = document.querySelector("canvas");
+      const contexto = lienzo.getContext("2d");
+      let x = 40;
+      let y = 40;
+      contexto.fillRect(x,y,x+20,y+20)
+    </script>
+  </body>
+</html>

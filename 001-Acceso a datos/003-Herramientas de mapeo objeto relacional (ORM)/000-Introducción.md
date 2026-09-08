@@ -1,2 +1,12 @@
 # Herramientas de mapeo objeto relacional (ORM)
-
+- Concepto de mapeo objeto relacional
+- Características de las herramientas ORM
+- Instalación de una herramienta ORM. Configuración
+- Estructura de un fichero de mapeo
+- Mapeo basado en anotaciones
+- Clases persistentes
+- Sesiones; estados de un objeto
+- Carga, almacenamiento y modificación de objetos
+- Consultas SQL
+- Gestión de transacciones
+- Desarrollo de programas que utilizan bases de datos a través de herramientas ORM

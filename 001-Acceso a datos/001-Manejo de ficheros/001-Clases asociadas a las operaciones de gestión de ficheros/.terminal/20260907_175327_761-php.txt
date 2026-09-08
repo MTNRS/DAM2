@@ -1,0 +1,9 @@
+Datetime: 2026-09-07T15:53:27.761Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros
+Command: php
+
+Result:
+PHP Warning:  Module "gd" is already loaded in Unknown on line 0
+^C
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases as
+ociadas a las operaciones de gestión de ficheros$ 
