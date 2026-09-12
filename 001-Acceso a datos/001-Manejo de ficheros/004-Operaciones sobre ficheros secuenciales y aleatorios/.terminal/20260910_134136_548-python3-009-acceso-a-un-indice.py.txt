@@ -1,0 +1,8 @@
+Datetime: 2026-09-10T11:41:36.548Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios
+Command: python3 009-acceso\ a\ un\ indice.py
+
+Result:
+499,Silvia,Soler Soler,900000499,contacto0000499@example.test,Nodo Azul,Soporte Técnico,Bilbao
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios$ 

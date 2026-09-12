@@ -1,0 +1,37 @@
+Datetime: 2026-09-10T10:34:26.204Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros
+Command: python3 001-jocarsa-basededatos.py
+
+Result:
+{'id': '1', 'nombre': 'Laura', 'apellidos': 'Martínez Soler', 'telefono': '000 000 001', 'email': 'laura.martinez@example.com', 'empresa': 'Nébula Digital', 'cargo': 'Diseñadora UX', 'ciudad': 'Valencia'}
+{'id': '2', 'nombre': 'Carlos', 'apellidos': 'Gómez Navarro', 'telefono': '000 000 002', 'email': 'carlos.gomez@example.com', 'empresa': 'Levante Tech', 'cargo': 'Programador', 'ciudad': 'Valencia'}
+{'id': '3', 'nombre': 'Marta', 'apellidos': 'Ruiz Ferrer', 'telefono': '000 000 003', 'email': 'marta.ruiz@example.com', 'empresa': 'Ágora Sistemas', 'cargo': 'Consultora', 'ciudad': 'Alicante'}
+{'id': '4', 'nombre': 'David', 'apellidos': 'Sánchez Vidal', 'telefono': '000 000 004', 'email': 'david.sanchez@example.com', 'empresa': 'Pixel Norte', 'cargo': 'Desarrollador Web', 'ciudad': 'Castellón'}
+{'id': '5', 'nombre': 'Ana', 'apellidos': 'Torres Ibáñez', 'telefono': '000 000 005', 'email': 'ana.torres@example.com', 'empresa': 'Brújula Media', 'cargo': 'Responsable de Marketing', 'ciudad': 'Valencia'}
+{'id': '6', 'nombre': 'Javier', 'apellidos': 'Moreno Pastor', 'telefono': '000 000 006', 'email': 'javier.moreno@example.com', 'empresa': 'Datamar Solutions', 'cargo': 'Analista de Datos', 'ciudad': 'Madrid'}
+{'id': '7', 'nombre': 'Elena', 'apellidos': 'Ortega Calvo', 'telefono': '000 000 007', 'email': 'elena.ortega@example.com', 'empresa': 'Lumen Formación', 'cargo': 'Coordinadora', 'ciudad': 'Valencia'}
+{'id': '8', 'nombre': 'Pablo', 'apellidos': 'García Moya', 'telefono': '000 000 008', 'email': 'pablo.garcia@example.com', 'empresa': 'Código Claro', 'cargo': 'Ingeniero de Software', 'ciudad': 'Alicante'}
+{'id': '9', 'nombre': 'Lucía', 'apellidos': 'Navarro Blasco', 'telefono': '000 000 009', 'email': 'lucia.navarro@example.com', 'empresa': 'Horizonte Creativo', 'cargo': 'Ilustradora', 'ciudad': 'Valencia'}
+{'id': '10', 'nombre': 'Sergio', 'apellidos': 'Molina Esteve', 'telefono': '000 000 010', 'email': 'sergio.molina@example.com', 'empresa': 'Cloudia Labs', 'cargo': 'Administrador de Sistemas', 'ciudad': 'Castellón'}
+{'id': '11', 'nombre': 'Paula', 'apellidos': 'Ferrer Campos', 'telefono': '000 000 011', 'email': 'paula.ferrer@example.com', 'empresa': 'Innova Aula', 'cargo': 'Docente', 'ciudad': 'Valencia'}
+{'id': '12', 'nombre': 'Miguel', 'apellidos': 'Vega Romero', 'telefono': '000 000 012', 'email': 'miguel.vega@example.com', 'empresa': 'Vector Apps', 'cargo': 'Desarrollador Móvil', 'ciudad': 'Madrid'}
+{'id': '13', 'nombre': 'Clara', 'apellidos': 'Domínguez Roca', 'telefono': '000 000 013', 'email': 'clara.dominguez@example.com', 'empresa': 'Métrica Uno', 'cargo': 'Project Manager', 'ciudad': 'Valencia'}
+{'id': '14', 'nombre': 'Álvaro', 'apellidos': 'Pérez Serra', 'telefono': '000 000 014', 'email': 'alvaro.perez@example.com', 'empresa': 'Nodo Azul', 'cargo': 'Técnico de Redes', 'ciudad': 'Alicante'}
+{'id': '15', 'nombre': 'Irene', 'apellidos': 'López Galán', 'telefono': '000 000 015', 'email': 'irene.lopez@example.com', 'empresa': 'Círculo Web', 'cargo': 'Frontend Developer', 'ciudad': 'Valencia'}
+{'id': '16', 'nombre': 'Raúl', 'apellidos': 'Castro Gimeno', 'telefono': '000 000 016', 'email': 'raul.castro@example.com', 'empresa': 'Kernel Sur', 'cargo': 'Backend Developer', 'ciudad': 'Murcia'}
+{'id': '17', 'nombre': 'Natalia', 'apellidos': 'Soler Pardo', 'telefono': '000 000 017', 'email': 'natalia.soler@example.com', 'empresa': 'Alba Consultores', 'cargo': 'Administrativa', 'ciudad': 'Valencia'}
+{'id': '18', 'nombre': 'Héctor', 'apellidos': 'Ramos Gil', 'telefono': '000 000 018', 'email': 'hector.ramos@example.com', 'empresa': 'Prisma IT', 'cargo': 'DevOps Engineer', 'ciudad': 'Barcelona'}
+{'id': '19', 'nombre': 'Silvia', 'apellidos': 'Campos Nieto', 'telefono': '000 000 019', 'email': 'silvia.campos@example.com', 'empresa': 'Aula Futura', 'cargo': 'Orientadora', 'ciudad': 'Valencia'}
+{'id': '20', 'nombre': 'Óscar', 'apellidos': 'Vidal Cano', 'telefono': '000 000 020', 'email': 'oscar.vidal@example.com', 'empresa': 'Bit Mediterráneo', 'cargo': 'Soporte Técnico', 'ciudad': 'Alicante'}
+{'id': '21', 'nombre': 'Beatriz', 'apellidos': 'Roca Martínez', 'telefono': '000 000 021', 'email': 'beatriz.roca@example.com', 'empresa': 'Trama Studio', 'cargo': 'Diseñadora Gráfica', 'ciudad': 'Valencia'}
+{'id': '22', 'nombre': 'Daniel', 'apellidos': 'Pastor López', 'telefono': '000 000 022', 'email': 'daniel.pastor@example.com', 'empresa': 'Sigma Gestión', 'cargo': 'Consultor ERP', 'ciudad': 'Castellón'}
+{'id': '23', 'nombre': 'Nuria', 'apellidos': 'Blasco Torres', 'telefono': '000 000 023', 'email': 'nuria.blasco@example.com', 'empresa': 'FormaLab', 'cargo': 'Técnica de Formación', 'ciudad': 'Valencia'}
+{'id': '24', 'nombre': 'Adrián', 'apellidos': 'Ibáñez Ruiz', 'telefono': '000 000 024', 'email': 'adrian.ibanez@example.com', 'empresa': 'Red Nova', 'cargo': 'Especialista Cloud', 'ciudad': 'Madrid'}
+{'id': '25', 'nombre': 'Cristina', 'apellidos': 'Moya Sánchez', 'telefono': '000 000 025', 'email': 'cristina.moya@example.com', 'empresa': 'IntegraSoft', 'cargo': 'QA Engineer', 'ciudad': 'Valencia'}
+{'id': '26', 'nombre': 'Marcos', 'apellidos': 'Esteve García', 'telefono': '000 000 026', 'email': 'marcos.esteve@example.com', 'empresa': 'Delta Código', 'cargo': 'Arquitecto de Software', 'ciudad': 'Alicante'}
+{'id': '27', 'nombre': 'Sara', 'apellidos': 'Romero Navarro', 'telefono': '000 000 027', 'email': 'sara.romero@example.com', 'empresa': 'Punto Docente', 'cargo': 'Profesora', 'ciudad': 'Valencia'}
+{'id': '28', 'nombre': 'Rubén', 'apellidos': 'Calvo Ferrer', 'telefono': '000 000 028', 'email': 'ruben.calvo@example.com', 'empresa': 'TecnoVía', 'cargo': 'Técnico Informático', 'ciudad': 'Castellón'}
+{'id': '29', 'nombre': 'Alicia', 'apellidos': 'Serra Molina', 'telefono': '000 000 029', 'email': 'alicia.serra@example.com', 'empresa': 'Idea Pública', 'cargo': 'Gestora de Proyectos', 'ciudad': 'Valencia'}
+{'id': '30', 'nombre': 'Víctor', 'apellidos': 'Galán Ortega', 'telefono': '000 000 030', 'email': 'victor.galan@example.com', 'empresa': 'Byte Central', 'cargo': 'Desarrollador Full Stack', 'ciudad': 'Madrid'}
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manej
+o de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros$ 

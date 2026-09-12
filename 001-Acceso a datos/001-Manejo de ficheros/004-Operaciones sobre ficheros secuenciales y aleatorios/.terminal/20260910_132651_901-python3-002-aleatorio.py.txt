@@ -1,0 +1,7 @@
+Datetime: 2026-09-10T11:26:51.901Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios
+Command: python3 002-aleatorio.py
+
+Result:
+8734412
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios$ 

@@ -1,0 +1,9 @@
+Datetime: 2026-09-10T11:45:54.311Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios
+Command: python3 011-mas\ eficiente.py
+
+Result:
+Registros: 1
+Tiempo: 2.4262000806629658e-05 segundos
+Personas llamadas Laura: 0
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios$ 

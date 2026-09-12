@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+     <header data-include="nucleo/componentes/cabecera.html"></header>
+    <nav data-include="nucleo/componentes/menu.html"></nav>
+    <main id="aplicacion"></main>
+    <footer data-include="nucleo/componentes/piedepagina.html"></footer>
+    <script>
+    	async function cargarIncludes() {
+        const elementos = document.querySelectorAll("[data-include]");
+        for (const elemento of elementos) {
+            const archivo = elemento.dataset.include;
+            const respuesta = await fetch(archivo);
+            if (!respuesta.ok) {
+                console.error("No se puede cargar:", archivo);
+                continue;
+            }
+            elemento.innerHTML = await respuesta.text();
+        }
+    	}
+			cargarIncludes();
+    </script>
+  </body>
+</html>

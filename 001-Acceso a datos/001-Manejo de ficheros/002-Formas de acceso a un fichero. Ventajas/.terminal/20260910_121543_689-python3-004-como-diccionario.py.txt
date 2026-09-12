@@ -1,0 +1,36 @@
+Datetime: 2026-09-10T10:15:43.689Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/002-Formas de acceso a un fichero. Ventajas
+Command: python3 004-como\ diccionario.py
+
+Result:
+Laura
+Carlos
+Marta
+David
+Ana
+Javier
+Elena
+Pablo
+Lucía
+Sergio
+Paula
+Miguel
+Clara
+Álvaro
+Irene
+Raúl
+Natalia
+Héctor
+Silvia
+Óscar
+Beatriz
+Daniel
+Nuria
+Adrián
+Cristina
+Marcos
+Sara
+Rubén
+Alicia
+Víctor
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/002-Formas de acceso a un fichero. Ventajas$ 

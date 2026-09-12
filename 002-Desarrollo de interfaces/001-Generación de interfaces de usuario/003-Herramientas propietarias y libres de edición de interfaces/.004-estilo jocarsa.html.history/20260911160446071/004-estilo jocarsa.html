@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <style>
+      :root{
+        --tono:0;
+        --saturacion:50%;
+        --brillo:50%;
+        
+        --colorsecundario: lightsteelblue;
+        --colortexto: white;
+        --relleno:20px;
+        
+        
+      }
+      html{width:100%;height:100%;padding:0px;}
+      .jocarsa-iu{width:100%;height:100%;padding:0px;margin:0px;font-family:sans-serif;
+      display:flex;flex-direction:column;}
+      .jocarsa-iu header{background:var(--color);display:flex;justify-content:space-between;
+      padding:var(--relleno);color:var(--colortexto);flex:1;align-items:center;}
+      .jocarsa-iu main{display:flex;flex:20;}
+      .jocarsa-iu main nav{background:var(--color);flex:1;display:flex;flex-direction:column;
+      padding:var(--relleno);box-sizing:border-box;gap:var(--relleno);padding-top:0px;}
+      .jocarsa-iu main section{background:var(--colorsecundario);flex:1;padding:var(--relleno);
+        gap:var(--relleno);
+        display:flex;flex-direction:column;
+        }
+      .jocarsa-iu main div{flex:4;background:aliceblue;}
+      .jocarsa-iu main nav a{color:inherit;text-decoration:none;
+        background:var(--colorsecundario);padding:10px;
+      }.jocarsa-iu main nav .activo{width: calc(100% + var(--relleno));}
+      .jocarsa-iu main section article{background:aliceblue;padding:var(--relleno);}
+      .jocarsa-iu main section .activo{width: calc(100% + var(--relleno));}
+    </style>
+  </head>
+  <body class="jocarsa-iu">
+    <header>
+    	<div id="corporativo">Corporativo
+      </div>
+      <div id="herramientas">Herramientas
+      </div>
+      <div id="usuario">Usuario
+      </div>
+    </header>
+    <main>
+      <nav>
+        <a href="">Entidad</a>
+        <a href="" class="activo">Entidad</a>
+        <a href="">Entidad</a>
+        <a href="">Entidad</a>
+        <a href="">Entidad</a>
+        <a href="">Entidad</a>
+      </nav>
+      <section>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article class="activo">Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+      </section>
+      <div></div>
+    </main>
+  </body>
+</html>

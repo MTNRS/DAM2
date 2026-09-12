@@ -1,0 +1,7 @@
+Datetime: 2026-09-10T11:34:00.025Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios
+Command: python3 005-iteracion.py
+
+Result:
+Tiempo de recorrido: 0.011764183999730449 segundos
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios$ 
