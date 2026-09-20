@@ -27,6 +27,13 @@ si Git detecta un conflicto.
 GitHub también ejecuta esta sincronización automáticamente cada seis horas y
 permite lanzarla manualmente desde la pestaña **Actions**.
 
+## Normas de entrega
+
+Las reglas que se aplicarán a todos los trabajos están recogidas en
+[`NORMAS-ENTREGA.md`](NORMAS-ENTREGA.md). Cada trabajo tendrá una carpeta y un
+repositorio independientes; se ajustará al RA, a los criterios trabajados en
+clase y al estilo sencillo y didáctico del profesor.
+
 ## Trabajo personal
 
 Antes de empezar una tarea:
