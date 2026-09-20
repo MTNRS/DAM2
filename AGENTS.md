@@ -7,8 +7,8 @@ DAM. Las instrucciones concretas del enunciado de cada tarea tienen prioridad.
 
 - Cada trabajo debe vivir en una carpeta nueva y en un repositorio de GitHub
   independiente.
-- El repositorio será privado salvo que el usuario indique expresamente otra
-  cosa.
+- El repositorio será público para que pueda entregarse y revisarse desde
+  GitHub.
 - Antes de crearlo, se debe identificar la asignatura, la unidad didáctica, el
   Resultado de Aprendizaje (RA) y los criterios de evaluación aplicables.
 - No se debe desarrollar una entrega dentro de `DAM2`. Este repositorio sirve

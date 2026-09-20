@@ -3,6 +3,9 @@
 Este repositorio personal sigue el material publicado por el profesor en
 [`jocarsa/tame2627dam2`](https://github.com/jocarsa/tame2627dam2).
 
+El repositorio general de DAM2 y todos los repositorios independientes de las
+entregas son públicos para facilitar su revisión y entrega.
+
 ## Remotos
 
 - `origin`: repositorio personal `MTNRS/DAM2`.

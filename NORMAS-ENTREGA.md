@@ -5,7 +5,7 @@ conocimientos adquiridos durante la unidad y sus subunidades.
 
 ## Requisitos del proyecto
 
-- Cada trabajo tendrá su propia carpeta y su propio repositorio.
+- Cada trabajo tendrá su propia carpeta y su propio repositorio público.
 - El proyecto respetará el Resultado de Aprendizaje correspondiente.
 - Se alineará con los criterios de evaluación trabajados en las clases mediante
   ejercicios prácticos.
