@@ -1,0 +1,39 @@
+# Credenciales y configuración local
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+
+# Archivos del sistema y del editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vs/
+*.suo
+*.user
+*.swp
+*.tmp
+
+# Dependencias y resultados de compilación
+node_modules/
+dist/
+build/
+target/
+bin/
+obj/
+.gradle/
+*.class
+
+# Entornos y cachés de Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Informes generados
+coverage/
+*.log
