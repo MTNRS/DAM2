@@ -34,6 +34,11 @@ Las reglas que se aplicarán a todos los trabajos están recogidas en
 repositorio independientes; se ajustará al RA, a los criterios trabajados en
 clase y al estilo sencillo y didáctico del profesor.
 
+Siempre que encaje con la unidad, los trabajos partirán de necesidades o casos
+de uso de Integra Tech Consulting. Las mejoras útiles se prepararán para una
+integración aislada y comprobada en el proyecto real, protegiendo los datos, la
+rama principal y el servicio en producción.
+
 ## Trabajo personal
 
 Antes de empezar una tarea:

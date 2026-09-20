@@ -41,6 +41,33 @@ de IA no debe sustituir su razonamiento ni la realización personal del
 proyecto. Cada entrega explicará brevemente cómo se utilizó la IA y qué trabajo
 y decisiones realizó el alumno.
 
+## Aplicación en Integra Tech Consulting
+
+Siempre que sea coherente con la unidad, el proyecto partirá de un caso de uso,
+una necesidad o un componente de Integra Tech Consulting. La memoria explicará
+qué relación tiene con el proyecto empresarial y qué utilidad puede aportar.
+
+Cuando el resultado sea útil para el producto real, se preparará una integración
+separada y segura en el repositorio correspondiente de `IntTecCon`. El proyecto
+académico conservará su repositorio independiente.
+
+La integración empresarial debe cumplir estas condiciones:
+
+- Usar una rama específica y conservar intacta la rama principal.
+- Respetar la arquitectura y las instrucciones del repositorio real.
+- Utilizar datos ficticios o anonimizados en la entrega académica.
+- No copiar credenciales, información interna ni datos de clientes.
+- Ejecutar las pruebas y comprobaciones existentes.
+- Revisar dependencias, migraciones, configuración y seguridad.
+- Validar primero en un entorno aislado o de pruebas cuando esté disponible.
+- Preparar una forma de volver al estado anterior antes de un despliegue.
+- No desplegar en producción hasta que la integración haya sido revisada y
+  verificada expresamente.
+
+Si el proyecto no puede integrarse sin riesgo o no encaja con la arquitectura
+actual, se conservará como prototipo y se documentará una propuesta de
+integración futura.
+
 ## Proceso para cada trabajo
 
 1. Identificar asignatura, unidad, RA y criterios de evaluación aplicables.
@@ -51,3 +78,5 @@ y decisiones realizó el alumno.
 6. Probar el funcionamiento y revisar que no haya secretos ni dependencias.
 7. Generar `INFORME.md` con `jocarsa | documentacion`.
 8. Documentar el uso de IA, confirmar el commit final y entregar el repositorio.
+9. Explicar la relación con Integra Tech Consulting y, cuando corresponda,
+   preparar y verificar su integración segura.

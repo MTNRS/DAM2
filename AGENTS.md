@@ -26,6 +26,37 @@ DAM. Las instrucciones concretas del enunciado de cada tarea tienen prioridad.
 - Antes de programar, se deben revisar en `DAM2` los materiales y ejercicios de
   la unidad correspondiente.
 
+## Relación con Integra Tech Consulting
+
+- Siempre que el RA y el enunciado lo permitan, el trabajo se basará en una
+  necesidad, proceso, módulo o caso de uso real de Integra Tech Consulting.
+- Si el resultado aporta valor al proyecto real, se preparará también para su
+  integración en los repositorios de la organización `IntTecCon`.
+- La adaptación académica y la integración empresarial se mantendrán separadas:
+  el trabajo tendrá su propio repositorio y los cambios del producto se harán
+  en una rama específica del repositorio real.
+- Antes de reutilizar o integrar código se deben leer las instrucciones del
+  repositorio afectado, revisar su arquitectura y comprobar el estado actual de
+  GitHub y de producción.
+- No se copiarán al trabajo académico credenciales, direcciones internas, datos
+  de clientes, copias de bases de datos ni lógica privada que no sea necesaria.
+  Los ejemplos usarán datos ficticios o anonimizados.
+- La integración debe respetar las tecnologías, contratos, interfaces y
+  convenciones existentes. La sencillez didáctica del trabajo no justifica
+  sustituir o degradar arquitectura estable de producción.
+- Todo cambio aplicable a Integra Tech Consulting se desarrollará en una rama o
+  entorno aislado. Se ejecutarán las pruebas existentes y las comprobaciones
+  específicas del cambio antes de proponer su incorporación.
+- Nunca se enviará directamente a producción un trabajo académico sin revisar
+  diferencias, dependencias, migraciones, configuración, seguridad y plan de
+  reversión. Cuando exista staging, se validará allí primero.
+- Las ramas predeterminadas y producción deben permanecer intactas hasta que la
+  versión integrada esté revisada y verificada. El despliegue se realizará solo
+  como una acción explícita y con una copia recuperable del estado anterior.
+- Si una idea académica no encaja de forma segura con el producto, se mantendrá
+  como prototipo independiente y se documentará qué cambios serían necesarios
+  para integrarla más adelante.
+
 ## Estilo jocarsa
 
 - Código sencillo, directo y didáctico.
@@ -82,3 +113,7 @@ DAM. Las instrucciones concretas del enunciado de cada tarea tienen prioridad.
 7. El README contiene la sección `Uso de IA`.
 8. El repositorio independiente está actualizado y la entrega apunta al commit
    correcto.
+9. Se ha indicado su relación con Integra Tech Consulting: componente aplicado,
+   propuesta de integración o motivo por el que se mantiene como prototipo.
+10. Si existe una integración real, ha sido validada sin modificar directamente
+    producción ni la rama predeterminada.
