@@ -38,8 +38,9 @@ revisar, comparar alternativas, detectar errores y ayudar a documentar.
 
 El alumno debe comprender, revisar y poder defender todo lo entregado. El uso
 de IA no debe sustituir su razonamiento ni la realización personal del
-proyecto. Cada entrega explicará brevemente cómo se utilizó la IA y qué trabajo
-y decisiones realizó el alumno.
+proyecto. Cada entrega lo explicará de forma breve y natural: mencionará solo el
+apoyo puntual para buscar información o revisar errores y dejará claro que el
+alumno realizó, comprobó y comprendió el trabajo.
 
 ## Aplicación en Integra Tech Consulting
 

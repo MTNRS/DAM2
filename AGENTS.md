@@ -77,9 +77,11 @@ DAM. Las instrucciones concretas del enunciado de cada tarea tienen prioridad.
   el alumno.
 - No se debe presentar una aplicación generada íntegramente por IA como trabajo
   propio ni ocultar su uso.
-- Cada repositorio incluirá una sección `Uso de IA` en su README o informe con:
-  qué ayuda se utilizó, qué decisiones tomó el alumno y qué partes revisó o
-  modificó personalmente.
+- Cada repositorio incluirá una sección breve y natural `Uso de IA`: indicará el
+  apoyo puntual para buscar información o revisar errores y dejará claro que el
+  alumno ha realizado, comprobado y comprendido el trabajo.
+- La redacción no atribuirá a la IA la creación del proyecto ni usará fórmulas
+  extensas o artificiales. Debe describir con honestidad una ayuda limitada.
 - Cuando se trabaje con un agente, se favorecerá un proceso didáctico: explicar
   cada bloque, mantener cambios pequeños y dejar trazabilidad en los commits.
 
