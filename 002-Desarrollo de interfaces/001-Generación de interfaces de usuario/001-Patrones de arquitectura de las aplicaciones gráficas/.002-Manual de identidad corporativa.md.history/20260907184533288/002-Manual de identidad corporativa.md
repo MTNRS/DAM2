@@ -1,0 +1,3 @@
+Tomaroslo como un documento en el que juntas todo aquello que os gusta
+
+Si escogéis colores, que sean porque os gustan, y porque tienen un significado

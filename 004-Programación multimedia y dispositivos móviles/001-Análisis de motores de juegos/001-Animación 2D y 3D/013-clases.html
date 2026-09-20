@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas{
+        border:1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+
+    <canvas width="400" height="400"></canvas>
+
+    <script>
+
+      const lienzo = document.querySelector("canvas");
+      const contexto = lienzo.getContext("2d");
+
+
+      class Particula{
+
+        constructor(x,y,angulo,color){
+          this.x = x;
+          this.y = y;
+          this.angulo = angulo;
+          this.color = color;
+        }
+
+
+        gira(){
+
+          // Variamos ligeramente el ángulo
+          this.angulo += (Math.random()-0.5)*0.8;
+
+          // Si llegamos a los límites, damos media vuelta
+          if(this.x < 0){
+            this.angulo += Math.PI;
+          }
+
+          if(this.y < 0){
+            this.angulo += Math.PI;
+          }
+
+          if(this.x > 400){
+            this.angulo += Math.PI;
+          }
+
+          if(this.y > 400){
+            this.angulo += Math.PI;
+          }
+
+        }
+
+
+        mueve(){
+
+          this.x += Math.cos(this.angulo);
+          this.y += Math.sin(this.angulo);
+
+        }
+
+
+        pinta(){
+
+          contexto.fillStyle = this.color;
+          contexto.fillRect(this.x,this.y,5,5);
+
+        }
+
+      }
+
+
+      // Creamos un objeto
+      const particula = new Particula(
+        40,
+        40,
+        0,
+        "red"
+      );
+
+
+      let temporizador = setTimeout(bucle,1000);
+
+
+      function bucle(){
+
+        contexto.clearRect(0,0,400,400);
+
+        particula.gira();
+        particula.mueve();
+        particula.pinta();
+
+        clearTimeout(temporizador);
+
+        temporizador = setTimeout(bucle,20);
+
+      }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+name: Sincronizar material del profesor
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sincronizar-profesor
+  cancel-in-progress: false
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio personal
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Incorporar novedades del profesor
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add upstream https://github.com/jocarsa/tame2627dam2.git
+          git fetch upstream main --prune
+
+          if git merge-base --is-ancestor upstream/main HEAD; then
+            echo "El repositorio ya está actualizado."
+            exit 0
+          fi
+
+          git merge --no-edit upstream/main
+          git push origin HEAD:main

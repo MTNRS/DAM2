@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <style>
+      :root{
+        --tono:200;
+        --saturacion:50%;
+        --brillo:70%;
+        --escalon:20%;
+        
+        --colorsecundario: lightsteelblue;
+        --colortexto: white;
+        --relleno:12px;
+        
+        --color: hsl(var(--tono),var(--saturacion),var(--brillo));
+        --color2:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + var(--escalon)));
+        --color3:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + calc(var(--escalon) * 2)));
+        
+        --colortextonav:hsl(0,0%,calc((var(--brillo) - 50%) * -1000));
+        --colortextosection:hsl(0,0%,calc((var(--brillo) + var(--escalon) - 50%) * -1000));
+        --texto:12px;
+      }
+      
+      html{width:100%;height:100%;padding:0px;}
+      
+      .jocarsa-iu{width:100%;height:100%;padding:0px;margin:0px;font-family:sans-serif;
+      display:flex;flex-direction:column;font-size:var(--texto);}
+      
+      .jocarsa-iu header{background:var(--color);display:flex;justify-content:space-between;
+      padding:var(--relleno);color:var(--colortextonav);flex:1;align-items:center;}
+      
+      .jocarsa-iu main{display:flex;flex:20;}
+      
+      .jocarsa-iu main nav{background:var(--color);flex:1;display:flex;flex-direction:column;
+      padding:var(--relleno);box-sizing:border-box;gap:var(--relleno);padding-top:0px;
+      color:var(--colortextonav);}
+      
+      .jocarsa-iu main section{background:var(--color2);flex:1;padding:var(--relleno);
+        gap:var(--relleno);
+        display:flex;flex-direction:column;
+        color:var(--colortextosection);
+        }
+        
+      .jocarsa-iu main div{flex:4;background:var(--color3);}
+      
+      .jocarsa-iu main nav a{color:inherit;text-decoration:none;
+        background:var(--color2);padding:var(--relleno);
+      }
+      
+      .jocarsa-iu main nav .activo{width: calc(100% + var(--relleno));}
+      
+      .jocarsa-iu main section article{background:var(--color3);padding:var(--relleno);}
+      
+      .jocarsa-iu main section .activo{width: calc(100% + var(--relleno));}
+      .jocarsa-iu header .corporativo{display:flex;align-items:center;}
+      .jocarsa-iu header .corporativo img{width:40px;}
+      .jocarsa-iu header .corporativo h1{padding:0px;margin:0px;font-size:14px;}
+      .jocarsa-iu main>div{padding:var(--relleno);overflow-y:scroll;}
+      .jocarsa-iu main>div table{width:100%;height:100%;border-spacing: 0px}
+      .jocarsa-iu main>div table thead{background:var(--color);}
+      .jocarsa-iu main>div table th,.jocarsa-iu main>div table td{padding:10x;}
+    </style>
+  </head>
+  <body class="jocarsa-iu">
+    <header>
+    	<div class="corporativo">
+        <img src="https://static.jocarsa.com/logos/white.svg">
+        <h1>jocarsa | programa</h1>
+      </div>
+      <div id="herramientas">Herramientas
+      </div>
+      <div id="usuario">Usuario
+      </div>
+    </header>
+    <main>
+      <nav>
+        <a href="">Entidad</a>
+        <a href="" class="activo">Entidad</a>
+        <a href="">Entidad</a>
+        <a href="">Entidad</a>
+        <a href="">Entidad</a>
+        <a href="">Entidad</a>
+      </nav>
+      <section>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article class="activo">Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+        <article>Elemento</article>
+      </section>
+      <div class="escenario">
+      	<table>
+          <caption>Listado de clientes</caption>
+
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellidos</th>
+              <th scope="col">Email</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Empresa</th>
+              <th scope="col">Ciudad</th>
+              <th scope="col">País</th>
+              <th scope="col">Fecha de alta</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Laura</td>
+              <td>Martínez García</td>
+              <td>laura.martinez@example.com</td>
+              <td>+34 612 345 678</td>
+              <td>Soluciones Levante S.L.</td>
+              <td>Valencia</td>
+              <td>España</td>
+              <td><time datetime="2026-01-15">15/01/2026</time></td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th scope="row">2</th>
+              <td>Carlos</td>
+              <td>Navarro Pérez</td>
+              <td>carlos.navarro@example.com</td>
+              <td>+34 623 456 789</td>
+              <td>Innovación Digital S.A.</td>
+              <td>Madrid</td>
+              <td>España</td>
+              <td><time datetime="2026-02-03">03/02/2026</time></td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th scope="row">3</th>
+              <td>Ana</td>
+              <td>Ruiz Fernández</td>
+              <td>ana.ruiz@example.com</td>
+              <td>+34 634 567 890</td>
+              <td>Formación Mediterránea S.L.</td>
+              <td>Alicante</td>
+              <td>España</td>
+              <td><time datetime="2026-02-18">18/02/2026</time></td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th scope="row">4</th>
+              <td>David</td>
+              <td>Sánchez López</td>
+              <td>david.sanchez@example.com</td>
+              <td>+34 645 678 901</td>
+              <td>Tecnologías Norte S.L.</td>
+              <td>Bilbao</td>
+              <td>España</td>
+              <td><time datetime="2026-03-07">07/03/2026</time></td>
+              <td>Inactivo</td>
+            </tr>
+
+            <tr>
+              <th scope="row">5</th>
+              <td>Marta</td>
+              <td>Gómez Torres</td>
+              <td>marta.gomez@example.com</td>
+              <td>+34 656 789 012</td>
+              <td>Grupo Atlántico</td>
+              <td>A Coruña</td>
+              <td>España</td>
+              <td><time datetime="2026-03-22">22/03/2026</time></td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th scope="row">6</th>
+              <td>Javier</td>
+              <td>Moreno Díaz</td>
+              <td>javier.moreno@example.com</td>
+              <td>+34 667 890 123</td>
+              <td>Desarrollos del Sur S.L.</td>
+              <td>Sevilla</td>
+              <td>España</td>
+              <td><time datetime="2026-04-11">11/04/2026</time></td>
+              <td>Pendiente</td>
+            </tr>
+
+            <tr>
+              <th scope="row">7</th>
+              <td>Lucía</td>
+              <td>Romero Vidal</td>
+              <td>lucia.romero@example.com</td>
+              <td>+34 678 901 234</td>
+              <td>EducaTech S.L.</td>
+              <td>Castellón</td>
+              <td>España</td>
+              <td><time datetime="2026-05-09">09/05/2026</time></td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th scope="row">8</th>
+              <td>Daniel</td>
+              <td>Ortega Molina</td>
+              <td>daniel.ortega@example.com</td>
+              <td>+34 689 012 345</td>
+              <td>Cloud Business S.L.</td>
+              <td>Barcelona</td>
+              <td>España</td>
+              <td><time datetime="2026-06-01">01/06/2026</time></td>
+              <td>Activo</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th scope="row" colspan="9">Total de clientes</th>
+              <td>8</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

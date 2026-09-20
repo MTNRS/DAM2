@@ -1,0 +1,38 @@
+# Componentes características y campo de aplicación
+- form
+  - input
+    - text
+    - password
+    - email
+    - number
+    - tel
+    - url
+    - search
+    - date
+    - time
+    - datetime-local
+    - month
+    - week
+    - color
+    - range
+    - checkbox
+    - radio
+    - file
+    - hidden
+    - submit
+    - reset
+    - button
+    - image
+  - textarea
+  - select
+    - option
+    - optgroup
+  - button
+  - label
+  - fieldset
+    - legend
+  - datalist
+  - output
+  - progress
+  - meter
+

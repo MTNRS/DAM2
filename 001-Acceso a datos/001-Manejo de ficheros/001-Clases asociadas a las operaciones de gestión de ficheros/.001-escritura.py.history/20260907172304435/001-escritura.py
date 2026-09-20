@@ -1,0 +1,1 @@
+archivo = open("agenda.txt",'w') # Flag indica el modo de apertura

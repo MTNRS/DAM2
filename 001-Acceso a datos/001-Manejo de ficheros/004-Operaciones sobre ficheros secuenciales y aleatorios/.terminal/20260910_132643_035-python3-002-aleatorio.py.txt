@@ -1,0 +1,27 @@
+Datetime: 2026-09-10T11:26:43.035Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios
+Command: python3 002-aleatorio.py
+
+Result:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios/002-aleatorio.py", line 3, in <module>
+    print(random.randint())
+          ^^^^^^^^^^^^^^^^
+TypeError: Random.randint() missing 2 required positional arguments: 'a' and 'b'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_001-Manejo de ficheros_004-Operaciones sobre ficheros secuenciales y aleatorios_002-aleatorio.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios/002-aleatorio.py", line 3, in <module>
+    print(random.randint())
+          ^^^^^^^^^^^^^^^^
+TypeError: Random.randint() missing 2 required positional arguments: 'a' and 'b'
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios$ 

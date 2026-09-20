@@ -1,0 +1,15 @@
+# Desarrollo de aplicaciones para dispositivos móviles
+- Herramientas. Flujo de trabajo
+- Componentes de una aplicación. Recursos
+- Interfaces de usuario. Clases asociadas
+- Contexto gráfico. Imágenes
+- Métodos de entrada. Eventos
+- Gestión de las preferencias de la aplicación
+- Bases de datos y almacenamiento
+- Persistencia
+- Tareas en segundo plano. Servicios
+- Seguridad y permisos
+- Conectividad. Tipos.
+- Manejo de conexiones HTTP y HTTPS
+- Sensores
+- Posicionamiento. Localización. Mapas

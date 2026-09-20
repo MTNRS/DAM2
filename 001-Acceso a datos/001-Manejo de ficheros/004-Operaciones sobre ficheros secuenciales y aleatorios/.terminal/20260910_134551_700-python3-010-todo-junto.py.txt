@@ -1,0 +1,13 @@
+Datetime: 2026-09-10T11:45:51.700Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios
+Command: python3 010-todo\ junto.py
+
+Result:
+Líneas: 1000001
+^CTraceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios/010-todo junto.py", line 38, in <module>
+    if numero == indice:
+       ^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios$ 

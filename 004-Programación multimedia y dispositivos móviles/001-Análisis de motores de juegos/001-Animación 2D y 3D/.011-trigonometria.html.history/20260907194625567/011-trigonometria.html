@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas{border:1px solid black;}
+    </style>
+  </head>
+  <body>
+    <canvas width=400px height=400px>
+    </canvas>
+    <script>
+      const lienzo = document.querySelector("canvas");
+      const contexto = lienzo.getContext("2d");
+      let x = 40;
+      let y = 40;
+      let angulo = 0;
+      let temporizador = setTimeout("bucle()",1000) // Llamo al bucle por primera vez
+      function bucle(){	// Este es el bucle
+        contexto.clearRect(0,0,400,400)							// Borramos el canvas
+        x += Math.cos(angulo)												// La componente x = cos
+        y += Math.sin(angulo)												// La componente y = sin
+      	contexto.fillRect(x,y,5,5)
+        clearTimeout(temporizador)									// Elimino el temporizador
+        temporizador = setTimeout("bucle()",20)		// Vuelvo a ejecutar el bucle
+      }
+      
+    </script>
+  </body>
+</html>

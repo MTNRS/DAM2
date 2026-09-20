@@ -1,0 +1,14 @@
+Datetime: 2026-09-07T18:40:41.729Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/001-Ejecutables. Procesos. Servicios
+Command: gcc 007-decimales.c
+
+Result:
+007-decimales.c: In function ‘main’:
+007-decimales.c:5:30: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘double’ [-Wformat=]
+    5 |     printf("Mi altura es de %d metros \n",altura);
+      |                             ~^            ~~~~~~
+      |                              |            |
+      |                              int          double
+      |                             %f
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y 
+procesos/001-Programación multiproceso/001-Ejecutables. Procesos. Servicios$ 

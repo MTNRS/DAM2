@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      canvas{border:1px solid black;}
+    </style>
+  </head>
+  <body>
+    <canvas width=400px height=400px>
+    </canvas>
+    <script>
+      const lienzo = document.querySelector("canvas");
+      const contexto = lienzo.getContext("2d");
+
+      contexto.beginPath()
+			contexto.moveTo(10,10);
+      contexto.lineTo(20,20);
+      contexto.lineTo(40,50);
+      contexto.lineTo(100,30);
+      contexto.stroke()
+    </script>
+  </body>
+</html>

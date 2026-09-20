@@ -1,0 +1,8 @@
+Datetime: 2026-09-10T11:35:02.518Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios
+Command: python3 006-busqueda.py
+
+Result:
+Tiempo: 1.4909895310001957 segundos
+Personas llamadas Laura: 33334
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios$ 

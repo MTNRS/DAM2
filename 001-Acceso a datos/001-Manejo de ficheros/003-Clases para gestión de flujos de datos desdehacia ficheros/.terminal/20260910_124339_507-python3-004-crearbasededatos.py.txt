@@ -1,0 +1,7 @@
+Datetime: 2026-09-10T10:43:39.507Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros
+Command: python3 004-crearbasededatos.py
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manej
+o de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros$ 

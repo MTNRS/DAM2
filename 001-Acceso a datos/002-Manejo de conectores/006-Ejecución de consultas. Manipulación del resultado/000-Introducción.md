@@ -1,0 +1,8 @@
+# Ejecución de consultas. Manipulación del resultado
+- Ejecución de consultas. Manipulación del resultado
+	- Sintaxis y estructura
+	- Selección y proyección de datos
+	- Condiciones y filtrado
+	- Ordenación y agrupación
+	- Operaciones y funciones
+	- Ejemplos de consultas

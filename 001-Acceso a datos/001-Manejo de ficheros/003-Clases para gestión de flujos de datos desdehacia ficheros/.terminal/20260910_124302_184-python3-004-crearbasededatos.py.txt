@@ -1,0 +1,28 @@
+Datetime: 2026-09-10T10:43:02.184Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros
+Command: python3 004-crearbasededatos.py
+
+Result:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros/004-crearbasededatos.py", line 26, in <module>
+    conexion = JocarsaBBDD("")
+               ^^^^^^^^^^^^^^^
+TypeError: JocarsaBBDD.__init__() takes 1 positional argument but 2 were given
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_001-Manejo de ficheros_003-Clases para gestión de flujos de datos desdehacia ficheros_004-crearbasededatos.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros/004-crearbasededatos.py", line 26, in <module>
+    conexion = JocarsaBBDD("")
+               ^^^^^^^^^^^^^^^
+TypeError: JocarsaBBDD.__init__() takes 1 positional argument but 2 were given
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manej
+o de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros$ 

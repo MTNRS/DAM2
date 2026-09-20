@@ -1,0 +1,8 @@
+Datetime: 2026-09-07T15:48:15.448Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros
+Command: python3 006-pickle.py
+
+Result:
+Objeto guardado en 'persona.pkl'
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases as
+ociadas a las operaciones de gestión de ficheros$ 
