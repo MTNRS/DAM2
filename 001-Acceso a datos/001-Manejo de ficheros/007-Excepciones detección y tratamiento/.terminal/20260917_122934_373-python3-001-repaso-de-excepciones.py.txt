@@ -1,0 +1,8 @@
+Datetime: 2026-09-17T10:29:34.373Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/007-Excepciones detección y tratamiento
+Command: python3 001-repaso\ de\ excepciones.py
+
+Result:
+Hola
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-M
+anejo de ficheros/007-Excepciones detección y tratamiento$ 

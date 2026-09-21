@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>jocarsa | programa</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://static.jocarsa.com/logos/white.svg" type="image/svg">
+
+    <style>
+      :root{
+        --tono:200;
+        --saturacion:50%;
+        --brillo:30%;
+        --escalon:20%;
+        
+        --colorsecundario:lightsteelblue;
+        --colortexto:white;
+        --relleno:12px;
+        --texto:12px;
+        
+        --chaflan:12px;
+        --chaflan-si:0px;
+        --chaflan-sd:var(--chaflan);
+        --chaflan-id:0px;
+        --chaflan-ii:0px;
+        
+        --color0:hsl(var(--tono),var(--saturacion),calc(var(--brillo) - var(--escalon)));
+        --color:hsl(var(--tono),var(--saturacion),var(--brillo));
+        --color2:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + var(--escalon)));
+        --color3:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + calc(var(--escalon) * 2)));
+        --color4:hsl(var(--tono),var(--saturacion),calc(var(--brillo) + calc(var(--escalon) * 3)));
+        
+        --colortextonav:hsl(0,0%,calc((var(--brillo) - 50%) * -1000));
+        --colortextosection:hsl(0,0%,calc((var(--brillo) + var(--escalon) - 50%) * -1000));
+      }
+      
+      *{
+        box-sizing:border-box;
+      }
+      
+      html{
+        width:100%;
+        height:100%;
+        padding:0px;
+        margin:0px;
+      }
+      
+      body{
+        margin:0px;
+      }
+      
+      .jocarsa-iu{
+        width:100%;
+        height:100%;
+        padding:0px;
+        margin:0px;
+        font-family:Ubuntu,sans-serif;
+        display:flex;
+        flex-direction:column;
+        font-size:var(--texto);
+        overflow:hidden;
+      }
+      
+      /* HEADER */
+      
+      .jocarsa-iu header{
+        background:var(--color);
+        display:flex;
+        justify-content:space-between;
+        padding:var(--relleno);
+        color:var(--colortextonav);
+        align-items:center;
+        gap:var(--relleno);
+        height:52px;
+        flex:none;
+      }
+      
+      .jocarsa-iu header .corporativo{
+        display:flex;
+        align-items:center;
+        gap:var(--relleno);
+        flex:1;
+        height:100%;
+      }
+      
+      .jocarsa-iu header .corporativo img{
+        width:28px;
+        height:28px;
+      }
+      
+      .jocarsa-iu header .corporativo h1{
+        padding:0px;
+        margin:0px;
+        font-size:14px;
+        font-weight:normal;
+        white-space:nowrap;
+      }
+      
+      .jocarsa-iu header input{
+        background:var(--color0);
+        border:0px;
+        padding:calc(var(--relleno) / 2);
+        outline:none;
+        height:28px;
+        color:var(--colortextonav);
+      }
+      
+      .jocarsa-iu header button,
+      .jocarsa-iu header a{
+        background:var(--color2);
+        border:none;
+        padding:calc(var(--relleno) / 2);
+        height:28px;
+        display:flex;
+        align-items:center;
+        color:var(--colortextonav);
+        text-decoration:none;
+        font:inherit;
+      }
+      
+      .jocarsa-iu header #herramientas{
+        display:flex;
+        gap:var(--relleno);
+        align-items:center;
+        justify-content:center;
+        flex:2;
+        height:100%;
+      }
+      
+      .jocarsa-iu header #usuario{
+        display:flex;
+        align-items:center;
+        justify-content:flex-end;
+        gap:var(--relleno);
+        flex:1;
+        height:100%;
+      }
+      
+      .jocarsa-iu header #usuario .imagen{
+        width:28px;
+        height:28px;
+        background:var(--color2);
+        border-radius:100px;
+        flex:none;
+      }
+      
+      .jocarsa-iu header #usuario>div:last-child{
+        background:transparent;
+        flex:none;
+        display:flex;
+        align-items:center;
+        gap:var(--relleno);
+      }
+      
+      .jocarsa-iu header #usuario p{
+        margin:0px;
+        white-space:nowrap;
+      }
+      
+      /* MAIN */
+      
+      .jocarsa-iu main{
+        display:flex;
+        flex:1;
+        min-height:0;
+        overflow:hidden;
+      }
+      
+      /* COLUMNA 1 */
+      
+      .jocarsa-iu main nav{
+        background:var(--color);
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        padding:var(--relleno);
+        gap:var(--relleno);
+        color:var(--colortextonav);
+        min-width:150px;
+        position:relative;
+        overflow:hidden;
+        transition:all 0.3s;
+      }
+      
+      /* COLUMNA 2 */
+      
+      .jocarsa-iu main section{
+        background:var(--color2);
+        flex:1;
+        display:flex;
+        flex-direction:column;
+        padding:var(--relleno);
+        gap:var(--relleno);
+        color:var(--colortextosection);
+        min-width:150px;
+        position:relative;
+        overflow-y:auto;
+        overflow-x:hidden;
+        transition:all 0.3s;
+      }
+      
+      /* NAV */
+      
+      .jocarsa-iu main nav a{
+        color:inherit;
+        text-decoration:none;
+        background:var(--color2);
+        padding:calc(var(--relleno) / 2);
+        clip-path:polygon(
+          var(--chaflan-si) 0,
+          calc(100% - var(--chaflan-sd)) 0,
+          100% var(--chaflan-sd),
+          100% calc(100% - var(--chaflan-id)),
+          calc(100% - var(--chaflan-id)) 100%,
+          var(--chaflan-ii) 100%,
+          0 calc(100% - var(--chaflan-ii)),
+          0 var(--chaflan-si)
+        );
+        transition:all 0.3s;
+        width:100%;
+        height:40px;
+        flex:none;
+        display:flex;
+        align-items:center;
+        gap:calc(var(--relleno) / 2);
+      }
+      
+      .jocarsa-iu main nav a:hover{
+        background:var(--color3);
+        width:calc(100% + calc(var(--relleno) * 0.9));
+      }
+      
+      .jocarsa-iu main nav .activo{
+        width:calc(100% + calc(var(--relleno) * 2));
+      }
+      
+      /* SECTION */
+      
+      .jocarsa-iu main section article{
+        background:var(--color3);
+        padding:calc(var(--relleno) / 2);
+        clip-path:polygon(
+          var(--chaflan-si) 0,
+          calc(100% - var(--chaflan-sd)) 0,
+          100% var(--chaflan-sd),
+          100% calc(100% - var(--chaflan-id)),
+          calc(100% - var(--chaflan-id)) 100%,
+          var(--chaflan-ii) 100%,
+          0 calc(100% - var(--chaflan-ii)),
+          0 var(--chaflan-si)
+        );
+        transition:all 0.3s;
+        width:100%;
+        height:40px;
+        flex:none;
+        display:flex;
+        align-items:center;
+        gap:calc(var(--relleno) / 2);
+      }
+      
+      .jocarsa-iu main section article:hover{
+        background:var(--color4);
+        width:calc(100% + calc(var(--relleno) * 0.9));
+      }
+      
+      .jocarsa-iu main section .activo{
+        width:calc(100% + calc(var(--relleno) * 2));
+      }
+      
+      /* FICHA */
+      
+      .jocarsa-iu main .ficha{
+        width:28px;
+        height:28px;
+        min-width:28px;
+        min-height:28px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        
+        color:white;
+        font-weight:bold;
+        flex:none;
+        
+        clip-path:polygon(
+          0 0,
+          calc(100% - 7px) 0,
+          100% 7px,
+          100% 100%,
+          0 100%
+        );
+      }
+      
+      .jocarsa-iu main .etiqueta{
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+      
+      /* BOTÓN INFERIOR */
+      
+      .jocarsa-iu main .minimizar{
+        position:absolute;
+        bottom:var(--relleno);
+        left:var(--relleno);
+        right:var(--relleno);
+        height:28px;
+        border:0px;
+        background:var(--color2);
+        color:inherit;
+        cursor:pointer;
+        font:inherit;
+        z-index:10;
+      }
+      
+      .jocarsa-iu main section .minimizar{
+        background:var(--color3);
+      }
+      
+      .jocarsa-iu main .minimizar:hover{
+        background:var(--color4);
+      }
+      
+      /* MODO COMPACTO */
+      
+      .jocarsa-iu main nav.compacto,
+      .jocarsa-iu main section.compacto{
+        flex:0 0 52px;
+        min-width:52px;
+        width:52px;
+        padding:6px;
+        padding-top:var(--relleno);
+        align-items:center;
+        overflow:hidden;
+      }
+      
+      .jocarsa-iu main nav.compacto a,
+      .jocarsa-iu main section.compacto article{
+        width:40px;
+        min-width:40px;
+        max-width:40px;
+        height:40px;
+        min-height:40px;
+        max-height:40px;
+        
+        padding:6px;
+        
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        
+        overflow:hidden;
+        flex:none;
+      }
+      
+      /* Al minimizar ocultamos el texto */
+      
+      .jocarsa-iu main nav.compacto .etiqueta,
+      .jocarsa-iu main section.compacto .etiqueta{
+        display:none;
+      }
+      
+      .jocarsa-iu main nav.compacto a:hover,
+      .jocarsa-iu main section.compacto article:hover,
+      .jocarsa-iu main nav.compacto .activo,
+      .jocarsa-iu main section.compacto .activo{
+        width:40px;
+        min-width:40px;
+        max-width:40px;
+      }
+      
+      .jocarsa-iu main nav.compacto .minimizar,
+      .jocarsa-iu main section.compacto .minimizar{
+        left:6px;
+        right:6px;
+        width:40px;
+      }
+      
+      /* ESCENARIO */
+      
+      .jocarsa-iu main>div{
+        flex:4;
+        background:var(--color3);
+        padding:var(--relleno);
+        overflow:auto;
+        min-width:0;
+      }
+      
+      .jocarsa-iu main>div table{
+        width:100%;
+        border-spacing:0px;
+        border-collapse:collapse;
+        background:white;
+      }
+      
+      .jocarsa-iu main>div table caption{
+        text-align:left;
+        padding:var(--relleno);
+        font-weight:bold;
+        background:var(--color2);
+      }
+      
+      .jocarsa-iu main>div table thead{
+        background:var(--color);
+      }
+      
+      .jocarsa-iu main>div table th,
+      .jocarsa-iu main>div table td{
+        padding:var(--relleno);
+        border-bottom:1px solid var(--color2);
+        text-align:left;
+        white-space:nowrap;
+      }
+      
+      .jocarsa-iu main>div table tbody tr:hover{
+        background:var(--color3);
+      }
+      
+      .jocarsa-iu main>div table tfoot{
+        background:var(--color2);
+        font-weight:bold;
+      }
+    </style>
+  </head>
+  
+  <body class="jocarsa-iu">
+    
+    <header>
+      
+      <div class="corporativo">
+        <img src="https://static.jocarsa.com/logos/white.svg">
+        <h1>jocarsa | programa</h1>
+      </div>
+      
+      <div id="herramientas">
+        <input type="text" placeholder="Buscar...">
+        <button>Acción 1</button>
+        <button>Acción 2</button>
+      </div>
+      
+      <div id="usuario">
+        <div class="imagen"></div>
+        <div>
+          <p>Jose Vicente Carratalá</p>
+          <a href="">Cerrar sesión</a>
+        </div>
+      </div>
+      
+    </header>
+    
+    <main>
+      
+      <!-- COLUMNA 1 -->
+      
+      <nav>
+        
+        <a href="">Clientes</a>
+        <a href="" class="activo">Productos</a>
+        <a href="">Pedidos</a>
+        <a href="">Facturas</a>
+        <a href="">Proveedores</a>
+        <a href="">Configuración</a>
+        
+        <button class="minimizar">◀</button>
+        
+      </nav>
+      
+      <!-- COLUMNA 2 -->
+      
+      <section>
+        
+        <article>Elemento</article>
+        <article>Informe</article>
+        <article class="activo">Listado</article>
+        <article>Estadística</article>
+        <article>Resumen</article>
+        <article>Actividad</article>
+        <article>Ventas</article>
+        <article>Compras</article>
+        <article>Usuarios</article>
+        <article>Historial</article>
+        
+        <button class="minimizar">◀</button>
+        
+      </section>
+      
+      <!-- ESCENARIO -->
+      
+      <div class="escenario">
+        
+        <table>
+          
+          <caption>Listado de clientes</caption>
+
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Empresa</th>
+              <th>Ciudad</th>
+              <th>País</th>
+              <th>Fecha de alta</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            
+            <tr>
+              <th>1</th>
+              <td>Laura</td>
+              <td>Martínez García</td>
+              <td>laura.martinez@example.com</td>
+              <td>+34 612 345 678</td>
+              <td>Soluciones Levante S.L.</td>
+              <td>Valencia</td>
+              <td>España</td>
+              <td>15/01/2026</td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th>2</th>
+              <td>Carlos</td>
+              <td>Navarro Pérez</td>
+              <td>carlos.navarro@example.com</td>
+              <td>+34 623 456 789</td>
+              <td>Innovación Digital S.A.</td>
+              <td>Madrid</td>
+              <td>España</td>
+              <td>03/02/2026</td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th>3</th>
+              <td>Ana</td>
+              <td>Ruiz Fernández</td>
+              <td>ana.ruiz@example.com</td>
+              <td>+34 634 567 890</td>
+              <td>Formación Mediterránea S.L.</td>
+              <td>Alicante</td>
+              <td>España</td>
+              <td>18/02/2026</td>
+              <td>Activo</td>
+            </tr>
+
+            <tr>
+              <th>4</th>
+              <td>David</td>
+              <td>Sánchez López</td>
+              <td>david.sanchez@example.com</td>
+              <td>+34 645 678 901</td>
+              <td>Tecnologías Norte S.L.</td>
+              <td>Bilbao</td>
+              <td>España</td>
+              <td>07/03/2026</td>
+              <td>Inactivo</td>
+            </tr>
+            
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <th colspan="9">Total de clientes</th>
+              <td>4</td>
+            </tr>
+          </tfoot>
+          
+        </table>
+        
+      </div>
+      
+    </main>
+
+    <script>
+      
+      /*
+        Convierte un texto en un número de forma determinista.
+        El mismo texto siempre produce el mismo hash.
+      */
+      
+      function hashTexto(texto){
+        
+        let hash = 0;
+        
+        for(let i = 0; i < texto.length; i++){
+          hash = texto.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        
+        return Math.abs(hash);
+        
+      }
+      
+      
+      /*
+        A partir del hash obtenemos un tono HSL.
+        De esta forma cada etiqueta tiene su propio color,
+        pero el color permanece entre recargas.
+      */
+      
+      function colorTexto(texto){
+        
+        let hash = hashTexto(texto);
+        let tono = hash % 360;
+        
+        return "hsl(" + tono + ", 55%, 45%)";
+        
+      }
+      
+      
+      /*
+        Transformamos automáticamente:
+        
+        <a>Clientes</a>
+        
+        en:
+        
+        <a>
+          <span class="ficha">C</span>
+          <span class="etiqueta">Clientes</span>
+        </a>
+      */
+      
+      let tarjetas = document.querySelectorAll(
+        "main nav a, main section article"
+      );
+      
+      tarjetas.forEach(function(tarjeta){
+        
+        let texto = tarjeta.textContent.trim();
+        
+        let ficha = document.createElement("span");
+        ficha.classList.add("ficha");
+        ficha.textContent = texto.charAt(0).toUpperCase();
+        ficha.style.background = colorTexto(texto);
+        
+        let etiqueta = document.createElement("span");
+        etiqueta.classList.add("etiqueta");
+        etiqueta.textContent = texto;
+        
+        tarjeta.textContent = "";
+        
+        tarjeta.appendChild(ficha);
+        tarjeta.appendChild(etiqueta);
+        
+      });
+      
+      
+      /*
+        Minimización independiente de cada columna.
+      */
+      
+      let columnas = document.querySelectorAll(
+        "main nav, main section"
+      );
+      
+      columnas.forEach(function(columna){
+        
+        let boton = columna.querySelector(".minimizar");
+        
+        boton.onclick = function(){
+          
+          columna.classList.toggle("compacto");
+          
+          if(columna.classList.contains("compacto")){
+            boton.textContent = "▶";
+          }else{
+            boton.textContent = "◀";
+          }
+          
+        };
+        
+      });
+      
+    </script>
+    
+  </body>
+</html>

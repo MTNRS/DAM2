@@ -1,0 +1,41 @@
+{
+  "titulo": "Clientes",
+  "columnas": [
+    {
+      "campo": "id",
+      "etiqueta": "ID"
+    },
+    {
+      "campo": "nombre",
+      "etiqueta": "Nombre"
+    },
+    {
+      "campo": "apellidos",
+      "etiqueta": "Apellidos"
+    },
+    {
+      "campo": "email",
+      "etiqueta": "Email"
+    }
+  ],
+  "registros": [
+    {
+      "id": 1,
+      "nombre": "Ana",
+      "apellidos": "García López",
+      "email": "ana@ejemplo.com"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos",
+      "apellidos": "Martínez Ruiz",
+      "email": "carlos@ejemplo.com"
+    },
+    {
+      "id": 3,
+      "nombre": "Lucía",
+      "apellidos": "Sánchez Pérez",
+      "email": "lucia@ejemplo.com"
+    }
+  ]
+}

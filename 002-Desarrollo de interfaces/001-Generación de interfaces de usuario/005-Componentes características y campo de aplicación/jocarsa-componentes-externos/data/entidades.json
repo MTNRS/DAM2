@@ -1,0 +1,15 @@
+[
+  {
+    "emoji": "👥",
+    "texto": "Clientes",
+    "activo": true
+  },
+  {
+    "emoji": "📦",
+    "texto": "Productos"
+  },
+  {
+    "emoji": "🧾",
+    "texto": "Facturas"
+  }
+]

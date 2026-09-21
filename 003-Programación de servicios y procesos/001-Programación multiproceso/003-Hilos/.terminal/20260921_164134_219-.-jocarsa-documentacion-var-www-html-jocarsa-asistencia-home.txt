@@ -1,0 +1,8 @@
+Datetime: 2026-09-21T14:41:34.219Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/003-Hilos
+Command: ./jocarsa-documentacion /var/www/html/jocarsa-asistencia /home/josevicente/Escritorio/
+
+Result:
+[OK] Reporte generado: /home/josevicente/Escritorio//jocarsa-asistencia_20260921164134.md
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de se
+rvicios y procesos/001-Programación multiproceso/003-Hilos$ 

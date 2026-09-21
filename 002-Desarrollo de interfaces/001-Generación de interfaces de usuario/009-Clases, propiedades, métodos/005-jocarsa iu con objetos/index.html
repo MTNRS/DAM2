@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   jocarsa | interfaz integrada
+  </title>
+  <link href="https://static.jocarsa.com/logos/white.svg" rel="shortcut icon" type="image/svg+xml"/>
+  <link href="css/estilo.css" rel="stylesheet"/>
+ </head>
+ <body class="jocarsa-iu">
+  <header>
+   <div class="corporativo">
+    <img alt="" src="https://static.jocarsa.com/logos/white.svg"/>
+    <h1>
+     jocarsa | interfaz integrada
+    </h1>
+   </div>
+   <div id="herramientas">
+    <input id="buscador" placeholder="Buscar en clientes…" type="search"/>
+    <button id="nuevo">
+     + Nuevo
+    </button>
+   </div>
+   <div id="usuario">
+    <div class="imagen">
+    </div>
+    <div>
+     <p>
+      Jose Vicente Carratalá
+     </p>
+     <a href="login.html">
+      Cerrar sesión
+     </a>
+    </div>
+   </div>
+  </header>
+  <main>
+   <nav id="navegacion">
+    <div class="titulo-columna">
+     Módulos
+    </div>
+    <div class="contenido-columna">
+    </div>
+    <button class="minimizar" title="Minimizar">
+     ◀
+    </button>
+   </nav>
+   <div class="separador" data-left="navegacion">
+   </div>
+   <section id="entidades">
+    <div class="titulo-columna">
+     Vistas
+    </div>
+    <div class="contenido-columna">
+    </div>
+    <button class="minimizar" title="Minimizar">
+     ◀
+    </button>
+   </section>
+   <div class="separador" data-left="entidades">
+   </div>
+   <div class="escenario" id="escenario">
+   </div>
+  </main>
+  <template id="tpl-nav">
+   <a href="#">
+    <span class="ficha">
+    </span>
+    <span class="etiqueta">
+    </span>
+   </a>
+  </template>
+  <template id="tpl-card">
+   <article draggable="true">
+    <span class="ficha">
+    </span>
+    <span class="etiqueta">
+    </span>
+   </article>
+  </template>
+  <template id="tpl-fila">
+   <tr>
+   </tr>
+  </template>
+  <script src="js/componentes.js">
+  </script>
+ </body>
+</html>
+

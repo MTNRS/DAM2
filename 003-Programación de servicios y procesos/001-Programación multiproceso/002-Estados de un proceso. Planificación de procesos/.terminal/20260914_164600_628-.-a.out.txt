@@ -1,0 +1,7 @@
+Datetime: 2026-09-14T14:46:00.628Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: ./a.out
+
+Result:
+Hoy es el dia 1 del mesHoy es el dia 2 del mesHoy es el dia 3 del mesHoy es el dia 4 del mesHoy es el dia 5 del mesHoy es el dia 6 del mesHoy es el dia 7 del mesHoy es el dia 8 del mesHoy es el dia 9 del mesHoy es el dia 10 del mesHoy es el dia 11 del mesHoy es el dia 12 del mesHoy es el dia 13 del mesHoy es el dia 14 del mesHoy es el dia 15 del mesHoy es el dia 16 del mesHoy es el dia 17 del mesHoy es el dia 18 del mesHoy es el dia 19 del mesHoy es el dia 20 del mesHoy es el dia 21 del mesHoy es el dia 22 del mesHoy es el dia 23 del mesHoy es el dia 24 del mesHoy es el dia 25 del mesHoy es el dia 26 del mesHoy es el dia 27 del mesHoy es el dia 28 del mesHoy es el dia 29 del mesHoy es el dia 30 del mesjosevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 

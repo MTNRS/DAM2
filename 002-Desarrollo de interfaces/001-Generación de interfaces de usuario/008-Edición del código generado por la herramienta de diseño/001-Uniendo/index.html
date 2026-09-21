@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>jocarsa | interfaz integrada</title>
+  <link rel="shortcut icon" href="https://static.jocarsa.com/logos/white.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="jocarsa-iu">
+<header>
+  <div class="corporativo"><img src="https://static.jocarsa.com/logos/white.svg" alt=""><h1>jocarsa | interfaz integrada</h1></div>
+  <input id="buscador" type="search" placeholder="Buscar en clientes…">
+  <button id="nuevo">+ Nuevo</button>
+</header>
+<main>
+  <nav id="navegacion"><div class="titulo-columna">Módulos</div><div class="contenido-columna"></div><button class="minimizar" title="Minimizar">◀</button></nav>
+  <div class="separador" data-left="navegacion"></div>
+  <section id="entidades"><div class="titulo-columna">Vistas</div><div class="contenido-columna"></div><button class="minimizar" title="Minimizar">◀</button></section>
+  <div class="separador" data-left="entidades"></div>
+  <div id="escenario" class="escenario"></div>
+</main>
+<template id="tpl-nav"><a href="#"><span class="ficha"></span><span class="etiqueta"></span></a></template>
+<template id="tpl-card"><article draggable="true"><span class="ficha"></span><span class="etiqueta"></span></article></template>
+<template id="tpl-fila"><tr></tr></template>
+<script src="js/componentes.js"></script>
+</body>
+</html>

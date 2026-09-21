@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Importar GLB - A-Frame</title>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+</head>
+<body>
+
+    <a-scene light="defaultLightsEnabled: false">
+
+        <!-- Modelo GLB -->
+        <a-gltf-model
+            src="avatar.glb"
+            position="0 0 -4"
+            rotation="0 0 0"
+            scale="1 1 1">
+        </a-gltf-model>
+
+        <!-- Suelo -->
+        <a-plane
+            position="0 0 -4"
+            rotation="-90 0 0"
+            width="20"
+            height="20"
+            color="#AAAAAA">
+        </a-plane>
+
+        <!-- Luz desde arriba -->
+        <a-entity
+            light="type: point;
+                   color: #FFFFFF;
+                   intensity: 30;
+                   distance: 15;
+                   decay: 2"
+            position="0 6 -2">
+        </a-entity>
+
+        <!-- Cámara -->
+        <a-entity
+            id="camera"
+            camera="fov: 20"
+            position="0 3.5 0">
+        </a-entity>
+
+        <!-- Cielo -->
+        <a-sky color="#ECECEC"></a-sky>
+
+    </a-scene>
+
+</body>
+</html>

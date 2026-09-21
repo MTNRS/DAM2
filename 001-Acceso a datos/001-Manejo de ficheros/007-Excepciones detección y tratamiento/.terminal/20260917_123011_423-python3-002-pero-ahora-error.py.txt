@@ -1,0 +1,8 @@
+Datetime: 2026-09-17T10:30:11.423Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/007-Excepciones detección y tratamiento
+Command: python3 002-pero\ ahora\ error.py
+
+Result:
+division by zero
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-M
+anejo de ficheros/007-Excepciones detección y tratamiento$ 

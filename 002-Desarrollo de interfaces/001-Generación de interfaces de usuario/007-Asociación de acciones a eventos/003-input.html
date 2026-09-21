@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <input>
+    <div></div>
+    <script>
+      let entrada = document.querySelector("input")
+      let elemento = document.querySelector("div")
+      entrada.onfocus = function(){
+      	elemento.textContent ="has focalizado"
+      }
+      entrada.onblur = function(){
+      	//elemento.textContent ="has desfocalizado"
+      }
+      entrada.onchange = function(){
+      	elemento.textContent ="has cambiado"
+      }
+      entrada.onkeypress = function(e){
+      	console.log(e)
+      }
+    </script>
+  </body>
+</html>

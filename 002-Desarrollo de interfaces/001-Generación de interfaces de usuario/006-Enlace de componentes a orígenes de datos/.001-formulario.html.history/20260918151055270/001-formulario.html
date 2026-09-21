@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      fetch("datos.json")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+        let campos = datos.campos
+      })
+    </script>
+  </body>
+</html>

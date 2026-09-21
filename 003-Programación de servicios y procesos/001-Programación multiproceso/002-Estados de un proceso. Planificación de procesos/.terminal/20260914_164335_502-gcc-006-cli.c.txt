@@ -1,0 +1,7 @@
+Datetime: 2026-09-14T14:43:35.502Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: gcc 006-cli.c
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 

@@ -1,0 +1,20 @@
+<script>
+  let menu = document.querySelector("nav");
+
+  fetch("api/api.php?bloque=menu")
+  .then(function(retorno){return retorno.json()})
+  .then(function(datos){
+    datos.forEach(function(dato){
+      let enlace = document.createElement("a");
+      enlace.setAttribute("href","#");
+      enlace.textContent = dato;
+
+      enlace.onclick = function(evento){
+        evento.preventDefault();
+        crud(dato,"seleccionar");
+      }
+
+      menu.appendChild(enlace);
+    })
+  })
+</script>

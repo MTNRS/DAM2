@@ -1,0 +1,58 @@
+<script>
+  let menu = document.querySelector("nav");
+  let principal = document.querySelector("main");
+
+  fetch("api/api.php?bloque=menu")
+  .then(function(retorno){return retorno.json()})
+  .then(function(datos){
+  	datos.forEach(function(dato){
+    	let enlace = document.createElement("a");
+      enlace.setAttribute("href","#");
+      enlace.textContent = dato;
+
+      enlace.onclick = function(evento){
+      	evento.preventDefault();
+
+        fetch("api/api.php?bloque=tabla&tabla="+encodeURIComponent(dato))
+        .then(function(retorno){return retorno.json()})
+        .then(function(datos){
+        	principal.innerHTML = "";
+
+          let titulo = document.createElement("h2");
+          titulo.textContent = datos.tabla;
+          principal.appendChild(titulo);
+
+          let tabla = document.createElement("table");
+
+          // Cabecera obtenida de la estructura real de SQLite.
+          let cabecera = document.createElement("tr");
+
+          datos.estructura.forEach(function(campo){
+          	let th = document.createElement("th");
+            th.textContent = campo.name;
+            cabecera.appendChild(th);
+          });
+
+          tabla.appendChild(cabecera);
+
+          // Contenido real de la tabla.
+          datos.contenido.forEach(function(registro){
+          	let fila = document.createElement("tr");
+
+            datos.estructura.forEach(function(campo){
+            	let celda = document.createElement("td");
+              celda.textContent = registro[campo.name] ?? "";
+              fila.appendChild(celda);
+            });
+
+            tabla.appendChild(fila);
+          });
+
+          principal.appendChild(tabla);
+        });
+      }
+
+      menu.appendChild(enlace);
+    })
+  })
+</script>

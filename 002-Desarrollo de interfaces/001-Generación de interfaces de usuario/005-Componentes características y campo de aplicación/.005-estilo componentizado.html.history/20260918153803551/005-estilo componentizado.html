@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>jocarsa | programa</title>
+  </head>
+
+  <body class="jocarsa-iu">
+
+    <header>
+      <div class="corporativo">
+        <img src="https://static.jocarsa.com/logos/white.svg">
+        <h1>jocarsa | programa</h1>
+      </div>
+
+      <div id="herramientas"></div>
+      <div id="usuario"></div>
+    </header>
+
+    <main>
+
+      <nav data-source="menu.json"></nav>
+
+      <section data-source="entidades.json"></section>
+
+      <div class="escenario">
+        <table data-source="clientes.json"></table>
+      </div>
+
+    </main>
+
+
+    <!-- COMPONENTE NAVEGACIÓN -->
+
+    <template id="template-nav">
+      <a href="">
+        <span class="emoji"></span>
+        <span class="texto"></span>
+      </a>
+    </template>
+
+
+    <!-- COMPONENTE ARTICLE -->
+
+    <template id="template-article">
+      <article>
+        <span class="emoji"></span>
+        <span class="texto"></span>
+      </article>
+    </template>
+
+
+    <!-- COMPONENTE HERRAMIENTA -->
+
+    <template id="template-herramienta">
+      <button>
+        <span class="emoji"></span>
+        <span class="texto"></span>
+      </button>
+    </template>
+
+
+    <!-- COMPONENTE USUARIO -->
+
+    <template id="template-usuario">
+      <div class="imagen"></div>
+
+      <div>
+        <p class="nombre"></p>
+        <a href="">Cerrar sesión</a>
+      </div>
+    </template>
+
+
+    <!-- COMPONENTE FILA -->
+
+    <template id="template-fila">
+      <tr></tr>
+    </template>
+
+
+    <!-- COMPONENTE CELDA -->
+
+    <template id="template-celda">
+      <td></td>
+    </template>
+
+
+    <script>
+
+      // ============================================================
+      // FUNCIÓN GENÉRICA PARA CLONAR COMPONENTES
+      // ============================================================
+
+      function crearComponente(template){
+
+        let plantilla = document.querySelector(template);
+
+        return plantilla.content.cloneNode(true);
+
+      }
+
+
+      // ============================================================
+      // NAVEGACIÓN
+      // ============================================================
+
+      function componenteNavegacion(){
+
+        let navegaciones = document.querySelectorAll("nav[data-source]");
+
+        navegaciones.forEach(function(navegacion){
+
+          fetch(navegacion.dataset.source)
+
+          .then(function(respuesta){
+            return respuesta.json();
+          })
+
+          .then(function(datos){
+
+            datos.forEach(function(dato){
+
+              let clon = crearComponente("#template-nav");
+
+              let enlace = clon.querySelector("a");
+
+              clon.querySelector(".emoji").textContent = dato.emoji;
+              clon.querySelector(".texto").textContent = dato.texto;
+
+              enlace.href = dato.url;
+
+              if(dato.activo){
+                enlace.classList.add("activo");
+              }
+
+              navegacion.appendChild(clon);
+
+            });
+
+          });
+
+        });
+
+      }
+
+
+      // ============================================================
+      // ARTÍCULOS
+      // ============================================================
+
+      function componenteArticulos(){
+
+        let secciones = document.querySelectorAll("section[data-source]");
+
+        secciones.forEach(function(seccion){
+
+          fetch(seccion.dataset.source)
+
+          .then(function(respuesta){
+            return respuesta.json();
+          })
+
+          .then(function(datos){
+
+            datos.forEach(function(dato){
+
+              let clon = crearComponente("#template-article");
+
+              let articulo = clon.querySelector("article");
+
+              clon.querySelector(".emoji").textContent = dato.emoji;
+              clon.querySelector(".texto").textContent = dato.texto;
+
+              if(dato.activo){
+                articulo.classList.add("activo");
+              }
+
+              seccion.appendChild(clon);
+
+            });
+
+          });
+
+        });
+
+      }
+
+
+      // ============================================================
+      // HERRAMIENTAS
+      // ============================================================
+
+      function componenteHerramientas(datos){
+
+        let contenedor = document.querySelector("#herramientas");
+
+        datos.forEach(function(dato){
+
+          let clon = crearComponente("#template-herramienta");
+
+          clon.querySelector(".emoji").textContent = dato.emoji;
+          clon.querySelector(".texto").textContent = dato.texto;
+
+          contenedor.appendChild(clon);
+
+        });
+
+      }
+
+
+      // ============================================================
+      // USUARIO
+      // ============================================================
+
+      function componenteUsuario(datos){
+
+        let contenedor = document.querySelector("#usuario");
+
+        let clon = crearComponente("#template-usuario");
+
+        clon.querySelector(".nombre").textContent = datos.nombre;
+
+        contenedor.appendChild(clon);
+
+      }
+
+
+      // ============================================================
+      // TABLAS
+      // ============================================================
+
+      function componenteTablas(){
+
+        let tablas = document.querySelectorAll("table[data-source]");
+
+        tablas.forEach(function(tabla){
+
+          fetch(tabla.dataset.source)
+
+          .then(function(respuesta){
+            return respuesta.json();
+          })
+
+          .then(function(datos){
+
+            let caption = document.createElement("caption");
+            caption.textContent = datos.titulo;
+            tabla.appendChild(caption);
+
+
+            // CABECERA
+
+            let thead = document.createElement("thead");
+            let filaCabecera = document.createElement("tr");
+
+            datos.columnas.forEach(function(columna){
+
+              let th = document.createElement("th");
+
+              th.textContent = columna.etiqueta;
+
+              filaCabecera.appendChild(th);
+
+            });
+
+            thead.appendChild(filaCabecera);
+            tabla.appendChild(thead);
+
+
+            // CUERPO
+
+            let tbody = document.createElement("tbody");
+
+            datos.registros.forEach(function(registro){
+
+              let clonFila = crearComponente("#template-fila");
+
+              let fila = clonFila.querySelector("tr");
+
+              datos.columnas.forEach(function(columna){
+
+                let clonCelda = crearComponente("#template-celda");
+
+                let celda = clonCelda.querySelector("td");
+
+                celda.textContent = registro[columna.campo];
+
+                fila.appendChild(clonCelda);
+
+              });
+
+              tbody.appendChild(clonFila);
+
+            });
+
+            tabla.appendChild(tbody);
+
+          });
+
+        });
+
+      }
+
+
+      // ============================================================
+      // INICIALIZACIÓN
+      // ============================================================
+
+      function iniciarComponentes(){
+
+        componenteNavegacion();
+
+        componenteArticulos();
+
+        componenteTablas();
+
+        componenteHerramientas([
+          {
+            emoji:"🔍",
+            texto:"Buscar"
+          },
+          {
+            emoji:"➕",
+            texto:"Nuevo"
+          },
+          {
+            emoji:"⚙️",
+            texto:"Configuración"
+          }
+        ]);
+
+        componenteUsuario({
+          nombre:"Jose Vicente Carratalá"
+        });
+
+      }
+
+
+      document.addEventListener("DOMContentLoaded", iniciarComponentes);
+
+    </script>
+
+  </body>
+</html>

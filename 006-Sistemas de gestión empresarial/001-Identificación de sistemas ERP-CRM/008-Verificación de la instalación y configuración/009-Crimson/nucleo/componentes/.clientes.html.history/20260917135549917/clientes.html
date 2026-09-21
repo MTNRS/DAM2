@@ -1,0 +1,13 @@
+<script>
+  let principal = document.querySelector("main");
+  fetch("api/api.php?bloque=tabla")
+  .then(function(retorno){return retorno.json()})
+  .then(function(datos){
+  	datos.forEach(function(dato){
+    	let enlace = document.createElement("a");
+      enlace.setAttribute("href","")
+      enlace.textContent = dato
+      menu.appendChild(enlace)
+    })
+  })
+</script>

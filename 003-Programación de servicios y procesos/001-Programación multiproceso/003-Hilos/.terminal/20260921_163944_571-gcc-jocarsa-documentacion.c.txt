@@ -1,0 +1,55 @@
+Datetime: 2026-09-21T14:39:44.571Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/003-Hilos
+Command: gcc jocarsa-documentacion.c
+
+Result:
+jocarsa-documentacion.c: In function ‘main’:
+jocarsa-documentacion.c:648:42: warning: ‘%s’ directive output may be truncated writing 7 or more bytes into a region of size between 0 and 4095 [-Wformat-truncation=]
+  648 |     snprintf(outpath,sizeof(outpath),"%s/%s_%s.md",dest,base_name(root)[0]?base_name(root):"reporte",ts);
+      |                                          ^~
+jocarsa-documentacion.c:648:5: note: ‘snprintf’ output 13 or more bytes (assuming 4139) into a destination of size 4096
+  648 |     snprintf(outpath,sizeof(outpath),"%s/%s_%s.md",dest,base_name(root)[0]?base_name(root):"reporte",ts);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/bin/ld: /tmp/ccmmKC4T.o: en la función `sqlite_schema':
+jocarsa-documentacion.c:(.text+0x14e6): undefined reference to `sqlite3_open_v2'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1505): undefined reference to `sqlite3_errmsg'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x154e): undefined reference to `sqlite3_close'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1597): undefined reference to `sqlite3_prepare_v2'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x15aa): undefined reference to `sqlite3_errmsg'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x15da): undefined reference to `sqlite3_close'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x168a): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x16ce): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1713): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1779): undefined reference to `sqlite3_step'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1791): undefined reference to `sqlite3_finalize'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x197e): undefined reference to `sqlite3_prepare_v2'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x19ab): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x19c6): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x19e1): undefined reference to `sqlite3_column_int'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x19fb): undefined reference to `sqlite3_column_int'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1a15): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1b46): undefined reference to `sqlite3_step'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1b5e): undefined reference to `sqlite3_finalize'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1c0e): undefined reference to `sqlite3_prepare_v2'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1c3b): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1c52): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1c69): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1c80): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1c97): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1cf5): undefined reference to `sqlite3_step'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1d0d): undefined reference to `sqlite3_finalize'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1dbd): undefined reference to `sqlite3_prepare_v2'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1dde): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1df9): undefined reference to `sqlite3_column_int'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1e0e): undefined reference to `sqlite3_column_count'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1e27): undefined reference to `sqlite3_column_int'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1ed2): undefined reference to `sqlite3_prepare_v2'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1ef7): undefined reference to `sqlite3_column_text'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1f67): undefined reference to `sqlite3_step'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x1f7f): undefined reference to `sqlite3_finalize'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x20f4): undefined reference to `sqlite3_step'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x210c): undefined reference to `sqlite3_finalize'
+/usr/bin/ld: jocarsa-documentacion.c:(.text+0x262f): undefined reference to `sqlite3_close'
+collect2: error: ld returned 1 exit status
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de se
+rvicios y procesos/001-Programación multiproceso/003-Hilos$ 

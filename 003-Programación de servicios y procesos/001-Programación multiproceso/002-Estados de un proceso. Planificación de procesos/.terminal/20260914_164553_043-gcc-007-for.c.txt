@@ -1,0 +1,14 @@
+Datetime: 2026-09-14T14:45:53.043Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: gcc 007-for.c
+
+Result:
+007-for.c: In function ‘main’:
+007-for.c:7:47: error: expected ‘;’ before ‘}’ token
+    7 |         printf("Hoy es el dia %i del mes",dia)
+      |                                               ^
+      |                                               ;
+    8 |     }
+      |     ~                                          
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 

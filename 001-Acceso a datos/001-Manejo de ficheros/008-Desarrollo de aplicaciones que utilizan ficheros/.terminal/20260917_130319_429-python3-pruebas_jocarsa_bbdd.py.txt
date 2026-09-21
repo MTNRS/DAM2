@@ -1,0 +1,74 @@
+Datetime: 2026-09-17T11:03:19.429Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/008-Desarrollo de aplicaciones que utilizan ficheros
+Command: python3 pruebas_jocarsa_bbdd.py
+
+Result:
+========================================
+ PRUEBAS EXHAUSTIVAS JOCARSA BBDD
+========================================
+Directorio temporal: /tmp/jocarsa-bbdd-pruebas-3y_n6z4g/
+[OK] serializar lista
+[OK] serializar con delimitador personalizado
+[OK] desserializar cadena
+[OK] desserializar con delimitador personalizado
+[OK] crear base de datos
+[OK] impedir crear una base de datos duplicada
+[OK] usar base de datos
+[OK] detectar base de datos inexistente
+[OK] crear archivo de datos
+[OK] crear archivo de esquema
+[OK] crear archivo de índice
+[OK] obtener esquema
+[OK] siguiente id en tabla vacía
+[OK] insertar primer registro
+[OK] insertar segundo registro
+[OK] insertar tercer registro
+[OK] siguiente id tras inserciones
+[OK] posición registro 1
+[OK] posición registro 2
+[OK] posición registro 3
+Se ha producido un error al buscar la posición del registro:
+No se ha encontrado el id 999999 en la tabla 'clientes'
+[OK] buscar id inexistente
+[OK] leer registro
+[OK] seleccionar devuelve diccionario
+[OK] listarTodo incluye Jose
+[OK] listarTodo incluye Ana
+[OK] listarTodo incluye Luis
+[OK] buscar por columna
+[OK] detectar columna inexistente
+[OK] actualizar modifica los datos
+[OK] actualizar mantiene tamaño del archivo
+[OK] actualizar mantiene posición física
+[OK] actualización con número incorrecto de campos
+[OK] impedir insertar registro mayor que el bloque
+Se ha producido un error al leer el registro:
+El registro con id 3 está eliminado
+[OK] eliminar es borrado lógico
+[OK] eliminar no cambia tamaño del archivo
+[OK] registro eliminado conserva posición en índice
+[OK] detectar doble eliminación
+[OK] listarTodo oculta eliminados
+[OK] buscarColumna oculta eliminados
+Se ha producido un error al buscar la posición del registro:
+No se ha encontrado el id 999999 en la tabla 'clientes'
+Se ha producido un error al leer el registro:
+No se ha podido localizar el registro
+Se ha producido un error al seleccionar el registro:
+No se ha podido recuperar el registro
+[OK] seleccionar id inexistente devuelve None
+[OK] impedir crear tabla sin seleccionar BBDD
+[OK] impedir tabla duplicada
+Se ha producido un error al obtener el esquema:
+No existe el esquema de la tabla 'tabla_inexistente'
+[OK] esquema inexistente devuelve None
+
+========================================
+ RESULTADO
+========================================
+Pruebas correctas: 43
+Pruebas incorrectas: 0
+Total: 43
+RESULTADO FINAL: TODAS LAS PRUEBAS HAN PASADO
+Directorio temporal eliminado correctamente
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/008-Desarrollo de aplicaciones que utilizan ficheros$ 

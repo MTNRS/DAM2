@@ -1,0 +1,16 @@
+Que tiene mi SSGG
+
+Tiene front en HTML, CSS, JS - estático, cualquier apache etc 
+
+Que va a haber en el back
+PHP - API
+
+Capa de almacenamiento de datos:
+MySQL - SQLite
+NoSQL - MongoDB
+Solución personalizada
+
+Hostings compartidos: LAMP - Linux, Apache, MySQL, PHP
+
+Hosting VPS: Puedo instalar cualquier cosa
+

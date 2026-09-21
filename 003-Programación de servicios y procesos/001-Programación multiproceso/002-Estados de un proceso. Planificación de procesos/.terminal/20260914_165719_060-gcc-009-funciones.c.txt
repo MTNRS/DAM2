@@ -1,0 +1,14 @@
+Datetime: 2026-09-14T14:57:19.060Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: gcc 009-funciones.c
+
+Result:
+009-funciones.c: In function ‘doble’:
+009-funciones.c:5:21: error: expected ‘;’ before ‘}’ token
+    5 |         return doble
+      |                     ^
+      |                     ;
+    6 | }
+      | ~                    
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 

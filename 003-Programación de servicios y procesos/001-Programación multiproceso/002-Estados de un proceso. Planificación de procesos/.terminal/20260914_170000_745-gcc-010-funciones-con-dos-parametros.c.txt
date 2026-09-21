@@ -1,0 +1,10 @@
+Datetime: 2026-09-14T15:00:00.745Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: gcc 010-funciones\ con\ dos\ parametros.c
+
+Result:
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o: en la función `_start':
+(.text+0x1b): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 
