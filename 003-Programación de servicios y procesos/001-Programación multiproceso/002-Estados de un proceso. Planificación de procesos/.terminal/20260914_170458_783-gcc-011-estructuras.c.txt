@@ -1,0 +1,22 @@
+Datetime: 2026-09-14T15:04:58.783Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: gcc 011-estructuras.c
+
+Result:
+011-estructuras.c: In function ‘main’:
+011-estructuras.c:12:23: error: expected ‘;’ before ‘struct’
+   12 |     persona1.edad = 48
+      |                       ^
+      |                       ;
+   13 | 
+   14 |     struct Persona persona2;
+      |     ~~~~~~             
+011-estructuras.c:16:23: error: expected ‘;’ before ‘return’
+   16 |     persona1.edad = 52
+      |                       ^
+      |                       ;
+......
+   19 |     return 0;
+      |     ~~~~~~             
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 

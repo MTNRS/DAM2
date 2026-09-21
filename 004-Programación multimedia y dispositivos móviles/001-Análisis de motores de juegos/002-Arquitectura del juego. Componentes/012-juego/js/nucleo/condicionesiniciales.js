@@ -1,0 +1,25 @@
+var anchura = window.innerWidth
+var altura = window.innerHeight
+var temporizador = null;
+var fps = 30;
+
+const escenario = document.querySelector("#escenario")
+const contexto = escenario.getContext("2d")
+
+escenario.width = anchura
+escenario.height = altura
+
+var jugador = null;
+var avance = 20;
+
+var numerorocas = 5
+var rocas = []
+
+var numeroproyectiles = 0;
+var proyectiles = []
+
+var numeroestrellas = 200;
+var estrellas = []
+
+// Interfaz
+var iu_rocas = document.querySelector("#rocas")

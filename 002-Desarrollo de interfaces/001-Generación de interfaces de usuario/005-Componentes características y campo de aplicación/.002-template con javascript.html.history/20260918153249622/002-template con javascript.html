@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <nav>
+    </nav>
+    <template>
+      <button>Hola</button>
+    </template>
+    <script>
+      let navegacion = document.querySelector("nav");
+      let plantilla = document.querySelector("template");
+      let clon = plantilla.content.cloneNode(true);
+      for(let i = 0;i<10;i++){
+      	navegacion.appendChild(clon);
+      }
+    </script>
+  </body>
+</html>

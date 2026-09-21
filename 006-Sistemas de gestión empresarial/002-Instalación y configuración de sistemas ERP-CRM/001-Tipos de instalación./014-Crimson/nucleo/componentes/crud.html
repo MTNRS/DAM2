@@ -1,0 +1,179 @@
+<script>
+  let tablaActual = "";
+
+  function cabeceraCRUD(tabla,operacion){
+    tablaActual = tabla;
+
+    let titulo = document.querySelector("header h1");
+    titulo.textContent = tabla+" · "+operacion;
+  }
+
+  function crud(tabla,operacion,id){
+    let principal = document.querySelector("main");
+    principal.innerHTML = "";
+
+    cabeceraCRUD(tabla,operacion);
+
+    if(operacion == "seleccionar"){
+      cargarTablaCRUD(tabla);
+    }
+
+    if(operacion == "insertar"){
+      fetch("api/api.php?bloque=tabla&tabla="+encodeURIComponent(tabla))
+      .then(function(retorno){return retorno.json()})
+      .then(function(datos){
+        formularioCRUD(tabla,datos.estructura,null,"insertar");
+      });
+    }
+
+    if(operacion == "actualizar"){
+      fetch(
+        "api/api.php?bloque=registro&tabla="+encodeURIComponent(tabla)+
+        "&id="+encodeURIComponent(id)
+      )
+      .then(function(retorno){return retorno.json()})
+      .then(function(datos){
+        formularioCRUD(tabla,datos.estructura,datos.registro,"actualizar");
+      });
+    }
+  }
+
+  function cargarTablaCRUD(tabla){
+    let principal = document.querySelector("main");
+
+    fetch("api/api.php?bloque=tabla&tabla="+encodeURIComponent(tabla))
+    .then(function(retorno){return retorno.json()})
+    .then(function(datos){
+      let tablahtml = document.createElement("table");
+      let cabecera = document.createElement("tr");
+
+      datos.estructura.forEach(function(campo){
+        let th = document.createElement("th");
+        th.textContent = campo.name;
+        cabecera.appendChild(th);
+      });
+
+      let th = document.createElement("th");
+      th.textContent = "Operaciones";
+      cabecera.appendChild(th);
+
+      tablahtml.appendChild(cabecera);
+
+      datos.contenido.forEach(function(registro){
+        let fila = document.createElement("tr");
+
+        datos.estructura.forEach(function(campo){
+          let td = document.createElement("td");
+          td.textContent = registro[campo.name] ?? "";
+          fila.appendChild(td);
+        });
+
+        let operaciones = document.createElement("td");
+
+        let actualizar = document.createElement("a");
+        actualizar.setAttribute("href","#");
+        actualizar.textContent = "Actualizar";
+
+        actualizar.onclick = function(evento){
+          evento.preventDefault();
+          crud(tabla,"actualizar",registro.Identificador);
+        }
+
+        operaciones.appendChild(actualizar);
+        operaciones.appendChild(document.createTextNode(" "));
+
+        let eliminar = document.createElement("a");
+        eliminar.setAttribute("href","#");
+        eliminar.textContent = "Eliminar";
+
+        eliminar.onclick = function(evento){
+          evento.preventDefault();
+
+          if(confirm("¿Eliminar el registro "+registro.Identificador+"?")){
+            fetch("api/api.php?bloque=eliminar",{
+              method:"POST",
+              headers:{"Content-Type":"application/json"},
+              body:JSON.stringify({
+                tabla:tabla,
+                Identificador:registro.Identificador
+              })
+            })
+            .then(function(retorno){return retorno.json()})
+            .then(function(){
+              crud(tabla,"seleccionar");
+            });
+          }
+        }
+
+        operaciones.appendChild(eliminar);
+        fila.appendChild(operaciones);
+        tablahtml.appendChild(fila);
+      });
+
+      principal.appendChild(tablahtml);
+    });
+  }
+
+  function formularioCRUD(tabla,estructura,registro,operacion){
+    let principal = document.querySelector("main");
+    let formulario = document.createElement("form");
+
+    estructura.forEach(function(campo){
+      if(campo.name != "Identificador"){
+        let etiqueta = document.createElement("label");
+        etiqueta.textContent = campo.name;
+
+        let entrada = document.createElement("input");
+        entrada.setAttribute("name",campo.name);
+        entrada.setAttribute("type","text");
+
+        if(registro){
+          entrada.value = registro[campo.name] ?? "";
+        }
+
+        etiqueta.appendChild(entrada);
+        formulario.appendChild(etiqueta);
+      }
+    });
+
+    let boton = document.createElement("button");
+    boton.setAttribute("type","submit");
+    boton.textContent = operacion == "insertar" ? "Insertar" : "Actualizar";
+
+    formulario.appendChild(boton);
+
+    formulario.onsubmit = function(evento){
+      evento.preventDefault();
+
+      let datos = {
+        tabla:tabla
+      };
+
+      if(registro){
+        datos.Identificador = registro.Identificador;
+      }
+
+      new FormData(formulario).forEach(function(valor,clave){
+        datos[clave] = valor;
+      });
+
+      fetch("api/api.php?bloque="+operacion,{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify(datos)
+      })
+      .then(function(retorno){return retorno.json()})
+      .then(function(){
+        crud(tabla,"seleccionar");
+      });
+    }
+
+    principal.appendChild(formulario);
+  }
+
+  function crudActual(operacion){
+    if(tablaActual != ""){
+      crud(tablaActual,operacion);
+    }
+  }
+</script>

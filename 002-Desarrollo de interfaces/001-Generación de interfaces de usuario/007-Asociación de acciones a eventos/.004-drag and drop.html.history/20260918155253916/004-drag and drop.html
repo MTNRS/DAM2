@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      #origen, #destino{
+        width:200px;
+        height:100px;
+        border:1px solid black;
+        margin:20px;
+        padding:20px;
+        display:inline-block;
+        vertical-align:top;
+      }
+
+      #objeto{
+        width:80px;
+        padding:10px;
+        background:lightgrey;
+        cursor:grab;
+      }
+
+      #destino{
+        background:#eeeeee;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="origen">
+      <div id="objeto" draggable="true">
+        Arrástrame
+      </div>
+    </div>
+
+    <div id="destino">
+      Suelta aquí
+    </div>
+
+    <script>
+      let objeto = document.querySelector("#objeto")
+      let destino = document.querySelector("#destino")
+
+      objeto.ondragstart = function(e){
+        console.log("Empieza el arrastre")
+        e.dataTransfer.setData("text/plain", objeto.id)
+      }
+
+      destino.ondragover = function(e){
+        e.preventDefault()
+        console.log("Objeto encima")
+      }
+
+      destino.ondrop = function(e){
+        e.preventDefault()
+
+        let id = e.dataTransfer.getData("text/plain")
+        let elemento = document.querySelector("#" + id)
+
+        destino.textContent = ""
+        destino.appendChild(elemento)
+
+        console.log("Objeto soltado")
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head><title>juego</title></head>
+  <body>
+    <main>
+      <canvas id="escenario"></canvas>
+      <div id="iu"></div>
+    </main>
+    <script src="js/nucleo/condicionesiniciales.js"></script>
+    <script src="js/nucleo/entrada.js"></script>
+    <script>
+      
+      // Declaraciones de clases
+      class Entidad {
+          constructor(x, y, angulo, velocidad) {
+              this.x = x;
+              this.y = y;
+              this.a = angulo;
+              this.v = velocidad;
+          }
+      }
+
+      class Nave extends Entidad {
+          constructor(x, y, angulo, velocidad) {
+              super(x, y, angulo, velocidad);
+          }
+      }
+
+      class Enemigo extends Entidad {
+          constructor(x, y, angulo, velocidad) {
+              super(x, y, angulo, velocidad);
+          }
+      }
+
+      class Roca extends Entidad {
+          constructor(x, y, angulo, velocidad) {
+              super(x, y, angulo, velocidad);
+          }
+      }
+      // Función ganar
+      
+      // Función perder
+      
+      // Entrada
+      document.addEventListener("keydown", function(event) {
+          switch (event.key) {
+              case "ArrowUp":
+                  console.log("UP");
+                  break;
+
+              case "ArrowDown":
+                  console.log("DOWN");
+                  break;
+
+              case "ArrowLeft":
+                  console.log("LEFT");
+                  break;
+
+              case "ArrowRight":
+                  console.log("RIGHT");
+                  break;
+          }
+      });
+      document.addEventListener("keyup", function(event) {
+          switch (event.key) {
+              case "ArrowUp":
+                  console.log("UP");
+                  break;
+
+              case "ArrowDown":
+                  console.log("DOWN");
+                  break;
+
+              case "ArrowLeft":
+                  console.log("LEFT");
+                  break;
+
+              case "ArrowRight":
+                  console.log("RIGHT");
+                  break;
+          }
+      });
+      // Funcion de inicio
+      
+      // Función de bucle
+      
+      
+    </script>
+  </body>
+</html>

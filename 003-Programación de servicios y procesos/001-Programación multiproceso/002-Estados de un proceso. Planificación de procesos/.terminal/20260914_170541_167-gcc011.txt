@@ -1,0 +1,10 @@
+Datetime: 2026-09-14T15:05:41.167Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: gcc011
+
+Result:
+Orden «gcc011» no encontrada. Quizá quiso decir:
+  la orden «gcc-11» del paquete deb «gcc-11 (11.5.0-1ubuntu1~24.04.1)»
+Pruebe con: sudo apt install <nombre del paquete deb>
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 

@@ -1,0 +1,23 @@
+[
+  {
+    "emoji": "🏠",
+    "texto": "Inicio",
+    "url": "#",
+    "activo": true
+  },
+  {
+    "emoji": "👥",
+    "texto": "Clientes",
+    "url": "#"
+  },
+  {
+    "emoji": "📦",
+    "texto": "Productos",
+    "url": "#"
+  },
+  {
+    "emoji": "🧾",
+    "texto": "Facturas",
+    "url": "#"
+  }
+]

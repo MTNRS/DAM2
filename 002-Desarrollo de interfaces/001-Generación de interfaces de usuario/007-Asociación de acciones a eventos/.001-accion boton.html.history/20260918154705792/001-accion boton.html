@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <button>Pulsame</button>
+    <script>
+      let boton = document.querySelector("button")
+      boton.onclick = function(){
+      	boton.textContent = "Has pulsado en el boton"
+      }
+      boton.onmousedown = function(){
+      	boton.textContent = "Has pulsado hacia abajo en el boton"
+      }
+      boton.onmouseup = function(){
+      	boton.textContent = "Has pulsado hacia abajo en el boton"
+      }
+    </script>
+  </body>
+</html>

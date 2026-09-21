@@ -1,0 +1,9 @@
+Datetime: 2026-09-17T10:31:52.937Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/007-Excepciones detección y tratamiento
+Command: python3 004-try\ con\ assert.py
+
+Result:
+Se ha producido un error:
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/001-M
+anejo de ficheros/007-Excepciones detección y tratamiento$ 

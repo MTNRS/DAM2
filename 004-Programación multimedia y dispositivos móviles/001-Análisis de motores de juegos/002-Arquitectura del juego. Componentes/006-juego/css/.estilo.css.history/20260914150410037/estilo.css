@@ -1,0 +1,4 @@
+body,html{padding:0px;margin:0px;width:100%;height:100%;}
+main{position:absolute;width:100%;height:100%;top:0px;left:0px;}
+#escenario{background:red;}
+#iu{background:blue;width:100px;height:100px;}

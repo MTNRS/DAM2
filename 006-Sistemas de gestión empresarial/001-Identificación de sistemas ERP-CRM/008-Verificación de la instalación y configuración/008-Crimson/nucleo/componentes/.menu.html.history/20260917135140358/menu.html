@@ -1,0 +1,8 @@
+<script>
+  let menu = document.querySelector("nav");
+  fetch("api/api.php?bloque=menu")
+  .then(function(retorno){return retorno.json()})
+  .then(function(datos){
+  	console.log(datos);
+  })
+</script>

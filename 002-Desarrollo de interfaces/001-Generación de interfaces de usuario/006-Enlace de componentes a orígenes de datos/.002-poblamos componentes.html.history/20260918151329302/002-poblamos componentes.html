@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+   	<form>
+    </form>
+    <script>
+      let formulario = document.querySelector("form")
+      fetch("datos.json")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+        let campos = datos.campos
+        campos.forEach(function(campo){
+        	
+        })
+      })
+    </script>
+  </body>
+</html>

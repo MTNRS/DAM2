@@ -1,0 +1,8 @@
+// Condiciones iniciales
+var anchura = window.innerWidth
+var altura = window.innerHeight
+var temporizador = null;
+var fps = 30;
+
+const escenario = document.querySelector("#escenario")
+const contexto = escenario.getContext("2d")

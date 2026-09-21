@@ -1,0 +1,43 @@
+<script>
+  let principal = document.querySelector("main");
+
+  fetch("api/api.php?bloque=tabla")
+  .then(function(retorno){
+    return retorno.json();
+  })
+  .then(function(datos){
+
+    let productos = datos.productos;
+
+    let tabla = document.createElement("table");
+
+    // Cabecera
+    let cabecera = document.createElement("tr");
+
+    Object.keys(productos[0]).forEach(function(clave){
+      let th = document.createElement("th");
+      th.textContent = clave;
+      cabecera.appendChild(th);
+    });
+
+    tabla.appendChild(cabecera);
+
+    // Filas
+    productos.forEach(function(producto){
+
+      let fila = document.createElement("tr");
+
+      Object.values(producto).forEach(function(valor){
+        let celda = document.createElement("td");
+        celda.textContent = valor;
+        fila.appendChild(celda);
+      });
+
+      tabla.appendChild(fila);
+
+    });
+
+    principal.appendChild(tabla);
+
+  });
+</script>

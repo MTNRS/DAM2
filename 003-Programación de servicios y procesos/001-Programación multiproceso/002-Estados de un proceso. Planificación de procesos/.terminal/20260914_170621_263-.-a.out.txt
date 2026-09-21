@@ -1,0 +1,9 @@
+Datetime: 2026-09-14T15:06:21.263Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos
+Command: ./a.out
+
+Result:
+Persona 1 es: Jose Vicente con edad 48 
+Persona 2 es: Juan con edad 52 
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y procesos/
+001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos$ 

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>jocarsa | programa</title>
+    <link rel="stylesheet" href="css/estilo.css">
+  </head>
+  <body class="jocarsa-iu">
+    <header>
+      <div class="corporativo">
+        <img src="https://static.jocarsa.com/logos/white.svg">
+        <h1>jocarsa | programa</h1>
+      </div>
+
+      <div id="herramientas" data-source="data/herramientas.json"></div>
+      <div id="usuario" data-source="data/usuario.json"></div>
+    </header>
+
+    <main>
+      <nav data-source="data/menu.json"></nav>
+      <section data-source="data/entidades.json"></section>
+
+      <div class="escenario">
+        <table data-source="data/clientes.json"></table>
+      </div>
+    </main>
+
+    <script src="js/componentes.js"></script>
+  </body>
+</html>

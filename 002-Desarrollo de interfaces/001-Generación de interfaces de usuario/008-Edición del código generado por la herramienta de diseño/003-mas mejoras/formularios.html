@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>jocarsa | formularios</title><link rel="stylesheet" href="css/estilo.css"></head>
+<body class="ju-demo-page">
+<header class="ju-demo-header"><div><h1>jocarsa | librería de formularios</h1><p>Controles reutilizables de jocarsa-iu</p></div><nav><a href="index.html">Aplicación</a><a href="login.html">Login</a><a href="toasts.html">Toasts</a></nav></header>
+<main class="ju-demo-main">
+<article class="ju-card"><h2>Formulario completo</h2><p>Ejemplo de campos, selección, fecha, texto largo, checks y acciones.</p>
+<form id="formDemo" class="ju-form-grid">
+<label><span>Nombre</span><input name="nombre" type="text" placeholder="Nombre completo" required></label>
+<label><span>Email</span><input name="email" type="email" placeholder="nombre@ejemplo.com" required></label>
+<label><span>Tipo</span><select name="tipo"><option>Cliente</option><option>Proveedor</option><option>Alumno</option></select></label>
+<label><span>Fecha</span><input name="fecha" type="date"></label>
+<label><span>Teléfono</span><input name="telefono" type="tel"></label>
+<label><span>Web</span><input name="web" type="url" placeholder="https://"></label>
+<label class="ju-form-full"><span>Descripción</span><textarea name="descripcion" placeholder="Escribe una descripción..."></textarea></label>
+<fieldset class="ju-fieldset ju-form-full"><strong>Preferencias</strong><div class="ju-check-group"><label class="ju-check"><input type="checkbox" name="activo"><span>Activo</span></label><label class="ju-check"><input type="checkbox" name="avisos"><span>Recibir avisos</span></label><label class="ju-check"><input type="radio" name="nivel" value="normal" checked><span>Normal</span></label><label class="ju-check"><input type="radio" name="nivel" value="prioritario"><span>Prioritario</span></label></div></fieldset>
+<div class="ju-form-full ju-button-row"><button class="ju-btn" type="submit">Guardar</button><button class="ju-btn secondary" type="reset">Limpiar</button></div>
+</form></article>
+<div class="ju-demo-grid"><article class="ju-card"><h3>Formulario compacto</h3><form class="ju-form-grid"><label class="ju-form-full"><span>Búsqueda</span><input type="search" placeholder="Buscar..."></label><label class="ju-form-full"><span>Estado</span><select><option>Todos</option><option>Activo</option><option>Inactivo</option></select></label></form></article><article class="ju-card"><h3>Origen de datos</h3><p>Estos mismos controles pueden construirse dinámicamente desde JSON, como en el proyecto integrado.</p><a class="ju-btn" href="index.html">Ver formulario dinámico</a></article></div>
+</main>
+<div class="ju-toast-stack" id="toastStack"></div>
+<script src="js/demo-ui.js"></script></body></html>
