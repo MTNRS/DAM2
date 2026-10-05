@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Avatar SVG 3D</title><link rel="stylesheet" href="jocarsa-face3d.css">
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#111}body{display:grid;place-items:center}#mi-avatar{width:min(80vmin,650px);height:min(80vmin,650px)}</style></head>
+<body><div id="mi-avatar"></div><script type="module">
+import JocarsaFace3D from "./jocarsa-face3d.js";
+const avatar=new JocarsaFace3D("#mi-avatar",{
+    svg:"avatar.svg",
+    profundidad:0.5,       // 0 = flat, 1 = normal, 2 = double depth
+    suavizado:0.035,       // final movement smoothing
+    suavizadoDetector:0.12,// MediaPipe measurement smoothing
+    zonaMuerta:0.012       // suppress tiny tracking vibrations
+});
+await avatar.iniciar();
+window.avatar=avatar; // e.g. avatar.setOjos("avatar-eyes-2")
+</script></body></html>

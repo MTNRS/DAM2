@@ -1,0 +1,106 @@
+#include "JocarsaBBDD.hpp"
+#include <algorithm>
+#include <cctype>
+#include <iostream>
+#include <map>
+#include <sstream>
+
+static std::string trim(std::string s){while(!s.empty()&&std::isspace((unsigned char)s.front()))s.erase(s.begin());while(!s.empty()&&std::isspace((unsigned char)s.back()))s.pop_back();return s;}
+static std::string mayus(std::string s){std::transform(s.begin(),s.end(),s.begin(),[](unsigned char c){return std::toupper(c);});return s;}
+static std::string sinComillas(std::string s){s=trim(s);if(s.size()>=2&&((s.front()=='\''&&s.back()=='\'')||(s.front()=='"'&&s.back()=='"')))return s.substr(1,s.size()-2);return s;}
+static std::vector<std::string> lista(std::string s){s=trim(s);if(s.size()>=2&&s.front()=='('&&s.back()==')')s=s.substr(1,s.size()-2);std::vector<std::string> r;std::string x;bool q=false;char qc=0;for(char c:s){if((c=='\''||c=='"')){if(!q){q=true;qc=c;}else if(qc==c)q=false;x+=c;}else if(c==','&&!q){r.push_back(sinComillas(x));x.clear();}else x+=c;}if(!x.empty()||!s.empty())r.push_back(sinComillas(x));return r;}
+static bool condicion(std::string s,std::string& c,std::string& v){auto p=s.find('=');if(p==std::string::npos)return false;c=trim(s.substr(0,p));v=sinComillas(s.substr(p+1));return !c.empty();}
+static std::map<std::string,std::string> asignaciones(std::string s){std::map<std::string,std::string> r;for(auto&x:lista(s)){std::string c,v;if(condicion(x,c,v))r[c]=v;}return r;}
+static void imprimir(const std::map<std::string,std::string>& r){for(auto const&[k,v]:r)std::cout<<k<<"="<<v<<"  ";std::cout<<"\n";}
+static void ayuda(){std::cout<<R"(
+Comandos DDL:
+  CREAR BASE nombre
+  USAR nombre
+  CREAR TABLA nombre campo1,campo2,campo3
+  ALTERAR TABLA nombre ANADIR columna
+  ALTERAR TABLA nombre ELIMINAR COLUMNA columna
+  ALTERAR TABLA nombre RENOMBRAR COLUMNA antigua nueva
+  ALTERAR TABLA nombre MODIFICAR COLUMNA antigua nueva
+  TRUNCAR TABLA nombre
+  ELIMINAR TABLA nombre
+  ELIMINAR BASE nombre
+
+Comandos DML (nomenclatura en espanol):
+  INSERTAR EN clientes VALORES ('Ana','30')
+  INSERTAR EN clientes (nombre) VALORES ('Ana')
+  INSERTAR EN copia SELECCIONAR * DE clientes
+  ACTUALIZAR clientes ESTABLECER nombre='Ana'
+  ACTUALIZAR clientes ESTABLECER edad='30' DONDE id='1'
+  ELIMINAR DE clientes
+  ELIMINAR DE clientes DONDE id='1'
+
+Consultas DQL:
+  SELECCIONAR * DE clientes
+  SELECCIONAR nombre,edad DE clientes DONDE edad >= 18
+  SELECCIONAR DISTINTO ciudad DE clientes
+  SELECCIONAR nombre COMO cliente DE clientes
+  SELECCIONAR * DE clientes DONDE ciudad = 'Valencia' Y edad ENTRE 18 Y 65
+  SELECCIONAR * DE clientes DONDE ciudad EN ('Valencia','Madrid')
+  SELECCIONAR * DE clientes DONDE nombre COMO 'Jos%'
+  SELECCIONAR * DE clientes ORDENAR POR edad DESCENDENTE LIMITE 10
+
+Compatibilidad con comandos anteriores:
+  INSERTAR tabla valor1,valor2
+  ACTUALIZAR tabla id valor1,valor2
+  ELIMINAR tabla id
+  SELECCIONAR tabla id | LISTAR tabla | BUSCAR tabla columna valor | ESQUEMA tabla
+  AYUDA | SALIR
+)";}
+int main(int argc,char**argv){
+ try{
+  std::string cfg=argc>1?argv[1]:"config.json"; JocarsaBBDD db(cfg); std::cout<<"JocarsaBBDD C++ - terminal\n"; ayuda(); std::string linea;
+  while(std::cout<<(db.basededatos.empty()?"jocarsa> ":("jocarsa["+db.basededatos+"]> "))&&std::getline(std::cin,linea)){
+   linea=trim(linea);if(linea.empty())continue;std::istringstream ss(linea);std::string a,b,c;ss>>a;auto A=mayus(a);
+   if(A=="SALIR")break;if(A=="AYUDA"){ayuda();continue;}
+   if(A=="CREAR"){ss>>b;if(mayus(b)=="BASE"){ss>>c;std::cout<<(db.creaBaseDatos(c)?"OK\n":"ERROR\n");}else if(mayus(b)=="TABLA"){ss>>c;std::string e;std::getline(ss,e);std::cout<<(db.creaTabla(c,trim(e))?"OK\n":"ERROR\n");}continue;}
+   if(A=="USAR"){ss>>b;std::cout<<(db.usaBaseDatos(b)?"OK\n":"ERROR\n");continue;}
+   if(A=="ALTERAR"){ss>>b;if(mayus(b)!="TABLA"){std::cout<<"Sintaxis: ALTERAR TABLA ...\n";continue;}std::string tabla,accion;ss>>tabla>>accion;bool ok=false;auto AC=mayus(accion);if(AC=="ANADIR"||AC=="AÑADIR"){std::string col;ss>>col;ok=db.alteraTablaAnadir(tabla,col);}else if(AC=="ELIMINAR"){std::string p,col;ss>>p;if(mayus(p)=="COLUMNA")ss>>col;else col=p;ok=db.alteraTablaEliminarColumna(tabla,col);}else if(AC=="RENOMBRAR"||AC=="MODIFICAR"){std::string p,x,y;ss>>p;if(mayus(p)=="COLUMNA")ss>>x>>y;else{x=p;ss>>y;}ok=AC=="RENOMBRAR"?db.alteraTablaRenombrarColumna(tabla,x,y):db.alteraTablaModificarColumna(tabla,x,y);}std::cout<<(ok?"OK\n":"ERROR\n");continue;}
+   if(A=="TRUNCAR"){ss>>b>>c;std::cout<<((mayus(b)=="TABLA"&&db.truncarTabla(c))?"OK\n":"ERROR\n");continue;}
+
+   if(A=="INSERTAR"){
+    ss>>b;
+    if(mayus(b)=="EN"){
+      std::string tabla;ss>>tabla;std::string resto;std::getline(ss,resto);resto=trim(resto);
+      if(!resto.empty()&&resto.front()=='('){auto fin=resto.find(')');if(fin==std::string::npos){std::cout<<"ERROR sintaxis\n";continue;}auto cols=lista(resto.substr(0,fin+1));auto despues=trim(resto.substr(fin+1));if(mayus(despues.substr(0,std::min<size_t>(7,despues.size())))!="VALORES"){std::cout<<"Falta VALORES\n";continue;}auto vals=lista(trim(despues.substr(7)));auto id=db.insertarConColumnas(tabla,cols,vals);std::cout<<(id<0?"ERROR":"ID="+std::to_string(id))<<"\n";continue;}
+      if(mayus(resto.substr(0,std::min<size_t>(7,resto.size())))=="VALORES"){auto vals=lista(trim(resto.substr(7)));auto id=db.insertarDatos(tabla,vals);std::cout<<(id<0?"ERROR":"ID="+std::to_string(id))<<"\n";continue;}
+      std::istringstream rs(resto);std::string s1,asterisco,de,origen;rs>>s1>>asterisco>>de>>origen;if(mayus(s1)=="SELECCIONAR"&&asterisco=="*"&&mayus(de)=="DE"){auto n=db.insertarDesdeSeleccion(tabla,origen);std::cout<<(n<0?"ERROR":"INSERTADOS="+std::to_string(n))<<"\n";continue;}
+      std::cout<<"Sintaxis INSERTAR no reconocida\n";continue;
+    }
+    std::string d;std::getline(ss,d);auto id=db.insertarDatos(b,lista(trim(d)));std::cout<<(id<0?"ERROR":"ID="+std::to_string(id))<<"\n";continue;
+   }
+
+   if(A=="ACTUALIZAR"){
+    ss>>b;std::string resto;std::getline(ss,resto);resto=trim(resto);
+    if(mayus(resto.substr(0,std::min<size_t>(10,resto.size())))=="ESTABLECER"){
+      resto=trim(resto.substr(10));std::string izq=resto,where;auto up=mayus(resto);auto p=up.find(" DONDE ");if(p!=std::string::npos){izq=trim(resto.substr(0,p));where=trim(resto.substr(p+7));}
+      auto cambios=asignaciones(izq);std::string wc,wv;if(!where.empty()&&!condicion(where,wc,wv)){std::cout<<"ERROR DONDE\n";continue;}auto n=db.actualizarDonde(b,cambios,wc,wv);std::cout<<(n<0?"ERROR":"ACTUALIZADOS="+std::to_string(n))<<"\n";continue;
+    }
+    std::istringstream old(resto);long long id;old>>id;std::string d;std::getline(old,d);std::cout<<(db.actualizar(b,id,lista(trim(d)))?"OK\n":"ERROR\n");continue;
+   }
+
+   if(A=="ELIMINAR"){
+    ss>>b;
+    if(mayus(b)=="TABLA"){ss>>c;std::cout<<(db.eliminarTabla(c)?"OK\n":"ERROR\n");continue;}
+    if(mayus(b)=="BASE"){ss>>c;std::cout<<(db.eliminarBaseDatos(c)?"OK\n":"ERROR\n");continue;}
+    if(mayus(b)=="DE"){std::string tabla;ss>>tabla;std::string resto;std::getline(ss,resto);resto=trim(resto);std::string wc,wv;if(!resto.empty()){std::istringstream rs(resto);std::string d;rs>>d;if(mayus(d)!="DONDE"){std::cout<<"ERROR sintaxis\n";continue;}std::string cond;std::getline(rs,cond);if(!condicion(trim(cond),wc,wv)){std::cout<<"ERROR DONDE\n";continue;}}auto n=db.eliminarDonde(tabla,wc,wv);std::cout<<(n<0?"ERROR":"ELIMINADOS="+std::to_string(n))<<"\n";continue;}
+    long long id;ss>>id;std::cout<<(db.eliminar(b,id)?"OK\n":"ERROR\n");continue;
+   }
+   if(A=="SELECCIONAR"){
+    auto U=mayus(linea);
+    if(U.find(" DE ")!=std::string::npos){
+      try{auto r=db.consultar(linea);for(size_t i=0;i<r.columnas.size();++i)std::cout<<(i?" | ":"")<<r.columnas[i];std::cout<<"\n";for(const auto&fila:r.filas){for(size_t i=0;i<fila.size();++i)std::cout<<(i?" | ":"")<<fila[i];std::cout<<"\n";}std::cout<<r.filas.size()<<" fila(s)\n";}catch(const std::exception&e){std::cout<<"ERROR: "<<e.what()<<"\n";}continue;
+    }
+    long long id;ss>>b>>id;auto r=db.seleccionar(b,id);if(r.empty())std::cout<<"No encontrado\n";else imprimir(r);continue;
+   }
+   if(A=="LISTAR"){ss>>b;for(auto&r:db.listarTodo(b))imprimir(r);continue;}
+   if(A=="BUSCAR"){ss>>b>>c;std::string v;std::getline(ss,v);for(auto&r:db.buscarColumna(b,c,sinComillas(trim(v))))imprimir(r);continue;}
+   if(A=="ESQUEMA"){ss>>b;auto e=db.obtenerEsquema(b);for(size_t i=0;i<e.size();++i)std::cout<<(i?",":"")<<e[i];std::cout<<"\n";continue;}
+   std::cout<<"Comando desconocido. Escribe AYUDA.\n";
+  }
+ }catch(const std::exception&e){std::cerr<<"Error: "<<e.what()<<"\n";return 1;}
+}

@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Computación distribuida</title>
+</head>
+
+<body>
+
+  <h2 id="identidad">
+    Sin identidad
+  </h2>
+
+
+  <h3>Participantes</h3>
+
+  <div id="participantes">
+    Ningún esclavo conectado
+  </div>
+
+
+  <h3>Trabajos</h3>
+
+  <div id="trabajos">
+    No hay trabajos
+  </div>
+
+
+  <h3>Resultados</h3>
+
+  <div id="resultados">
+    No hay resultados
+  </div>
+
+
+  <br>
+
+
+  <button id="maestro">
+    Soy maestro
+  </button>
+
+  <button id="esclavo">
+    Soy esclavo
+  </button>
+
+
+  <br><br>
+
+
+  <button id="crearTrabajo">
+    Crear trabajo ficticio
+  </button>
+
+
+  <script>
+
+    // ============================================================
+    // VARIABLES
+    // ============================================================
+
+    let identidad = null;
+
+    // Cada pestaña tiene su propio identificador
+    let hash = crypto.randomUUID();
+
+    let temporizador = null;
+
+
+    // ============================================================
+    // ELEMENTOS
+    // ============================================================
+
+    let botonmaestro =
+      document.querySelector("#maestro");
+
+    let botonesclavo =
+      document.querySelector("#esclavo");
+
+    let botonCrearTrabajo =
+      document.querySelector("#crearTrabajo");
+
+    let contenedor_identidad =
+      document.querySelector("#identidad");
+
+    let contenedor_participantes =
+      document.querySelector("#participantes");
+
+    let contenedor_trabajos =
+      document.querySelector("#trabajos");
+
+    let contenedor_resultados =
+      document.querySelector("#resultados");
+
+
+    // ============================================================
+    // MAESTRO
+    // ============================================================
+
+    botonmaestro.onclick = function(){
+
+      identidad = "maestro";
+
+      contenedor_identidad.textContent =
+        "🟢 Maestro - " + hash;
+
+      console.log(
+        "🟢 Soy maestro:",
+        hash
+      );
+
+      iniciarLatido();
+
+    };
+
+
+    // ============================================================
+    // ESCLAVO
+    // ============================================================
+
+    botonesclavo.onclick = function(){
+
+      identidad = "esclavo";
+
+      contenedor_identidad.textContent =
+        "🔵 Esclavo - " + hash;
+
+      console.log(
+        "🔵 Soy esclavo:",
+        hash
+      );
+
+      iniciarLatido();
+
+    };
+
+
+    // ============================================================
+    // CREAR TRABAJO
+    // ============================================================
+
+    botonCrearTrabajo.onclick =
+    async function(){
+
+      if(identidad !== "maestro"){
+
+        alert(
+          "Solo el maestro puede crear trabajos"
+        );
+
+        return;
+
+      }
+
+
+      // ----------------------------------------------------------
+      // Crear bloque ficticio
+      // ----------------------------------------------------------
+
+      let numeros = [];
+
+      for(let i = 0; i < 100; i++){
+
+        numeros.push(
+          Math.floor(
+            Math.random() * 100
+          )
+        );
+
+      }
+
+
+      console.log(
+        "📦 Creando trabajo:",
+        numeros
+      );
+
+
+      try{
+
+        let respuesta =
+          await fetch(
+            "servidor.php",
+            {
+              method:"POST",
+
+              headers:{
+                "Content-Type":
+                  "application/json"
+              },
+
+              body:JSON.stringify({
+
+                accion:
+                  "crear_trabajo",
+
+                maestro:
+                  hash,
+
+                datos:
+                  numeros
+
+              })
+            }
+          );
+
+
+        let datos =
+          await leerJSON(respuesta);
+
+
+        console.log(
+          "📦 Trabajo creado:",
+          datos
+        );
+
+
+        // Actualizar inmediatamente
+        await actualizarMaestro();
+
+
+      }catch(error){
+
+        console.error(
+          "❌ Error creando trabajo:",
+          error
+        );
+
+      }
+
+    };
+
+
+    // ============================================================
+    // INICIAR CICLO
+    // ============================================================
+
+    function iniciarLatido(){
+
+      if(temporizador){
+
+        clearTimeout(
+          temporizador
+        );
+
+      }
+
+      latido();
+
+    }
+
+
+    // ============================================================
+    // CICLO PRINCIPAL
+    // ============================================================
+
+    async function latido(){
+
+      try{
+
+        // --------------------------------------------------------
+        // ESCLAVO
+        // --------------------------------------------------------
+
+        if(
+          identidad === "esclavo"
+        ){
+
+          await cicloEsclavo();
+
+        }
+
+
+        // --------------------------------------------------------
+        // MAESTRO
+        // --------------------------------------------------------
+
+        if(
+          identidad === "maestro"
+        ){
+
+          await actualizarMaestro();
+
+        }
+
+
+      }catch(error){
+
+        console.error(
+          "❌ Error en latido:",
+          error
+        );
+
+      }
+
+
+      // ----------------------------------------------------------
+      // Próximo latido
+      // ----------------------------------------------------------
+
+      temporizador =
+        setTimeout(
+          latido,
+          1000
+        );
+
+    }
+
+
+    // ============================================================
+    // CICLO DEL ESCLAVO
+    // ============================================================
+
+    async function cicloEsclavo(){
+
+      // ----------------------------------------------------------
+      // Pedir trabajo
+      //
+      // ESTA PETICIÓN TAMBIÉN FUNCIONA COMO LATIDO
+      // ----------------------------------------------------------
+
+      let respuesta =
+        await fetch(
+
+          "servidor.php" +
+
+          "?accion=pedir_trabajo" +
+
+          "&hash=" +
+          encodeURIComponent(hash) +
+
+          "&t=" +
+          Date.now()
+
+        );
+
+
+      let trabajo =
+        await leerJSON(respuesta);
+
+
+      // ----------------------------------------------------------
+      // No hay trabajo
+      // ----------------------------------------------------------
+
+      if(!trabajo){
+
+        console.log(
+          "💤 No hay trabajo"
+        );
+
+        return;
+
+      }
+
+
+      console.log(
+        "📥 Trabajo recibido:",
+        trabajo
+      );
+
+
+      // ----------------------------------------------------------
+      // CALCULAR
+      // ----------------------------------------------------------
+
+      let resultado =
+        calcular(
+          trabajo.datos
+        );
+
+
+      console.log(
+        "🧮 Resultado:",
+        resultado
+      );
+
+
+      // ----------------------------------------------------------
+      // DEVOLVER RESULTADO
+      // ----------------------------------------------------------
+
+      let respuestaResultado =
+        await fetch(
+          "servidor.php",
+          {
+
+            method:"POST",
+
+            headers:{
+
+              "Content-Type":
+                "application/json"
+
+            },
+
+            body:JSON.stringify({
+
+              accion:
+                "resultado",
+
+              hash:
+                hash,
+
+              trabajo:
+                trabajo.id,
+
+              resultado:
+                resultado
+
+            })
+
+          }
+        );
+
+
+      let confirmacion =
+        await leerJSON(
+          respuestaResultado
+        );
+
+
+      console.log(
+        "📤 Resultado enviado:",
+        confirmacion
+      );
+
+    }
+
+
+    // ============================================================
+    // ACTUALIZAR MAESTRO
+    // ============================================================
+
+    async function actualizarMaestro(){
+
+      // ----------------------------------------------------------
+      // PARTICIPANTES
+      // ----------------------------------------------------------
+
+      let respuestaParticipantes =
+        await fetch(
+
+          "servidor.php" +
+          "?accion=participantes" +
+          "&t=" +
+          Date.now()
+
+        );
+
+
+      let participantes =
+        await leerJSON(
+          respuestaParticipantes
+        );
+
+
+      console.log(
+        "👥 Participantes:",
+        participantes
+      );
+
+
+      mostrarParticipantes(
+        participantes
+      );
+
+
+      // ----------------------------------------------------------
+      // TRABAJOS
+      // ----------------------------------------------------------
+
+      let respuestaTrabajos =
+        await fetch(
+
+          "servidor.php" +
+          "?accion=trabajos" +
+          "&t=" +
+          Date.now()
+
+        );
+
+
+      let trabajos =
+        await leerJSON(
+          respuestaTrabajos
+        );
+
+
+      mostrarTrabajos(
+        trabajos
+      );
+
+
+      // ----------------------------------------------------------
+      // RESULTADOS
+      // ----------------------------------------------------------
+
+      let respuestaResultados =
+        await fetch(
+
+          "servidor.php" +
+          "?accion=resultados" +
+          "&t=" +
+          Date.now()
+
+        );
+
+
+      let resultados =
+        await leerJSON(
+          respuestaResultados
+        );
+
+
+      mostrarResultados(
+        resultados
+      );
+
+    }
+
+
+    // ============================================================
+    // LEER JSON
+    // ============================================================
+    //
+    // Esta función permite ver el error REAL de PHP
+    // si servidor.php devuelve HTML, warnings, etc.
+    // ============================================================
+
+    async function leerJSON(respuesta){
+
+      let texto =
+        await respuesta.text();
+
+
+      try{
+
+        return JSON.parse(
+          texto
+        );
+
+      }catch(error){
+
+        console.error(
+          "❌ El servidor NO devolvió JSON"
+        );
+
+        console.error(
+          "Respuesta recibida:"
+        );
+
+        console.error(
+          texto
+        );
+
+        throw error;
+
+      }
+
+    }
+
+
+    // ============================================================
+    // CÁLCULO
+    // ============================================================
+
+    function calcular(datos){
+
+      let suma = 0;
+
+
+      for(
+        let i = 0;
+        i < datos.length;
+        i++
+      ){
+
+        suma += datos[i];
+
+      }
+
+
+      let media =
+        datos.length > 0
+        ?
+        suma / datos.length
+        :
+        0;
+
+
+      let minimo =
+        datos.length > 0
+        ?
+        Math.min(...datos)
+        :
+        null;
+
+
+      let maximo =
+        datos.length > 0
+        ?
+        Math.max(...datos)
+        :
+        null;
+
+
+      return {
+
+        suma:
+          suma,
+
+        cantidad:
+          datos.length,
+
+        media:
+          media,
+
+        minimo:
+          minimo,
+
+        maximo:
+          maximo
+
+      };
+
+    }
+
+
+    // ============================================================
+    // MOSTRAR PARTICIPANTES
+    // ============================================================
+
+    function mostrarParticipantes(
+      datos
+    ){
+
+      contenedor_participantes
+        .innerHTML = "";
+
+
+      if(
+        !datos ||
+        datos.length === 0
+      ){
+
+        contenedor_participantes
+          .textContent =
+            "Ningún esclavo conectado";
+
+        return;
+
+      }
+
+
+      datos.forEach(
+        function(participante){
+
+          let elemento =
+            document.createElement(
+              "div"
+            );
+
+
+          elemento.textContent =
+            "🔵 " +
+            participante.hash;
+
+
+          contenedor_participantes
+            .appendChild(
+              elemento
+            );
+
+        }
+      );
+
+    }
+
+
+    // ============================================================
+    // MOSTRAR TRABAJOS
+    // ============================================================
+
+    function mostrarTrabajos(
+      datos
+    ){
+
+      contenedor_trabajos
+        .innerHTML = "";
+
+
+      if(
+        !datos ||
+        datos.length === 0
+      ){
+
+        contenedor_trabajos
+          .textContent =
+            "No hay trabajos";
+
+        return;
+
+      }
+
+
+      datos.forEach(
+        function(trabajo){
+
+          let elemento =
+            document.createElement(
+              "div"
+            );
+
+
+          let icono = "⚪";
+
+
+          if(
+            trabajo.estado ===
+            "pendiente"
+          ){
+
+            icono = "🟡";
+
+          }
+
+
+          if(
+            trabajo.estado ===
+            "procesando"
+          ){
+
+            icono = "🔵";
+
+          }
+
+
+          if(
+            trabajo.estado ===
+            "completado"
+          ){
+
+            icono = "🟢";
+
+          }
+
+
+          elemento.textContent =
+
+            icono +
+
+            " " +
+
+            trabajo.id +
+
+            " → " +
+
+            trabajo.estado +
+
+            (
+              trabajo.esclavo
+              ?
+              " → " +
+              trabajo.esclavo
+              :
+              ""
+            );
+
+
+          contenedor_trabajos
+            .appendChild(
+              elemento
+            );
+
+        }
+      );
+
+    }
+
+
+    // ============================================================
+    // MOSTRAR RESULTADOS
+    // ============================================================
+
+    function mostrarResultados(
+      datos
+    ){
+
+      contenedor_resultados
+        .innerHTML = "";
+
+
+      if(
+        !datos ||
+        datos.length === 0
+      ){
+
+        contenedor_resultados
+          .textContent =
+            "No hay resultados";
+
+        return;
+
+      }
+
+
+      datos.forEach(
+        function(resultado){
+
+          let elemento =
+            document.createElement(
+              "div"
+            );
+
+
+          elemento.innerHTML = `
+
+            <strong>
+              ${resultado.trabajo}
+            </strong>
+
+            <br>
+
+            Esclavo:
+            ${resultado.esclavo}
+
+            <br>
+
+            Suma:
+            ${resultado.resultado.suma}
+
+            <br>
+
+            Cantidad:
+            ${resultado.resultado.cantidad}
+
+            <br>
+
+            Media:
+            ${resultado.resultado.media.toFixed(2)}
+
+            <br>
+
+            Mínimo:
+            ${resultado.resultado.minimo}
+
+            <br>
+
+            Máximo:
+            ${resultado.resultado.maximo}
+
+            <hr>
+
+          `;
+
+
+          contenedor_resultados
+            .appendChild(
+              elemento
+            );
+
+        }
+      );
+
+    }
+
+  </script>
+
+</body>
+</html>

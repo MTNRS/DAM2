@@ -1,0 +1,19 @@
+<video src="josevicente.mp4" controls></video>
+<button id="reproducir">Reproducir</button>
+<button id="parar">Parar</button>
+<input type="range" id="volumen">
+<script>
+  let video = document.querySelector("video")
+  let reproducir = document.querySelector("#reproducir")
+  let parar = document.querySelector("#parar")
+  let volumen = document.querySelector("#volumen")
+  reproducir.onclick = function(){
+  	video.play()
+  }
+  parar.onclick = function(){
+  	video.pause()
+  }
+  volumen.onchange = function(){
+  	video.volume = this.value
+  }
+</script>

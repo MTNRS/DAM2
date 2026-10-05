@@ -1,0 +1,15 @@
+CREAR BASE comercio_left
+USAR comercio_left
+CREAR TABLA clientes nombre,email,ciudad
+ALTERAR TABLA clientes MODIFICAR email NO NULO
+ALTERAR TABLA clientes MODIFICAR email UNICO
+ALTERAR TABLA clientes MODIFICAR ciudad POR DEFECTO 'Valencia'
+INSERTAR EN clientes (nombre,email) VALORES ('Ana','ana@correo.com')
+INSERTAR EN clientes (nombre,email) VALORES ('Luis','luis@correo.com')
+INSERTAR EN clientes (nombre,email) VALORES ('Duplicado','ana@correo.com')
+CREAR TABLA pedidos id_cliente,total
+ALTERAR TABLA pedidos ANADIR CLAVE FORANEA id_cliente REFERENCIAS clientes id
+INSERTAR EN pedidos VALORES ('1','120')
+SELECCIONAR clientes.nombre,pedidos.total DE clientes LEFT JOIN pedidos EN clientes.id = pedidos.id_cliente
+ESQUEMA clientes
+SALIR

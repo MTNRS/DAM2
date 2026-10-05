@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      let trabajadores = [];
+      let trabajador = new Worker("trabajador2.js");
+      trabajador.postMessage("le envío un  mensaje al trabajador")
+      trabajador.onmessage = function(datos){
+      	console.log(datos)
+      }
+    </script>
+  </body>
+</html>

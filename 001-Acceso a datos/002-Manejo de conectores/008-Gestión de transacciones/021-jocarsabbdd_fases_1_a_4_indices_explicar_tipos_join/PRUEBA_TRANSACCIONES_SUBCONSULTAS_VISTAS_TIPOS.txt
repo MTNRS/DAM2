@@ -1,0 +1,20 @@
+CREAR BASE hito_avanzado
+USAR hito_avanzado
+CREAR TABLA productos nombre:TEXTO,stock:ENTERO,precio:REAL,disponible:BOOLEANO
+INSERTAR EN productos VALORES ('Teclado','10','25.5','VERDADERO')
+INSERTAR EN productos VALORES ('Monitor','3','180','1')
+INSERTAR EN productos VALORES ('Raton','20','15','FALSO')
+CREAR VISTA caros COMO SELECCIONAR nombre,precio DE productos DONDE precio > 20
+SELECCIONAR * DE caros
+SELECCIONAR nombre DE productos DONDE id EN (SELECCIONAR id DE productos DONDE stock > 5)
+SELECCIONAR nombre,precio DE productos DONDE precio > (SELECCIONAR MEDIA(precio) DE productos)
+INICIAR TRANSACCION
+INSERTAR EN productos VALORES ('Temporal','1','1','1')
+SELECCIONAR CONTAR(*) COMO registros DE productos
+DESHACER
+SELECCIONAR CONTAR(*) COMO registros DE productos
+INICIAR TRANSACCION
+INSERTAR EN productos VALORES ('Definitivo','1','5','1')
+CONFIRMAR
+SELECCIONAR CONTAR(*) COMO registros DE productos
+SALIR

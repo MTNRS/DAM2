@@ -1,0 +1,7 @@
+Datetime: 2026-10-05T13:23:42.451Z
+Working directory: /var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/004-Procesamiento de objetos multimedia
+Command: clear
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/004-Programación mult
+imedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/004-Procesamiento de objetos multimedia$ 

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <body>
+
+    <button id="boton">Crear ventana</button>
+
+    <script>
+      document.querySelector("#boton").onclick = function(){
+
+        let ventana = window.open(
+          "",
+          "miVentana",
+          "width=800,height=600"
+        );
+
+        ventana.document.write(`
+          <h1>Nueva ventana</h1>
+          <p>Esta ventana ha sido creada con JavaScript</p>
+          <button onclick="window.close()">Cerrar</button>
+        `);
+
+      }
+    </script>
+
+  </body>
+</html>

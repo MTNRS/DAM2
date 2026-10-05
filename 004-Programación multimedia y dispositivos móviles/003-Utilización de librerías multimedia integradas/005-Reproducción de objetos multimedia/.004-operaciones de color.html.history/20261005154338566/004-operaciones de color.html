@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <video src="josevicente.mp4" controls></video>
+
+  <p>
+    Brillo:
+    <input type="range" id="brillo"
+           min="-100" max="100" value="0">
+    <span id="valorBrillo">0</span>
+  </p>
+
+  <p>
+    Contraste:
+    <input type="range" id="contraste"
+           min="-100" max="100" value="0">
+    <span id="valorContraste">0</span>
+  </p>
+
+  <p>
+    Saturación:
+    <input type="range" id="saturacion"
+           min="0" max="200" value="100">
+    <span id="valorSaturacion">100</span>%
+  </p>
+
+  <p>
+    Gamma:
+    <input type="range" id="gamma"
+           min="10" max="300" value="100">
+    <span id="valorGamma">1.00</span>
+  </p>
+
+  <canvas></canvas>
+
+  <script>
+
+    let video = document.querySelector("video");
+    let lienzo = document.querySelector("canvas");
+    let contexto = lienzo.getContext("2d");
+
+    let brillo = document.querySelector("#brillo");
+    let contraste = document.querySelector("#contraste");
+    let saturacion = document.querySelector("#saturacion");
+    let gamma = document.querySelector("#gamma");
+
+    let valorBrillo = document.querySelector("#valorBrillo");
+    let valorContraste = document.querySelector("#valorContraste");
+    let valorSaturacion = document.querySelector("#valorSaturacion");
+    let valorGamma = document.querySelector("#valorGamma");
+
+
+    // Mostrar valores de los sliders
+
+    brillo.oninput = function(){
+      valorBrillo.textContent = brillo.value;
+    }
+
+    contraste.oninput = function(){
+      valorContraste.textContent = contraste.value;
+    }
+
+    saturacion.oninput = function(){
+      valorSaturacion.textContent = saturacion.value;
+    }
+
+    gamma.oninput = function(){
+      valorGamma.textContent = (gamma.value / 100).toFixed(2);
+    }
+
+
+    video.onloadedmetadata = function(){
+
+      lienzo.width = video.videoWidth;
+      lienzo.height = video.videoHeight;
+
+      function fotograma(){
+
+        // Dibujamos el vídeo original
+        contexto.drawImage(
+          video,
+          0,
+          0,
+          lienzo.width,
+          lienzo.height
+        );
+
+
+        // Obtenemos todos los píxeles
+        let imagen = contexto.getImageData(
+          0,
+          0,
+          lienzo.width,
+          lienzo.height
+        );
+
+        let pixeles = imagen.data;
+
+
+        // Valores actuales de los controles
+
+        let valorB = parseFloat(brillo.value);
+
+        let valorC = parseFloat(contraste.value);
+
+        let valorS = parseFloat(saturacion.value) / 100;
+
+        let valorG = parseFloat(gamma.value) / 100;
+
+
+        // Factor de contraste
+        let factorContraste =
+          (259 * (valorC + 255)) /
+          (255 * (259 - valorC));
+
+
+        // Recorremos todos los píxeles
+
+        for(let i = 0; i < pixeles.length; i += 4){
+
+          let r = pixeles[i];
+          let g = pixeles[i + 1];
+          let b = pixeles[i + 2];
+
+
+          // -------------------------
+          // BRILLO
+          // -------------------------
+
+          r += valorB;
+          g += valorB;
+          b += valorB;
+
+
+          // -------------------------
+          // CONTRASTE
+          // -------------------------
+
+          r = factorContraste * (r - 128) + 128;
+          g = factorContraste * (g - 128) + 128;
+          b = factorContraste * (b - 128) + 128;
+
+
+          // -------------------------
+          // SATURACIÓN
+          // -------------------------
+
+          let gris =
+              r * 0.299 +
+              g * 0.587 +
+              b * 0.114;
+
+          r = gris + (r - gris) * valorS;
+          g = gris + (g - gris) * valorS;
+          b = gris + (b - gris) * valorS;
+
+
+          // -------------------------
+          // GAMMA
+          // -------------------------
+
+          r = 255 * Math.pow(r / 255, 1 / valorG);
+          g = 255 * Math.pow(g / 255, 1 / valorG);
+          b = 255 * Math.pow(b / 255, 1 / valorG);
+
+
+          // -------------------------
+          // LIMITAMOS 0 - 255
+          // -------------------------
+
+          r = Math.max(0, Math.min(255, r));
+          g = Math.max(0, Math.min(255, g));
+          b = Math.max(0, Math.min(255, b));
+
+
+          // Guardamos el píxel
+
+          pixeles[i]     = r;
+          pixeles[i + 1] = g;
+          pixeles[i + 2] = b;
+
+          // pixeles[i + 3] = alpha
+        }
+
+
+        // Pintamos el resultado
+        contexto.putImageData(imagen, 0, 0);
+
+        requestAnimationFrame(fotograma);
+      }
+
+      fotograma();
+    };
+
+  </script>
+
+</body>
+</html>

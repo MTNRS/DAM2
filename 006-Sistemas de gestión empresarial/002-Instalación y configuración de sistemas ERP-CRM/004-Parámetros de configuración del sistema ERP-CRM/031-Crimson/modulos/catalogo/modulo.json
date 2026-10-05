@@ -1,0 +1,13 @@
+{
+  "modulo": "catalogo",
+  "nombre": "Catálogo",
+  "tablas": [
+    "categorias_producto",
+    "unidades_medida",
+    "tipos_iva",
+    "productos",
+    "variantes_producto",
+    "tarifas",
+    "tarifas_lineas"
+  ]
+}

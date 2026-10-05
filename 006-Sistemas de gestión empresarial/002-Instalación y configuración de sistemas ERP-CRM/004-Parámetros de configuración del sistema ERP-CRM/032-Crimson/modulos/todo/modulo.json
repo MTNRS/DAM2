@@ -1,0 +1,18 @@
+{
+    "modulo": "todo",
+    "nombre": "Todo",
+    "tablas": [
+        "categorias",
+        "clientes",
+        "compras",
+        "compras_lineas",
+        "empleados",
+        "empresas",
+        "facturas",
+        "pedidos",
+        "pedidos_lineas",
+        "productos",
+        "proveedores",
+        "usuarios"
+    ]
+}

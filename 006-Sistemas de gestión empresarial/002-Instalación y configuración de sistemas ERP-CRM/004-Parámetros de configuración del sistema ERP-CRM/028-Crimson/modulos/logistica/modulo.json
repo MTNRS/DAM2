@@ -1,0 +1,16 @@
+{
+  "modulo": "logistica",
+  "nombre": "Logística",
+  "tablas": [
+    "almacenes",
+    "ubicaciones_almacen",
+    "movimientos_stock",
+    "recepciones_compra",
+    "recepciones_compra_lineas",
+    "albaranes_venta",
+    "albaranes_venta_lineas",
+    "pedidos_compra",
+    "pedidos_venta",
+    "terceros"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "modulo": "administracion",
+  "nombre": "Administración",
+  "tablas": [
+    "empresas",
+    "centros",
+    "departamentos",
+    "usuarios",
+    "roles",
+    "permisos",
+    "roles_permisos",
+    "usuarios_roles",
+    "series_documentales",
+    "configuracion",
+    "notificaciones"
+  ]
+}

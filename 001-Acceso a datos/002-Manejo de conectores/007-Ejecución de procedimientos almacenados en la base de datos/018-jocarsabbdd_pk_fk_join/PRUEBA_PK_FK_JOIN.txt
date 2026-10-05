@@ -1,0 +1,17 @@
+CREAR BASE comercio_relacional
+USAR comercio_relacional
+CREAR TABLA clientes nombre,email
+CREAR TABLA pedidos id_cliente,total
+ALTERAR TABLA pedidos ANADIR CLAVE FORANEA id_cliente REFERENCIAS clientes id
+ESQUEMA clientes
+ESQUEMA pedidos
+INSERTAR EN clientes VALORES ('Ana','ana@correo.com')
+INSERTAR EN clientes VALORES ('Luis','luis@correo.com')
+INSERTAR EN pedidos VALORES ('1','120')
+INSERTAR EN pedidos VALORES ('1','75')
+INSERTAR EN pedidos VALORES ('2','250')
+SELECCIONAR clientes.nombre,pedidos.total DE clientes JOIN pedidos EN clientes.id = pedidos.id_cliente
+SELECCIONAR clientes.nombre,pedidos.total DE clientes JOIN pedidos EN clientes.id = pedidos.id_cliente ORDENAR POR pedidos.total DESCENDENTE
+INSERTAR EN pedidos VALORES ('999','300')
+ELIMINAR DE clientes DONDE id='1'
+SALIR

@@ -1,0 +1,26 @@
+<script>
+let peticion = indexedDB.open("miBase", 1);
+
+peticion.onupgradeneeded = function() {
+    let db = peticion.result;
+    db.createObjectStore("datos");
+};
+
+peticion.onsuccess = function() {
+    let db = peticion.result;
+
+    // Guardar
+    let tx = db.transaction("datos", "readwrite");
+    tx.objectStore("datos").put("Jose", "nombre");
+
+    // Leer
+    tx.oncomplete = function() {
+        let tx = db.transaction("datos", "readonly");
+        let peticion = tx.objectStore("datos").get("nombre");
+
+        peticion.onsuccess = function() {
+            console.log(peticion.result);
+        };
+    };
+};
+</script>

@@ -1,0 +1,678 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#111;
+      font-family:Arial,sans-serif;
+    }
+
+
+    /* ========================= */
+    /* REPRODUCTOR */
+    /* ========================= */
+
+    .jvaudio{
+      width:800px;
+      max-width:90%;
+      padding:20px;
+
+      display:flex;
+      align-items:center;
+      gap:16px;
+
+      background:white;
+
+      border-radius:18px;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.5);
+    }
+
+
+    /* Ocultamos el reproductor original */
+
+    .jvaudio audio{
+      display:none;
+    }
+
+
+    /* ========================= */
+    /* BOTONES */
+    /* ========================= */
+
+    .jvaudio button{
+      flex-shrink:0;
+
+      width:44px;
+      height:44px;
+
+      border:none;
+      border-radius:50%;
+
+      background:#111;
+      color:white;
+
+      font-size:17px;
+
+      cursor:pointer;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      transition:
+        transform 0.2s,
+        background 0.2s;
+    }
+
+    .jvaudio button:hover{
+      transform:scale(1.08);
+      background:#333;
+    }
+
+    .jvaudio button:active{
+      transform:scale(0.95);
+    }
+
+
+    /* ========================= */
+    /* WAVEFORM */
+    /* ========================= */
+
+    .waveform{
+      flex:1;
+
+      width:100%;
+      height:80px;
+
+      cursor:pointer;
+    }
+
+
+    /* ========================= */
+    /* VOLUMEN */
+    /* ========================= */
+
+    .volumen{
+      width:80px;
+
+      appearance:none;
+
+      height:4px;
+
+      background:#ddd;
+
+      border-radius:10px;
+
+      cursor:pointer;
+    }
+
+    .volumen::-webkit-slider-thumb{
+      appearance:none;
+
+      width:13px;
+      height:13px;
+
+      border-radius:50%;
+
+      background:#111;
+    }
+
+
+    /* ========================= */
+    /* TIEMPO */
+    /* ========================= */
+
+    .tiempo{
+      min-width:42px;
+
+      font-size:12px;
+      color:#777;
+
+      text-align:center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+<audio src="0802.mp3"></audio>
+
+
+<script>
+
+let audios = document.querySelectorAll("audio")
+
+audios.forEach(function(audio){
+
+  // =========================
+  // CONTENEDOR
+  // =========================
+
+  let contenedor = document.createElement("div")
+
+  contenedor.classList.add("jvaudio")
+
+  audio.parentNode.insertBefore(
+    contenedor,
+    audio
+  )
+
+  contenedor.appendChild(audio)
+
+
+  // =========================
+  // ATRÁS
+  // =========================
+
+  let atras = document.createElement("button")
+
+  atras.textContent = "↶"
+  atras.title = "Retroceder 5 segundos"
+
+  contenedor.appendChild(atras)
+
+
+  // =========================
+  // PLAY
+  // =========================
+
+  let reproducir = document.createElement("button")
+
+  reproducir.textContent = "▶"
+  reproducir.title = "Reproducir"
+
+  contenedor.appendChild(reproducir)
+
+
+  // =========================
+  // ADELANTE
+  // =========================
+
+  let adelante = document.createElement("button")
+
+  adelante.textContent = "↷"
+  adelante.title = "Avanzar 5 segundos"
+
+  contenedor.appendChild(adelante)
+
+
+  // =========================
+  // TIEMPO
+  // =========================
+
+  let tiempo = document.createElement("div")
+
+  tiempo.classList.add("tiempo")
+
+  tiempo.textContent = "0:00"
+
+  contenedor.appendChild(tiempo)
+
+
+  // =========================
+  // CANVAS WAVEFORM
+  // =========================
+
+  let canvas = document.createElement("canvas")
+
+  canvas.width = 600
+  canvas.height = 80
+
+  canvas.classList.add("waveform")
+
+  contenedor.appendChild(canvas)
+
+  let ctx = canvas.getContext("2d")
+
+
+  // =========================
+  // VOLUMEN
+  // =========================
+
+  let volumen = document.createElement("input")
+
+  volumen.type = "range"
+  volumen.min = 0
+  volumen.max = 1
+  volumen.step = 0.01
+  volumen.value = 1
+
+  volumen.classList.add("volumen")
+
+  contenedor.appendChild(volumen)
+
+
+  // =========================
+  // WAVEFORM
+  // =========================
+
+  let alturas = []
+
+  let numeroBarras = 90
+
+
+  fetch(audio.src)
+
+    .then(function(respuesta){
+
+      return respuesta.arrayBuffer()
+
+    })
+
+    .then(function(datos){
+
+      let contextoAudio = new AudioContext()
+
+      contextoAudio.decodeAudioData(
+        datos,
+        function(buffer){
+
+          let samples =
+            buffer.getChannelData(0)
+
+          let salto =
+            Math.floor(
+              samples.length /
+              numeroBarras
+            )
+
+
+          // =========================
+          // CALCULAR ALTURAS
+          // =========================
+
+          for(
+            let barra = 0;
+            barra < numeroBarras;
+            barra++
+          ){
+
+            let maximo = 0
+
+            let inicio =
+              barra * salto
+
+            let final =
+              inicio + salto
+
+
+            // No necesitamos leer
+            // absolutamente todos los samples.
+            // Saltamos muestras para acelerar.
+
+            let subSalto =
+              Math.max(
+                1,
+                Math.floor(salto / 100)
+              )
+
+
+            for(
+              let i = inicio;
+              i < final;
+              i += subSalto
+            ){
+
+              let valor =
+                Math.abs(samples[i])
+
+              if(valor > maximo){
+
+                maximo = valor
+
+              }
+
+            }
+
+
+            alturas.push(maximo)
+
+          }
+
+
+          dibujar()
+
+        }
+      )
+
+    })
+
+
+  // =========================
+  // DIBUJAR WAVEFORM
+  // =========================
+
+  function dibujar(){
+
+    let ancho = canvas.width
+    let alto = canvas.height
+
+    let medio = alto / 2
+
+    let separacion = 3
+
+    let anchoBarra =
+      ancho / numeroBarras
+      - separacion
+
+
+    ctx.clearRect(
+      0,
+      0,
+      ancho,
+      alto
+    )
+
+
+    let progreso = 0
+
+    if(audio.duration){
+
+      progreso =
+        audio.currentTime /
+        audio.duration
+
+    }
+
+
+    for(
+      let i = 0;
+      i < alturas.length;
+      i++
+    ){
+
+      let altura =
+        alturas[i] *
+        medio *
+        0.85
+
+
+      // Altura mínima
+
+      altura =
+        Math.max(
+          altura,
+          3
+        )
+
+
+      let x =
+        i *
+        (
+          anchoBarra +
+          separacion
+        )
+
+
+      // =========================
+      // COLOR
+      // =========================
+
+      if(
+        i / numeroBarras
+        <= progreso
+      ){
+
+        ctx.fillStyle = "#111"
+
+      }else{
+
+        ctx.fillStyle = "#cccccc"
+
+      }
+
+
+      // =========================
+      // BARRA REDONDEADA
+      // =========================
+
+      ctx.beginPath()
+
+      ctx.roundRect(
+        x,
+        medio - altura,
+        anchoBarra,
+        altura * 2,
+        anchoBarra / 2
+      )
+
+      ctx.fill()
+
+    }
+
+  }
+
+
+  // =========================
+  // PLAY / PAUSE
+  // =========================
+
+  reproducir.onclick = function(){
+
+    if(audio.paused){
+
+      audio.play()
+
+    }else{
+
+      audio.pause()
+
+    }
+
+  }
+
+
+  audio.onplay = function(){
+
+    reproducir.textContent = "❚❚"
+
+  }
+
+
+  audio.onpause = function(){
+
+    reproducir.textContent = "▶"
+
+  }
+
+
+  // =========================
+  // ADELANTE / ATRÁS
+  // =========================
+
+  adelante.onclick = function(){
+
+    audio.currentTime =
+      Math.min(
+        audio.currentTime + 5,
+        audio.duration
+      )
+
+  }
+
+
+  atras.onclick = function(){
+
+    audio.currentTime =
+      Math.max(
+        audio.currentTime - 5,
+        0
+      )
+
+  }
+
+
+  // =========================
+  // VOLUMEN
+  // =========================
+
+  volumen.oninput = function(){
+
+    audio.volume =
+      this.value
+
+  }
+
+
+  // =========================
+  // ACTUALIZAR PROGRESO
+  // =========================
+
+  audio.ontimeupdate = function(){
+
+    dibujar()
+
+    tiempo.textContent =
+      formatearTiempo(
+        audio.currentTime
+      )
+
+  }
+
+
+  // =========================
+  // CLICK EN WAVEFORM
+  // =========================
+
+  canvas.onclick = function(evento){
+
+    let rect =
+      canvas.getBoundingClientRect()
+
+    let x =
+      evento.clientX -
+      rect.left
+
+    let porcentaje =
+      x / rect.width
+
+    audio.currentTime =
+      porcentaje *
+      audio.duration
+
+    dibujar()
+
+  }
+
+
+  // =========================
+  // ARRASTRAR WAVEFORM
+  // =========================
+
+  let arrastrando = false
+
+
+  canvas.onmousedown = function(evento){
+
+    arrastrando = true
+
+    mover(evento)
+
+  }
+
+
+  window.addEventListener(
+    "mousemove",
+    function(evento){
+
+      if(arrastrando){
+
+        mover(evento)
+
+      }
+
+    }
+  )
+
+
+  window.addEventListener(
+    "mouseup",
+    function(){
+
+      arrastrando = false
+
+    }
+  )
+
+
+  function mover(evento){
+
+    let rect =
+      canvas.getBoundingClientRect()
+
+    let x =
+      evento.clientX -
+      rect.left
+
+
+    x =
+      Math.max(
+        0,
+        Math.min(
+          x,
+          rect.width
+        )
+      )
+
+
+    let porcentaje =
+      x / rect.width
+
+
+    audio.currentTime =
+      porcentaje *
+      audio.duration
+
+    dibujar()
+
+  }
+
+
+  // =========================
+  // FORMATEAR TIEMPO
+  // =========================
+
+  function formatearTiempo(segundos){
+
+    let minutos =
+      Math.floor(
+        segundos / 60
+      )
+
+    let resto =
+      Math.floor(
+        segundos % 60
+      )
+
+    if(resto < 10){
+
+      resto =
+        "0" + resto
+
+    }
+
+    return minutos + ":" + resto
+
+  }
+
+})
+
+</script>
+
+</body>
+</html>

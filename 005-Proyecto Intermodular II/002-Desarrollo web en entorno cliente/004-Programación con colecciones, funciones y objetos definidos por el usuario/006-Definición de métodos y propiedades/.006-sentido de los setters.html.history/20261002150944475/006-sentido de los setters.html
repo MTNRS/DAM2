@@ -1,0 +1,21 @@
+<script>
+  class CuentaBancaria{
+  	constructor(cliente){
+    	this.saldo = 0;
+      this.cliente = cliente;
+    }
+    dameNombre(){
+    	return this.nombre+" "+this.apellidos;
+    }
+    ponNombre(nuevonombre,nuevosapellidos){
+    	this.nombre = nuevonombre;
+      this.apellidos = nuevosapellidos;
+    }
+  }
+  
+  let alumno1 = new Alumno("Jose Vicente","Carratala","info@jocarsa.com");
+  console.log(alumno1);
+  console.log(alumno1.dameNombre())// getter
+  alumno1.ponNombre("Juan","Lopez")
+  console.log(alumno1.dameNombre())// getter
+</script>

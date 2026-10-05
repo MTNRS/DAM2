@@ -1,0 +1,10 @@
+Datetime: 2026-09-24T11:31:21.346Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/004-Ejecución de sentencias de descripción de datos/012-DDL
+Command: make clean
+
+Result:
+make clean
+
+rm -f jocarsabbdd jocarsabbdd*.so
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de cone
+ctores/004-Ejecución de sentencias de descripción de datos/012-DDL$ 

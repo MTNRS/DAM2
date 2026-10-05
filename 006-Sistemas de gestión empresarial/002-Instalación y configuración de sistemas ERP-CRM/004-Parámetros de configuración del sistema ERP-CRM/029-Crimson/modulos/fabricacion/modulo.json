@@ -1,0 +1,17 @@
+{
+  "modulo": "fabricacion",
+  "nombre": "Fabricación",
+  "tablas": [
+    "recursos_maquina",
+    "listas_materiales",
+    "listas_materiales_lineas",
+    "rutas_fabricacion",
+    "operaciones_ruta",
+    "ordenes_fabricacion",
+    "consumos_fabricacion",
+    "producciones_fabricacion",
+    "productos",
+    "stock",
+    "lotes"
+  ]
+}

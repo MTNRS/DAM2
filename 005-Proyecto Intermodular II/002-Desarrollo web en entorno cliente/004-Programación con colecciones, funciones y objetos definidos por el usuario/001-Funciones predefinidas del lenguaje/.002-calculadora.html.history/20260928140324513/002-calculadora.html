@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    <input type="text" id="pantalla" readonly>
+    <br><br>
+
+    <button onclick="pantalla.value += '7'">7</button>
+    <button onclick="pantalla.value += '8'">8</button>
+    <button onclick="pantalla.value += '9'">9</button>
+    <button onclick="pantalla.value += '/'">/</button>
+    <br>
+
+    <button onclick="pantalla.value += '4'">4</button>
+    <button onclick="pantalla.value += '5'">5</button>
+    <button onclick="pantalla.value += '6'">6</button>
+    <button onclick="pantalla.value += '*'">*</button>
+    <br>
+
+    <button onclick="pantalla.value += '1'">1</button>
+    <button onclick="pantalla.value += '2'">2</button>
+    <button onclick="pantalla.value += '3'">3</button>
+    <button onclick="pantalla.value += '-'">-</button>
+    <br>
+
+    <button onclick="pantalla.value += '0'">0</button>
+    <button onclick="pantalla.value += '.'">.</button>
+    <button onclick="pantalla.value = eval(pantalla.value)">=</button>
+    <button onclick="pantalla.value += '+'">+</button>
+    <br>
+
+    <button onclick="pantalla.value = ''">C</button>
+
+</body>
+</html>

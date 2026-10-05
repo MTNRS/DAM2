@@ -1,0 +1,351 @@
+1
+00:00:00,000 --> 00:00:04,300
+Muy bien, entonces, en proyecto
+intermodular,
+
+2
+00:00:06,020 --> 00:00:11,380
+donde estábamos el otro día, nos quedamos
+aquí, nos quedamos con eventos
+
+3
+00:00:11,380 --> 00:00:13,240
+precisamente,
+
+4
+00:00:14,440 --> 00:00:15,320
+expresiones regulares,
+
+5
+00:00:18,480 --> 00:00:24,160
+utilización de formularios desde código,
+esto es precisamente de lo que estamos
+
+6
+00:00:24,160 --> 00:00:29,880
+hablando hoy. Insisto, recordamos que
+estamos en clientes, esto es tipos de
+
+7
+00:00:29,880 --> 00:00:38,060
+eventos. Vale, entonces, para empezar
+vamos a crear un pequeño formulario.
+
+8
+00:00:38,620 --> 00:00:49,330
+Quiero crear un formulario en HTML puro,
+sin CSS, lo más puro posible.
+
+9
+00:00:51,770 --> 00:00:59,470
+OK, entonces, 001, crear formulario.html.
+
+10
+00:01:05,590 --> 00:01:12,310
+Vale, y básicamente, el hecho de que en un
+momento dado podamos saber que cualquier
+
+11
+00:01:12,310 --> 00:01:18,510
+elemento de formulario se puede recoger
+mediante JavaScript. Entonces, nuevo
+
+12
+00:01:18,510 --> 00:01:29,580
+archivo, 002, recogemos mediante
+JavaScript.html.
+
+13
+00:01:32,520 --> 00:01:39,580
+Vale, y ahora con JavaScript para recoger
+todos los datos.
+
+14
+00:01:44,560 --> 00:01:52,280
+Y para en
+
+15
+00:01:52,280 --> 00:01:57,440
+un Vale, lo ha cogido con formdata.
+
+16
+00:01:57,820 --> 00:02:02,500
+Bien, y básicamente lo
+
+17
+00:02:02,500 --> 00:02:11,620
+que hacemos en este caso es crear...
+¿dónde estás aquí? Aquí, con un formdata,
+
+18
+00:02:12,480 --> 00:02:20,560
+y incluso voy a hacer un console.log datos
+para ver que, si por lo que sea queremos
+
+19
+00:02:20,560 --> 00:02:26,920
+crear un formulario a mano, podemos
+hacerlo mediante JavaScript. Vamos a
+
+20
+00:02:26,920 --> 00:02:33,640
+verlo. Tenemos un evento prevén default
+que lo que hace es evitar enviar el
+
+21
+00:02:33,640 --> 00:02:39,980
+formulario. Vamos a proyecto intermodular,
+vamos a cliente, vamos a interacción,
+
+22
+00:02:40,300 --> 00:02:46,880
+vamos a formularios, vamos a recoger y
+envío. Vale, y lo que tengo en la pantalla
+
+23
+00:02:46,880 --> 00:02:53,840
+es esto. Lo que tengo en la pantalla es
+esto de aquí, que lo que hace es
+
+24
+00:02:53,840 --> 00:03:00,400
+recogernos todos los datos. Bien, una vez
+que tenemos esto, una vez que tenemos esto
+
+25
+00:03:00,400 --> 00:03:04,700
+en la pantalla, a continuación lo que
+vamos a hacer es lo contrario. Lo que
+
+26
+00:03:04,700 --> 00:03:10,000
+vamos a hacer es crear nosotros un
+formulario desde cero. Así que vengo por
+
+27
+00:03:10,000 --> 00:03:16,760
+aquí, cero, cero, tres, y voy a crear un
+formulario con JavaScript.
+
+28
+00:03:19,280 --> 00:03:33,540
+Por tanto, HTML, voy a crear ahí dog type,
+HTML, HTML, HTML. Vale, y voy a coger un
+
+29
+00:03:33,540 --> 00:03:41,660
+modelo de datos. ¿Qué modelo de datos será
+ese? Pues el que queramos. Pero, ¿qué
+
+30
+00:03:41,660 --> 00:03:44,940
+ocurre si yo vengo aquí y creo un form?
+
+31
+00:03:48,080 --> 00:03:55,200
+Y yo a continuación, por ejemplo en el
+script, script, de momento voy a crearlo
+
+32
+00:03:55,200 --> 00:04:05,080
+así, voy a decir defer y voy a decir lo
+siguiente. Let formulario, let formulario
+
+33
+00:04:05,080 --> 00:04:09,560
+es igual a document.querySelector form.
+
+34
+00:04:12,140 --> 00:04:17,500
+Pero, ¿qué es lo que va a ocurrir a
+continuación? Si yo lo que quiero es meter
+
+35
+00:04:17,500 --> 00:04:24,620
+una serie de campos, pues puedo hacerlo en
+JavaScript mediante createElement. Voy a
+
+36
+00:04:24,620 --> 00:04:34,860
+decir, vamos a ver, JavaScript,
+JavaScript, crear Json con, vamos a ver,
+
+37
+00:04:35,260 --> 00:04:41,620
+con nombres de campo y tipos de datos, por
+ejemplo. Así que, a continuación, mediante
+
+38
+00:04:41,620 --> 00:04:52,120
+este formulario, vamos a verlo, de campo y
+tipos de datos de momento, de momento
+
+39
+00:04:52,120 --> 00:05:03,020
+compatibles con HTML input, para
+entendernos.
+
+40
+00:05:07,760 --> 00:05:18,720
+Vale, pues hago así y ahora digo campos es
+igual, let campos es igual a esto. ¿Y esto
+
+41
+00:05:18,720 --> 00:05:25,080
+qué quiere decir? Pues esto quiere decir,
+esto de hecho no me hace falta, vale, que
+
+42
+00:05:25,080 --> 00:05:36,740
+yo a continuación puedo venir, esto de
+hecho es un array y digo campos.forEach
+
+43
+00:05:36,740 --> 00:05:45,400
+function campo y entonces para cada uno de
+los campos hago lo siguiente, aquí arriba
+
+44
+00:05:45,400 --> 00:05:51,940
+let formulario es igual a document
+.querySelector
+
+45
+00:05:51,940 --> 00:06:05,240
+form y ahora let miCampo, vamos a verlo,
+let entrada es igual a document
+
+46
+00:06:05,240 --> 00:06:09,280
+.createElementInput
+
+47
+00:06:09,280 --> 00:06:12,520
+.entrada
+
+48
+00:06:12,520 --> 00:06:14,180
+.q
+
+49
+00:06:17,560 --> 00:06:29,420
+Entrada setAttribute type es igual a campo
+.tipo.
+
+50
+00:06:29,420 --> 00:06:40,900
+Entrada setAttribute name es igual a campo
+.tipo.Nombre. Así que,
+
+51
+00:06:40,980 --> 00:06:47,300
+por último, formulario.appenchild.entrada.
+
+52
+00:06:49,300 --> 00:06:55,560
+Si ahora vengo por aquí, creo un
+formulario con javascript, hola, campos,
+
+53
+00:06:55,600 --> 00:07:01,020
+campos en la línea 8, ¿qué ha pasado?
+Campos en la línea 8. Ah, que está
+
+54
+00:07:01,020 --> 00:07:06,960
+duplicado, vale. Let campos es igual a
+esto. Y ahora formulario
+
+55
+00:07:06,960 --> 00:07:16,000
+hasAlreadyVindicled, formulario form.
+Cuidado, es que lo tenía cogido dos veces.
+
+56
+00:07:17,460 --> 00:07:28,200
+Recargamos, no puedo leer appenchild, ¿por
+qué? Vamos a verlo.
+
+57
+00:07:28,380 --> 00:07:34,440
+Formulario appenchild, forma. Voy a
+ponerlo después, creo que el difer no me
+
+58
+00:07:34,440 --> 00:07:35,560
+está haciendo mucho caso.
+
+59
+00:07:38,880 --> 00:07:46,620
+Y ahí lo tenemos. Y entonces lo que ocurre
+es que acabamos de crear un formulario a
+
+60
+00:07:46,620 --> 00:07:53,860
+partir de Json. Y cuando digo a partir de
+Json, quiero decir que esto evidentemente
+
+61
+00:07:55,380 --> 00:08:00,740
+podría venir de la base de datos. Tengamos
+en cuenta que estamos en cliente. De la
+
+62
+00:08:00,740 --> 00:08:05,360
+base de datos vendría un Json con el
+esquema. Con el esquema de la base de
+
+63
+00:08:05,360 --> 00:08:12,720
+datos pinto una librería y luego más
+adelante, evidentemente, lo uniremos al
+
+64
+00:08:12,720 --> 00:08:15,160
+proyecto que estamos haciendo dentro de
+
+65
+00:08:18,420 --> 00:08:23,000
+interfaces. Y lo que haremos es
+convertirlo en nuestra librería
+
+66
+00:08:23,000 --> 00:08:32,760
+personalizada de elementos. Así que esto
+por aquí, esto es interacción, esto es
+
+67
+00:08:32,760 --> 00:08:41,440
+formularios desde código. Hablamos en caso
+de la modificación de la apariencia y del
+
+68
+00:08:41,440 --> 00:08:47,960
+comportamiento. Yo creo que el mejor
+ejemplo que puedo poner en este caso de
+
+69
+00:08:47,960 --> 00:08:53,560
+modificación de apariencia y de
+comportamiento en un formulario es, por
+
+70
+00:08:53,560 --> 00:09:00,260
+ejemplo, el checkbox, que es un clásico,
+convertir un checkbox horrible en un
+
+71
+00:09:00,260 --> 00:09:10,940
+bonito slider. Así que voy a pasar aquí.
+Vamos a ver. Muy bien, nos damos aquí
+
+72
+00:09:10,940 --> 00:09:18,220
+proyecto intermodular. Un momento, porque,
+a ver un segundo, porque veo que tengo un
+
+73
+00:09:18,220 --> 00:09:22,620
+problema con el vídeo. Así que, un
+segundo, voy a...
+

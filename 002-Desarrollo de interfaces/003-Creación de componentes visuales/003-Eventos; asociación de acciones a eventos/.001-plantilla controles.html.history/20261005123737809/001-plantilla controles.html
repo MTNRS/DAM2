@@ -1,0 +1,1237 @@
+```html
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Todos los controles HTML nativos</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 40px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f5f5f5;
+        color: #222;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-top: 0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+
+    section {
+        background: white;
+        padding: 25px;
+        margin: 25px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px #0001;
+    }
+
+    .control {
+        margin: 20px 0;
+    }
+
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    code {
+        background: #eee;
+        padding: 2px 6px;
+        border-radius: 4px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font: inherit;
+    }
+
+    textarea {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    fieldset {
+        margin: 20px 0;
+    }
+
+    .inline label {
+        display: inline;
+        font-weight: normal;
+        margin-right: 20px;
+    }
+
+    .demo-row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    output {
+        border: 1px solid #aaa;
+        padding: 5px 10px;
+        min-width: 60px;
+        display: inline-block;
+    }
+</style>
+</head>
+
+<body>
+
+<main>
+
+<h1>Controles de formulario HTML nativos</h1>
+<p>
+    Catálogo de elementos y controles disponibles sin librerías externas.
+</p>
+
+<form id="formulario">
+
+<!-- ====================================================== -->
+<section>
+<h2>1. Inputs de texto</h2>
+
+<div class="control">
+    <label for="text">input type="text"</label>
+    <input type="text" id="text" name="text"
+           placeholder="Texto normal">
+</div>
+
+<div class="control">
+    <label for="password">input type="password"</label>
+    <input type="password" id="password" name="password"
+           placeholder="Contraseña">
+</div>
+
+<div class="control">
+    <label for="email">input type="email"</label>
+    <input type="email" id="email" name="email"
+           placeholder="usuario@dominio.com">
+</div>
+
+<div class="control">
+    <label for="search">input type="search"</label>
+    <input type="search" id="search" name="search"
+           placeholder="Buscar...">
+</div>
+
+<div class="control">
+    <label for="tel">input type="tel"</label>
+    <input type="tel" id="tel" name="tel"
+           placeholder="+34 600 000 000">
+</div>
+
+<div class="control">
+    <label for="url">input type="url"</label>
+    <input type="url" id="url" name="url"
+           placeholder="https://ejemplo.com">
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>2. Valores numéricos</h2>
+
+<div class="control">
+    <label for="number">input type="number"</label>
+    <input type="number"
+           id="number"
+           name="number"
+           min="0"
+           max="100"
+           step="1"
+           value="25">
+</div>
+
+<div class="control">
+    <label for="decimal">Número decimal</label>
+    <input type="number"
+           id="decimal"
+           name="decimal"
+           min="0"
+           max="10"
+           step="0.1"
+           value="5.5">
+</div>
+
+<div class="control">
+    <label for="range">input type="range"</label>
+    <input type="range"
+           id="range"
+           name="range"
+           min="0"
+           max="100"
+           value="50">
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>3. Fecha y hora</h2>
+
+<div class="control">
+    <label for="date">input type="date"</label>
+    <input type="date" id="date" name="date">
+</div>
+
+<div class="control">
+    <label for="time">input type="time"</label>
+    <input type="time" id="time" name="time">
+</div>
+
+<div class="control">
+    <label for="datetime">input type="datetime-local"</label>
+    <input type="datetime-local"
+           id="datetime"
+           name="datetime">
+</div>
+
+<div class="control">
+    <label for="month">input type="month"</label>
+    <input type="month" id="month" name="month">
+</div>
+
+<div class="control">
+    <label for="week">input type="week"</label>
+    <input type="week" id="week" name="week">
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>4. Selección booleana</h2>
+
+<div class="control inline">
+    <strong>Checkbox</strong><br><br>
+
+    <label>
+        <input type="checkbox"
+               name="opcion1"
+               value="1">
+        Opción 1
+    </label>
+
+    <label>
+        <input type="checkbox"
+               name="opcion2"
+               value="2"
+               checked>
+        Opción 2
+    </label>
+
+    <label>
+        <input type="checkbox"
+               disabled>
+        Desactivado
+    </label>
+</div>
+
+
+<div class="control inline">
+    <strong>Radio buttons</strong><br><br>
+
+    <label>
+        <input type="radio"
+               name="radio"
+               value="a"
+               checked>
+        A
+    </label>
+
+    <label>
+        <input type="radio"
+               name="radio"
+               value="b">
+        B
+    </label>
+
+    <label>
+        <input type="radio"
+               name="radio"
+               value="c">
+        C
+    </label>
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>5. Color</h2>
+
+<div class="control">
+    <label for="color">input type="color"</label>
+    <input type="color"
+           id="color"
+           name="color"
+           value="#ff6600">
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>6. Archivos</h2>
+
+<div class="control">
+    <label for="file">Archivo individual</label>
+    <input type="file"
+           id="file"
+           name="file">
+</div>
+
+<div class="control">
+    <label for="files">Múltiples archivos</label>
+    <input type="file"
+           id="files"
+           name="files"
+           multiple>
+</div>
+
+<div class="control">
+    <label for="imagen">Solo imágenes</label>
+    <input type="file"
+           id="imagen"
+           name="imagen"
+           accept="image/*">
+</div>
+
+<div class="control">
+    <label for="camara">Captura de cámara</label>
+    <input type="file"
+           id="camara"
+           name="camara"
+           accept="image/*"
+           capture="environment">
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>7. Select</h2>
+
+<div class="control">
+    <label for="select">Select simple</label>
+
+    <select id="select" name="select">
+        <option value="">Selecciona...</option>
+        <option value="1">Opción 1</option>
+        <option value="2">Opción 2</option>
+        <option value="3">Opción 3</option>
+    </select>
+</div>
+
+
+<div class="control">
+    <label for="grupos">Select con optgroup</label>
+
+    <select id="grupos" name="grupos">
+
+        <optgroup label="Frontend">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </optgroup>
+
+        <optgroup label="Backend">
+            <option>PHP</option>
+            <option>Python</option>
+            <option>Java</option>
+        </optgroup>
+
+    </select>
+</div>
+
+
+<div class="control">
+    <label for="multiple">Select multiple</label>
+
+    <select id="multiple"
+            name="multiple"
+            multiple
+            size="5">
+
+        <option>HTML</option>
+        <option>CSS</option>
+        <option>JavaScript</option>
+        <option>PHP</option>
+        <option>Python</option>
+
+    </select>
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>8. Textarea</h2>
+
+<div class="control">
+
+    <label for="textarea">textarea</label>
+
+    <textarea
+        id="textarea"
+        name="textarea"
+        rows="6"
+        cols="50"
+        placeholder="Escribe texto multilínea..."></textarea>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>9. Datalist</h2>
+
+<div class="control">
+
+    <label for="navegador">
+        input + datalist
+    </label>
+
+    <input
+        type="text"
+        id="navegador"
+        name="navegador"
+        list="navegadores">
+
+    <datalist id="navegadores">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+        <option value="Opera">
+    </datalist>
+
+</div>
+
+
+<div class="control">
+
+    <label for="numero-lista">
+        number + datalist
+    </label>
+
+    <input
+        type="range"
+        id="numero-lista"
+        min="0"
+        max="100"
+        step="10"
+        list="marcas">
+
+    <datalist id="marcas">
+        <option value="0">
+        <option value="25">
+        <option value="50">
+        <option value="75">
+        <option value="100">
+    </datalist>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>10. Botones</h2>
+
+<div class="demo-row">
+
+    <button type="button">
+        button
+    </button>
+
+    <button type="submit">
+        submit
+    </button>
+
+    <button type="reset">
+        reset
+    </button>
+
+    <input type="button"
+           value="input button">
+
+    <input type="submit"
+           value="input submit">
+
+    <input type="reset"
+           value="input reset">
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>11. Input image</h2>
+
+<p>
+    También existe un botón de envío basado en una imagen:
+    <code>input type="image"</code>.
+</p>
+
+<input
+    type="image"
+    alt="Enviar"
+    width="80"
+    height="40"
+    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='80'%3E%3Crect width='160' height='80' rx='10' fill='%23333'/%3E%3Ctext x='80' y='50' font-size='25' text-anchor='middle' fill='white'%3EEnviar%3C/text%3E%3C/svg%3E">
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>12. Campos ocultos</h2>
+
+<input
+    type="hidden"
+    name="id_usuario"
+    value="12345">
+
+<p>
+    Aquí existe un
+    <code>&lt;input type="hidden"&gt;</code>,
+    pero evidentemente no se muestra.
+</p>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>13. Estados de los controles</h2>
+
+<div class="control">
+    <label>Normal</label>
+    <input type="text"
+           value="Editable">
+</div>
+
+<div class="control">
+    <label>readonly</label>
+    <input type="text"
+           value="Solo lectura"
+           readonly>
+</div>
+
+<div class="control">
+    <label>disabled</label>
+    <input type="text"
+           value="Desactivado"
+           disabled>
+</div>
+
+<div class="control">
+    <label>required</label>
+    <input type="text"
+           placeholder="Campo obligatorio"
+           required>
+</div>
+
+<div class="control">
+    <label>maxlength</label>
+    <input type="text"
+           maxlength="10"
+           placeholder="Máximo 10 caracteres">
+</div>
+
+<div class="control">
+    <label>minlength</label>
+    <input type="text"
+           minlength="5"
+           placeholder="Mínimo 5 caracteres">
+</div>
+
+<div class="control">
+    <label>pattern</label>
+    <input type="text"
+           pattern="[A-Z]{3}"
+           placeholder="Ejemplo: ABC"
+           title="Tres letras mayúsculas">
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>14. Fieldset y legend</h2>
+
+<fieldset>
+
+    <legend>Datos personales</legend>
+
+    <div class="control">
+        <label for="nombre">Nombre</label>
+        <input type="text"
+               id="nombre"
+               name="nombre">
+    </div>
+
+    <div class="control">
+        <label for="apellidos">Apellidos</label>
+        <input type="text"
+               id="apellidos"
+               name="apellidos">
+    </div>
+
+</fieldset>
+
+
+<fieldset disabled>
+
+    <legend>Fieldset completamente desactivado</legend>
+
+    <input type="text"
+           value="No editable">
+
+    <button>
+        Tampoco funciona
+    </button>
+
+</fieldset>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>15. Output</h2>
+
+<div class="control">
+
+    <label>
+        Cálculo mediante &lt;output&gt;
+    </label>
+
+    <input
+        type="range"
+        id="valorA"
+        value="25"
+        min="0"
+        max="100"
+        oninput="resultado.value = Number(valorA.value) + Number(valorB.value)">
+
+    +
+
+    <input
+        type="number"
+        id="valorB"
+        value="10"
+        oninput="resultado.value = Number(valorA.value) + Number(valorB.value)">
+
+    =
+
+    <output
+        id="resultado"
+        name="resultado"
+        for="valorA valorB">
+        35
+    </output>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>16. Progress</h2>
+
+<div class="control">
+
+    <label for="progreso">
+        progress determinado
+    </label>
+
+    <progress
+        id="progreso"
+        value="65"
+        max="100">
+        65%
+    </progress>
+
+</div>
+
+
+<div class="control">
+
+    <label>
+        progress indeterminado
+    </label>
+
+    <progress></progress>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>17. Meter</h2>
+
+<div class="control">
+
+    <label>
+        Valor normal
+    </label>
+
+    <meter
+        min="0"
+        max="100"
+        value="60">
+        60
+    </meter>
+
+</div>
+
+
+<div class="control">
+
+    <label>
+        Con low / high / optimum
+    </label>
+
+    <meter
+        min="0"
+        max="100"
+        low="30"
+        high="70"
+        optimum="90"
+        value="80">
+        80
+    </meter>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>18. Input con autocomplete</h2>
+
+<div class="control">
+
+    <label for="nombre-completo">
+        Nombre
+    </label>
+
+    <input
+        type="text"
+        id="nombre-completo"
+        autocomplete="name">
+
+</div>
+
+<div class="control">
+
+    <label for="correo-auto">
+        Email
+    </label>
+
+    <input
+        type="email"
+        id="correo-auto"
+        autocomplete="email">
+
+</div>
+
+<div class="control">
+
+    <label for="direccion">
+        Dirección
+    </label>
+
+    <input
+        type="text"
+        id="direccion"
+        autocomplete="street-address">
+
+</div>
+
+<div class="control">
+
+    <label for="postal">
+        Código postal
+    </label>
+
+    <input
+        type="text"
+        id="postal"
+        autocomplete="postal-code">
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>19. Inputmode</h2>
+
+<div class="control">
+    <label>inputmode="numeric"</label>
+    <input type="text"
+           inputmode="numeric">
+</div>
+
+<div class="control">
+    <label>inputmode="decimal"</label>
+    <input type="text"
+           inputmode="decimal">
+</div>
+
+<div class="control">
+    <label>inputmode="tel"</label>
+    <input type="text"
+           inputmode="tel">
+</div>
+
+<div class="control">
+    <label>inputmode="email"</label>
+    <input type="text"
+           inputmode="email">
+</div>
+
+<div class="control">
+    <label>inputmode="url"</label>
+    <input type="text"
+           inputmode="url">
+</div>
+
+<div class="control">
+    <label>inputmode="search"</label>
+    <input type="text"
+           inputmode="search">
+</div>
+
+<div class="control">
+    <label>inputmode="none"</label>
+    <input type="text"
+           inputmode="none">
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>20. Dirección del texto</h2>
+
+<div class="control">
+
+    <label>
+        dirname
+    </label>
+
+    <input
+        type="text"
+        name="mensaje"
+        dirname="mensaje.dir"
+        placeholder="Escribe aquí">
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>21. Atributos step / min / max</h2>
+
+<div class="control">
+
+    <label>
+        Número de 5 en 5
+    </label>
+
+    <input
+        type="number"
+        min="0"
+        max="100"
+        step="5"
+        value="50">
+
+</div>
+
+<div class="control">
+
+    <label>
+        Hora en intervalos de 15 minutos
+    </label>
+
+    <input
+        type="time"
+        step="900">
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>22. Formulario externo mediante form=""</h2>
+
+<p>
+    Un control no necesita estar físicamente dentro del
+    formulario para pertenecer a él.
+</p>
+
+<input
+    type="text"
+    name="campo_asociado"
+    value="Estoy asociado mediante form"
+    form="formulario">
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>23. Botones con atributos de formulario</h2>
+
+<button
+    type="submit"
+    formaction="/guardar"
+    formmethod="post">
+    Guardar mediante POST
+</button>
+
+<button
+    type="submit"
+    formaction="/buscar"
+    formmethod="get">
+    Buscar mediante GET
+</button>
+
+<button
+    type="submit"
+    formnovalidate>
+    Enviar sin validar
+</button>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>24. Control experimental / compatibilidad</h2>
+
+<p>
+    Algunos tipos históricos o experimentales pueden degradarse
+    automáticamente a <code>type="text"</code> dependiendo del navegador.
+</p>
+
+<div class="control">
+
+    <label>
+        input type="datetime" (obsoleto)
+    </label>
+
+    <input type="datetime">
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>25. Elementos relacionados con formularios</h2>
+
+<details>
+
+    <summary>
+        details + summary
+    </summary>
+
+    <p>
+        No son controles de formulario estrictamente,
+        pero son elementos interactivos HTML nativos.
+    </p>
+
+    <input type="text"
+           placeholder="Puede contener formularios">
+
+</details>
+
+<br>
+
+<dialog id="dialogo">
+
+    <form method="dialog">
+
+        <p>
+            Este es un
+            <code>&lt;dialog&gt;</code>
+            HTML nativo.
+        </p>
+
+        <input type="text"
+               placeholder="Campo dentro del diálogo">
+
+        <button value="cerrar">
+            Cerrar
+        </button>
+
+    </form>
+
+</dialog>
+
+<button
+    type="button"
+    onclick="document.getElementById('dialogo').showModal()">
+    Abrir dialog nativo
+</button>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>26. Contenteditable</h2>
+
+<p>
+    Tampoco es un control de formulario formal,
+    pero convierte cualquier elemento HTML en editable.
+</p>
+
+<div
+    contenteditable="true"
+    style="
+        border:1px solid #aaa;
+        padding:15px;
+        min-height:80px;
+    ">
+    Puedes editar directamente este contenido.
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>27. Todos los input type juntos</h2>
+
+<table cellpadding="8">
+
+<tr>
+    <td><code>button</code></td>
+    <td><input type="button" value="Button"></td>
+</tr>
+
+<tr>
+    <td><code>checkbox</code></td>
+    <td><input type="checkbox"></td>
+</tr>
+
+<tr>
+    <td><code>color</code></td>
+    <td><input type="color"></td>
+</tr>
+
+<tr>
+    <td><code>date</code></td>
+    <td><input type="date"></td>
+</tr>
+
+<tr>
+    <td><code>datetime-local</code></td>
+    <td><input type="datetime-local"></td>
+</tr>
+
+<tr>
+    <td><code>email</code></td>
+    <td><input type="email"></td>
+</tr>
+
+<tr>
+    <td><code>file</code></td>
+    <td><input type="file"></td>
+</tr>
+
+<tr>
+    <td><code>hidden</code></td>
+    <td>
+        <input type="hidden">
+        (invisible)
+    </td>
+</tr>
+
+<tr>
+    <td><code>image</code></td>
+    <td>
+        <input
+            type="image"
+            width="60"
+            height="30"
+            alt="image"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='60'%3E%3Crect width='120' height='60' fill='%23555'/%3E%3Ctext x='60' y='38' text-anchor='middle' fill='white'%3EImage%3C/text%3E%3C/svg%3E">
+    </td>
+</tr>
+
+<tr>
+    <td><code>month</code></td>
+    <td><input type="month"></td>
+</tr>
+
+<tr>
+    <td><code>number</code></td>
+    <td><input type="number"></td>
+</tr>
+
+<tr>
+    <td><code>password</code></td>
+    <td><input type="password"></td>
+</tr>
+
+<tr>
+    <td><code>radio</code></td>
+    <td><input type="radio"></td>
+</tr>
+
+<tr>
+    <td><code>range</code></td>
+    <td><input type="range"></td>
+</tr>
+
+<tr>
+    <td><code>reset</code></td>
+    <td><input type="reset"></td>
+</tr>
+
+<tr>
+    <td><code>search</code></td>
+    <td><input type="search"></td>
+</tr>
+
+<tr>
+    <td><code>submit</code></td>
+    <td><input type="submit"></td>
+</tr>
+
+<tr>
+    <td><code>tel</code></td>
+    <td><input type="tel"></td>
+</tr>
+
+<tr>
+    <td><code>text</code></td>
+    <td><input type="text"></td>
+</tr>
+
+<tr>
+    <td><code>time</code></td>
+    <td><input type="time"></td>
+</tr>
+
+<tr>
+    <td><code>url</code></td>
+    <td><input type="url"></td>
+</tr>
+
+<tr>
+    <td><code>week</code></td>
+    <td><input type="week"></td>
+</tr>
+
+</table>
+
+</section>
+
+
+<!-- ====================================================== -->
+<section>
+<h2>28. Botonera final</h2>
+
+<div class="demo-row">
+
+    <button type="submit">
+        Enviar formulario
+    </button>
+
+    <button type="reset">
+        Reiniciar
+    </button>
+
+    <button type="button"
+            disabled>
+        Desactivado
+    </button>
+
+</div>
+
+</section>
+
+</form>
+
+
+<!-- Control asociado desde FUERA del form -->
+
+<section>
+
+<h2>29. Control situado fuera del form</h2>
+
+<label for="externo">
+    Este input está fuera del &lt;form&gt; en el DOM,
+    pero pertenece al formulario mediante
+    <code>form="formulario"</code>.
+</label>
+
+<input
+    id="externo"
+    type="text"
+    name="externo"
+    form="formulario"
+    value="Control externo">
+
+</section>
+
+
+</main>
+
+</body>
+</html>
+```

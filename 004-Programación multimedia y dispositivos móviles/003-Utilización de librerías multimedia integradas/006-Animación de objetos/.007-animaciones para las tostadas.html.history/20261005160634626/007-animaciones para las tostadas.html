@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+	<head>
+	<meta charset="UTF-8">
+    <style>
+      #tostada{
+      	position:fixed;
+        right:20px;
+        bottom:20px;
+        width:200px;
+        height:50px;
+        padding:20px;
+        font-family:sans-serif;
+        font-size:11px;
+        border:1px solid grey;
+        border-left:10px solid red;
+        display:none;
+      }
+      .aparece{
+      	animation:aparece 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Mostrar</button>
+    <div id="tostada">
+    	Esto es una tostada
+    </div>
+    <script>
+      let boton = document.querySelector("button")
+      let tostada = document.querySelector("#tostada")
+      boton.onclick = function(){
+      	tostada.style.display = "block"
+        setTimeout(function(){
+        	tostada.style.display = "none"
+        },5000)
+      }
+    </script>
+	</body>
+</html>

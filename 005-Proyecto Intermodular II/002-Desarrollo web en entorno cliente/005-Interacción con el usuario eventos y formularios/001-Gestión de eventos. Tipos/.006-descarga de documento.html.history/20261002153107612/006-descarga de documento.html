@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <script>
+      window.addEventListener("beforeunload", function(event) {
+        event.preventDefault();
+
+        // Necesario para compatibilidad con algunos navegadores
+        event.returnValue = "";
+      });
+    </script>
+  </head>
+
+  <body>
+    <h1>Prueba a cerrar o recargar esta página</h1>
+    <p>El navegador debería pedir confirmación.</p>
+  </body>
+</html>

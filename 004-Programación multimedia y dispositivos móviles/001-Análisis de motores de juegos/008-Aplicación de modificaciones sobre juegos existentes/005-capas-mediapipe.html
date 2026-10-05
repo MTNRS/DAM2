@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capas 3D controladas con la cabeza</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#111;font-family:Arial,sans-serif}
+body{display:flex;align-items:center;justify-content:center;perspective:1100px}
+#estado{position:fixed;left:16px;top:16px;z-index:100;background:#000b;color:#fff;padding:10px 14px;border-radius:10px;font-size:13px}
+#pip{position:fixed;right:18px;bottom:18px;width:240px;aspect-ratio:4/3;z-index:100;border-radius:14px;overflow:hidden;border:2px solid #fff8;box-shadow:0 8px 30px #0008;background:#222}
+#pip video,#pip canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scaleX(-1)}
+#pip canvas{z-index:2;pointer-events:none}
+#escena{position:relative;width:min(70vw,650px);aspect-ratio:1;transform-style:preserve-3d;will-change:transform}
+.capa{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border:2px solid rgba(255,255,255,.25);font-size:42px;font-weight:bold;color:white;transform-style:preserve-3d;backface-visibility:hidden}
+.capa1{background:rgba(255,70,70,.22);transform:translateZ(-120px)}
+.capa2{background:rgba(255,170,40,.22);transform:translateZ(-60px)}
+.capa3{background:rgba(70,220,120,.22);transform:translateZ(0)}
+.capa4{background:rgba(50,160,255,.22);transform:translateZ(60px)}
+.capa5{background:rgba(190,70,255,.22);transform:translateZ(120px)}
+.capa img{width:100%;height:100%;object-fit:contain;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="estado">Cargando webcam y MediaPipe…</div>
+<div id="pip"><video id="video" autoplay muted playsinline></video><canvas id="debug" width="640" height="480"></canvas></div>
+<div id="escena">
+  <div class="capa capa1">CAPA 1</div>
+  <div class="capa capa2">CAPA 2</div>
+  <div class="capa capa3">CAPA 3</div>
+  <div class="capa capa4">CAPA 4</div>
+  <div class="capa capa5">CAPA 5</div>
+</div>
+<script type="module">
+import {FaceDetector, FilesetResolver} from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest";
+
+const escena = document.querySelector('#escena');
+const video = document.querySelector('#video');
+const canvas = document.querySelector('#debug');
+const ctx = canvas.getContext('2d');
+const estado = document.querySelector('#estado');
+
+// Sensibilidad del efecto de ventana 3D.
+const ROTACION_X = 28;
+const ROTACION_Y = 34;
+const DESPLAZAMIENTO_X = 38;
+const DESPLAZAMIENTO_Y = 24;
+const ESCALA_Z = 0.16;
+const SUAVIZADO = 0.10;
+
+let faceDetector;
+let referencia = null;
+let objetivo = {x:0,y:0,z:0};
+let actual = {x:0,y:0,z:0};
+
+const stream = await navigator.mediaDevices.getUserMedia({
+  video:{width:{ideal:640},height:{ideal:480},facingMode:'user'},
+  audio:false
+});
+video.srcObject = stream;
+await video.play();
+
+const vision = await FilesetResolver.forVisionTasks(
+  'https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm'
+);
+faceDetector = await FaceDetector.createFromOptions(vision,{
+  baseOptions:{modelAssetPath:'https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/latest/blaze_face_short_range.tflite'},
+  runningMode:'VIDEO',
+  minDetectionConfidence:0.5
+});
+
+estado.textContent='Mueve la cabeza: izquierda/derecha, arriba/abajo y cerca/lejos';
+
+function procesarCara(cara){
+  const b = cara.boundingBox;
+  const cx = b.originX + b.width/2;
+  const cy = b.originY + b.height/2;
+  const fx = cx/video.videoWidth;
+  const fy = cy/video.videoHeight;
+  const area = (b.width*b.height)/(video.videoWidth*video.videoHeight);
+
+  if(!referencia) referencia={x:fx,y:fy,area};
+
+  // MediaPipe ve la cámara sin espejo. Invertimos X para que el movimiento
+  // visual coincida con el PiP espejado y se comporte como una ventana.
+  objetivo.x = -(fx-referencia.x)*2;
+  objetivo.y =  (fy-referencia.y)*2;
+  objetivo.z = Math.max(-1,Math.min(1,(area/referencia.area)-1));
+
+  const sx=canvas.width/video.videoWidth;
+  const sy=canvas.height/video.videoHeight;
+  ctx.strokeStyle='#7CFF72';
+  ctx.lineWidth=3;
+  ctx.strokeRect(b.originX*sx,b.originY*sy,b.width*sx,b.height*sy);
+}
+
+function loop(t){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  if(video.readyState>=2){
+    const resultado=faceDetector.detectForVideo(video,t);
+    if(resultado.detections.length){
+      procesarCara(resultado.detections[0]);
+    }else{
+      objetivo.x*=0.96;
+      objetivo.y*=0.96;
+      objetivo.z*=0.96;
+    }
+  }
+
+  actual.x+=(objetivo.x-actual.x)*SUAVIZADO;
+  actual.y+=(objetivo.y-actual.y)*SUAVIZADO;
+  actual.z+=(objetivo.z-actual.z)*SUAVIZADO;
+
+  const rotY=actual.x*ROTACION_Y;
+  const rotX=-actual.y*ROTACION_X;
+  const tx=actual.x*DESPLAZAMIENTO_X;
+  const ty=-actual.y*DESPLAZAMIENTO_Y;
+  const escala=1+actual.z*ESCALA_Z;
+
+  escena.style.transform=`translate3d(${tx}px,${ty}px,0) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(${escala})`;
+
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

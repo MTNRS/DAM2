@@ -1,0 +1,16 @@
+CREAR BASE comercio_agregados
+USAR comercio_agregados
+CREAR TABLA clientes nombre,email
+CREAR TABLA pedidos id_cliente,total
+ALTERAR TABLA pedidos ANADIR CLAVE FORANEA id_cliente REFERENCIAS clientes id
+INSERTAR EN clientes VALORES ('Ana','ana@correo.com')
+INSERTAR EN clientes VALORES ('Luis','luis@correo.com')
+INSERTAR EN pedidos VALORES ('1','120')
+INSERTAR EN pedidos VALORES ('1','75')
+INSERTAR EN pedidos VALORES ('2','250')
+SELECCIONAR CONTAR(*) COMO numero,SUMA(total) COMO total,MEDIA(total) COMO media,MINIMO(total) COMO minimo,MAXIMO(total) COMO maximo DE pedidos
+SELECCIONAR id_cliente,CONTAR(*) COMO pedidos,SUMA(total) COMO facturacion DE pedidos AGRUPAR POR id_cliente
+SELECCIONAR id_cliente,SUMA(total) COMO facturacion DE pedidos AGRUPAR POR id_cliente TENIENDO facturacion > 200
+SELECCIONAR clientes.nombre COMO cliente,CONTAR(pedidos.id) COMO pedidos,SUMA(pedidos.total) COMO facturacion DE clientes JOIN pedidos EN clientes.id = pedidos.id_cliente AGRUPAR POR clientes.nombre ORDENAR POR facturacion DESCENDENTE
+SELECCIONAR clientes.nombre COMO cliente,SUMA(pedidos.total) COMO facturacion DE clientes JOIN pedidos EN clientes.id = pedidos.id_cliente AGRUPAR POR clientes.nombre TENIENDO facturacion > 200
+SALIR

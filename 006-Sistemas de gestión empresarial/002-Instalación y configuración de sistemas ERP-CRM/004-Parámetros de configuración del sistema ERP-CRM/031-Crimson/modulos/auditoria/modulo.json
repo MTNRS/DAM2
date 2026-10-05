@@ -1,0 +1,9 @@
+{
+  "modulo": "auditoria",
+  "nombre": "Auditoría",
+  "tablas": [
+    "auditoria",
+    "usuarios",
+    "empresas"
+  ]
+}

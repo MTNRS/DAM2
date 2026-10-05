@@ -1,0 +1,34 @@
+<script>
+  class CuentaBancaria{
+  	constructor(cliente){
+    	this.saldo = 0;
+      this.cliente = cliente;
+    }
+    dimeSaldo(){
+    	return this.saldo;
+    }
+    dameSaldo(cantidad){
+      let saldoactual = this.saldo
+      if(saldoactual - cantidad > 0){
+    		this.saldo -= cantidad
+        return "ok"
+      }else{
+      	return "no es posible";
+      }
+    }
+    ponSaldo(cantidad){
+      if(cantidad < 1000000){
+    		this.saldo += cantidad
+        return "ok"
+      }else{
+      	return "debes consultar con el banco"
+      }
+    }
+  }
+  
+  let cuenta1 = new CuentaBancaria("Jose Vicente")
+	cuenta1.ponSaldo(2000)
+  console.log(cuenta1.dimeSaldo())
+  console.log(cuenta1.dameSaldo(2000000))
+  console.log(cuenta1.dimeSaldo())
+</script>

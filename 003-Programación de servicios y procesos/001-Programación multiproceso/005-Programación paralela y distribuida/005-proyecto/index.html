@@ -1,0 +1,1343 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Computación distribuida</title>
+
+  <style>
+
+    body{
+      font-family:Arial,sans-serif;
+      padding:20px;
+    }
+
+    #estado{
+      display:flex;
+      gap:30px;
+      margin:20px 0;
+    }
+
+    .contador{
+      border:1px solid #ccc;
+      padding:15px;
+      min-width:130px;
+    }
+
+    .numero{
+      font-size:30px;
+      font-weight:bold;
+    }
+
+    #controles{
+      padding:20px;
+      background:#eee;
+      margin:20px 0;
+    }
+
+    #controles input{
+      width:80px;
+    }
+
+    #trabajos{
+      max-height:300px;
+      overflow:auto;
+      border:1px solid #ccc;
+      padding:10px;
+    }
+
+    #resultados{
+      max-height:300px;
+      overflow:auto;
+      border:1px solid #ccc;
+      padding:10px;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Computación distribuida</h1>
+
+  <h2 id="identidad">
+    Sin identidad
+  </h2>
+
+
+  <button id="maestro">
+    Soy maestro
+  </button>
+
+  <button id="esclavo">
+    Soy esclavo
+  </button>
+
+
+  <!-- ========================================= -->
+  <!-- PARTICIPANTES -->
+  <!-- ========================================= -->
+
+  <h2>Participantes</h2>
+
+  <div id="participantes">
+    Ningún esclavo conectado
+  </div>
+
+
+  <!-- ========================================= -->
+  <!-- CONTROLES DEL MAESTRO -->
+  <!-- ========================================= -->
+
+  <div id="controles">
+
+    <h2>Generador automático</h2>
+
+    <label>
+      Crear tareas cada
+      <input
+        type="number"
+        id="intervalo"
+        value="3"
+        min="1"
+      >
+      segundos
+    </label>
+
+    <br><br>
+
+    <label>
+      Tareas por lote
+      <input
+        type="number"
+        id="cantidad"
+        value="20"
+        min="1"
+      >
+    </label>
+
+    <br><br>
+
+    <label>
+      Números por tarea
+      <input
+        type="number"
+        id="tamano"
+        value="1000"
+        min="1"
+      >
+    </label>
+
+    <br><br>
+
+    <button id="iniciarGenerador">
+      ▶ Iniciar generación
+    </button>
+
+    <button id="detenerGenerador">
+      ⏹ Detener generación
+    </button>
+
+    <button id="crearLote">
+      Crear lote ahora
+    </button>
+
+  </div>
+
+
+  <!-- ========================================= -->
+  <!-- CONTADORES -->
+  <!-- ========================================= -->
+
+  <div id="estado">
+
+    <div class="contador">
+      Pendientes
+      <div
+        class="numero"
+        id="contadorPendientes"
+      >
+        0
+      </div>
+    </div>
+
+
+    <div class="contador">
+      Procesando
+      <div
+        class="numero"
+        id="contadorProcesando"
+      >
+        0
+      </div>
+    </div>
+
+
+    <div class="contador">
+      Completadas
+      <div
+        class="numero"
+        id="contadorCompletadas"
+      >
+        0
+      </div>
+    </div>
+
+
+    <div class="contador">
+      Total
+      <div
+        class="numero"
+        id="contadorTotal"
+      >
+        0
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ========================================= -->
+  <!-- TRABAJOS -->
+  <!-- ========================================= -->
+
+  <h2>Trabajos</h2>
+
+  <div id="trabajos">
+    No hay trabajos
+  </div>
+
+
+  <!-- ========================================= -->
+  <!-- RESULTADOS -->
+  <!-- ========================================= -->
+
+  <h2>Resultados</h2>
+
+  <div id="resultados">
+    No hay resultados
+  </div>
+
+
+<script>
+
+// ============================================================
+// IDENTIDAD
+// ============================================================
+
+let identidad = null;
+
+let hash =
+  crypto.randomUUID();
+
+
+// ============================================================
+// TEMPORIZADORES
+// ============================================================
+
+let temporizadorLatido = null;
+
+let temporizadorGenerador = null;
+
+let generadorActivo = false;
+
+
+// ============================================================
+// ELEMENTOS
+// ============================================================
+
+let botonMaestro =
+  document.querySelector("#maestro");
+
+let botonEsclavo =
+  document.querySelector("#esclavo");
+
+let botonIniciar =
+  document.querySelector("#iniciarGenerador");
+
+let botonDetener =
+  document.querySelector("#detenerGenerador");
+
+let botonCrearLote =
+  document.querySelector("#crearLote");
+
+
+let contenedorIdentidad =
+  document.querySelector("#identidad");
+
+let contenedorParticipantes =
+  document.querySelector("#participantes");
+
+let contenedorTrabajos =
+  document.querySelector("#trabajos");
+
+let contenedorResultados =
+  document.querySelector("#resultados");
+
+
+let inputIntervalo =
+  document.querySelector("#intervalo");
+
+let inputCantidad =
+  document.querySelector("#cantidad");
+
+let inputTamano =
+  document.querySelector("#tamano");
+
+
+let contadorPendientes =
+  document.querySelector("#contadorPendientes");
+
+let contadorProcesando =
+  document.querySelector("#contadorProcesando");
+
+let contadorCompletadas =
+  document.querySelector("#contadorCompletadas");
+
+let contadorTotal =
+  document.querySelector("#contadorTotal");
+
+
+// ============================================================
+// MAESTRO
+// ============================================================
+
+botonMaestro.onclick = function(){
+
+  identidad = "maestro";
+
+  contenedorIdentidad.textContent =
+    "🟢 Maestro - " + hash;
+
+  console.log(
+    "🟢 Maestro:",
+    hash
+  );
+
+  iniciarLatido();
+
+};
+
+
+// ============================================================
+// ESCLAVO
+// ============================================================
+
+botonEsclavo.onclick = function(){
+
+  identidad = "esclavo";
+
+  contenedorIdentidad.textContent =
+    "🔵 Esclavo - " + hash;
+
+  console.log(
+    "🔵 Esclavo:",
+    hash
+  );
+
+  iniciarLatido();
+
+};
+
+
+// ============================================================
+// INICIAR GENERADOR
+// ============================================================
+
+botonIniciar.onclick = function(){
+
+  if(identidad !== "maestro"){
+
+    alert(
+      "Solo el maestro puede iniciar el generador"
+    );
+
+    return;
+
+  }
+
+
+  if(generadorActivo){
+
+    return;
+
+  }
+
+
+  generadorActivo = true;
+
+
+  console.log(
+    "▶ Generador iniciado"
+  );
+
+
+  // Crear inmediatamente el primer lote
+
+  cicloGenerador();
+
+};
+
+
+// ============================================================
+// DETENER GENERADOR
+// ============================================================
+
+botonDetener.onclick = function(){
+
+  generadorActivo = false;
+
+
+  if(temporizadorGenerador){
+
+    clearTimeout(
+      temporizadorGenerador
+    );
+
+  }
+
+
+  temporizadorGenerador = null;
+
+
+  console.log(
+    "⏹ Generador detenido"
+  );
+
+};
+
+
+// ============================================================
+// CREAR LOTE MANUAL
+// ============================================================
+
+botonCrearLote.onclick = function(){
+
+  if(identidad !== "maestro"){
+
+    alert(
+      "Solo el maestro puede crear trabajos"
+    );
+
+    return;
+
+  }
+
+
+  crearLote();
+
+};
+
+
+// ============================================================
+// CICLO GENERADOR
+// ============================================================
+
+async function cicloGenerador(){
+
+  if(!generadorActivo){
+
+    return;
+
+  }
+
+
+  await crearLote();
+
+
+  let segundos =
+    parseFloat(
+      inputIntervalo.value
+    );
+
+
+  if(
+    !segundos ||
+    segundos < 0.1
+  ){
+
+    segundos = 1;
+
+  }
+
+
+  temporizadorGenerador =
+    setTimeout(
+      cicloGenerador,
+      segundos * 1000
+    );
+
+}
+
+
+// ============================================================
+// CREAR LOTE
+// ============================================================
+
+async function crearLote(){
+
+  let cantidad =
+    parseInt(
+      inputCantidad.value
+    );
+
+
+  let tamano =
+    parseInt(
+      inputTamano.value
+    );
+
+
+  if(
+    !cantidad ||
+    cantidad < 1
+  ){
+
+    cantidad = 1;
+
+  }
+
+
+  if(
+    !tamano ||
+    tamano < 1
+  ){
+
+    tamano = 100;
+
+  }
+
+
+  console.log(
+    "📦 Creando lote de",
+    cantidad,
+    "tareas"
+  );
+
+
+  // ==========================================================
+  // Creamos las tareas
+  // ==========================================================
+
+  let peticiones = [];
+
+
+  for(
+    let tarea = 0;
+    tarea < cantidad;
+    tarea++
+  ){
+
+    // --------------------------------------------------------
+    // Crear bloque de información
+    // --------------------------------------------------------
+
+    let numeros = [];
+
+
+    for(
+      let i = 0;
+      i < tamano;
+      i++
+    ){
+
+      numeros.push(
+        Math.floor(
+          Math.random() * 1000
+        )
+      );
+
+    }
+
+
+    // --------------------------------------------------------
+    // Crear petición
+    // --------------------------------------------------------
+
+    let peticion =
+      fetch(
+        "servidor.php",
+        {
+
+          method:"POST",
+
+          headers:{
+
+            "Content-Type":
+              "application/json"
+
+          },
+
+          body:JSON.stringify({
+
+            accion:
+              "crear_trabajo",
+
+            maestro:
+              hash,
+
+            datos:
+              numeros
+
+          })
+
+        }
+      );
+
+
+    peticiones.push(
+      peticion
+    );
+
+  }
+
+
+  // ==========================================================
+  // Esperar a que se creen todas
+  // ==========================================================
+
+  await Promise.all(
+    peticiones
+  );
+
+
+  console.log(
+    "✅ Lote creado:",
+    cantidad,
+    "tareas"
+  );
+
+
+  await actualizarMaestro();
+
+}
+
+
+// ============================================================
+// INICIAR LATIDO
+// ============================================================
+
+function iniciarLatido(){
+
+  if(temporizadorLatido){
+
+    clearTimeout(
+      temporizadorLatido
+    );
+
+  }
+
+
+  latido();
+
+}
+
+
+// ============================================================
+// CICLO PRINCIPAL
+// ============================================================
+
+async function latido(){
+
+  try{
+
+    if(
+      identidad === "maestro"
+    ){
+
+      await actualizarMaestro();
+
+    }
+
+
+    if(
+      identidad === "esclavo"
+    ){
+
+      let trabajoRealizado =
+        await cicloEsclavo();
+
+
+      // ======================================================
+      // Si había trabajo, inmediatamente buscamos otro.
+      //
+      // No esperamos 1 segundo.
+      // ======================================================
+
+      if(trabajoRealizado){
+
+        temporizadorLatido =
+          setTimeout(
+            latido,
+            10
+          );
+
+        return;
+
+      }
+
+    }
+
+
+  }catch(error){
+
+    console.error(
+      "❌ Error:",
+      error
+    );
+
+  }
+
+
+  // ==========================================================
+  // Si no había trabajo esperamos
+  // ==========================================================
+
+  temporizadorLatido =
+    setTimeout(
+      latido,
+      1000
+    );
+
+}
+
+
+// ============================================================
+// CICLO DEL ESCLAVO
+// ============================================================
+
+async function cicloEsclavo(){
+
+  let respuesta =
+    await fetch(
+
+      "servidor.php" +
+
+      "?accion=pedir_trabajo" +
+
+      "&hash=" +
+      encodeURIComponent(hash) +
+
+      "&t=" +
+      Date.now()
+
+    );
+
+
+  let trabajo =
+    await leerJSON(
+      respuesta
+    );
+
+
+  // ==========================================================
+  // NO HAY TRABAJO
+  // ==========================================================
+
+  if(!trabajo){
+
+    return false;
+
+  }
+
+
+  console.log(
+    "📥 Trabajo:",
+    trabajo.id
+  );
+
+
+  // ==========================================================
+  // REALIZAR CÁLCULO
+  // ==========================================================
+
+  let inicio =
+    performance.now();
+
+
+  let resultado =
+    calcular(
+      trabajo.datos
+    );
+
+
+  let final =
+    performance.now();
+
+
+  resultado.tiempo_ms =
+    final - inicio;
+
+
+  // ==========================================================
+  // DEVOLVER RESULTADO
+  // ==========================================================
+
+  let respuestaResultado =
+    await fetch(
+      "servidor.php",
+      {
+
+        method:"POST",
+
+        headers:{
+
+          "Content-Type":
+            "application/json"
+
+        },
+
+        body:JSON.stringify({
+
+          accion:
+            "resultado",
+
+          hash:
+            hash,
+
+          trabajo:
+            trabajo.id,
+
+          resultado:
+            resultado
+
+        })
+
+      }
+    );
+
+
+  await leerJSON(
+    respuestaResultado
+  );
+
+
+  console.log(
+    "✅ Completado:",
+    trabajo.id,
+    resultado.tiempo_ms.toFixed(3),
+    "ms"
+  );
+
+
+  return true;
+
+}
+
+
+// ============================================================
+// CÁLCULO
+// ============================================================
+
+function calcular(datos){
+
+  let suma = 0;
+
+  let minimo = Infinity;
+
+  let maximo = -Infinity;
+
+
+  for(
+    let i = 0;
+    i < datos.length;
+    i++
+  ){
+
+    let numero =
+      datos[i];
+
+
+    suma +=
+      numero;
+
+
+    if(
+      numero < minimo
+    ){
+
+      minimo =
+        numero;
+
+    }
+
+
+    if(
+      numero > maximo
+    ){
+
+      maximo =
+        numero;
+
+    }
+
+  }
+
+
+  return {
+
+    suma:
+      suma,
+
+    cantidad:
+      datos.length,
+
+    media:
+      datos.length
+      ?
+      suma / datos.length
+      :
+      0,
+
+    minimo:
+      datos.length
+      ?
+      minimo
+      :
+      null,
+
+    maximo:
+      datos.length
+      ?
+      maximo
+      :
+      null
+
+  };
+
+}
+
+
+// ============================================================
+// ACTUALIZAR MAESTRO
+// ============================================================
+
+async function actualizarMaestro(){
+
+  // ==========================================================
+  // PARTICIPANTES
+  // ==========================================================
+
+  let respuestaParticipantes =
+    await fetch(
+
+      "servidor.php" +
+      "?accion=participantes" +
+      "&t=" +
+      Date.now()
+
+    );
+
+
+  let participantes =
+    await leerJSON(
+      respuestaParticipantes
+    );
+
+
+  mostrarParticipantes(
+    participantes
+  );
+
+
+  // ==========================================================
+  // TRABAJOS
+  // ==========================================================
+
+  let respuestaTrabajos =
+    await fetch(
+
+      "servidor.php" +
+      "?accion=trabajos" +
+      "&t=" +
+      Date.now()
+
+    );
+
+
+  let trabajos =
+    await leerJSON(
+      respuestaTrabajos
+    );
+
+
+  mostrarTrabajos(
+    trabajos
+  );
+
+
+  // ==========================================================
+  // RESULTADOS
+  // ==========================================================
+
+  let respuestaResultados =
+    await fetch(
+
+      "servidor.php" +
+      "?accion=resultados" +
+      "&t=" +
+      Date.now()
+
+    );
+
+
+  let resultados =
+    await leerJSON(
+      respuestaResultados
+    );
+
+
+  mostrarResultados(
+    resultados
+  );
+
+}
+
+
+// ============================================================
+// LEER JSON
+// ============================================================
+
+async function leerJSON(
+  respuesta
+){
+
+  let texto =
+    await respuesta.text();
+
+
+  try{
+
+    return JSON.parse(
+      texto
+    );
+
+  }catch(error){
+
+    console.error(
+      "❌ Respuesta no JSON:"
+    );
+
+    console.error(
+      texto
+    );
+
+    throw error;
+
+  }
+
+}
+
+
+// ============================================================
+// MOSTRAR PARTICIPANTES
+// ============================================================
+
+function mostrarParticipantes(
+  datos
+){
+
+  contenedorParticipantes.innerHTML =
+    "";
+
+
+  if(
+    !datos ||
+    datos.length === 0
+  ){
+
+    contenedorParticipantes.textContent =
+      "Ningún esclavo conectado";
+
+    return;
+
+  }
+
+
+  datos.forEach(
+    function(participante){
+
+      let elemento =
+        document.createElement(
+          "div"
+        );
+
+
+      elemento.textContent =
+        "🔵 " +
+        participante.hash;
+
+
+      contenedorParticipantes
+        .appendChild(
+          elemento
+        );
+
+    }
+  );
+
+}
+
+
+// ============================================================
+// MOSTRAR TRABAJOS
+// ============================================================
+
+function mostrarTrabajos(
+  datos
+){
+
+  contenedorTrabajos.innerHTML =
+    "";
+
+
+  let pendientes = 0;
+
+  let procesando = 0;
+
+  let completadas = 0;
+
+
+  datos.forEach(
+    function(trabajo){
+
+      if(
+        trabajo.estado ===
+        "pendiente"
+      ){
+
+        pendientes++;
+
+      }
+
+
+      if(
+        trabajo.estado ===
+        "procesando"
+      ){
+
+        procesando++;
+
+      }
+
+
+      if(
+        trabajo.estado ===
+        "completado"
+      ){
+
+        completadas++;
+
+      }
+
+    }
+  );
+
+
+  contadorPendientes.textContent =
+    pendientes;
+
+  contadorProcesando.textContent =
+    procesando;
+
+  contadorCompletadas.textContent =
+    completadas;
+
+  contadorTotal.textContent =
+    datos.length;
+
+
+  if(
+    datos.length === 0
+  ){
+
+    contenedorTrabajos.textContent =
+      "No hay trabajos";
+
+    return;
+
+  }
+
+
+  // ==========================================================
+  // Mostrar primero los más recientes
+  // ==========================================================
+
+  let recientes =
+    [...datos]
+      .reverse()
+      .slice(
+        0,
+        100
+      );
+
+
+  recientes.forEach(
+    function(trabajo){
+
+      let elemento =
+        document.createElement(
+          "div"
+        );
+
+
+      let icono =
+        "⚪";
+
+
+      if(
+        trabajo.estado ===
+        "pendiente"
+      ){
+
+        icono =
+          "🟡";
+
+      }
+
+
+      if(
+        trabajo.estado ===
+        "procesando"
+      ){
+
+        icono =
+          "🔵";
+
+      }
+
+
+      if(
+        trabajo.estado ===
+        "completado"
+      ){
+
+        icono =
+          "🟢";
+
+      }
+
+
+      elemento.textContent =
+
+        icono +
+
+        " " +
+
+        trabajo.id +
+
+        " → " +
+
+        trabajo.estado +
+
+        (
+          trabajo.esclavo
+          ?
+          " → " +
+          trabajo.esclavo
+          :
+          ""
+        );
+
+
+      contenedorTrabajos
+        .appendChild(
+          elemento
+        );
+
+    }
+  );
+
+}
+
+
+// ============================================================
+// MOSTRAR RESULTADOS
+// ============================================================
+
+function mostrarResultados(
+  datos
+){
+
+  contenedorResultados.innerHTML =
+    "";
+
+
+  if(
+    datos.length === 0
+  ){
+
+    contenedorResultados.textContent =
+      "No hay resultados";
+
+    return;
+
+  }
+
+
+  // Solo últimos 50 resultados
+
+  let recientes =
+    [...datos]
+      .reverse()
+      .slice(
+        0,
+        50
+      );
+
+
+  recientes.forEach(
+    function(resultado){
+
+      let elemento =
+        document.createElement(
+          "div"
+        );
+
+
+      let tiempo =
+        resultado.resultado.tiempo_ms;
+
+
+      elemento.innerHTML = `
+
+        <strong>
+          ${resultado.trabajo}
+        </strong>
+
+        →
+
+        ${resultado.esclavo}
+
+        |
+
+        ${resultado.resultado.cantidad}
+        elementos
+
+        |
+
+        ${
+          tiempo !== undefined
+          ?
+          tiempo.toFixed(3) + " ms"
+          :
+          "-"
+        }
+
+      `;
+
+
+      contenedorResultados
+        .appendChild(
+          elemento
+        );
+
+    }
+  );
+
+}
+
+</script>
+
+</body>
+</html>

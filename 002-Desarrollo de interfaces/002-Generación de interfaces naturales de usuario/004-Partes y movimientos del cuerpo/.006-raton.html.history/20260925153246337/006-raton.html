@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      console.log("hola");
+			let anchura = window.innerWidth
+      let altura = window.innerHeight;
+      let cuerpo = document.querySelector("html");
+
+      cuerpo.onmousemove = function(e){
+        console.log(e.offsetX, e.offsetY);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <body>
+    <button onclick="escuchar()">Escuchar y repetir</button>
+
+    <script>
+      function escuchar(){
+
+        // Escuchar
+        let reconocimiento = new webkitSpeechRecognition();
+        reconocimiento.lang = "es-ES";
+
+        reconocimiento.onresult = function(evento){
+
+          // Obtener lo que hemos dicho
+          let texto = evento.results[0][0].transcript;
+
+          console.log(texto);
+
+          // Repetirlo
+          let mensaje = new SpeechSynthesisUtterance(texto);
+          mensaje.lang = "es-ES";
+
+          speechSynthesis.speak(mensaje);
+        };
+
+        reconocimiento.start();
+      }
+    </script>
+  </body>
+</html>

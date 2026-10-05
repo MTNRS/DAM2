@@ -1,0 +1,15 @@
+{
+  "modulo": "contabilidad",
+  "nombre": "Contabilidad",
+  "tablas": [
+    "planes_contables",
+    "cuentas_contables",
+    "diarios_contables",
+    "asientos",
+    "asientos_lineas",
+    "centros_coste",
+    "presupuestos_financieros",
+    "presupuestos_financieros_lineas",
+    "tipos_iva"
+  ]
+}

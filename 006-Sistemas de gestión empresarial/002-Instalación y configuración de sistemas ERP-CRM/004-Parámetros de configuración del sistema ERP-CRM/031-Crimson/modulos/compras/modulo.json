@@ -1,0 +1,19 @@
+{
+  "modulo": "compras",
+  "nombre": "Compras",
+  "tablas": [
+    "solicitudes_compra",
+    "solicitudes_compra_lineas",
+    "pedidos_compra",
+    "pedidos_compra_lineas",
+    "recepciones_compra",
+    "recepciones_compra_lineas",
+    "facturas_compra",
+    "facturas_compra_lineas",
+    "pagos",
+    "terceros",
+    "contactos",
+    "formas_pago",
+    "productos"
+  ]
+}

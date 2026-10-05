@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <body>
+
+    <input>
+
+    <script>
+      let entrada = document.querySelector("input")
+      entrada.onfocus = function(){
+      	console.log("Has entrado")
+      }
+      entrada.onblur = function(){
+      	console.log("Has salido")
+      }
+      entrada.onkeypress = function(){
+      	console.log("Has pulsado una tecla")
+      }
+    </script>
+
+  </body>
+</html>

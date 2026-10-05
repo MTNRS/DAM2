@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <video src="josevicente.mp4" controls></video>
+  <canvas></canvas>
+
+  <script>
+    let video = document.querySelector("video");
+    let lienzo = document.querySelector("canvas");
+    let contexto = lienzo.getContext("2d");
+
+    video.onloadedmetadata = function(){
+
+      lienzo.width = video.videoWidth;
+      lienzo.height = video.videoHeight;
+
+      function fotograma(){
+
+        // Dibujamos el vídeo
+        contexto.drawImage(
+          video,
+          0,
+          0,
+          lienzo.width,
+          lienzo.height
+        );
+
+        // Obtenemos los píxeles
+        let imagen = contexto.getImageData(
+          0,
+          0,
+          lienzo.width,
+          lienzo.height
+        );
+
+        let pixeles = imagen.data;
+
+        // Recorremos los píxeles
+        for(let i = 0; i < pixeles.length; i += 4){
+
+          let rojo = pixeles[i];
+          let verde = pixeles[i + 1];
+          let azul = pixeles[i + 2];
+
+          // Calculamos gris
+          let gris = (rojo + verde + azul) / 3;
+
+          pixeles[i]     = gris; // R
+          pixeles[i + 1] = gris; // G
+          pixeles[i + 2] = gris; // B
+
+          // pixeles[i + 3] es Alpha
+        }
+
+        // Volvemos a colocar la imagen
+        contexto.putImageData(imagen, 0, 0);
+
+        requestAnimationFrame(fotograma);
+      }
+
+      fotograma();
+    };
+  </script>
+
+</body>
+</html>

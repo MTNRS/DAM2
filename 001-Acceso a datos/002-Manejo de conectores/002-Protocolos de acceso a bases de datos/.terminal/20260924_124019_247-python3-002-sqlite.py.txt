@@ -1,0 +1,9 @@
+Datetime: 2026-09-24T10:40:19.247Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos
+Command: python3 002-sqlite.py
+
+Result:
+(1, 'Ana García', 'ana@correo.com', '600111222')
+(2, 'Juan López', 'juan@correo.com', '600333444')
+(3, 'María Pérez', 'maria@correo.com', '600555666')
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos$ 

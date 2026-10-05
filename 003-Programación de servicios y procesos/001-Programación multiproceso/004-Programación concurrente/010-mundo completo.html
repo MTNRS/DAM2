@@ -1,0 +1,1665 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Vida Digital Evolutiva</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#111;
+  font-family:Arial,sans-serif;
+}
+
+canvas{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+#panel{
+  position:fixed;
+  top:15px;
+  left:15px;
+  z-index:10;
+
+  background:rgba(0,0,0,.78);
+  color:white;
+
+  padding:16px 20px;
+  border-radius:12px;
+
+  font-size:13px;
+  line-height:1.7;
+
+  backdrop-filter:blur(8px);
+
+  pointer-events:none;
+}
+
+#panel strong{
+  color:#8f8;
+  font-size:16px;
+}
+
+.leyenda{
+  margin-top:10px;
+  padding-top:8px;
+  border-top:1px solid #ffffff33;
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas></canvas>
+
+<div id="panel">
+
+  <strong>VIDA DIGITAL</strong>
+
+  <br>
+
+  Población:
+  <span id="poblacion">0</span>
+
+  <br>
+
+  Nacimientos:
+  <span id="nacimientos">0</span>
+
+  <br>
+
+  Muertes:
+  <span id="muertes">0</span>
+
+  <br>
+
+  Generación máxima:
+  <span id="generacion">0</span>
+
+
+  <div class="leyenda">
+
+    🟩 Comida<br>
+    🟦 Refugio<br>
+    ⬜ Obstáculo<br>
+    🟥 Zona mortal<br><br>
+
+    🟠 Hambre<br>
+    🔵 Cansancio<br>
+    ⚪ Saludable
+
+  </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- CÓDIGO DEL WORKER                                  -->
+<!-- ================================================= -->
+
+<script id="codigoWorker" type="javascript/worker">
+
+let seres = []
+
+let width = 1000
+let height = 800
+
+let mundo = null
+
+let nacimientos = 0
+let muertes = 0
+
+let siguienteId = 0
+
+
+
+// =====================================================
+// UTILIDADES
+// =====================================================
+
+function limitar(valor,min,max){
+
+  return Math.max(
+    min,
+    Math.min(max,valor)
+  )
+
+}
+
+
+
+function mutar(valor,intensidad){
+
+  let mutacion =
+    1 +
+    (
+      Math.random() * 2 - 1
+    ) *
+    intensidad
+
+  return valor * mutacion
+
+}
+
+
+
+function dentroZona(x,y,zona){
+
+  let zx =
+    zona.x * width
+
+  let zy =
+    zona.y * height
+
+  let zw =
+    zona.w * width
+
+  let zh =
+    zona.h * height
+
+
+  return (
+
+    x > zx &&
+    x < zx + zw &&
+
+    y > zy &&
+    y < zy + zh
+
+  )
+
+}
+
+
+
+function estaEn(x,y,zonas){
+
+  for(let zona of zonas){
+
+    if(
+      dentroZona(
+        x,
+        y,
+        zona
+      )
+    ){
+
+      return true
+
+    }
+
+  }
+
+  return false
+
+}
+
+
+
+// =====================================================
+// GENOMA
+// =====================================================
+
+function genomaAleatorio(){
+
+  return {
+
+    velocidad:
+      0.5 +
+      Math.random() * 2,
+
+
+    vision:
+      30 +
+      Math.random() * 100,
+
+
+    metabolismo:
+      0.5 +
+      Math.random(),
+
+
+    resistencia:
+      0.5 +
+      Math.random(),
+
+
+    fertilidad:
+      0.5 +
+      Math.random(),
+
+
+    longevidad:
+      2000 +
+      Math.random() * 4000,
+
+
+    tamano:
+      0.7 +
+      Math.random() * 0.8,
+
+
+    exploracion:
+      Math.random()
+
+  }
+
+}
+
+
+
+// =====================================================
+// HERENCIA GENÉTICA
+// =====================================================
+
+function heredar(a,b){
+
+  let hijo = {}
+
+
+  for(let propiedad in a){
+
+    let valor =
+      Math.random() < 0.5
+      ?
+      a[propiedad]
+      :
+      b[propiedad]
+
+
+    // Mutación genética +-5%
+
+    hijo[propiedad] =
+      mutar(
+        valor,
+        0.05
+      )
+
+  }
+
+
+  return hijo
+
+}
+
+
+
+// =====================================================
+// CLASE SER
+// =====================================================
+
+class Ser{
+
+  constructor(
+    x,
+    y,
+    genoma = null,
+    generacion = 0
+  ){
+
+    this.id =
+      siguienteId++
+
+
+    this.x =
+      x ??
+      Math.random() * width
+
+
+    this.y =
+      y ??
+      Math.random() * height
+
+
+    this.angulo =
+      Math.random() *
+      Math.PI *
+      2
+
+
+    this.genoma =
+      genoma ??
+      genomaAleatorio()
+
+
+    this.generacion =
+      generacion
+
+
+    this.energia = 100
+
+    this.hambre = 0
+
+    this.edad = 0
+
+    this.vivo = true
+
+
+    this.reproduccionCooldown =
+      Math.random() * 1000
+
+
+    this.objetivo = null
+
+  }
+
+
+
+  // ===================================================
+  // BUSCAR ZONA
+  // ===================================================
+
+  buscarZona(zonas){
+
+    let mejor = null
+
+    let mejorDistancia =
+      Infinity
+
+
+    for(let zona of zonas){
+
+      let x =
+        (
+          zona.x +
+          zona.w / 2
+        ) *
+        width
+
+
+      let y =
+        (
+          zona.y +
+          zona.h / 2
+        ) *
+        height
+
+
+      let dx =
+        x - this.x
+
+      let dy =
+        y - this.y
+
+
+      let distancia =
+        dx * dx +
+        dy * dy
+
+
+      if(
+        distancia <
+        mejorDistancia
+      ){
+
+        mejorDistancia =
+          distancia
+
+
+        mejor = {
+          x:x,
+          y:y
+        }
+
+      }
+
+    }
+
+
+    return mejor
+
+  }
+
+
+
+  // ===================================================
+  // PENSAR
+  // ===================================================
+
+  pensar(){
+
+    // -----------------------------------------------
+    // TIENE HAMBRE
+    // -----------------------------------------------
+
+    if(this.hambre > 60){
+
+      this.objetivo =
+        this.buscarZona(
+          mundo.comidas
+        )
+
+      return
+
+    }
+
+
+    // -----------------------------------------------
+    // ESTÁ CANSADO
+    // -----------------------------------------------
+
+    if(this.energia < 35){
+
+      this.objetivo =
+        this.buscarZona(
+          mundo.refugios
+        )
+
+      return
+
+    }
+
+
+    // -----------------------------------------------
+    // EXPLORACIÓN
+    // -----------------------------------------------
+
+    this.objetivo = null
+
+
+    this.angulo +=
+      (
+        Math.random() - 0.5
+      ) *
+      0.15 *
+      this.genoma.exploracion
+
+  }
+
+
+
+  // ===================================================
+  // MOVER
+  // ===================================================
+
+  mover(){
+
+    if(this.objetivo){
+
+      let dx =
+        this.objetivo.x -
+        this.x
+
+      let dy =
+        this.objetivo.y -
+        this.y
+
+
+      this.angulo =
+        Math.atan2(
+          dy,
+          dx
+        )
+
+    }
+
+
+    let velocidad =
+      this.genoma.velocidad
+
+
+    let nx =
+      this.x +
+      Math.cos(this.angulo) *
+      velocidad
+
+
+    let ny =
+      this.y +
+      Math.sin(this.angulo) *
+      velocidad
+
+
+
+    // -----------------------------------------------
+    // OBSTÁCULOS
+    // -----------------------------------------------
+
+    if(
+      estaEn(
+        nx,
+        ny,
+        mundo.obstaculos
+      )
+    ){
+
+      this.angulo +=
+        Math.PI *
+        (
+          0.5 +
+          Math.random()
+        )
+
+      return
+
+    }
+
+
+
+    this.x = nx
+    this.y = ny
+
+
+
+    // Mundo toroidal
+
+    if(this.x < 0)
+      this.x = width
+
+    if(this.x > width)
+      this.x = 0
+
+    if(this.y < 0)
+      this.y = height
+
+    if(this.y > height)
+      this.y = 0
+
+  }
+
+
+
+  // ===================================================
+  // VIVIR
+  // ===================================================
+
+  vivir(){
+
+    this.edad++
+
+    this.reproduccionCooldown--
+
+
+
+    // -----------------------------------------------
+    // HAMBRE
+    // -----------------------------------------------
+
+    this.hambre +=
+      0.015 *
+      this.genoma.metabolismo
+
+
+
+    // -----------------------------------------------
+    // GASTO ENERGÉTICO
+    // -----------------------------------------------
+
+    this.energia -=
+      0.008 *
+      this.genoma.metabolismo *
+      this.genoma.velocidad
+
+
+
+    // =================================================
+    // COMER
+    // =================================================
+
+    if(
+      estaEn(
+        this.x,
+        this.y,
+        mundo.comidas
+      )
+    ){
+
+      this.hambre -= 0.8
+
+      this.energia += 0.15
+
+    }
+
+
+
+    // =================================================
+    // DORMIR
+    // =================================================
+
+    if(
+      estaEn(
+        this.x,
+        this.y,
+        mundo.refugios
+      )
+      &&
+      this.energia < 70
+    ){
+
+      this.energia +=
+        0.5
+
+    }
+
+
+
+    this.hambre =
+      limitar(
+        this.hambre,
+        0,
+        120
+      )
+
+
+    this.energia =
+      limitar(
+        this.energia,
+        0,
+        100
+      )
+
+
+
+    // =================================================
+    // MUERTE POR ZONA LETAL
+    // =================================================
+
+    if(
+      estaEn(
+        this.x,
+        this.y,
+        mundo.letales
+      )
+    ){
+
+      this.morir()
+
+      return
+
+    }
+
+
+
+    // =================================================
+    // MUERTE POR HAMBRE
+    // =================================================
+
+    if(this.hambre >= 100){
+
+      this.morir()
+
+      return
+
+    }
+
+
+
+    // =================================================
+    // MUERTE POR ENERGÍA
+    // =================================================
+
+    if(this.energia <= 0){
+
+      this.morir()
+
+      return
+
+    }
+
+
+
+    // =================================================
+    // MUERTE POR VEJEZ
+    // =================================================
+
+    if(
+      this.edad >
+      this.genoma.longevidad
+    ){
+
+      this.morir()
+
+    }
+
+  }
+
+
+
+  morir(){
+
+    if(!this.vivo)
+      return
+
+
+    this.vivo = false
+
+    muertes++
+
+  }
+
+}
+
+
+
+// =====================================================
+// REPRODUCCIÓN
+// =====================================================
+
+function reproducir(){
+
+  // Evitar explosión poblacional
+
+  if(seres.length > 2500)
+    return
+
+
+
+  let candidatos =
+    seres.filter(
+
+      s =>
+        s.vivo &&
+        s.edad > 500 &&
+        s.energia > 65 &&
+        s.hambre < 40 &&
+        s.reproduccionCooldown <= 0
+
+    )
+
+
+
+  for(
+    let i = 0;
+    i < candidatos.length;
+    i++
+  ){
+
+    let a =
+      candidatos[i]
+
+
+    let b =
+      candidatos[
+        Math.floor(
+          Math.random() *
+          candidatos.length
+        )
+      ]
+
+
+    if(!b || a === b)
+      continue
+
+
+
+    let dx =
+      a.x - b.x
+
+    let dy =
+      a.y - b.y
+
+
+    let distancia2 =
+      dx * dx +
+      dy * dy
+
+
+
+    // Deben encontrarse físicamente
+
+    if(distancia2 > 400)
+      continue
+
+
+
+    let fertilidad =
+      (
+        a.genoma.fertilidad +
+        b.genoma.fertilidad
+      ) / 2
+
+
+
+    if(
+      Math.random() >
+      0.005 *
+      fertilidad
+    ){
+
+      continue
+
+    }
+
+
+
+    // -----------------------------------------------
+    // CREAR GENOMA DEL HIJO
+    // -----------------------------------------------
+
+    let genes =
+      heredar(
+        a.genoma,
+        b.genoma
+      )
+
+
+
+    let generacion =
+      Math.max(
+        a.generacion,
+        b.generacion
+      ) + 1
+
+
+
+    let hijo =
+      new Ser(
+
+        (
+          a.x +
+          b.x
+        ) / 2,
+
+        (
+          a.y +
+          b.y
+        ) / 2,
+
+        genes,
+
+        generacion
+
+      )
+
+
+
+    seres.push(hijo)
+
+    nacimientos++
+
+
+
+    // Reproducirse tiene coste
+
+    a.energia -= 20
+
+    b.energia -= 20
+
+
+    a.reproduccionCooldown =
+      500
+
+    b.reproduccionCooldown =
+      500
+
+  }
+
+}
+
+
+
+// =====================================================
+// ACTUALIZAR SIMULACIÓN
+// =====================================================
+
+function actualizar(){
+
+  for(let ser of seres){
+
+    if(!ser.vivo)
+      continue
+
+
+    ser.pensar()
+
+    ser.mover()
+
+    ser.vivir()
+
+  }
+
+
+
+  reproducir()
+
+
+
+  // Retirar cadáveres
+
+  seres =
+    seres.filter(
+      s => s.vivo
+    )
+
+}
+
+
+
+// =====================================================
+// ENVIAR INFORMACIÓN AL MAIN THREAD
+// =====================================================
+
+function enviar(){
+
+  /*
+    Por cada individuo:
+
+    x
+    y
+    energia
+    hambre
+    generacion
+  */
+
+  let datos =
+    new Float32Array(
+      seres.length * 5
+    )
+
+
+  let indice = 0
+
+  let generacionMaxima = 0
+
+
+  for(let ser of seres){
+
+    datos[indice++] =
+      ser.x
+
+    datos[indice++] =
+      ser.y
+
+    datos[indice++] =
+      ser.energia
+
+    datos[indice++] =
+      ser.hambre
+
+    datos[indice++] =
+      ser.generacion
+
+
+    generacionMaxima =
+      Math.max(
+        generacionMaxima,
+        ser.generacion
+      )
+
+  }
+
+
+
+  postMessage({
+
+    seres:datos,
+
+    estadisticas:{
+
+      poblacion:
+        seres.length,
+
+      nacimientos:
+        nacimientos,
+
+      muertes:
+        muertes,
+
+      generacion:
+        generacionMaxima
+
+    }
+
+  },[
+    datos.buffer
+  ])
+
+}
+
+
+
+// =====================================================
+// BUCLE DEL WORKER
+// =====================================================
+
+function bucle(){
+
+  actualizar()
+
+  enviar()
+
+
+  setTimeout(
+    bucle,
+    16
+  )
+
+}
+
+
+
+// =====================================================
+// MENSAJES
+// =====================================================
+
+onmessage = function(event){
+
+  let datos =
+    event.data
+
+
+
+  if(
+    datos.tipo ===
+    "iniciar"
+  ){
+
+    width =
+      datos.width
+
+    height =
+      datos.height
+
+    mundo =
+      datos.mundo
+
+
+    seres = []
+
+
+    for(
+      let i = 0;
+      i < datos.cantidad;
+      i++
+    ){
+
+      seres.push(
+        new Ser()
+      )
+
+    }
+
+
+    bucle()
+
+  }
+
+
+
+  if(
+    datos.tipo ===
+    "resize"
+  ){
+
+    width =
+      datos.width
+
+    height =
+      datos.height
+
+  }
+
+}
+
+</script>
+
+
+<!-- ================================================= -->
+<!-- PROGRAMA PRINCIPAL                                -->
+<!-- ================================================= -->
+
+<script>
+
+const canvas =
+  document.querySelector("canvas")
+
+const ctx =
+  canvas.getContext("2d")
+
+
+
+const numeroWorkers = 10
+
+const seresInicialesPorWorker = 1000
+
+
+
+let workers = []
+
+let poblaciones =
+  new Array(numeroWorkers)
+
+let estadisticas =
+  new Array(numeroWorkers)
+
+
+
+// =====================================================
+// MUNDO
+// =====================================================
+
+let mundo = {
+
+  comidas:[
+
+    {
+      x:0.10,
+      y:0.15,
+      w:0.15,
+      h:0.18
+    },
+
+    {
+      x:0.70,
+      y:0.12,
+      w:0.18,
+      h:0.15
+    },
+
+    {
+      x:0.40,
+      y:0.65,
+      w:0.20,
+      h:0.20
+    }
+
+  ],
+
+
+  refugios:[
+
+    {
+      x:0.05,
+      y:0.70,
+      w:0.15,
+      h:0.18
+    },
+
+    {
+      x:0.78,
+      y:0.70,
+      w:0.15,
+      h:0.18
+    }
+
+  ],
+
+
+  obstaculos:[
+
+    {
+      x:0.30,
+      y:0.15,
+      w:0.04,
+      h:0.55
+    },
+
+    {
+      x:0.65,
+      y:0.30,
+      w:0.04,
+      h:0.55
+    }
+
+  ],
+
+
+  letales:[
+
+    {
+      x:0.45,
+      y:0.30,
+      w:0.12,
+      h:0.12
+    }
+
+  ]
+
+}
+
+
+
+// =====================================================
+// CREAR BLOB CON EL CÓDIGO DEL WORKER
+// =====================================================
+
+let codigoWorker =
+  document.querySelector(
+    "#codigoWorker"
+  ).textContent
+
+
+let blobWorker =
+  new Blob(
+    [codigoWorker],
+    {
+      type:
+        "application/javascript"
+    }
+  )
+
+
+let urlWorker =
+  URL.createObjectURL(
+    blobWorker
+  )
+
+
+
+// =====================================================
+// CREAR LOS 10 WORKERS
+// =====================================================
+
+for(
+  let i = 0;
+  i < numeroWorkers;
+  i++
+){
+
+  let worker =
+    new Worker(
+      urlWorker
+    )
+
+
+  workers.push(
+    worker
+  )
+
+
+
+  worker.onmessage =
+    function(event){
+
+      let datos =
+        event.data
+
+
+      poblaciones[i] =
+        datos.seres
+
+
+      estadisticas[i] =
+        datos.estadisticas
+
+    }
+
+
+
+  worker.postMessage({
+
+    tipo:"iniciar",
+
+    cantidad:
+      seresInicialesPorWorker,
+
+    width:
+      window.innerWidth,
+
+    height:
+      window.innerHeight,
+
+    mundo:mundo
+
+  })
+
+}
+
+
+
+// =====================================================
+// RESIZE
+// =====================================================
+
+function redimensionar(){
+
+  canvas.width =
+    window.innerWidth
+
+  canvas.height =
+    window.innerHeight
+
+
+  for(let worker of workers){
+
+    worker.postMessage({
+
+      tipo:"resize",
+
+      width:
+        canvas.width,
+
+      height:
+        canvas.height
+
+    })
+
+  }
+
+}
+
+
+redimensionar()
+
+
+window.addEventListener(
+  "resize",
+  redimensionar
+)
+
+
+
+// =====================================================
+// RECTÁNGULO RELATIVO
+// =====================================================
+
+function rectangulo(
+  zona,
+  color
+){
+
+  ctx.fillStyle =
+    color
+
+
+  ctx.fillRect(
+
+    zona.x *
+    canvas.width,
+
+    zona.y *
+    canvas.height,
+
+    zona.w *
+    canvas.width,
+
+    zona.h *
+    canvas.height
+
+  )
+
+}
+
+
+
+// =====================================================
+// DIBUJAR MUNDO
+// =====================================================
+
+function dibujarMundo(){
+
+
+  // -----------------------------------------------
+  // COMIDA
+  // -----------------------------------------------
+
+  for(
+    let zona of
+    mundo.comidas
+  ){
+
+    rectangulo(
+      zona,
+      "#245c2a"
+    )
+
+  }
+
+
+
+  // -----------------------------------------------
+  // REFUGIOS
+  // -----------------------------------------------
+
+  for(
+    let zona of
+    mundo.refugios
+  ){
+
+    rectangulo(
+      zona,
+      "#244d70"
+    )
+
+  }
+
+
+
+  // -----------------------------------------------
+  // OBSTÁCULOS
+  // -----------------------------------------------
+
+  for(
+    let zona of
+    mundo.obstaculos
+  ){
+
+    rectangulo(
+      zona,
+      "#555"
+    )
+
+  }
+
+
+
+  // -----------------------------------------------
+  // ZONAS LETALES
+  // -----------------------------------------------
+
+  for(
+    let zona of
+    mundo.letales
+  ){
+
+    rectangulo(
+      zona,
+      "#6b1717"
+    )
+
+  }
+
+}
+
+
+
+// =====================================================
+// DIBUJAR SERES
+// =====================================================
+
+function dibujarSeres(){
+
+  for(let grupo of poblaciones){
+
+    if(!grupo)
+      continue
+
+
+    for(
+      let i = 0;
+      i < grupo.length;
+      i += 5
+    ){
+
+      let x =
+        grupo[i]
+
+      let y =
+        grupo[i+1]
+
+      let energia =
+        grupo[i+2]
+
+      let hambre =
+        grupo[i+3]
+
+      let generacion =
+        grupo[i+4]
+
+
+
+      // ---------------------------------------------
+      // COLOR SEGÚN ESTADO
+      // ---------------------------------------------
+
+      if(hambre > 75){
+
+        ctx.fillStyle =
+          "#ff9944"
+
+      }
+
+      else if(energia < 25){
+
+        ctx.fillStyle =
+          "#5599ff"
+
+      }
+
+      else{
+
+        ctx.fillStyle =
+          "#ffffff"
+
+      }
+
+
+
+      let tam =
+        Math.min(
+          5,
+          2 +
+          generacion *
+          0.05
+        )
+
+
+      ctx.fillRect(
+        x,
+        y,
+        tam,
+        tam
+      )
+
+    }
+
+  }
+
+}
+
+
+
+// =====================================================
+// ESTADÍSTICAS
+// =====================================================
+
+function actualizarEstadisticas(){
+
+  let poblacion = 0
+
+  let nacimientos = 0
+
+  let muertes = 0
+
+  let generacion = 0
+
+
+  for(let e of estadisticas){
+
+    if(!e)
+      continue
+
+
+    poblacion +=
+      e.poblacion
+
+
+    nacimientos +=
+      e.nacimientos
+
+
+    muertes +=
+      e.muertes
+
+
+    generacion =
+      Math.max(
+        generacion,
+        e.generacion
+      )
+
+  }
+
+
+
+  document.querySelector(
+    "#poblacion"
+  ).textContent =
+    poblacion
+
+
+
+  document.querySelector(
+    "#nacimientos"
+  ).textContent =
+    nacimientos
+
+
+
+  document.querySelector(
+    "#muertes"
+  ).textContent =
+    muertes
+
+
+
+  document.querySelector(
+    "#generacion"
+  ).textContent =
+    generacion
+
+}
+
+
+
+// =====================================================
+// BUCLE GRÁFICO
+// =====================================================
+
+function dibujar(){
+
+  ctx.fillStyle =
+    "#111"
+
+
+  ctx.fillRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  )
+
+
+
+  dibujarMundo()
+
+  dibujarSeres()
+
+  actualizarEstadisticas()
+
+
+
+  requestAnimationFrame(
+    dibujar
+  )
+
+}
+
+
+dibujar()
+
+</script>
+
+</body>
+</html>

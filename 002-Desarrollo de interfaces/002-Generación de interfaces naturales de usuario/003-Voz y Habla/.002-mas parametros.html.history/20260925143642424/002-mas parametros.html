@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      speechSynthesis.onvoiceschanged = function(){
+
+        let voces = speechSynthesis.getVoices();
+
+        console.log(voces);
+
+        let mensaje = new SpeechSynthesisUtterance(
+          "Hola, soy el navegador Chrome"
+        );
+
+        mensaje.lang = "es-ES";
+
+        let voz = voces.find(v => v.lang === "es-ES");
+
+        if(voz){
+          mensaje.voice = voz;
+        }
+
+        speechSynthesis.speak(mensaje);
+      };
+    </script>
+  </body>
+</html>

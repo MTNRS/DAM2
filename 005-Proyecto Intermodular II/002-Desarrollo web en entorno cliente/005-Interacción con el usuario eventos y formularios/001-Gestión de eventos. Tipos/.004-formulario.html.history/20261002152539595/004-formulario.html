@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="nombre" id="nombre">
+      <input type="submit">
+      <input type="reset">
+    </form>
+    <script>
+      let nombre = document.querySelector("#nombre");
+      nombre.onfocus = function(){
+      	console.log("Has entrado en el elemento")
+      }
+      nombre.onblur = function(){
+      	console.log("Has salido del elemento")
+      }
+      nombre.onchange = function(){
+      	console.log("Algo ha cambiado en el elemento")
+      }
+      document.querySelector("form").onreset = function(){
+      	console.log("Alguien ha reiniciado el formulario")
+      }
+      
+    </script>
+  </body>
+</html>

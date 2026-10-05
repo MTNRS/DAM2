@@ -1,0 +1,22 @@
+Datetime: 2026-10-05T13:24:37.797Z
+Working directory: /var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/004-Procesamiento de objetos multimedia
+Command: whisper letyougo.mp3   --model medium   --language en   --device cuda   --output_format vtt
+
+Result:
+[00:00.000 --> 00:25.000]  We were part of a home, sometimes part of a time.
+[00:25.000 --> 00:30.000]  I'm so proud hiding you, your worth based on my life.
+[00:30.000 --> 00:35.000]  I'll watch you shape your world, standing right where you are.
+[00:35.000 --> 00:42.000]  Sometimes I can't but think, if the things I've done could be right.
+[00:42.000 --> 01:01.000]  Trying so hard not to care, then all I want's all to break.
+[01:01.000 --> 01:06.000]  I know I had to let go, but there's still hearts inside.
+[01:06.000 --> 01:11.000]  And no one here to still blame, just two roads go apart.
+[01:11.000 --> 01:15.000]  So things stay in the heart, and then we will be reborn.
+[01:15.000 --> 01:23.000]  Sometimes I can't but think, if the things could have turned out right.
+[01:23.000 --> 01:43.000]  Trying so hard not to care, then all I want's all to break.
+[01:43.000 --> 01:48.000]  I don't know where you are, but I wish you the best.
+[01:48.000 --> 01:52.000]  Wherever you may be, I hope you find happiness.
+[01:52.000 --> 02:20.000]  I got me wet with weather, and then we meet again.
+[02:20.000 --> 02:40.000]  Trying so hard not to care, then all I want's all to break.
+[02:50.000 --> 02:55.000]  Thanks for watching!
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/004-Programación mult
+imedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/004-Procesamiento de objetos multimedia$ 

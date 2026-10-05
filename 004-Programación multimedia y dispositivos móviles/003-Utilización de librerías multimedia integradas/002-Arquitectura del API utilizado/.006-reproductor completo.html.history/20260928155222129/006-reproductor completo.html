@@ -1,0 +1,94 @@
+.jvaudio{
+  width:800px;
+  max-width:90vw;
+
+  padding:20px;
+
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  background:white;
+  border-radius:18px;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+
+  /* IMPORTANTE */
+  overflow:hidden;
+}
+
+.jvaudio audio{
+  display:none;
+}
+
+
+/* BOTONES */
+
+.jvaudio button{
+  flex:0 0 44px;
+
+  width:44px;
+  height:44px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#111;
+  color:white;
+
+  font-size:17px;
+  cursor:pointer;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+
+/* TIEMPO */
+
+.tiempo{
+  flex:0 0 42px;
+
+  width:42px;
+
+  font-size:12px;
+  color:#777;
+  text-align:center;
+}
+
+
+/* WAVEFORM */
+
+.waveform{
+  /* Ocupa únicamente el espacio disponible */
+  flex:1 1 0;
+
+  /* MUY IMPORTANTE dentro de flex */
+  min-width:0;
+
+  width:0;
+  height:80px;
+
+  display:block;
+  cursor:pointer;
+}
+
+
+/* VOLUMEN */
+
+.volumen{
+  flex:0 0 80px;
+
+  width:80px;
+
+  appearance:none;
+
+  height:4px;
+
+  background:#ddd;
+
+  border-radius:10px;
+
+  cursor:pointer;
+}

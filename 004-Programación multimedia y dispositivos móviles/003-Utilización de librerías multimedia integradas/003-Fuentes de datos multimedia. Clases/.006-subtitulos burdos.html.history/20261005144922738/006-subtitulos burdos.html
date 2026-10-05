@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <video src="002-utilizacion-de-formularios-desde-codigo-2026-10-05_13-44-07.webm" controls></video>
+    <div id="subtitulos"></div>
+    <script>
+      let transcripcion = []
+      fetch("002-utilizacion-de-formularios-desde-codigo-2026-10-05_13-44-07.vtt")
+      .then(function(resultado){return resultado.text()})
+      .then(function(datos){
+      	let partido = datos.split("\n\n")
+        partido.forEach(function(pieza){
+        	let maspartido = pieza.split("\n")
+          let texto = maspartido[1];
+          let muchomaspartido = maspartido[0].split(" --> ")
+          let inicio = muchomaspartido[0]
+          let final = muchomaspartido[1]
+          transcripcion.push({"inicio":inicio,"final":final,"texto":texto})
+        })
+        console.log(transcripcion)
+      })
+      
+      let video = document.querySelector("video")
+      video.ontimeupdate = function(){
+        console.log("Playing:", video.currentTime);
+      };
+    </script>
+  </body>
+</html>

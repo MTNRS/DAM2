@@ -1,0 +1,9 @@
+Datetime: 2026-09-24T11:31:57.423Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/004-Ejecución de sentencias de descripción de datos/012-DDL
+Command: which jocarsabbdd
+
+Result:
+which jocarsabbdd
+/usr/local/bin/jocarsabbdd
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de cone
+ctores/004-Ejecución de sentencias de descripción de datos/012-DDL$ 

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>5 capas CSS 3D</title>
+
+<style>
+    *{
+        box-sizing:border-box;
+    }
+
+    body{
+        margin:0;
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#111;
+        overflow:hidden;
+
+        perspective:1000px;
+    }
+
+    #escena{
+        width:500px;
+        height:500px;
+
+        position:relative;
+
+        transform-style:preserve-3d;
+
+        transition:transform 0.1s ease-out;
+    }
+
+    .capa{
+        position:absolute;
+
+        width:100%;
+        height:100%;
+
+        top:0;
+        left:0;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        font-family:Arial;
+        font-size:40px;
+        font-weight:bold;
+
+        border:2px solid rgba(255,255,255,0.4);
+
+        transform-style:preserve-3d;
+    }
+
+    .capa1{
+        background:rgba(255,0,0,0.25);
+        transform:translateZ(-120px);
+    }
+
+    .capa2{
+        background:rgba(255,150,0,0.25);
+        transform:translateZ(-60px);
+    }
+
+    .capa3{
+        background:rgba(0,255,100,0.25);
+        transform:translateZ(0px);
+    }
+
+    .capa4{
+        background:rgba(0,150,255,0.25);
+        transform:translateZ(60px);
+    }
+
+    .capa5{
+        background:rgba(180,0,255,0.25);
+        transform:translateZ(120px);
+    }
+
+</style>
+</head>
+
+<body>
+
+<div id="escena">
+
+    <div class="capa capa1">
+        CAPA 1
+    </div>
+
+    <div class="capa capa2">
+        CAPA 2
+    </div>
+
+    <div class="capa capa3">
+        CAPA 3
+    </div>
+
+    <div class="capa capa4">
+        CAPA 4
+    </div>
+
+    <div class="capa capa5">
+        CAPA 5
+    </div>
+
+</div>
+
+
+<script>
+
+const escena = document.querySelector("#escena");
+
+document.addEventListener("mousemove", function(event){
+
+    // Posición del ratón entre -1 y 1
+
+    const x = (event.clientX / window.innerWidth) * 2 - 1;
+    const y = (event.clientY / window.innerHeight) * 2 - 1;
+
+    // Rotación máxima
+
+    const rotacionX = -y * 20;
+    const rotacionY = x * 20;
+
+    escena.style.transform =
+        "rotateX(" + rotacionX + "deg) " +
+        "rotateY(" + rotacionY + "deg)";
+
+});
+
+</script>
+
+</body>
+</html>

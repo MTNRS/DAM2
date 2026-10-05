@@ -1,0 +1,19 @@
+CREAR BASE fases14
+USAR fases14
+CREAR TABLA clientes nombre:TEXTO,email:TEXTO,nacimiento:FECHA,saldo:DECIMAL
+CREAR INDICE idx_email EN clientes email
+INSERTAR EN clientes VALORES ('Ana','ana@x.es','2026-01-10','100.25')
+INSERTAR EN clientes VALORES ('Luis','luis@x.es',NULL,'50.50')
+MOSTRAR INDICES clientes
+EXPLICAR SELECCIONAR * DE clientes DONDE email = 'ana@x.es'
+EXPLICAR SELECCIONAR * DE clientes DONDE saldo > 20
+CREAR TABLA pedidos id_cliente:ENTERO,total:DECIMAL
+INSERTAR EN pedidos VALORES ('1','20')
+INSERTAR EN pedidos VALORES ('1','30')
+INSERTAR EN pedidos VALORES ('99','40')
+SELECCIONAR c.nombre,p.total DE clientes c JOIN pedidos p EN c.id = p.id_cliente
+SELECCIONAR c.nombre,p.total DE clientes c LEFT JOIN pedidos p EN c.id = p.id_cliente
+SELECCIONAR c.nombre,p.total DE clientes c RIGHT JOIN pedidos p EN c.id = p.id_cliente
+SELECCIONAR c.nombre,p.total DE clientes c FULL JOIN pedidos p EN c.id = p.id_cliente
+SELECCIONAR c.nombre,p.total DE clientes c CROSS JOIN pedidos p LIMITE 3
+SALIR

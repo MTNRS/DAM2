@@ -1,0 +1,225 @@
+Datetime: 2026-10-05T13:11:03.074Z
+Working directory: /var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases
+Command: python3 012-traducir.py 002-utilizacion-de-formularios-desde-codigo-2026-10-05_13-44-07.vtt
+
+Result:
+
+============================================================
+TRADUCTOR AUTOMÁTICO DE SUBTÍTULOS
+============================================================
+Archivo: 002-utilizacion-de-formularios-desde-codigo-2026-10-05_13-44-07.vtt
+Modelo: granite4.2:latest
+Subtítulos: 56
+
+============================================================
+EN -> English
+============================================================
+    0001-0030 / 0056
+
+    ERROR: Remote end closed connection without response
+    Reintentando bloque...
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 327, in traducir_subtitulos
+    traducido = traducir_bloque(
+                ^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 249, in traducir_bloque
+    respuesta = llamar_ollama(
+                ^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 119, in llamar_ollama
+    with urllib.request.urlopen(
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/urllib/request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.12/http/client.py", line 1365, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1411, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1360, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1120, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1064, in send
+    self.connect()
+  File "/usr/lib/python3.12/http/client.py", line 1030, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 852, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.12/socket.py", line 837, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 561, in <module>
+    main()
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 512, in main
+    traducciones = traducir_subtitulos(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 349, in traducir_subtitulos
+    traducido = traducir_bloque(
+                ^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 249, in traducir_bloque
+    respuesta = llamar_ollama(
+                ^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 119, in llamar_ollama
+    with urllib.request.urlopen(
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_004-Programación multimedia y dispositivos móviles_003-Utilización de librerías multimedia integradas_003-Fuentes de datos multimedia. Clases_012-traducir.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 327, in traducir_subtitulos
+    traducido = traducir_bloque(
+                ^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 249, in traducir_bloque
+    respuesta = llamar_ollama(
+                ^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 119, in llamar_ollama
+    with urllib.request.urlopen(
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/urllib/request.py", line 1344, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.12/http/client.py", line 1365, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1411, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1360, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.12/http/client.py", line 1120, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.12/http/client.py", line 1064, in send
+    self.connect()
+  File "/usr/lib/python3.12/http/client.py", line 1030, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 852, in create_connection
+    raise exceptions[0]
+  File "/usr/lib/python3.12/socket.py", line 837, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 561, in <module>
+    main()
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 512, in main
+    traducciones = traducir_subtitulos(
+                   ^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 349, in traducir_subtitulos
+    traducido = traducir_bloque(
+                ^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 249, in traducir_bloque
+    respuesta = llamar_ollama(
+                ^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/012-traducir.py", line 119, in llamar_ollama
+    with urllib.request.urlopen(
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1347, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 111] Connection refused>
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/004-Programa
+ción multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases$ 

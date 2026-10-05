@@ -1,0 +1,30 @@
+<div>
+  <img src="https://static.jocarsa.com/logos/white.svg">
+  <strong>jocarsa | crimson</strong>
+</div>
+
+<div>
+  <h1>Selecciona una tabla</h1>
+  <a href="#" onclick="crudActual('seleccionar');return false;">Seleccionar</a>
+  <a href="#" onclick="crudActual('insertar');return false;">Insertar</a>
+</div>
+
+<div>
+  <span id="usuarioActual">Usuario</span>
+  <a id="usuariosAdmin" href="./usuarios.php" style="display:none">Usuarios</a>
+  <a id="modeloAdmin" href="./modelo.php" style="display:none">Modelo de datos</a>
+  <a id="opcionesAdmin" href="./configuracion.php" style="display:none">Opciones</a>
+  <a href="#" id="salir">Salir</a>
+</div>
+<script>
+(function(){
+ const u=window.CRIMSON_USER;
+ if(u){
+   document.querySelector("#usuarioActual").textContent=u.nombre;
+   if(u.rol==="admin"){
+     ["usuariosAdmin","modeloAdmin","opcionesAdmin"].forEach(id=>document.querySelector("#"+id).style.display="inline-flex");
+   }
+ }
+ document.querySelector("#salir").onclick=async e=>{e.preventDefault();await fetch("api/auth.php?action=logout",{cache:"no-store"});location.href="login.php"};
+})();
+</script>

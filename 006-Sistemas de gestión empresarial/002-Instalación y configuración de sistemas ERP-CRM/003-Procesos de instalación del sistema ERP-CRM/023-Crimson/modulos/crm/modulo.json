@@ -1,0 +1,14 @@
+{
+  "modulo": "crm",
+  "nombre": "CRM",
+  "tablas": [
+    "terceros",
+    "direcciones_terceros",
+    "contactos",
+    "etiquetas",
+    "terceros_etiquetas",
+    "leads",
+    "oportunidades",
+    "actividades_crm"
+  ]
+}

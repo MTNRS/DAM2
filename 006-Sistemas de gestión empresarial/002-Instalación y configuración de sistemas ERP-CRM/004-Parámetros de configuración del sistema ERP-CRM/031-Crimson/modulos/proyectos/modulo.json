@@ -1,0 +1,12 @@
+{
+  "modulo": "proyectos",
+  "nombre": "Proyectos",
+  "tablas": [
+    "proyectos",
+    "tareas_proyecto",
+    "partes_horas",
+    "empleados",
+    "terceros",
+    "centros_coste"
+  ]
+}

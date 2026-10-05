@@ -1,0 +1,17 @@
+<audio src="0802.mp3" controls></audio>
+<canvas width=800 height=200></canvas>
+
+<script>
+  let lienzo = document.querySelector("canvas")
+fetch("0802.mp3")
+  .then(respuesta => respuesta.arrayBuffer())
+  .then(datos => {
+    let contexto = new AudioContext()
+
+    contexto.decodeAudioData(datos, function(buffer){
+      let samples = buffer.getChannelData(0)
+
+      console.log(samples)
+    })
+  })
+</script>

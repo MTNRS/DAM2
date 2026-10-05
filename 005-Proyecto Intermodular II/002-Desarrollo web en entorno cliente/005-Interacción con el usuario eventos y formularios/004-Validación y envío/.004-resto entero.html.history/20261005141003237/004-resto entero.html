@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <input type="text" tipo="dni">
+
+    <script>
+      let dni = document.querySelector('[tipo="dni"]');
+
+      dni.oninput = function(){
+        let patron = /^[0-9]{8}[A-Za-z]$/;
+
+        if(patron.test(dni.value)){
+          console.log("DNI válido");
+
+          // Cojo los 8 primeros caracteres
+          let numero = dni.value.substring(0,8);
+
+          // Los convierto a número entero
+          numero = parseInt(numero);
+
+          // Calculo el resto de dividir entre 23
+          let resto = numero % 23;
+
+          console.log("Número:", numero);
+          console.log("Resto:", resto);
+
+        }else{
+          console.log("DNI no válido");
+        }
+      }
+    </script>
+  </body>
+</html>

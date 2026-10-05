@@ -1,0 +1,27 @@
+.jocarsa-componentes{
+  margin:10px;
+  position:relative;
+}
+
+.jocarsa-componentes div{
+  outline:none;
+  padding:10px 10px 10px 40px;
+  border:1px solid grey;
+  margin:5px 0px;
+}
+
+.jocarsa-componentes .tipo-input{
+  position:absolute;
+  left:8px;
+  bottom:8px;
+  width:26px;
+  height:26px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid grey;
+  font-family:monospace;
+  font-size:12px;
+  font-weight:bold;
+  box-sizing:border-box;
+}

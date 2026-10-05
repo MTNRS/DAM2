@@ -1,0 +1,549 @@
+{
+    "version": 1,
+    "tables": [
+        {
+            "name": "empresas",
+            "x": 975,
+            "y": 438,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "nombre",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "cif",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "email",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "telefono",
+                    "type": "TEXT",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "usuarios",
+            "x": 582,
+            "y": 806,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "username",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "password_hash",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "nombre",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "email",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "activo",
+                    "type": "INTEGER",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "clientes",
+            "x": 149,
+            "y": 251,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "nombre",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "cif",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "email",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "telefono",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "direccion",
+                    "type": "TEXT",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "proveedores",
+            "x": 291,
+            "y": 645,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "nombre",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "cif",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "email",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "telefono",
+                    "type": "TEXT",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "categorias",
+            "x": 350,
+            "y": 47,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "nombre",
+                    "type": "TEXT",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "productos",
+            "x": 919,
+            "y": 774,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "categoria_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "codigo",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "nombre",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "precio",
+                    "type": "REAL",
+                    "pk": false
+                },
+                {
+                    "name": "stock",
+                    "type": "REAL",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "pedidos",
+            "x": 790,
+            "y": 40,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "cliente_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "fecha",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "estado",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "total",
+                    "type": "REAL",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "pedidos_lineas",
+            "x": 1264,
+            "y": 707,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "pedido_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "producto_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "cantidad",
+                    "type": "REAL",
+                    "pk": false
+                },
+                {
+                    "name": "precio",
+                    "type": "REAL",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "facturas",
+            "x": 1533,
+            "y": 423,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "cliente_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "pedido_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "numero",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "fecha",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "estado",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "total",
+                    "type": "REAL",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "compras",
+            "x": 1129,
+            "y": 69,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "proveedor_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "fecha",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "total",
+                    "type": "REAL",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "compras_lineas",
+            "x": 1473,
+            "y": 63,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "compra_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "producto_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "cantidad",
+                    "type": "REAL",
+                    "pk": false
+                },
+                {
+                    "name": "precio",
+                    "type": "REAL",
+                    "pk": false
+                }
+            ]
+        },
+        {
+            "name": "empleados",
+            "x": 0,
+            "y": 570,
+            "columns": [
+                {
+                    "name": "Identificador",
+                    "type": "INTEGER",
+                    "pk": true
+                },
+                {
+                    "name": "empresa_id",
+                    "type": "INTEGER",
+                    "pk": false
+                },
+                {
+                    "name": "nombre",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "email",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "telefono",
+                    "type": "TEXT",
+                    "pk": false
+                },
+                {
+                    "name": "puesto",
+                    "type": "TEXT",
+                    "pk": false
+                }
+            ]
+        }
+    ],
+    "relations": [
+        {
+            "fromTable": "usuarios",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "clientes",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "proveedores",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "categorias",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "productos",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "productos",
+            "fromColumn": "categoria_id",
+            "toTable": "categorias",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "pedidos",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "pedidos",
+            "fromColumn": "cliente_id",
+            "toTable": "clientes",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "pedidos_lineas",
+            "fromColumn": "pedido_id",
+            "toTable": "pedidos",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "pedidos_lineas",
+            "fromColumn": "producto_id",
+            "toTable": "productos",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "facturas",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "facturas",
+            "fromColumn": "cliente_id",
+            "toTable": "clientes",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "facturas",
+            "fromColumn": "pedido_id",
+            "toTable": "pedidos",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "compras",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "compras",
+            "fromColumn": "proveedor_id",
+            "toTable": "proveedores",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "compras_lineas",
+            "fromColumn": "compra_id",
+            "toTable": "compras",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "compras_lineas",
+            "fromColumn": "producto_id",
+            "toTable": "productos",
+            "toColumn": "Identificador"
+        },
+        {
+            "fromTable": "empleados",
+            "fromColumn": "empresa_id",
+            "toTable": "empresas",
+            "toColumn": "Identificador"
+        }
+    ]
+}

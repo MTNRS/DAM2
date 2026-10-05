@@ -1,0 +1,12 @@
+{
+  "modulo": "documental",
+  "nombre": "Documental",
+  "tablas": [
+    "documentos",
+    "notificaciones",
+    "usuarios",
+    "terceros",
+    "proyectos",
+    "tickets_soporte"
+  ]
+}
