@@ -1,0 +1,73 @@
+<audio src="0802.mp3" controls></audio>
+
+<br><br>
+
+<canvas width="800" height="200"></canvas>
+
+<script>
+let lienzo = document.querySelector("canvas")
+let ctx = lienzo.getContext("2d")
+
+fetch("0802.mp3")
+  .then(respuesta => respuesta.arrayBuffer())
+  .then(datos => {
+
+    let contexto = new AudioContext()
+
+    contexto.decodeAudioData(datos, function(buffer){
+
+      let samples = buffer.getChannelData(0)
+
+      let ancho = lienzo.width
+      let alto = lienzo.height
+      let medio = alto / 2
+
+      // Número de barras
+      let barras = 100
+
+      // Separación entre barras
+      let separacion = 3
+
+      // Anchura de cada barra
+      let anchoBarra = ancho / barras - separacion
+
+      // Samples contenidos en cada barra
+      let salto = Math.floor(samples.length / barras)
+
+      for(let x = 0; x < barras; x++){
+
+        // Buscamos el máximo dentro de este bloque
+        let maximo = 0
+
+        for(let i = 0; i < salto; i++){
+          let valor = Math.abs(samples[x * salto + i])
+
+          if(valor > maximo){
+            maximo = valor
+          }
+        }
+
+        // Altura visual
+        let altura = maximo * medio * 0.9
+
+        // Altura mínima
+        altura = Math.max(altura, 3)
+
+        let posicionX = x * (anchoBarra + separacion)
+
+        // Barra simétrica respecto al centro
+        ctx.beginPath()
+
+        ctx.roundRect(
+          posicionX,
+          medio - altura,
+          anchoBarra,
+          altura * 2,
+          anchoBarra / 2
+        )
+
+        ctx.fill()
+      }
+    })
+  })
+</script>

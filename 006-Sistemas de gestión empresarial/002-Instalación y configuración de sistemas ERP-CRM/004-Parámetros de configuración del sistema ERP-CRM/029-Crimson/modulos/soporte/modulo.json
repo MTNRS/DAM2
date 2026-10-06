@@ -1,0 +1,12 @@
+{
+  "modulo": "soporte",
+  "nombre": "Soporte",
+  "tablas": [
+    "tickets_soporte",
+    "tickets_mensajes",
+    "terceros",
+    "contactos",
+    "usuarios",
+    "documentos"
+  ]
+}

@@ -1,0 +1,13 @@
+Datetime: 2026-09-24T11:17:04.685Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/010-instalacion conector
+Command: sudo make install
+
+Result:
+sudo make install
+install -d /etc/jocarsabbdd
+install -m 644 config.json /etc/jocarsabbdd/config.json
+install -d /var/jocarsa-basededatos
+install -m 755 jocarsabbdd /usr/local/bin/jocarsabbdd
+install -m 755 jocarsabbdd.cpython-312-x86_64-linux-gnu.so /usr/local/lib/python3.12/dist-packages/jocarsabbdd.cpython-312-x86_64-linux-gnu.so
+Instalado. Prueba: cd /tmp && python3 -c 'import jocarsabbdd; print(jocarsabbdd.configuracion())'
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/010-instalacion conector$ 

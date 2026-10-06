@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <body>
+
+
+    <script>
+      let cuerpo = document.querySelector("html")
+      cuerpo.onclick = function(){
+      	console.log("Has hecho click")
+      }
+      cuerpo.ondblclick = function(){
+      	console.log("Has hecho doble click")
+      }
+      cuerpo.oncontext = function(){
+        return false;
+      	console.log("Has hecho click con el boton derecho")
+      }
+    </script>
+
+  </body>
+</html>

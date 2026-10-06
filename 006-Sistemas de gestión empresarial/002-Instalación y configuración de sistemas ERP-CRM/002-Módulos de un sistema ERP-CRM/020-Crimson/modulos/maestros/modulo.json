@@ -1,0 +1,17 @@
+{
+  "modulo": "maestros",
+  "nombre": "Maestros",
+  "tablas": [
+    "empresas",
+    "monedas",
+    "tipos_cambio",
+    "paises",
+    "provincias",
+    "centros",
+    "departamentos",
+    "formas_pago",
+    "bancos",
+    "unidades_medida",
+    "tipos_iva"
+  ]
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    #calendario {
+      width: 800px;
+      height: 500px;
+
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 5px;
+    }
+
+    #calendario div {
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="calendario"></div>
+
+  <script>
+    let contenedor = document.querySelector("#calendario");
+
+    for (let dia = 1; dia <= 30; dia++) {
+      let elemento = document.createElement("div");
+      elemento.textContent = dia;
+      contenedor.appendChild(elemento);
+    }
+  </script>
+
+</body>
+</html>

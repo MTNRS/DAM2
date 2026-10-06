@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jocarsa UI - Demo v4</title></head>
+<body>
+<form action="procesa.php" method="POST">
+  <h1>Jocarsa UI</h1>
+  <h2>Inputs semánticos con indicador visual</h2>
+  <p>Cada control indica visualmente el tipo de dato esperado y conserva un input HTML real en su interior.</p>
+  <jocarsa-input type="text" name="texto" placeholder="Texto libre"></jocarsa-input>
+  <jocarsa-input type="nombre" name="nombre" placeholder="Nombre y apellidos"></jocarsa-input>
+  <jocarsa-input type="usuario" name="usuario" placeholder="Nombre de usuario"></jocarsa-input>
+  <jocarsa-input type="email" name="email" placeholder="correo@ejemplo.com" required></jocarsa-input>
+  <jocarsa-input type="password" name="password" placeholder="Contraseña" minlength="7"></jocarsa-input>
+  <jocarsa-input type="tel" name="telefono" placeholder="+34 600 000 000"></jocarsa-input>
+  <jocarsa-input type="url" name="web" placeholder="https://ejemplo.com"></jocarsa-input>
+  <jocarsa-input type="search" name="busqueda" placeholder="Buscar..."></jocarsa-input>
+  <jocarsa-input type="integer" name="unidades" placeholder="Unidades" min="0"></jocarsa-input>
+  <jocarsa-input type="number" name="numero" placeholder="Número"></jocarsa-input>
+  <jocarsa-input type="decimal" name="decimal" placeholder="12.75"></jocarsa-input>
+  <jocarsa-input type="moneda" name="importe" placeholder="125.50" min="0"></jocarsa-input>
+  <jocarsa-input type="porcentaje" name="porcentaje" placeholder="75" min="0" max="100"></jocarsa-input>
+  <jocarsa-input type="postal" name="codigo_postal" placeholder="46001" pattern="[0-9]{5}"></jocarsa-input>
+  <jocarsa-input type="dni" name="documento" placeholder="12345678Z"></jocarsa-input>
+  <jocarsa-input type="date" name="fecha_input"></jocarsa-input>
+  <jocarsa-input type="time" name="hora_input"></jocarsa-input>
+  <jocarsa-input type="datetime-local" name="fecha_hora"></jocarsa-input>
+  <jocarsa-input type="month" name="mes"></jocarsa-input>
+  <jocarsa-input type="week" name="semana_input"></jocarsa-input>
+  <jocarsa-input type="color" name="color" value="#333333"></jocarsa-input>
+  <jocarsa-input type="range" name="nivel" value="50" min="0" max="100"></jocarsa-input>
+
+  <h2>Editor rico</h2><jocarsa-texto name="mensaje"><p>Hola <b>mundo</b></p></jocarsa-texto>
+  <h2>Markdown</h2><jocarsa-markdown name="documentacion"># Título
+
+Texto con **negrita** y *cursiva*.</jocarsa-markdown>
+  <h2>Editor de código</h2><jocarsa-editor name="codigo" language="javascript">function hola(){
+  console.log("Hola mundo");
+}</jocarsa-editor>
+  <h2>Firma</h2><jocarsa-firma name="firma"></jocarsa-firma>
+  <h2>DataTable</h2><jocarsa-tabla><table><thead><tr><th>Nombre</th><th>Apellidos</th><th>Edad</th><th>Ciudad</th></tr></thead><tbody>
+    <tr><td>Ana</td><td>García</td><td>28</td><td>Valencia</td></tr><tr><td>Juan</td><td>Martínez</td><td>35</td><td>Madrid</td></tr><tr><td>Laura</td><td>Sánchez</td><td>22</td><td>Sevilla</td></tr><tr><td>Carlos</td><td>López</td><td>41</td><td>Valencia</td></tr><tr><td>Marta</td><td>Ruiz</td><td>31</td><td>Alicante</td></tr>
+  </tbody></table></jocarsa-tabla>
+  <h2>TreeView</h2><jocarsa-arbol name="seleccion_arbol"><ul><li>Documentos<ul><li>factura.pdf</li><li>informe.pdf</li></ul></li><li>Proyectos<ul><li>jocarsa<ul><li>index.html</li><li>app.js</li></ul></li></ul></li></ul></jocarsa-arbol>
+  <h2>Calendario mensual</h2><jocarsa-calendario name="fecha" value="2026-10-02"></jocarsa-calendario>
+  <h2>Calendario semanal con slots</h2><jocarsa-semana name="cita" value="2026-10-02 18:30" inicio="08:00" fin="21:00" intervalo="30"></jocarsa-semana>
+  <h2>Selector de hora circular</h2><jocarsa-hora name="hora" value="18:35:20"></jocarsa-hora>
+  <p><button type="submit">Enviar formulario</button></p>
+</form>
+<script src="jocarsa-ui.js"></script>
+</body></html>

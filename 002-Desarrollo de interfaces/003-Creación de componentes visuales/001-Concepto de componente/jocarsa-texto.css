@@ -1,0 +1,47 @@
+.jocarsa-texto{
+        width:402px;
+        font-family:Arial,sans-serif;
+      }
+
+      .jocarsa-texto .barra{
+        display:flex;
+        gap:4px;
+        flex-wrap:wrap;
+        padding:5px;
+        background:#eee;
+        border:1px solid grey;
+        border-bottom:none;
+      }
+
+      .jocarsa-texto button{
+        min-width:32px;
+        height:30px;
+        cursor:pointer;
+        border:1px solid #aaa;
+        background:white;
+        border-radius:3px;
+      }
+
+      .jocarsa-texto button:hover{
+        background:#ddd;
+      }
+
+      .jocarsa-texto article{
+        width:400px;
+        height:400px;
+        border:1px solid grey;
+        padding:10px;
+        box-sizing:border-box;
+        overflow:auto;
+        outline:none;
+      }
+
+      .jocarsa-texto article:focus{
+        border-color:#555;
+      }
+
+      .jocarsa-texto textarea{
+        width:400px;
+        height:200px;
+        box-sizing:border-box;
+      }

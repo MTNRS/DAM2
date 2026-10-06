@@ -1,0 +1,170 @@
+WEBVTT
+
+00:00.000 --> 00:09.520
+Muy bien, entonces, en proyecto intermodular, donde estábamos el otro día, nos quedamos aquí,
+
+00:09.520 --> 00:15.320
+nos quedamos con eventos precisamente, expresiones regulares,
+
+00:17.920 --> 00:24.720
+utilización de formularios desde código, esto es precisamente de lo que estamos hablando hoy.
+
+00:25.480 --> 00:30.120
+Insisto, recordamos que estamos en clientes, esto es tipos de eventos.
+
+00:30.120 --> 00:36.200
+Vale, entonces, para empezar, vamos a crear un pequeño formulario.
+
+00:37.640 --> 00:49.000
+Quiero crear un formulario en HTML puro, sin CSS, lo más puro posible.
+
+00:49.000 --> 00:59.440
+Ok, entonces, 001, crear formulario, .html.
+
+01:06.400 --> 01:13.440
+Y básicamente, el hecho de que en un momento dado podamos saber que cualquier elemento de
+
+01:13.440 --> 01:18.840
+formulario se puede recoger mediante Javascript. Entonces, nuevo archivo,
+
+01:18.840 --> 01:25.560
+002, recogemos mediante Javascript, .html.
+
+01:31.840 --> 01:39.440
+Y ahora con Javascript para recoger todos los datos.
+
+01:39.440 --> 01:47.280
+Y para, en un momento dado, se me olvidó de decirle que lo quería con formdata, pero bueno.
+
+01:52.280 --> 01:54.480
+Vale, lo ha cogido con formdata.
+
+01:57.320 --> 02:06.080
+Bien, y básicamente, lo que hacemos en este caso es crear donde estás aquí.
+
+02:06.080 --> 02:19.160
+Aquí, con un formdata, y incluso voy a hacer un console.log, datos, para ver que si por lo
+
+02:19.160 --> 02:27.080
+que sea queremos crear un formulario a mano, podemos hacerlo mediante Javascript. Vamos a verlo.
+
+02:27.080 --> 02:34.000
+Tenemos un evento prevén default, que lo que hace es evitar enviar el formulario.
+
+02:34.040 --> 02:41.160
+Vamos a proyecto intermodular, vamos a cliente, vamos a interacción, vamos a formularios,
+
+02:41.160 --> 02:48.240
+vamos a recoger y envío. Y lo que tengo en la pantalla es esto.
+
+02:48.240 --> 02:56.120
+Lo que tengo en la pantalla es esto de aquí, que lo que hace es recogernos todos los datos.
+
+02:56.120 --> 03:03.760
+Bien, una vez que tenemos esto, a continuación lo que vamos a hacer es lo contrario.
+
+03:04.040 --> 03:08.680
+Lo que vamos a hacer es crear nosotros un formulario desde cero.
+
+03:08.680 --> 03:16.760
+Así que vengo por aquí, cero, cero, tres, y voy a crear un formulario con Javascript.
+
+03:17.760 --> 03:33.760
+Por tanto, HTML, voy a crear ahí dog type, HTML, HTML, HTML, y voy a coger un modelo
+
+03:33.760 --> 03:42.840
+de datos. ¿Qué modelo de datos será ese? Pues el que queramos. Pero, ¿qué ocurre si yo vengo aquí
+
+03:43.400 --> 03:55.360
+y creo un form? Y yo a continuación, por ejemplo en el script, de momento voy a crearlo así,
+
+03:55.360 --> 04:09.520
+voy a decir defer, y voy a decir lo siguiente. Let formulario es igual a document.querySelector form.
+
+04:09.520 --> 04:18.800
+Pero, ¿qué es lo que va a ocurrir a continuación si yo lo que quiero es meter una serie de campos?
+
+04:18.800 --> 04:25.600
+Pues puedo hacerlo en Javascript mediante createElement. Voy a decir, vamos a ver,
+
+04:25.600 --> 04:37.720
+Javascript, Javascript, crear Json con, vamos a ver, con nombres de campo y tipos de datos,
+
+04:37.720 --> 04:47.560
+por ejemplo. Así que, a continuación, mediante este formulario, vamos a verlo, de campo y tipos
+
+04:47.560 --> 05:08.200
+de datos de momento, de momento compatibles con HTML input, para entendernos. Vale, pues,
+
+05:08.200 --> 05:20.640
+hago así y ahora digo campos es igual, let campos es igual a esto. ¿Y esto qué quiere decir? Pues esto
+
+05:20.640 --> 05:28.440
+quiere decir, esto de hecho no me hace falta, vale, que yo a continuación puedo venir, esto de hecho es
+
+05:28.440 --> 05:43.240
+una array y digo campos.forage function campo y entonces para cada uno de los campos hago lo siguiente,
+
+05:43.240 --> 05:56.600
+aquí arriba let formulario es igual a document.querySelector form. Y ahora let mi campo,
+
+05:56.600 --> 06:24.000
+vamos a verlo, let entrada es igual a document.createElementInput. Entrada.setAttribute.type es
+
+06:24.160 --> 06:41.640
+igual a campo.tipo. Entrada.setAttribute.name es igual a campo.tipo. nombre. Así que, por último,
+
+06:41.640 --> 06:53.520
+formulario.appendchild.entrada. Si ahora vengo por aquí, creo un formulario con Javascript,
+
+06:54.040 --> 07:01.440
+hola, campos, campos en la línea 8, ¿qué ha pasado? campos en la línea 8, ah, que está duplicado,
+
+07:01.440 --> 07:08.000
+vale, ok, let campos es igual a esto, ok. Y ahora formulario has already been declared,
+
+07:08.000 --> 07:18.080
+vale, formulario form. Ah, wow, cuidado, es que lo tenía cogido dos veces, vale, ok. Recargamos,
+
+07:18.400 --> 07:32.400
+no puedo leer appendchild, vale, ¿por qué? Vamos a verlo. Formulario appendchild form. Voy a ponerlo
+
+07:32.400 --> 07:41.440
+después, creo que el difer no me está haciendo mucho caso. Ok, vale, y ahí lo tenemos. Y entonces
+
+07:41.520 --> 07:50.280
+lo que ocurre es que acabamos de crear un formulario a partir de Json. Y cuando digo a
+
+07:50.280 --> 07:57.800
+partir de Json, quiero decir que esto evidentemente podría venir de la base de datos, tengamos en
+
+07:57.800 --> 08:04.040
+cuenta que estamos en cliente. De la base de datos vendría un Json con el esquema, con el
+
+08:04.040 --> 08:11.840
+esquema de la base de datos pinto una librería y luego más adelante evidentemente lo uniremos al
+
+08:11.840 --> 08:21.360
+proyecto que estamos haciendo dentro de, ah, dentro de interfaces, vale, y lo que haremos es convertirlo
+
+08:21.360 --> 08:30.240
+en nuestra librería personalizada de elementos, vale. Así que esto por aquí, ok, vale, esto es
+
+08:30.240 --> 08:39.920
+interacción, esto es formularios desde código, vale. Bien, hablamos en este caso de la modificación
+
+08:39.920 --> 08:47.840
+de la apariencia y del comportamiento. Yo creo que el mejor ejemplo que puedo poner en este caso de
+
+08:47.840 --> 08:56.640
+modificación de apariencia y de comportamiento en un formulario es, por ejemplo, el checkbox,
+
+08:56.640 --> 09:03.720
+que es un clásico, convertir un checkbox horrible en un bonito slider. Así que voy a pasar aquí,
+
+09:03.720 --> 09:14.240
+vamos a ver, muy bien, nos vamos a, aquí, proyecto intermodular, un momento, porque,
+
+09:15.920 --> 09:22.400
+a ver un segundo, porque veo que tengo un problema con el vídeo, así que, Diego, un segundo, voy a,
+

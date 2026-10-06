@@ -1,0 +1,15 @@
+{
+  "modulo": "finanzas",
+  "nombre": "Finanzas",
+  "tablas": [
+    "formas_pago",
+    "bancos",
+    "cuentas_bancarias",
+    "cobros",
+    "pagos",
+    "facturas_venta",
+    "facturas_compra",
+    "monedas",
+    "tipos_cambio"
+  ]
+}

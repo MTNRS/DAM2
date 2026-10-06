@@ -1,0 +1,11 @@
+{
+    "modulo": "compras",
+    "nombre": "compras",
+    "tablas": [
+        "clientes",
+        "compras",
+        "empresas",
+        "pedidos",
+        "proveedores"
+    ]
+}

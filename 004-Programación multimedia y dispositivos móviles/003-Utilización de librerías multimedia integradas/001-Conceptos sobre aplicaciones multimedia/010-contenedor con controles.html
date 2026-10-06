@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    .jvvideo{
+      display:inline-block;
+      padding:10px;
+      background:#222;
+    }
+
+    .jvvideo video{
+      display:block;
+      width:600px;
+    }
+
+    .controles{
+      display:flex;
+      gap:5px;
+      padding:10px 0;
+      align-items:center;
+    }
+
+    .progreso{
+      flex:1;
+    }
+  </style>
+</head>
+
+<body>
+
+<video src="josevicente.mp4"></video>
+
+<script>
+
+let videos = document.querySelectorAll("video")
+
+videos.forEach(function(video){
+
+  // Crear contenedor
+  let contenedor = document.createElement("div")
+  contenedor.classList.add("jvvideo")
+
+  // Insertarlo antes del vídeo
+  video.parentNode.insertBefore(contenedor, video)
+
+  // Meter vídeo dentro
+  contenedor.appendChild(video)
+
+
+  // ----------------------------
+  // CREAR CONTROLES
+  // ----------------------------
+
+  let controles = document.createElement("div")
+  controles.classList.add("controles")
+  contenedor.appendChild(controles)
+
+
+  // Reproducir
+  let reproducir = document.createElement("button")
+  reproducir.textContent = "Reproducir"
+  controles.appendChild(reproducir)
+
+
+  // Parar
+  let parar = document.createElement("button")
+  parar.textContent = "Parar"
+  controles.appendChild(parar)
+
+
+  // Atrás
+  let atras = document.createElement("button")
+  atras.textContent = "Atrás"
+  controles.appendChild(atras)
+
+
+  // Adelante
+  let adelante = document.createElement("button")
+  adelante.textContent = "Adelante"
+  controles.appendChild(adelante)
+
+
+  // Volumen
+  let volumen = document.createElement("input")
+  volumen.type = "range"
+  volumen.min = 0
+  volumen.max = 1
+  volumen.step = 0.01
+  volumen.value = 1
+  controles.appendChild(volumen)
+
+
+  // Progreso
+  let progreso = document.createElement("input")
+  progreso.type = "range"
+  progreso.min = 0
+  progreso.max = 1
+  progreso.step = 0.001
+  progreso.value = 0
+  progreso.classList.add("progreso")
+  controles.appendChild(progreso)
+
+
+  // ----------------------------
+  // EVENTOS
+  // ----------------------------
+
+  reproducir.onclick = function(){
+    video.play()
+  }
+
+  parar.onclick = function(){
+    video.pause()
+  }
+
+  adelante.onclick = function(){
+    video.currentTime += 1
+  }
+
+  atras.onclick = function(){
+    video.currentTime -= 1
+  }
+
+  volumen.oninput = function(){
+    video.volume = this.value
+  }
+
+  video.ontimeupdate = function(){
+    if(video.duration){
+      progreso.value = video.currentTime / video.duration
+    }
+  }
+
+  progreso.oninput = function(){
+    video.currentTime = this.value * video.duration
+  }
+
+})
+
+</script>
+
+</body>
+</html>

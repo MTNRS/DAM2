@@ -1,0 +1,17 @@
+<script>
+  class Alumno{
+  	constructor(nombre,apellidos,email){
+    	this.nombre = nombre;
+      this.apellidos = apellidos;
+      this.email = email;
+    }
+    
+    dameNombre(){
+    	return this.nombre+" "+this.apellidos;
+    }
+    
+  }
+  
+  let alumno1 = new Alumno("Jose Vicente","Carratala","info@jocarsa.com");
+  console.log(alumno1);
+</script>

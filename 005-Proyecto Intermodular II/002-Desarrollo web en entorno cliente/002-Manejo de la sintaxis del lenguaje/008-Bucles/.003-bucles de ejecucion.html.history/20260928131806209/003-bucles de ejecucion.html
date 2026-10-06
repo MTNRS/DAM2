@@ -1,0 +1,8 @@
+<script>
+  let temporizador = setTimeout("bucle()",1000)
+  
+  function bucle(){
+  	clearTimeout(temporizador)
+    temporizador = setTimeout("bucle()",1000)
+  }
+</script>

@@ -1,0 +1,7 @@
+Datetime: 2026-09-24T11:48:38.307Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/006-Ejecución de consultas. Manipulación del resultado/015-instalacion-conector-DQL
+Command: sudo cp jocarsabbdd /usr/local/bin/jocarsabbdd
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-
+Manejo de conectores/006-Ejecución de consultas. Manipulación del resultado/015-instalacion-conector-DQL$ 

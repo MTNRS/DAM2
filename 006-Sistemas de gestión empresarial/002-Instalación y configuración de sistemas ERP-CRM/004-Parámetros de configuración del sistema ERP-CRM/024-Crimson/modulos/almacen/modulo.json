@@ -1,0 +1,17 @@
+{
+  "modulo": "almacen",
+  "nombre": "Almacen",
+  "tablas": [
+    "almacenes",
+    "ubicaciones_almacen",
+    "stock",
+    "movimientos_stock",
+    "inventarios",
+    "inventarios_lineas",
+    "lotes",
+    "numeros_serie",
+    "productos",
+    "categorias_producto",
+    "unidades_medida"
+  ]
+}

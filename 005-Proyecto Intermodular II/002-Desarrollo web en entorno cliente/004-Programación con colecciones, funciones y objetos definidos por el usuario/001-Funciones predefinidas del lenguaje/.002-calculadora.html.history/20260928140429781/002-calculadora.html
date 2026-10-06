@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+
+    <style>
+        body {
+            background: #222;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculadora {
+            width: 280px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        #pantalla {
+            width: 100%;
+            height: 70px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #c9d8b6;
+            font-size: 32px;
+            text-align: right;
+        }
+
+        .teclado {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            height: 60px;
+            border: none;
+            border-radius: 10px;
+            background: #555;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #666;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .operador {
+            background: #e67e22;
+        }
+
+        .igual {
+            background: #27ae60;
+        }
+
+        .borrar {
+            background: #c0392b;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="calculadora">
+
+    <input type="text" id="pantalla" readonly>
+
+    <div class="teclado">
+
+        <button class="borrar" onclick="borrar()">C</button>
+        <button onclick="numero(0)">0</button>
+        <button onclick="numero('.')">.</button>
+        <button class="operador" onclick="operacion('/')">÷</button>
+
+        <button onclick="numero(7)">7</button>
+        <button onclick="numero(8)">8</button>
+        <button onclick="numero(9)">9</button>
+        <button class="operador" onclick="operacion('*')">×</button>
+
+        <button onclick="numero(4)">4</button>
+        <button onclick="numero(5)">5</button>
+        <button onclick="numero(6)">6</button>
+        <button class="operador" onclick="operacion('-')">−</button>
+
+        <button onclick="numero(1)">1</button>
+        <button onclick="numero(2)">2</button>
+        <button onclick="numero(3)">3</button>
+        <button class="operador" onclick="operacion('+')">+</button>
+
+        <button class="igual" onclick="calcular()">=</button>
+
+    </div>
+
+</div>
+
+<script>
+
+    let pantalla = document.querySelector("#pantalla");
+
+    let primero = 0;
+    let operador = "";
+
+    function numero(valor) {
+        pantalla.value += valor;
+    }
+
+    function operacion(valor) {
+        primero = parseFloat(pantalla.value);
+        operador = valor;
+        pantalla.value = "";
+    }
+
+    function calcular() {
+
+        let segundo = parseFloat(pantalla.value);
+        let resultado;
+
+        if (operador == "+") {
+            resultado = primero + segundo;
+        }
+
+        if (operador == "-") {
+            resultado = primero - segundo;
+        }
+
+        if (operador == "*") {
+            resultado = primero * segundo;
+        }
+
+        if (operador == "/") {
+            resultado = primero / segundo;
+        }
+
+        pantalla.value = resultado;
+    }
+
+    function borrar() {
+        pantalla.value = "";
+        primero = 0;
+        operador = "";
+    }
+
+</script>
+
+</body>
+</html>

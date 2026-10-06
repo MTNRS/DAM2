@@ -1,0 +1,23 @@
+<?php require_once __DIR__."/api/auth_common.php"; requireAdmin(false); ?>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>Configuración · Crimson</title>
+<link rel="stylesheet" href="nucleo/estilo/general.css?v=026"><style>
+body{display:block;background:#f6f7f8}.top{height:60px;background:crimson;color:white;display:flex;align-items:center;padding:10px 14px;gap:12px}.top strong{font-size:16px}.top .spacer{flex:1}.top a{background:white;color:crimson;padding:9px 12px;text-decoration:none;border-radius:3px}.cfg{height:calc(100vh - 60px);display:grid;grid-template-columns:260px 1fr}.mods{background:crimson;padding:10px;overflow:auto}.mods button{width:100%;display:block;text-align:left;background:white;color:crimson;border:1px solid #ddd;padding:10px;margin-bottom:7px;cursor:pointer}.mods button.active{background:#a80f2d;color:white;border-color:white}.maincfg{padding:20px;overflow:auto}.card{background:white;border:1px solid #ddd;padding:18px;max-width:1050px}.create{display:flex;gap:8px;margin-bottom:16px}.create input{padding:9px;border:1px solid #ccc;min-width:260px}.create button,.actions button{padding:9px 13px;border:0;background:crimson;color:white;cursor:pointer}.tables{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:6px;margin:14px 0}.tables label{display:flex;align-items:center;gap:7px;padding:8px;background:#fafafa;border:1px solid #e4e4e4}.actions{display:flex;gap:8px}.actions .danger{background:#555}.muted{color:#777}.empty{padding:30px;color:#777;text-align:center}
+</style></head><body>
+<header class="top"><strong>jocarsa | crimson · configuración</strong><span>Gestión de módulos</span><span class="spacer"></span><a href="index.html">Volver al ERP</a></header>
+<div class="cfg"><aside class="mods"><div id="moduleList"></div></aside><main class="maincfg">
+<div class="card"><h1>Módulos</h1><div class="create"><input id="newName" placeholder="Nombre del nuevo módulo"><button id="createBtn">Crear módulo</button></div>
+<div id="editor" class="empty">Selecciona un módulo de la izquierda.</div></div></main></div>
+<script>
+let data=null,current=null;
+async function api(action,body=null){const r=await fetch("api/configuracion.php?action="+action,{method:body?"POST":"GET",headers:body?{"Content-Type":"application/json"}:{},body:body?JSON.stringify(body):null,cache:"no-store"});const d=await r.json();if(!d.ok)throw new Error(d.error);return d}
+async function load(select=null){data=await api("list");renderModules();if(select)selectModule(select);else if(current&&data.modules.some(m=>m.modulo===current))selectModule(current)}
+function renderModules(){moduleList.innerHTML="";data.modules.forEach(m=>{const b=document.createElement("button");b.textContent=m.nombre;b.dataset.id=m.modulo;b.onclick=()=>selectModule(m.modulo);moduleList.appendChild(b)})}
+function selectModule(id){current=id;document.querySelectorAll("#moduleList button").forEach(b=>b.classList.toggle("active",b.dataset.id===id));const m=data.modules.find(x=>x.modulo===id);if(!m)return;
+ editor.className="";editor.innerHTML=`<h2>${m.nombre}</h2><p class="muted">Carpeta: <code>modulos/${m.modulo}/</code> · marca las tablas SQLite que debe mostrar este módulo.</p><div class="tables" id="checks"></div><div class="actions"><button id="saveBtn">Guardar tablas</button><button class="danger" id="deleteBtn">Eliminar módulo</button></div>`;
+ data.tables.forEach(t=>{const l=document.createElement("label");const c=document.createElement("input");c.type="checkbox";c.value=t;c.checked=m.tablas.includes(t);l.append(c,document.createTextNode(t));checks.appendChild(l)});
+ saveBtn.onclick=async()=>{const tablas=[...checks.querySelectorAll("input:checked")].map(x=>x.value);try{await api("save",{modulo:m.modulo,tablas});await load(m.modulo);alert("Módulo actualizado")}catch(e){alert(e.message)}};
+ deleteBtn.onclick=async()=>{if(!confirm(`¿Eliminar el módulo "${m.nombre}"? No se elimina ninguna tabla SQLite.`))return;try{await api("delete",{modulo:m.modulo});current=null;editor.className="empty";editor.textContent="Selecciona un módulo de la izquierda.";await load()}catch(e){alert(e.message)}};
+}
+createBtn.onclick=async()=>{const nombre=newName.value.trim();if(!nombre)return;try{const d=await api("create",{nombre});newName.value="";await load(d.modulo)}catch(e){alert(e.message)}};
+load().catch(e=>alert(e.message));
+</script></body></html>

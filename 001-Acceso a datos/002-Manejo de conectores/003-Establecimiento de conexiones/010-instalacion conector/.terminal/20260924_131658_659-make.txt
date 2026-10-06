@@ -1,0 +1,23 @@
+Datetime: 2026-09-24T11:16:58.659Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/010-instalacion conector
+Command: make
+
+Result:
+make
+g++ -std=c++20 -O2 -Wall -Wextra -pedantic -fPIC main.cpp JocarsaBBDD.cpp -o jocarsabbdd
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:28:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   28 |    if(a=="SALIR"||a=="salir")break;if(a=="AYUDA"||a=="ayuda"){ayuda();continue;}
+      |    ^~
+main.cpp:28:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   28 |    if(a=="SALIR"||a=="salir")break;if(a=="AYUDA"||a=="ayuda"){ayuda();continue;}
+      |                                    ^~
+g++ -std=c++20 -O2 -Wall -Wextra -pedantic -fPIC -shared -I/usr/include/python3.12 -I/usr/include/python3.12 conector_python.cpp JocarsaBBDD.cpp -o jocarsabbdd.cpython-312-x86_64-linux-gnu.so
+conector_python.cpp:119:117: warning: missing initializer for member ‘PyModuleDef::m_slots’ [-Wmissing-field-initializers]
+  119 | ModuleDef_HEAD_INIT,"jocarsabbdd","Conector nativo Python para Jocarsa BBDD",-1,Metodos};
+      |                                                                                        ^
+
+conector_python.cpp:119:117: warning: missing initializer for member ‘PyModuleDef::m_traverse’ [-Wmissing-field-initializers]
+conector_python.cpp:119:117: warning: missing initializer for member ‘PyModuleDef::m_clear’ [-Wmissing-field-initializers]
+conector_python.cpp:119:117: warning: missing initializer for member ‘PyModuleDef::m_free’ [-Wmissing-field-initializers]
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/010-instalacion conector$ 

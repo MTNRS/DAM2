@@ -1,0 +1,9 @@
+Datetime: 2026-09-24T11:16:45.609Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/010-instalacion conector
+Command: make clean
+
+Result:
+make clean
+
+rm -f jocarsabbdd jocarsabbdd*.so
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/010-instalacion conector$ 

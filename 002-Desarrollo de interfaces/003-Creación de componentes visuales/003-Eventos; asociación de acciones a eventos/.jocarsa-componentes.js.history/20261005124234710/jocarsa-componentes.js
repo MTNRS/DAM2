@@ -1,0 +1,1 @@
+let entradas = document.querySelectoAll("input")

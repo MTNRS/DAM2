@@ -1,0 +1,121 @@
+<script>
+  // ==========================
+  // PROPIEDADES / CONSTANTES
+  // ==========================
+
+  console.log(Math.PI);        // 3.141592...
+  console.log(Math.E);         // 2.718281...
+  console.log(Math.SQRT2);     // raíz cuadrada de 2
+  console.log(Math.LN2);       // logaritmo natural de 2
+  console.log(Math.LN10);      // logaritmo natural de 10
+
+
+  // ==========================
+  // NÚMEROS ALEATORIOS
+  // ==========================
+
+  console.log(Math.random());  // entre 0 y 1
+
+  // Aleatorio entre 0 y 9
+  console.log(Math.floor(Math.random() * 10));
+
+  // Aleatorio entre 1 y 10
+  console.log(Math.floor(Math.random() * 10) + 1);
+
+
+  // ==========================
+  // REDONDEO
+  // ==========================
+
+  console.log(Math.round(1.3));  // 1
+  console.log(Math.round(1.7));  // 2
+
+  console.log(Math.floor(1.9));  // 1
+  console.log(Math.ceil(1.1));   // 2
+
+  console.log(Math.trunc(1.9));  // 1
+
+
+  // ==========================
+  // POTENCIAS Y RAÍCES
+  // ==========================
+
+  console.log(Math.pow(2, 3));   // 8
+  console.log(2 ** 3);           // 8
+
+  console.log(Math.sqrt(25));    // 5
+  console.log(Math.cbrt(27));    // 3
+
+
+  // ==========================
+  // VALOR ABSOLUTO
+  // ==========================
+
+  console.log(Math.abs(-10));    // 10
+  console.log(Math.abs(10));     // 10
+
+
+  // ==========================
+  // MÁXIMO Y MÍNIMO
+  // ==========================
+
+  console.log(Math.max(4, 8, 2, 10, 3)); // 10
+  console.log(Math.min(4, 8, 2, 10, 3)); // 2
+
+
+  // ==========================
+  // TRIGONOMETRÍA
+  // ==========================
+
+  console.log(Math.sin(1));
+  console.log(Math.cos(1));
+  console.log(Math.tan(1));
+
+  console.log(Math.asin(1));
+  console.log(Math.acos(1));
+  console.log(Math.atan(1));
+
+
+  // ==========================
+  // LOGARITMOS
+  // ==========================
+
+  console.log(Math.log(10));     // logaritmo natural
+  console.log(Math.log10(100));  // 2
+  console.log(Math.log2(8));     // 3
+
+
+  // ==========================
+  // EXPONENCIALES
+  // ==========================
+
+  console.log(Math.exp(1));      // e elevado a 1
+  console.log(Math.exp(2));      // e elevado a 2
+
+
+  // ==========================
+  // SIGNO
+  // ==========================
+
+  console.log(Math.sign(25));    // 1
+  console.log(Math.sign(-25));   // -1
+  console.log(Math.sign(0));     // 0
+
+
+  // ==========================
+  // EJEMPLOS PRÁCTICOS
+  // ==========================
+
+  // Tirar un dado
+  let dado = Math.floor(Math.random() * 6) + 1;
+  console.log("Dado:", dado);
+
+  // Número aleatorio entre 1 y 100
+  let numero = Math.floor(Math.random() * 100) + 1;
+  console.log("Número:", numero);
+
+  // Área de un círculo
+  let radio = 5;
+  let area = Math.PI * Math.pow(radio, 2);
+  console.log("Área:", area);
+</script>

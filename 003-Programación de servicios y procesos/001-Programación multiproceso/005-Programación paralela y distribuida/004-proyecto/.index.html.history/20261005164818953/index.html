@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div id="identidad"></div>
+
+  <h3>Participantes</h3>
+  <div id="participantes"></div>
+
+  <h3>Trabajos</h3>
+  <div id="trabajos"></div>
+
+  <h3>Resultados</h3>
+  <div id="resultados"></div>
+
+  <button id="maestro">Soy maestro</button>
+  <button id="esclavo">Soy esclavo</button>
+
+  <br><br>
+
+  <button id="crearTrabajo">
+    Crear trabajo ficticio
+  </button>
+
+  <script>
+
+    let identidad = null;
+
+    // Identificador único de esta pestaña
+    let hash = crypto.randomUUID();
+
+    let botonmaestro =
+      document.querySelector("#maestro");
+
+    let botonesclavo =
+      document.querySelector("#esclavo");
+
+    let botonCrearTrabajo =
+      document.querySelector("#crearTrabajo");
+
+    let contenedor_identidad =
+      document.querySelector("#identidad");
+
+    let contenedor_participantes =
+      document.querySelector("#participantes");
+
+    let contenedor_trabajos =
+      document.querySelector("#trabajos");
+
+    let contenedor_resultados =
+      document.querySelector("#resultados");
+
+    let temporizador = null;
+
+
+    // ============================================
+    // MAESTRO
+    // ============================================
+
+    botonmaestro.onclick = function(){
+
+      identidad = "maestro";
+
+      contenedor_identidad.textContent =
+        "🟢 Maestro - " + hash;
+
+      iniciarLatido();
+
+    };
+
+
+    // ============================================
+    // ESCLAVO
+    // ============================================
+
+    botonesclavo.onclick = function(){
+
+      identidad = "esclavo";
+
+      contenedor_identidad.textContent =
+        "🔵 Esclavo - " + hash;
+
+      iniciarLatido();
+
+    };
+
+
+    // ============================================
+    // CREAR TRABAJO FICTICIO
+    // ============================================
+
+    botonCrearTrabajo.onclick = async function(){
+
+      if(identidad != "maestro"){
+
+        alert("Solo el maestro puede crear trabajos");
+
+        return;
+
+      }
+
+
+      // Creamos un bloque ficticio de información
+
+      let numeros = [];
+
+      for(let i = 0; i < 100; i++){
+
+        numeros.push(
+          Math.floor(Math.random() * 100)
+        );
+
+      }
+
+
+      await fetch("servidor.php", {
+
+        method: "POST",
+
+        headers:{
+          "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+
+          accion:"crear_trabajo",
+
+          maestro:hash,
+
+          datos:numeros
+
+        })
+
+      });
+
+    };
+
+
+    // ============================================
+    // INICIAR LATIDO
+    // ============================================
+
+    function iniciarLatido(){
+
+      if(temporizador){
+
+        clearTimeout(temporizador);
+
+      }
+
+      latido();
+
+    }
+
+
+    // ============================================
+    // CICLO PRINCIPAL
+    // ============================================
+
+    async function latido(){
+
+      try{
+
+
+        // ========================================
+        // ESCLAVO
+        // ========================================
+
+        if(identidad == "esclavo"){
+
+          // Avisamos de que seguimos vivos
+
+          await fetch("servidor.php", {
+
+            method:"POST",
+
+            headers:{
+              "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+              accion:"latido",
+
+              hash:hash
+
+            })
+
+          });
+
+
+          // Pedimos trabajo
+
+          let respuesta =
+            await fetch(
+              "servidor.php?accion=pedir_trabajo&hash="
+              + hash
+            );
+
+
+          let trabajo =
+            await respuesta.json();
+
+
+          // Si existe trabajo
+          if(trabajo){
+
+            console.log(
+              "Trabajo recibido:",
+              trabajo
+            );
+
+
+            // ====================================
+            // REALIZAMOS EL CÁLCULO
+            // ====================================
+
+            let resultado = calcular(
+              trabajo.datos
+            );
+
+
+            console.log(
+              "Resultado:",
+              resultado
+            );
+
+
+            // ====================================
+            // DEVOLVEMOS EL RESULTADO
+            // ====================================
+
+            await fetch("servidor.php", {
+
+              method:"POST",
+
+              headers:{
+                "Content-Type":"application/json"
+              },
+
+              body:JSON.stringify({
+
+                accion:"resultado",
+
+                hash:hash,
+
+                trabajo:trabajo.id,
+
+                resultado:resultado
+
+              })
+
+            });
+
+          }
+
+        }
+
+
+        // ========================================
+        // MAESTRO
+        // ========================================
+
+        if(identidad == "maestro"){
+
+          // Pedimos participantes
+
+          let respuestaParticipantes =
+            await fetch(
+              "servidor.php?accion=participantes"
+            );
+
+          let participantes =
+            await respuestaParticipantes.json();
+
+          mostrarParticipantes(
+            participantes
+          );
+
+
+          // Pedimos trabajos
+
+          let respuestaTrabajos =
+            await fetch(
+              "servidor.php?accion=trabajos"
+            );
+
+          let trabajos =
+            await respuestaTrabajos.json();
+
+          mostrarTrabajos(
+            trabajos
+          );
+
+
+          // Pedimos resultados
+
+          let respuestaResultados =
+            await fetch(
+              "servidor.php?accion=resultados"
+            );
+
+          let resultados =
+            await respuestaResultados.json();
+
+          mostrarResultados(
+            resultados
+          );
+
+        }
+
+
+      }catch(error){
+
+        console.error(
+          "Error:",
+          error
+        );
+
+      }
+
+
+      temporizador =
+        setTimeout(
+          latido,
+          1000
+        );
+
+    }
+
+
+    // ============================================
+    // CÁLCULO DEL ESCLAVO
+    // ============================================
+
+    function calcular(datos){
+
+      let suma = 0;
+
+      for(let i = 0; i < datos.length; i++){
+
+        suma += datos[i];
+
+      }
+
+
+      return {
+
+        suma:suma,
+
+        cantidad:datos.length,
+
+        media:suma / datos.length,
+
+        minimo:Math.min(...datos),
+
+        maximo:Math.max(...datos)
+
+      };
+
+    }
+
+
+    // ============================================
+    // MOSTRAR PARTICIPANTES
+    // ============================================
+
+    function mostrarParticipantes(datos){
+
+      contenedor_participantes.innerHTML = "";
+
+      datos.forEach(function(participante){
+
+        let elemento =
+          document.createElement("div");
+
+        elemento.textContent =
+          "🔵 " +
+          participante.hash;
+
+        contenedor_participantes
+          .appendChild(elemento);
+
+      });
+
+    }
+
+
+    // ============================================
+    // MOSTRAR TRABAJOS
+    // ============================================
+
+    function mostrarTrabajos(datos){
+
+      contenedor_trabajos.innerHTML = "";
+
+      datos.forEach(function(trabajo){
+
+        let elemento =
+          document.createElement("div");
+
+        elemento.textContent =
+          trabajo.id +
+          " → " +
+          trabajo.estado +
+          (
+            trabajo.esclavo
+            ? " → " + trabajo.esclavo
+            : ""
+          );
+
+        contenedor_trabajos
+          .appendChild(elemento);
+
+      });
+
+    }
+
+
+    // ============================================
+    // MOSTRAR RESULTADOS
+    // ============================================
+
+    function mostrarResultados(datos){
+
+      contenedor_resultados.innerHTML = "";
+
+      datos.forEach(function(resultado){
+
+        let elemento =
+          document.createElement("div");
+
+        elemento.innerHTML = `
+          <strong>${resultado.trabajo}</strong>
+          calculado por
+          ${resultado.esclavo}
+          <br>
+
+          Suma:
+          ${resultado.resultado.suma}
+
+          -
+          Media:
+          ${resultado.resultado.media.toFixed(2)}
+
+          -
+          Min:
+          ${resultado.resultado.minimo}
+
+          -
+          Max:
+          ${resultado.resultado.maximo}
+
+          <hr>
+        `;
+
+        contenedor_resultados
+          .appendChild(elemento);
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>

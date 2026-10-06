@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Laberinto de luz con reflexiones</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#030303;
+}
+
+canvas{
+    display:block;
+    width:100%;
+    height:100%;
+    cursor:crosshair;
+}
+</style>
+</head>
+
+<body>
+
+<canvas></canvas>
+
+<script>
+
+// ============================================================
+// CANVAS
+// ============================================================
+
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
+
+let W;
+let H;
+
+const raton = {
+    x:400,
+    y:300
+};
+
+
+// ============================================================
+// CONFIGURACIÓN DE LA LUZ
+// ============================================================
+
+const NUM_RAYOS = 2500;
+
+// número máximo de reflexiones
+const MAX_REBOTES = 12;
+
+// distancia máxima de un rayo
+const MAX_DISTANCIA = 4000;
+
+// energía conservada después de cada rebote
+const REFLEXION = 0.82;
+
+// energía mínima antes de abandonar el rayo
+const INTENSIDAD_MINIMA = 0.01;
+
+
+// ============================================================
+// REDIMENSIONAR
+// ============================================================
+
+function redimensionar(){
+
+    const dpr = window.devicePixelRatio || 1;
+
+    W = window.innerWidth;
+    H = window.innerHeight;
+
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+
+    canvas.style.width = W + "px";
+    canvas.style.height = H + "px";
+
+    ctx.setTransform(
+        dpr,0,
+        0,dpr,
+        0,0
+    );
+}
+
+window.addEventListener(
+    "resize",
+    redimensionar
+);
+
+redimensionar();
+
+
+// ============================================================
+// RATÓN
+// ============================================================
+
+canvas.addEventListener(
+    "mousemove",
+    function(e){
+
+        const rect =
+            canvas.getBoundingClientRect();
+
+        raton.x =
+            e.clientX - rect.left;
+
+        raton.y =
+            e.clientY - rect.top;
+    }
+);
+
+
+// ============================================================
+// MUROS
+// ============================================================
+
+let muros = [];
+
+function muro(x1,y1,x2,y2){
+
+    muros.push({
+        x1:x1,
+        y1:y1,
+        x2:x2,
+        y2:y2
+    });
+
+}
+
+
+// ============================================================
+// CREAR LABERINTO
+// ============================================================
+
+function crearLaberinto(){
+
+    muros = [];
+
+    const margen = 20;
+
+    // borde exterior
+
+    muro(
+        margen,
+        margen,
+        W-margen,
+        margen
+    );
+
+    muro(
+        W-margen,
+        margen,
+        W-margen,
+        H-margen
+    );
+
+    muro(
+        W-margen,
+        H-margen,
+        margen,
+        H-margen
+    );
+
+    muro(
+        margen,
+        H-margen,
+        margen,
+        margen
+    );
+
+
+    // ========================================================
+    // LABERINTO ESCALADO AL TAMAÑO DE PANTALLA
+    // ========================================================
+
+    const columnas = 8;
+    const filas = 6;
+
+    const cw =
+        (W-margen*2) /
+        columnas;
+
+    const ch =
+        (H-margen*2) /
+        filas;
+
+
+    // VERTICALES
+
+    muro(
+        margen+cw,
+        margen,
+        margen+cw,
+        margen+ch*2
+    );
+
+    muro(
+        margen+cw,
+        margen+ch*3,
+        margen+cw,
+        margen+ch*5
+    );
+
+
+    muro(
+        margen+cw*2,
+        margen+ch,
+        margen+cw*2,
+        margen+ch*4
+    );
+
+
+    muro(
+        margen+cw*3,
+        margen,
+        margen+cw*3,
+        margen+ch*2
+    );
+
+    muro(
+        margen+cw*3,
+        margen+ch*3,
+        margen+cw*3,
+        margen+ch*6
+    );
+
+
+    muro(
+        margen+cw*4,
+        margen+ch,
+        margen+cw*4,
+        margen+ch*4
+    );
+
+    muro(
+        margen+cw*4,
+        margen+ch*5,
+        margen+cw*4,
+        margen+ch*6
+    );
+
+
+    muro(
+        margen+cw*5,
+        margen,
+        margen+cw*5,
+        margen+ch*2
+    );
+
+    muro(
+        margen+cw*5,
+        margen+ch*3,
+        margen+cw*5,
+        margen+ch*5
+    );
+
+
+    muro(
+        margen+cw*6,
+        margen+ch,
+        margen+cw*6,
+        margen+ch*4
+    );
+
+    muro(
+        margen+cw*6,
+        margen+ch*5,
+        margen+cw*6,
+        margen+ch*6
+    );
+
+
+    muro(
+        margen+cw*7,
+        margen,
+        margen+cw*7,
+        margen+ch*2
+    );
+
+    muro(
+        margen+cw*7,
+        margen+ch*3,
+        margen+cw*7,
+        margen+ch*5
+    );
+
+
+    // HORIZONTALES
+
+    muro(
+        margen,
+        margen+ch,
+        margen+cw,
+        margen+ch
+    );
+
+    muro(
+        margen+cw*2,
+        margen+ch,
+        margen+cw*3,
+        margen+ch
+    );
+
+    muro(
+        margen+cw*4,
+        margen+ch,
+        margen+cw*5,
+        margen+ch
+    );
+
+    muro(
+        margen+cw*6,
+        margen+ch,
+        margen+cw*8,
+        margen+ch
+    );
+
+
+    muro(
+        margen+cw,
+        margen+ch*2,
+        margen+cw*2,
+        margen+ch*2
+    );
+
+    muro(
+        margen+cw*3,
+        margen+ch*2,
+        margen+cw*4,
+        margen+ch*2
+    );
+
+    muro(
+        margen+cw*5,
+        margen+ch*2,
+        margen+cw*7,
+        margen+ch*2
+    );
+
+
+    muro(
+        margen,
+        margen+ch*3,
+        margen+cw,
+        margen+ch*3
+    );
+
+    muro(
+        margen+cw*2,
+        margen+ch*3,
+        margen+cw*3,
+        margen+ch*3
+    );
+
+    muro(
+        margen+cw*4,
+        margen+ch*3,
+        margen+cw*6,
+        margen+ch*3
+    );
+
+    muro(
+        margen+cw*7,
+        margen+ch*3,
+        margen+cw*8,
+        margen+ch*3
+    );
+
+
+    muro(
+        margen+cw,
+        margen+ch*4,
+        margen+cw*2,
+        margen+ch*4
+    );
+
+    muro(
+        margen+cw*3,
+        margen+ch*4,
+        margen+cw*5,
+        margen+ch*4
+    );
+
+    muro(
+        margen+cw*6,
+        margen+ch*4,
+        margen+cw*7,
+        margen+ch*4
+    );
+
+
+    muro(
+        margen,
+        margen+ch*5,
+        margen+cw,
+        margen+ch*5
+    );
+
+    muro(
+        margen+cw*2,
+        margen+ch*5,
+        margen+cw*4,
+        margen+ch*5
+    );
+
+    muro(
+        margen+cw*5,
+        margen+ch*5,
+        margen+cw*6,
+        margen+ch*5
+    );
+
+    muro(
+        margen+cw*7,
+        margen+ch*5,
+        margen+cw*8,
+        margen+ch*5
+    );
+}
+
+crearLaberinto();
+
+window.addEventListener(
+    "resize",
+    crearLaberinto
+);
+
+
+// ============================================================
+// INTERSECCIÓN RAYO / SEGMENTO
+// ============================================================
+
+function interseccionRayoSegmento(
+    px,
+    py,
+    dx,
+    dy,
+    m
+){
+
+    const sx =
+        m.x2 - m.x1;
+
+    const sy =
+        m.y2 - m.y1;
+
+    const denominador =
+        dx*sy -
+        dy*sx;
+
+    if(
+        Math.abs(denominador)
+        < 0.000001
+    ){
+        return null;
+    }
+
+
+    const qpx =
+        m.x1 - px;
+
+    const qpy =
+        m.y1 - py;
+
+
+    const t =
+        (
+            qpx*sy -
+            qpy*sx
+        )
+        /
+        denominador;
+
+
+    const u =
+        (
+            qpx*dy -
+            qpy*dx
+        )
+        /
+        denominador;
+
+
+    if(
+        t > 0.001 &&
+        u >= 0 &&
+        u <= 1
+    ){
+
+        return {
+
+            x:
+                px +
+                dx*t,
+
+            y:
+                py +
+                dy*t,
+
+            distancia:t,
+
+            muro:m
+
+        };
+    }
+
+    return null;
+}
+
+
+// ============================================================
+// BUSCAR EL PRIMER MURO
+// ============================================================
+
+function primerImpacto(
+    x,
+    y,
+    dx,
+    dy
+){
+
+    let mejor = null;
+
+    for(const m of muros){
+
+        const impacto =
+            interseccionRayoSegmento(
+                x,
+                y,
+                dx,
+                dy,
+                m
+            );
+
+        if(
+            impacto &&
+            (
+                mejor === null ||
+                impacto.distancia
+                <
+                mejor.distancia
+            )
+        ){
+            mejor = impacto;
+        }
+    }
+
+    return mejor;
+}
+
+
+// ============================================================
+// REFLEXIÓN
+// ============================================================
+
+function reflejar(
+    dx,
+    dy,
+    m
+){
+
+    let wx =
+        m.x2 -
+        m.x1;
+
+    let wy =
+        m.y2 -
+        m.y1;
+
+
+    const longitud =
+        Math.sqrt(
+            wx*wx +
+            wy*wy
+        );
+
+
+    wx /= longitud;
+    wy /= longitud;
+
+
+    // vector normal
+
+    let nx = -wy;
+    let ny = wx;
+
+
+    // producto escalar
+
+    const dot =
+        dx*nx +
+        dy*ny;
+
+
+    // fórmula de reflexión
+    //
+    // R = D - 2(D·N)N
+
+    let rx =
+        dx -
+        2*dot*nx;
+
+    let ry =
+        dy -
+        2*dot*ny;
+
+
+    const l =
+        Math.sqrt(
+            rx*rx +
+            ry*ry
+        );
+
+
+    return {
+
+        x:rx/l,
+        y:ry/l
+
+    };
+}
+
+
+// ============================================================
+// PINTAR UN SEGMENTO DE LUZ
+// ============================================================
+
+function pintarSegmento(
+    x1,
+    y1,
+    x2,
+    y2,
+    intensidad
+){
+
+    // resplandor exterior
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x1,
+        y1
+    );
+
+    ctx.lineTo(
+        x2,
+        y2
+    );
+
+    ctx.strokeStyle =
+        `rgba(
+            255,
+            180,
+            50,
+            ${0.025 * intensidad}
+        )`;
+
+    ctx.lineWidth =
+        5 * intensidad;
+
+    ctx.stroke();
+
+
+    // rayo principal
+
+    ctx.beginPath();
+
+    ctx.moveTo(
+        x1,
+        y1
+    );
+
+    ctx.lineTo(
+        x2,
+        y2
+    );
+
+    ctx.strokeStyle =
+        `rgba(
+            255,
+            235,
+            160,
+            ${0.13 * intensidad}
+        )`;
+
+    ctx.lineWidth =
+        0.7 +
+        intensidad*1.2;
+
+    ctx.stroke();
+
+}
+
+
+// ============================================================
+// LANZAR RAYO
+// ============================================================
+
+function lanzarRayo(
+    angulo
+){
+
+    let x =
+        raton.x;
+
+    let y =
+        raton.y;
+
+
+    let dx =
+        Math.cos(
+            angulo
+        );
+
+    let dy =
+        Math.sin(
+            angulo
+        );
+
+
+    let intensidad = 1;
+
+
+    for(
+        let rebote=0;
+        rebote<=MAX_REBOTES;
+        rebote++
+    ){
+
+        const impacto =
+            primerImpacto(
+                x,
+                y,
+                dx,
+                dy
+            );
+
+
+        // ====================================================
+        // NO HAY IMPACTO
+        // ====================================================
+
+        if(!impacto){
+
+            pintarSegmento(
+
+                x,
+                y,
+
+                x +
+                dx*MAX_DISTANCIA,
+
+                y +
+                dy*MAX_DISTANCIA,
+
+                intensidad
+
+            );
+
+            break;
+        }
+
+
+        // ====================================================
+        // PINTAR HASTA LA PARED
+        // ====================================================
+
+        pintarSegmento(
+
+            x,
+            y,
+
+            impacto.x,
+            impacto.y,
+
+            intensidad
+
+        );
+
+
+        // ====================================================
+        // REFLEXIÓN
+        // ====================================================
+
+        const reflejo =
+            reflejar(
+                dx,
+                dy,
+                impacto.muro
+            );
+
+
+        dx =
+            reflejo.x;
+
+        dy =
+            reflejo.y;
+
+
+        // pequeño desplazamiento
+        // para evitar colisión inmediata
+        // con la misma pared
+
+        x =
+            impacto.x +
+            dx*0.2;
+
+        y =
+            impacto.y +
+            dy*0.2;
+
+
+        // ====================================================
+        // PÉRDIDA DE ENERGÍA
+        // ====================================================
+
+        intensidad *=
+            REFLEXION;
+
+
+        if(
+            intensidad <
+            INTENSIDAD_MINIMA
+        ){
+            break;
+        }
+
+    }
+
+}
+
+
+// ============================================================
+// DIBUJAR MUROS
+// ============================================================
+
+function dibujarMuros(){
+
+    ctx.lineCap =
+        "round";
+
+    ctx.lineJoin =
+        "round";
+
+
+    // ========================================================
+    // SOMBRA
+    // ========================================================
+
+    ctx.beginPath();
+
+    for(const m of muros){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+    ctx.strokeStyle =
+        "#000";
+
+    ctx.lineWidth =
+        12;
+
+    ctx.stroke();
+
+
+    // ========================================================
+    // CUERPO DE LA PARED
+    // ========================================================
+
+    ctx.beginPath();
+
+    for(const m of muros){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+    ctx.strokeStyle =
+        "#555";
+
+    ctx.lineWidth =
+        6;
+
+    ctx.stroke();
+
+
+    // ========================================================
+    // BORDE METÁLICO
+    // ========================================================
+
+    ctx.beginPath();
+
+    for(const m of muros){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+    ctx.strokeStyle =
+        "#aaa";
+
+    ctx.lineWidth =
+        2;
+
+    ctx.stroke();
+
+}
+
+
+// ============================================================
+// DIBUJAR FUENTE DE LUZ
+// ============================================================
+
+function dibujarFuente(){
+
+    const radio = 70;
+
+
+    const gradiente =
+        ctx.createRadialGradient(
+
+            raton.x,
+            raton.y,
+            0,
+
+            raton.x,
+            raton.y,
+            radio
+
+        );
+
+
+    gradiente.addColorStop(
+        0,
+        "rgba(255,255,255,1)"
+    );
+
+    gradiente.addColorStop(
+        0.08,
+        "rgba(255,250,210,1)"
+    );
+
+    gradiente.addColorStop(
+        0.25,
+        "rgba(255,220,100,0.7)"
+    );
+
+    gradiente.addColorStop(
+        0.6,
+        "rgba(255,160,30,0.15)"
+    );
+
+    gradiente.addColorStop(
+        1,
+        "rgba(255,120,0,0)"
+    );
+
+
+    ctx.beginPath();
+
+    ctx.arc(
+        raton.x,
+        raton.y,
+        radio,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fillStyle =
+        gradiente;
+
+    ctx.fill();
+
+
+    // núcleo
+
+    ctx.beginPath();
+
+    ctx.arc(
+        raton.x,
+        raton.y,
+        5,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fillStyle =
+        "#ffffff";
+
+    ctx.fill();
+
+}
+
+
+// ============================================================
+// LOOP PRINCIPAL
+// ============================================================
+
+function animar(){
+
+    // ========================================================
+    // FONDO
+    // ========================================================
+
+    ctx.clearRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    ctx.fillStyle =
+        "#030303";
+
+    ctx.fillRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    // ========================================================
+    // LUZ
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "lighter";
+
+
+    for(
+        let i=0;
+        i<NUM_RAYOS;
+        i++
+    ){
+
+        const angulo =
+            (
+                i /
+                NUM_RAYOS
+            )
+            *
+            Math.PI*2;
+
+
+        lanzarRayo(
+            angulo
+        );
+
+    }
+
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    // ========================================================
+    // LABERINTO
+    // ========================================================
+
+    dibujarMuros();
+
+
+    // ========================================================
+    // FUENTE
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "lighter";
+
+    dibujarFuente();
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    requestAnimationFrame(
+        animar
+    );
+
+}
+
+
+// ============================================================
+// ARRANCAR
+// ============================================================
+
+animar();
+
+</script>
+
+</body>
+</html>

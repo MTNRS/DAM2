@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="nombre" id="nombre">
+      <input type="submit">
+    </form>
+    <script>
+      let cuerpo = document.querySelector("body");
+      cuerpo.onkeydown = function(e){
+        console.log("Has pulsado una tecla")
+        console.log(e)
+      }
+    </script>
+  </body>
+</html>

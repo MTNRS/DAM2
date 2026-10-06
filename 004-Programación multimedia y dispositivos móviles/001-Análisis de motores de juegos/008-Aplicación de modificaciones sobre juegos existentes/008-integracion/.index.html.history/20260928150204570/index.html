@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="jocarsa-face3d.css">
+
+    <style>
+        body{
+            margin:0;
+            background:#111;
+        }
+
+        #mi-avatar{
+            width:650px;
+            height:650px;
+            margin:auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="mi-avatar"></div>
+
+    <script type="module">
+        import JocarsaFace3D from "./jocarsa-face3d.js";
+
+        const avatar = new JocarsaFace3D("#mi-avatar");
+
+        avatar.iniciar();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+Datetime: 2026-09-24T10:40:59.636Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos
+Command: clear
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos$ 

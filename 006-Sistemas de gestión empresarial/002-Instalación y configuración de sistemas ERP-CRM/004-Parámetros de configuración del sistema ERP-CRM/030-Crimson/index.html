@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Crimson ERP</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="stylesheet" href="nucleo/estilo/general.css?v=030">
+  </head>
+  <body>
+    <div id="crud" data-include="nucleo/componentes/crud.html?v=030"></div>
+
+    <header data-include="nucleo/componentes/cabecera.html?v=030"></header>
+
+    <section>
+      <nav data-include="nucleo/componentes/modulos.html?v=030" id="modulos"></nav>
+      <nav data-include="nucleo/componentes/menu.html?v=030" id="menu"></nav>
+      <main id="aplicacion"></main>
+    </section>
+
+    <footer data-include="nucleo/componentes/piedepagina.html?v=030"></footer>
+
+    <script>
+      fetch("api/api.php?bloque=estado",{cache:"no-store"})
+      .then(function(retorno){return retorno.json()})
+      .then(function(datos){
+        if(!datos.instalado){ window.location.href="instalacion/instalar.php"; return; }
+        return fetch("api/auth.php?action=status",{cache:"no-store"}).then(r=>r.json()).then(auth=>{
+          if(!auth.authenticated){window.location.href="login.php";return;}
+          window.CRIMSON_USER=auth.user;
+          let script=document.createElement("script");script.src="nucleo/js/incluir.js?v=030";document.body.appendChild(script);
+        });
+      })
+      .catch(function(error){
+        console.log("Se ha producido un error:");
+        console.log(error);
+      });
+    </script>
+  </body>
+</html>

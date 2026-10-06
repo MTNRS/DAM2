@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script defer>
+      let formulario = document.querySelector("form")
+      let campos = let campos = [
+        {
+          nombre: "nombre",
+          tipo: "text"
+        },
+        {
+          nombre: "edad",
+          tipo: "number"
+        },
+        {
+          nombre: "email",
+          tipo: "email"
+        },
+        {
+          nombre: "password",
+          tipo: "password"
+        },
+        {
+          nombre: "fecha_nacimiento",
+          tipo: "date"
+        },
+        {
+          nombre: "hora",
+          tipo: "time"
+        },
+        {
+          nombre: "telefono",
+          tipo: "tel"
+        },
+        {
+          nombre: "web",
+          tipo: "url"
+        },
+        {
+          nombre: "activo",
+          tipo: "checkbox"
+        },
+        {
+          nombre: "color",
+          tipo: "color"
+        }
+      ];
+      let formulario = document.querySelector("form")
+			campos.forEach(function(campo){
+      	let entrada = document.createElement("input")
+        entrada.setAttribute("type",campo.tipo)
+        entrada.setAttribute("name",campo.nombre)
+        formulario.appendChild(entrada)
+      })
+	
+    </script>
+    <form>
+      
+    </form>
+  </body>
+</html>

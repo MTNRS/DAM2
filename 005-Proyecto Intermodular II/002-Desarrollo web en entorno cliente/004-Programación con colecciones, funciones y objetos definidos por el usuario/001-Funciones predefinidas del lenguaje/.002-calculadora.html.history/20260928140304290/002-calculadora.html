@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ddd;
+        }
+
+        .calculadora {
+            width: 260px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 15px;
+        }
+
+        #pantalla {
+            width: 100%;
+            height: 60px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            font-size: 28px;
+            text-align: right;
+            padding: 10px;
+            background: #cfe3c1;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .teclado {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        button {
+            height: 55px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ccc;
+        }
+
+        .operador {
+            background: orange;
+        }
+
+        .igual {
+            background: #4caf50;
+            color: white;
+        }
+
+        .borrar {
+            background: #e74c3c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="calculadora">
+
+    <input type="text" id="pantalla" readonly>
+
+    <div class="teclado">
+
+        <button class="borrar" onclick="borrar()">C</button>
+        <button onclick="escribir('(')">(</button>
+        <button onclick="escribir(')')">)</button>
+        <button class="operador" onclick="escribir('/')">÷</button>
+
+        <button onclick="escribir('7')">7</button>
+        <button onclick="escribir('8')">8</button>
+        <button onclick="escribir('9')">9</button>
+        <button class="operador" onclick="escribir('*')">×</button>
+
+        <button onclick="escribir('4')">4</button>
+        <button onclick="escribir('5')">5</button>
+        <button onclick="escribir('6')">6</button>
+        <button class="operador" onclick="escribir('-')">−</button>
+
+        <button onclick="escribir('1')">1</button>
+        <button onclick="escribir('2')">2</button>
+        <button onclick="escribir('3')">3</button>
+        <button class="operador" onclick="escribir('+')">+</button>
+
+        <button onclick="escribir('0')">0</button>
+        <button onclick="escribir('.')">.</button>
+        <button onclick="retroceder()">⌫</button>
+        <button class="igual" onclick="calcular()">=</button>
+
+    </div>
+
+</div>
+
+<script>
+
+    let pantalla = document.querySelector("#pantalla");
+
+    function escribir(valor) {
+        pantalla.value += valor;
+    }
+
+    function borrar() {
+        pantalla.value = "";
+    }
+
+    function retroceder() {
+        pantalla.value = pantalla.value.slice(0, -1);
+    }
+
+    function calcular() {
+        try {
+            pantalla.value = eval(pantalla.value);
+        } catch {
+            pantalla.value = "Error";
+        }
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+Datetime: 2026-09-24T11:31:35.860Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/004-Ejecución de sentencias de descripción de datos/012-DDL
+Command: make
+
+Result:
+make
+g++ -std=c++20 -O2 -Wall -Wextra -pedantic -fPIC main.cpp JocarsaBBDD.cpp -o jocarsabbdd
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:35:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   35 |    if(a=="SALIR"||a=="salir")break;if(a=="AYUDA"||a=="ayuda"){ayuda();continue;}
+      |    ^~
+main.cpp:35:36: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   35 |    if(a=="SALIR"||a=="salir")break;if(a=="AYUDA"||a=="ayuda"){ayuda();continue;}
+      |                                    ^~
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+JocarsaBBDD.cpp:85:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   85 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+JocarsaBBDD.cpp:85:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   85 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+JocarsaBBDD.cpp:91:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   91 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+JocarsaBBDD.cpp:91:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   91 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+g++ -std=c++20 -O2 -Wall -Wextra -pedantic -fPIC -shared -I/usr/include/python3.12 -I/usr/include/python3.12 conector_python.cpp JocarsaBBDD.cpp -o jocarsabbdd.cpython-312-x86_64-linux-gnu.so
+conector_python.cpp:135:117: warning: missing initializer for member ‘PyModuleDef::m_slots’ [-Wmissing-field-initializers]
+  135 | duleDef_HEAD_INIT,"jocarsabbdd","Conector nativo Python para Jocarsa BBDD",-1,Metodos};
+      |                                                                                      ^
+
+conector_python.cpp:135:117: warning: missing initializer for member ‘PyModuleDef::m_traverse’ [-Wmissing-field-initializers]
+conector_python.cpp:135:117: warning: missing initializer for member ‘PyModuleDef::m_clear’ [-Wmissing-field-initializers]
+conector_python.cpp:135:117: warning: missing initializer for member ‘PyModuleDef::m_free’ [-Wmissing-field-initializers]
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+JocarsaBBDD.cpp:85:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   85 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+JocarsaBBDD.cpp:85:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   85 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+JocarsaBBDD.cpp:91:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   91 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+JocarsaBBDD.cpp:91:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   91 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de cone
+ctores/004-Ejecución de sentencias de descripción de datos/012-DDL$ 

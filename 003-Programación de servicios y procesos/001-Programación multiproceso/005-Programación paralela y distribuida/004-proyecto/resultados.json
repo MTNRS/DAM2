@@ -1,0 +1,26 @@
+[
+    {
+        "trabajo": "trabajo_6ac3b9c6e4d821.26513396",
+        "esclavo": "72f8874b-d445-4e4a-951d-3ed7201317da",
+        "resultado": {
+            "suma": 5032,
+            "cantidad": 100,
+            "media": 50.32,
+            "minimo": 1,
+            "maximo": 99
+        },
+        "fecha": 1791211975
+    },
+    {
+        "trabajo": "trabajo_6ac3b9d2a8a879.40234710",
+        "esclavo": "72f8874b-d445-4e4a-951d-3ed7201317da",
+        "resultado": {
+            "suma": 4435,
+            "cantidad": 100,
+            "media": 44.35,
+            "minimo": 0,
+            "maximo": 97
+        },
+        "fecha": 1791211987
+    }
+]

@@ -1,0 +1,1438 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Path Tracer 2D Monte Carlo</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#020202;
+}
+
+canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    cursor:crosshair;
+}
+
+#info{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:10;
+
+    color:white;
+    background:rgba(0,0,0,0.65);
+
+    padding:10px 14px;
+    border-radius:8px;
+
+    font-family:monospace;
+    font-size:12px;
+
+    pointer-events:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<div id="info">
+    Path Tracer 2D<br>
+    <span id="muestras">0 muestras</span>
+</div>
+
+<script>
+
+// ============================================================
+// CANVAS PRINCIPAL
+// ============================================================
+
+const canvas =
+    document.querySelector("#canvas");
+
+const ctx =
+    canvas.getContext("2d");
+
+
+// ============================================================
+// CANVAS DE ACUMULACIÓN
+// ============================================================
+
+const acumulacion =
+    document.createElement("canvas");
+
+const actx =
+    acumulacion.getContext("2d");
+
+
+// ============================================================
+// VARIABLES
+// ============================================================
+
+let W;
+let H;
+
+let muestras = 0;
+
+
+// ============================================================
+// RATÓN / FUENTE DE LUZ
+// ============================================================
+
+const raton = {
+
+    x:window.innerWidth/2,
+    y:window.innerHeight/2
+
+};
+
+
+// ============================================================
+// CONFIGURACIÓN PATH TRACER
+// ============================================================
+
+// rayos nuevos calculados en cada frame
+const RAYOS_POR_FRAME = 500;
+
+// rebotes máximos
+const MAX_REBOTES = 12;
+
+// distancia máxima
+const MAX_DISTANCIA = 5000;
+
+// reflectancia de paredes
+const REFLECTANCIA = 0.58;
+
+// probabilidad de reflexión difusa
+const PROB_DIFUSA = 0.88;
+
+// probabilidad especular
+const PROB_ESPECULAR = 0.12;
+
+// rugosidad de reflexión especular
+const RUGOSIDAD = 0.12;
+
+// intensidad mínima
+const INTENSIDAD_MINIMA = 0.005;
+
+// intensidad visual de cada muestra
+const ALPHA_RAYO = 0.025;
+
+
+// ============================================================
+// REDIMENSIONAR
+// ============================================================
+
+function redimensionar(){
+
+    const dpr =
+        window.devicePixelRatio || 1;
+
+    W =
+        window.innerWidth;
+
+    H =
+        window.innerHeight;
+
+
+    canvas.width =
+        W*dpr;
+
+    canvas.height =
+        H*dpr;
+
+    canvas.style.width =
+        W+"px";
+
+    canvas.style.height =
+        H+"px";
+
+
+    ctx.setTransform(
+        dpr,0,
+        0,dpr,
+        0,0
+    );
+
+
+    acumulacion.width =
+        W*dpr;
+
+    acumulacion.height =
+        H*dpr;
+
+
+    actx.setTransform(
+        dpr,0,
+        0,dpr,
+        0,0
+    );
+
+
+    crearLaberinto();
+
+    reiniciarAcumulacion();
+
+}
+
+
+// ============================================================
+// MUROS
+// ============================================================
+
+let muros = [];
+
+
+function muro(
+    x1,
+    y1,
+    x2,
+    y2
+){
+
+    muros.push({
+
+        x1:x1,
+        y1:y1,
+
+        x2:x2,
+        y2:y2
+
+    });
+
+}
+
+
+// ============================================================
+// LABERINTO ABIERTO
+// ============================================================
+
+function crearLaberinto(){
+
+    muros = [];
+
+    const m = 25;
+
+
+    // ========================================================
+    // BORDE EXTERIOR
+    // ========================================================
+
+    muro(
+        m,m,
+        W-m,m
+    );
+
+    muro(
+        W-m,m,
+        W-m,H-m
+    );
+
+    muro(
+        W-m,H-m,
+        m,H-m
+    );
+
+    muro(
+        m,H-m,
+        m,m
+    );
+
+
+    // ========================================================
+    // PAREDES INTERIORES
+    // ========================================================
+
+
+    // IZQUIERDA
+
+    muro(
+        W*0.25,
+        H*0.10,
+        W*0.25,
+        H*0.42
+    );
+
+    muro(
+        W*0.25,
+        H*0.65,
+        W*0.25,
+        H*0.90
+    );
+
+
+    // CENTRO
+
+    muro(
+        W*0.50,
+        H*0.22,
+        W*0.50,
+        H*0.68
+    );
+
+
+    // DERECHA
+
+    muro(
+        W*0.75,
+        H*0.10,
+        W*0.75,
+        H*0.36
+    );
+
+    muro(
+        W*0.75,
+        H*0.58,
+        W*0.75,
+        H*0.90
+    );
+
+
+    // HORIZONTALES
+
+    muro(
+        W*0.07,
+        H*0.28,
+        W*0.17,
+        H*0.28
+    );
+
+    muro(
+        W*0.34,
+        H*0.16,
+        W*0.64,
+        H*0.16
+    );
+
+    muro(
+        W*0.34,
+        H*0.52,
+        W*0.44,
+        H*0.52
+    );
+
+    muro(
+        W*0.58,
+        H*0.43,
+        W*0.90,
+        H*0.43
+    );
+
+    muro(
+        W*0.08,
+        H*0.78,
+        W*0.42,
+        H*0.78
+    );
+
+    muro(
+        W*0.59,
+        H*0.80,
+        W*0.90,
+        H*0.80
+    );
+
+}
+
+
+// ============================================================
+// INTERSECCIÓN RAYO / SEGMENTO
+// ============================================================
+
+function interseccionRayoSegmento(
+    px,
+    py,
+    dx,
+    dy,
+    m
+){
+
+    const sx =
+        m.x2-m.x1;
+
+    const sy =
+        m.y2-m.y1;
+
+
+    const denominador =
+        dx*sy -
+        dy*sx;
+
+
+    if(
+        Math.abs(denominador)
+        <
+        0.000001
+    ){
+        return null;
+    }
+
+
+    const qpx =
+        m.x1-px;
+
+    const qpy =
+        m.y1-py;
+
+
+    const t =
+        (
+            qpx*sy -
+            qpy*sx
+        )
+        /
+        denominador;
+
+
+    const u =
+        (
+            qpx*dy -
+            qpy*dx
+        )
+        /
+        denominador;
+
+
+    if(
+        t > 0.001 &&
+        u >= 0 &&
+        u <= 1
+    ){
+
+        return {
+
+            x:
+                px +
+                dx*t,
+
+            y:
+                py +
+                dy*t,
+
+            distancia:t,
+
+            muro:m
+
+        };
+
+    }
+
+
+    return null;
+
+}
+
+
+// ============================================================
+// BUSCAR IMPACTO MÁS CERCANO
+// ============================================================
+
+function primerImpacto(
+    x,
+    y,
+    dx,
+    dy
+){
+
+    let mejor = null;
+
+
+    for(const m of muros){
+
+        const impacto =
+            interseccionRayoSegmento(
+                x,
+                y,
+                dx,
+                dy,
+                m
+            );
+
+
+        if(
+            impacto &&
+            (
+                mejor === null ||
+                impacto.distancia
+                <
+                mejor.distancia
+            )
+        ){
+
+            mejor =
+                impacto;
+
+        }
+
+    }
+
+
+    return mejor;
+
+}
+
+
+// ============================================================
+// NORMAL
+// ============================================================
+
+function normalMuro(
+    m,
+    dx,
+    dy
+){
+
+    let wx =
+        m.x2-m.x1;
+
+    let wy =
+        m.y2-m.y1;
+
+
+    const longitud =
+        Math.hypot(
+            wx,
+            wy
+        );
+
+
+    wx /= longitud;
+    wy /= longitud;
+
+
+    let nx =
+        -wy;
+
+    let ny =
+        wx;
+
+
+    // orientar la normal hacia
+    // el lado incidente
+
+    if(
+        dx*nx +
+        dy*ny
+        >
+        0
+    ){
+
+        nx =
+            -nx;
+
+        ny =
+            -ny;
+
+    }
+
+
+    return {
+
+        x:nx,
+        y:ny
+
+    };
+
+}
+
+
+// ============================================================
+// REFLEXIÓN ESPECULAR
+// ============================================================
+
+function reflejar(
+    dx,
+    dy,
+    normal
+){
+
+    const dot =
+        dx*normal.x +
+        dy*normal.y;
+
+
+    let rx =
+        dx -
+        2*dot*normal.x;
+
+    let ry =
+        dy -
+        2*dot*normal.y;
+
+
+    const longitud =
+        Math.hypot(
+            rx,
+            ry
+        );
+
+
+    return {
+
+        x:rx/longitud,
+        y:ry/longitud
+
+    };
+
+}
+
+
+// ============================================================
+// DIRECCIÓN LAMBERTIANA
+// ============================================================
+
+function direccionLambertiana(
+    normal
+){
+
+    const anguloNormal =
+        Math.atan2(
+            normal.y,
+            normal.x
+        );
+
+
+    // ========================================================
+    // IMPORTANCE SAMPLING
+    // ========================================================
+
+    // distribución proporcional al coseno
+
+    const u =
+        Math.random();
+
+    const desviacion =
+        Math.asin(
+            2*u-1
+        );
+
+
+    const angulo =
+        anguloNormal +
+        desviacion;
+
+
+    return {
+
+        x:
+            Math.cos(angulo),
+
+        y:
+            Math.sin(angulo)
+
+    };
+
+}
+
+
+// ============================================================
+// REFLEXIÓN ESPECULAR RUGOSA
+// ============================================================
+
+function direccionEspecular(
+    dx,
+    dy,
+    normal
+){
+
+    const r =
+        reflejar(
+            dx,
+            dy,
+            normal
+        );
+
+
+    let angulo =
+        Math.atan2(
+            r.y,
+            r.x
+        );
+
+
+    angulo +=
+        (
+            Math.random()-0.5
+        )
+        *
+        RUGOSIDAD;
+
+
+    return {
+
+        x:
+            Math.cos(angulo),
+
+        y:
+            Math.sin(angulo)
+
+    };
+
+}
+
+
+// ============================================================
+// DIBUJAR UNA MUESTRA
+// ============================================================
+
+function pintarSegmento(
+    x1,
+    y1,
+    x2,
+    y2,
+    intensidad
+){
+
+    actx.beginPath();
+
+    actx.moveTo(
+        x1,
+        y1
+    );
+
+    actx.lineTo(
+        x2,
+        y2
+    );
+
+
+    // ========================================================
+    // INTENSIDAD
+    // ========================================================
+
+    const alpha =
+        Math.min(
+            0.15,
+            ALPHA_RAYO *
+            intensidad
+        );
+
+
+    actx.strokeStyle =
+        `rgba(
+            255,
+            210,
+            110,
+            ${alpha}
+        )`;
+
+
+    actx.lineWidth =
+        1.4;
+
+
+    actx.stroke();
+
+}
+
+
+// ============================================================
+// PATH TRACING
+// ============================================================
+
+function lanzarPath(
+    angulo
+){
+
+    let x =
+        raton.x;
+
+    let y =
+        raton.y;
+
+
+    let dx =
+        Math.cos(
+            angulo
+        );
+
+    let dy =
+        Math.sin(
+            angulo
+        );
+
+
+    let energia = 1;
+
+
+    // ========================================================
+    // CAMINO
+    // ========================================================
+
+    for(
+        let rebote=0;
+        rebote<MAX_REBOTES;
+        rebote++
+    ){
+
+        if(
+            energia <
+            INTENSIDAD_MINIMA
+        ){
+            break;
+        }
+
+
+        const impacto =
+            primerImpacto(
+                x,
+                y,
+                dx,
+                dy
+            );
+
+
+        if(!impacto){
+
+            break;
+
+        }
+
+
+        // ====================================================
+        // DISTANCIA
+        // ====================================================
+
+        const distancia =
+            impacto.distancia;
+
+
+        // ligera atenuación
+        // con la distancia
+
+        const atenuacion =
+            1 /
+            (
+                1 +
+                distancia*0.0008
+            );
+
+
+        // ====================================================
+        // PINTAR
+        // ====================================================
+
+        pintarSegmento(
+
+            x,
+            y,
+
+            impacto.x,
+            impacto.y,
+
+            energia *
+            atenuacion
+
+        );
+
+
+        energia *=
+            atenuacion;
+
+
+        // ====================================================
+        // NORMAL
+        // ====================================================
+
+        const normal =
+            normalMuro(
+                impacto.muro,
+                dx,
+                dy
+            );
+
+
+        // ====================================================
+        // ÁNGULO DE INCIDENCIA
+        // ====================================================
+
+        const cosIncidencia =
+            Math.max(
+                0,
+                -(
+                    dx*normal.x +
+                    dy*normal.y
+                )
+            );
+
+
+        // ====================================================
+        // FRESNEL SCHLICK
+        // ====================================================
+
+        const F0 =
+            PROB_ESPECULAR;
+
+
+        const fresnel =
+            F0 +
+            (
+                1-F0
+            )
+            *
+            Math.pow(
+                1-cosIncidencia,
+                5
+            );
+
+
+        // ====================================================
+        // MONTE CARLO
+        //
+        // No generamos dos rayos.
+        //
+        // Elegimos UNO.
+        // ====================================================
+
+        const random =
+            Math.random();
+
+
+        if(
+            random <
+            fresnel
+        ){
+
+            // ================================================
+            // ESPECULAR
+            // ================================================
+
+            const direccion =
+                direccionEspecular(
+                    dx,
+                    dy,
+                    normal
+                );
+
+
+            dx =
+                direccion.x;
+
+            dy =
+                direccion.y;
+
+        }
+        else{
+
+            // ================================================
+            // DIFUSA
+            // ================================================
+
+            const direccion =
+                direccionLambertiana(
+                    normal
+                );
+
+
+            dx =
+                direccion.x;
+
+            dy =
+                direccion.y;
+
+        }
+
+
+        // ====================================================
+        // REFLECTANCIA
+        // ====================================================
+
+        energia *=
+            REFLECTANCIA;
+
+
+        // ====================================================
+        // RUSSIAN ROULETTE
+        //
+        // A partir de varios rebotes dejamos que algunos
+        // caminos mueran aleatoriamente.
+        // ====================================================
+
+        if(
+            rebote >= 3
+        ){
+
+            const probabilidadSupervivencia =
+                Math.min(
+                    0.92,
+                    energia
+                );
+
+
+            if(
+                Math.random()
+                >
+                probabilidadSupervivencia
+            ){
+
+                break;
+
+            }
+
+
+            // compensamos estadísticamente
+
+            energia /=
+                probabilidadSupervivencia;
+
+        }
+
+
+        // ====================================================
+        // NUEVA POSICIÓN
+        // ====================================================
+
+        x =
+            impacto.x +
+            dx*0.5;
+
+        y =
+            impacto.y +
+            dy*0.5;
+
+    }
+
+}
+
+
+// ============================================================
+// CALCULAR NUEVAS MUESTRAS
+// ============================================================
+
+function calcularMuestras(){
+
+    actx.globalCompositeOperation =
+        "lighter";
+
+
+    for(
+        let i=0;
+        i<RAYOS_POR_FRAME;
+        i++
+    ){
+
+        // ====================================================
+        // MONTE CARLO
+        //
+        // dirección completamente aleatoria
+        // ====================================================
+
+        const angulo =
+            Math.random()
+            *
+            Math.PI*2;
+
+
+        lanzarPath(
+            angulo
+        );
+
+    }
+
+
+    muestras +=
+        RAYOS_POR_FRAME;
+
+
+    document.querySelector(
+        "#muestras"
+    ).textContent =
+        muestras.toLocaleString()
+        +
+        " muestras";
+
+}
+
+
+// ============================================================
+// REINICIAR ACUMULACIÓN
+// ============================================================
+
+function reiniciarAcumulacion(){
+
+    muestras = 0;
+
+
+    actx.globalCompositeOperation =
+        "source-over";
+
+
+    actx.clearRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+}
+
+
+// ============================================================
+// RATÓN
+// ============================================================
+
+canvas.addEventListener(
+    "mousemove",
+    function(e){
+
+        const rect =
+            canvas.getBoundingClientRect();
+
+
+        const nuevoX =
+            e.clientX -
+            rect.left;
+
+        const nuevoY =
+            e.clientY -
+            rect.top;
+
+
+        // sólo reiniciamos si realmente
+        // ha cambiado la posición
+
+        if(
+            Math.abs(
+                nuevoX-raton.x
+            )
+            >
+            1
+            ||
+            Math.abs(
+                nuevoY-raton.y
+            )
+            >
+            1
+        ){
+
+            raton.x =
+                nuevoX;
+
+            raton.y =
+                nuevoY;
+
+
+            reiniciarAcumulacion();
+
+        }
+
+    }
+);
+
+
+// ============================================================
+// DIBUJAR MUROS
+// ============================================================
+
+function dibujarMuros(){
+
+    ctx.lineCap =
+        "round";
+
+    ctx.lineJoin =
+        "round";
+
+
+    // ========================================================
+    // SOMBRA
+    // ========================================================
+
+    ctx.beginPath();
+
+
+    for(const m of muros){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+
+    ctx.strokeStyle =
+        "#000";
+
+    ctx.lineWidth =
+        14;
+
+    ctx.stroke();
+
+
+    // ========================================================
+    // CUERPO
+    // ========================================================
+
+    ctx.beginPath();
+
+
+    for(const m of muros){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+
+    ctx.strokeStyle =
+        "#444";
+
+    ctx.lineWidth =
+        7;
+
+    ctx.stroke();
+
+
+    // ========================================================
+    // SUPERFICIE
+    // ========================================================
+
+    ctx.beginPath();
+
+
+    for(const m of muros){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+
+    ctx.strokeStyle =
+        "#999";
+
+    ctx.lineWidth =
+        2;
+
+    ctx.stroke();
+
+}
+
+
+// ============================================================
+// FUENTE
+// ============================================================
+
+function dibujarFuente(){
+
+    const radio =
+        65;
+
+
+    const gradiente =
+        ctx.createRadialGradient(
+
+            raton.x,
+            raton.y,
+            0,
+
+            raton.x,
+            raton.y,
+            radio
+
+        );
+
+
+    gradiente.addColorStop(
+        0,
+        "rgba(255,255,255,1)"
+    );
+
+    gradiente.addColorStop(
+        0.08,
+        "rgba(255,250,200,1)"
+    );
+
+    gradiente.addColorStop(
+        0.25,
+        "rgba(255,210,80,0.6)"
+    );
+
+    gradiente.addColorStop(
+        0.60,
+        "rgba(255,130,20,0.12)"
+    );
+
+    gradiente.addColorStop(
+        1,
+        "rgba(255,100,0,0)"
+    );
+
+
+    ctx.fillStyle =
+        gradiente;
+
+
+    ctx.beginPath();
+
+    ctx.arc(
+        raton.x,
+        raton.y,
+        radio,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fill();
+
+
+    // núcleo
+
+    ctx.beginPath();
+
+    ctx.arc(
+        raton.x,
+        raton.y,
+        4,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fillStyle =
+        "white";
+
+    ctx.fill();
+
+}
+
+
+// ============================================================
+// RENDER
+// ============================================================
+
+function render(){
+
+    // ========================================================
+    // NUEVAS MUESTRAS MONTE CARLO
+    // ========================================================
+
+    calcularMuestras();
+
+
+    // ========================================================
+    // LIMPIAR PANTALLA
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    ctx.fillStyle =
+        "#020202";
+
+
+    ctx.fillRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    // ========================================================
+    // MOSTRAR ACUMULACIÓN
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "lighter";
+
+
+    ctx.drawImage(
+        acumulacion,
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    // ========================================================
+    // MUROS
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    dibujarMuros();
+
+
+    // ========================================================
+    // FUENTE
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "lighter";
+
+
+    dibujarFuente();
+
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    requestAnimationFrame(
+        render
+    );
+
+}
+
+
+// ============================================================
+// RESIZE
+// ============================================================
+
+window.addEventListener(
+    "resize",
+    redimensionar
+);
+
+
+// ============================================================
+// START
+// ============================================================
+
+redimensionar();
+
+render();
+
+</script>
+
+</body>
+</html>

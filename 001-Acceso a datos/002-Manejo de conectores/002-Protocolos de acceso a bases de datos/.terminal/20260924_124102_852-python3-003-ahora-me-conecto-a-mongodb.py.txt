@@ -1,0 +1,39 @@
+Datetime: 2026-09-24T10:41:02.852Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos
+Command: python3 003-ahora\ me\ conecto\ a\ mongodb.py
+
+Result:
+{'_id': ObjectId('672a614ad14b629d003966cf'), 'nombre': 'Juan', 'apellidos': 'Carratala Sanchis', 'correos': ['info@josevicentecarratala.com', 'info@jocarsa.com']}
+{'_id': ObjectId('672a6197d14b629d003966d0'), 'nombre': 'Juan', 'apellidos': 'Carratala Sanchis', 'correos': [{'tipo': 'personal', 'correo': 'info@josevicentecarratala.com'}, {'tipo': 'trabajo', 'correo': 'info@jocarsa.com'}]}
+{'_id': ObjectId('672a6513a191cc580c16628a'), 'nombre': 'Juan Carlos', 'apellidos': 'Jimenez Garcia'}
+{'_id': ObjectId('672a6590718be776e03e8cf8'), 'nombre': 'David Manuel', 'apellidos': 'Gonzalez Garcia', 'correos': ['david@gmail.com', 'david@hotmail.com']}
+{'_id': ObjectId('672a65f83e796af35ab0718e'), 'nombre': 'David Manuel', 'apellidos': 'Gonzalez Garcia', 'correos': [{'tipo': 'personal', 'correo': 'david@gmail.com'}, {'tipo': 'trabajo', 'correo': 'david@hotmail.com'}]}
+{'_id': ObjectId('672a6a9c9862c0b92d02dba1'), 'nombre': 'Juan Pérez', 'email': 'juan.perez@example.com', 'edad': 30}
+{'_id': ObjectId('672a6ad7c25ff35f0c0e9531'), 'nombre': 'Juan Pérez', 'email': ['juan.perez@example.com', 'correo2@empresa.com'], 'edad': 30}
+{'_id': ObjectId('672a6f717c1a659763027563'), 'nombre': 'Juan Pérez', 'email': 'juan.perez@example.com', 'edad': 30}
+{'_id': ObjectId('672a6f7f2e16ed4f5a0a1311'), 'nombre': 'Juan Pérez', 'email': 'juan.perez@example.com', 'edad': 30}
+{'_id': ObjectId('6ab4fe3e21e3ac0fda2e47ce'), 'nombre': 'Ana García', 'email': 'ana@correo.com', 'telefono': '600111222'}
+{'_id': ObjectId('6ab4fe3e21e3ac0fda2e47cf'), 'nombre': 'Juan López', 'email': 'juan@correo.com', 'telefono': '600333444'}
+{'_id': ObjectId('6ab4fe3e21e3ac0fda2e47d0'), 'nombre': 'María Pérez', 'email': 'maria@correo.com', 'telefono': '600555666'}
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos/003-ahora me conecto a mongodb.py", line 36, in <module>
+    cliente.close()
+    ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'close'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_002-Manejo de conectores_002-Protocolos de acceso a bases de datos_003-ahora me conecto a mongodb.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos/003-ahora me conecto a mongodb.py", line 36, in <module>
+    cliente.close()
+    ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'close'
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos$ 

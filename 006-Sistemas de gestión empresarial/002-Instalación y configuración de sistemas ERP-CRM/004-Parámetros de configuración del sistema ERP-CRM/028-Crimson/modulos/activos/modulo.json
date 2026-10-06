@@ -1,0 +1,11 @@
+{
+  "modulo": "activos",
+  "nombre": "Activos",
+  "tablas": [
+    "activos_fijos",
+    "amortizaciones",
+    "cuentas_contables",
+    "centros",
+    "departamentos"
+  ]
+}

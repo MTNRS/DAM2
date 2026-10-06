@@ -1,0 +1,68 @@
+Datetime: 2026-10-05T12:37:07.340Z
+Working directory: /var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases
+Command: whisper 002-utilizacion-de-formularios-desde-codigo-2026-10-05_13-44-07.webm   --model medium   --language Spanish   --device cuda   --word_timestamps True   --max_line_width 42   --max_line_count 2   --output_format srt   --output_dir subtitulos
+
+Result:
+whisper 002-utilizacion-de-formularios-desde-codigo-2026-10-05_13-44-07.webm \
+  --model medium \
+  --language Spanish \
+  --device cuda \
+  --word_timestamps True \
+  --max_line_width 42 \
+  --max_line_count 2 \
+  --output_format srt \
+  --output_dir subtitulos
+[00:00.000 --> 00:09.840]  Muy bien, entonces, en proyecto intermodular, donde estábamos el otro día, nos quedamos aquí,
+[00:10.160 --> 00:15.320]  nos quedamos con eventos precisamente, expresiones regulares,
+[00:18.480 --> 00:24.720]  utilización de formularios desde código, esto es precisamente de lo que estamos hablando hoy.
+[00:25.840 --> 00:32.360]  Insisto, recordamos que estamos en clientes, esto es tipos de eventos. Vale, entonces,
+[00:32.480 --> 00:44.860]  para empezar vamos a crear un pequeño formulario. Quiero crear un formulario en HTML puro,
+[00:44.910 --> 00:59.470]  sin CSS, lo más puro posible. OK, entonces, 001, crear formulario.html.
+[01:05.590 --> 01:13.610]  Vale, y básicamente, el hecho de que en un momento dado podamos saber que cualquier elemento de
+[01:13.610 --> 01:22.250]  formulario se puede recoger mediante JavaScript. Entonces, nuevo archivo, 002, recogemos mediante
+[01:22.300 --> 01:52.280]  JavaScript.html. Vale, y ahora con JavaScript para recoger todos los datos. Y para en un
+[01:52.280 --> 02:05.780]  Vale, lo ha cogido con formdata. Bien, y básicamente lo que hacemos en este caso es crear... ¿dónde
+[02:05.780 --> 02:18.640]  estás aquí? Aquí, con un formdata, y incluso voy a hacer un console.log datos para ver que,
+[02:18.640 --> 02:26.760]  si por lo que sea queremos crear un formulario a mano, podemos hacerlo mediante JavaScript. Vamos
+[02:26.760 --> 02:34.780]  a verlo. Tenemos un evento prevén default que lo que hace es evitar enviar el formulario. Vamos
+[02:34.780 --> 02:43.060]  a proyecto intermodular, vamos a cliente, vamos a interacción, vamos a formularios, vamos a recoger
+[02:43.060 --> 02:52.540]  y envío. Vale, y lo que tengo en la pantalla es esto. Lo que tengo en la pantalla es esto de aquí,
+[02:52.860 --> 03:00.180]  que lo que hace es recogernos todos los datos. Bien, una vez que tenemos esto, una vez que tenemos
+[03:00.180 --> 03:05.380]  esto en la pantalla, a continuación lo que vamos a hacer es lo contrario. Lo que vamos a hacer es
+[03:06.180 --> 03:12.960]  crear nosotros un formulario desde cero. Así que vengo por aquí, cero, cero, tres, y voy a crear
+[03:12.960 --> 03:32.480]  un formulario con JavaScript. Por tanto, HTML, voy a crear ahí dog type, HTML, HTML, HTML. Vale,
+[03:32.480 --> 03:41.100]  y voy a coger un modelo de datos. ¿Qué modelo de datos será ese? Pues el que queramos. Pero,
+[03:41.460 --> 03:51.060]  ¿qué ocurre si yo vengo aquí y creo un form? Y yo a continuación, por ejemplo en el script,
+[03:52.780 --> 04:00.720]  script, de momento voy a crearlo así, voy a decir defer y voy a decir lo siguiente.
+[04:00.720 --> 04:09.560]  Let formulario, let formulario es igual a document.querySelector form.
+[04:12.140 --> 04:18.760]  Pero, ¿qué es lo que va a ocurrir a continuación? Si yo lo que quiero es meter una serie de campos,
+[04:19.840 --> 04:25.780]  pues puedo hacerlo en JavaScript mediante createElement. Voy a decir, vamos a ver,
+[04:25.780 --> 04:37.740]  JavaScript, JavaScript, crear Json con, vamos a ver, con nombres de campo y tipos de datos,
+[04:37.820 --> 04:47.620]  por ejemplo. Así que, a continuación, mediante este formulario, vamos a verlo, de campo y tipos
+[04:47.620 --> 05:07.960]  de datos de momento, de momento compatibles con HTML input, para entendernos. Vale,
+[05:07.960 --> 05:19.340]  pues hago así y ahora digo campos es igual, let campos es igual a esto. ¿Y esto qué quiere decir?
+[05:20.340 --> 05:27.760]  Pues esto quiere decir, esto de hecho no me hace falta, vale, que yo a continuación puedo venir,
+[05:27.760 --> 05:42.480]  esto de hecho es un array y digo campos.forEach function campo y entonces para cada uno de los campos
+[05:42.480 --> 05:55.940]  hago lo siguiente, aquí arriba let formulario es igual a document.querySelector form y ahora let
+[05:55.940 --> 06:14.180]  miCampo, vamos a verlo, let entrada es igual a document.createElementInput.entrada.q
+[06:17.560 --> 06:37.180]  Entrada setAttribute type es igual a campo.tipo. Entrada setAttribute name es igual a campo.tipo.Nombre.
+[06:37.700 --> 06:53.040]  Así que, por último, formulario.appenchild.entrada. Si ahora vengo por aquí, creo un formulario con
+[06:53.040 --> 07:01.020]  javascript, hola, campos, campos en la línea 8, ¿qué ha pasado? Campos en la línea 8. Ah, que está
+[07:01.020 --> 07:08.980]  duplicado, vale. Let campos es igual a esto. Y ahora formulario hasAlreadyVindicled, formulario
+[07:09.520 --> 07:21.940]  form. Cuidado, es que lo tenía cogido dos veces. Recargamos, no puedo leer appenchild, ¿por qué?
+[07:21.940 --> 07:34.540]  Vamos a verlo. Formulario appenchild, forma. Voy a ponerlo después, creo que el difer no me está
+[07:34.540 --> 07:44.940]  haciendo mucho caso. Y ahí lo tenemos. Y entonces lo que ocurre es que acabamos de crear un formulario
+[07:46.140 --> 07:53.860]  a partir de Json. Y cuando digo a partir de Json, quiero decir que esto evidentemente
+[07:55.380 --> 08:01.260]  podría venir de la base de datos. Tengamos en cuenta que estamos en cliente. De la base de datos
+[08:01.260 --> 08:09.580]  vendría un Json con el esquema. Con el esquema de la base de datos pinto una librería y luego
+[08:09.580 --> 08:14.780]  más adelante, evidentemente, lo uniremos al proyecto que estamos haciendo dentro de
+[08:18.420 --> 08:24.660]  interfaces. Y lo que haremos es convertirlo en nuestra librería personalizada de elementos.
+[08:25.620 --> 08:37.220]  Así que esto por aquí, esto es interacción, esto es formularios desde código. Hablamos en
+[08:37.580 --> 08:45.780]  caso de la modificación de la apariencia y del comportamiento. Yo creo que el mejor ejemplo que
+[08:45.780 --> 08:52.720]  puedo poner en este caso de modificación de apariencia y de comportamiento en un formulario
+[08:52.720 --> 09:00.480]  es, por ejemplo, el checkbox, que es un clásico, convertir un checkbox horrible en un bonito
+[09:00.480 --> 09:12.680]  slider. Así que voy a pasar aquí. Vamos a ver. Muy bien, nos damos aquí proyecto intermodular.
+[09:12.720 --> 09:20.620]  Un momento, porque, a ver un segundo, porque veo que tengo un problema con el vídeo. Así que,
+[09:20.620 --> 09:22.620]  un segundo, voy a...
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/004-Programación multimedia y dispositivos móv
+iles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases$ 

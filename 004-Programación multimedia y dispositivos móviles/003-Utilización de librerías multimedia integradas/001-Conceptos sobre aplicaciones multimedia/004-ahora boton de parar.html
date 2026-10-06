@@ -1,0 +1,14 @@
+<video src="josevicente.mp4" controls></video>
+<button id="reproducir">Reproducir</button>
+<button id="parar">Parar</button>
+<script>
+  let video = document.querySelector("video")
+  let reproducir = document.querySelector("#reproducir")
+  let parar = document.querySelector("#parar")
+  reproducir.onclick = function(){
+  	video.play()
+  }
+  parar.onclick = function(){
+  	video.pause()
+  }
+</script>

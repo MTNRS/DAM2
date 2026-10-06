@@ -1,0 +1,109 @@
+<script>
+
+  function bocadillo(texto, quien){
+
+    let mensaje = document.createElement("div");
+
+    mensaje.classList.add("bocadillo");
+    mensaje.classList.add(quien);
+
+    mensaje.textContent = texto;
+
+    let conversacion =
+      document.querySelector("#conversacion");
+
+    conversacion.appendChild(mensaje);
+
+    conversacion.scrollTop =
+      conversacion.scrollHeight;
+  }
+
+
+  function escuchar(){
+
+    // Mostrar chat
+
+    document.querySelector("#chat").style.display = "flex";
+
+
+    // Reconocimiento de voz
+
+    let reconocimiento =
+      new webkitSpeechRecognition();
+
+    reconocimiento.lang = "es-ES";
+
+
+    reconocimiento.onresult = function(evento){
+
+      let texto =
+        evento.results[0][0].transcript;
+
+
+      // Mensaje del usuario
+
+      bocadillo(texto,"yo");
+
+
+      // Enviar pregunta al PHP
+
+      fetch("ollama.php",{
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          mensaje:texto
+        })
+      })
+
+      .then(respuesta => respuesta.json())
+
+      .then(datos => {
+
+        let respuesta = datos.respuesta;
+
+
+        // Mostrar respuesta
+
+        bocadillo(respuesta,"maquina");
+
+
+        // Leer respuesta en voz alta
+
+        let mensaje =
+          new SpeechSynthesisUtterance(respuesta);
+
+        mensaje.lang = "es-ES";
+
+        speechSynthesis.speak(mensaje);
+
+      })
+
+      .catch(error => {
+
+        console.error(error);
+
+        bocadillo(
+          "No he podido conectar con Ollama.",
+          "maquina"
+        );
+
+      });
+
+    };
+
+
+    reconocimiento.start();
+
+  }
+
+
+  function cerrarChat(){
+
+    document.querySelector("#chat")
+      .style.display = "none";
+
+  }
+
+</script>

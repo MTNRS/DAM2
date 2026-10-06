@@ -1,0 +1,11 @@
+Datetime: 2026-09-24T11:00:53.322Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/007-conector para python
+Command: g++ -O2 -std=c++20 -shared -fPIC     $(python3-config --includes)     conector_python.cpp     JocarsaBBDD.cpp     -o jocarsabbdd$(python3-config --extension-suffix)
+
+Result:
+g++ -O2 -std=c++20 -shared -fPIC \
+    $(python3-config --includes) \
+    conector_python.cpp \
+    JocarsaBBDD.cpp \
+    -o jocarsabbdd$(python3-config --extension-suffix)
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/007-conector para python$ 

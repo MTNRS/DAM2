@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Crimson ERP</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="nucleo/estilo/general.css?v=023">
+  </head>
+  <body>
+    <div id="crud" data-include="nucleo/componentes/crud.html?v=023"></div>
+
+    <header data-include="nucleo/componentes/cabecera.html?v=023"></header>
+
+    <section>
+      <nav data-include="nucleo/componentes/modulos.html?v=023" id="modulos"></nav>
+      <nav data-include="nucleo/componentes/menu.html?v=023" id="menu"></nav>
+      <main id="aplicacion"></main>
+    </section>
+
+    <footer data-include="nucleo/componentes/piedepagina.html?v=023"></footer>
+
+    <script>
+      fetch("api/api.php?bloque=estado")
+      .then(function(retorno){return retorno.json()})
+      .then(function(datos){
+        if(datos.instalado){
+          let script = document.createElement("script");
+          script.src = "nucleo/js/incluir.js?v=023";
+          document.body.appendChild(script);
+        }else{
+          window.location.href = "instalacion/instalar.php";
+        }
+      })
+      .catch(function(error){
+        console.log("Se ha producido un error:");
+        console.log(error);
+      });
+    </script>
+  </body>
+</html>

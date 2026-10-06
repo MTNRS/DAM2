@@ -1,0 +1,978 @@
+```html
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#111;
+      font-family:Arial,sans-serif;
+    }
+
+    /* ========================= */
+    /* REPRODUCTOR */
+    /* ========================= */
+
+    .jvvideo{
+      position:relative;
+      display:inline-block;
+      overflow:hidden;
+      border-radius:14px;
+      background:black;
+      box-shadow:0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .jvvideo video{
+      display:block;
+      width:800px;
+      max-width:100%;
+    }
+
+
+    /* ========================= */
+    /* SUBTÍTULOS */
+    /* ========================= */
+
+    .subtitulos{
+      position:absolute;
+
+      left:50%;
+      bottom:80px;
+
+      transform:translateX(-50%);
+
+      width:85%;
+
+      text-align:center;
+
+      color:white;
+      font-size:22px;
+      font-weight:bold;
+      line-height:1.4;
+
+      text-shadow:
+        2px 2px 3px black,
+        -2px -2px 3px black,
+        2px -2px 3px black,
+        -2px 2px 3px black;
+
+      pointer-events:none;
+
+      z-index:10;
+    }
+
+
+    /* ========================= */
+    /* CONTROLES */
+    /* ========================= */
+
+    .controles{
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+
+      display:flex;
+      align-items:center;
+      gap:8px;
+
+      padding:35px 14px 12px 14px;
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(0,0,0,0.85)
+        );
+
+      opacity:0;
+      transform:translateY(15px);
+
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+
+      pointer-events:none;
+
+      z-index:20;
+    }
+
+
+    /* MOSTRAR CONTROLES */
+
+    .jvvideo:hover .controles{
+      opacity:1;
+      transform:translateY(0);
+      pointer-events:auto;
+    }
+
+
+    /* ========================= */
+    /* BOTONES */
+    /* ========================= */
+
+    .controles button{
+      width:38px;
+      height:38px;
+
+      flex-shrink:0;
+
+      border:none;
+      border-radius:50%;
+
+      background:rgba(255,255,255,0.12);
+      color:white;
+
+      font-size:17px;
+
+      cursor:pointer;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      backdrop-filter:blur(10px);
+
+      transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+    }
+
+    .controles button:hover{
+      background:rgba(255,255,255,0.28);
+      transform:scale(1.1);
+    }
+
+    .controles button:active{
+      transform:scale(0.95);
+    }
+
+
+    /* BOTÓN ACTIVO */
+
+    .controles button.activo{
+      background:white;
+      color:black;
+    }
+
+
+    /* BOTÓN CC */
+
+    .boton-subtitulos{
+      font-size:12px !important;
+      font-weight:bold;
+    }
+
+
+    /* ========================= */
+    /* SLIDERS */
+    /* ========================= */
+
+    .controles input[type="range"]{
+      appearance:none;
+
+      height:4px;
+
+      background:rgba(255,255,255,0.3);
+
+      border-radius:10px;
+
+      cursor:pointer;
+
+      outline:none;
+    }
+
+    .controles input[type="range"]::-webkit-slider-thumb{
+      appearance:none;
+
+      width:13px;
+      height:13px;
+
+      border-radius:50%;
+
+      background:white;
+
+      box-shadow:0 0 5px rgba(0,0,0,0.5);
+    }
+
+
+    /* PROGRESO */
+
+    .progreso{
+      flex:1;
+    }
+
+
+    /* VOLUMEN */
+
+    .volumen{
+      width:80px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+<video src="002-utilizacion-de-formularios-desde-codigo-2026-10-05_13-44-07.webm"></video>
+
+
+
+<script>
+
+
+// ========================================================
+// CONVERTIR TIEMPO VTT A SEGUNDOS
+// ========================================================
+
+function tiempoASegundos(tiempo){
+
+  let partes = tiempo.split(":")
+
+
+  // MM:SS.mmm
+
+  if(partes.length == 2){
+
+    let minutos = parseInt(partes[0])
+    let segundos = parseFloat(partes[1])
+
+    return minutos * 60 + segundos
+
+  }
+
+
+  // HH:MM:SS.mmm
+
+  if(partes.length == 3){
+
+    let horas = parseInt(partes[0])
+    let minutos = parseInt(partes[1])
+    let segundos = parseFloat(partes[2])
+
+    return (
+      horas * 3600 +
+      minutos * 60 +
+      segundos
+    )
+
+  }
+
+
+  return 0
+
+}
+
+
+
+// ========================================================
+// BUSCAMOS TODOS LOS VÍDEOS
+// ========================================================
+
+let videos = document.querySelectorAll("video")
+
+
+videos.forEach(function(video){
+
+
+  // ======================================================
+  // CONTENEDOR
+  // ======================================================
+
+  let contenedor = document.createElement("div")
+
+  contenedor.classList.add("jvvideo")
+
+
+  video.parentNode.insertBefore(
+    contenedor,
+    video
+  )
+
+
+  contenedor.appendChild(video)
+
+
+
+  // ======================================================
+  // CONTENEDOR DE SUBTÍTULOS
+  // ======================================================
+
+  let contenedor_transcripcion =
+    document.createElement("div")
+
+
+  contenedor_transcripcion.classList.add(
+    "subtitulos"
+  )
+
+
+  contenedor.appendChild(
+    contenedor_transcripcion
+  )
+
+
+
+  // ======================================================
+  // CONTROLES
+  // ======================================================
+
+  let controles =
+    document.createElement("div")
+
+
+  controles.classList.add("controles")
+
+
+  contenedor.appendChild(controles)
+
+
+
+  // ======================================================
+  // ATRÁS
+  // ======================================================
+
+  let atras =
+    document.createElement("button")
+
+
+  atras.textContent = "↶"
+
+  atras.title =
+    "Retroceder 5 segundos"
+
+
+  controles.appendChild(atras)
+
+
+
+  // ======================================================
+  // PLAY
+  // ======================================================
+
+  let reproducir =
+    document.createElement("button")
+
+
+  reproducir.textContent = "▶"
+
+  reproducir.title =
+    "Reproducir"
+
+
+  controles.appendChild(reproducir)
+
+
+
+  // ======================================================
+  // ADELANTE
+  // ======================================================
+
+  let adelante =
+    document.createElement("button")
+
+
+  adelante.textContent = "↷"
+
+  adelante.title =
+    "Avanzar 5 segundos"
+
+
+  controles.appendChild(adelante)
+
+
+
+  // ======================================================
+  // BOTÓN SUBTÍTULOS
+  // ======================================================
+
+  let botonSubtitulos =
+    document.createElement("button")
+
+
+  botonSubtitulos.textContent = "CC"
+
+  botonSubtitulos.title =
+    "Activar subtítulos"
+
+
+  botonSubtitulos.classList.add(
+    "boton-subtitulos"
+  )
+
+
+  controles.appendChild(
+    botonSubtitulos
+  )
+
+
+
+  // ======================================================
+  // PROGRESO
+  // ======================================================
+
+  let progreso =
+    document.createElement("input")
+
+
+  progreso.type = "range"
+
+  progreso.min = 0
+  progreso.max = 1
+  progreso.step = 0.001
+  progreso.value = 0
+
+
+  progreso.classList.add("progreso")
+
+
+  controles.appendChild(progreso)
+
+
+
+  // ======================================================
+  // VOLUMEN
+  // ======================================================
+
+  let volumen =
+    document.createElement("input")
+
+
+  volumen.type = "range"
+
+  volumen.min = 0
+  volumen.max = 1
+  volumen.step = 0.01
+  volumen.value = 1
+
+
+  volumen.classList.add("volumen")
+
+
+  controles.appendChild(volumen)
+
+
+
+  // ======================================================
+  // ESTADO DE LOS SUBTÍTULOS
+  // ======================================================
+
+  let subtitulosActivos = false
+
+
+  let transcripcion = []
+
+
+
+  // ======================================================
+  // OBTENER NOMBRE DEL VTT
+  // ======================================================
+
+  let origenvideo =
+    video.getAttribute("src")
+
+
+  let nombrevideo =
+    origenvideo.substring(
+      0,
+      origenvideo.lastIndexOf(".")
+    )
+
+
+  let nombretranscripcion =
+    nombrevideo + ".vtt"
+
+
+  console.log(
+    "Buscando subtítulos:",
+    nombretranscripcion
+  )
+
+
+
+  // ======================================================
+  // CARGAR VTT
+  // ======================================================
+
+  fetch(nombretranscripcion)
+
+  .then(function(resultado){
+
+    if(!resultado.ok){
+
+      throw new Error(
+        "No existe el archivo VTT"
+      )
+
+    }
+
+    return resultado.text()
+
+  })
+
+  .then(function(datos){
+
+
+    // Quitamos retornos de carro
+
+    datos =
+      datos.replace(/\r/g, "")
+
+
+    // Quitamos cabecera WEBVTT
+
+    datos =
+      datos.replace(
+        /^WEBVTT.*\n/,
+        ""
+      )
+
+
+    // Dividimos bloques
+
+    let partido =
+      datos.split(/\n\n+/)
+
+
+
+    partido.forEach(function(pieza){
+
+
+      let lineas =
+        pieza.trim().split("\n")
+
+
+      if(lineas.length < 2){
+
+        return
+
+      }
+
+
+
+      // Buscamos línea temporal
+
+      let lineaTiempo = -1
+
+
+      lineas.forEach(
+        function(linea,indice){
+
+          if(linea.includes("-->")){
+
+            lineaTiempo = indice
+
+          }
+
+        }
+      )
+
+
+
+      if(lineaTiempo == -1){
+
+        return
+
+      }
+
+
+
+      // Dividimos inicio y final
+
+      let tiempos =
+        lineas[lineaTiempo]
+        .split(" --> ")
+
+
+
+      if(tiempos.length != 2){
+
+        return
+
+      }
+
+
+
+      let inicio =
+        tiempos[0].trim()
+
+
+      let final =
+        tiempos[1].trim()
+
+
+
+      // Por si el VTT incluye
+      // parámetros después del tiempo
+
+      final =
+        final.split(" ")[0]
+
+
+
+      // Texto del subtítulo
+
+      let texto =
+        lineas
+        .slice(lineaTiempo + 1)
+        .join(" ")
+
+
+
+      transcripcion.push({
+
+        inicio:inicio,
+
+        final:final,
+
+        texto:texto
+
+      })
+
+
+    })
+
+
+
+    console.log(
+      "Transcripción cargada:",
+      transcripcion
+    )
+
+
+  })
+
+  .catch(function(error){
+
+    console.log(
+      "No se pudieron cargar subtítulos:",
+      nombretranscripcion
+    )
+
+  })
+
+
+
+  // ======================================================
+  // BOTÓN SUBTÍTULOS
+  // ======================================================
+
+  botonSubtitulos.onclick =
+  function(){
+
+
+    subtitulosActivos =
+      !subtitulosActivos
+
+
+
+    if(subtitulosActivos){
+
+
+      botonSubtitulos.classList.add(
+        "activo"
+      )
+
+
+      botonSubtitulos.title =
+        "Desactivar subtítulos"
+
+
+
+      // Actualizamos inmediatamente
+      // por si el vídeo está pausado
+
+      actualizarSubtitulos()
+
+
+    }else{
+
+
+      botonSubtitulos.classList.remove(
+        "activo"
+      )
+
+
+      botonSubtitulos.title =
+        "Activar subtítulos"
+
+
+      contenedor_transcripcion.textContent =
+        ""
+
+
+    }
+
+
+  }
+
+
+
+  // ======================================================
+  // FUNCIÓN ACTUALIZAR SUBTÍTULOS
+  // ======================================================
+
+  function actualizarSubtitulos(){
+
+
+    if(!subtitulosActivos){
+
+      contenedor_transcripcion.textContent =
+        ""
+
+      return
+
+    }
+
+
+
+    let textoActual = ""
+
+
+
+    transcripcion.forEach(
+      function(frase){
+
+
+        let inicio =
+          tiempoASegundos(
+            frase.inicio
+          )
+
+
+        let final =
+          tiempoASegundos(
+            frase.final
+          )
+
+
+
+        if(
+          video.currentTime >= inicio
+          &&
+          video.currentTime <= final
+        ){
+
+          textoActual =
+            frase.texto
+
+        }
+
+
+      }
+    )
+
+
+
+    contenedor_transcripcion.textContent =
+      textoActual
+
+
+  }
+
+
+
+  // ======================================================
+  // PLAY / PAUSE
+  // ======================================================
+
+  reproducir.onclick =
+  function(){
+
+
+    if(video.paused){
+
+      video.play()
+
+    }else{
+
+      video.pause()
+
+    }
+
+
+  }
+
+
+
+  // ======================================================
+  // ADELANTE 5 SEGUNDOS
+  // ======================================================
+
+  adelante.onclick =
+  function(){
+
+
+    video.currentTime =
+      Math.min(
+        video.currentTime + 5,
+        video.duration
+      )
+
+
+  }
+
+
+
+  // ======================================================
+  // ATRÁS 5 SEGUNDOS
+  // ======================================================
+
+  atras.onclick =
+  function(){
+
+
+    video.currentTime =
+      Math.max(
+        video.currentTime - 5,
+        0
+      )
+
+
+  }
+
+
+
+  // ======================================================
+  // VOLUMEN
+  // ======================================================
+
+  volumen.oninput =
+  function(){
+
+
+    video.volume =
+      this.value
+
+
+  }
+
+
+
+  // ======================================================
+  // ACTUALIZACIÓN DEL VÍDEO
+  // ======================================================
+
+  video.ontimeupdate =
+  function(){
+
+
+    // -------------------------
+    // PROGRESO
+    // -------------------------
+
+    if(video.duration){
+
+      progreso.value =
+        video.currentTime /
+        video.duration
+
+    }
+
+
+
+    // -------------------------
+    // SUBTÍTULOS
+    // -------------------------
+
+    actualizarSubtitulos()
+
+
+  }
+
+
+
+  // ======================================================
+  // CAMBIAR POSICIÓN DEL VÍDEO
+  // ======================================================
+
+  progreso.oninput =
+  function(){
+
+
+    if(video.duration){
+
+      video.currentTime =
+        this.value *
+        video.duration
+
+    }
+
+
+  }
+
+
+
+  // ======================================================
+  // CLICK SOBRE EL VÍDEO
+  // ======================================================
+
+  video.onclick =
+  function(){
+
+
+    if(video.paused){
+
+      video.play()
+
+    }else{
+
+      video.pause()
+
+    }
+
+
+  }
+
+
+
+  // ======================================================
+  // SINCRONIZAR BOTÓN PLAY
+  // ======================================================
+
+  video.onplay =
+  function(){
+
+    reproducir.textContent =
+      "❚❚"
+
+  }
+
+
+  video.onpause =
+  function(){
+
+    reproducir.textContent =
+      "▶"
+
+  }
+
+
+  video.onended =
+  function(){
+
+    reproducir.textContent =
+      "▶"
+
+  }
+
+
+})
+
+
+</script>
+
+</body>
+</html>
+```

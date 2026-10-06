@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="identidad">
+    </div>
+    <div id="participantes">
+    </div>
+    <button id="maestro">Soy maestro</button>
+    <button id="esclavo">Soy esclavo</button>
+    <script>
+      let identidad;
+      let botonmaestro = document.querySelector("#maestro")
+     	let botonesclavo = document.querySelector("#esclavo")
+      let contenedor_identidad = document.querySelector("#identidad")
+      let temporizador;
+      
+      botonmaestro.onclick = function(){
+      	identidad = "maestro"
+        contenedor_identidad.textContent = "🟢Maestro"
+        temporizador = setTimeout("latido()",1000)
+      }
+      botonesclavo.onclick = function(){
+      	identidad = "esclavo"
+        contenedor_identidad.textContent = "🔵Esclavo"
+        temporizador = setTimeout("latido()",1000)
+      }
+      function latido(){
+      	clearTimeout(temporizador)
+        temporizador = setTimeout("latido()",1000)
+      }
+    </script>
+  </body>
+</html>

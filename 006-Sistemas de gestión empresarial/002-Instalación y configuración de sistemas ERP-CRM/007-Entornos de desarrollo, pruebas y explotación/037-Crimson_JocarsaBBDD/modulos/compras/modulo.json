@@ -1,0 +1,7 @@
+{
+    "modulo": "compras",
+    "nombre": "compras",
+    "tablas": [
+        "cliente"
+    ]
+}

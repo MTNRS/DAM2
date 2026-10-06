@@ -1,0 +1,9 @@
+{
+    "modulo": "compras",
+    "nombre": "Compras",
+    "tablas": [
+        "categorias",
+        "productos",
+        "proveedores"
+    ]
+}

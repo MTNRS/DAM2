@@ -1,0 +1,1974 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Path Tracer 2D Monte Carlo + Workers</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#020202;
+}
+
+canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    cursor:crosshair;
+}
+
+#info{
+    position:fixed;
+    top:15px;
+    left:15px;
+    z-index:10;
+
+    color:white;
+    background:rgba(0,0,0,0.72);
+
+    padding:14px 16px;
+    border-radius:10px;
+
+    font-family:monospace;
+    font-size:12px;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.5);
+}
+
+#info strong{
+    font-size:14px;
+}
+
+#lineaMuestras{
+    margin-top:7px;
+}
+
+#controles{
+    margin-top:12px;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+#numeroWorkers{
+    width:65px;
+
+    background:#222;
+    color:white;
+
+    border:1px solid #555;
+    border-radius:5px;
+
+    padding:5px;
+
+    font-family:monospace;
+}
+
+#estadoWorkers{
+    margin-top:8px;
+    color:#aaa;
+}
+
+#hardware{
+    margin-top:4px;
+    color:#777;
+}
+
+button{
+    background:#333;
+    color:white;
+
+    border:1px solid #555;
+    border-radius:5px;
+
+    padding:5px 8px;
+
+    cursor:pointer;
+}
+
+button:hover{
+    background:#444;
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="canvas"></canvas>
+
+<div id="info">
+
+    <strong>Path Tracer 2D</strong>
+
+    <div id="lineaMuestras">
+        <span id="muestras">0 muestras</span>
+    </div>
+
+    <div id="controles">
+
+        Workers:
+
+        <input
+            id="numeroWorkers"
+            type="number"
+            min="1"
+            max="32"
+            value="8"
+        >
+
+        <button id="limpiar">
+            Limpiar
+        </button>
+
+    </div>
+
+    <div id="estadoWorkers">
+        Workers activos: 0
+    </div>
+
+    <div id="hardware"></div>
+
+</div>
+
+
+<script>
+
+// ============================================================
+// CANVAS PRINCIPAL
+// ============================================================
+
+const canvas =
+    document.querySelector("#canvas");
+
+const ctx =
+    canvas.getContext("2d");
+
+
+// ============================================================
+// CANVAS DE ACUMULACIÓN
+// ============================================================
+
+const acumulacion =
+    document.createElement("canvas");
+
+const actx =
+    acumulacion.getContext("2d");
+
+
+// ============================================================
+// VARIABLES
+// ============================================================
+
+let W;
+let H;
+
+let muestras = 0;
+
+
+// ============================================================
+// CONFIGURACIÓN
+// ============================================================
+
+// rayos que calcula CADA worker por trabajo
+const RAYOS_POR_WORKER = 500;
+
+// rebotes máximos
+const MAX_REBOTES = 12;
+
+// reflectancia
+const REFLECTANCIA = 0.58;
+
+// probabilidad base especular
+const PROB_ESPECULAR = 0.12;
+
+// rugosidad
+const RUGOSIDAD = 0.12;
+
+// intensidad mínima
+const INTENSIDAD_MINIMA = 0.005;
+
+// intensidad visual
+const ALPHA_RAYO = 0.025;
+
+
+// ============================================================
+// BUFFER TEMPORAL
+// ============================================================
+
+// true:
+//
+// La imagen anterior NO desaparece instantáneamente.
+// Se va apagando lentamente.
+//
+// Puedes poner 0 para persistencia infinita.
+
+const DECAY = 0.003;
+
+
+// ============================================================
+// RATÓN
+// ============================================================
+
+const raton = {
+
+    x:window.innerWidth/2,
+    y:window.innerHeight/2
+
+};
+
+
+// ============================================================
+// MUROS
+// ============================================================
+
+let muros = [];
+
+
+function muro(
+    x1,
+    y1,
+    x2,
+    y2
+){
+
+    muros.push({
+
+        x1:x1,
+        y1:y1,
+
+        x2:x2,
+        y2:y2
+
+    });
+
+}
+
+
+// ============================================================
+// LABERINTO
+// ============================================================
+
+function crearLaberinto(){
+
+    muros = [];
+
+    const m = 25;
+
+
+    // borde exterior
+
+    muro(
+        m,m,
+        W-m,m
+    );
+
+    muro(
+        W-m,m,
+        W-m,H-m
+    );
+
+    muro(
+        W-m,H-m,
+        m,H-m
+    );
+
+    muro(
+        m,H-m,
+        m,m
+    );
+
+
+    // izquierda
+
+    muro(
+        W*0.25,
+        H*0.10,
+        W*0.25,
+        H*0.42
+    );
+
+    muro(
+        W*0.25,
+        H*0.65,
+        W*0.25,
+        H*0.90
+    );
+
+
+    // centro
+
+    muro(
+        W*0.50,
+        H*0.22,
+        W*0.50,
+        H*0.68
+    );
+
+
+    // derecha
+
+    muro(
+        W*0.75,
+        H*0.10,
+        W*0.75,
+        H*0.36
+    );
+
+    muro(
+        W*0.75,
+        H*0.58,
+        W*0.75,
+        H*0.90
+    );
+
+
+    // horizontales
+
+    muro(
+        W*0.07,
+        H*0.28,
+        W*0.17,
+        H*0.28
+    );
+
+    muro(
+        W*0.34,
+        H*0.16,
+        W*0.64,
+        H*0.16
+    );
+
+    muro(
+        W*0.34,
+        H*0.52,
+        W*0.44,
+        H*0.52
+    );
+
+    muro(
+        W*0.58,
+        H*0.43,
+        W*0.90,
+        H*0.43
+    );
+
+    muro(
+        W*0.08,
+        H*0.78,
+        W*0.42,
+        H*0.78
+    );
+
+    muro(
+        W*0.59,
+        H*0.80,
+        W*0.90,
+        H*0.80
+    );
+
+}
+
+
+// ============================================================
+// REDIMENSIONAR
+// ============================================================
+
+function redimensionar(){
+
+    const dpr =
+        window.devicePixelRatio || 1;
+
+    W =
+        window.innerWidth;
+
+    H =
+        window.innerHeight;
+
+
+    canvas.width =
+        W*dpr;
+
+    canvas.height =
+        H*dpr;
+
+    canvas.style.width =
+        W+"px";
+
+    canvas.style.height =
+        H+"px";
+
+
+    ctx.setTransform(
+        dpr,0,
+        0,dpr,
+        0,0
+    );
+
+
+    acumulacion.width =
+        W*dpr;
+
+    acumulacion.height =
+        H*dpr;
+
+
+    actx.setTransform(
+        dpr,0,
+        0,dpr,
+        0,0
+    );
+
+
+    crearLaberinto();
+
+    limpiarAcumulacion();
+
+}
+
+
+// ============================================================
+// WORKER
+// ============================================================
+
+const codigoWorker = `
+
+// ============================================================
+// CONFIGURACIÓN DEL WORKER
+// ============================================================
+
+let muros = [];
+
+let MAX_REBOTES = 12;
+let REFLECTANCIA = 0.58;
+let PROB_ESPECULAR = 0.12;
+let RUGOSIDAD = 0.12;
+let INTENSIDAD_MINIMA = 0.005;
+
+
+// ============================================================
+// INTERSECCIÓN RAYO / SEGMENTO
+// ============================================================
+
+function interseccionRayoSegmento(
+    px,
+    py,
+    dx,
+    dy,
+    m
+){
+
+    const sx =
+        m.x2-m.x1;
+
+    const sy =
+        m.y2-m.y1;
+
+
+    const denominador =
+        dx*sy -
+        dy*sx;
+
+
+    if(
+        Math.abs(denominador)
+        <
+        0.000001
+    ){
+        return null;
+    }
+
+
+    const qpx =
+        m.x1-px;
+
+    const qpy =
+        m.y1-py;
+
+
+    const t =
+        (
+            qpx*sy -
+            qpy*sx
+        )
+        /
+        denominador;
+
+
+    const u =
+        (
+            qpx*dy -
+            qpy*dx
+        )
+        /
+        denominador;
+
+
+    if(
+        t > 0.001 &&
+        u >= 0 &&
+        u <= 1
+    ){
+
+        return {
+
+            x:
+                px +
+                dx*t,
+
+            y:
+                py +
+                dy*t,
+
+            distancia:t,
+
+            muro:m
+
+        };
+
+    }
+
+
+    return null;
+
+}
+
+
+// ============================================================
+// PRIMER IMPACTO
+// ============================================================
+
+function primerImpacto(
+    x,
+    y,
+    dx,
+    dy
+){
+
+    let mejor = null;
+
+
+    for(let i=0;i<muros.length;i++){
+
+        const impacto =
+            interseccionRayoSegmento(
+                x,
+                y,
+                dx,
+                dy,
+                muros[i]
+            );
+
+
+        if(
+            impacto &&
+            (
+                mejor === null ||
+                impacto.distancia
+                <
+                mejor.distancia
+            )
+        ){
+
+            mejor =
+                impacto;
+
+        }
+
+    }
+
+
+    return mejor;
+
+}
+
+
+// ============================================================
+// NORMAL
+// ============================================================
+
+function normalMuro(
+    m,
+    dx,
+    dy
+){
+
+    let wx =
+        m.x2-m.x1;
+
+    let wy =
+        m.y2-m.y1;
+
+
+    const longitud =
+        Math.hypot(
+            wx,
+            wy
+        );
+
+
+    wx /= longitud;
+    wy /= longitud;
+
+
+    let nx =
+        -wy;
+
+    let ny =
+        wx;
+
+
+    if(
+        dx*nx +
+        dy*ny
+        >
+        0
+    ){
+
+        nx =
+            -nx;
+
+        ny =
+            -ny;
+
+    }
+
+
+    return {
+
+        x:nx,
+        y:ny
+
+    };
+
+}
+
+
+// ============================================================
+// REFLEXIÓN
+// ============================================================
+
+function reflejar(
+    dx,
+    dy,
+    normal
+){
+
+    const dot =
+        dx*normal.x +
+        dy*normal.y;
+
+
+    let rx =
+        dx -
+        2*dot*normal.x;
+
+    let ry =
+        dy -
+        2*dot*normal.y;
+
+
+    const longitud =
+        Math.hypot(
+            rx,
+            ry
+        );
+
+
+    return {
+
+        x:rx/longitud,
+        y:ry/longitud
+
+    };
+
+}
+
+
+// ============================================================
+// DIRECCIÓN LAMBERTIANA
+// ============================================================
+
+function direccionLambertiana(
+    normal
+){
+
+    const anguloNormal =
+        Math.atan2(
+            normal.y,
+            normal.x
+        );
+
+
+    const u =
+        Math.random();
+
+
+    const desviacion =
+        Math.asin(
+            2*u-1
+        );
+
+
+    const angulo =
+        anguloNormal +
+        desviacion;
+
+
+    return {
+
+        x:
+            Math.cos(angulo),
+
+        y:
+            Math.sin(angulo)
+
+    };
+
+}
+
+
+// ============================================================
+// ESPECULAR RUGOSA
+// ============================================================
+
+function direccionEspecular(
+    dx,
+    dy,
+    normal
+){
+
+    const r =
+        reflejar(
+            dx,
+            dy,
+            normal
+        );
+
+
+    let angulo =
+        Math.atan2(
+            r.y,
+            r.x
+        );
+
+
+    angulo +=
+        (
+            Math.random()-0.5
+        )
+        *
+        RUGOSIDAD;
+
+
+    return {
+
+        x:
+            Math.cos(angulo),
+
+        y:
+            Math.sin(angulo)
+
+    };
+
+}
+
+
+// ============================================================
+// LANZAR PATH
+// ============================================================
+
+function lanzarPath(
+    origenX,
+    origenY,
+    angulo,
+    segmentos
+){
+
+    let x =
+        origenX;
+
+    let y =
+        origenY;
+
+
+    let dx =
+        Math.cos(
+            angulo
+        );
+
+    let dy =
+        Math.sin(
+            angulo
+        );
+
+
+    let energia = 1;
+
+
+    for(
+        let rebote=0;
+        rebote<MAX_REBOTES;
+        rebote++
+    ){
+
+        if(
+            energia <
+            INTENSIDAD_MINIMA
+        ){
+            break;
+        }
+
+
+        const impacto =
+            primerImpacto(
+                x,
+                y,
+                dx,
+                dy
+            );
+
+
+        if(!impacto){
+            break;
+        }
+
+
+        // distancia
+
+        const distancia =
+            impacto.distancia;
+
+
+        const atenuacion =
+            1 /
+            (
+                1 +
+                distancia*0.0008
+            );
+
+
+        const intensidad =
+            energia *
+            atenuacion;
+
+
+        // ====================================================
+        // GUARDAR SEGMENTO
+        //
+        // 5 floats:
+        //
+        // x1
+        // y1
+        // x2
+        // y2
+        // intensidad
+        // ====================================================
+
+        segmentos.push(
+            x,
+            y,
+            impacto.x,
+            impacto.y,
+            intensidad
+        );
+
+
+        energia *=
+            atenuacion;
+
+
+        // normal
+
+        const normal =
+            normalMuro(
+                impacto.muro,
+                dx,
+                dy
+            );
+
+
+        // incidencia
+
+        const cosIncidencia =
+            Math.max(
+                0,
+                -(
+                    dx*normal.x +
+                    dy*normal.y
+                )
+            );
+
+
+        // Fresnel Schlick
+
+        const F0 =
+            PROB_ESPECULAR;
+
+
+        const fresnel =
+            F0 +
+            (
+                1-F0
+            )
+            *
+            Math.pow(
+                1-cosIncidencia,
+                5
+            );
+
+
+        // Monte Carlo
+
+        if(
+            Math.random()
+            <
+            fresnel
+        ){
+
+            const direccion =
+                direccionEspecular(
+                    dx,
+                    dy,
+                    normal
+                );
+
+
+            dx =
+                direccion.x;
+
+            dy =
+                direccion.y;
+
+        }
+        else{
+
+            const direccion =
+                direccionLambertiana(
+                    normal
+                );
+
+
+            dx =
+                direccion.x;
+
+            dy =
+                direccion.y;
+
+        }
+
+
+        // reflectancia
+
+        energia *=
+            REFLECTANCIA;
+
+
+        // ====================================================
+        // RUSSIAN ROULETTE
+        // ====================================================
+
+        if(
+            rebote >= 3
+        ){
+
+            const probabilidadSupervivencia =
+                Math.min(
+                    0.92,
+                    energia
+                );
+
+
+            if(
+                Math.random()
+                >
+                probabilidadSupervivencia
+            ){
+                break;
+            }
+
+
+            energia /=
+                probabilidadSupervivencia;
+
+        }
+
+
+        // nueva posición
+
+        x =
+            impacto.x +
+            dx*0.5;
+
+        y =
+            impacto.y +
+            dy*0.5;
+
+    }
+
+}
+
+
+// ============================================================
+// MENSAJES
+// ============================================================
+
+self.onmessage = function(e){
+
+    const datos =
+        e.data;
+
+
+    // ========================================================
+    // ACTUALIZAR CONFIGURACIÓN
+    // ========================================================
+
+    muros =
+        datos.muros;
+
+    MAX_REBOTES =
+        datos.maxRebotes;
+
+    REFLECTANCIA =
+        datos.reflectancia;
+
+    PROB_ESPECULAR =
+        datos.probEspecular;
+
+    RUGOSIDAD =
+        datos.rugosidad;
+
+    INTENSIDAD_MINIMA =
+        datos.intensidadMinima;
+
+
+    const origenX =
+        datos.x;
+
+    const origenY =
+        datos.y;
+
+    const cantidad =
+        datos.rayos;
+
+
+    // ========================================================
+    // CALCULAR
+    // ========================================================
+
+    const segmentos = [];
+
+
+    for(
+        let i=0;
+        i<cantidad;
+        i++
+    ){
+
+        const angulo =
+            Math.random()
+            *
+            Math.PI*2;
+
+
+        lanzarPath(
+            origenX,
+            origenY,
+            angulo,
+            segmentos
+        );
+
+    }
+
+
+    // ========================================================
+    // ARRAY TRANSFERIBLE
+    // ========================================================
+
+    const resultado =
+        new Float32Array(
+            segmentos
+        );
+
+
+    self.postMessage(
+        {
+            buffer:
+                resultado.buffer,
+
+            rayos:
+                cantidad
+        },
+        [
+            resultado.buffer
+        ]
+    );
+
+};
+
+`;
+
+
+// ============================================================
+// CREAR URL DEL WORKER
+// ============================================================
+
+const blobWorker =
+    new Blob(
+        [codigoWorker],
+        {
+            type:
+                "application/javascript"
+        }
+    );
+
+const workerURL =
+    URL.createObjectURL(
+        blobWorker
+    );
+
+
+// ============================================================
+// POOL DE WORKERS
+// ============================================================
+
+let workers = [];
+
+
+// ============================================================
+// CREAR WORKERS
+// ============================================================
+
+function crearWorkers(){
+
+    // destruir anteriores
+
+    for(
+        const item of workers
+    ){
+
+        item.worker.terminate();
+
+    }
+
+
+    workers = [];
+
+
+    let cantidad =
+        parseInt(
+            document.querySelector(
+                "#numeroWorkers"
+            ).value
+        );
+
+
+    if(
+        !Number.isFinite(cantidad)
+    ){
+        cantidad = 8;
+    }
+
+
+    cantidad =
+        Math.max(
+            1,
+            Math.min(
+                32,
+                cantidad
+            )
+        );
+
+
+    document.querySelector(
+        "#numeroWorkers"
+    ).value =
+        cantidad;
+
+
+    // ========================================================
+    // CREAR POOL
+    // ========================================================
+
+    for(
+        let i=0;
+        i<cantidad;
+        i++
+    ){
+
+        const worker =
+            new Worker(
+                workerURL
+            );
+
+
+        const item = {
+
+            worker:worker,
+
+            ocupado:false
+
+        };
+
+
+        worker.onmessage =
+            function(e){
+
+                item.ocupado =
+                    false;
+
+
+                const datos =
+                    e.data;
+
+
+                const segmentos =
+                    new Float32Array(
+                        datos.buffer
+                    );
+
+
+                pintarSegmentos(
+                    segmentos
+                );
+
+
+                muestras +=
+                    datos.rayos;
+
+
+                actualizarContador();
+
+            };
+
+
+        worker.onerror =
+            function(error){
+
+                console.error(
+                    "Worker:",
+                    error
+                );
+
+
+                item.ocupado =
+                    false;
+
+            };
+
+
+        workers.push(
+            item
+        );
+
+    }
+
+
+    document.querySelector(
+        "#estadoWorkers"
+    ).textContent =
+        "Workers activos: "
+        +
+        workers.length;
+
+}
+
+
+// ============================================================
+// ENVIAR TRABAJO
+// ============================================================
+
+function trabajar(){
+
+    for(
+        const item of workers
+    ){
+
+        if(
+            item.ocupado
+        ){
+            continue;
+        }
+
+
+        item.ocupado =
+            true;
+
+
+        item.worker.postMessage({
+
+            x:
+                raton.x,
+
+            y:
+                raton.y,
+
+            rayos:
+                RAYOS_POR_WORKER,
+
+            muros:
+                muros,
+
+            maxRebotes:
+                MAX_REBOTES,
+
+            reflectancia:
+                REFLECTANCIA,
+
+            probEspecular:
+                PROB_ESPECULAR,
+
+            rugosidad:
+                RUGOSIDAD,
+
+            intensidadMinima:
+                INTENSIDAD_MINIMA
+
+        });
+
+    }
+
+}
+
+
+// ============================================================
+// PINTAR RESULTADOS
+// ============================================================
+
+function pintarSegmentos(
+    segmentos
+){
+
+    actx.globalCompositeOperation =
+        "lighter";
+
+
+    actx.lineWidth =
+        1.4;
+
+
+    // ========================================================
+    // AGRUPAR POR INTENSIDAD APROXIMADA
+    //
+    // En lugar de hacer stroke() individualmente para cada
+    // segmento agrupamos en varios niveles.
+    //
+    // Esto reduce mucho el trabajo del hilo principal.
+    // ========================================================
+
+    const NIVELES = 12;
+
+    const grupos =
+        new Array(
+            NIVELES
+        );
+
+
+    for(
+        let i=0;
+        i<NIVELES;
+        i++
+    ){
+
+        grupos[i] = [];
+
+    }
+
+
+    for(
+        let i=0;
+        i<segmentos.length;
+        i+=5
+    ){
+
+        const intensidad =
+            segmentos[i+4];
+
+
+        let nivel =
+            Math.floor(
+                intensidad
+                *
+                NIVELES
+            );
+
+
+        nivel =
+            Math.max(
+                0,
+                Math.min(
+                    NIVELES-1,
+                    nivel
+                )
+            );
+
+
+        grupos[nivel].push(
+
+            segmentos[i],
+            segmentos[i+1],
+
+            segmentos[i+2],
+            segmentos[i+3]
+
+        );
+
+    }
+
+
+    // ========================================================
+    // DIBUJAR GRUPOS
+    // ========================================================
+
+    for(
+        let nivel=0;
+        nivel<NIVELES;
+        nivel++
+    ){
+
+        const grupo =
+            grupos[nivel];
+
+
+        if(
+            grupo.length === 0
+        ){
+            continue;
+        }
+
+
+        const intensidad =
+            (nivel+0.5)
+            /
+            NIVELES;
+
+
+        const alpha =
+            Math.min(
+                0.15,
+                ALPHA_RAYO
+                *
+                intensidad
+            );
+
+
+        actx.strokeStyle =
+            "rgba(255,210,110,"
+            +
+            alpha
+            +
+            ")";
+
+
+        actx.beginPath();
+
+
+        for(
+            let i=0;
+            i<grupo.length;
+            i+=4
+        ){
+
+            actx.moveTo(
+                grupo[i],
+                grupo[i+1]
+            );
+
+            actx.lineTo(
+                grupo[i+2],
+                grupo[i+3]
+            );
+
+        }
+
+
+        actx.stroke();
+
+    }
+
+}
+
+
+// ============================================================
+// CONTADOR
+// ============================================================
+
+function actualizarContador(){
+
+    document.querySelector(
+        "#muestras"
+    ).textContent =
+        muestras.toLocaleString()
+        +
+        " muestras";
+
+}
+
+
+// ============================================================
+// LIMPIAR ACUMULACIÓN
+// ============================================================
+
+function limpiarAcumulacion(){
+
+    muestras = 0;
+
+
+    actx.globalCompositeOperation =
+        "source-over";
+
+
+    actx.clearRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    actualizarContador();
+
+}
+
+
+// ============================================================
+// DECAY DEL BUFFER
+// ============================================================
+
+function aplicarDecay(){
+
+    if(
+        DECAY <= 0
+    ){
+        return;
+    }
+
+
+    actx.globalCompositeOperation =
+        "source-over";
+
+
+    actx.fillStyle =
+        "rgba(2,2,2,"
+        +
+        DECAY
+        +
+        ")";
+
+
+    actx.fillRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+}
+
+
+// ============================================================
+// RATÓN
+// ============================================================
+
+canvas.addEventListener(
+    "mousemove",
+    function(e){
+
+        const rect =
+            canvas.getBoundingClientRect();
+
+
+        raton.x =
+            e.clientX -
+            rect.left;
+
+        raton.y =
+            e.clientY -
+            rect.top;
+
+
+        // ====================================================
+        // IMPORTANTE
+        //
+        // NO LIMPIAMOS LA ACUMULACIÓN.
+        //
+        // La iluminación anterior permanece en el buffer.
+        // ====================================================
+
+    }
+);
+
+
+// ============================================================
+// DIBUJAR MUROS
+// ============================================================
+
+function dibujarMuros(){
+
+    ctx.lineCap =
+        "round";
+
+    ctx.lineJoin =
+        "round";
+
+
+    // sombra
+
+    ctx.beginPath();
+
+
+    for(
+        const m of muros
+    ){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+
+    ctx.strokeStyle =
+        "#000";
+
+    ctx.lineWidth =
+        14;
+
+    ctx.stroke();
+
+
+    // cuerpo
+
+    ctx.beginPath();
+
+
+    for(
+        const m of muros
+    ){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+
+    ctx.strokeStyle =
+        "#444";
+
+    ctx.lineWidth =
+        7;
+
+    ctx.stroke();
+
+
+    // superficie
+
+    ctx.beginPath();
+
+
+    for(
+        const m of muros
+    ){
+
+        ctx.moveTo(
+            m.x1,
+            m.y1
+        );
+
+        ctx.lineTo(
+            m.x2,
+            m.y2
+        );
+
+    }
+
+
+    ctx.strokeStyle =
+        "#999";
+
+    ctx.lineWidth =
+        2;
+
+    ctx.stroke();
+
+}
+
+
+// ============================================================
+// FUENTE DE LUZ
+// ============================================================
+
+function dibujarFuente(){
+
+    const radio =
+        65;
+
+
+    const gradiente =
+        ctx.createRadialGradient(
+
+            raton.x,
+            raton.y,
+            0,
+
+            raton.x,
+            raton.y,
+            radio
+
+        );
+
+
+    gradiente.addColorStop(
+        0,
+        "rgba(255,255,255,1)"
+    );
+
+    gradiente.addColorStop(
+        0.08,
+        "rgba(255,250,200,1)"
+    );
+
+    gradiente.addColorStop(
+        0.25,
+        "rgba(255,210,80,0.6)"
+    );
+
+    gradiente.addColorStop(
+        0.60,
+        "rgba(255,130,20,0.12)"
+    );
+
+    gradiente.addColorStop(
+        1,
+        "rgba(255,100,0,0)"
+    );
+
+
+    ctx.fillStyle =
+        gradiente;
+
+
+    ctx.beginPath();
+
+    ctx.arc(
+        raton.x,
+        raton.y,
+        radio,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fill();
+
+
+    // núcleo
+
+    ctx.beginPath();
+
+    ctx.arc(
+        raton.x,
+        raton.y,
+        4,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fillStyle =
+        "white";
+
+    ctx.fill();
+
+}
+
+
+// ============================================================
+// RENDER
+// ============================================================
+
+function render(){
+
+    // ========================================================
+    // 1. DAR TRABAJO A TODOS LOS WORKERS LIBRES
+    // ========================================================
+
+    trabajar();
+
+
+    // ========================================================
+    // 2. DECAY TEMPORAL
+    // ========================================================
+
+    aplicarDecay();
+
+
+    // ========================================================
+    // 3. LIMPIAR PANTALLA
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    ctx.fillStyle =
+        "#020202";
+
+
+    ctx.fillRect(
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    // ========================================================
+    // 4. BUFFER ACUMULATIVO
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "lighter";
+
+
+    ctx.drawImage(
+        acumulacion,
+        0,
+        0,
+        W,
+        H
+    );
+
+
+    // ========================================================
+    // 5. MUROS
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    dibujarMuros();
+
+
+    // ========================================================
+    // 6. FUENTE
+    // ========================================================
+
+    ctx.globalCompositeOperation =
+        "lighter";
+
+
+    dibujarFuente();
+
+
+    ctx.globalCompositeOperation =
+        "source-over";
+
+
+    requestAnimationFrame(
+        render
+    );
+
+}
+
+
+// ============================================================
+// CAMBIAR NÚMERO DE WORKERS
+// ============================================================
+
+document.querySelector(
+    "#numeroWorkers"
+).addEventListener(
+    "change",
+    function(){
+
+        crearWorkers();
+
+    }
+);
+
+
+// ============================================================
+// BOTÓN LIMPIAR
+// ============================================================
+
+document.querySelector(
+    "#limpiar"
+).addEventListener(
+    "click",
+    function(){
+
+        limpiarAcumulacion();
+
+    }
+);
+
+
+// ============================================================
+// HARDWARE CONCURRENCY
+// ============================================================
+
+const nucleosDisponibles =
+    navigator.hardwareConcurrency
+    ||
+    "?";
+
+
+document.querySelector(
+    "#hardware"
+).textContent =
+    "hardwareConcurrency: "
+    +
+    nucleosDisponibles;
+
+
+// ============================================================
+// RESIZE
+// ============================================================
+
+window.addEventListener(
+    "resize",
+    redimensionar
+);
+
+
+// ============================================================
+// START
+// ============================================================
+
+redimensionar();
+
+crearWorkers();
+
+render();
+
+</script>
+
+</body>
+</html>

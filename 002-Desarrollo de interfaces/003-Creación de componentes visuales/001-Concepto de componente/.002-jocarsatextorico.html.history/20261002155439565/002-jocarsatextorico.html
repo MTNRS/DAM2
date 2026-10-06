@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <jocarsa-texto></jocarsa-texto>
+  </body>
+  <script>
+    let elementos = document.querySelectorAll("jocarsa-texto");
+		elementos.forEach(function(elemento){
+    	let elementoenmemoria = elemento
+      let contenedor = document.createElement("div")
+      elementoenmemoria.after(contenedor);
+      elemento.remove()
+      let contenedor_rico = document.createElement("article")
+      let contenedor_pobre = document.createElement("textarea")
+      
+    })
+  </script>
+</html>

@@ -1,0 +1,21 @@
+{
+  "modulo": "ventas",
+  "nombre": "Ventas",
+  "tablas": [
+    "presupuestos_venta",
+    "presupuestos_venta_lineas",
+    "pedidos_venta",
+    "pedidos_venta_lineas",
+    "albaranes_venta",
+    "albaranes_venta_lineas",
+    "facturas_venta",
+    "facturas_venta_lineas",
+    "cobros",
+    "terceros",
+    "contactos",
+    "formas_pago",
+    "tarifas",
+    "tarifas_lineas",
+    "productos"
+  ]
+}

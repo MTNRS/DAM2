@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas width=512 height=512></canvas>
+    <script>
+      const lienzo = document.querySelector("canvas")
+      const contexto = lienzo.getContext("2d")
+      class Actor{
+      	constructor(){
+        	this.x = Math.random()*512;
+          this.y = Math.random()*512
+        }
+        dibuja(){
+        	contexto.beginPath()
+          contexto.arc(this.x,this.y,10,0,Math.PI*2)
+          contexto.fill()
+        }
+      }
+      
+      let numeroactores = 20;
+      let actores = []
+      for(let i = 0;i<numeroactores;i++){
+      	actores.push(new Actor())
+      }
+      for(let i = 0;i<actores.length;i++){
+      	actor[i].dibuja()
+        console.log("hola")
+      }
+    </script>
+  </body>
+</html>

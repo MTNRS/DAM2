@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body{
+        font-family:Arial,sans-serif;
+        background:#f5f5f5;
+        margin:0;
+        padding:30px;
+      }
+
+      #conversacion{
+        max-width:700px;
+        margin:auto;
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+        padding-bottom:100px;
+      }
+
+      .bocadillo{
+        padding:12px 18px;
+        border-radius:20px;
+        max-width:70%;
+        line-height:1.4;
+      }
+
+      .yo{
+        background:dodgerblue;
+        color:white;
+        align-self:flex-end;
+        border-bottom-right-radius:5px;
+      }
+
+      .maquina{
+        background:white;
+        align-self:flex-start;
+        border-bottom-left-radius:5px;
+        box-shadow:0 2px 8px #0002;
+      }
+
+      #microfono{
+        position:fixed;
+        right:30px;
+        bottom:30px;
+
+        width:60px;
+        height:60px;
+
+        border:0;
+        border-radius:50%;
+
+        background:dodgerblue;
+        color:white;
+
+        font-size:28px;
+        cursor:pointer;
+
+        box-shadow:0 4px 12px #0004;
+      }
+
+      #microfono:hover{
+        transform:scale(1.1);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="conversacion"></div>
+
+    <button id="microfono" onclick="escuchar()">🎤</button>
+
+    <script>
+
+      function bocadillo(texto, quien){
+
+        let mensaje = document.createElement("div");
+
+        mensaje.classList.add("bocadillo");
+        mensaje.classList.add(quien);
+
+        mensaje.textContent = texto;
+
+        document.querySelector("#conversacion").appendChild(mensaje);
+      }
+
+
+      function escuchar(){
+
+        let reconocimiento = new webkitSpeechRecognition();
+
+        reconocimiento.lang = "es-ES";
+
+
+        reconocimiento.onresult = function(evento){
+
+          // Lo que ha dicho el usuario
+          let texto = evento.results[0][0].transcript;
+
+          console.log(texto);
+
+          // Bocadillo del usuario
+          bocadillo(texto,"yo");
+
+
+          // De momento la máquina simplemente repite
+          let respuesta = texto;
+
+          // Bocadillo de la máquina
+          bocadillo(respuesta,"maquina");
+
+
+          // La máquina habla
+          let mensaje = new SpeechSynthesisUtterance(respuesta);
+
+          mensaje.lang = "es-ES";
+
+          speechSynthesis.speak(mensaje);
+
+        };
+
+
+        reconocimiento.start();
+
+      }
+
+    </script>
+
+  </body>
+</html>

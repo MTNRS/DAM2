@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+  </head>
+  <body>
+    <video src="josevicente.mp4" controls></video>
+    <canvas></canvas>
+    <script>
+      let video = document.querySelector("video")
+      let lienzo = document.querySelector("canvas")
+      lienzo.width = video.width
+      lienzo.height = video.heigth
+      video.ontimeupdate = function(){} 
+    </script>
+	</body>
+</html>

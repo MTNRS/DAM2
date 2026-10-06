@@ -1,0 +1,20 @@
+<script>
+  class CuentaBancaria{
+  	constructor(cliente){
+    	this.saldo = 0;
+      this.cliente = cliente;
+    }
+    dimeSaldo(){
+    	return this.saldo;
+    }
+    dameSaldo(cantidad){
+    	this.saldo -= cantidad
+    }
+    ponSaldo(cantidad){
+    	this.saldo += cantidad
+    }
+  }
+  
+  let cuenta1 = CuentaBancaria("Jose Vicente")
+	cuenta1.ponSaldo(2000)
+</script>

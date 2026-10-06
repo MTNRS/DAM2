@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <body>
+
+    <input id="mensaje" placeholder="Escribe un mensaje">
+    
+    <button id="abrir">Abrir ventana</button>
+    <button id="enviar">Enviar información</button>
+
+    <script>
+      let ventana;
+
+      document.querySelector("#abrir").onclick = function(){
+
+        ventana = window.open(
+          "",
+          "miVentana",
+          "width=600,height=400"
+        );
+
+        ventana.document.write(`
+          <h1>Ventana secundaria</h1>
+          <p id="resultado">Esperando información...</p>
+        `);
+
+      }
+
+      document.querySelector("#enviar").onclick = function(){
+
+        let mensaje = document.querySelector("#mensaje").value;
+
+        ventana.document.querySelector("#resultado").textContent = mensaje;
+
+      }
+    </script>
+
+  </body>
+</html>

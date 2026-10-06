@@ -1,0 +1,19 @@
+<audio src="audio.mp3" controls></audio>
+
+<script>
+let audio = document.querySelector("audio")
+
+let contexto = new AudioContext()
+let fuente = contexto.createMediaElementSource(audio)
+let analizador = contexto.createAnalyser()
+
+fuente.connect(analizador)
+analizador.connect(contexto.destination)
+
+let samples = new Uint8Array(analizador.fftSize)
+
+setInterval(function(){
+    analizador.getByteTimeDomainData(samples)
+    console.log(samples)
+},100)
+</script>

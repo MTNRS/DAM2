@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <input type="text" tipo="dni">
+
+    <script>
+      let dni = document.querySelector('[tipo="dni"]');
+
+      dni.oninput = function(){
+        let patron = /^[0-9]{8}[A-Za-z]$/;
+
+        if(patron.test(dni.value)){
+          console.log("DNI válido");
+        }else{
+          console.log("DNI no válido");
+        }
+      }
+    </script>
+  </body>
+</html>

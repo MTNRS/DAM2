@@ -1,0 +1,109 @@
+Datetime: 2026-09-24T11:48:21.667Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/006-Ejecución de consultas. Manipulación del resultado/015-instalacion-conector-DQL
+Command: make
+
+Result:
+g++ -std=c++20 -O2 -Wall -Wextra -pedantic -fPIC main.cpp JocarsaBBDD.cpp -o jocarsabbdd
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:59:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   59 |    if(A=="SALIR")break;if(A=="AYUDA"){ayuda();continue;}
+      |    ^~
+main.cpp:59:24: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   59 |    if(A=="SALIR")break;if(A=="AYUDA"){ayuda();continue;}
+      |                        ^~
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+JocarsaBBDD.cpp:86:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   86 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+JocarsaBBDD.cpp:86:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   86 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+JocarsaBBDD.cpp:92:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   92 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+JocarsaBBDD.cpp:92:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   92 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+JocarsaBBDD.cpp: In member function ‘bool {anonymous}::ExprDQL::prim()’:
+JocarsaBBDD.cpp:192:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  192 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |   ^~
+JocarsaBBDD.cpp:192:76: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  192 | e())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |                                                               ^~~
+
+JocarsaBBDD.cpp:193:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  193 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |   ^~
+JocarsaBBDD.cpp:193:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  193 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |                          ^~
+JocarsaBBDD.cpp: In member function ‘ResultadoConsulta JocarsaBBDD::consultar(const std::string&) const’:
+JocarsaBBDD.cpp:205:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  205 |  if(!toma("SELECCIONAR"))throw std::runtime_error("La consulta debe comenzar por SELECCIONAR"); bool distinto=toma("DISTINTO");
+      |  ^~
+JocarsaBBDD.cpp:205:97: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  205 | ::runtime_error("La consulta debe comenzar por SELECCIONAR"); bool distinto=toma("DISTINTO");
+      |                                                               ^~~~
+
+JocarsaBBDD.cpp:208:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |  if(!toma("DE")||p>=t.size())throw std::runtime_error("Falta DE tabla");std::string tabla=t[p++].texto;auto esquema=obtenerEsquema(tabla);if(esquema.empty())throw std::runtime_error("Tabla no encontrada: "+tabla);
+      |  ^~
+JocarsaBBDD.cpp:208:73: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 | "DE")||p>=t.size())throw std::runtime_error("Falta DE tabla");std::string tabla=t[p++].texto;auto esquema=obtenerEsquema(tabla);if(esquema.empty())throw std::runtime_error("Tabla no encontrada: "+tabla);
+      |                                                               ^~~
+
+g++ -std=c++20 -O2 -Wall -Wextra -pedantic -fPIC -shared -I/usr/include/python3.12 -I/usr/include/python3.12 conector_python.cpp JocarsaBBDD.cpp -o jocarsabbdd.cpython-312-x86_64-linux-gnu.so
+conector_python.cpp:175:117: warning: missing initializer for member ‘PyModuleDef::m_slots’ [-Wmissing-field-initializers]
+  175 | NIT,"jocarsabbdd","Conector nativo Python para Jocarsa BBDD",-1,Metodos};
+      |                                                                        ^
+
+conector_python.cpp:175:117: warning: missing initializer for member ‘PyModuleDef::m_traverse’ [-Wmissing-field-initializers]
+conector_python.cpp:175:117: warning: missing initializer for member ‘PyModuleDef::m_clear’ [-Wmissing-field-initializers]
+conector_python.cpp:175:117: warning: missing initializer for member ‘PyModuleDef::m_free’ [-Wmissing-field-initializers]
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+JocarsaBBDD.cpp:86:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   86 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+JocarsaBBDD.cpp:86:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   86 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+JocarsaBBDD.cpp:92:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   92 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+JocarsaBBDD.cpp:92:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   92 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+JocarsaBBDD.cpp: In member function ‘bool {anonymous}::ExprDQL::prim()’:
+JocarsaBBDD.cpp:192:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  192 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |   ^~
+JocarsaBBDD.cpp:192:76: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  192 | e())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |                                                               ^~~
+
+JocarsaBBDD.cpp:193:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  193 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |   ^~
+JocarsaBBDD.cpp:193:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  193 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |                          ^~
+JocarsaBBDD.cpp: In member function ‘ResultadoConsulta JocarsaBBDD::consultar(const std::string&) const’:
+JocarsaBBDD.cpp:205:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  205 |  if(!toma("SELECCIONAR"))throw std::runtime_error("La consulta debe comenzar por SELECCIONAR"); bool distinto=toma("DISTINTO");
+      |  ^~
+JocarsaBBDD.cpp:205:97: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  205 | ::runtime_error("La consulta debe comenzar por SELECCIONAR"); bool distinto=toma("DISTINTO");
+      |                                                               ^~~~
+
+JocarsaBBDD.cpp:208:2: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |  if(!toma("DE")||p>=t.size())throw std::runtime_error("Falta DE tabla");std::string tabla=t[p++].texto;auto esquema=obtenerEsquema(tabla);if(esquema.empty())throw std::runtime_error("Tabla no encontrada: "+tabla);
+      |  ^~
+JocarsaBBDD.cpp:208:73: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 | "DE")||p>=t.size())throw std::runtime_error("Falta DE tabla");std::string tabla=t[p++].texto;auto esquema=obtenerEsquema(tabla);if(esquema.empty())throw std::runtime_error("Tabla no encontrada: "+tabla);
+      |                                                               ^~~
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-
+Manejo de conectores/006-Ejecución de consultas. Manipulación del resultado/015-instalacion-conector-DQL$ 

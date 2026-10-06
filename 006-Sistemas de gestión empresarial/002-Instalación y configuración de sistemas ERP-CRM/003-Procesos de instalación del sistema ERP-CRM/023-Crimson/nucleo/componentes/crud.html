@@ -1,0 +1,303 @@
+<script>
+  let tablaActual = "";
+
+  function cabeceraCRUD(tabla,operacion){
+    tablaActual = tabla;
+
+    let titulo = document.querySelector("header h1");
+
+    if(titulo){
+      titulo.textContent = tabla+" · "+operacion;
+    }
+  }
+
+  function comprobarRespuesta(retorno){
+    return retorno.json().then(function(datos){
+      if(!retorno.ok || datos.error){
+        throw new Error(datos.debug || datos.error || "Error en la API");
+      }
+
+      return datos;
+    });
+  }
+
+  function crud(tabla,operacion,id){
+    let principal = document.querySelector("main");
+    principal.innerHTML = "";
+
+    cabeceraCRUD(tabla,operacion);
+
+    if(operacion == "seleccionar"){
+      cargarTablaCRUD(tabla);
+    }
+
+    if(operacion == "insertar"){
+      fetch("api/api.php?bloque=tabla&tabla="+encodeURIComponent(tabla))
+      .then(comprobarRespuesta)
+      .then(function(datos){
+        formularioCRUD(tabla,datos.estructura,null,"insertar");
+      })
+      .catch(mostrarErrorCRUD);
+    }
+
+    if(operacion == "actualizar"){
+      fetch(
+        "api/api.php?bloque=registro&tabla="+encodeURIComponent(tabla)+
+        "&id="+encodeURIComponent(id)
+      )
+      .then(comprobarRespuesta)
+      .then(function(datos){
+        formularioCRUD(tabla,datos.estructura,datos.registro,"actualizar");
+      })
+      .catch(mostrarErrorCRUD);
+    }
+  }
+
+  function cargarTablaCRUD(tabla){
+    let principal = document.querySelector("main");
+
+    fetch("api/api.php?bloque=tabla&tabla="+encodeURIComponent(tabla))
+    .then(comprobarRespuesta)
+    .then(function(datos){
+      let tablahtml = document.createElement("table");
+      let cabecera = document.createElement("tr");
+
+      datos.estructura.forEach(function(campo){
+        let th = document.createElement("th");
+        th.textContent = campo.name;
+        cabecera.appendChild(th);
+      });
+
+      let th = document.createElement("th");
+      th.textContent = "Operaciones";
+      cabecera.appendChild(th);
+
+      tablahtml.appendChild(cabecera);
+
+      datos.contenido.forEach(function(registro){
+        let fila = document.createElement("tr");
+
+        datos.estructura.forEach(function(campo){
+          let td = document.createElement("td");
+          td.textContent = registro[campo.name] ?? "";
+          fila.appendChild(td);
+        });
+
+        let operaciones = document.createElement("td");
+
+        let actualizar = document.createElement("a");
+        actualizar.setAttribute("href","#");
+        actualizar.textContent = "Actualizar";
+
+        actualizar.onclick = function(evento){
+          evento.preventDefault();
+          crud(tabla,"actualizar",registro.Identificador);
+        }
+
+        operaciones.appendChild(actualizar);
+        operaciones.appendChild(document.createTextNode(" "));
+
+        let eliminar = document.createElement("a");
+        eliminar.setAttribute("href","#");
+        eliminar.textContent = "Eliminar";
+
+        eliminar.onclick = function(evento){
+          evento.preventDefault();
+
+          cabeceraCRUD(tabla,"eliminar");
+
+          if(confirm("¿Eliminar el registro "+registro.Identificador+"?")){
+            fetch("api/api.php?bloque=eliminar",{
+              method:"POST",
+              headers:{"Content-Type":"application/json"},
+              body:JSON.stringify({
+                tabla:tabla,
+                Identificador:registro.Identificador
+              })
+            })
+            .then(comprobarRespuesta)
+            .then(function(){
+              crud(tabla,"seleccionar");
+            })
+            .catch(mostrarErrorCRUD);
+          }else{
+            cabeceraCRUD(tabla,"seleccionar");
+          }
+        }
+
+        operaciones.appendChild(eliminar);
+        fila.appendChild(operaciones);
+        tablahtml.appendChild(fila);
+      });
+
+      principal.appendChild(tablahtml);
+    })
+    .catch(mostrarErrorCRUD);
+  }
+
+  function formularioCRUD(tabla,estructura,registro,operacion){
+    let principal = document.querySelector("main");
+    let formulario = document.createElement("form");
+    let tablahtml = document.createElement("table");
+
+    formulario.appendChild(tablahtml);
+    principal.appendChild(formulario);
+
+    let pendientes = [];
+    let foraneas = [];
+
+    estructura.forEach(function(campo){
+      if(campo.name != "Identificador"){
+        let fila = document.createElement("tr");
+
+        let nombre = document.createElement("th");
+        nombre.textContent = campo.name;
+        fila.appendChild(nombre);
+
+        let valor = document.createElement("td");
+        let entrada = document.createElement("input");
+
+        entrada.setAttribute("name",campo.name);
+        entrada.setAttribute("type","text");
+
+        if(registro){
+          entrada.value = registro[campo.name] ?? "";
+        }
+
+        if(campo.fk){
+          let lista = document.createElement("datalist");
+          let idlista = "lista-"+campo.name;
+
+          lista.setAttribute("id",idlista);
+          entrada.setAttribute("list",idlista);
+
+          valor.appendChild(entrada);
+          valor.appendChild(lista);
+
+          let relacion = {
+            campo:campo.name,
+            entrada:entrada,
+            registros:[]
+          };
+
+          foraneas.push(relacion);
+
+          let peticion = fetch(
+            "api/api.php?bloque=opciones&tabla="+encodeURIComponent(campo.fk.tabla)
+          )
+          .then(comprobarRespuesta)
+          .then(function(datos){
+            datos.contenido.forEach(function(registroForaneo){
+              let textos = [];
+
+              datos.estructura.forEach(function(campoForaneo){
+                if(campoForaneo.name != "Identificador"){
+                  let dato = registroForaneo[campoForaneo.name];
+
+                  if(dato !== null && dato !== ""){
+                    textos.push(dato);
+                  }
+                }
+              });
+
+              let texto = textos.length > 0
+                ? textos.join(" · ")
+                : registroForaneo[campo.fk.campo];
+
+              relacion.registros.push({
+                id:registroForaneo[campo.fk.campo],
+                texto:texto
+              });
+
+              let opcion = document.createElement("option");
+              opcion.value = texto;
+              lista.appendChild(opcion);
+
+              if(registro && registro[campo.name] == registroForaneo[campo.fk.campo]){
+                entrada.value = texto;
+              }
+            });
+          });
+
+          pendientes.push(peticion);
+        }else{
+          valor.appendChild(entrada);
+        }
+
+        fila.appendChild(valor);
+        tablahtml.appendChild(fila);
+      }
+    });
+
+    let fila = document.createElement("tr");
+    let nombre = document.createElement("th");
+    nombre.textContent = "Operación";
+    fila.appendChild(nombre);
+
+    let valor = document.createElement("td");
+    let boton = document.createElement("button");
+    boton.setAttribute("type","submit");
+    boton.textContent = operacion == "insertar" ? "Insertar" : "Actualizar";
+    valor.appendChild(boton);
+    fila.appendChild(valor);
+    tablahtml.appendChild(fila);
+
+    formulario.onsubmit = function(evento){
+      evento.preventDefault();
+
+      Promise.all(pendientes)
+      .then(function(){
+        let datos = {
+          tabla:tabla
+        };
+
+        if(registro){
+          datos.Identificador = registro.Identificador;
+        }
+
+        new FormData(formulario).forEach(function(valor,clave){
+          datos[clave] = valor;
+        });
+
+        foraneas.forEach(function(relacion){
+          let encontrado = relacion.registros.find(function(registroForaneo){
+            return registroForaneo.texto == relacion.entrada.value;
+          });
+
+          datos[relacion.campo] = encontrado
+            ? encontrado.id
+            : relacion.entrada.value;
+        });
+
+        fetch("api/api.php?bloque="+operacion,{
+          method:"POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify(datos)
+        })
+        .then(comprobarRespuesta)
+        .then(function(){
+          crud(tabla,"seleccionar");
+        })
+        .catch(mostrarErrorCRUD);
+      });
+    }
+  }
+
+  function crudActual(operacion){
+    if(tablaActual != ""){
+      crud(tablaActual,operacion);
+    }
+  }
+
+  function mostrarErrorCRUD(error){
+    let principal = document.querySelector("main");
+    principal.innerHTML = "";
+
+    let mensaje = document.createElement("pre");
+    mensaje.textContent = "Se ha producido un error:\\n"+error.message;
+    principal.appendChild(mensaje);
+
+    console.log("Se ha producido un error:");
+    console.log(error);
+  }
+</script>

@@ -1,0 +1,6 @@
+Datetime: 2026-09-24T11:06:30.089Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/007-conector para python
+Command: sudo cp jocarsabbdd$(python3-config --extension-suffix) /usr/local/lib/python3.12/dist-packages/
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/007-conector para python$ 

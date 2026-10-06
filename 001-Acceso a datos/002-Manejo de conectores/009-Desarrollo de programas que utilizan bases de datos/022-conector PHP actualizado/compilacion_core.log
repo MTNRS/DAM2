@@ -1,0 +1,76 @@
+$ g++ ...
+
+STDOUT:
+
+STDERR:
+/mnt/data/JocarsaBBDD_actualizado/main.cpp: In function ‘int main(int, char**)’:
+/mnt/data/JocarsaBBDD_actualizado/main.cpp:88:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   88 |    if(A=="SALIR")break;if(A=="AYUDA"){ayuda();continue;}
+      |    ^~
+/mnt/data/JocarsaBBDD_actualizado/main.cpp:88:24: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   88 |    if(A=="SALIR")break;if(A=="AYUDA"){ayuda();continue;}
+      |                        ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::crearVista(const std::string&, const std::string&)’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |     ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:122:63: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 |     if(basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |                                                               ^~~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘std::vector<long long int> JocarsaBBDD::buscarIdsIndice(const std::string&, const std::string&, const std::string&) const’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:143:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  143 |     for(const auto&i:listarIndices(t))if(i.columna==c){std::vector<long long> ids;std::ifstream f(rutaTabla(t,".sidx_"+i.nombre));std::string val;char coma;long long id;while(f>>std::quoted(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |     ^~~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:143:246: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  143 |     for(const auto&i:listarIndices(t))if(i.columna==c){std::vector<long long> ids;std::ifstream f(rutaTabla(t,".sidx_"+i.nombre));std::string val;char coma;long long id;while(f>>std::quoted(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |                                                                                                                                                                                                                                                      ^~~~~~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::iniciarTransaccion()’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:156:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  156 |     if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |     ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:156:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  156 |     if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |                                                            ^~~~~~~~~~~~~~~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::deshacerTransaccion()’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:163:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |     ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:163:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |                                        ^~~~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:208:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:208:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:214:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:214:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘bool {anonymous}::ExprDQL::prim()’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:465:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  465 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |   ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:465:76: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  465 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |                                                                            ^~~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:466:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |   ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:466:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |                          ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp: In member function ‘ResultadoConsulta JocarsaBBDD::consultarInterno(const std::string&, int) const’:
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:524:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  524 |         if(p>=t.size())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |         ^~
+/mnt/data/JocarsaBBDD_actualizado/JocarsaBBDD.cpp:524:74: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  524 |         if(p>=t.size())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |                                                                          ^~~
+
+RETURN_CODE=0

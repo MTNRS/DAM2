@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      let trabajadores = [];
+      let numerodetrabajadores = 8;
+      
+      for(let i = 0;i<numerodetrabajadores;i++){
+      	trabajadores.push(new Worker("trabajador2.js"))
+      }
+      
+      for(let i = 0;i<numerodetrabajadores;i++){
+      	trabjadores[i].postMessage("arranca tu labor")
+      }
+     	
+    </script>
+  </body>
+</html>

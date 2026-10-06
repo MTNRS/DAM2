@@ -1,0 +1,25 @@
+<audio src="0802.mp3" controls></audio>
+<canvas width=800 height=200></canvas>
+
+<script>
+  let lienzo = document.querySelector("canvas")
+  let contextolienzo = lienzo.getContext("2d")
+  fetch("0802.mp3")
+    .then(respuesta => respuesta.arrayBuffer())
+    .then(datos => {
+      let contexto = new AudioContext()
+
+      contexto.decodeAudioData(datos, function(buffer){
+        let samples = buffer.getChannelData(0)
+
+        console.log(samples)
+        let longitud = samples.length;
+        let paso = 800/longitud
+        let medio = 100
+        
+        for(let i = 0;i<longitud;longitud += 10000){
+        	contextolienzo.fillRect(i*paso,medio,1,samples[i])
+        }
+      })
+    })
+</script>

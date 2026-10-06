@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  background:#111;
+
+  font-family:Arial,sans-serif;
+}
+
+
+/* ======================================== */
+/* REPRODUCTOR */
+/* ======================================== */
+
+.jvaudio{
+
+  width:800px;
+  max-width:90vw;
+
+  padding:20px;
+
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  background:white;
+
+  border-radius:18px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5);
+
+  overflow:hidden;
+}
+
+
+/* Ocultamos el reproductor original */
+
+.jvaudio audio{
+  display:none;
+}
+
+
+/* ======================================== */
+/* BOTONES */
+/* ======================================== */
+
+.jvaudio button{
+
+  flex:0 0 44px;
+
+  width:44px;
+  height:44px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#111;
+  color:white;
+
+  font-size:17px;
+
+  cursor:pointer;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+
+.jvaudio button:hover{
+
+  transform:scale(1.08);
+
+  background:#333;
+
+}
+
+
+.jvaudio button:active{
+
+  transform:scale(0.95);
+
+}
+
+
+/* ======================================== */
+/* TIEMPO */
+/* ======================================== */
+
+.tiempo{
+
+  flex:0 0 42px;
+
+  width:42px;
+
+  font-size:12px;
+
+  color:#777;
+
+  text-align:center;
+
+}
+
+
+/* ======================================== */
+/* WAVEFORM */
+/* ======================================== */
+
+.waveform{
+
+  /*
+    Ocupa únicamente el espacio
+    que queda disponible
+  */
+
+  flex:1 1 0;
+
+  min-width:0;
+
+  width:0;
+
+  height:80px;
+
+  display:block;
+
+  cursor:pointer;
+
+}
+
+
+/* ======================================== */
+/* VOLUMEN */
+/* ======================================== */
+
+.volumen{
+
+  flex:0 0 80px;
+
+  width:80px;
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  height:4px;
+
+  background:#ddd;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  outline:none;
+
+}
+
+
+.volumen::-webkit-slider-thumb{
+
+  appearance:none;
+  -webkit-appearance:none;
+
+  width:13px;
+  height:13px;
+
+  border-radius:50%;
+
+  background:#111;
+
+  cursor:pointer;
+
+}
+
+
+.volumen::-moz-range-thumb{
+
+  width:13px;
+  height:13px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#111;
+
+  cursor:pointer;
+
+}
+
+
+/* ======================================== */
+/* RESPONSIVE */
+/* ======================================== */
+
+@media(max-width:600px){
+
+  .jvaudio{
+
+    gap:7px;
+
+    padding:12px;
+
+  }
+
+
+  .jvaudio button{
+
+    flex-basis:36px;
+
+    width:36px;
+    height:36px;
+
+  }
+
+
+  .volumen{
+
+    flex-basis:50px;
+
+    width:50px;
+
+  }
+
+
+  .tiempo{
+
+    flex-basis:35px;
+
+    width:35px;
+
+    font-size:10px;
+
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ======================================== -->
+<!-- AUDIO ORIGINAL -->
+<!-- ======================================== -->
+
+<audio src="0802.mp3"></audio>
+
+
+
+<script>
+
+let audios = document.querySelectorAll("audio")
+
+
+audios.forEach(function(audio){
+
+
+  // ========================================
+  // CONTENEDOR
+  // ========================================
+
+  let contenedor = document.createElement("div")
+
+  contenedor.classList.add("jvaudio")
+
+
+  audio.parentNode.insertBefore(
+    contenedor,
+    audio
+  )
+
+
+  contenedor.appendChild(audio)
+
+
+
+  // ========================================
+  // BOTÓN ATRÁS
+  // ========================================
+
+  let atras = document.createElement("button")
+
+  atras.textContent = "↶"
+
+  atras.title = "Retroceder 5 segundos"
+
+  contenedor.appendChild(atras)
+
+
+
+  // ========================================
+  // BOTÓN PLAY
+  // ========================================
+
+  let reproducir = document.createElement("button")
+
+  reproducir.textContent = "▶"
+
+  reproducir.title = "Reproducir"
+
+  contenedor.appendChild(reproducir)
+
+
+
+  // ========================================
+  // BOTÓN ADELANTE
+  // ========================================
+
+  let adelante = document.createElement("button")
+
+  adelante.textContent = "↷"
+
+  adelante.title = "Avanzar 5 segundos"
+
+  contenedor.appendChild(adelante)
+
+
+
+  // ========================================
+  // TIEMPO
+  // ========================================
+
+  let tiempo = document.createElement("div")
+
+  tiempo.classList.add("tiempo")
+
+  tiempo.textContent = "0:00"
+
+  contenedor.appendChild(tiempo)
+
+
+
+  // ========================================
+  // CANVAS WAVEFORM
+  // ========================================
+
+  let canvas = document.createElement("canvas")
+
+  canvas.height = 80
+
+  canvas.classList.add("waveform")
+
+  contenedor.appendChild(canvas)
+
+
+  let ctx = canvas.getContext("2d")
+
+
+
+  // ========================================
+  // VOLUMEN
+  // ========================================
+
+  let volumen = document.createElement("input")
+
+  volumen.type = "range"
+
+  volumen.min = 0
+  volumen.max = 1
+  volumen.step = 0.01
+  volumen.value = 1
+
+  volumen.classList.add("volumen")
+
+  contenedor.appendChild(volumen)
+
+
+
+  // ========================================
+  // DATOS WAVEFORM
+  // ========================================
+
+  let alturas = []
+
+  let numeroBarras = 90
+
+
+
+  // ========================================
+  // CARGAR AUDIO
+  // ========================================
+
+  fetch(audio.src)
+
+    .then(function(respuesta){
+
+      return respuesta.arrayBuffer()
+
+    })
+
+    .then(function(datos){
+
+      let contextoAudio = new AudioContext()
+
+
+      contextoAudio.decodeAudioData(
+
+        datos,
+
+        function(buffer){
+
+
+          let samples =
+            buffer.getChannelData(0)
+
+
+          let salto =
+            Math.floor(
+              samples.length /
+              numeroBarras
+            )
+
+
+
+          // =================================
+          // CALCULAR ALTURAS
+          // =================================
+
+          for(
+            let barra = 0;
+            barra < numeroBarras;
+            barra++
+          ){
+
+            let maximo = 0
+
+
+            let inicio =
+              barra * salto
+
+
+            let final =
+              Math.min(
+                inicio + salto,
+                samples.length
+              )
+
+
+
+            /*
+              Tomamos aproximadamente
+              100 muestras por barra.
+
+              Así no recorremos millones
+              de samples innecesariamente.
+            */
+
+            let subSalto =
+              Math.max(
+                1,
+                Math.floor(salto / 100)
+              )
+
+
+
+            for(
+              let i = inicio;
+              i < final;
+              i += subSalto
+            ){
+
+              let valor =
+                Math.abs(samples[i])
+
+
+              if(valor > maximo){
+
+                maximo = valor
+
+              }
+
+            }
+
+
+
+            alturas.push(maximo)
+
+          }
+
+
+          dibujar()
+
+        }
+
+      )
+
+    })
+
+
+
+  // ========================================
+  // DIBUJAR WAVEFORM
+  // ========================================
+
+  function dibujar(){
+
+
+    /*
+      Adaptamos la resolución interna
+      del canvas al ancho real disponible.
+    */
+
+    let anchoReal =
+      Math.floor(canvas.clientWidth)
+
+
+    if(anchoReal <= 0){
+      return
+    }
+
+
+    if(canvas.width != anchoReal){
+
+      canvas.width = anchoReal
+
+    }
+
+
+
+    let ancho = canvas.width
+
+    let alto = canvas.height
+
+    let medio = alto / 2
+
+
+
+    // ========================================
+    // CONFIGURACIÓN VISUAL
+    // ========================================
+
+    let separacion = 3
+
+
+
+    /*
+      Restamos primero TODAS las
+      separaciones.
+
+      El espacio restante se divide
+      entre las barras.
+    */
+
+    let espacioSeparaciones =
+      separacion *
+      (numeroBarras - 1)
+
+
+    let anchoBarra =
+      (
+        ancho -
+        espacioSeparaciones
+      )
+      /
+      numeroBarras
+
+
+
+    /*
+      Si el reproductor es extremadamente
+      pequeño reducimos automáticamente
+      la separación.
+    */
+
+    if(anchoBarra < 1){
+
+      separacion = 1
+
+
+      espacioSeparaciones =
+        separacion *
+        (numeroBarras - 1)
+
+
+      anchoBarra =
+        (
+          ancho -
+          espacioSeparaciones
+        )
+        /
+        numeroBarras
+
+    }
+
+
+
+    ctx.clearRect(
+      0,
+      0,
+      ancho,
+      alto
+    )
+
+
+
+    // ========================================
+    // PROGRESO
+    // ========================================
+
+    let progreso = 0
+
+
+    if(
+      audio.duration &&
+      !isNaN(audio.duration)
+    ){
+
+      progreso =
+        audio.currentTime /
+        audio.duration
+
+    }
+
+
+
+    // ========================================
+    // BARRAS
+    // ========================================
+
+    for(
+      let i = 0;
+      i < alturas.length;
+      i++
+    ){
+
+
+      let altura =
+        alturas[i] *
+        medio *
+        0.85
+
+
+
+      // Altura mínima
+
+      altura =
+        Math.max(
+          altura,
+          3
+        )
+
+
+
+      // Posición horizontal
+
+      let x =
+        i *
+        (
+          anchoBarra +
+          separacion
+        )
+
+
+
+      // =====================================
+      // COLOR SEGÚN PROGRESO
+      // =====================================
+
+      if(
+        i / numeroBarras
+        <= progreso
+      ){
+
+        ctx.fillStyle = "#111"
+
+      }else{
+
+        ctx.fillStyle = "#cccccc"
+
+      }
+
+
+
+      // =====================================
+      // BARRA REDONDEADA
+      // =====================================
+
+      ctx.beginPath()
+
+
+      ctx.roundRect(
+
+        x,
+
+        medio - altura,
+
+        Math.max(1,anchoBarra),
+
+        altura * 2,
+
+        Math.max(1,anchoBarra) / 2
+
+      )
+
+
+      ctx.fill()
+
+    }
+
+  }
+
+
+
+  // ========================================
+  // PLAY / PAUSE
+  // ========================================
+
+  reproducir.onclick = function(){
+
+
+    if(audio.paused){
+
+      audio.play()
+
+    }else{
+
+      audio.pause()
+
+    }
+
+  }
+
+
+
+  audio.onplay = function(){
+
+    reproducir.textContent = "❚❚"
+
+  }
+
+
+
+  audio.onpause = function(){
+
+    reproducir.textContent = "▶"
+
+  }
+
+
+
+  audio.onended = function(){
+
+    reproducir.textContent = "▶"
+
+  }
+
+
+
+  // ========================================
+  // ADELANTE
+  // ========================================
+
+  adelante.onclick = function(){
+
+
+    if(!audio.duration){
+      return
+    }
+
+
+    audio.currentTime =
+      Math.min(
+        audio.currentTime + 5,
+        audio.duration
+      )
+
+  }
+
+
+
+  // ========================================
+  // ATRÁS
+  // ========================================
+
+  atras.onclick = function(){
+
+
+    audio.currentTime =
+      Math.max(
+        audio.currentTime - 5,
+        0
+      )
+
+  }
+
+
+
+  // ========================================
+  // VOLUMEN
+  // ========================================
+
+  volumen.oninput = function(){
+
+    audio.volume =
+      this.value
+
+  }
+
+
+
+  // ========================================
+  // ACTUALIZAR REPRODUCCIÓN
+  // ========================================
+
+  audio.ontimeupdate = function(){
+
+
+    dibujar()
+
+
+    tiempo.textContent =
+      formatearTiempo(
+        audio.currentTime
+      )
+
+  }
+
+
+
+  // ========================================
+  // CLICK EN WAVEFORM
+  // ========================================
+
+  canvas.onclick = function(evento){
+
+
+    cambiarPosicion(evento)
+
+  }
+
+
+
+  // ========================================
+  // ARRASTRAR WAVEFORM
+  // ========================================
+
+  let arrastrando = false
+
+
+
+  canvas.onmousedown = function(evento){
+
+    arrastrando = true
+
+    cambiarPosicion(evento)
+
+  }
+
+
+
+  window.addEventListener(
+
+    "mousemove",
+
+    function(evento){
+
+
+      if(arrastrando){
+
+        cambiarPosicion(evento)
+
+      }
+
+    }
+
+  )
+
+
+
+  window.addEventListener(
+
+    "mouseup",
+
+    function(){
+
+      arrastrando = false
+
+    }
+
+  )
+
+
+
+  // ========================================
+  // CAMBIAR POSICIÓN
+  // ========================================
+
+  function cambiarPosicion(evento){
+
+
+    if(
+      !audio.duration ||
+      isNaN(audio.duration)
+    ){
+      return
+    }
+
+
+    let rect =
+      canvas.getBoundingClientRect()
+
+
+    let x =
+      evento.clientX -
+      rect.left
+
+
+
+    // Limitamos al canvas
+
+    x =
+      Math.max(
+        0,
+        Math.min(
+          x,
+          rect.width
+        )
+      )
+
+
+
+    let porcentaje =
+      x /
+      rect.width
+
+
+
+    audio.currentTime =
+      porcentaje *
+      audio.duration
+
+
+    dibujar()
+
+  }
+
+
+
+  // ========================================
+  // FORMATEAR TIEMPO
+  // ========================================
+
+  function formatearTiempo(segundos){
+
+
+    if(isNaN(segundos)){
+      return "0:00"
+    }
+
+
+    let minutos =
+      Math.floor(
+        segundos / 60
+      )
+
+
+    let resto =
+      Math.floor(
+        segundos % 60
+      )
+
+
+    if(resto < 10){
+
+      resto =
+        "0" + resto
+
+    }
+
+
+    return minutos + ":" + resto
+
+  }
+
+
+
+  // ========================================
+  // REDIMENSIONAR
+  // ========================================
+
+  window.addEventListener(
+
+    "resize",
+
+    function(){
+
+      dibujar()
+
+    }
+
+  )
+
+
+})
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<audio src="0802.mp3" controls></audio>
+
+<br><br>
+
+<canvas width="800" height="200"></canvas>
+
+<script>
+let audio = document.querySelector("audio")
+let lienzo = document.querySelector("canvas")
+let ctx = lienzo.getContext("2d")
+
+let alturas = []
+
+fetch("0802.mp3")
+  .then(respuesta => respuesta.arrayBuffer())
+  .then(datos => {
+
+    let contexto = new AudioContext()
+
+    contexto.decodeAudioData(datos, function(buffer){
+
+      let samples = buffer.getChannelData(0)
+
+      let barras = 70
+      let salto = Math.floor(samples.length / barras)
+
+      // Calculamos las alturas una sola vez
+      for(let x = 0; x < barras; x++){
+
+        let maximo = 0
+
+        for(let i = 0; i < salto; i++){
+
+          let valor = Math.abs(
+            samples[x * salto + i]
+          )
+
+          if(valor > maximo){
+            maximo = valor
+          }
+        }
+
+        alturas.push(maximo)
+      }
+
+      dibujar(0)
+    })
+  })
+
+
+function dibujar(progreso){
+
+  let ancho = lienzo.width
+  let alto = lienzo.height
+  let medio = alto / 2
+
+  let barras = alturas.length
+  let separacion = 5
+  let anchoBarra = ancho / barras - separacion
+
+  // Limpiamos canvas
+  ctx.clearRect(0,0,ancho,alto)
+
+  for(let x = 0; x < barras; x++){
+
+    let altura = alturas[x] * medio * 0.85
+
+    // Altura mínima
+    altura = Math.max(altura,4)
+
+    let posicionX = x * (anchoBarra + separacion)
+
+    // ¿Esta barra ya se ha reproducido?
+    if(x / barras < progreso){
+      ctx.fillStyle = "black"
+    }else{
+      ctx.fillStyle = "#cccccc"
+    }
+
+    ctx.beginPath()
+
+    ctx.roundRect(
+      posicionX,
+      medio - altura,
+      anchoBarra,
+      altura * 2,
+      anchoBarra / 2
+    )
+
+    ctx.fill()
+  }
+}
+
+
+// Conforme avanza el audio
+audio.addEventListener("timeupdate", function(){
+
+  let progreso = audio.currentTime / audio.duration
+
+  dibujar(progreso)
+})
+</script>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      console.log("hola");
+			let anchura = window.innerWidth
+      let altura = window.innerHeight;
+      let centrox = anchura/2
+      let centroy = altura/2
+      let cuerpo = document.querySelector("html");
+
+      cuerpo.onmousemove = function(e){
+        console.log(
+          0-centrox+e.offsetX, 
+          0+centroy-e.offsetY);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div id="identidad"></div>
+
+  <h3>Participantes</h3>
+  <div id="participantes"></div>
+
+  <button id="maestro">Soy maestro</button>
+  <button id="esclavo">Soy esclavo</button>
+
+  <script>
+
+    let identidad = null;
+
+    // Hash único para esta pestaña/sesión
+    let hash = crypto.randomUUID();
+
+    let botonmaestro = document.querySelector("#maestro");
+    let botonesclavo = document.querySelector("#esclavo");
+
+    let contenedor_identidad = document.querySelector("#identidad");
+    let contenedor_participantes = document.querySelector("#participantes");
+
+    let temporizador = null;
+
+
+    botonmaestro.onclick = function(){
+
+      identidad = "maestro";
+
+      contenedor_identidad.textContent =
+        "🟢 Maestro - " + hash;
+
+      iniciarLatido();
+
+    };
+
+
+    botonesclavo.onclick = function(){
+
+      identidad = "esclavo";
+
+      contenedor_identidad.textContent =
+        "🔵 Esclavo - " + hash;
+
+      iniciarLatido();
+
+    };
+
+
+    function iniciarLatido(){
+
+      if(temporizador){
+        clearTimeout(temporizador);
+      }
+
+      latido();
+
+    }
+
+
+    async function latido(){
+
+      try{
+
+        if(identidad == "esclavo"){
+
+          // El esclavo comunica que sigue vivo
+          await fetch("servidor.php", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              accion: "latido",
+              hash: hash
+            })
+          });
+
+        }
+
+
+        if(identidad == "maestro"){
+
+          // El maestro pide los esclavos activos
+          let respuesta = await fetch(
+            "servidor.php?accion=participantes"
+          );
+
+          let datos = await respuesta.json();
+
+          mostrarParticipantes(datos);
+
+        }
+
+      }catch(error){
+
+        console.error("Error:", error);
+
+      }
+
+
+      temporizador = setTimeout(latido,1000);
+
+    }
+
+
+    function mostrarParticipantes(datos){
+
+      contenedor_participantes.innerHTML = "";
+
+      datos.forEach(function(participante){
+
+        let elemento = document.createElement("div");
+
+        elemento.textContent =
+          "🔵 " + participante.hash;
+
+        contenedor_participantes.appendChild(elemento);
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>

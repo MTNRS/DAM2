@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html,body{
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      background:#111;
+    }
+
+    canvas{
+      display:block;
+      width:100%;
+      height:100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<canvas></canvas>
+
+<script>
+
+let canvas = document.querySelector("canvas")
+let contexto = canvas.getContext("2d")
+
+function redimensionar(){
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
+
+  // Avisamos a todos los workers
+  for(let worker of workers){
+    worker.postMessage({
+      tipo:"resize",
+      width:canvas.width,
+      height:canvas.height
+    })
+  }
+}
+
+let workers = []
+
+let numeroWorkers = 10
+let seresPorWorker = 1000
+
+// Aquí guardaremos las posiciones
+// recibidas de cada worker
+
+let posiciones = new Array(numeroWorkers)
+
+
+// Crear workers
+
+for(let i = 0; i < numeroWorkers; i++){
+
+  let worker = new Worker("worker.js")
+
+  workers.push(worker)
+
+
+  // Inicializar worker
+
+  worker.postMessage({
+    tipo:"iniciar",
+    cantidad:seresPorWorker,
+    width:window.innerWidth,
+    height:window.innerHeight
+  })
+
+
+  // Recibir posiciones
+
+  worker.onmessage = function(event){
+
+    posiciones[i] = event.data
+
+  }
+
+}
+
+
+redimensionar()
+
+window.addEventListener(
+  "resize",
+  redimensionar
+)
+
+
+
+function dibujar(){
+
+  contexto.fillStyle = "#111"
+
+  contexto.fillRect(
+    0,
+    0,
+    canvas.width,
+    canvas.height
+  )
+
+
+  contexto.fillStyle = "white"
+
+
+  // Dibujamos los resultados
+  // de todos los workers
+
+  for(let grupo of posiciones){
+
+    if(!grupo){
+      continue
+    }
+
+
+    for(let i = 0; i < grupo.length; i += 2){
+
+      contexto.fillRect(
+        grupo[i],
+        grupo[i + 1],
+        2,
+        2
+      )
+
+    }
+
+  }
+
+
+  requestAnimationFrame(dibujar)
+
+}
+
+
+dibujar()
+
+</script>
+
+</body>
+</html>

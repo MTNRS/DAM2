@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Operaciones con Arrays</title>
+</head>
+<body>
+
+    <h1>Operaciones con Arrays en JavaScript</h1>
+
+    <script>
+        let numeros = [8, 3, 12, 5, 20, 7, 2, 15];
+
+        console.log("Array original:");
+        console.log(numeros);
+
+
+        // FILTRADO
+        // Nos quedamos con los números mayores de 5
+
+        let filtrados = numeros.filter(numero => numero > 5);
+
+        console.log("Filtrados:");
+        console.log(filtrados);
+
+
+        // RECOLECCIÓN / TRANSFORMACIÓN
+        // Multiplicamos cada número por 2
+
+        let transformados = numeros.map(numero => numero * 2);
+
+        console.log("Transformados:");
+        console.log(transformados);
+
+
+        // REORDENACIÓN
+        // Ordenamos de menor a mayor
+
+        let ordenados = numeros.toSorted((a, b) => a - b);
+
+        console.log("Ordenados:");
+        console.log(ordenados);
+
+
+        // REDUCCIÓN / AGREGACIÓN
+        // Sumamos todos los números
+
+        let suma = numeros.reduce((acumulador, numero) => {
+            return acumulador + numero;
+        }, 0);
+
+        console.log("Suma:");
+        console.log(suma);
+
+
+        // TODO JUNTO
+
+        let resultado = numeros
+            .filter(numero => numero > 5)
+            .map(numero => numero * 2)
+            .sort((a, b) => a - b)
+            .reduce((acumulador, numero) => acumulador + numero, 0);
+
+        console.log("Resultado final:");
+        console.log(resultado);
+
+    </script>
+
+</body>
+</html>

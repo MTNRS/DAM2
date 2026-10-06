@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MediaPipe Face Detection</title>
+  </head>
+
+  <body>
+
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+
+    <script type="module">
+
+      import {
+        FaceDetector,
+        FilesetResolver
+      } from "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest";
+
+      const video = document.querySelector("#video");
+      const canvas = document.querySelector("#canvas");
+      const ctx = canvas.getContext("2d");
+
+      // Activar webcam
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true
+      });
+
+      video.srcObject = stream;
+
+      // Cargar MediaPipe
+      const vision = await FilesetResolver.forVisionTasks(
+        "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@latest/wasm"
+      );
+
+      const detector = await FaceDetector.createFromOptions(
+        vision,
+        {
+          baseOptions: {
+            modelAssetPath:
+              "https://storage.googleapis.com/mediapipe-models/face_detector/blaze_face_short_range/float16/latest/blaze_face_short_range.tflite"
+          },
+          runningMode: "VIDEO"
+        }
+      );
+
+      video.addEventListener("loadeddata", detectar);
+
+      function detectar(){
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.drawImage(
+          video,
+          0, 0,
+          canvas.width,
+          canvas.height
+        );
+
+        const resultado = detector.detectForVideo(
+          video,
+          performance.now()
+        );
+
+        for(let cara of resultado.detections){
+
+          const caja = cara.boundingBox;
+
+          ctx.strokeStyle = "red";
+          ctx.lineWidth = 3;
+
+          ctx.strokeRect(
+            caja.originX,
+            caja.originY,
+            caja.width,
+            caja.height
+          );
+
+        }
+
+        requestAnimationFrame(detectar);
+      }
+
+    </script>
+
+  </body>
+</html>

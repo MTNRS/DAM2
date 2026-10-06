@@ -1,0 +1,8 @@
+{
+    "modulo": "personas",
+    "nombre": "Personas",
+    "tablas": [
+        "empleados",
+        "usuarios"
+    ]
+}

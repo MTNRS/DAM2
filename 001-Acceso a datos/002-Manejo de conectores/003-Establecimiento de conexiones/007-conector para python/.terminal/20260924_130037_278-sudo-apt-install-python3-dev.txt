@@ -1,0 +1,11 @@
+Datetime: 2026-09-24T11:00:37.278Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/007-conector para python
+Command: sudo apt install python3-dev
+
+Result:
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 100%Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... 0%Creando árbol de dependencias... 0%Creando árbol de dependencias... 50%Creando árbol de dependencias... 50%Creando árbol de dependencias... Hecho
+Leyendo la información de estado... 0%Leyendo la información de estado... 0%Leyendo la información de estado... Hecho
+python3-dev ya está en su versión más reciente (3.12.3-0ubuntu2.1).
+0 actualizados, 0 nuevos se instalarán, 0 para eliminar y 197 no actualizados.
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/007-conector para python$ 

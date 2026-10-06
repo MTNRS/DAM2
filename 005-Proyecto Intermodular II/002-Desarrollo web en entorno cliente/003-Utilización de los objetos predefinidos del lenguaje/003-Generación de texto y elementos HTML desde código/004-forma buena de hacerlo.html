@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <section>
+    </section>
+    <script>
+      let contenedor = document.querySelector("section")
+      for(let i = 0;i<20;i++){
+      	let articulo = document.createElement("article")
+        let titulo = document.createElement("h2")
+        titulo.textContent = "Titulo del articulo"
+        articulo.appendChild(titulo)
+        let texto = document.createElement("p")
+        texto.textContent = "Este es el texto del articulo"
+        articulo.appendChild(texto)
+        contenedor.appendChild(articulo)
+      }
+    </script>
+  </body>
+</html>
