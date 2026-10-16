@@ -1,0 +1,44 @@
+{
+  "nombre": "Javier Castro Molina",
+  "marca": "Perfil 042",
+  "nacimiento": "1994-11-26",
+  "ciudad": "Zaragoza",
+  "email": "curriculum_042@example.com",
+  "web": "https://example.com/curriculum_042",
+  "profesion": "Analista de datos",
+  "experiencia": "17 años",
+  "formacion": [
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "Digital Solutions - Ingeniero de IA",
+    "CloudWorks - Diseñador web",
+    "DataLab - Analista de datos",
+    "TechNova - Administrador de sistemas"
+  ],
+  "lenguajes": [
+    "CSS",
+    "Java",
+    "TypeScript",
+    "PHP",
+    "HTML"
+  ],
+  "tecnologias": [
+    "Moodle",
+    "Apache",
+    "React"
+  ],
+  "idiomas": [
+    "Portugués",
+    "Italiano",
+    "Español",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Desarrollo web",
+    "Análisis de datos",
+    "Bases de datos",
+    "Ciberseguridad",
+    "Administración de sistemas"
+  ]
+}

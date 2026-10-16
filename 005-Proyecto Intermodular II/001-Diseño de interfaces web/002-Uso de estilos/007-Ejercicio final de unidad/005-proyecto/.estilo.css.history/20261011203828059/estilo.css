@@ -1,0 +1,12 @@
+:root{
+	--color_principal:indigo;
+  --color_secundario:orange;
+  --color_terciario:lightgrey;
+  --fuente_principal:Ubuntu;
+  --fuente_secundaria:Ubuntu;
+  --margen_interior:20px;
+  --margen_exterior:20px;
+  --logo:"logo.png";
+}
+*{padding:0px;margin:0px;}
+body{background:var(--color_terciario);}

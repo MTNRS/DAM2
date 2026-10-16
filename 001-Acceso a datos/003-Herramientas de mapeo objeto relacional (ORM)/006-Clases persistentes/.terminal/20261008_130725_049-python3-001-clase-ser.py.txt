@@ -1,0 +1,7 @@
+Datetime: 2026-10-08T11:07:25.049Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes
+Command: python3 001-clase\ ser.py
+
+Result:
+[<__main__.Ser object at 0x772ea3b53d10>, <__main__.Ser object at 0x772ea3b53b30>, <__main__.Ser object at 0x772ea3b53b00>, <__main__.Ser object at 0x772ea3b53c80>, <__main__.Ser object at 0x772ea3b53bc0>, <__main__.Ser object at 0x772ea3b53b90>, <__main__.Ser object at 0x772ea3b53c20>, <__main__.Ser object at 0x772ea3b53bf0>, <__main__.Ser object at 0x772ea3b617f0>, <__main__.Ser object at 0x772ea3b610a0>, <__main__.Ser object at 0x772ea3b61790>, <__main__.Ser object at 0x772ea3b61730>, <__main__.Ser object at 0x772ea3b60350>, <__main__.Ser object at 0x772ea3ba08c0>, <__main__.Ser object at 0x772ea3ba08f0>, <__main__.Ser object at 0x772ea3ba1df0>, <__main__.Ser object at 0x772ea3ba2f30>, <__main__.Ser object at 0x772ea3ba2f60>, <__main__.Ser object at 0x772ea3ba2f90>, <__main__.Ser object at 0x772ea3ba2fc0>]
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes$ 

@@ -1,0 +1,48 @@
+{
+    "nombre": "Ana Ortega Moreno",
+    "marca": "Perfil 074",
+    "nacimiento": "2001-03-21",
+    "ciudad": "Bilbao",
+    "email": "curriculum_074@example.com",
+    "web": "https://example.com/curriculum_074",
+    "profesion": "Administrador de sistemas",
+    "experiencia": "9 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Grado en Matemáticas",
+        "Técnico Superior en DAW"
+    ],
+    "trabajos": [
+        "InnovaSoft - Desarrollador full-stack",
+        "EducaDigital - Especialista en ciberseguridad",
+        "CloudWorks - Especialista en ciberseguridad"
+    ],
+    "lenguajes": [
+        "Python",
+        "SQL",
+        "PHP",
+        "Go",
+        "CSS",
+        "JavaScript",
+        "TypeScript"
+    ],
+    "tecnologias": [
+        "Linux",
+        "PostgreSQL",
+        "Ollama",
+        "Flask",
+        "Git",
+        "AWS",
+        "Docker"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Inglés"
+    ],
+    "especialidades": [
+        "Ciberseguridad",
+        "Administración de sistemas",
+        "Inteligencia artificial",
+        "Análisis de datos"
+    ]
+}

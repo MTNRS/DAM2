@@ -1,0 +1,8 @@
+[
+  {
+  	"titulo":"Este es el titulo de una noticia",
+    "fecha":"2026-10-09",
+    "texto":"Este es el contenido del blog
+  },
+  ...
+]

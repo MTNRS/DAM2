@@ -1,0 +1,43 @@
+{
+  "nombre": "Javier Rubio Herrera",
+  "marca": "Perfil 080",
+  "nacimiento": "1987-09-22",
+  "ciudad": "Madrid",
+  "email": "curriculum_080@example.com",
+  "web": "https://example.com/curriculum_080",
+  "profesion": "Analista de datos",
+  "experiencia": "14 años",
+  "formacion": [
+    "Técnico Superior en DAM"
+  ],
+  "trabajos": [
+    "DataLab - Analista de datos",
+    "CodeFactory - Ingeniero de IA",
+    "InnovaSoft - Administrador de sistemas",
+    "Digital Solutions - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "JavaScript",
+    "C++",
+    "HTML",
+    "Java",
+    "CSS",
+    "Python"
+  ],
+  "tecnologias": [
+    "Ollama",
+    "React",
+    "Moodle"
+  ],
+  "idiomas": [
+    "Alemán",
+    "Francés",
+    "Italiano",
+    "Inglés"
+  ],
+  "especialidades": [
+    "Bases de datos",
+    "Ciberseguridad",
+    "Administración de sistemas"
+  ]
+}

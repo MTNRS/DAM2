@@ -1,0 +1,40 @@
+Datetime: 2026-10-08T11:18:18.345Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes
+Command: python3 005-persistir\ estado.py
+
+Result:
+PARTIDA RECUPERADA
+Seres: 5
+Recogibles: 53
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes/005-persistir estado.py", line 522, in <module>
+    recogible.pintar(imagen)
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes/005-persistir estado.py", line 28, in pintar
+    cv2.circle(
+cv2.error: OpenCV(4.11.0) :-1: error: (-5:Bad argument) in function 'circle'
+> Overload resolution failed:
+>  - Scalar value for argument 'color' is not numeric
+>  - Scalar value for argument 'color' is not numeric
+
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_003-Herramientas de mapeo objeto relacional (ORM)_006-Clases persistentes_005-persistir estado.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes/005-persistir estado.py", line 522, in <module>
+    recogible.pintar(imagen)
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes/005-persistir estado.py", line 28, in pintar
+    cv2.circle(
+cv2.error: OpenCV(4.11.0) :-1: error: (-5:Bad argument) in function 'circle'
+> Overload resolution failed:
+>  - Scalar value for argument 'color' is not numeric
+>  - Scalar value for argument 'color' is not numeric
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes$ 

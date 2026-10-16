@@ -1,0 +1,9 @@
+Datetime: 2026-10-11T17:22:29.015Z
+Working directory: /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)
+Command: php 001-array.php
+
+Result:
+PHP Warning:  Array to string conversion in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/001-array.php on line 4
+Array
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-D
+esarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)$ 

@@ -1,0 +1,229 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>SVG con tooltip personalizado</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+
+    .grafico {
+        position: relative;
+        width: 500px;
+        max-width: 100%;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .barra {
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+
+    .barra:hover {
+        opacity: 0.7;
+    }
+
+    .tooltip {
+        position: absolute;
+        display: none;
+        pointer-events: none;
+        background: #222;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 13px;
+        box-shadow: 0 4px 12px #0004;
+        z-index: 10;
+        min-width: 140px;
+    }
+
+    .tooltip strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Ventas mensuales</h1>
+
+<div class="grafico" id="grafico">
+
+    <svg viewBox="0 0 500 300">
+
+        <!-- Ejes -->
+        <line x1="50" y1="250" x2="470" y2="250"
+              stroke="black" stroke-width="2"/>
+
+        <line x1="50" y1="20" x2="50" y2="250"
+              stroke="black" stroke-width="2"/>
+
+        <!-- Las barras se generan con JavaScript -->
+        <g id="barras"></g>
+
+    </svg>
+
+    <!-- Tooltip HTML personalizado -->
+    <div class="tooltip" id="tooltip"></div>
+
+</div>
+
+<script>
+
+// Datos del gráfico
+const datos = [
+    {
+        mes: "Enero",
+        ventas: 40,
+        color: "steelblue",
+        descripcion: "Inicio del año"
+    },
+    {
+        mes: "Febrero",
+        ventas: 65,
+        color: "seagreen",
+        descripcion: "Crecimiento de ventas"
+    },
+    {
+        mes: "Marzo",
+        ventas: 85,
+        color: "orange",
+        descripcion: "Muy buen rendimiento"
+    },
+    {
+        mes: "Abril",
+        ventas: 55,
+        color: "mediumpurple",
+        descripcion: "Descenso temporal"
+    },
+    {
+        mes: "Mayo",
+        ventas: 95,
+        color: "tomato",
+        descripcion: "Mejor mes del periodo"
+    }
+];
+
+const svgNS = "http://www.w3.org/2000/svg";
+
+const grupo = document.getElementById("barras");
+const tooltip = document.getElementById("tooltip");
+const grafico = document.getElementById("grafico");
+
+// Crear elementos SVG
+function crearSVG(tipo, atributos, texto = null) {
+
+    const elemento = document.createElementNS(svgNS, tipo);
+
+    for (const clave in atributos) {
+        elemento.setAttribute(clave, atributos[clave]);
+    }
+
+    if (texto !== null) {
+        elemento.textContent = texto;
+    }
+
+    return elemento;
+}
+
+// Generar barras
+datos.forEach((dato, indice) => {
+
+    const x = 80 + indice * 80;
+    const altura = dato.ventas * 2;
+    const y = 250 - altura;
+
+    const barra = crearSVG("rect", {
+        x: x,
+        y: y,
+        width: 50,
+        height: altura,
+        fill: dato.color,
+        class: "barra"
+    });
+
+    // Etiqueta del mes
+    const etiqueta = crearSVG("text", {
+        x: x + 25,
+        y: 270,
+        "text-anchor": "middle",
+        "font-size": 12
+    }, dato.mes);
+
+    // Valor encima de la barra
+    const valor = crearSVG("text", {
+        x: x + 25,
+        y: y - 10,
+        "text-anchor": "middle",
+        "font-size": 12
+    }, dato.ventas);
+
+    grupo.appendChild(barra);
+    grupo.appendChild(etiqueta);
+    grupo.appendChild(valor);
+
+    // Mostrar tooltip
+    barra.addEventListener("mouseenter", () => {
+
+        tooltip.replaceChildren();
+
+        const titulo = document.createElement("strong");
+        titulo.textContent = dato.mes;
+
+        const ventas = document.createElement("div");
+        ventas.textContent = "Ventas: " + dato.ventas;
+
+        const descripcion = document.createElement("div");
+        descripcion.textContent = dato.descripcion;
+
+        tooltip.append(titulo, ventas, descripcion);
+        tooltip.style.display = "block";
+
+    });
+
+    // Mover tooltip con el ratón
+    barra.addEventListener("mousemove", (evento) => {
+
+        const rect = grafico.getBoundingClientRect();
+
+        let x = evento.clientX - rect.left + 15;
+        let y = evento.clientY - rect.top - 15;
+
+        // Evitar que salga por la derecha
+        if (x + tooltip.offsetWidth > rect.width) {
+            x = evento.clientX - rect.left
+                - tooltip.offsetWidth - 15;
+        }
+
+        // Evitar que salga por abajo
+        if (y + tooltip.offsetHeight > rect.height) {
+            y = evento.clientY - rect.top
+                - tooltip.offsetHeight - 15;
+        }
+
+        tooltip.style.left = Math.max(0, x) + "px";
+        tooltip.style.top = Math.max(0, y) + "px";
+
+    });
+
+    // Ocultar tooltip
+    barra.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+    });
+
+});
+
+</script>
+
+</body>
+</html>

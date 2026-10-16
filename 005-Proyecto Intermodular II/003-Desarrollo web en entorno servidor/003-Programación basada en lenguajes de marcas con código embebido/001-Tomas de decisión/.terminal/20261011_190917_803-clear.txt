@@ -1,0 +1,7 @@
+Datetime: 2026-10-11T17:09:17.803Z
+Working directory: /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/001-Tomas de decisión
+Command: clear
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-
+Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/001-Tomas de decisión$ 

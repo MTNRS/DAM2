@@ -1,0 +1,36 @@
+*{padding:0px;margin:0px;}
+html,body{width:100%;height:100%;}
+body{
+  background:var(--color_terciario);
+  height:100%;
+	font-family:var(--fuente_principal);
+}
+header{
+  width:100%;
+  height:100%;
+	background-image: var(--fondo_heroe);
+  background-size:cover;
+  padding:cal(var(--margen_interior)*4);
+  display:flex;
+  justify-content:space-between;
+  box-sizing:border-box;
+  color:white;
+}
+
+main,footer{
+	background:white;
+  width:1200px;
+  margin:auto;
+  padding:var(--margen_interior);
+  box-sizing:border-box;
+}
+section{
+	padding:var(--margen_interior);
+}
+nav a{
+	color:inherit;
+  text-decoration:none;
+}
+p{
+	text-align:justify;
+}

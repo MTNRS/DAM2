@@ -1,0 +1,10 @@
+Datetime: 2026-10-15T12:07:41.577Z
+Working directory: /var/www/html/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento
+Command: python3 002-disco\ duro.py
+
+Result:
+CPU: 13.5 %
+RAM: 46.2 %
+Disco: 55.6 %
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/006-Sistemas de gestión em
+presarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento$ 

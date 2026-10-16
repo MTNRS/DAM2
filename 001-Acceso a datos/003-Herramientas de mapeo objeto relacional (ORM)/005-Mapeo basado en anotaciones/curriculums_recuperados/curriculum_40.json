@@ -1,0 +1,46 @@
+{
+    "nombre": "Irene Martínez Ruiz",
+    "marca": "Perfil 040",
+    "nacimiento": "2000-08-21",
+    "ciudad": "Bilbao",
+    "email": "curriculum_040@example.com",
+    "web": "https://example.com/curriculum_040",
+    "profesion": "Diseñador web",
+    "experiencia": "19 años",
+    "formacion": [
+        "Técnico Superior en DAM"
+    ],
+    "trabajos": [
+        "InnovaSoft - Desarrollador de software",
+        "DataLab - Desarrollador de software",
+        "EducaDigital - Ingeniero de IA",
+        "CodeFactory - Diseñador web"
+    ],
+    "lenguajes": [
+        "PHP",
+        "TypeScript",
+        "HTML"
+    ],
+    "tecnologias": [
+        "PostgreSQL",
+        "React",
+        "Linux",
+        "Docker",
+        "SQLite",
+        "MySQL"
+    ],
+    "idiomas": [
+        "Francés",
+        "Italiano",
+        "Inglés",
+        "Español"
+    ],
+    "especialidades": [
+        "Bases de datos",
+        "Administración de sistemas",
+        "Ciberseguridad",
+        "Programación",
+        "Formación profesional",
+        "Automatización"
+    ]
+}

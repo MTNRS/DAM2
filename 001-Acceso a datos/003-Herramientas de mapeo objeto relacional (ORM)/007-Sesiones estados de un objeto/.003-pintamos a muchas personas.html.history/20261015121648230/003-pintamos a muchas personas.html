@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      let lienzo = document.querySelector("canvas")
+      class Persona{
+      	constructor(nombre,posx,posy,hambre,energia) {
+          this.nombre = nombre;
+          this.posx = posx;
+          this.posy = posy;
+          this.hambre = hambre;
+          this.energia = energia;
+        }
+      }
+      let numeropersonas = 20;
+      let personas = [];
+      for(let i = 0;i<numeropersonas;i++){
+      	personas.push(new Persona("",Math.random()*500,Math.random()*500,Math.random(),Math.random()))
+      }
+      console.log(personas)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "nombre": "Irene Sánchez Pérez",
+  "marca": "Perfil 092",
+  "nacimiento": "1972-10-20",
+  "ciudad": "Sevilla",
+  "email": "curriculum_092@example.com",
+  "web": "https://example.com/curriculum_092",
+  "profesion": "Diseñador web",
+  "experiencia": "16 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial",
+    "Técnico Superior en DAW"
+  ],
+  "trabajos": [
+    "InnovaSoft - Especialista en ciberseguridad",
+    "DataLab - Analista de datos"
+  ],
+  "lenguajes": [
+    "Java",
+    "TypeScript",
+    "Go",
+    "SQL",
+    "C++",
+    "Python"
+  ],
+  "tecnologias": [
+    "AWS",
+    "Flask",
+    "Docker",
+    "React",
+    "PostgreSQL",
+    "MySQL"
+  ],
+  "idiomas": [
+    "Italiano",
+    "Alemán",
+    "Francés",
+    "Inglés"
+  ],
+  "especialidades": [
+    "Programación",
+    "Administración de sistemas",
+    "Formación profesional",
+    "Bases de datos"
+  ]
+}

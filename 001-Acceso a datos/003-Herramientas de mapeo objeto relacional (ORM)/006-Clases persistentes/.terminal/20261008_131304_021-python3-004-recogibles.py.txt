@@ -1,0 +1,6 @@
+Datetime: 2026-10-08T11:13:04.021Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes
+Command: python3 004-recogibles.py
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes$ 

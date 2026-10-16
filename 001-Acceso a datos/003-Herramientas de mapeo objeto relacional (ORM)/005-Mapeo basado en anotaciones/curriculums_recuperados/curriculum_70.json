@@ -1,0 +1,40 @@
+{
+    "nombre": "Marta Martínez Ruiz",
+    "marca": "Perfil 070",
+    "nacimiento": "2002-12-12",
+    "ciudad": "Valencia",
+    "email": "curriculum_070@example.com",
+    "web": "https://example.com/curriculum_070",
+    "profesion": "Profesor de informática",
+    "experiencia": "14 años",
+    "formacion": [
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "CodeFactory - Especialista en ciberseguridad",
+        "CloudWorks - Ingeniero de IA"
+    ],
+    "lenguajes": [
+        "C++",
+        "CSS",
+        "TypeScript"
+    ],
+    "tecnologias": [
+        "Flask",
+        "React",
+        "Ollama",
+        "PostgreSQL"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Bases de datos",
+        "Formación profesional",
+        "Análisis de datos",
+        "Automatización",
+        "Programación",
+        "Ciberseguridad"
+    ]
+}

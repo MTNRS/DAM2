@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      function jocarsa-asinc(archivo,formato){
+      	fetch(archivo)
+        .then(function(resultado){return resultado.text()})
+        .then(function(datos){
+          document.querySelector("body").textContent = datos
+        })	
+      }
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+{
+  "nombre": "Hugo García López",
+  "marca": "Perfil 037",
+  "nacimiento": "1975-05-15",
+  "ciudad": "Málaga",
+  "email": "curriculum_037@example.com",
+  "web": "https://example.com/curriculum_037",
+  "profesion": "Desarrollador full-stack",
+  "experiencia": "20 años",
+  "formacion": [
+    "Técnico Superior en DAW",
+    "Técnico Superior en DAM"
+  ],
+  "trabajos": [
+    "InnovaSoft - Especialista en ciberseguridad",
+    "DataLab - Profesor de informática"
+  ],
+  "lenguajes": [
+    "Go",
+    "CSS",
+    "C++",
+    "Python",
+    "PHP"
+  ],
+  "tecnologias": [
+    "PostgreSQL",
+    "Linux",
+    "Git",
+    "SQLite",
+    "Moodle",
+    "Apache"
+  ],
+  "idiomas": [
+    "Alemán",
+    "Portugués"
+  ],
+  "especialidades": [
+    "Bases de datos",
+    "Programación",
+    "Inteligencia artificial",
+    "Administración de sistemas",
+    "Análisis de datos"
+  ]
+}

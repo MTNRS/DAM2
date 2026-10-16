@@ -1,0 +1,40 @@
+{
+    "nombre": "Ana Sánchez Pérez",
+    "marca": "Perfil 044",
+    "nacimiento": "1987-08-17",
+    "ciudad": "Barcelona",
+    "email": "curriculum_044@example.com",
+    "web": "https://example.com/curriculum_044",
+    "profesion": "Especialista en ciberseguridad",
+    "experiencia": "3 años",
+    "formacion": [
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "CodeFactory - Desarrollador de software",
+        "TechNova - Especialista en ciberseguridad",
+        "EducaDigital - Ingeniero de IA"
+    ],
+    "lenguajes": [
+        "HTML",
+        "PHP",
+        "SQL",
+        "TypeScript"
+    ],
+    "tecnologias": [
+        "Flask",
+        "Apache",
+        "AWS"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Español"
+    ],
+    "especialidades": [
+        "Ciberseguridad",
+        "Desarrollo web",
+        "Análisis de datos",
+        "Administración de sistemas",
+        "Inteligencia artificial"
+    ]
+}

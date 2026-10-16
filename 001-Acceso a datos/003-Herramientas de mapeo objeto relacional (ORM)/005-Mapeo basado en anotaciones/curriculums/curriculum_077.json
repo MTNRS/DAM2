@@ -1,0 +1,44 @@
+{
+  "nombre": "Álvaro Castro Molina",
+  "marca": "Perfil 077",
+  "nacimiento": "1990-10-13",
+  "ciudad": "Málaga",
+  "email": "curriculum_077@example.com",
+  "web": "https://example.com/curriculum_077",
+  "profesion": "Profesor de informática",
+  "experiencia": "12 años",
+  "formacion": [
+    "Máster en Ciberseguridad",
+    "Técnico Superior en DAW"
+  ],
+  "trabajos": [
+    "DataLab - Profesor de informática",
+    "Digital Solutions - Analista de datos",
+    "CodeFactory - Ingeniero de IA",
+    "Sistemas Levante - Profesor de informática"
+  ],
+  "lenguajes": [
+    "C++",
+    "PHP",
+    "JavaScript",
+    "CSS"
+  ],
+  "tecnologias": [
+    "React",
+    "Ollama",
+    "Git",
+    "MySQL"
+  ],
+  "idiomas": [
+    "Francés",
+    "Portugués",
+    "Inglés",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Automatización",
+    "Desarrollo web",
+    "Inteligencia artificial",
+    "Ciberseguridad"
+  ]
+}

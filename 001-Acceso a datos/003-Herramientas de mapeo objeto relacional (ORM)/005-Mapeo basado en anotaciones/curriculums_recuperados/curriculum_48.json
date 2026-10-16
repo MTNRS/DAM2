@@ -1,0 +1,46 @@
+{
+    "nombre": "Daniel Martínez Ruiz",
+    "marca": "Perfil 048",
+    "nacimiento": "1997-10-27",
+    "ciudad": "Barcelona",
+    "email": "curriculum_048@example.com",
+    "web": "https://example.com/curriculum_048",
+    "profesion": "Diseñador web",
+    "experiencia": "11 años",
+    "formacion": [
+        "Ingeniería Informática"
+    ],
+    "trabajos": [
+        "CloudWorks - Especialista en ciberseguridad",
+        "DataLab - Analista de datos",
+        "EducaDigital - Desarrollador full-stack"
+    ],
+    "lenguajes": [
+        "CSS",
+        "Python",
+        "SQL",
+        "C++",
+        "Java"
+    ],
+    "tecnologias": [
+        "Git",
+        "Linux",
+        "Apache",
+        "Ollama",
+        "Flask"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Inglés",
+        "Español",
+        "Francés"
+    ],
+    "especialidades": [
+        "Programación",
+        "Desarrollo web",
+        "Automatización",
+        "Bases de datos",
+        "Ciberseguridad",
+        "Formación profesional"
+    ]
+}

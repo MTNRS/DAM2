@@ -1,0 +1,308 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Gráfico SVG desde JSON</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+    }
+
+    .grafico {
+        position: relative;
+        width: 600px;
+        max-width: 100%;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    .barra {
+        cursor: pointer;
+        transition: opacity 0.2s;
+    }
+
+    .barra:hover {
+        opacity: 0.7;
+    }
+
+    .tooltip {
+        display: none;
+        position: absolute;
+        pointer-events: none;
+        background: #222;
+        color: white;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 13px;
+        box-shadow: 0 4px 12px #0004;
+        z-index: 10;
+    }
+
+    .tooltip strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 15px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Ventas mensuales</h1>
+
+<!-- JSON INCRUSTADO EN EL HTML -->
+
+<script type="application/json" id="datos-grafico">
+{
+    "titulo": "Ventas mensuales",
+    "unidad": "unidades",
+    "datos": [
+        {
+            "mes": "Enero",
+            "ventas": 40,
+            "color": "steelblue",
+            "descripcion": "Inicio del año"
+        },
+        {
+            "mes": "Febrero",
+            "ventas": 65,
+            "color": "seagreen",
+            "descripcion": "Crecimiento de ventas"
+        },
+        {
+            "mes": "Marzo",
+            "ventas": 85,
+            "color": "orange",
+            "descripcion": "Muy buen rendimiento"
+        },
+        {
+            "mes": "Abril",
+            "ventas": 55,
+            "color": "mediumpurple",
+            "descripcion": "Descenso temporal"
+        },
+        {
+            "mes": "Mayo",
+            "ventas": 95,
+            "color": "tomato",
+            "descripcion": "Mejor mes del periodo"
+        }
+    ]
+}
+</script>
+
+<div class="grafico" id="grafico">
+
+    <h2 id="titulo-grafico"></h2>
+
+    <svg id="svg-grafico" viewBox="0 0 600 320">
+        <g id="barras"></g>
+    </svg>
+
+    <div class="tooltip" id="tooltip"></div>
+
+</div>
+
+<script>
+
+// 1. LEER EL JSON INCRUSTADO
+
+const configuracion = JSON.parse(
+    document.getElementById("datos-grafico").textContent
+);
+
+const datos = configuracion.datos;
+
+document.getElementById("titulo-grafico").textContent =
+    configuracion.titulo;
+
+
+// 2. REFERENCIAS
+
+const svgNS = "http://www.w3.org/2000/svg";
+
+const svg = document.getElementById("svg-grafico");
+const grupo = document.getElementById("barras");
+const tooltip = document.getElementById("tooltip");
+const grafico = document.getElementById("grafico");
+
+
+// 3. FUNCIÓN PARA CREAR ELEMENTOS SVG
+
+function crearSVG(tipo, atributos, texto = null) {
+
+    const elemento = document.createElementNS(svgNS, tipo);
+
+    for (const clave in atributos) {
+        elemento.setAttribute(clave, atributos[clave]);
+    }
+
+    if (texto !== null) {
+        elemento.textContent = texto;
+    }
+
+    return elemento;
+}
+
+
+// 4. CONFIGURACIÓN DEL GRÁFICO
+
+const baseY = 260;
+const alturaMaxima = 210;
+
+const valorMaximo = Math.max(
+    ...datos.map(dato => dato.ventas),
+    1
+);
+
+const anchoGrafico = 600;
+const margenIzquierdo = 60;
+const margenDerecho = 20;
+
+const espacioDisponible =
+    anchoGrafico - margenIzquierdo - margenDerecho;
+
+const anchoCelda = espacioDisponible / datos.length;
+const anchoBarra = anchoCelda * 0.6;
+
+
+// 5. DIBUJAR EJES
+
+grupo.appendChild(crearSVG("line", {
+    x1: margenIzquierdo,
+    y1: baseY,
+    x2: anchoGrafico - margenDerecho,
+    y2: baseY,
+    stroke: "black",
+    "stroke-width": 2
+}));
+
+grupo.appendChild(crearSVG("line", {
+    x1: margenIzquierdo,
+    y1: 30,
+    x2: margenIzquierdo,
+    y2: baseY,
+    stroke: "black",
+    "stroke-width": 2
+}));
+
+
+// 6. GENERAR LAS BARRAS DESDE EL JSON
+
+datos.forEach((dato, indice) => {
+
+    const x = margenIzquierdo
+        + indice * anchoCelda
+        + (anchoCelda - anchoBarra) / 2;
+
+    const altura =
+        dato.ventas / valorMaximo * alturaMaxima;
+
+    const y = baseY - altura;
+
+    const barra = crearSVG("rect", {
+        x: x,
+        y: y,
+        width: anchoBarra,
+        height: altura,
+        fill: dato.color,
+        class: "barra",
+        rx: 3
+    });
+
+    const etiqueta = crearSVG("text", {
+        x: x + anchoBarra / 2,
+        y: baseY + 22,
+        "text-anchor": "middle",
+        "font-size": 12
+    }, dato.mes);
+
+    const valor = crearSVG("text", {
+        x: x + anchoBarra / 2,
+        y: y - 10,
+        "text-anchor": "middle",
+        "font-size": 12
+    }, dato.ventas);
+
+    grupo.appendChild(barra);
+    grupo.appendChild(etiqueta);
+    grupo.appendChild(valor);
+
+
+    // 7. TOOLTIP PERSONALIZADO
+
+    barra.addEventListener("mouseenter", () => {
+
+        tooltip.replaceChildren();
+
+        const titulo = document.createElement("strong");
+        titulo.textContent = dato.mes;
+
+        const ventas = document.createElement("div");
+        ventas.textContent =
+            "Ventas: " + dato.ventas + " " + configuracion.unidad;
+
+        const porcentaje = document.createElement("div");
+        porcentaje.textContent =
+            "Porcentaje del máximo: "
+            + (dato.ventas / valorMaximo * 100).toFixed(1)
+            + "%";
+
+        const descripcion = document.createElement("div");
+        descripcion.textContent = dato.descripcion;
+
+        tooltip.append(
+            titulo,
+            ventas,
+            porcentaje,
+            descripcion
+        );
+
+        tooltip.style.display = "block";
+
+    });
+
+
+    // 8. SEGUIR AL RATÓN
+
+    barra.addEventListener("mousemove", (evento) => {
+
+        const rect = grafico.getBoundingClientRect();
+
+        let x = evento.clientX - rect.left + 15;
+        let y = evento.clientY - rect.top - 15;
+
+        if (x + tooltip.offsetWidth > rect.width) {
+            x = evento.clientX - rect.left
+                - tooltip.offsetWidth - 15;
+        }
+
+        if (y + tooltip.offsetHeight > rect.height) {
+            y = evento.clientY - rect.top
+                - tooltip.offsetHeight - 15;
+        }
+
+        tooltip.style.left = Math.max(0, x) + "px";
+        tooltip.style.top = Math.max(0, y) + "px";
+
+    });
+
+
+    // 9. OCULTAR TOOLTIP
+
+    barra.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+    });
+
+});
+
+</script>
+
+</body>
+</html>

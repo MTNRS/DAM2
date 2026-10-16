@@ -1,0 +1,158 @@
+
+[
+  {
+    "titulo": "Mi experiencia como profesor de programación",
+    "fecha": "2026-10-09",
+    "texto": "En este artículo comparto algunas reflexiones sobre mi trabajo como profesor de informática, los retos de enseñar programación y la satisfacción de acompañar a los estudiantes durante su aprendizaje."
+  },
+  {
+    "titulo": "Cómo empecé a programar",
+    "fecha": "2026-10-08",
+    "texto": "A lo largo de mi trayectoria he aprendido que la mejor manera de dominar una tecnología es construir proyectos reales, experimentar y resolver los problemas que aparecen durante el desarrollo."
+  },
+  {
+    "titulo": "La inteligencia artificial en mis clases",
+    "fecha": "2026-10-07",
+    "texto": "La combinación de programación, automatización e inteligencia artificial ofrece nuevas posibilidades para crear herramientas educativas y mejorar los procesos de trabajo."
+  },
+  {
+    "titulo": "Mis proyectos con Python y Flask",
+    "fecha": "2026-10-06",
+    "texto": "En mis proyectos intento combinar tecnologías sencillas, interfaces prácticas y soluciones que puedan ejecutarse en servidores propios sin depender necesariamente de servicios externos."
+  },
+  {
+    "titulo": "Por qué sigo utilizando PHP",
+    "fecha": "2026-10-05",
+    "texto": "PHP continúa siendo una herramienta muy útil para construir aplicaciones web. Me permite desarrollar sistemas de gestión, conectar bases de datos y crear servicios que funcionan en mis propios servidores."
+  },
+  {
+    "titulo": "El futuro de la formación profesional",
+    "fecha": "2026-10-04",
+    "texto": "La formación profesional debe evolucionar al mismo ritmo que las tecnologías. Considero fundamental que los alumnos aprendan mediante proyectos, conozcan herramientas actuales y desarrollen autonomía."
+  },
+  {
+    "titulo": "Cómo enseñar bases de datos",
+    "fecha": "2026-10-03",
+    "texto": "Cuando explico bases de datos, intento relacionar los conceptos con situaciones reales. Crear tablas de clientes, productos y pedidos ayuda a comprender las relaciones y las consultas SQL."
+  },
+  {
+    "titulo": "Mis primeros pasos con Linux",
+    "fecha": "2026-10-02",
+    "texto": "Linux es una parte importante de mi entorno de trabajo. Utilizo Ubuntu para programar, administrar servidores, automatizar procesos y experimentar con nuevas tecnologías."
+  },
+  {
+    "titulo": "Automatizar tareas con Python",
+    "fecha": "2026-10-01",
+    "texto": "Una de las aplicaciones que más me interesan de Python es la automatización. Con pequeños programas podemos procesar archivos, generar informes, organizar información y ahorrar muchas horas de trabajo."
+  },
+  {
+    "titulo": "Desarrollando aplicaciones con JOCARSA",
+    "fecha": "2026-09-30",
+    "texto": "JOCARSA reúne diferentes proyectos de desarrollo de software. Mi objetivo es construir aplicaciones prácticas para resolver necesidades relacionadas con educación, administración y productividad."
+  },
+  {
+    "titulo": "Aprender Java desde cero",
+    "fecha": "2026-09-29",
+    "texto": "Java es un lenguaje excelente para introducir conceptos de programación orientada a objetos. Las clases, los constructores y los métodos permiten explicar cómo organizar programas complejos."
+  },
+  {
+    "titulo": "La importancia de practicar programación",
+    "fecha": "2026-09-28",
+    "texto": "Programar no consiste únicamente en memorizar instrucciones. Es necesario escribir código, cometer errores, interpretar mensajes del compilador y encontrar soluciones de manera independiente."
+  },
+  {
+    "titulo": "Creando plataformas educativas",
+    "fecha": "2026-09-27",
+    "texto": "Desarrollar una plataforma educativa implica gestionar alumnos, profesores, asignaturas, entregas y calificaciones. Me interesa especialmente simplificar estos procesos mediante aplicaciones web."
+  },
+  {
+    "titulo": "Cómo utilizo SQLite en mis proyectos",
+    "fecha": "2026-09-26",
+    "texto": "SQLite permite desarrollar aplicaciones con bases de datos sin necesidad de instalar un servidor independiente. Es una opción muy práctica para prototipos y numerosas herramientas de gestión."
+  },
+  {
+    "titulo": "Mi experiencia con Moodle",
+    "fecha": "2026-09-25",
+    "texto": "Moodle ofrece numerosas posibilidades para organizar contenidos, actividades y evaluaciones. La integración con aplicaciones externas permite ampliar sus funciones y adaptar la plataforma a necesidades concretas."
+  },
+  {
+    "titulo": "Desarrollar interfaces web modernas",
+    "fecha": "2026-09-24",
+    "texto": "Una aplicación no debe limitarse a funcionar correctamente. También necesita una interfaz clara, adaptable a diferentes pantallas y fácil de utilizar por personas con distintos conocimientos técnicos."
+  },
+  {
+    "titulo": "El papel de JavaScript en la web",
+    "fecha": "2026-09-23",
+    "texto": "JavaScript permite transformar páginas estáticas en aplicaciones interactivas. Desde validar formularios hasta consultar APIs mediante fetch, ofrece herramientas esenciales para el desarrollo web."
+  },
+  {
+    "titulo": "Inteligencia artificial ejecutada en local",
+    "fecha": "2026-09-22",
+    "texto": "Ejecutar modelos de inteligencia artificial en equipos propios permite experimentar con asistentes, generación de contenidos y sistemas de consulta documental. Herramientas como Ollama facilitan este proceso."
+  },
+  {
+    "titulo": "Cómo preparar una clase de programación",
+    "fecha": "2026-09-21",
+    "texto": "Cuando preparo una clase, intento comenzar con un ejemplo sencillo y aumentar progresivamente su complejidad. El objetivo es que los estudiantes comprendan cada paso antes de abordar problemas mayores."
+  },
+  {
+    "titulo": "El valor del software libre",
+    "fecha": "2026-09-20",
+    "texto": "El software libre proporciona oportunidades para estudiar cómo funcionan las aplicaciones, adaptar herramientas y compartir conocimientos. Es especialmente interesante en entornos educativos."
+  },
+  {
+    "titulo": "Programación orientada a objetos",
+    "fecha": "2026-09-19",
+    "texto": "La programación orientada a objetos ayuda a representar entidades mediante clases, atributos y métodos. Utilizar ejemplos como clientes, productos o vehículos facilita comprender estos conceptos."
+  },
+  {
+    "titulo": "Creando herramientas para profesores",
+    "fecha": "2026-09-18",
+    "texto": "Muchas tareas docentes requieren organizar información, registrar asistencia y calcular calificaciones. Desarrollar herramientas específicas puede ayudar a reducir el trabajo administrativo."
+  },
+  {
+    "titulo": "Cómo gestionar proyectos de software",
+    "fecha": "2026-09-17",
+    "texto": "Dividir un proyecto en pequeñas funcionalidades permite avanzar de manera ordenada. Primero diseño una estructura básica, después implemento las funciones principales y finalmente mejoro la experiencia de usuario."
+  },
+  {
+    "titulo": "La importancia de la ciberseguridad",
+    "fecha": "2026-09-16",
+    "texto": "La seguridad debe estar presente desde el comienzo de cualquier desarrollo. Controlar permisos, proteger contraseñas, validar entradas y revisar registros son medidas fundamentales."
+  },
+  {
+    "titulo": "Procesamiento de vídeo con FFmpeg",
+    "fecha": "2026-09-15",
+    "texto": "FFmpeg es una herramienta muy potente para trabajar con archivos multimedia. Permite convertir formatos, comprimir grabaciones, modificar resoluciones y preparar vídeos para su publicación."
+  },
+  {
+    "titulo": "Transcripción automática con Whisper",
+    "fecha": "2026-09-14",
+    "texto": "La transcripción automática permite convertir grabaciones de clases en documentos de texto y subtítulos. Esto facilita consultar contenidos y generar materiales educativos a partir de vídeos."
+  },
+  {
+    "titulo": "Diseñando sistemas multiusuario",
+    "fecha": "2026-09-13",
+    "texto": "Cuando una aplicación debe utilizarse por diferentes personas, resulta necesario gestionar autenticación, roles y permisos. Una buena arquitectura permite mantener separados los datos de cada usuario."
+  },
+  {
+    "titulo": "Mi laboratorio de desarrollo en Ubuntu",
+    "fecha": "2026-09-12",
+    "texto": "Mi entorno de desarrollo combina herramientas de programación, servidores web, bases de datos y modelos de inteligencia artificial. Disponer de un laboratorio propio facilita experimentar y probar ideas."
+  },
+  {
+    "titulo": "Consejos para futuros programadores",
+    "fecha": "2026-09-11",
+    "texto": "Mi principal consejo para quienes comienzan a programar es desarrollar proyectos propios. La curiosidad, la constancia y la capacidad de resolver problemas son tan importantes como conocer un lenguaje."
+  },
+  {
+    "titulo": "Lo que quiero construir en el futuro",
+    "fecha": "2026-09-10",
+    "texto": "Me interesa continuar desarrollando aplicaciones educativas, sistemas de automatización y herramientas basadas en inteligencia artificial. La tecnología ofrece continuamente nuevas oportunidades para aprender y crear."
+  },
+  {
+    "titulo": "Por qué me gusta enseñar informática",
+    "fecha": "2026-09-09",
+    "texto": "La enseñanza de la informática combina dos actividades que considero especialmente interesantes: comprender cómo funciona la tecnología y ayudar a otras personas a desarrollar sus propias capacidades."
+  }
+]

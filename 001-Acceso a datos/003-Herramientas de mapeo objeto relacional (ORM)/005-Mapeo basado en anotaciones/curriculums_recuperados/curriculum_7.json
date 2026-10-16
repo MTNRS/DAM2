@@ -1,0 +1,44 @@
+{
+    "nombre": "Raúl Vidal Serrano",
+    "marca": "Perfil 007",
+    "nacimiento": "1978-07-06",
+    "ciudad": "Bilbao",
+    "email": "curriculum_007@example.com",
+    "web": "https://example.com/curriculum_007",
+    "profesion": "Desarrollador full-stack",
+    "experiencia": "8 años",
+    "formacion": [
+        "Técnico Superior en DAW"
+    ],
+    "trabajos": [
+        "InnovaSoft - Desarrollador de software",
+        "TechNova - Profesor de informática",
+        "CodeFactory - Administrador de sistemas",
+        "CloudWorks - Analista de datos"
+    ],
+    "lenguajes": [
+        "CSS",
+        "Go",
+        "Java",
+        "HTML",
+        "TypeScript",
+        "Python"
+    ],
+    "tecnologias": [
+        "Ollama",
+        "Linux",
+        "AWS",
+        "Moodle"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Francés",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Inteligencia artificial",
+        "Formación profesional",
+        "Bases de datos",
+        "Programación"
+    ]
+}

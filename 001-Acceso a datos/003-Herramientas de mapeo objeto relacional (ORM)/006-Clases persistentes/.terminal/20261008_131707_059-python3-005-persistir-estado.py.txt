@@ -1,0 +1,8 @@
+Datetime: 2026-10-08T11:17:07.059Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes
+Command: python3 005-persistir\ estado.py
+
+Result:
+NUEVA SIMULACIÓN
+PARTIDA GUARDADA CORRECTAMENTE
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes$ 

@@ -1,0 +1,20 @@
+import json
+import sqlite3
+
+archivo = open("curriculum1.json", 'r')
+contenido_json = json.load(archivo)
+
+conexion = sqlite3.connect("curriculum1.db")
+cursor = conexion.cursor()
+
+claves = []
+valores = []
+
+for clave, valor in contenido_json.items():
+    claves.append(clave)
+    valores.append(valor)
+    
+print(claves)
+print(valores)
+
+archivo.close()

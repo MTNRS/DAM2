@@ -1,0 +1,43 @@
+{
+    "nombre": "David Castro Molina",
+    "marca": "Perfil 022",
+    "nacimiento": "1996-10-20",
+    "ciudad": "Sevilla",
+    "email": "curriculum_022@example.com",
+    "web": "https://example.com/curriculum_022",
+    "profesion": "Especialista en ciberseguridad",
+    "experiencia": "15 años",
+    "formacion": [
+        "Técnico Superior en DAM",
+        "Máster en Inteligencia Artificial"
+    ],
+    "trabajos": [
+        "CloudWorks - Desarrollador de software",
+        "Sistemas Levante - Profesor de informática",
+        "Digital Solutions - Administrador de sistemas"
+    ],
+    "lenguajes": [
+        "C++",
+        "PHP",
+        "JavaScript",
+        "TypeScript"
+    ],
+    "tecnologias": [
+        "React",
+        "Apache",
+        "MySQL",
+        "Linux"
+    ],
+    "idiomas": [
+        "Francés",
+        "Italiano",
+        "Portugués"
+    ],
+    "especialidades": [
+        "Programación",
+        "Inteligencia artificial",
+        "Desarrollo web",
+        "Administración de sistemas",
+        "Análisis de datos"
+    ]
+}

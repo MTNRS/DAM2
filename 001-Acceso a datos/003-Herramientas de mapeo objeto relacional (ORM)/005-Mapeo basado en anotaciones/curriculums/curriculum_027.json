@@ -1,0 +1,46 @@
+{
+  "nombre": "David Vidal Serrano",
+  "marca": "Perfil 027",
+  "nacimiento": "1976-09-15",
+  "ciudad": "Valencia",
+  "email": "curriculum_027@example.com",
+  "web": "https://example.com/curriculum_027",
+  "profesion": "Analista de datos",
+  "experiencia": "14 años",
+  "formacion": [
+    "Grado en Desarrollo de Software",
+    "Ingeniería Informática",
+    "Técnico Superior en DAW"
+  ],
+  "trabajos": [
+    "CodeFactory - Especialista en ciberseguridad",
+    "CloudWorks - Profesor de informática",
+    "Sistemas Levante - Ingeniero de IA"
+  ],
+  "lenguajes": [
+    "HTML",
+    "SQL",
+    "CSS",
+    "Go",
+    "C++",
+    "Python",
+    "TypeScript"
+  ],
+  "tecnologias": [
+    "Git",
+    "AWS",
+    "Moodle",
+    "SQLite"
+  ],
+  "idiomas": [
+    "Español",
+    "Francés",
+    "Portugués",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Ciberseguridad",
+    "Desarrollo web",
+    "Administración de sistemas"
+  ]
+}

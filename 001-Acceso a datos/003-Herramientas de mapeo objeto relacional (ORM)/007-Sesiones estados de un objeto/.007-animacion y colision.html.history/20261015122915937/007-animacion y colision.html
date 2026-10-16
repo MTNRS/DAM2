@@ -1,0 +1,317 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulación de personas con sensores</title>
+  <style>
+    body {
+      background: #eee;
+      font-family: Arial, sans-serif;
+    }
+
+    canvas {
+      background: white;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<canvas></canvas>
+
+<script>
+  let lienzo = document.querySelector("canvas");
+  let contexto = lienzo.getContext("2d");
+
+  let anchura = 700;
+  let altura = 700;
+
+  lienzo.width = anchura;
+  lienzo.height = altura;
+
+  const DOS_PI = Math.PI * 2;
+
+  class Persona {
+
+    constructor(nombre, posx, posy, hambre, energia, angulo) {
+      this.nombre = nombre;
+      this.posx = posx;
+      this.posy = posy;
+      this.hambre = hambre;
+      this.energia = energia;
+      this.angulo = angulo;
+
+      this.velocidad = 1 + Math.random() * 1.5;
+      this.radio = 5;
+
+      this.sensores = [];
+
+      // Entre 2 y 5 sensores
+      let numeroSensores = Math.floor(Math.random() * 4) + 2;
+
+      for (let i = 0; i < numeroSensores; i++) {
+
+        this.sensores.push({
+
+          // Orientación relativa a la dirección principal
+          angulo: (Math.random() - 0.5) * Math.PI,
+
+          // Longitud del sensor
+          longitud: 30 + Math.random() * 20,
+
+          // Giro al detectar una colisión
+          // Entre -0.08 y +0.08 radianes por fotograma
+          giro: (Math.random() - 0.5) * 0.16,
+
+          // Estado actual
+          colision: false
+        });
+
+      }
+    }
+
+    // =====================================
+    // DETECCIÓN DE COLISIONES
+    // =====================================
+
+    detectarColisiones(personas) {
+
+      for (let sensor of this.sensores) {
+
+        sensor.colision = false;
+
+        let anguloSensor = this.angulo + sensor.angulo;
+
+        // Comprobamos varios puntos del sensor
+        for (let distancia = 5; distancia <= sensor.longitud; distancia += 3) {
+
+          let x = this.posx + Math.cos(anguloSensor) * distancia;
+          let y = this.posy + Math.sin(anguloSensor) * distancia;
+
+          // Colisión con los bordes
+          if (
+            x < 0 ||
+            x > anchura ||
+            y < 0 ||
+            y > altura
+          ) {
+            sensor.colision = true;
+            break;
+          }
+
+          // Colisión con otros personajes
+          for (let otra of personas) {
+
+            if (otra === this) continue;
+
+            let dx = x - otra.posx;
+            let dy = y - otra.posy;
+
+            let distanciaCuadrada = dx * dx + dy * dy;
+
+            if (distanciaCuadrada < otra.radio * otra.radio) {
+              sensor.colision = true;
+              break;
+            }
+          }
+
+          if (sensor.colision) break;
+        }
+      }
+    }
+
+    // =====================================
+    // ACTUALIZACIÓN
+    // =====================================
+
+    actualiza(personas) {
+
+      this.detectarColisiones(personas);
+
+      // Cada sensor activado aporta su propio giro
+      for (let sensor of this.sensores) {
+
+        if (sensor.colision) {
+          this.angulo += sensor.giro;
+        }
+
+      }
+
+      // Movimiento hacia delante
+      this.posx += Math.cos(this.angulo) * this.velocidad;
+      this.posy += Math.sin(this.angulo) * this.velocidad;
+
+      // Impedir que salga del canvas
+      this.posx = Math.max(
+        this.radio,
+        Math.min(anchura - this.radio, this.posx)
+      );
+
+      this.posy = Math.max(
+        this.radio,
+        Math.min(altura - this.radio, this.posy)
+      );
+
+      // Consumo de energía
+      this.energia = Math.max(
+        0,
+        this.energia - 0.00002
+      );
+
+      // Incremento de hambre
+      this.hambre = Math.min(
+        1,
+        this.hambre + 0.00002
+      );
+
+    }
+
+    // =====================================
+    // DIBUJAR
+    // =====================================
+
+    dibuja(contexto) {
+
+      // SENSORES
+      for (let sensor of this.sensores) {
+
+        let anguloSensor = this.angulo + sensor.angulo;
+
+        contexto.beginPath();
+        contexto.moveTo(this.posx, this.posy);
+
+        contexto.lineTo(
+          this.posx + Math.cos(anguloSensor) * sensor.longitud,
+          this.posy + Math.sin(anguloSensor) * sensor.longitud
+        );
+
+        contexto.strokeStyle = sensor.colision
+          ? "orange"
+          : "rgba(0, 100, 255, 0.5)";
+
+        contexto.lineWidth = sensor.colision ? 2 : 1;
+        contexto.stroke();
+      }
+
+      // ARCO ENERGÍA
+      contexto.beginPath();
+      contexto.arc(
+        this.posx,
+        this.posy,
+        12,
+        -Math.PI / 2,
+        -Math.PI / 2 + this.energia * DOS_PI
+      );
+      contexto.strokeStyle = "green";
+      contexto.lineWidth = 3;
+      contexto.stroke();
+
+      // ARCO HAMBRE
+      contexto.beginPath();
+      contexto.arc(
+        this.posx,
+        this.posy,
+        17,
+        -Math.PI / 2,
+        -Math.PI / 2 + this.hambre * DOS_PI
+      );
+      contexto.strokeStyle = "red";
+      contexto.lineWidth = 3;
+      contexto.stroke();
+
+      // CUERPO
+      contexto.fillStyle = "black";
+      contexto.fillRect(
+        this.posx - 5,
+        this.posy - 5,
+        10,
+        10
+      );
+
+      // DIRECCIÓN PRINCIPAL
+      let longitud = 30;
+
+      let puntaX = this.posx + Math.cos(this.angulo) * longitud;
+      let puntaY = this.posy + Math.sin(this.angulo) * longitud;
+
+      contexto.strokeStyle = "black";
+      contexto.lineWidth = 2;
+
+      contexto.beginPath();
+      contexto.moveTo(this.posx, this.posy);
+      contexto.lineTo(puntaX, puntaY);
+      contexto.stroke();
+
+      // PUNTA DE FLECHA
+      let tamanoPunta = 8;
+      let apertura = Math.PI / 6;
+
+      contexto.beginPath();
+
+      contexto.moveTo(puntaX, puntaY);
+      contexto.lineTo(
+        puntaX - Math.cos(this.angulo - apertura) * tamanoPunta,
+        puntaY - Math.sin(this.angulo - apertura) * tamanoPunta
+      );
+
+      contexto.moveTo(puntaX, puntaY);
+      contexto.lineTo(
+        puntaX - Math.cos(this.angulo + apertura) * tamanoPunta,
+        puntaY - Math.sin(this.angulo + apertura) * tamanoPunta
+      );
+
+      contexto.stroke();
+    }
+  }
+
+  // =====================================
+  // CREAR PERSONAS
+  // =====================================
+
+  let numeropersonas = 20;
+  let personas = [];
+
+  for (let i = 0; i < numeropersonas; i++) {
+
+    personas.push(
+      new Persona(
+        "Persona " + (i + 1),
+        30 + Math.random() * (anchura - 60),
+        30 + Math.random() * (altura - 60),
+        Math.random(),
+        Math.random(),
+        Math.random() * DOS_PI
+      )
+    );
+
+  }
+
+  // =====================================
+  // BUCLE DE ANIMACIÓN
+  // =====================================
+
+  function animar() {
+
+    contexto.clearRect(0, 0, anchura, altura);
+
+    // Actualizar posiciones y sensores
+    personas.forEach(persona => {
+      persona.actualiza(personas);
+    });
+
+    // Dibujar personajes
+    personas.forEach(persona => {
+      persona.dibuja(contexto);
+    });
+
+    requestAnimationFrame(animar);
+  }
+
+  animar();
+
+  console.log(personas);
+
+</script>
+</body>
+</html>

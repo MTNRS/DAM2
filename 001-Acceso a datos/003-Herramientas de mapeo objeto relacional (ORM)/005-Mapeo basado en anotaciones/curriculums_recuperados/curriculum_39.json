@@ -1,0 +1,43 @@
+{
+    "nombre": "Sara Castro Molina",
+    "marca": "Perfil 039",
+    "nacimiento": "1975-07-28",
+    "ciudad": "Bilbao",
+    "email": "curriculum_039@example.com",
+    "web": "https://example.com/curriculum_039",
+    "profesion": "Ingeniero de IA",
+    "experiencia": "8 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Grado en Desarrollo de Software"
+    ],
+    "trabajos": [
+        "InnovaSoft - Administrador de sistemas",
+        "CloudWorks - Ingeniero de IA"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "Java",
+        "PHP",
+        "CSS",
+        "Go"
+    ],
+    "tecnologias": [
+        "MySQL",
+        "PostgreSQL",
+        "AWS",
+        "Apache"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Francés"
+    ],
+    "especialidades": [
+        "Ciberseguridad",
+        "Administración de sistemas",
+        "Análisis de datos",
+        "Automatización",
+        "Desarrollo web",
+        "Bases de datos"
+    ]
+}

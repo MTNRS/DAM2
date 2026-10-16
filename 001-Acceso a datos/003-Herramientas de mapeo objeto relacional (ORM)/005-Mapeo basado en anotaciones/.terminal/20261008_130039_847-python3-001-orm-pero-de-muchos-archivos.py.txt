@@ -1,0 +1,2653 @@
+Datetime: 2026-10-08T11:00:39.847Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/005-Mapeo basado en anotaciones
+Command: python3 001-orm\ pero\ de\ muchos\ archivos.py
+
+Result:
+ARCHIVOS ENCONTRADOS: 100
+BASE DE DATOS: curriculums.db
+------------------------------------------------------------
+
+[1/100] PROCESANDO: curriculum_001.json
+NUEVA COLUMNA: curriculum nombre
+NUEVA COLUMNA: curriculum marca
+NUEVA COLUMNA: curriculum nacimiento
+NUEVA COLUMNA: curriculum ciudad
+NUEVA COLUMNA: curriculum email
+NUEVA COLUMNA: curriculum web
+NUEVA COLUMNA: curriculum profesion
+NUEVA COLUMNA: curriculum experiencia
+INSERTADO: curriculum ID: 1
+NUEVA COLUMNA: curriculum_formacion valor
+INSERTADO: curriculum_formacion ID: 1
+NUEVA COLUMNA: curriculum_trabajos valor
+INSERTADO: curriculum_trabajos ID: 1
+INSERTADO: curriculum_trabajos ID: 2
+INSERTADO: curriculum_trabajos ID: 3
+NUEVA COLUMNA: curriculum_lenguajes valor
+INSERTADO: curriculum_lenguajes ID: 1
+INSERTADO: curriculum_lenguajes ID: 2
+INSERTADO: curriculum_lenguajes ID: 3
+INSERTADO: curriculum_lenguajes ID: 4
+INSERTADO: curriculum_lenguajes ID: 5
+INSERTADO: curriculum_lenguajes ID: 6
+INSERTADO: curriculum_lenguajes ID: 7
+NUEVA COLUMNA: curriculum_tecnologias valor
+INSERTADO: curriculum_tecnologias ID: 1
+INSERTADO: curriculum_tecnologias ID: 2
+INSERTADO: curriculum_tecnologias ID: 3
+NUEVA COLUMNA: curriculum_idiomas valor
+INSERTADO: curriculum_idiomas ID: 1
+INSERTADO: curriculum_idiomas ID: 2
+INSERTADO: curriculum_idiomas ID: 3
+NUEVA COLUMNA: curriculum_especialidades valor
+INSERTADO: curriculum_especialidades ID: 1
+INSERTADO: curriculum_especialidades ID: 2
+INSERTADO: curriculum_especialidades ID: 3
+OK: curriculum_001.json
+
+[2/100] PROCESANDO: curriculum_002.json
+INSERTADO: curriculum ID: 2
+INSERTADO: curriculum_formacion ID: 2
+INSERTADO: curriculum_trabajos ID: 4
+INSERTADO: curriculum_trabajos ID: 5
+INSERTADO: curriculum_trabajos ID: 6
+INSERTADO: curriculum_lenguajes ID: 8
+INSERTADO: curriculum_lenguajes ID: 9
+INSERTADO: curriculum_lenguajes ID: 10
+INSERTADO: curriculum_lenguajes ID: 11
+INSERTADO: curriculum_lenguajes ID: 12
+INSERTADO: curriculum_tecnologias ID: 4
+INSERTADO: curriculum_tecnologias ID: 5
+INSERTADO: curriculum_tecnologias ID: 6
+INSERTADO: curriculum_tecnologias ID: 7
+INSERTADO: curriculum_tecnologias ID: 8
+INSERTADO: curriculum_tecnologias ID: 9
+INSERTADO: curriculum_idiomas ID: 4
+INSERTADO: curriculum_idiomas ID: 5
+INSERTADO: curriculum_idiomas ID: 6
+INSERTADO: curriculum_idiomas ID: 7
+INSERTADO: curriculum_especialidades ID: 4
+INSERTADO: curriculum_especialidades ID: 5
+INSERTADO: curriculum_especialidades ID: 6
+INSERTADO: curriculum_especialidades ID: 7
+OK: curriculum_002.json
+
+[3/100] PROCESANDO: curriculum_003.json
+INSERTADO: curriculum ID: 3
+INSERTADO: curriculum_formacion ID: 3
+INSERTADO: curriculum_formacion ID: 4
+INSERTADO: curriculum_trabajos ID: 7
+INSERTADO: curriculum_trabajos ID: 8
+INSERTADO: curriculum_trabajos ID: 9
+INSERTADO: curriculum_trabajos ID: 10
+INSERTADO: curriculum_lenguajes ID: 13
+INSERTADO: curriculum_lenguajes ID: 14
+INSERTADO: curriculum_lenguajes ID: 15
+INSERTADO: curriculum_lenguajes ID: 16
+INSERTADO: curriculum_tecnologias ID: 10
+INSERTADO: curriculum_tecnologias ID: 11
+INSERTADO: curriculum_tecnologias ID: 12
+INSERTADO: curriculum_tecnologias ID: 13
+INSERTADO: curriculum_tecnologias ID: 14
+INSERTADO: curriculum_tecnologias ID: 15
+INSERTADO: curriculum_tecnologias ID: 16
+INSERTADO: curriculum_idiomas ID: 8
+INSERTADO: curriculum_idiomas ID: 9
+INSERTADO: curriculum_idiomas ID: 10
+INSERTADO: curriculum_especialidades ID: 8
+INSERTADO: curriculum_especialidades ID: 9
+INSERTADO: curriculum_especialidades ID: 10
+INSERTADO: curriculum_especialidades ID: 11
+OK: curriculum_003.json
+
+[4/100] PROCESANDO: curriculum_004.json
+INSERTADO: curriculum ID: 4
+INSERTADO: curriculum_formacion ID: 5
+INSERTADO: curriculum_formacion ID: 6
+INSERTADO: curriculum_trabajos ID: 11
+INSERTADO: curriculum_trabajos ID: 12
+INSERTADO: curriculum_trabajos ID: 13
+INSERTADO: curriculum_lenguajes ID: 17
+INSERTADO: curriculum_lenguajes ID: 18
+INSERTADO: curriculum_lenguajes ID: 19
+INSERTADO: curriculum_lenguajes ID: 20
+INSERTADO: curriculum_lenguajes ID: 21
+INSERTADO: curriculum_tecnologias ID: 17
+INSERTADO: curriculum_tecnologias ID: 18
+INSERTADO: curriculum_tecnologias ID: 19
+INSERTADO: curriculum_tecnologias ID: 20
+INSERTADO: curriculum_tecnologias ID: 21
+INSERTADO: curriculum_idiomas ID: 11
+INSERTADO: curriculum_idiomas ID: 12
+INSERTADO: curriculum_idiomas ID: 13
+INSERTADO: curriculum_especialidades ID: 12
+INSERTADO: curriculum_especialidades ID: 13
+INSERTADO: curriculum_especialidades ID: 14
+INSERTADO: curriculum_especialidades ID: 15
+INSERTADO: curriculum_especialidades ID: 16
+OK: curriculum_004.json
+
+[5/100] PROCESANDO: curriculum_005.json
+INSERTADO: curriculum ID: 5
+INSERTADO: curriculum_formacion ID: 7
+INSERTADO: curriculum_formacion ID: 8
+INSERTADO: curriculum_formacion ID: 9
+INSERTADO: curriculum_trabajos ID: 14
+INSERTADO: curriculum_trabajos ID: 15
+INSERTADO: curriculum_trabajos ID: 16
+INSERTADO: curriculum_trabajos ID: 17
+INSERTADO: curriculum_lenguajes ID: 22
+INSERTADO: curriculum_lenguajes ID: 23
+INSERTADO: curriculum_lenguajes ID: 24
+INSERTADO: curriculum_lenguajes ID: 25
+INSERTADO: curriculum_lenguajes ID: 26
+INSERTADO: curriculum_lenguajes ID: 27
+INSERTADO: curriculum_tecnologias ID: 22
+INSERTADO: curriculum_tecnologias ID: 23
+INSERTADO: curriculum_tecnologias ID: 24
+INSERTADO: curriculum_idiomas ID: 14
+INSERTADO: curriculum_idiomas ID: 15
+INSERTADO: curriculum_idiomas ID: 16
+INSERTADO: curriculum_idiomas ID: 17
+INSERTADO: curriculum_especialidades ID: 17
+INSERTADO: curriculum_especialidades ID: 18
+INSERTADO: curriculum_especialidades ID: 19
+OK: curriculum_005.json
+
+[6/100] PROCESANDO: curriculum_006.json
+INSERTADO: curriculum ID: 6
+INSERTADO: curriculum_formacion ID: 10
+INSERTADO: curriculum_formacion ID: 11
+INSERTADO: curriculum_formacion ID: 12
+INSERTADO: curriculum_trabajos ID: 18
+INSERTADO: curriculum_trabajos ID: 19
+INSERTADO: curriculum_trabajos ID: 20
+INSERTADO: curriculum_trabajos ID: 21
+INSERTADO: curriculum_lenguajes ID: 28
+INSERTADO: curriculum_lenguajes ID: 29
+INSERTADO: curriculum_lenguajes ID: 30
+INSERTADO: curriculum_lenguajes ID: 31
+INSERTADO: curriculum_lenguajes ID: 32
+INSERTADO: curriculum_tecnologias ID: 25
+INSERTADO: curriculum_tecnologias ID: 26
+INSERTADO: curriculum_tecnologias ID: 27
+INSERTADO: curriculum_idiomas ID: 18
+INSERTADO: curriculum_idiomas ID: 19
+INSERTADO: curriculum_especialidades ID: 20
+INSERTADO: curriculum_especialidades ID: 21
+INSERTADO: curriculum_especialidades ID: 22
+OK: curriculum_006.json
+
+[7/100] PROCESANDO: curriculum_007.json
+INSERTADO: curriculum ID: 7
+INSERTADO: curriculum_formacion ID: 13
+INSERTADO: curriculum_trabajos ID: 22
+INSERTADO: curriculum_trabajos ID: 23
+INSERTADO: curriculum_trabajos ID: 24
+INSERTADO: curriculum_trabajos ID: 25
+INSERTADO: curriculum_lenguajes ID: 33
+INSERTADO: curriculum_lenguajes ID: 34
+INSERTADO: curriculum_lenguajes ID: 35
+INSERTADO: curriculum_lenguajes ID: 36
+INSERTADO: curriculum_lenguajes ID: 37
+INSERTADO: curriculum_lenguajes ID: 38
+INSERTADO: curriculum_tecnologias ID: 28
+INSERTADO: curriculum_tecnologias ID: 29
+INSERTADO: curriculum_tecnologias ID: 30
+INSERTADO: curriculum_tecnologias ID: 31
+INSERTADO: curriculum_idiomas ID: 20
+INSERTADO: curriculum_idiomas ID: 21
+INSERTADO: curriculum_idiomas ID: 22
+INSERTADO: curriculum_especialidades ID: 23
+INSERTADO: curriculum_especialidades ID: 24
+INSERTADO: curriculum_especialidades ID: 25
+INSERTADO: curriculum_especialidades ID: 26
+OK: curriculum_007.json
+
+[8/100] PROCESANDO: curriculum_008.json
+INSERTADO: curriculum ID: 8
+INSERTADO: curriculum_formacion ID: 14
+INSERTADO: curriculum_formacion ID: 15
+INSERTADO: curriculum_trabajos ID: 26
+INSERTADO: curriculum_trabajos ID: 27
+INSERTADO: curriculum_lenguajes ID: 39
+INSERTADO: curriculum_lenguajes ID: 40
+INSERTADO: curriculum_lenguajes ID: 41
+INSERTADO: curriculum_tecnologias ID: 32
+INSERTADO: curriculum_tecnologias ID: 33
+INSERTADO: curriculum_tecnologias ID: 34
+INSERTADO: curriculum_tecnologias ID: 35
+INSERTADO: curriculum_tecnologias ID: 36
+INSERTADO: curriculum_tecnologias ID: 37
+INSERTADO: curriculum_idiomas ID: 23
+INSERTADO: curriculum_idiomas ID: 24
+INSERTADO: curriculum_idiomas ID: 25
+INSERTADO: curriculum_idiomas ID: 26
+INSERTADO: curriculum_especialidades ID: 27
+INSERTADO: curriculum_especialidades ID: 28
+INSERTADO: curriculum_especialidades ID: 29
+INSERTADO: curriculum_especialidades ID: 30
+OK: curriculum_008.json
+
+[9/100] PROCESANDO: curriculum_009.json
+INSERTADO: curriculum ID: 9
+INSERTADO: curriculum_formacion ID: 16
+INSERTADO: curriculum_formacion ID: 17
+INSERTADO: curriculum_formacion ID: 18
+INSERTADO: curriculum_trabajos ID: 28
+INSERTADO: curriculum_trabajos ID: 29
+INSERTADO: curriculum_trabajos ID: 30
+INSERTADO: curriculum_trabajos ID: 31
+INSERTADO: curriculum_lenguajes ID: 42
+INSERTADO: curriculum_lenguajes ID: 43
+INSERTADO: curriculum_lenguajes ID: 44
+INSERTADO: curriculum_lenguajes ID: 45
+INSERTADO: curriculum_lenguajes ID: 46
+INSERTADO: curriculum_tecnologias ID: 38
+INSERTADO: curriculum_tecnologias ID: 39
+INSERTADO: curriculum_tecnologias ID: 40
+INSERTADO: curriculum_tecnologias ID: 41
+INSERTADO: curriculum_tecnologias ID: 42
+INSERTADO: curriculum_tecnologias ID: 43
+INSERTADO: curriculum_tecnologias ID: 44
+INSERTADO: curriculum_idiomas ID: 27
+INSERTADO: curriculum_idiomas ID: 28
+INSERTADO: curriculum_especialidades ID: 31
+INSERTADO: curriculum_especialidades ID: 32
+INSERTADO: curriculum_especialidades ID: 33
+INSERTADO: curriculum_especialidades ID: 34
+OK: curriculum_009.json
+
+[10/100] PROCESANDO: curriculum_010.json
+INSERTADO: curriculum ID: 10
+INSERTADO: curriculum_formacion ID: 19
+INSERTADO: curriculum_formacion ID: 20
+INSERTADO: curriculum_formacion ID: 21
+INSERTADO: curriculum_trabajos ID: 32
+INSERTADO: curriculum_trabajos ID: 33
+INSERTADO: curriculum_lenguajes ID: 47
+INSERTADO: curriculum_lenguajes ID: 48
+INSERTADO: curriculum_lenguajes ID: 49
+INSERTADO: curriculum_lenguajes ID: 50
+INSERTADO: curriculum_tecnologias ID: 45
+INSERTADO: curriculum_tecnologias ID: 46
+INSERTADO: curriculum_tecnologias ID: 47
+INSERTADO: curriculum_idiomas ID: 29
+INSERTADO: curriculum_idiomas ID: 30
+INSERTADO: curriculum_idiomas ID: 31
+INSERTADO: curriculum_idiomas ID: 32
+INSERTADO: curriculum_especialidades ID: 35
+INSERTADO: curriculum_especialidades ID: 36
+INSERTADO: curriculum_especialidades ID: 37
+INSERTADO: curriculum_especialidades ID: 38
+OK: curriculum_010.json
+
+[11/100] PROCESANDO: curriculum_011.json
+INSERTADO: curriculum ID: 11
+INSERTADO: curriculum_formacion ID: 22
+INSERTADO: curriculum_formacion ID: 23
+INSERTADO: curriculum_formacion ID: 24
+INSERTADO: curriculum_trabajos ID: 34
+INSERTADO: curriculum_trabajos ID: 35
+INSERTADO: curriculum_lenguajes ID: 51
+INSERTADO: curriculum_lenguajes ID: 52
+INSERTADO: curriculum_lenguajes ID: 53
+INSERTADO: curriculum_lenguajes ID: 54
+INSERTADO: curriculum_lenguajes ID: 55
+INSERTADO: curriculum_lenguajes ID: 56
+INSERTADO: curriculum_tecnologias ID: 48
+INSERTADO: curriculum_tecnologias ID: 49
+INSERTADO: curriculum_tecnologias ID: 50
+INSERTADO: curriculum_tecnologias ID: 51
+INSERTADO: curriculum_tecnologias ID: 52
+INSERTADO: curriculum_tecnologias ID: 53
+INSERTADO: curriculum_idiomas ID: 33
+INSERTADO: curriculum_idiomas ID: 34
+INSERTADO: curriculum_idiomas ID: 35
+INSERTADO: curriculum_especialidades ID: 39
+INSERTADO: curriculum_especialidades ID: 40
+INSERTADO: curriculum_especialidades ID: 41
+INSERTADO: curriculum_especialidades ID: 42
+OK: curriculum_011.json
+
+[12/100] PROCESANDO: curriculum_012.json
+INSERTADO: curriculum ID: 12
+INSERTADO: curriculum_formacion ID: 25
+INSERTADO: curriculum_formacion ID: 26
+INSERTADO: curriculum_trabajos ID: 36
+INSERTADO: curriculum_trabajos ID: 37
+INSERTADO: curriculum_trabajos ID: 38
+INSERTADO: curriculum_lenguajes ID: 57
+INSERTADO: curriculum_lenguajes ID: 58
+INSERTADO: curriculum_lenguajes ID: 59
+INSERTADO: curriculum_lenguajes ID: 60
+INSERTADO: curriculum_lenguajes ID: 61
+INSERTADO: curriculum_lenguajes ID: 62
+INSERTADO: curriculum_tecnologias ID: 54
+INSERTADO: curriculum_tecnologias ID: 55
+INSERTADO: curriculum_tecnologias ID: 56
+INSERTADO: curriculum_tecnologias ID: 57
+INSERTADO: curriculum_tecnologias ID: 58
+INSERTADO: curriculum_idiomas ID: 36
+INSERTADO: curriculum_idiomas ID: 37
+INSERTADO: curriculum_idiomas ID: 38
+INSERTADO: curriculum_especialidades ID: 43
+INSERTADO: curriculum_especialidades ID: 44
+INSERTADO: curriculum_especialidades ID: 45
+INSERTADO: curriculum_especialidades ID: 46
+INSERTADO: curriculum_especialidades ID: 47
+OK: curriculum_012.json
+
+[13/100] PROCESANDO: curriculum_013.json
+INSERTADO: curriculum ID: 13
+INSERTADO: curriculum_formacion ID: 27
+INSERTADO: curriculum_formacion ID: 28
+INSERTADO: curriculum_formacion ID: 29
+INSERTADO: curriculum_trabajos ID: 39
+INSERTADO: curriculum_trabajos ID: 40
+INSERTADO: curriculum_trabajos ID: 41
+INSERTADO: curriculum_trabajos ID: 42
+INSERTADO: curriculum_lenguajes ID: 63
+INSERTADO: curriculum_lenguajes ID: 64
+INSERTADO: curriculum_lenguajes ID: 65
+INSERTADO: curriculum_lenguajes ID: 66
+INSERTADO: curriculum_lenguajes ID: 67
+INSERTADO: curriculum_lenguajes ID: 68
+INSERTADO: curriculum_lenguajes ID: 69
+INSERTADO: curriculum_tecnologias ID: 59
+INSERTADO: curriculum_tecnologias ID: 60
+INSERTADO: curriculum_tecnologias ID: 61
+INSERTADO: curriculum_tecnologias ID: 62
+INSERTADO: curriculum_idiomas ID: 39
+INSERTADO: curriculum_idiomas ID: 40
+INSERTADO: curriculum_idiomas ID: 41
+INSERTADO: curriculum_idiomas ID: 42
+INSERTADO: curriculum_especialidades ID: 48
+INSERTADO: curriculum_especialidades ID: 49
+INSERTADO: curriculum_especialidades ID: 50
+INSERTADO: curriculum_especialidades ID: 51
+OK: curriculum_013.json
+
+[14/100] PROCESANDO: curriculum_014.json
+INSERTADO: curriculum ID: 14
+INSERTADO: curriculum_formacion ID: 30
+INSERTADO: curriculum_formacion ID: 31
+INSERTADO: curriculum_formacion ID: 32
+INSERTADO: curriculum_trabajos ID: 43
+INSERTADO: curriculum_trabajos ID: 44
+INSERTADO: curriculum_trabajos ID: 45
+INSERTADO: curriculum_lenguajes ID: 70
+INSERTADO: curriculum_lenguajes ID: 71
+INSERTADO: curriculum_lenguajes ID: 72
+INSERTADO: curriculum_lenguajes ID: 73
+INSERTADO: curriculum_tecnologias ID: 63
+INSERTADO: curriculum_tecnologias ID: 64
+INSERTADO: curriculum_tecnologias ID: 65
+INSERTADO: curriculum_tecnologias ID: 66
+INSERTADO: curriculum_tecnologias ID: 67
+INSERTADO: curriculum_tecnologias ID: 68
+INSERTADO: curriculum_tecnologias ID: 69
+INSERTADO: curriculum_idiomas ID: 43
+INSERTADO: curriculum_idiomas ID: 44
+INSERTADO: curriculum_idiomas ID: 45
+INSERTADO: curriculum_idiomas ID: 46
+INSERTADO: curriculum_especialidades ID: 52
+INSERTADO: curriculum_especialidades ID: 53
+INSERTADO: curriculum_especialidades ID: 54
+INSERTADO: curriculum_especialidades ID: 55
+INSERTADO: curriculum_especialidades ID: 56
+INSERTADO: curriculum_especialidades ID: 57
+OK: curriculum_014.json
+
+[15/100] PROCESANDO: curriculum_015.json
+INSERTADO: curriculum ID: 15
+INSERTADO: curriculum_formacion ID: 33
+INSERTADO: curriculum_trabajos ID: 46
+INSERTADO: curriculum_trabajos ID: 47
+INSERTADO: curriculum_trabajos ID: 48
+INSERTADO: curriculum_lenguajes ID: 74
+INSERTADO: curriculum_lenguajes ID: 75
+INSERTADO: curriculum_lenguajes ID: 76
+INSERTADO: curriculum_lenguajes ID: 77
+INSERTADO: curriculum_tecnologias ID: 70
+INSERTADO: curriculum_tecnologias ID: 71
+INSERTADO: curriculum_tecnologias ID: 72
+INSERTADO: curriculum_tecnologias ID: 73
+INSERTADO: curriculum_idiomas ID: 47
+INSERTADO: curriculum_idiomas ID: 48
+INSERTADO: curriculum_idiomas ID: 49
+INSERTADO: curriculum_idiomas ID: 50
+INSERTADO: curriculum_especialidades ID: 58
+INSERTADO: curriculum_especialidades ID: 59
+INSERTADO: curriculum_especialidades ID: 60
+INSERTADO: curriculum_especialidades ID: 61
+INSERTADO: curriculum_especialidades ID: 62
+INSERTADO: curriculum_especialidades ID: 63
+OK: curriculum_015.json
+
+[16/100] PROCESANDO: curriculum_016.json
+INSERTADO: curriculum ID: 16
+INSERTADO: curriculum_formacion ID: 34
+INSERTADO: curriculum_trabajos ID: 49
+INSERTADO: curriculum_trabajos ID: 50
+INSERTADO: curriculum_trabajos ID: 51
+INSERTADO: curriculum_lenguajes ID: 78
+INSERTADO: curriculum_lenguajes ID: 79
+INSERTADO: curriculum_lenguajes ID: 80
+INSERTADO: curriculum_lenguajes ID: 81
+INSERTADO: curriculum_lenguajes ID: 82
+INSERTADO: curriculum_lenguajes ID: 83
+INSERTADO: curriculum_tecnologias ID: 74
+INSERTADO: curriculum_tecnologias ID: 75
+INSERTADO: curriculum_tecnologias ID: 76
+INSERTADO: curriculum_idiomas ID: 51
+INSERTADO: curriculum_idiomas ID: 52
+INSERTADO: curriculum_especialidades ID: 64
+INSERTADO: curriculum_especialidades ID: 65
+INSERTADO: curriculum_especialidades ID: 66
+OK: curriculum_016.json
+
+[17/100] PROCESANDO: curriculum_017.json
+INSERTADO: curriculum ID: 17
+INSERTADO: curriculum_formacion ID: 35
+INSERTADO: curriculum_formacion ID: 36
+INSERTADO: curriculum_trabajos ID: 52
+INSERTADO: curriculum_trabajos ID: 53
+INSERTADO: curriculum_trabajos ID: 54
+INSERTADO: curriculum_lenguajes ID: 84
+INSERTADO: curriculum_lenguajes ID: 85
+INSERTADO: curriculum_lenguajes ID: 86
+INSERTADO: curriculum_tecnologias ID: 77
+INSERTADO: curriculum_tecnologias ID: 78
+INSERTADO: curriculum_tecnologias ID: 79
+INSERTADO: curriculum_tecnologias ID: 80
+INSERTADO: curriculum_idiomas ID: 53
+INSERTADO: curriculum_idiomas ID: 54
+INSERTADO: curriculum_especialidades ID: 67
+INSERTADO: curriculum_especialidades ID: 68
+INSERTADO: curriculum_especialidades ID: 69
+INSERTADO: curriculum_especialidades ID: 70
+OK: curriculum_017.json
+
+[18/100] PROCESANDO: curriculum_018.json
+INSERTADO: curriculum ID: 18
+INSERTADO: curriculum_formacion ID: 37
+INSERTADO: curriculum_formacion ID: 38
+INSERTADO: curriculum_formacion ID: 39
+INSERTADO: curriculum_trabajos ID: 55
+INSERTADO: curriculum_trabajos ID: 56
+INSERTADO: curriculum_trabajos ID: 57
+INSERTADO: curriculum_trabajos ID: 58
+INSERTADO: curriculum_lenguajes ID: 87
+INSERTADO: curriculum_lenguajes ID: 88
+INSERTADO: curriculum_lenguajes ID: 89
+INSERTADO: curriculum_lenguajes ID: 90
+INSERTADO: curriculum_lenguajes ID: 91
+INSERTADO: curriculum_tecnologias ID: 81
+INSERTADO: curriculum_tecnologias ID: 82
+INSERTADO: curriculum_tecnologias ID: 83
+INSERTADO: curriculum_tecnologias ID: 84
+INSERTADO: curriculum_tecnologias ID: 85
+INSERTADO: curriculum_idiomas ID: 55
+INSERTADO: curriculum_idiomas ID: 56
+INSERTADO: curriculum_idiomas ID: 57
+INSERTADO: curriculum_especialidades ID: 71
+INSERTADO: curriculum_especialidades ID: 72
+INSERTADO: curriculum_especialidades ID: 73
+INSERTADO: curriculum_especialidades ID: 74
+INSERTADO: curriculum_especialidades ID: 75
+INSERTADO: curriculum_especialidades ID: 76
+OK: curriculum_018.json
+
+[19/100] PROCESANDO: curriculum_019.json
+INSERTADO: curriculum ID: 19
+INSERTADO: curriculum_formacion ID: 40
+INSERTADO: curriculum_formacion ID: 41
+INSERTADO: curriculum_trabajos ID: 59
+INSERTADO: curriculum_trabajos ID: 60
+INSERTADO: curriculum_trabajos ID: 61
+INSERTADO: curriculum_trabajos ID: 62
+INSERTADO: curriculum_lenguajes ID: 92
+INSERTADO: curriculum_lenguajes ID: 93
+INSERTADO: curriculum_lenguajes ID: 94
+INSERTADO: curriculum_lenguajes ID: 95
+INSERTADO: curriculum_lenguajes ID: 96
+INSERTADO: curriculum_tecnologias ID: 86
+INSERTADO: curriculum_tecnologias ID: 87
+INSERTADO: curriculum_tecnologias ID: 88
+INSERTADO: curriculum_tecnologias ID: 89
+INSERTADO: curriculum_tecnologias ID: 90
+INSERTADO: curriculum_idiomas ID: 58
+INSERTADO: curriculum_idiomas ID: 59
+INSERTADO: curriculum_especialidades ID: 77
+INSERTADO: curriculum_especialidades ID: 78
+INSERTADO: curriculum_especialidades ID: 79
+INSERTADO: curriculum_especialidades ID: 80
+INSERTADO: curriculum_especialidades ID: 81
+INSERTADO: curriculum_especialidades ID: 82
+OK: curriculum_019.json
+
+[20/100] PROCESANDO: curriculum_020.json
+INSERTADO: curriculum ID: 20
+INSERTADO: curriculum_formacion ID: 42
+INSERTADO: curriculum_formacion ID: 43
+INSERTADO: curriculum_trabajos ID: 63
+INSERTADO: curriculum_trabajos ID: 64
+INSERTADO: curriculum_trabajos ID: 65
+INSERTADO: curriculum_trabajos ID: 66
+INSERTADO: curriculum_lenguajes ID: 97
+INSERTADO: curriculum_lenguajes ID: 98
+INSERTADO: curriculum_lenguajes ID: 99
+INSERTADO: curriculum_lenguajes ID: 100
+INSERTADO: curriculum_lenguajes ID: 101
+INSERTADO: curriculum_tecnologias ID: 91
+INSERTADO: curriculum_tecnologias ID: 92
+INSERTADO: curriculum_tecnologias ID: 93
+INSERTADO: curriculum_tecnologias ID: 94
+INSERTADO: curriculum_tecnologias ID: 95
+INSERTADO: curriculum_idiomas ID: 60
+INSERTADO: curriculum_idiomas ID: 61
+INSERTADO: curriculum_idiomas ID: 62
+INSERTADO: curriculum_idiomas ID: 63
+INSERTADO: curriculum_especialidades ID: 83
+INSERTADO: curriculum_especialidades ID: 84
+INSERTADO: curriculum_especialidades ID: 85
+INSERTADO: curriculum_especialidades ID: 86
+OK: curriculum_020.json
+
+[21/100] PROCESANDO: curriculum_021.json
+INSERTADO: curriculum ID: 21
+INSERTADO: curriculum_formacion ID: 44
+INSERTADO: curriculum_formacion ID: 45
+INSERTADO: curriculum_formacion ID: 46
+INSERTADO: curriculum_trabajos ID: 67
+INSERTADO: curriculum_trabajos ID: 68
+INSERTADO: curriculum_lenguajes ID: 102
+INSERTADO: curriculum_lenguajes ID: 103
+INSERTADO: curriculum_lenguajes ID: 104
+INSERTADO: curriculum_lenguajes ID: 105
+INSERTADO: curriculum_lenguajes ID: 106
+INSERTADO: curriculum_tecnologias ID: 96
+INSERTADO: curriculum_tecnologias ID: 97
+INSERTADO: curriculum_tecnologias ID: 98
+INSERTADO: curriculum_idiomas ID: 64
+INSERTADO: curriculum_idiomas ID: 65
+INSERTADO: curriculum_especialidades ID: 87
+INSERTADO: curriculum_especialidades ID: 88
+INSERTADO: curriculum_especialidades ID: 89
+INSERTADO: curriculum_especialidades ID: 90
+OK: curriculum_021.json
+
+[22/100] PROCESANDO: curriculum_022.json
+INSERTADO: curriculum ID: 22
+INSERTADO: curriculum_formacion ID: 47
+INSERTADO: curriculum_formacion ID: 48
+INSERTADO: curriculum_trabajos ID: 69
+INSERTADO: curriculum_trabajos ID: 70
+INSERTADO: curriculum_trabajos ID: 71
+INSERTADO: curriculum_lenguajes ID: 107
+INSERTADO: curriculum_lenguajes ID: 108
+INSERTADO: curriculum_lenguajes ID: 109
+INSERTADO: curriculum_lenguajes ID: 110
+INSERTADO: curriculum_tecnologias ID: 99
+INSERTADO: curriculum_tecnologias ID: 100
+INSERTADO: curriculum_tecnologias ID: 101
+INSERTADO: curriculum_tecnologias ID: 102
+INSERTADO: curriculum_idiomas ID: 66
+INSERTADO: curriculum_idiomas ID: 67
+INSERTADO: curriculum_idiomas ID: 68
+INSERTADO: curriculum_especialidades ID: 91
+INSERTADO: curriculum_especialidades ID: 92
+INSERTADO: curriculum_especialidades ID: 93
+INSERTADO: curriculum_especialidades ID: 94
+INSERTADO: curriculum_especialidades ID: 95
+OK: curriculum_022.json
+
+[23/100] PROCESANDO: curriculum_023.json
+INSERTADO: curriculum ID: 23
+INSERTADO: curriculum_formacion ID: 49
+INSERTADO: curriculum_formacion ID: 50
+INSERTADO: curriculum_formacion ID: 51
+INSERTADO: curriculum_trabajos ID: 72
+INSERTADO: curriculum_trabajos ID: 73
+INSERTADO: curriculum_trabajos ID: 74
+INSERTADO: curriculum_lenguajes ID: 111
+INSERTADO: curriculum_lenguajes ID: 112
+INSERTADO: curriculum_lenguajes ID: 113
+INSERTADO: curriculum_lenguajes ID: 114
+INSERTADO: curriculum_lenguajes ID: 115
+INSERTADO: curriculum_lenguajes ID: 116
+INSERTADO: curriculum_tecnologias ID: 103
+INSERTADO: curriculum_tecnologias ID: 104
+INSERTADO: curriculum_tecnologias ID: 105
+INSERTADO: curriculum_tecnologias ID: 106
+INSERTADO: curriculum_tecnologias ID: 107
+INSERTADO: curriculum_tecnologias ID: 108
+INSERTADO: curriculum_tecnologias ID: 109
+INSERTADO: curriculum_idiomas ID: 69
+INSERTADO: curriculum_idiomas ID: 70
+INSERTADO: curriculum_idiomas ID: 71
+INSERTADO: curriculum_especialidades ID: 96
+INSERTADO: curriculum_especialidades ID: 97
+INSERTADO: curriculum_especialidades ID: 98
+OK: curriculum_023.json
+
+[24/100] PROCESANDO: curriculum_024.json
+INSERTADO: curriculum ID: 24
+INSERTADO: curriculum_formacion ID: 52
+INSERTADO: curriculum_formacion ID: 53
+INSERTADO: curriculum_formacion ID: 54
+INSERTADO: curriculum_trabajos ID: 75
+INSERTADO: curriculum_trabajos ID: 76
+INSERTADO: curriculum_lenguajes ID: 117
+INSERTADO: curriculum_lenguajes ID: 118
+INSERTADO: curriculum_lenguajes ID: 119
+INSERTADO: curriculum_lenguajes ID: 120
+INSERTADO: curriculum_lenguajes ID: 121
+INSERTADO: curriculum_tecnologias ID: 110
+INSERTADO: curriculum_tecnologias ID: 111
+INSERTADO: curriculum_tecnologias ID: 112
+INSERTADO: curriculum_tecnologias ID: 113
+INSERTADO: curriculum_tecnologias ID: 114
+INSERTADO: curriculum_tecnologias ID: 115
+INSERTADO: curriculum_idiomas ID: 72
+INSERTADO: curriculum_idiomas ID: 73
+INSERTADO: curriculum_especialidades ID: 99
+INSERTADO: curriculum_especialidades ID: 100
+INSERTADO: curriculum_especialidades ID: 101
+INSERTADO: curriculum_especialidades ID: 102
+INSERTADO: curriculum_especialidades ID: 103
+OK: curriculum_024.json
+
+[25/100] PROCESANDO: curriculum_025.json
+INSERTADO: curriculum ID: 25
+INSERTADO: curriculum_formacion ID: 55
+INSERTADO: curriculum_trabajos ID: 77
+INSERTADO: curriculum_trabajos ID: 78
+INSERTADO: curriculum_trabajos ID: 79
+INSERTADO: curriculum_lenguajes ID: 122
+INSERTADO: curriculum_lenguajes ID: 123
+INSERTADO: curriculum_lenguajes ID: 124
+INSERTADO: curriculum_lenguajes ID: 125
+INSERTADO: curriculum_lenguajes ID: 126
+INSERTADO: curriculum_lenguajes ID: 127
+INSERTADO: curriculum_lenguajes ID: 128
+INSERTADO: curriculum_tecnologias ID: 116
+INSERTADO: curriculum_tecnologias ID: 117
+INSERTADO: curriculum_tecnologias ID: 118
+INSERTADO: curriculum_idiomas ID: 74
+INSERTADO: curriculum_idiomas ID: 75
+INSERTADO: curriculum_especialidades ID: 104
+INSERTADO: curriculum_especialidades ID: 105
+INSERTADO: curriculum_especialidades ID: 106
+INSERTADO: curriculum_especialidades ID: 107
+INSERTADO: curriculum_especialidades ID: 108
+INSERTADO: curriculum_especialidades ID: 109
+OK: curriculum_025.json
+
+[26/100] PROCESANDO: curriculum_026.json
+INSERTADO: curriculum ID: 26
+INSERTADO: curriculum_formacion ID: 56
+INSERTADO: curriculum_formacion ID: 57
+INSERTADO: curriculum_trabajos ID: 80
+INSERTADO: curriculum_trabajos ID: 81
+INSERTADO: curriculum_trabajos ID: 82
+INSERTADO: curriculum_lenguajes ID: 129
+INSERTADO: curriculum_lenguajes ID: 130
+INSERTADO: curriculum_lenguajes ID: 131
+INSERTADO: curriculum_lenguajes ID: 132
+INSERTADO: curriculum_lenguajes ID: 133
+INSERTADO: curriculum_lenguajes ID: 134
+INSERTADO: curriculum_tecnologias ID: 119
+INSERTADO: curriculum_tecnologias ID: 120
+INSERTADO: curriculum_tecnologias ID: 121
+INSERTADO: curriculum_tecnologias ID: 122
+INSERTADO: curriculum_tecnologias ID: 123
+INSERTADO: curriculum_tecnologias ID: 124
+INSERTADO: curriculum_idiomas ID: 76
+INSERTADO: curriculum_idiomas ID: 77
+INSERTADO: curriculum_idiomas ID: 78
+INSERTADO: curriculum_especialidades ID: 110
+INSERTADO: curriculum_especialidades ID: 111
+INSERTADO: curriculum_especialidades ID: 112
+INSERTADO: curriculum_especialidades ID: 113
+INSERTADO: curriculum_especialidades ID: 114
+INSERTADO: curriculum_especialidades ID: 115
+OK: curriculum_026.json
+
+[27/100] PROCESANDO: curriculum_027.json
+INSERTADO: curriculum ID: 27
+INSERTADO: curriculum_formacion ID: 58
+INSERTADO: curriculum_formacion ID: 59
+INSERTADO: curriculum_formacion ID: 60
+INSERTADO: curriculum_trabajos ID: 83
+INSERTADO: curriculum_trabajos ID: 84
+INSERTADO: curriculum_trabajos ID: 85
+INSERTADO: curriculum_lenguajes ID: 135
+INSERTADO: curriculum_lenguajes ID: 136
+INSERTADO: curriculum_lenguajes ID: 137
+INSERTADO: curriculum_lenguajes ID: 138
+INSERTADO: curriculum_lenguajes ID: 139
+INSERTADO: curriculum_lenguajes ID: 140
+INSERTADO: curriculum_lenguajes ID: 141
+INSERTADO: curriculum_tecnologias ID: 125
+INSERTADO: curriculum_tecnologias ID: 126
+INSERTADO: curriculum_tecnologias ID: 127
+INSERTADO: curriculum_tecnologias ID: 128
+INSERTADO: curriculum_idiomas ID: 79
+INSERTADO: curriculum_idiomas ID: 80
+INSERTADO: curriculum_idiomas ID: 81
+INSERTADO: curriculum_idiomas ID: 82
+INSERTADO: curriculum_especialidades ID: 116
+INSERTADO: curriculum_especialidades ID: 117
+INSERTADO: curriculum_especialidades ID: 118
+OK: curriculum_027.json
+
+[28/100] PROCESANDO: curriculum_028.json
+INSERTADO: curriculum ID: 28
+INSERTADO: curriculum_formacion ID: 61
+INSERTADO: curriculum_formacion ID: 62
+INSERTADO: curriculum_trabajos ID: 86
+INSERTADO: curriculum_trabajos ID: 87
+INSERTADO: curriculum_lenguajes ID: 142
+INSERTADO: curriculum_lenguajes ID: 143
+INSERTADO: curriculum_lenguajes ID: 144
+INSERTADO: curriculum_lenguajes ID: 145
+INSERTADO: curriculum_tecnologias ID: 129
+INSERTADO: curriculum_tecnologias ID: 130
+INSERTADO: curriculum_tecnologias ID: 131
+INSERTADO: curriculum_tecnologias ID: 132
+INSERTADO: curriculum_tecnologias ID: 133
+INSERTADO: curriculum_tecnologias ID: 134
+INSERTADO: curriculum_tecnologias ID: 135
+INSERTADO: curriculum_idiomas ID: 83
+INSERTADO: curriculum_idiomas ID: 84
+INSERTADO: curriculum_especialidades ID: 119
+INSERTADO: curriculum_especialidades ID: 120
+INSERTADO: curriculum_especialidades ID: 121
+INSERTADO: curriculum_especialidades ID: 122
+OK: curriculum_028.json
+
+[29/100] PROCESANDO: curriculum_029.json
+INSERTADO: curriculum ID: 29
+INSERTADO: curriculum_formacion ID: 63
+INSERTADO: curriculum_formacion ID: 64
+INSERTADO: curriculum_trabajos ID: 88
+INSERTADO: curriculum_trabajos ID: 89
+INSERTADO: curriculum_trabajos ID: 90
+INSERTADO: curriculum_lenguajes ID: 146
+INSERTADO: curriculum_lenguajes ID: 147
+INSERTADO: curriculum_lenguajes ID: 148
+INSERTADO: curriculum_lenguajes ID: 149
+INSERTADO: curriculum_lenguajes ID: 150
+INSERTADO: curriculum_tecnologias ID: 136
+INSERTADO: curriculum_tecnologias ID: 137
+INSERTADO: curriculum_tecnologias ID: 138
+INSERTADO: curriculum_tecnologias ID: 139
+INSERTADO: curriculum_idiomas ID: 85
+INSERTADO: curriculum_idiomas ID: 86
+INSERTADO: curriculum_idiomas ID: 87
+INSERTADO: curriculum_idiomas ID: 88
+INSERTADO: curriculum_especialidades ID: 123
+INSERTADO: curriculum_especialidades ID: 124
+INSERTADO: curriculum_especialidades ID: 125
+OK: curriculum_029.json
+
+[30/100] PROCESANDO: curriculum_030.json
+INSERTADO: curriculum ID: 30
+INSERTADO: curriculum_formacion ID: 65
+INSERTADO: curriculum_trabajos ID: 91
+INSERTADO: curriculum_trabajos ID: 92
+INSERTADO: curriculum_trabajos ID: 93
+INSERTADO: curriculum_trabajos ID: 94
+INSERTADO: curriculum_lenguajes ID: 151
+INSERTADO: curriculum_lenguajes ID: 152
+INSERTADO: curriculum_lenguajes ID: 153
+INSERTADO: curriculum_lenguajes ID: 154
+INSERTADO: curriculum_lenguajes ID: 155
+INSERTADO: curriculum_tecnologias ID: 140
+INSERTADO: curriculum_tecnologias ID: 141
+INSERTADO: curriculum_tecnologias ID: 142
+INSERTADO: curriculum_tecnologias ID: 143
+INSERTADO: curriculum_tecnologias ID: 144
+INSERTADO: curriculum_tecnologias ID: 145
+INSERTADO: curriculum_idiomas ID: 89
+INSERTADO: curriculum_idiomas ID: 90
+INSERTADO: curriculum_idiomas ID: 91
+INSERTADO: curriculum_idiomas ID: 92
+INSERTADO: curriculum_especialidades ID: 126
+INSERTADO: curriculum_especialidades ID: 127
+INSERTADO: curriculum_especialidades ID: 128
+INSERTADO: curriculum_especialidades ID: 129
+INSERTADO: curriculum_especialidades ID: 130
+OK: curriculum_030.json
+
+[31/100] PROCESANDO: curriculum_031.json
+INSERTADO: curriculum ID: 31
+INSERTADO: curriculum_formacion ID: 66
+INSERTADO: curriculum_formacion ID: 67
+INSERTADO: curriculum_formacion ID: 68
+INSERTADO: curriculum_trabajos ID: 95
+INSERTADO: curriculum_trabajos ID: 96
+INSERTADO: curriculum_lenguajes ID: 156
+INSERTADO: curriculum_lenguajes ID: 157
+INSERTADO: curriculum_lenguajes ID: 158
+INSERTADO: curriculum_tecnologias ID: 146
+INSERTADO: curriculum_tecnologias ID: 147
+INSERTADO: curriculum_tecnologias ID: 148
+INSERTADO: curriculum_tecnologias ID: 149
+INSERTADO: curriculum_tecnologias ID: 150
+INSERTADO: curriculum_tecnologias ID: 151
+INSERTADO: curriculum_idiomas ID: 93
+INSERTADO: curriculum_idiomas ID: 94
+INSERTADO: curriculum_idiomas ID: 95
+INSERTADO: curriculum_idiomas ID: 96
+INSERTADO: curriculum_especialidades ID: 131
+INSERTADO: curriculum_especialidades ID: 132
+INSERTADO: curriculum_especialidades ID: 133
+OK: curriculum_031.json
+
+[32/100] PROCESANDO: curriculum_032.json
+INSERTADO: curriculum ID: 32
+INSERTADO: curriculum_formacion ID: 69
+INSERTADO: curriculum_formacion ID: 70
+INSERTADO: curriculum_trabajos ID: 97
+INSERTADO: curriculum_trabajos ID: 98
+INSERTADO: curriculum_lenguajes ID: 159
+INSERTADO: curriculum_lenguajes ID: 160
+INSERTADO: curriculum_lenguajes ID: 161
+INSERTADO: curriculum_tecnologias ID: 152
+INSERTADO: curriculum_tecnologias ID: 153
+INSERTADO: curriculum_tecnologias ID: 154
+INSERTADO: curriculum_tecnologias ID: 155
+INSERTADO: curriculum_tecnologias ID: 156
+INSERTADO: curriculum_tecnologias ID: 157
+INSERTADO: curriculum_tecnologias ID: 158
+INSERTADO: curriculum_idiomas ID: 97
+INSERTADO: curriculum_idiomas ID: 98
+INSERTADO: curriculum_idiomas ID: 99
+INSERTADO: curriculum_especialidades ID: 134
+INSERTADO: curriculum_especialidades ID: 135
+INSERTADO: curriculum_especialidades ID: 136
+INSERTADO: curriculum_especialidades ID: 137
+INSERTADO: curriculum_especialidades ID: 138
+OK: curriculum_032.json
+
+[33/100] PROCESANDO: curriculum_033.json
+INSERTADO: curriculum ID: 33
+INSERTADO: curriculum_formacion ID: 71
+INSERTADO: curriculum_trabajos ID: 99
+INSERTADO: curriculum_trabajos ID: 100
+INSERTADO: curriculum_lenguajes ID: 162
+INSERTADO: curriculum_lenguajes ID: 163
+INSERTADO: curriculum_lenguajes ID: 164
+INSERTADO: curriculum_tecnologias ID: 159
+INSERTADO: curriculum_tecnologias ID: 160
+INSERTADO: curriculum_tecnologias ID: 161
+INSERTADO: curriculum_tecnologias ID: 162
+INSERTADO: curriculum_tecnologias ID: 163
+INSERTADO: curriculum_tecnologias ID: 164
+INSERTADO: curriculum_tecnologias ID: 165
+INSERTADO: curriculum_idiomas ID: 100
+INSERTADO: curriculum_idiomas ID: 101
+INSERTADO: curriculum_idiomas ID: 102
+INSERTADO: curriculum_idiomas ID: 103
+INSERTADO: curriculum_especialidades ID: 139
+INSERTADO: curriculum_especialidades ID: 140
+INSERTADO: curriculum_especialidades ID: 141
+OK: curriculum_033.json
+
+[34/100] PROCESANDO: curriculum_034.json
+INSERTADO: curriculum ID: 34
+INSERTADO: curriculum_formacion ID: 72
+INSERTADO: curriculum_formacion ID: 73
+INSERTADO: curriculum_trabajos ID: 101
+INSERTADO: curriculum_trabajos ID: 102
+INSERTADO: curriculum_lenguajes ID: 165
+INSERTADO: curriculum_lenguajes ID: 166
+INSERTADO: curriculum_lenguajes ID: 167
+INSERTADO: curriculum_lenguajes ID: 168
+INSERTADO: curriculum_lenguajes ID: 169
+INSERTADO: curriculum_lenguajes ID: 170
+INSERTADO: curriculum_lenguajes ID: 171
+INSERTADO: curriculum_tecnologias ID: 166
+INSERTADO: curriculum_tecnologias ID: 167
+INSERTADO: curriculum_tecnologias ID: 168
+INSERTADO: curriculum_idiomas ID: 104
+INSERTADO: curriculum_idiomas ID: 105
+INSERTADO: curriculum_idiomas ID: 106
+INSERTADO: curriculum_idiomas ID: 107
+INSERTADO: curriculum_especialidades ID: 142
+INSERTADO: curriculum_especialidades ID: 143
+INSERTADO: curriculum_especialidades ID: 144
+INSERTADO: curriculum_especialidades ID: 145
+INSERTADO: curriculum_especialidades ID: 146
+INSERTADO: curriculum_especialidades ID: 147
+OK: curriculum_034.json
+
+[35/100] PROCESANDO: curriculum_035.json
+INSERTADO: curriculum ID: 35
+INSERTADO: curriculum_formacion ID: 74
+INSERTADO: curriculum_trabajos ID: 103
+INSERTADO: curriculum_trabajos ID: 104
+INSERTADO: curriculum_trabajos ID: 105
+INSERTADO: curriculum_lenguajes ID: 172
+INSERTADO: curriculum_lenguajes ID: 173
+INSERTADO: curriculum_lenguajes ID: 174
+INSERTADO: curriculum_lenguajes ID: 175
+INSERTADO: curriculum_lenguajes ID: 176
+INSERTADO: curriculum_lenguajes ID: 177
+INSERTADO: curriculum_lenguajes ID: 178
+INSERTADO: curriculum_tecnologias ID: 169
+INSERTADO: curriculum_tecnologias ID: 170
+INSERTADO: curriculum_tecnologias ID: 171
+INSERTADO: curriculum_tecnologias ID: 172
+INSERTADO: curriculum_tecnologias ID: 173
+INSERTADO: curriculum_tecnologias ID: 174
+INSERTADO: curriculum_idiomas ID: 108
+INSERTADO: curriculum_idiomas ID: 109
+INSERTADO: curriculum_idiomas ID: 110
+INSERTADO: curriculum_idiomas ID: 111
+INSERTADO: curriculum_especialidades ID: 148
+INSERTADO: curriculum_especialidades ID: 149
+INSERTADO: curriculum_especialidades ID: 150
+INSERTADO: curriculum_especialidades ID: 151
+INSERTADO: curriculum_especialidades ID: 152
+INSERTADO: curriculum_especialidades ID: 153
+OK: curriculum_035.json
+
+[36/100] PROCESANDO: curriculum_036.json
+INSERTADO: curriculum ID: 36
+INSERTADO: curriculum_formacion ID: 75
+INSERTADO: curriculum_trabajos ID: 106
+INSERTADO: curriculum_trabajos ID: 107
+INSERTADO: curriculum_trabajos ID: 108
+INSERTADO: curriculum_trabajos ID: 109
+INSERTADO: curriculum_lenguajes ID: 179
+INSERTADO: curriculum_lenguajes ID: 180
+INSERTADO: curriculum_lenguajes ID: 181
+INSERTADO: curriculum_lenguajes ID: 182
+INSERTADO: curriculum_tecnologias ID: 175
+INSERTADO: curriculum_tecnologias ID: 176
+INSERTADO: curriculum_tecnologias ID: 177
+INSERTADO: curriculum_tecnologias ID: 178
+INSERTADO: curriculum_tecnologias ID: 179
+INSERTADO: curriculum_tecnologias ID: 180
+INSERTADO: curriculum_idiomas ID: 112
+INSERTADO: curriculum_idiomas ID: 113
+INSERTADO: curriculum_idiomas ID: 114
+INSERTADO: curriculum_especialidades ID: 154
+INSERTADO: curriculum_especialidades ID: 155
+INSERTADO: curriculum_especialidades ID: 156
+OK: curriculum_036.json
+
+[37/100] PROCESANDO: curriculum_037.json
+INSERTADO: curriculum ID: 37
+INSERTADO: curriculum_formacion ID: 76
+INSERTADO: curriculum_formacion ID: 77
+INSERTADO: curriculum_trabajos ID: 110
+INSERTADO: curriculum_trabajos ID: 111
+INSERTADO: curriculum_lenguajes ID: 183
+INSERTADO: curriculum_lenguajes ID: 184
+INSERTADO: curriculum_lenguajes ID: 185
+INSERTADO: curriculum_lenguajes ID: 186
+INSERTADO: curriculum_lenguajes ID: 187
+INSERTADO: curriculum_tecnologias ID: 181
+INSERTADO: curriculum_tecnologias ID: 182
+INSERTADO: curriculum_tecnologias ID: 183
+INSERTADO: curriculum_tecnologias ID: 184
+INSERTADO: curriculum_tecnologias ID: 185
+INSERTADO: curriculum_tecnologias ID: 186
+INSERTADO: curriculum_idiomas ID: 115
+INSERTADO: curriculum_idiomas ID: 116
+INSERTADO: curriculum_especialidades ID: 157
+INSERTADO: curriculum_especialidades ID: 158
+INSERTADO: curriculum_especialidades ID: 159
+INSERTADO: curriculum_especialidades ID: 160
+INSERTADO: curriculum_especialidades ID: 161
+OK: curriculum_037.json
+
+[38/100] PROCESANDO: curriculum_038.json
+INSERTADO: curriculum ID: 38
+INSERTADO: curriculum_formacion ID: 78
+INSERTADO: curriculum_formacion ID: 79
+INSERTADO: curriculum_trabajos ID: 112
+INSERTADO: curriculum_trabajos ID: 113
+INSERTADO: curriculum_lenguajes ID: 188
+INSERTADO: curriculum_lenguajes ID: 189
+INSERTADO: curriculum_lenguajes ID: 190
+INSERTADO: curriculum_lenguajes ID: 191
+INSERTADO: curriculum_lenguajes ID: 192
+INSERTADO: curriculum_tecnologias ID: 187
+INSERTADO: curriculum_tecnologias ID: 188
+INSERTADO: curriculum_tecnologias ID: 189
+INSERTADO: curriculum_tecnologias ID: 190
+INSERTADO: curriculum_tecnologias ID: 191
+INSERTADO: curriculum_tecnologias ID: 192
+INSERTADO: curriculum_idiomas ID: 117
+INSERTADO: curriculum_idiomas ID: 118
+INSERTADO: curriculum_idiomas ID: 119
+INSERTADO: curriculum_idiomas ID: 120
+INSERTADO: curriculum_especialidades ID: 162
+INSERTADO: curriculum_especialidades ID: 163
+INSERTADO: curriculum_especialidades ID: 164
+OK: curriculum_038.json
+
+[39/100] PROCESANDO: curriculum_039.json
+INSERTADO: curriculum ID: 39
+INSERTADO: curriculum_formacion ID: 80
+INSERTADO: curriculum_formacion ID: 81
+INSERTADO: curriculum_trabajos ID: 114
+INSERTADO: curriculum_trabajos ID: 115
+INSERTADO: curriculum_lenguajes ID: 193
+INSERTADO: curriculum_lenguajes ID: 194
+INSERTADO: curriculum_lenguajes ID: 195
+INSERTADO: curriculum_lenguajes ID: 196
+INSERTADO: curriculum_lenguajes ID: 197
+INSERTADO: curriculum_tecnologias ID: 193
+INSERTADO: curriculum_tecnologias ID: 194
+INSERTADO: curriculum_tecnologias ID: 195
+INSERTADO: curriculum_tecnologias ID: 196
+INSERTADO: curriculum_idiomas ID: 121
+INSERTADO: curriculum_idiomas ID: 122
+INSERTADO: curriculum_especialidades ID: 165
+INSERTADO: curriculum_especialidades ID: 166
+INSERTADO: curriculum_especialidades ID: 167
+INSERTADO: curriculum_especialidades ID: 168
+INSERTADO: curriculum_especialidades ID: 169
+INSERTADO: curriculum_especialidades ID: 170
+OK: curriculum_039.json
+
+[40/100] PROCESANDO: curriculum_040.json
+INSERTADO: curriculum ID: 40
+INSERTADO: curriculum_formacion ID: 82
+INSERTADO: curriculum_trabajos ID: 116
+INSERTADO: curriculum_trabajos ID: 117
+INSERTADO: curriculum_trabajos ID: 118
+INSERTADO: curriculum_trabajos ID: 119
+INSERTADO: curriculum_lenguajes ID: 198
+INSERTADO: curriculum_lenguajes ID: 199
+INSERTADO: curriculum_lenguajes ID: 200
+INSERTADO: curriculum_tecnologias ID: 197
+INSERTADO: curriculum_tecnologias ID: 198
+INSERTADO: curriculum_tecnologias ID: 199
+INSERTADO: curriculum_tecnologias ID: 200
+INSERTADO: curriculum_tecnologias ID: 201
+INSERTADO: curriculum_tecnologias ID: 202
+INSERTADO: curriculum_idiomas ID: 123
+INSERTADO: curriculum_idiomas ID: 124
+INSERTADO: curriculum_idiomas ID: 125
+INSERTADO: curriculum_idiomas ID: 126
+INSERTADO: curriculum_especialidades ID: 171
+INSERTADO: curriculum_especialidades ID: 172
+INSERTADO: curriculum_especialidades ID: 173
+INSERTADO: curriculum_especialidades ID: 174
+INSERTADO: curriculum_especialidades ID: 175
+INSERTADO: curriculum_especialidades ID: 176
+OK: curriculum_040.json
+
+[41/100] PROCESANDO: curriculum_041.json
+INSERTADO: curriculum ID: 41
+INSERTADO: curriculum_formacion ID: 83
+INSERTADO: curriculum_formacion ID: 84
+INSERTADO: curriculum_trabajos ID: 120
+INSERTADO: curriculum_trabajos ID: 121
+INSERTADO: curriculum_trabajos ID: 122
+INSERTADO: curriculum_lenguajes ID: 201
+INSERTADO: curriculum_lenguajes ID: 202
+INSERTADO: curriculum_lenguajes ID: 203
+INSERTADO: curriculum_tecnologias ID: 203
+INSERTADO: curriculum_tecnologias ID: 204
+INSERTADO: curriculum_tecnologias ID: 205
+INSERTADO: curriculum_tecnologias ID: 206
+INSERTADO: curriculum_tecnologias ID: 207
+INSERTADO: curriculum_idiomas ID: 127
+INSERTADO: curriculum_idiomas ID: 128
+INSERTADO: curriculum_especialidades ID: 177
+INSERTADO: curriculum_especialidades ID: 178
+INSERTADO: curriculum_especialidades ID: 179
+INSERTADO: curriculum_especialidades ID: 180
+INSERTADO: curriculum_especialidades ID: 181
+OK: curriculum_041.json
+
+[42/100] PROCESANDO: curriculum_042.json
+INSERTADO: curriculum ID: 42
+INSERTADO: curriculum_formacion ID: 85
+INSERTADO: curriculum_trabajos ID: 123
+INSERTADO: curriculum_trabajos ID: 124
+INSERTADO: curriculum_trabajos ID: 125
+INSERTADO: curriculum_trabajos ID: 126
+INSERTADO: curriculum_lenguajes ID: 204
+INSERTADO: curriculum_lenguajes ID: 205
+INSERTADO: curriculum_lenguajes ID: 206
+INSERTADO: curriculum_lenguajes ID: 207
+INSERTADO: curriculum_lenguajes ID: 208
+INSERTADO: curriculum_tecnologias ID: 208
+INSERTADO: curriculum_tecnologias ID: 209
+INSERTADO: curriculum_tecnologias ID: 210
+INSERTADO: curriculum_idiomas ID: 129
+INSERTADO: curriculum_idiomas ID: 130
+INSERTADO: curriculum_idiomas ID: 131
+INSERTADO: curriculum_idiomas ID: 132
+INSERTADO: curriculum_especialidades ID: 182
+INSERTADO: curriculum_especialidades ID: 183
+INSERTADO: curriculum_especialidades ID: 184
+INSERTADO: curriculum_especialidades ID: 185
+INSERTADO: curriculum_especialidades ID: 186
+OK: curriculum_042.json
+
+[43/100] PROCESANDO: curriculum_043.json
+INSERTADO: curriculum ID: 43
+INSERTADO: curriculum_formacion ID: 86
+INSERTADO: curriculum_formacion ID: 87
+INSERTADO: curriculum_formacion ID: 88
+INSERTADO: curriculum_trabajos ID: 127
+INSERTADO: curriculum_trabajos ID: 128
+INSERTADO: curriculum_lenguajes ID: 209
+INSERTADO: curriculum_lenguajes ID: 210
+INSERTADO: curriculum_lenguajes ID: 211
+INSERTADO: curriculum_lenguajes ID: 212
+INSERTADO: curriculum_lenguajes ID: 213
+INSERTADO: curriculum_tecnologias ID: 211
+INSERTADO: curriculum_tecnologias ID: 212
+INSERTADO: curriculum_tecnologias ID: 213
+INSERTADO: curriculum_tecnologias ID: 214
+INSERTADO: curriculum_tecnologias ID: 215
+INSERTADO: curriculum_tecnologias ID: 216
+INSERTADO: curriculum_idiomas ID: 133
+INSERTADO: curriculum_idiomas ID: 134
+INSERTADO: curriculum_idiomas ID: 135
+INSERTADO: curriculum_idiomas ID: 136
+INSERTADO: curriculum_especialidades ID: 187
+INSERTADO: curriculum_especialidades ID: 188
+INSERTADO: curriculum_especialidades ID: 189
+INSERTADO: curriculum_especialidades ID: 190
+INSERTADO: curriculum_especialidades ID: 191
+INSERTADO: curriculum_especialidades ID: 192
+OK: curriculum_043.json
+
+[44/100] PROCESANDO: curriculum_044.json
+INSERTADO: curriculum ID: 44
+INSERTADO: curriculum_formacion ID: 89
+INSERTADO: curriculum_trabajos ID: 129
+INSERTADO: curriculum_trabajos ID: 130
+INSERTADO: curriculum_trabajos ID: 131
+INSERTADO: curriculum_lenguajes ID: 214
+INSERTADO: curriculum_lenguajes ID: 215
+INSERTADO: curriculum_lenguajes ID: 216
+INSERTADO: curriculum_lenguajes ID: 217
+INSERTADO: curriculum_tecnologias ID: 217
+INSERTADO: curriculum_tecnologias ID: 218
+INSERTADO: curriculum_tecnologias ID: 219
+INSERTADO: curriculum_idiomas ID: 137
+INSERTADO: curriculum_idiomas ID: 138
+INSERTADO: curriculum_especialidades ID: 193
+INSERTADO: curriculum_especialidades ID: 194
+INSERTADO: curriculum_especialidades ID: 195
+INSERTADO: curriculum_especialidades ID: 196
+INSERTADO: curriculum_especialidades ID: 197
+OK: curriculum_044.json
+
+[45/100] PROCESANDO: curriculum_045.json
+INSERTADO: curriculum ID: 45
+INSERTADO: curriculum_formacion ID: 90
+INSERTADO: curriculum_formacion ID: 91
+INSERTADO: curriculum_formacion ID: 92
+INSERTADO: curriculum_trabajos ID: 132
+INSERTADO: curriculum_trabajos ID: 133
+INSERTADO: curriculum_trabajos ID: 134
+INSERTADO: curriculum_lenguajes ID: 218
+INSERTADO: curriculum_lenguajes ID: 219
+INSERTADO: curriculum_lenguajes ID: 220
+INSERTADO: curriculum_tecnologias ID: 220
+INSERTADO: curriculum_tecnologias ID: 221
+INSERTADO: curriculum_tecnologias ID: 222
+INSERTADO: curriculum_idiomas ID: 139
+INSERTADO: curriculum_idiomas ID: 140
+INSERTADO: curriculum_idiomas ID: 141
+INSERTADO: curriculum_idiomas ID: 142
+INSERTADO: curriculum_especialidades ID: 198
+INSERTADO: curriculum_especialidades ID: 199
+INSERTADO: curriculum_especialidades ID: 200
+INSERTADO: curriculum_especialidades ID: 201
+OK: curriculum_045.json
+
+[46/100] PROCESANDO: curriculum_046.json
+INSERTADO: curriculum ID: 46
+INSERTADO: curriculum_formacion ID: 93
+INSERTADO: curriculum_formacion ID: 94
+INSERTADO: curriculum_formacion ID: 95
+INSERTADO: curriculum_trabajos ID: 135
+INSERTADO: curriculum_trabajos ID: 136
+INSERTADO: curriculum_trabajos ID: 137
+INSERTADO: curriculum_trabajos ID: 138
+INSERTADO: curriculum_lenguajes ID: 221
+INSERTADO: curriculum_lenguajes ID: 222
+INSERTADO: curriculum_lenguajes ID: 223
+INSERTADO: curriculum_lenguajes ID: 224
+INSERTADO: curriculum_lenguajes ID: 225
+INSERTADO: curriculum_tecnologias ID: 223
+INSERTADO: curriculum_tecnologias ID: 224
+INSERTADO: curriculum_tecnologias ID: 225
+INSERTADO: curriculum_idiomas ID: 143
+INSERTADO: curriculum_idiomas ID: 144
+INSERTADO: curriculum_especialidades ID: 202
+INSERTADO: curriculum_especialidades ID: 203
+INSERTADO: curriculum_especialidades ID: 204
+INSERTADO: curriculum_especialidades ID: 205
+INSERTADO: curriculum_especialidades ID: 206
+OK: curriculum_046.json
+
+[47/100] PROCESANDO: curriculum_047.json
+INSERTADO: curriculum ID: 47
+INSERTADO: curriculum_formacion ID: 96
+INSERTADO: curriculum_trabajos ID: 139
+INSERTADO: curriculum_trabajos ID: 140
+INSERTADO: curriculum_trabajos ID: 141
+INSERTADO: curriculum_lenguajes ID: 226
+INSERTADO: curriculum_lenguajes ID: 227
+INSERTADO: curriculum_lenguajes ID: 228
+INSERTADO: curriculum_lenguajes ID: 229
+INSERTADO: curriculum_tecnologias ID: 226
+INSERTADO: curriculum_tecnologias ID: 227
+INSERTADO: curriculum_tecnologias ID: 228
+INSERTADO: curriculum_tecnologias ID: 229
+INSERTADO: curriculum_tecnologias ID: 230
+INSERTADO: curriculum_idiomas ID: 145
+INSERTADO: curriculum_idiomas ID: 146
+INSERTADO: curriculum_idiomas ID: 147
+INSERTADO: curriculum_idiomas ID: 148
+INSERTADO: curriculum_especialidades ID: 207
+INSERTADO: curriculum_especialidades ID: 208
+INSERTADO: curriculum_especialidades ID: 209
+INSERTADO: curriculum_especialidades ID: 210
+INSERTADO: curriculum_especialidades ID: 211
+INSERTADO: curriculum_especialidades ID: 212
+OK: curriculum_047.json
+
+[48/100] PROCESANDO: curriculum_048.json
+INSERTADO: curriculum ID: 48
+INSERTADO: curriculum_formacion ID: 97
+INSERTADO: curriculum_trabajos ID: 142
+INSERTADO: curriculum_trabajos ID: 143
+INSERTADO: curriculum_trabajos ID: 144
+INSERTADO: curriculum_lenguajes ID: 230
+INSERTADO: curriculum_lenguajes ID: 231
+INSERTADO: curriculum_lenguajes ID: 232
+INSERTADO: curriculum_lenguajes ID: 233
+INSERTADO: curriculum_lenguajes ID: 234
+INSERTADO: curriculum_tecnologias ID: 231
+INSERTADO: curriculum_tecnologias ID: 232
+INSERTADO: curriculum_tecnologias ID: 233
+INSERTADO: curriculum_tecnologias ID: 234
+INSERTADO: curriculum_tecnologias ID: 235
+INSERTADO: curriculum_idiomas ID: 149
+INSERTADO: curriculum_idiomas ID: 150
+INSERTADO: curriculum_idiomas ID: 151
+INSERTADO: curriculum_idiomas ID: 152
+INSERTADO: curriculum_especialidades ID: 213
+INSERTADO: curriculum_especialidades ID: 214
+INSERTADO: curriculum_especialidades ID: 215
+INSERTADO: curriculum_especialidades ID: 216
+INSERTADO: curriculum_especialidades ID: 217
+INSERTADO: curriculum_especialidades ID: 218
+OK: curriculum_048.json
+
+[49/100] PROCESANDO: curriculum_049.json
+INSERTADO: curriculum ID: 49
+INSERTADO: curriculum_formacion ID: 98
+INSERTADO: curriculum_formacion ID: 99
+INSERTADO: curriculum_trabajos ID: 145
+INSERTADO: curriculum_trabajos ID: 146
+INSERTADO: curriculum_trabajos ID: 147
+INSERTADO: curriculum_trabajos ID: 148
+INSERTADO: curriculum_lenguajes ID: 235
+INSERTADO: curriculum_lenguajes ID: 236
+INSERTADO: curriculum_lenguajes ID: 237
+INSERTADO: curriculum_tecnologias ID: 236
+INSERTADO: curriculum_tecnologias ID: 237
+INSERTADO: curriculum_tecnologias ID: 238
+INSERTADO: curriculum_tecnologias ID: 239
+INSERTADO: curriculum_tecnologias ID: 240
+INSERTADO: curriculum_tecnologias ID: 241
+INSERTADO: curriculum_tecnologias ID: 242
+INSERTADO: curriculum_idiomas ID: 153
+INSERTADO: curriculum_idiomas ID: 154
+INSERTADO: curriculum_idiomas ID: 155
+INSERTADO: curriculum_idiomas ID: 156
+INSERTADO: curriculum_especialidades ID: 219
+INSERTADO: curriculum_especialidades ID: 220
+INSERTADO: curriculum_especialidades ID: 221
+OK: curriculum_049.json
+
+[50/100] PROCESANDO: curriculum_050.json
+INSERTADO: curriculum ID: 50
+INSERTADO: curriculum_formacion ID: 100
+INSERTADO: curriculum_trabajos ID: 149
+INSERTADO: curriculum_trabajos ID: 150
+INSERTADO: curriculum_trabajos ID: 151
+INSERTADO: curriculum_trabajos ID: 152
+INSERTADO: curriculum_lenguajes ID: 238
+INSERTADO: curriculum_lenguajes ID: 239
+INSERTADO: curriculum_lenguajes ID: 240
+INSERTADO: curriculum_lenguajes ID: 241
+INSERTADO: curriculum_tecnologias ID: 243
+INSERTADO: curriculum_tecnologias ID: 244
+INSERTADO: curriculum_tecnologias ID: 245
+INSERTADO: curriculum_tecnologias ID: 246
+INSERTADO: curriculum_tecnologias ID: 247
+INSERTADO: curriculum_tecnologias ID: 248
+INSERTADO: curriculum_tecnologias ID: 249
+INSERTADO: curriculum_idiomas ID: 157
+INSERTADO: curriculum_idiomas ID: 158
+INSERTADO: curriculum_idiomas ID: 159
+INSERTADO: curriculum_especialidades ID: 222
+INSERTADO: curriculum_especialidades ID: 223
+INSERTADO: curriculum_especialidades ID: 224
+INSERTADO: curriculum_especialidades ID: 225
+INSERTADO: curriculum_especialidades ID: 226
+INSERTADO: curriculum_especialidades ID: 227
+OK: curriculum_050.json
+
+[51/100] PROCESANDO: curriculum_051.json
+INSERTADO: curriculum ID: 51
+INSERTADO: curriculum_formacion ID: 101
+INSERTADO: curriculum_formacion ID: 102
+INSERTADO: curriculum_formacion ID: 103
+INSERTADO: curriculum_trabajos ID: 153
+INSERTADO: curriculum_trabajos ID: 154
+INSERTADO: curriculum_trabajos ID: 155
+INSERTADO: curriculum_trabajos ID: 156
+INSERTADO: curriculum_lenguajes ID: 242
+INSERTADO: curriculum_lenguajes ID: 243
+INSERTADO: curriculum_lenguajes ID: 244
+INSERTADO: curriculum_tecnologias ID: 250
+INSERTADO: curriculum_tecnologias ID: 251
+INSERTADO: curriculum_tecnologias ID: 252
+INSERTADO: curriculum_tecnologias ID: 253
+INSERTADO: curriculum_idiomas ID: 160
+INSERTADO: curriculum_idiomas ID: 161
+INSERTADO: curriculum_especialidades ID: 228
+INSERTADO: curriculum_especialidades ID: 229
+INSERTADO: curriculum_especialidades ID: 230
+INSERTADO: curriculum_especialidades ID: 231
+OK: curriculum_051.json
+
+[52/100] PROCESANDO: curriculum_052.json
+INSERTADO: curriculum ID: 52
+INSERTADO: curriculum_formacion ID: 104
+INSERTADO: curriculum_formacion ID: 105
+INSERTADO: curriculum_trabajos ID: 157
+INSERTADO: curriculum_trabajos ID: 158
+INSERTADO: curriculum_lenguajes ID: 245
+INSERTADO: curriculum_lenguajes ID: 246
+INSERTADO: curriculum_lenguajes ID: 247
+INSERTADO: curriculum_lenguajes ID: 248
+INSERTADO: curriculum_lenguajes ID: 249
+INSERTADO: curriculum_lenguajes ID: 250
+INSERTADO: curriculum_tecnologias ID: 254
+INSERTADO: curriculum_tecnologias ID: 255
+INSERTADO: curriculum_tecnologias ID: 256
+INSERTADO: curriculum_tecnologias ID: 257
+INSERTADO: curriculum_idiomas ID: 162
+INSERTADO: curriculum_idiomas ID: 163
+INSERTADO: curriculum_especialidades ID: 232
+INSERTADO: curriculum_especialidades ID: 233
+INSERTADO: curriculum_especialidades ID: 234
+INSERTADO: curriculum_especialidades ID: 235
+OK: curriculum_052.json
+
+[53/100] PROCESANDO: curriculum_053.json
+INSERTADO: curriculum ID: 53
+INSERTADO: curriculum_formacion ID: 106
+INSERTADO: curriculum_formacion ID: 107
+INSERTADO: curriculum_trabajos ID: 159
+INSERTADO: curriculum_trabajos ID: 160
+INSERTADO: curriculum_trabajos ID: 161
+INSERTADO: curriculum_lenguajes ID: 251
+INSERTADO: curriculum_lenguajes ID: 252
+INSERTADO: curriculum_lenguajes ID: 253
+INSERTADO: curriculum_lenguajes ID: 254
+INSERTADO: curriculum_lenguajes ID: 255
+INSERTADO: curriculum_lenguajes ID: 256
+INSERTADO: curriculum_lenguajes ID: 257
+INSERTADO: curriculum_tecnologias ID: 258
+INSERTADO: curriculum_tecnologias ID: 259
+INSERTADO: curriculum_tecnologias ID: 260
+INSERTADO: curriculum_tecnologias ID: 261
+INSERTADO: curriculum_idiomas ID: 164
+INSERTADO: curriculum_idiomas ID: 165
+INSERTADO: curriculum_idiomas ID: 166
+INSERTADO: curriculum_especialidades ID: 236
+INSERTADO: curriculum_especialidades ID: 237
+INSERTADO: curriculum_especialidades ID: 238
+OK: curriculum_053.json
+
+[54/100] PROCESANDO: curriculum_054.json
+INSERTADO: curriculum ID: 54
+INSERTADO: curriculum_formacion ID: 108
+INSERTADO: curriculum_formacion ID: 109
+INSERTADO: curriculum_formacion ID: 110
+INSERTADO: curriculum_trabajos ID: 162
+INSERTADO: curriculum_trabajos ID: 163
+INSERTADO: curriculum_trabajos ID: 164
+INSERTADO: curriculum_trabajos ID: 165
+INSERTADO: curriculum_lenguajes ID: 258
+INSERTADO: curriculum_lenguajes ID: 259
+INSERTADO: curriculum_lenguajes ID: 260
+INSERTADO: curriculum_lenguajes ID: 261
+INSERTADO: curriculum_lenguajes ID: 262
+INSERTADO: curriculum_tecnologias ID: 262
+INSERTADO: curriculum_tecnologias ID: 263
+INSERTADO: curriculum_tecnologias ID: 264
+INSERTADO: curriculum_tecnologias ID: 265
+INSERTADO: curriculum_idiomas ID: 167
+INSERTADO: curriculum_idiomas ID: 168
+INSERTADO: curriculum_idiomas ID: 169
+INSERTADO: curriculum_especialidades ID: 239
+INSERTADO: curriculum_especialidades ID: 240
+INSERTADO: curriculum_especialidades ID: 241
+OK: curriculum_054.json
+
+[55/100] PROCESANDO: curriculum_055.json
+INSERTADO: curriculum ID: 55
+INSERTADO: curriculum_formacion ID: 111
+INSERTADO: curriculum_trabajos ID: 166
+INSERTADO: curriculum_trabajos ID: 167
+INSERTADO: curriculum_trabajos ID: 168
+INSERTADO: curriculum_trabajos ID: 169
+INSERTADO: curriculum_lenguajes ID: 263
+INSERTADO: curriculum_lenguajes ID: 264
+INSERTADO: curriculum_lenguajes ID: 265
+INSERTADO: curriculum_lenguajes ID: 266
+INSERTADO: curriculum_lenguajes ID: 267
+INSERTADO: curriculum_lenguajes ID: 268
+INSERTADO: curriculum_lenguajes ID: 269
+INSERTADO: curriculum_tecnologias ID: 266
+INSERTADO: curriculum_tecnologias ID: 267
+INSERTADO: curriculum_tecnologias ID: 268
+INSERTADO: curriculum_tecnologias ID: 269
+INSERTADO: curriculum_tecnologias ID: 270
+INSERTADO: curriculum_tecnologias ID: 271
+INSERTADO: curriculum_tecnologias ID: 272
+INSERTADO: curriculum_idiomas ID: 170
+INSERTADO: curriculum_idiomas ID: 171
+INSERTADO: curriculum_idiomas ID: 172
+INSERTADO: curriculum_especialidades ID: 242
+INSERTADO: curriculum_especialidades ID: 243
+INSERTADO: curriculum_especialidades ID: 244
+INSERTADO: curriculum_especialidades ID: 245
+INSERTADO: curriculum_especialidades ID: 246
+OK: curriculum_055.json
+
+[56/100] PROCESANDO: curriculum_056.json
+INSERTADO: curriculum ID: 56
+INSERTADO: curriculum_formacion ID: 112
+INSERTADO: curriculum_formacion ID: 113
+INSERTADO: curriculum_formacion ID: 114
+INSERTADO: curriculum_trabajos ID: 170
+INSERTADO: curriculum_trabajos ID: 171
+INSERTADO: curriculum_trabajos ID: 172
+INSERTADO: curriculum_trabajos ID: 173
+INSERTADO: curriculum_lenguajes ID: 270
+INSERTADO: curriculum_lenguajes ID: 271
+INSERTADO: curriculum_lenguajes ID: 272
+INSERTADO: curriculum_lenguajes ID: 273
+INSERTADO: curriculum_tecnologias ID: 273
+INSERTADO: curriculum_tecnologias ID: 274
+INSERTADO: curriculum_tecnologias ID: 275
+INSERTADO: curriculum_idiomas ID: 173
+INSERTADO: curriculum_idiomas ID: 174
+INSERTADO: curriculum_especialidades ID: 247
+INSERTADO: curriculum_especialidades ID: 248
+INSERTADO: curriculum_especialidades ID: 249
+INSERTADO: curriculum_especialidades ID: 250
+INSERTADO: curriculum_especialidades ID: 251
+INSERTADO: curriculum_especialidades ID: 252
+OK: curriculum_056.json
+
+[57/100] PROCESANDO: curriculum_057.json
+INSERTADO: curriculum ID: 57
+INSERTADO: curriculum_formacion ID: 115
+INSERTADO: curriculum_formacion ID: 116
+INSERTADO: curriculum_formacion ID: 117
+INSERTADO: curriculum_trabajos ID: 174
+INSERTADO: curriculum_trabajos ID: 175
+INSERTADO: curriculum_trabajos ID: 176
+INSERTADO: curriculum_lenguajes ID: 274
+INSERTADO: curriculum_lenguajes ID: 275
+INSERTADO: curriculum_lenguajes ID: 276
+INSERTADO: curriculum_lenguajes ID: 277
+INSERTADO: curriculum_lenguajes ID: 278
+INSERTADO: curriculum_tecnologias ID: 276
+INSERTADO: curriculum_tecnologias ID: 277
+INSERTADO: curriculum_tecnologias ID: 278
+INSERTADO: curriculum_tecnologias ID: 279
+INSERTADO: curriculum_tecnologias ID: 280
+INSERTADO: curriculum_tecnologias ID: 281
+INSERTADO: curriculum_tecnologias ID: 282
+INSERTADO: curriculum_idiomas ID: 175
+INSERTADO: curriculum_idiomas ID: 176
+INSERTADO: curriculum_idiomas ID: 177
+INSERTADO: curriculum_idiomas ID: 178
+INSERTADO: curriculum_especialidades ID: 253
+INSERTADO: curriculum_especialidades ID: 254
+INSERTADO: curriculum_especialidades ID: 255
+INSERTADO: curriculum_especialidades ID: 256
+INSERTADO: curriculum_especialidades ID: 257
+OK: curriculum_057.json
+
+[58/100] PROCESANDO: curriculum_058.json
+INSERTADO: curriculum ID: 58
+INSERTADO: curriculum_formacion ID: 118
+INSERTADO: curriculum_formacion ID: 119
+INSERTADO: curriculum_formacion ID: 120
+INSERTADO: curriculum_trabajos ID: 177
+INSERTADO: curriculum_trabajos ID: 178
+INSERTADO: curriculum_lenguajes ID: 279
+INSERTADO: curriculum_lenguajes ID: 280
+INSERTADO: curriculum_lenguajes ID: 281
+INSERTADO: curriculum_tecnologias ID: 283
+INSERTADO: curriculum_tecnologias ID: 284
+INSERTADO: curriculum_tecnologias ID: 285
+INSERTADO: curriculum_tecnologias ID: 286
+INSERTADO: curriculum_tecnologias ID: 287
+INSERTADO: curriculum_tecnologias ID: 288
+INSERTADO: curriculum_idiomas ID: 179
+INSERTADO: curriculum_idiomas ID: 180
+INSERTADO: curriculum_idiomas ID: 181
+INSERTADO: curriculum_especialidades ID: 258
+INSERTADO: curriculum_especialidades ID: 259
+INSERTADO: curriculum_especialidades ID: 260
+INSERTADO: curriculum_especialidades ID: 261
+OK: curriculum_058.json
+
+[59/100] PROCESANDO: curriculum_059.json
+INSERTADO: curriculum ID: 59
+INSERTADO: curriculum_formacion ID: 121
+INSERTADO: curriculum_formacion ID: 122
+INSERTADO: curriculum_trabajos ID: 179
+INSERTADO: curriculum_trabajos ID: 180
+INSERTADO: curriculum_lenguajes ID: 282
+INSERTADO: curriculum_lenguajes ID: 283
+INSERTADO: curriculum_lenguajes ID: 284
+INSERTADO: curriculum_lenguajes ID: 285
+INSERTADO: curriculum_tecnologias ID: 289
+INSERTADO: curriculum_tecnologias ID: 290
+INSERTADO: curriculum_tecnologias ID: 291
+INSERTADO: curriculum_idiomas ID: 182
+INSERTADO: curriculum_idiomas ID: 183
+INSERTADO: curriculum_idiomas ID: 184
+INSERTADO: curriculum_idiomas ID: 185
+INSERTADO: curriculum_especialidades ID: 262
+INSERTADO: curriculum_especialidades ID: 263
+INSERTADO: curriculum_especialidades ID: 264
+INSERTADO: curriculum_especialidades ID: 265
+INSERTADO: curriculum_especialidades ID: 266
+OK: curriculum_059.json
+
+[60/100] PROCESANDO: curriculum_060.json
+INSERTADO: curriculum ID: 60
+INSERTADO: curriculum_formacion ID: 123
+INSERTADO: curriculum_formacion ID: 124
+INSERTADO: curriculum_trabajos ID: 181
+INSERTADO: curriculum_trabajos ID: 182
+INSERTADO: curriculum_lenguajes ID: 286
+INSERTADO: curriculum_lenguajes ID: 287
+INSERTADO: curriculum_lenguajes ID: 288
+INSERTADO: curriculum_lenguajes ID: 289
+INSERTADO: curriculum_lenguajes ID: 290
+INSERTADO: curriculum_tecnologias ID: 292
+INSERTADO: curriculum_tecnologias ID: 293
+INSERTADO: curriculum_tecnologias ID: 294
+INSERTADO: curriculum_tecnologias ID: 295
+INSERTADO: curriculum_tecnologias ID: 296
+INSERTADO: curriculum_idiomas ID: 186
+INSERTADO: curriculum_idiomas ID: 187
+INSERTADO: curriculum_idiomas ID: 188
+INSERTADO: curriculum_especialidades ID: 267
+INSERTADO: curriculum_especialidades ID: 268
+INSERTADO: curriculum_especialidades ID: 269
+OK: curriculum_060.json
+
+[61/100] PROCESANDO: curriculum_061.json
+INSERTADO: curriculum ID: 61
+INSERTADO: curriculum_formacion ID: 125
+INSERTADO: curriculum_formacion ID: 126
+INSERTADO: curriculum_formacion ID: 127
+INSERTADO: curriculum_trabajos ID: 183
+INSERTADO: curriculum_trabajos ID: 184
+INSERTADO: curriculum_trabajos ID: 185
+INSERTADO: curriculum_trabajos ID: 186
+INSERTADO: curriculum_lenguajes ID: 291
+INSERTADO: curriculum_lenguajes ID: 292
+INSERTADO: curriculum_lenguajes ID: 293
+INSERTADO: curriculum_lenguajes ID: 294
+INSERTADO: curriculum_lenguajes ID: 295
+INSERTADO: curriculum_lenguajes ID: 296
+INSERTADO: curriculum_lenguajes ID: 297
+INSERTADO: curriculum_tecnologias ID: 297
+INSERTADO: curriculum_tecnologias ID: 298
+INSERTADO: curriculum_tecnologias ID: 299
+INSERTADO: curriculum_tecnologias ID: 300
+INSERTADO: curriculum_tecnologias ID: 301
+INSERTADO: curriculum_idiomas ID: 189
+INSERTADO: curriculum_idiomas ID: 190
+INSERTADO: curriculum_especialidades ID: 270
+INSERTADO: curriculum_especialidades ID: 271
+INSERTADO: curriculum_especialidades ID: 272
+OK: curriculum_061.json
+
+[62/100] PROCESANDO: curriculum_062.json
+INSERTADO: curriculum ID: 62
+INSERTADO: curriculum_formacion ID: 128
+INSERTADO: curriculum_formacion ID: 129
+INSERTADO: curriculum_trabajos ID: 187
+INSERTADO: curriculum_trabajos ID: 188
+INSERTADO: curriculum_trabajos ID: 189
+INSERTADO: curriculum_trabajos ID: 190
+INSERTADO: curriculum_lenguajes ID: 298
+INSERTADO: curriculum_lenguajes ID: 299
+INSERTADO: curriculum_lenguajes ID: 300
+INSERTADO: curriculum_tecnologias ID: 302
+INSERTADO: curriculum_tecnologias ID: 303
+INSERTADO: curriculum_tecnologias ID: 304
+INSERTADO: curriculum_tecnologias ID: 305
+INSERTADO: curriculum_tecnologias ID: 306
+INSERTADO: curriculum_tecnologias ID: 307
+INSERTADO: curriculum_idiomas ID: 191
+INSERTADO: curriculum_idiomas ID: 192
+INSERTADO: curriculum_idiomas ID: 193
+INSERTADO: curriculum_especialidades ID: 273
+INSERTADO: curriculum_especialidades ID: 274
+INSERTADO: curriculum_especialidades ID: 275
+INSERTADO: curriculum_especialidades ID: 276
+INSERTADO: curriculum_especialidades ID: 277
+OK: curriculum_062.json
+
+[63/100] PROCESANDO: curriculum_063.json
+INSERTADO: curriculum ID: 63
+INSERTADO: curriculum_formacion ID: 130
+INSERTADO: curriculum_formacion ID: 131
+INSERTADO: curriculum_trabajos ID: 191
+INSERTADO: curriculum_trabajos ID: 192
+INSERTADO: curriculum_lenguajes ID: 301
+INSERTADO: curriculum_lenguajes ID: 302
+INSERTADO: curriculum_lenguajes ID: 303
+INSERTADO: curriculum_lenguajes ID: 304
+INSERTADO: curriculum_tecnologias ID: 308
+INSERTADO: curriculum_tecnologias ID: 309
+INSERTADO: curriculum_tecnologias ID: 310
+INSERTADO: curriculum_idiomas ID: 194
+INSERTADO: curriculum_idiomas ID: 195
+INSERTADO: curriculum_especialidades ID: 278
+INSERTADO: curriculum_especialidades ID: 279
+INSERTADO: curriculum_especialidades ID: 280
+INSERTADO: curriculum_especialidades ID: 281
+INSERTADO: curriculum_especialidades ID: 282
+INSERTADO: curriculum_especialidades ID: 283
+OK: curriculum_063.json
+
+[64/100] PROCESANDO: curriculum_064.json
+INSERTADO: curriculum ID: 64
+INSERTADO: curriculum_formacion ID: 132
+INSERTADO: curriculum_formacion ID: 133
+INSERTADO: curriculum_trabajos ID: 193
+INSERTADO: curriculum_trabajos ID: 194
+INSERTADO: curriculum_trabajos ID: 195
+INSERTADO: curriculum_trabajos ID: 196
+INSERTADO: curriculum_lenguajes ID: 305
+INSERTADO: curriculum_lenguajes ID: 306
+INSERTADO: curriculum_lenguajes ID: 307
+INSERTADO: curriculum_tecnologias ID: 311
+INSERTADO: curriculum_tecnologias ID: 312
+INSERTADO: curriculum_tecnologias ID: 313
+INSERTADO: curriculum_tecnologias ID: 314
+INSERTADO: curriculum_tecnologias ID: 315
+INSERTADO: curriculum_tecnologias ID: 316
+INSERTADO: curriculum_tecnologias ID: 317
+INSERTADO: curriculum_idiomas ID: 196
+INSERTADO: curriculum_idiomas ID: 197
+INSERTADO: curriculum_idiomas ID: 198
+INSERTADO: curriculum_especialidades ID: 284
+INSERTADO: curriculum_especialidades ID: 285
+INSERTADO: curriculum_especialidades ID: 286
+INSERTADO: curriculum_especialidades ID: 287
+OK: curriculum_064.json
+
+[65/100] PROCESANDO: curriculum_065.json
+INSERTADO: curriculum ID: 65
+INSERTADO: curriculum_formacion ID: 134
+INSERTADO: curriculum_formacion ID: 135
+INSERTADO: curriculum_formacion ID: 136
+INSERTADO: curriculum_trabajos ID: 197
+INSERTADO: curriculum_trabajos ID: 198
+INSERTADO: curriculum_trabajos ID: 199
+INSERTADO: curriculum_lenguajes ID: 308
+INSERTADO: curriculum_lenguajes ID: 309
+INSERTADO: curriculum_lenguajes ID: 310
+INSERTADO: curriculum_tecnologias ID: 318
+INSERTADO: curriculum_tecnologias ID: 319
+INSERTADO: curriculum_tecnologias ID: 320
+INSERTADO: curriculum_tecnologias ID: 321
+INSERTADO: curriculum_tecnologias ID: 322
+INSERTADO: curriculum_idiomas ID: 199
+INSERTADO: curriculum_idiomas ID: 200
+INSERTADO: curriculum_especialidades ID: 288
+INSERTADO: curriculum_especialidades ID: 289
+INSERTADO: curriculum_especialidades ID: 290
+INSERTADO: curriculum_especialidades ID: 291
+OK: curriculum_065.json
+
+[66/100] PROCESANDO: curriculum_066.json
+INSERTADO: curriculum ID: 66
+INSERTADO: curriculum_formacion ID: 137
+INSERTADO: curriculum_formacion ID: 138
+INSERTADO: curriculum_formacion ID: 139
+INSERTADO: curriculum_trabajos ID: 200
+INSERTADO: curriculum_trabajos ID: 201
+INSERTADO: curriculum_trabajos ID: 202
+INSERTADO: curriculum_lenguajes ID: 311
+INSERTADO: curriculum_lenguajes ID: 312
+INSERTADO: curriculum_lenguajes ID: 313
+INSERTADO: curriculum_lenguajes ID: 314
+INSERTADO: curriculum_lenguajes ID: 315
+INSERTADO: curriculum_lenguajes ID: 316
+INSERTADO: curriculum_lenguajes ID: 317
+INSERTADO: curriculum_tecnologias ID: 323
+INSERTADO: curriculum_tecnologias ID: 324
+INSERTADO: curriculum_tecnologias ID: 325
+INSERTADO: curriculum_idiomas ID: 201
+INSERTADO: curriculum_idiomas ID: 202
+INSERTADO: curriculum_especialidades ID: 292
+INSERTADO: curriculum_especialidades ID: 293
+INSERTADO: curriculum_especialidades ID: 294
+INSERTADO: curriculum_especialidades ID: 295
+INSERTADO: curriculum_especialidades ID: 296
+INSERTADO: curriculum_especialidades ID: 297
+OK: curriculum_066.json
+
+[67/100] PROCESANDO: curriculum_067.json
+INSERTADO: curriculum ID: 67
+INSERTADO: curriculum_formacion ID: 140
+INSERTADO: curriculum_formacion ID: 141
+INSERTADO: curriculum_trabajos ID: 203
+INSERTADO: curriculum_trabajos ID: 204
+INSERTADO: curriculum_trabajos ID: 205
+INSERTADO: curriculum_lenguajes ID: 318
+INSERTADO: curriculum_lenguajes ID: 319
+INSERTADO: curriculum_lenguajes ID: 320
+INSERTADO: curriculum_lenguajes ID: 321
+INSERTADO: curriculum_lenguajes ID: 322
+INSERTADO: curriculum_tecnologias ID: 326
+INSERTADO: curriculum_tecnologias ID: 327
+INSERTADO: curriculum_tecnologias ID: 328
+INSERTADO: curriculum_idiomas ID: 203
+INSERTADO: curriculum_idiomas ID: 204
+INSERTADO: curriculum_idiomas ID: 205
+INSERTADO: curriculum_idiomas ID: 206
+INSERTADO: curriculum_especialidades ID: 298
+INSERTADO: curriculum_especialidades ID: 299
+INSERTADO: curriculum_especialidades ID: 300
+INSERTADO: curriculum_especialidades ID: 301
+OK: curriculum_067.json
+
+[68/100] PROCESANDO: curriculum_068.json
+INSERTADO: curriculum ID: 68
+INSERTADO: curriculum_formacion ID: 142
+INSERTADO: curriculum_trabajos ID: 206
+INSERTADO: curriculum_trabajos ID: 207
+INSERTADO: curriculum_trabajos ID: 208
+INSERTADO: curriculum_trabajos ID: 209
+INSERTADO: curriculum_lenguajes ID: 323
+INSERTADO: curriculum_lenguajes ID: 324
+INSERTADO: curriculum_lenguajes ID: 325
+INSERTADO: curriculum_lenguajes ID: 326
+INSERTADO: curriculum_tecnologias ID: 329
+INSERTADO: curriculum_tecnologias ID: 330
+INSERTADO: curriculum_tecnologias ID: 331
+INSERTADO: curriculum_tecnologias ID: 332
+INSERTADO: curriculum_idiomas ID: 207
+INSERTADO: curriculum_idiomas ID: 208
+INSERTADO: curriculum_idiomas ID: 209
+INSERTADO: curriculum_especialidades ID: 302
+INSERTADO: curriculum_especialidades ID: 303
+INSERTADO: curriculum_especialidades ID: 304
+INSERTADO: curriculum_especialidades ID: 305
+INSERTADO: curriculum_especialidades ID: 306
+INSERTADO: curriculum_especialidades ID: 307
+OK: curriculum_068.json
+
+[69/100] PROCESANDO: curriculum_069.json
+INSERTADO: curriculum ID: 69
+INSERTADO: curriculum_formacion ID: 143
+INSERTADO: curriculum_formacion ID: 144
+INSERTADO: curriculum_formacion ID: 145
+INSERTADO: curriculum_trabajos ID: 210
+INSERTADO: curriculum_trabajos ID: 211
+INSERTADO: curriculum_trabajos ID: 212
+INSERTADO: curriculum_lenguajes ID: 327
+INSERTADO: curriculum_lenguajes ID: 328
+INSERTADO: curriculum_lenguajes ID: 329
+INSERTADO: curriculum_lenguajes ID: 330
+INSERTADO: curriculum_lenguajes ID: 331
+INSERTADO: curriculum_lenguajes ID: 332
+INSERTADO: curriculum_lenguajes ID: 333
+INSERTADO: curriculum_tecnologias ID: 333
+INSERTADO: curriculum_tecnologias ID: 334
+INSERTADO: curriculum_tecnologias ID: 335
+INSERTADO: curriculum_tecnologias ID: 336
+INSERTADO: curriculum_idiomas ID: 210
+INSERTADO: curriculum_idiomas ID: 211
+INSERTADO: curriculum_idiomas ID: 212
+INSERTADO: curriculum_idiomas ID: 213
+INSERTADO: curriculum_especialidades ID: 308
+INSERTADO: curriculum_especialidades ID: 309
+INSERTADO: curriculum_especialidades ID: 310
+INSERTADO: curriculum_especialidades ID: 311
+OK: curriculum_069.json
+
+[70/100] PROCESANDO: curriculum_070.json
+INSERTADO: curriculum ID: 70
+INSERTADO: curriculum_formacion ID: 146
+INSERTADO: curriculum_trabajos ID: 213
+INSERTADO: curriculum_trabajos ID: 214
+INSERTADO: curriculum_lenguajes ID: 334
+INSERTADO: curriculum_lenguajes ID: 335
+INSERTADO: curriculum_lenguajes ID: 336
+INSERTADO: curriculum_tecnologias ID: 337
+INSERTADO: curriculum_tecnologias ID: 338
+INSERTADO: curriculum_tecnologias ID: 339
+INSERTADO: curriculum_tecnologias ID: 340
+INSERTADO: curriculum_idiomas ID: 214
+INSERTADO: curriculum_idiomas ID: 215
+INSERTADO: curriculum_especialidades ID: 312
+INSERTADO: curriculum_especialidades ID: 313
+INSERTADO: curriculum_especialidades ID: 314
+INSERTADO: curriculum_especialidades ID: 315
+INSERTADO: curriculum_especialidades ID: 316
+INSERTADO: curriculum_especialidades ID: 317
+OK: curriculum_070.json
+
+[71/100] PROCESANDO: curriculum_071.json
+INSERTADO: curriculum ID: 71
+INSERTADO: curriculum_formacion ID: 147
+INSERTADO: curriculum_formacion ID: 148
+INSERTADO: curriculum_trabajos ID: 215
+INSERTADO: curriculum_trabajos ID: 216
+INSERTADO: curriculum_lenguajes ID: 337
+INSERTADO: curriculum_lenguajes ID: 338
+INSERTADO: curriculum_lenguajes ID: 339
+INSERTADO: curriculum_tecnologias ID: 341
+INSERTADO: curriculum_tecnologias ID: 342
+INSERTADO: curriculum_tecnologias ID: 343
+INSERTADO: curriculum_tecnologias ID: 344
+INSERTADO: curriculum_tecnologias ID: 345
+INSERTADO: curriculum_tecnologias ID: 346
+INSERTADO: curriculum_idiomas ID: 216
+INSERTADO: curriculum_idiomas ID: 217
+INSERTADO: curriculum_especialidades ID: 318
+INSERTADO: curriculum_especialidades ID: 319
+INSERTADO: curriculum_especialidades ID: 320
+OK: curriculum_071.json
+
+[72/100] PROCESANDO: curriculum_072.json
+INSERTADO: curriculum ID: 72
+INSERTADO: curriculum_formacion ID: 149
+INSERTADO: curriculum_trabajos ID: 217
+INSERTADO: curriculum_trabajos ID: 218
+INSERTADO: curriculum_trabajos ID: 219
+INSERTADO: curriculum_lenguajes ID: 340
+INSERTADO: curriculum_lenguajes ID: 341
+INSERTADO: curriculum_lenguajes ID: 342
+INSERTADO: curriculum_lenguajes ID: 343
+INSERTADO: curriculum_lenguajes ID: 344
+INSERTADO: curriculum_lenguajes ID: 345
+INSERTADO: curriculum_tecnologias ID: 347
+INSERTADO: curriculum_tecnologias ID: 348
+INSERTADO: curriculum_tecnologias ID: 349
+INSERTADO: curriculum_tecnologias ID: 350
+INSERTADO: curriculum_tecnologias ID: 351
+INSERTADO: curriculum_idiomas ID: 218
+INSERTADO: curriculum_idiomas ID: 219
+INSERTADO: curriculum_especialidades ID: 321
+INSERTADO: curriculum_especialidades ID: 322
+INSERTADO: curriculum_especialidades ID: 323
+OK: curriculum_072.json
+
+[73/100] PROCESANDO: curriculum_073.json
+INSERTADO: curriculum ID: 73
+INSERTADO: curriculum_formacion ID: 150
+INSERTADO: curriculum_formacion ID: 151
+INSERTADO: curriculum_trabajos ID: 220
+INSERTADO: curriculum_trabajos ID: 221
+INSERTADO: curriculum_lenguajes ID: 346
+INSERTADO: curriculum_lenguajes ID: 347
+INSERTADO: curriculum_lenguajes ID: 348
+INSERTADO: curriculum_lenguajes ID: 349
+INSERTADO: curriculum_lenguajes ID: 350
+INSERTADO: curriculum_tecnologias ID: 352
+INSERTADO: curriculum_tecnologias ID: 353
+INSERTADO: curriculum_tecnologias ID: 354
+INSERTADO: curriculum_tecnologias ID: 355
+INSERTADO: curriculum_tecnologias ID: 356
+INSERTADO: curriculum_idiomas ID: 220
+INSERTADO: curriculum_idiomas ID: 221
+INSERTADO: curriculum_idiomas ID: 222
+INSERTADO: curriculum_idiomas ID: 223
+INSERTADO: curriculum_especialidades ID: 324
+INSERTADO: curriculum_especialidades ID: 325
+INSERTADO: curriculum_especialidades ID: 326
+INSERTADO: curriculum_especialidades ID: 327
+OK: curriculum_073.json
+
+[74/100] PROCESANDO: curriculum_074.json
+INSERTADO: curriculum ID: 74
+INSERTADO: curriculum_formacion ID: 152
+INSERTADO: curriculum_formacion ID: 153
+INSERTADO: curriculum_formacion ID: 154
+INSERTADO: curriculum_trabajos ID: 222
+INSERTADO: curriculum_trabajos ID: 223
+INSERTADO: curriculum_trabajos ID: 224
+INSERTADO: curriculum_lenguajes ID: 351
+INSERTADO: curriculum_lenguajes ID: 352
+INSERTADO: curriculum_lenguajes ID: 353
+INSERTADO: curriculum_lenguajes ID: 354
+INSERTADO: curriculum_lenguajes ID: 355
+INSERTADO: curriculum_lenguajes ID: 356
+INSERTADO: curriculum_lenguajes ID: 357
+INSERTADO: curriculum_tecnologias ID: 357
+INSERTADO: curriculum_tecnologias ID: 358
+INSERTADO: curriculum_tecnologias ID: 359
+INSERTADO: curriculum_tecnologias ID: 360
+INSERTADO: curriculum_tecnologias ID: 361
+INSERTADO: curriculum_tecnologias ID: 362
+INSERTADO: curriculum_tecnologias ID: 363
+INSERTADO: curriculum_idiomas ID: 224
+INSERTADO: curriculum_idiomas ID: 225
+INSERTADO: curriculum_especialidades ID: 328
+INSERTADO: curriculum_especialidades ID: 329
+INSERTADO: curriculum_especialidades ID: 330
+INSERTADO: curriculum_especialidades ID: 331
+OK: curriculum_074.json
+
+[75/100] PROCESANDO: curriculum_075.json
+INSERTADO: curriculum ID: 75
+INSERTADO: curriculum_formacion ID: 155
+INSERTADO: curriculum_formacion ID: 156
+INSERTADO: curriculum_trabajos ID: 225
+INSERTADO: curriculum_trabajos ID: 226
+INSERTADO: curriculum_trabajos ID: 227
+INSERTADO: curriculum_trabajos ID: 228
+INSERTADO: curriculum_lenguajes ID: 358
+INSERTADO: curriculum_lenguajes ID: 359
+INSERTADO: curriculum_lenguajes ID: 360
+INSERTADO: curriculum_lenguajes ID: 361
+INSERTADO: curriculum_lenguajes ID: 362
+INSERTADO: curriculum_lenguajes ID: 363
+INSERTADO: curriculum_tecnologias ID: 364
+INSERTADO: curriculum_tecnologias ID: 365
+INSERTADO: curriculum_tecnologias ID: 366
+INSERTADO: curriculum_idiomas ID: 226
+INSERTADO: curriculum_idiomas ID: 227
+INSERTADO: curriculum_idiomas ID: 228
+INSERTADO: curriculum_especialidades ID: 332
+INSERTADO: curriculum_especialidades ID: 333
+INSERTADO: curriculum_especialidades ID: 334
+INSERTADO: curriculum_especialidades ID: 335
+OK: curriculum_075.json
+
+[76/100] PROCESANDO: curriculum_076.json
+INSERTADO: curriculum ID: 76
+INSERTADO: curriculum_formacion ID: 157
+INSERTADO: curriculum_formacion ID: 158
+INSERTADO: curriculum_formacion ID: 159
+INSERTADO: curriculum_trabajos ID: 229
+INSERTADO: curriculum_trabajos ID: 230
+INSERTADO: curriculum_lenguajes ID: 364
+INSERTADO: curriculum_lenguajes ID: 365
+INSERTADO: curriculum_lenguajes ID: 366
+INSERTADO: curriculum_tecnologias ID: 367
+INSERTADO: curriculum_tecnologias ID: 368
+INSERTADO: curriculum_tecnologias ID: 369
+INSERTADO: curriculum_idiomas ID: 229
+INSERTADO: curriculum_idiomas ID: 230
+INSERTADO: curriculum_especialidades ID: 336
+INSERTADO: curriculum_especialidades ID: 337
+INSERTADO: curriculum_especialidades ID: 338
+INSERTADO: curriculum_especialidades ID: 339
+OK: curriculum_076.json
+
+[77/100] PROCESANDO: curriculum_077.json
+INSERTADO: curriculum ID: 77
+INSERTADO: curriculum_formacion ID: 160
+INSERTADO: curriculum_formacion ID: 161
+INSERTADO: curriculum_trabajos ID: 231
+INSERTADO: curriculum_trabajos ID: 232
+INSERTADO: curriculum_trabajos ID: 233
+INSERTADO: curriculum_trabajos ID: 234
+INSERTADO: curriculum_lenguajes ID: 367
+INSERTADO: curriculum_lenguajes ID: 368
+INSERTADO: curriculum_lenguajes ID: 369
+INSERTADO: curriculum_lenguajes ID: 370
+INSERTADO: curriculum_tecnologias ID: 370
+INSERTADO: curriculum_tecnologias ID: 371
+INSERTADO: curriculum_tecnologias ID: 372
+INSERTADO: curriculum_tecnologias ID: 373
+INSERTADO: curriculum_idiomas ID: 231
+INSERTADO: curriculum_idiomas ID: 232
+INSERTADO: curriculum_idiomas ID: 233
+INSERTADO: curriculum_idiomas ID: 234
+INSERTADO: curriculum_especialidades ID: 340
+INSERTADO: curriculum_especialidades ID: 341
+INSERTADO: curriculum_especialidades ID: 342
+INSERTADO: curriculum_especialidades ID: 343
+OK: curriculum_077.json
+
+[78/100] PROCESANDO: curriculum_078.json
+INSERTADO: curriculum ID: 78
+INSERTADO: curriculum_formacion ID: 162
+INSERTADO: curriculum_formacion ID: 163
+INSERTADO: curriculum_trabajos ID: 235
+INSERTADO: curriculum_trabajos ID: 236
+INSERTADO: curriculum_trabajos ID: 237
+INSERTADO: curriculum_lenguajes ID: 371
+INSERTADO: curriculum_lenguajes ID: 372
+INSERTADO: curriculum_lenguajes ID: 373
+INSERTADO: curriculum_lenguajes ID: 374
+INSERTADO: curriculum_lenguajes ID: 375
+INSERTADO: curriculum_lenguajes ID: 376
+INSERTADO: curriculum_tecnologias ID: 374
+INSERTADO: curriculum_tecnologias ID: 375
+INSERTADO: curriculum_tecnologias ID: 376
+INSERTADO: curriculum_idiomas ID: 235
+INSERTADO: curriculum_idiomas ID: 236
+INSERTADO: curriculum_idiomas ID: 237
+INSERTADO: curriculum_especialidades ID: 344
+INSERTADO: curriculum_especialidades ID: 345
+INSERTADO: curriculum_especialidades ID: 346
+OK: curriculum_078.json
+
+[79/100] PROCESANDO: curriculum_079.json
+INSERTADO: curriculum ID: 79
+INSERTADO: curriculum_formacion ID: 164
+INSERTADO: curriculum_formacion ID: 165
+INSERTADO: curriculum_formacion ID: 166
+INSERTADO: curriculum_trabajos ID: 238
+INSERTADO: curriculum_trabajos ID: 239
+INSERTADO: curriculum_trabajos ID: 240
+INSERTADO: curriculum_lenguajes ID: 377
+INSERTADO: curriculum_lenguajes ID: 378
+INSERTADO: curriculum_lenguajes ID: 379
+INSERTADO: curriculum_tecnologias ID: 377
+INSERTADO: curriculum_tecnologias ID: 378
+INSERTADO: curriculum_tecnologias ID: 379
+INSERTADO: curriculum_tecnologias ID: 380
+INSERTADO: curriculum_tecnologias ID: 381
+INSERTADO: curriculum_tecnologias ID: 382
+INSERTADO: curriculum_tecnologias ID: 383
+INSERTADO: curriculum_idiomas ID: 238
+INSERTADO: curriculum_idiomas ID: 239
+INSERTADO: curriculum_especialidades ID: 347
+INSERTADO: curriculum_especialidades ID: 348
+INSERTADO: curriculum_especialidades ID: 349
+INSERTADO: curriculum_especialidades ID: 350
+INSERTADO: curriculum_especialidades ID: 351
+OK: curriculum_079.json
+
+[80/100] PROCESANDO: curriculum_080.json
+INSERTADO: curriculum ID: 80
+INSERTADO: curriculum_formacion ID: 167
+INSERTADO: curriculum_trabajos ID: 241
+INSERTADO: curriculum_trabajos ID: 242
+INSERTADO: curriculum_trabajos ID: 243
+INSERTADO: curriculum_trabajos ID: 244
+INSERTADO: curriculum_lenguajes ID: 380
+INSERTADO: curriculum_lenguajes ID: 381
+INSERTADO: curriculum_lenguajes ID: 382
+INSERTADO: curriculum_lenguajes ID: 383
+INSERTADO: curriculum_lenguajes ID: 384
+INSERTADO: curriculum_lenguajes ID: 385
+INSERTADO: curriculum_tecnologias ID: 384
+INSERTADO: curriculum_tecnologias ID: 385
+INSERTADO: curriculum_tecnologias ID: 386
+INSERTADO: curriculum_idiomas ID: 240
+INSERTADO: curriculum_idiomas ID: 241
+INSERTADO: curriculum_idiomas ID: 242
+INSERTADO: curriculum_idiomas ID: 243
+INSERTADO: curriculum_especialidades ID: 352
+INSERTADO: curriculum_especialidades ID: 353
+INSERTADO: curriculum_especialidades ID: 354
+OK: curriculum_080.json
+
+[81/100] PROCESANDO: curriculum_081.json
+INSERTADO: curriculum ID: 81
+INSERTADO: curriculum_formacion ID: 168
+INSERTADO: curriculum_formacion ID: 169
+INSERTADO: curriculum_trabajos ID: 245
+INSERTADO: curriculum_trabajos ID: 246
+INSERTADO: curriculum_trabajos ID: 247
+INSERTADO: curriculum_lenguajes ID: 386
+INSERTADO: curriculum_lenguajes ID: 387
+INSERTADO: curriculum_lenguajes ID: 388
+INSERTADO: curriculum_tecnologias ID: 387
+INSERTADO: curriculum_tecnologias ID: 388
+INSERTADO: curriculum_tecnologias ID: 389
+INSERTADO: curriculum_tecnologias ID: 390
+INSERTADO: curriculum_idiomas ID: 244
+INSERTADO: curriculum_idiomas ID: 245
+INSERTADO: curriculum_especialidades ID: 355
+INSERTADO: curriculum_especialidades ID: 356
+INSERTADO: curriculum_especialidades ID: 357
+INSERTADO: curriculum_especialidades ID: 358
+INSERTADO: curriculum_especialidades ID: 359
+OK: curriculum_081.json
+
+[82/100] PROCESANDO: curriculum_082.json
+INSERTADO: curriculum ID: 82
+INSERTADO: curriculum_formacion ID: 170
+INSERTADO: curriculum_formacion ID: 171
+INSERTADO: curriculum_formacion ID: 172
+INSERTADO: curriculum_trabajos ID: 248
+INSERTADO: curriculum_trabajos ID: 249
+INSERTADO: curriculum_trabajos ID: 250
+INSERTADO: curriculum_lenguajes ID: 389
+INSERTADO: curriculum_lenguajes ID: 390
+INSERTADO: curriculum_lenguajes ID: 391
+INSERTADO: curriculum_tecnologias ID: 391
+INSERTADO: curriculum_tecnologias ID: 392
+INSERTADO: curriculum_tecnologias ID: 393
+INSERTADO: curriculum_idiomas ID: 246
+INSERTADO: curriculum_idiomas ID: 247
+INSERTADO: curriculum_idiomas ID: 248
+INSERTADO: curriculum_especialidades ID: 360
+INSERTADO: curriculum_especialidades ID: 361
+INSERTADO: curriculum_especialidades ID: 362
+OK: curriculum_082.json
+
+[83/100] PROCESANDO: curriculum_083.json
+INSERTADO: curriculum ID: 83
+INSERTADO: curriculum_formacion ID: 173
+INSERTADO: curriculum_formacion ID: 174
+INSERTADO: curriculum_formacion ID: 175
+INSERTADO: curriculum_trabajos ID: 251
+INSERTADO: curriculum_trabajos ID: 252
+INSERTADO: curriculum_trabajos ID: 253
+INSERTADO: curriculum_trabajos ID: 254
+INSERTADO: curriculum_lenguajes ID: 392
+INSERTADO: curriculum_lenguajes ID: 393
+INSERTADO: curriculum_lenguajes ID: 394
+INSERTADO: curriculum_lenguajes ID: 395
+INSERTADO: curriculum_lenguajes ID: 396
+INSERTADO: curriculum_lenguajes ID: 397
+INSERTADO: curriculum_tecnologias ID: 394
+INSERTADO: curriculum_tecnologias ID: 395
+INSERTADO: curriculum_tecnologias ID: 396
+INSERTADO: curriculum_idiomas ID: 249
+INSERTADO: curriculum_idiomas ID: 250
+INSERTADO: curriculum_idiomas ID: 251
+INSERTADO: curriculum_especialidades ID: 363
+INSERTADO: curriculum_especialidades ID: 364
+INSERTADO: curriculum_especialidades ID: 365
+INSERTADO: curriculum_especialidades ID: 366
+INSERTADO: curriculum_especialidades ID: 367
+OK: curriculum_083.json
+
+[84/100] PROCESANDO: curriculum_084.json
+INSERTADO: curriculum ID: 84
+INSERTADO: curriculum_formacion ID: 176
+INSERTADO: curriculum_formacion ID: 177
+INSERTADO: curriculum_trabajos ID: 255
+INSERTADO: curriculum_trabajos ID: 256
+INSERTADO: curriculum_lenguajes ID: 398
+INSERTADO: curriculum_lenguajes ID: 399
+INSERTADO: curriculum_lenguajes ID: 400
+INSERTADO: curriculum_lenguajes ID: 401
+INSERTADO: curriculum_lenguajes ID: 402
+INSERTADO: curriculum_lenguajes ID: 403
+INSERTADO: curriculum_tecnologias ID: 397
+INSERTADO: curriculum_tecnologias ID: 398
+INSERTADO: curriculum_tecnologias ID: 399
+INSERTADO: curriculum_tecnologias ID: 400
+INSERTADO: curriculum_tecnologias ID: 401
+INSERTADO: curriculum_tecnologias ID: 402
+INSERTADO: curriculum_idiomas ID: 252
+INSERTADO: curriculum_idiomas ID: 253
+INSERTADO: curriculum_idiomas ID: 254
+INSERTADO: curriculum_especialidades ID: 368
+INSERTADO: curriculum_especialidades ID: 369
+INSERTADO: curriculum_especialidades ID: 370
+OK: curriculum_084.json
+
+[85/100] PROCESANDO: curriculum_085.json
+INSERTADO: curriculum ID: 85
+INSERTADO: curriculum_formacion ID: 178
+INSERTADO: curriculum_trabajos ID: 257
+INSERTADO: curriculum_trabajos ID: 258
+INSERTADO: curriculum_trabajos ID: 259
+INSERTADO: curriculum_trabajos ID: 260
+INSERTADO: curriculum_lenguajes ID: 404
+INSERTADO: curriculum_lenguajes ID: 405
+INSERTADO: curriculum_lenguajes ID: 406
+INSERTADO: curriculum_lenguajes ID: 407
+INSERTADO: curriculum_lenguajes ID: 408
+INSERTADO: curriculum_lenguajes ID: 409
+INSERTADO: curriculum_tecnologias ID: 403
+INSERTADO: curriculum_tecnologias ID: 404
+INSERTADO: curriculum_tecnologias ID: 405
+INSERTADO: curriculum_idiomas ID: 255
+INSERTADO: curriculum_idiomas ID: 256
+INSERTADO: curriculum_especialidades ID: 371
+INSERTADO: curriculum_especialidades ID: 372
+INSERTADO: curriculum_especialidades ID: 373
+OK: curriculum_085.json
+
+[86/100] PROCESANDO: curriculum_086.json
+INSERTADO: curriculum ID: 86
+INSERTADO: curriculum_formacion ID: 179
+INSERTADO: curriculum_formacion ID: 180
+INSERTADO: curriculum_trabajos ID: 261
+INSERTADO: curriculum_trabajos ID: 262
+INSERTADO: curriculum_trabajos ID: 263
+INSERTADO: curriculum_lenguajes ID: 410
+INSERTADO: curriculum_lenguajes ID: 411
+INSERTADO: curriculum_lenguajes ID: 412
+INSERTADO: curriculum_lenguajes ID: 413
+INSERTADO: curriculum_lenguajes ID: 414
+INSERTADO: curriculum_lenguajes ID: 415
+INSERTADO: curriculum_lenguajes ID: 416
+INSERTADO: curriculum_tecnologias ID: 406
+INSERTADO: curriculum_tecnologias ID: 407
+INSERTADO: curriculum_tecnologias ID: 408
+INSERTADO: curriculum_idiomas ID: 257
+INSERTADO: curriculum_idiomas ID: 258
+INSERTADO: curriculum_idiomas ID: 259
+INSERTADO: curriculum_especialidades ID: 374
+INSERTADO: curriculum_especialidades ID: 375
+INSERTADO: curriculum_especialidades ID: 376
+OK: curriculum_086.json
+
+[87/100] PROCESANDO: curriculum_087.json
+INSERTADO: curriculum ID: 87
+INSERTADO: curriculum_formacion ID: 181
+INSERTADO: curriculum_trabajos ID: 264
+INSERTADO: curriculum_trabajos ID: 265
+INSERTADO: curriculum_trabajos ID: 266
+INSERTADO: curriculum_trabajos ID: 267
+INSERTADO: curriculum_lenguajes ID: 417
+INSERTADO: curriculum_lenguajes ID: 418
+INSERTADO: curriculum_lenguajes ID: 419
+INSERTADO: curriculum_lenguajes ID: 420
+INSERTADO: curriculum_lenguajes ID: 421
+INSERTADO: curriculum_lenguajes ID: 422
+INSERTADO: curriculum_lenguajes ID: 423
+INSERTADO: curriculum_tecnologias ID: 409
+INSERTADO: curriculum_tecnologias ID: 410
+INSERTADO: curriculum_tecnologias ID: 411
+INSERTADO: curriculum_tecnologias ID: 412
+INSERTADO: curriculum_tecnologias ID: 413
+INSERTADO: curriculum_tecnologias ID: 414
+INSERTADO: curriculum_idiomas ID: 260
+INSERTADO: curriculum_idiomas ID: 261
+INSERTADO: curriculum_idiomas ID: 262
+INSERTADO: curriculum_idiomas ID: 263
+INSERTADO: curriculum_especialidades ID: 377
+INSERTADO: curriculum_especialidades ID: 378
+INSERTADO: curriculum_especialidades ID: 379
+INSERTADO: curriculum_especialidades ID: 380
+INSERTADO: curriculum_especialidades ID: 381
+OK: curriculum_087.json
+
+[88/100] PROCESANDO: curriculum_088.json
+INSERTADO: curriculum ID: 88
+INSERTADO: curriculum_formacion ID: 182
+INSERTADO: curriculum_formacion ID: 183
+INSERTADO: curriculum_formacion ID: 184
+INSERTADO: curriculum_trabajos ID: 268
+INSERTADO: curriculum_trabajos ID: 269
+INSERTADO: curriculum_trabajos ID: 270
+INSERTADO: curriculum_lenguajes ID: 424
+INSERTADO: curriculum_lenguajes ID: 425
+INSERTADO: curriculum_lenguajes ID: 426
+INSERTADO: curriculum_lenguajes ID: 427
+INSERTADO: curriculum_tecnologias ID: 415
+INSERTADO: curriculum_tecnologias ID: 416
+INSERTADO: curriculum_tecnologias ID: 417
+INSERTADO: curriculum_idiomas ID: 264
+INSERTADO: curriculum_idiomas ID: 265
+INSERTADO: curriculum_especialidades ID: 382
+INSERTADO: curriculum_especialidades ID: 383
+INSERTADO: curriculum_especialidades ID: 384
+INSERTADO: curriculum_especialidades ID: 385
+INSERTADO: curriculum_especialidades ID: 386
+INSERTADO: curriculum_especialidades ID: 387
+OK: curriculum_088.json
+
+[89/100] PROCESANDO: curriculum_089.json
+INSERTADO: curriculum ID: 89
+INSERTADO: curriculum_formacion ID: 185
+INSERTADO: curriculum_trabajos ID: 271
+INSERTADO: curriculum_trabajos ID: 272
+INSERTADO: curriculum_trabajos ID: 273
+INSERTADO: curriculum_lenguajes ID: 428
+INSERTADO: curriculum_lenguajes ID: 429
+INSERTADO: curriculum_lenguajes ID: 430
+INSERTADO: curriculum_lenguajes ID: 431
+INSERTADO: curriculum_lenguajes ID: 432
+INSERTADO: curriculum_tecnologias ID: 418
+INSERTADO: curriculum_tecnologias ID: 419
+INSERTADO: curriculum_tecnologias ID: 420
+INSERTADO: curriculum_idiomas ID: 266
+INSERTADO: curriculum_idiomas ID: 267
+INSERTADO: curriculum_idiomas ID: 268
+INSERTADO: curriculum_especialidades ID: 388
+INSERTADO: curriculum_especialidades ID: 389
+INSERTADO: curriculum_especialidades ID: 390
+OK: curriculum_089.json
+
+[90/100] PROCESANDO: curriculum_090.json
+INSERTADO: curriculum ID: 90
+INSERTADO: curriculum_formacion ID: 186
+INSERTADO: curriculum_formacion ID: 187
+INSERTADO: curriculum_formacion ID: 188
+INSERTADO: curriculum_trabajos ID: 274
+INSERTADO: curriculum_trabajos ID: 275
+INSERTADO: curriculum_lenguajes ID: 433
+INSERTADO: curriculum_lenguajes ID: 434
+INSERTADO: curriculum_lenguajes ID: 435
+INSERTADO: curriculum_tecnologias ID: 421
+INSERTADO: curriculum_tecnologias ID: 422
+INSERTADO: curriculum_tecnologias ID: 423
+INSERTADO: curriculum_tecnologias ID: 424
+INSERTADO: curriculum_tecnologias ID: 425
+INSERTADO: curriculum_tecnologias ID: 426
+INSERTADO: curriculum_tecnologias ID: 427
+INSERTADO: curriculum_idiomas ID: 269
+INSERTADO: curriculum_idiomas ID: 270
+INSERTADO: curriculum_idiomas ID: 271
+INSERTADO: curriculum_especialidades ID: 391
+INSERTADO: curriculum_especialidades ID: 392
+INSERTADO: curriculum_especialidades ID: 393
+OK: curriculum_090.json
+
+[91/100] PROCESANDO: curriculum_091.json
+INSERTADO: curriculum ID: 91
+INSERTADO: curriculum_formacion ID: 189
+INSERTADO: curriculum_formacion ID: 190
+INSERTADO: curriculum_trabajos ID: 276
+INSERTADO: curriculum_trabajos ID: 277
+INSERTADO: curriculum_trabajos ID: 278
+INSERTADO: curriculum_trabajos ID: 279
+INSERTADO: curriculum_lenguajes ID: 436
+INSERTADO: curriculum_lenguajes ID: 437
+INSERTADO: curriculum_lenguajes ID: 438
+INSERTADO: curriculum_lenguajes ID: 439
+INSERTADO: curriculum_lenguajes ID: 440
+INSERTADO: curriculum_lenguajes ID: 441
+INSERTADO: curriculum_tecnologias ID: 428
+INSERTADO: curriculum_tecnologias ID: 429
+INSERTADO: curriculum_tecnologias ID: 430
+INSERTADO: curriculum_idiomas ID: 272
+INSERTADO: curriculum_idiomas ID: 273
+INSERTADO: curriculum_idiomas ID: 274
+INSERTADO: curriculum_idiomas ID: 275
+INSERTADO: curriculum_especialidades ID: 394
+INSERTADO: curriculum_especialidades ID: 395
+INSERTADO: curriculum_especialidades ID: 396
+INSERTADO: curriculum_especialidades ID: 397
+INSERTADO: curriculum_especialidades ID: 398
+INSERTADO: curriculum_especialidades ID: 399
+OK: curriculum_091.json
+
+[92/100] PROCESANDO: curriculum_092.json
+INSERTADO: curriculum ID: 92
+INSERTADO: curriculum_formacion ID: 191
+INSERTADO: curriculum_formacion ID: 192
+INSERTADO: curriculum_trabajos ID: 280
+INSERTADO: curriculum_trabajos ID: 281
+INSERTADO: curriculum_lenguajes ID: 442
+INSERTADO: curriculum_lenguajes ID: 443
+INSERTADO: curriculum_lenguajes ID: 444
+INSERTADO: curriculum_lenguajes ID: 445
+INSERTADO: curriculum_lenguajes ID: 446
+INSERTADO: curriculum_lenguajes ID: 447
+INSERTADO: curriculum_tecnologias ID: 431
+INSERTADO: curriculum_tecnologias ID: 432
+INSERTADO: curriculum_tecnologias ID: 433
+INSERTADO: curriculum_tecnologias ID: 434
+INSERTADO: curriculum_tecnologias ID: 435
+INSERTADO: curriculum_tecnologias ID: 436
+INSERTADO: curriculum_idiomas ID: 276
+INSERTADO: curriculum_idiomas ID: 277
+INSERTADO: curriculum_idiomas ID: 278
+INSERTADO: curriculum_idiomas ID: 279
+INSERTADO: curriculum_especialidades ID: 400
+INSERTADO: curriculum_especialidades ID: 401
+INSERTADO: curriculum_especialidades ID: 402
+INSERTADO: curriculum_especialidades ID: 403
+OK: curriculum_092.json
+
+[93/100] PROCESANDO: curriculum_093.json
+INSERTADO: curriculum ID: 93
+INSERTADO: curriculum_formacion ID: 193
+INSERTADO: curriculum_trabajos ID: 282
+INSERTADO: curriculum_trabajos ID: 283
+INSERTADO: curriculum_trabajos ID: 284
+INSERTADO: curriculum_trabajos ID: 285
+INSERTADO: curriculum_lenguajes ID: 448
+INSERTADO: curriculum_lenguajes ID: 449
+INSERTADO: curriculum_lenguajes ID: 450
+INSERTADO: curriculum_lenguajes ID: 451
+INSERTADO: curriculum_tecnologias ID: 437
+INSERTADO: curriculum_tecnologias ID: 438
+INSERTADO: curriculum_tecnologias ID: 439
+INSERTADO: curriculum_idiomas ID: 280
+INSERTADO: curriculum_idiomas ID: 281
+INSERTADO: curriculum_idiomas ID: 282
+INSERTADO: curriculum_idiomas ID: 283
+INSERTADO: curriculum_especialidades ID: 404
+INSERTADO: curriculum_especialidades ID: 405
+INSERTADO: curriculum_especialidades ID: 406
+INSERTADO: curriculum_especialidades ID: 407
+INSERTADO: curriculum_especialidades ID: 408
+OK: curriculum_093.json
+
+[94/100] PROCESANDO: curriculum_094.json
+INSERTADO: curriculum ID: 94
+INSERTADO: curriculum_formacion ID: 194
+INSERTADO: curriculum_formacion ID: 195
+INSERTADO: curriculum_formacion ID: 196
+INSERTADO: curriculum_trabajos ID: 286
+INSERTADO: curriculum_trabajos ID: 287
+INSERTADO: curriculum_trabajos ID: 288
+INSERTADO: curriculum_trabajos ID: 289
+INSERTADO: curriculum_lenguajes ID: 452
+INSERTADO: curriculum_lenguajes ID: 453
+INSERTADO: curriculum_lenguajes ID: 454
+INSERTADO: curriculum_lenguajes ID: 455
+INSERTADO: curriculum_lenguajes ID: 456
+INSERTADO: curriculum_lenguajes ID: 457
+INSERTADO: curriculum_lenguajes ID: 458
+INSERTADO: curriculum_tecnologias ID: 440
+INSERTADO: curriculum_tecnologias ID: 441
+INSERTADO: curriculum_tecnologias ID: 442
+INSERTADO: curriculum_tecnologias ID: 443
+INSERTADO: curriculum_tecnologias ID: 444
+INSERTADO: curriculum_idiomas ID: 284
+INSERTADO: curriculum_idiomas ID: 285
+INSERTADO: curriculum_idiomas ID: 286
+INSERTADO: curriculum_idiomas ID: 287
+INSERTADO: curriculum_especialidades ID: 409
+INSERTADO: curriculum_especialidades ID: 410
+INSERTADO: curriculum_especialidades ID: 411
+INSERTADO: curriculum_especialidades ID: 412
+INSERTADO: curriculum_especialidades ID: 413
+OK: curriculum_094.json
+
+[95/100] PROCESANDO: curriculum_095.json
+INSERTADO: curriculum ID: 95
+INSERTADO: curriculum_formacion ID: 197
+INSERTADO: curriculum_formacion ID: 198
+INSERTADO: curriculum_formacion ID: 199
+INSERTADO: curriculum_trabajos ID: 290
+INSERTADO: curriculum_trabajos ID: 291
+INSERTADO: curriculum_trabajos ID: 292
+INSERTADO: curriculum_trabajos ID: 293
+INSERTADO: curriculum_lenguajes ID: 459
+INSERTADO: curriculum_lenguajes ID: 460
+INSERTADO: curriculum_lenguajes ID: 461
+INSERTADO: curriculum_lenguajes ID: 462
+INSERTADO: curriculum_tecnologias ID: 445
+INSERTADO: curriculum_tecnologias ID: 446
+INSERTADO: curriculum_tecnologias ID: 447
+INSERTADO: curriculum_tecnologias ID: 448
+INSERTADO: curriculum_tecnologias ID: 449
+INSERTADO: curriculum_idiomas ID: 288
+INSERTADO: curriculum_idiomas ID: 289
+INSERTADO: curriculum_especialidades ID: 414
+INSERTADO: curriculum_especialidades ID: 415
+INSERTADO: curriculum_especialidades ID: 416
+OK: curriculum_095.json
+
+[96/100] PROCESANDO: curriculum_096.json
+INSERTADO: curriculum ID: 96
+INSERTADO: curriculum_formacion ID: 200
+INSERTADO: curriculum_formacion ID: 201
+INSERTADO: curriculum_trabajos ID: 294
+INSERTADO: curriculum_trabajos ID: 295
+INSERTADO: curriculum_trabajos ID: 296
+INSERTADO: curriculum_trabajos ID: 297
+INSERTADO: curriculum_lenguajes ID: 463
+INSERTADO: curriculum_lenguajes ID: 464
+INSERTADO: curriculum_lenguajes ID: 465
+INSERTADO: curriculum_lenguajes ID: 466
+INSERTADO: curriculum_lenguajes ID: 467
+INSERTADO: curriculum_tecnologias ID: 450
+INSERTADO: curriculum_tecnologias ID: 451
+INSERTADO: curriculum_tecnologias ID: 452
+INSERTADO: curriculum_tecnologias ID: 453
+INSERTADO: curriculum_idiomas ID: 290
+INSERTADO: curriculum_idiomas ID: 291
+INSERTADO: curriculum_idiomas ID: 292
+INSERTADO: curriculum_especialidades ID: 417
+INSERTADO: curriculum_especialidades ID: 418
+INSERTADO: curriculum_especialidades ID: 419
+OK: curriculum_096.json
+
+[97/100] PROCESANDO: curriculum_097.json
+INSERTADO: curriculum ID: 97
+INSERTADO: curriculum_formacion ID: 202
+INSERTADO: curriculum_formacion ID: 203
+INSERTADO: curriculum_formacion ID: 204
+INSERTADO: curriculum_trabajos ID: 298
+INSERTADO: curriculum_trabajos ID: 299
+INSERTADO: curriculum_trabajos ID: 300
+INSERTADO: curriculum_lenguajes ID: 468
+INSERTADO: curriculum_lenguajes ID: 469
+INSERTADO: curriculum_lenguajes ID: 470
+INSERTADO: curriculum_lenguajes ID: 471
+INSERTADO: curriculum_lenguajes ID: 472
+INSERTADO: curriculum_lenguajes ID: 473
+INSERTADO: curriculum_lenguajes ID: 474
+INSERTADO: curriculum_tecnologias ID: 454
+INSERTADO: curriculum_tecnologias ID: 455
+INSERTADO: curriculum_tecnologias ID: 456
+INSERTADO: curriculum_idiomas ID: 293
+INSERTADO: curriculum_idiomas ID: 294
+INSERTADO: curriculum_idiomas ID: 295
+INSERTADO: curriculum_especialidades ID: 420
+INSERTADO: curriculum_especialidades ID: 421
+INSERTADO: curriculum_especialidades ID: 422
+INSERTADO: curriculum_especialidades ID: 423
+OK: curriculum_097.json
+
+[98/100] PROCESANDO: curriculum_098.json
+INSERTADO: curriculum ID: 98
+INSERTADO: curriculum_formacion ID: 205
+INSERTADO: curriculum_formacion ID: 206
+INSERTADO: curriculum_trabajos ID: 301
+INSERTADO: curriculum_trabajos ID: 302
+INSERTADO: curriculum_trabajos ID: 303
+INSERTADO: curriculum_lenguajes ID: 475
+INSERTADO: curriculum_lenguajes ID: 476
+INSERTADO: curriculum_lenguajes ID: 477
+INSERTADO: curriculum_lenguajes ID: 478
+INSERTADO: curriculum_lenguajes ID: 479
+INSERTADO: curriculum_lenguajes ID: 480
+INSERTADO: curriculum_tecnologias ID: 457
+INSERTADO: curriculum_tecnologias ID: 458
+INSERTADO: curriculum_tecnologias ID: 459
+INSERTADO: curriculum_idiomas ID: 296
+INSERTADO: curriculum_idiomas ID: 297
+INSERTADO: curriculum_idiomas ID: 298
+INSERTADO: curriculum_idiomas ID: 299
+INSERTADO: curriculum_especialidades ID: 424
+INSERTADO: curriculum_especialidades ID: 425
+INSERTADO: curriculum_especialidades ID: 426
+OK: curriculum_098.json
+
+[99/100] PROCESANDO: curriculum_099.json
+INSERTADO: curriculum ID: 99
+INSERTADO: curriculum_formacion ID: 207
+INSERTADO: curriculum_formacion ID: 208
+INSERTADO: curriculum_formacion ID: 209
+INSERTADO: curriculum_trabajos ID: 304
+INSERTADO: curriculum_trabajos ID: 305
+INSERTADO: curriculum_trabajos ID: 306
+INSERTADO: curriculum_trabajos ID: 307
+INSERTADO: curriculum_lenguajes ID: 481
+INSERTADO: curriculum_lenguajes ID: 482
+INSERTADO: curriculum_lenguajes ID: 483
+INSERTADO: curriculum_tecnologias ID: 460
+INSERTADO: curriculum_tecnologias ID: 461
+INSERTADO: curriculum_tecnologias ID: 462
+INSERTADO: curriculum_tecnologias ID: 463
+INSERTADO: curriculum_idiomas ID: 300
+INSERTADO: curriculum_idiomas ID: 301
+INSERTADO: curriculum_idiomas ID: 302
+INSERTADO: curriculum_especialidades ID: 427
+INSERTADO: curriculum_especialidades ID: 428
+INSERTADO: curriculum_especialidades ID: 429
+INSERTADO: curriculum_especialidades ID: 430
+INSERTADO: curriculum_especialidades ID: 431
+INSERTADO: curriculum_especialidades ID: 432
+OK: curriculum_099.json
+
+[100/100] PROCESANDO: curriculum_100.json
+INSERTADO: curriculum ID: 100
+INSERTADO: curriculum_formacion ID: 210
+INSERTADO: curriculum_formacion ID: 211
+INSERTADO: curriculum_formacion ID: 212
+INSERTADO: curriculum_trabajos ID: 308
+INSERTADO: curriculum_trabajos ID: 309
+INSERTADO: curriculum_trabajos ID: 310
+INSERTADO: curriculum_trabajos ID: 311
+INSERTADO: curriculum_lenguajes ID: 484
+INSERTADO: curriculum_lenguajes ID: 485
+INSERTADO: curriculum_lenguajes ID: 486
+INSERTADO: curriculum_lenguajes ID: 487
+INSERTADO: curriculum_lenguajes ID: 488
+INSERTADO: curriculum_lenguajes ID: 489
+INSERTADO: curriculum_tecnologias ID: 464
+INSERTADO: curriculum_tecnologias ID: 465
+INSERTADO: curriculum_tecnologias ID: 466
+INSERTADO: curriculum_tecnologias ID: 467
+INSERTADO: curriculum_idiomas ID: 303
+INSERTADO: curriculum_idiomas ID: 304
+INSERTADO: curriculum_idiomas ID: 305
+INSERTADO: curriculum_especialidades ID: 433
+INSERTADO: curriculum_especialidades ID: 434
+INSERTADO: curriculum_especialidades ID: 435
+INSERTADO: curriculum_especialidades ID: 436
+INSERTADO: curriculum_especialidades ID: 437
+INSERTADO: curriculum_especialidades ID: 438
+OK: curriculum_100.json
+
+============================================================
+IMPORTACIÓN FINALIZADA
+Archivos encontrados: 100
+Importados correctamente: 100
+Archivos con errores: 0
+Base de datos: curriculums.db
+============================================================
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/005-Mapeo basado en anotaciones$ 

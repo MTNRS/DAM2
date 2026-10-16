@@ -1,0 +1,14 @@
+*{padding:0px;margin:0px;}
+html,head{width:100%;height:100%;}
+body{background:var(--color_terciario);height:100%;}
+header{
+  width:100%;
+  height:100%;
+	background:url(--fondo_heroe);
+}
+main,footer{
+	background:white;
+  width:800px;
+  margin:auto;
+  padding:var(--margen_interior);
+}

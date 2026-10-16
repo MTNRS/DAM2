@@ -1,0 +1,41 @@
+{
+  "nombre": "Carlos Ortega Moreno",
+  "marca": "Perfil 085",
+  "nacimiento": "2002-05-21",
+  "ciudad": "Málaga",
+  "email": "curriculum_085@example.com",
+  "web": "https://example.com/curriculum_085",
+  "profesion": "Especialista en ciberseguridad",
+  "experiencia": "13 años",
+  "formacion": [
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "DataLab - Profesor de informática",
+    "Sistemas Levante - Administrador de sistemas",
+    "TechNova - Analista de datos",
+    "Digital Solutions - Ingeniero de IA"
+  ],
+  "lenguajes": [
+    "Go",
+    "PHP",
+    "C++",
+    "SQL",
+    "Java",
+    "TypeScript"
+  ],
+  "tecnologias": [
+    "SQLite",
+    "Apache",
+    "Ollama"
+  ],
+  "idiomas": [
+    "Francés",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Formación profesional",
+    "Desarrollo web",
+    "Programación"
+  ]
+}

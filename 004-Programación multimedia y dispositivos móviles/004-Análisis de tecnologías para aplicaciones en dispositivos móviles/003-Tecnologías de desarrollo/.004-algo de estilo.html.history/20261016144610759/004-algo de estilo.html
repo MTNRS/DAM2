@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      html,body{padding:0px;margin:0px;width:100%;height:100%;}
+      nav{position:fixed;bottom:0px;width:100%;display:flex;}
+    </style>
+  </head>
+  <body>
+    <div id="contenedor">
+      
+    </div>
+    <nav>
+      <button data-url="pantalla1">Pantalla 1</button>
+      <button data-url="pantalla2">Pantalla 2</button>
+      <button data-url="pantalla3">Pantalla 3</button>
+    </nav>
+    <script>
+      let contenedor = document.querySelector("#contenedor")
+      let botones = document.querySelectorAll("button")
+      botones.forEach(function(boton){
+      	boton.onclick = function(){
+          fetch("plantillas/"+this.getAttribute("data-url")+".html")
+          .then(function(resultado){return resultado.text()})
+          .then(function(datos){
+            contenedor.innerHTML = datos
+          })
+        }
+      })
+    </script>
+  </body>
+</html>

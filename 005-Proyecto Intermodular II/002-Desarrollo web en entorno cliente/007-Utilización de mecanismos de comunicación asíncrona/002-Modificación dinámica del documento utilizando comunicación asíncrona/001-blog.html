@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <header>
+      <h1>Jose Vicente Carratala</h1>
+      <h2>Blog</h2>
+    </header>
+    <main>
+    </main>
+    <footer>
+      <p>(c) 2026 Jose Vicente Carratala</p>
+    </footer>
+    <script>
+      fetch("blog.json")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "nombre": "Sara Ortega Moreno",
+  "marca": "Perfil 034",
+  "nacimiento": "1976-08-23",
+  "ciudad": "Alicante",
+  "email": "curriculum_034@example.com",
+  "web": "https://example.com/curriculum_034",
+  "profesion": "Profesor de informática",
+  "experiencia": "3 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial",
+    "Grado en Desarrollo de Software"
+  ],
+  "trabajos": [
+    "DataLab - Ingeniero de IA",
+    "Sistemas Levante - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "TypeScript",
+    "C++",
+    "CSS",
+    "Go",
+    "HTML",
+    "Java",
+    "Python"
+  ],
+  "tecnologias": [
+    "Git",
+    "AWS",
+    "React"
+  ],
+  "idiomas": [
+    "Inglés",
+    "Francés",
+    "Italiano",
+    "Español"
+  ],
+  "especialidades": [
+    "Administración de sistemas",
+    "Ciberseguridad",
+    "Inteligencia artificial",
+    "Análisis de datos",
+    "Programación",
+    "Desarrollo web"
+  ]
+}

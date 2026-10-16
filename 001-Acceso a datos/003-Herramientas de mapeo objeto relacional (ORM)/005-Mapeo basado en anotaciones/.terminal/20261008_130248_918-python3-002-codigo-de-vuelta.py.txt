@@ -1,0 +1,218 @@
+Datetime: 2026-10-08T11:02:48.918Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/005-Mapeo basado en anotaciones
+Command: python3 002-codigo\ de\ vuelta.py
+
+Result:
+BASE DE DATOS: curriculums.db
+TABLA PRINCIPAL: curriculum
+REGISTROS ENCONTRADOS: 100
+------------------------------------------------------------
+[1/100] RECUPERANDO ID: 1
+EXPORTADO: curriculums_recuperados/curriculum_1.json
+[2/100] RECUPERANDO ID: 2
+EXPORTADO: curriculums_recuperados/curriculum_2.json
+[3/100] RECUPERANDO ID: 3
+EXPORTADO: curriculums_recuperados/curriculum_3.json
+[4/100] RECUPERANDO ID: 4
+EXPORTADO: curriculums_recuperados/curriculum_4.json
+[5/100] RECUPERANDO ID: 5
+EXPORTADO: curriculums_recuperados/curriculum_5.json
+[6/100] RECUPERANDO ID: 6
+EXPORTADO: curriculums_recuperados/curriculum_6.json
+[7/100] RECUPERANDO ID: 7
+EXPORTADO: curriculums_recuperados/curriculum_7.json
+[8/100] RECUPERANDO ID: 8
+EXPORTADO: curriculums_recuperados/curriculum_8.json
+[9/100] RECUPERANDO ID: 9
+EXPORTADO: curriculums_recuperados/curriculum_9.json
+[10/100] RECUPERANDO ID: 10
+EXPORTADO: curriculums_recuperados/curriculum_10.json
+[11/100] RECUPERANDO ID: 11
+EXPORTADO: curriculums_recuperados/curriculum_11.json
+[12/100] RECUPERANDO ID: 12
+EXPORTADO: curriculums_recuperados/curriculum_12.json
+[13/100] RECUPERANDO ID: 13
+EXPORTADO: curriculums_recuperados/curriculum_13.json
+[14/100] RECUPERANDO ID: 14
+EXPORTADO: curriculums_recuperados/curriculum_14.json
+[15/100] RECUPERANDO ID: 15
+EXPORTADO: curriculums_recuperados/curriculum_15.json
+[16/100] RECUPERANDO ID: 16
+EXPORTADO: curriculums_recuperados/curriculum_16.json
+[17/100] RECUPERANDO ID: 17
+EXPORTADO: curriculums_recuperados/curriculum_17.json
+[18/100] RECUPERANDO ID: 18
+EXPORTADO: curriculums_recuperados/curriculum_18.json
+[19/100] RECUPERANDO ID: 19
+EXPORTADO: curriculums_recuperados/curriculum_19.json
+[20/100] RECUPERANDO ID: 20
+EXPORTADO: curriculums_recuperados/curriculum_20.json
+[21/100] RECUPERANDO ID: 21
+EXPORTADO: curriculums_recuperados/curriculum_21.json
+[22/100] RECUPERANDO ID: 22
+EXPORTADO: curriculums_recuperados/curriculum_22.json
+[23/100] RECUPERANDO ID: 23
+EXPORTADO: curriculums_recuperados/curriculum_23.json
+[24/100] RECUPERANDO ID: 24
+EXPORTADO: curriculums_recuperados/curriculum_24.json
+[25/100] RECUPERANDO ID: 25
+EXPORTADO: curriculums_recuperados/curriculum_25.json
+[26/100] RECUPERANDO ID: 26
+EXPORTADO: curriculums_recuperados/curriculum_26.json
+[27/100] RECUPERANDO ID: 27
+EXPORTADO: curriculums_recuperados/curriculum_27.json
+[28/100] RECUPERANDO ID: 28
+EXPORTADO: curriculums_recuperados/curriculum_28.json
+[29/100] RECUPERANDO ID: 29
+EXPORTADO: curriculums_recuperados/curriculum_29.json
+[30/100] RECUPERANDO ID: 30
+EXPORTADO: curriculums_recuperados/curriculum_30.json
+[31/100] RECUPERANDO ID: 31
+EXPORTADO: curriculums_recuperados/curriculum_31.json
+[32/100] RECUPERANDO ID: 32
+EXPORTADO: curriculums_recuperados/curriculum_32.json
+[33/100] RECUPERANDO ID: 33
+EXPORTADO: curriculums_recuperados/curriculum_33.json
+[34/100] RECUPERANDO ID: 34
+EXPORTADO: curriculums_recuperados/curriculum_34.json
+[35/100] RECUPERANDO ID: 35
+EXPORTADO: curriculums_recuperados/curriculum_35.json
+[36/100] RECUPERANDO ID: 36
+EXPORTADO: curriculums_recuperados/curriculum_36.json
+[37/100] RECUPERANDO ID: 37
+EXPORTADO: curriculums_recuperados/curriculum_37.json
+[38/100] RECUPERANDO ID: 38
+EXPORTADO: curriculums_recuperados/curriculum_38.json
+[39/100] RECUPERANDO ID: 39
+EXPORTADO: curriculums_recuperados/curriculum_39.json
+[40/100] RECUPERANDO ID: 40
+EXPORTADO: curriculums_recuperados/curriculum_40.json
+[41/100] RECUPERANDO ID: 41
+EXPORTADO: curriculums_recuperados/curriculum_41.json
+[42/100] RECUPERANDO ID: 42
+EXPORTADO: curriculums_recuperados/curriculum_42.json
+[43/100] RECUPERANDO ID: 43
+EXPORTADO: curriculums_recuperados/curriculum_43.json
+[44/100] RECUPERANDO ID: 44
+EXPORTADO: curriculums_recuperados/curriculum_44.json
+[45/100] RECUPERANDO ID: 45
+EXPORTADO: curriculums_recuperados/curriculum_45.json
+[46/100] RECUPERANDO ID: 46
+EXPORTADO: curriculums_recuperados/curriculum_46.json
+[47/100] RECUPERANDO ID: 47
+EXPORTADO: curriculums_recuperados/curriculum_47.json
+[48/100] RECUPERANDO ID: 48
+EXPORTADO: curriculums_recuperados/curriculum_48.json
+[49/100] RECUPERANDO ID: 49
+EXPORTADO: curriculums_recuperados/curriculum_49.json
+[50/100] RECUPERANDO ID: 50
+EXPORTADO: curriculums_recuperados/curriculum_50.json
+[51/100] RECUPERANDO ID: 51
+EXPORTADO: curriculums_recuperados/curriculum_51.json
+[52/100] RECUPERANDO ID: 52
+EXPORTADO: curriculums_recuperados/curriculum_52.json
+[53/100] RECUPERANDO ID: 53
+EXPORTADO: curriculums_recuperados/curriculum_53.json
+[54/100] RECUPERANDO ID: 54
+EXPORTADO: curriculums_recuperados/curriculum_54.json
+[55/100] RECUPERANDO ID: 55
+EXPORTADO: curriculums_recuperados/curriculum_55.json
+[56/100] RECUPERANDO ID: 56
+EXPORTADO: curriculums_recuperados/curriculum_56.json
+[57/100] RECUPERANDO ID: 57
+EXPORTADO: curriculums_recuperados/curriculum_57.json
+[58/100] RECUPERANDO ID: 58
+EXPORTADO: curriculums_recuperados/curriculum_58.json
+[59/100] RECUPERANDO ID: 59
+EXPORTADO: curriculums_recuperados/curriculum_59.json
+[60/100] RECUPERANDO ID: 60
+EXPORTADO: curriculums_recuperados/curriculum_60.json
+[61/100] RECUPERANDO ID: 61
+EXPORTADO: curriculums_recuperados/curriculum_61.json
+[62/100] RECUPERANDO ID: 62
+EXPORTADO: curriculums_recuperados/curriculum_62.json
+[63/100] RECUPERANDO ID: 63
+EXPORTADO: curriculums_recuperados/curriculum_63.json
+[64/100] RECUPERANDO ID: 64
+EXPORTADO: curriculums_recuperados/curriculum_64.json
+[65/100] RECUPERANDO ID: 65
+EXPORTADO: curriculums_recuperados/curriculum_65.json
+[66/100] RECUPERANDO ID: 66
+EXPORTADO: curriculums_recuperados/curriculum_66.json
+[67/100] RECUPERANDO ID: 67
+EXPORTADO: curriculums_recuperados/curriculum_67.json
+[68/100] RECUPERANDO ID: 68
+EXPORTADO: curriculums_recuperados/curriculum_68.json
+[69/100] RECUPERANDO ID: 69
+EXPORTADO: curriculums_recuperados/curriculum_69.json
+[70/100] RECUPERANDO ID: 70
+EXPORTADO: curriculums_recuperados/curriculum_70.json
+[71/100] RECUPERANDO ID: 71
+EXPORTADO: curriculums_recuperados/curriculum_71.json
+[72/100] RECUPERANDO ID: 72
+EXPORTADO: curriculums_recuperados/curriculum_72.json
+[73/100] RECUPERANDO ID: 73
+EXPORTADO: curriculums_recuperados/curriculum_73.json
+[74/100] RECUPERANDO ID: 74
+EXPORTADO: curriculums_recuperados/curriculum_74.json
+[75/100] RECUPERANDO ID: 75
+EXPORTADO: curriculums_recuperados/curriculum_75.json
+[76/100] RECUPERANDO ID: 76
+EXPORTADO: curriculums_recuperados/curriculum_76.json
+[77/100] RECUPERANDO ID: 77
+EXPORTADO: curriculums_recuperados/curriculum_77.json
+[78/100] RECUPERANDO ID: 78
+EXPORTADO: curriculums_recuperados/curriculum_78.json
+[79/100] RECUPERANDO ID: 79
+EXPORTADO: curriculums_recuperados/curriculum_79.json
+[80/100] RECUPERANDO ID: 80
+EXPORTADO: curriculums_recuperados/curriculum_80.json
+[81/100] RECUPERANDO ID: 81
+EXPORTADO: curriculums_recuperados/curriculum_81.json
+[82/100] RECUPERANDO ID: 82
+EXPORTADO: curriculums_recuperados/curriculum_82.json
+[83/100] RECUPERANDO ID: 83
+EXPORTADO: curriculums_recuperados/curriculum_83.json
+[84/100] RECUPERANDO ID: 84
+EXPORTADO: curriculums_recuperados/curriculum_84.json
+[85/100] RECUPERANDO ID: 85
+EXPORTADO: curriculums_recuperados/curriculum_85.json
+[86/100] RECUPERANDO ID: 86
+EXPORTADO: curriculums_recuperados/curriculum_86.json
+[87/100] RECUPERANDO ID: 87
+EXPORTADO: curriculums_recuperados/curriculum_87.json
+[88/100] RECUPERANDO ID: 88
+EXPORTADO: curriculums_recuperados/curriculum_88.json
+[89/100] RECUPERANDO ID: 89
+EXPORTADO: curriculums_recuperados/curriculum_89.json
+[90/100] RECUPERANDO ID: 90
+EXPORTADO: curriculums_recuperados/curriculum_90.json
+[91/100] RECUPERANDO ID: 91
+EXPORTADO: curriculums_recuperados/curriculum_91.json
+[92/100] RECUPERANDO ID: 92
+EXPORTADO: curriculums_recuperados/curriculum_92.json
+[93/100] RECUPERANDO ID: 93
+EXPORTADO: curriculums_recuperados/curriculum_93.json
+[94/100] RECUPERANDO ID: 94
+EXPORTADO: curriculums_recuperados/curriculum_94.json
+[95/100] RECUPERANDO ID: 95
+EXPORTADO: curriculums_recuperados/curriculum_95.json
+[96/100] RECUPERANDO ID: 96
+EXPORTADO: curriculums_recuperados/curriculum_96.json
+[97/100] RECUPERANDO ID: 97
+EXPORTADO: curriculums_recuperados/curriculum_97.json
+[98/100] RECUPERANDO ID: 98
+EXPORTADO: curriculums_recuperados/curriculum_98.json
+[99/100] RECUPERANDO ID: 99
+EXPORTADO: curriculums_recuperados/curriculum_99.json
+[100/100] RECUPERANDO ID: 100
+EXPORTADO: curriculums_recuperados/curriculum_100.json
+
+============================================================
+EXPORTACIÓN FINALIZADA
+Registros encontrados: 100
+Archivos generados: 100
+Errores: 0
+Carpeta: curriculums_recuperados
+============================================================
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/005-Mapeo basado en anotaciones$ 

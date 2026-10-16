@@ -1,0 +1,47 @@
+{
+    "nombre": "Carlos Martínez Ruiz",
+    "marca": "Perfil 069",
+    "nacimiento": "1995-07-13",
+    "ciudad": "Alicante",
+    "email": "curriculum_069@example.com",
+    "web": "https://example.com/curriculum_069",
+    "profesion": "Desarrollador de software",
+    "experiencia": "1 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Ingeniería Informática",
+        "Técnico Superior en DAW"
+    ],
+    "trabajos": [
+        "CodeFactory - Desarrollador de software",
+        "CloudWorks - Administrador de sistemas",
+        "TechNova - Administrador de sistemas"
+    ],
+    "lenguajes": [
+        "CSS",
+        "C++",
+        "Python",
+        "Go",
+        "SQL",
+        "JavaScript",
+        "HTML"
+    ],
+    "tecnologias": [
+        "Flask",
+        "Linux",
+        "SQLite",
+        "MySQL"
+    ],
+    "idiomas": [
+        "Francés",
+        "Español",
+        "Alemán",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Análisis de datos",
+        "Administración de sistemas",
+        "Inteligencia artificial",
+        "Ciberseguridad"
+    ]
+}

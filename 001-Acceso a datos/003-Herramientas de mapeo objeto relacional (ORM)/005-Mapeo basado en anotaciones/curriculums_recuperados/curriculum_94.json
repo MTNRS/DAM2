@@ -1,0 +1,50 @@
+{
+    "nombre": "Sergio Rubio Herrera",
+    "marca": "Perfil 094",
+    "nacimiento": "1984-01-17",
+    "ciudad": "Alicante",
+    "email": "curriculum_094@example.com",
+    "web": "https://example.com/curriculum_094",
+    "profesion": "Desarrollador de software",
+    "experiencia": "11 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Máster en Ciberseguridad",
+        "Técnico Superior en DAM"
+    ],
+    "trabajos": [
+        "DataLab - Desarrollador de software",
+        "Digital Solutions - Analista de datos",
+        "Sistemas Levante - Analista de datos",
+        "TechNova - Profesor de informática"
+    ],
+    "lenguajes": [
+        "SQL",
+        "PHP",
+        "Go",
+        "CSS",
+        "HTML",
+        "Java",
+        "Python"
+    ],
+    "tecnologias": [
+        "Moodle",
+        "Flask",
+        "MySQL",
+        "PostgreSQL",
+        "Ollama"
+    ],
+    "idiomas": [
+        "Francés",
+        "Alemán",
+        "Inglés",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Inteligencia artificial",
+        "Desarrollo web",
+        "Automatización",
+        "Ciberseguridad",
+        "Administración de sistemas"
+    ]
+}

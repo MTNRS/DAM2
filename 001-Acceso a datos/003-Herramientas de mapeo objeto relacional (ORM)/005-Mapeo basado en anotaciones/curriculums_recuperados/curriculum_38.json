@@ -1,0 +1,44 @@
+{
+    "nombre": "Pablo Sánchez Pérez",
+    "marca": "Perfil 038",
+    "nacimiento": "1994-09-23",
+    "ciudad": "Sevilla",
+    "email": "curriculum_038@example.com",
+    "web": "https://example.com/curriculum_038",
+    "profesion": "Ingeniero de IA",
+    "experiencia": "3 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Grado en Matemáticas"
+    ],
+    "trabajos": [
+        "Digital Solutions - Desarrollador full-stack",
+        "TechNova - Profesor de informática"
+    ],
+    "lenguajes": [
+        "Go",
+        "HTML",
+        "TypeScript",
+        "SQL",
+        "CSS"
+    ],
+    "tecnologias": [
+        "Moodle",
+        "Apache",
+        "Ollama",
+        "Linux",
+        "Flask",
+        "Git"
+    ],
+    "idiomas": [
+        "Francés",
+        "Alemán",
+        "Español",
+        "Inglés"
+    ],
+    "especialidades": [
+        "Inteligencia artificial",
+        "Análisis de datos",
+        "Formación profesional"
+    ]
+}

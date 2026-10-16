@@ -1,0 +1,42 @@
+{
+    "nombre": "Marta Sánchez Pérez",
+    "marca": "Perfil 078",
+    "nacimiento": "1990-08-20",
+    "ciudad": "Valencia",
+    "email": "curriculum_078@example.com",
+    "web": "https://example.com/curriculum_078",
+    "profesion": "Ingeniero de IA",
+    "experiencia": "1 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Desarrollador full-stack",
+        "EducaDigital - Especialista en ciberseguridad",
+        "CodeFactory - Desarrollador full-stack"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "PHP",
+        "Python",
+        "HTML",
+        "TypeScript",
+        "Go"
+    ],
+    "tecnologias": [
+        "Moodle",
+        "SQLite",
+        "React"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Francés",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Bases de datos",
+        "Formación profesional",
+        "Análisis de datos"
+    ]
+}

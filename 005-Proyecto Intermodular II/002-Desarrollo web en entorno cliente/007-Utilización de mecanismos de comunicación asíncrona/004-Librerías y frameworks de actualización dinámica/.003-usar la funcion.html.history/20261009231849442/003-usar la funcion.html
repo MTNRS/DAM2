@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      function jocarsaAsinc(archivo,formato="json"){
+      	fetch(archivo)
+        .then(function(resultado){
+          if(formato == "json"){
+          	return resultado.json()
+          }else if(formato == "texto"){
+          	return resultado.text()
+          }
+        })
+        .then(function(datos){
+          return datos;
+        })	
+      }
+      
+      console.log(jocarsaAsinc-asinc("curriculum.json"))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div id="resultado"></div>
+    <script>
+      fetch("blog.json")
+      .then(function(resultado){return resultado.json()})
+      .then(function(datos){
+      	console.log(datos)
+      })
+    </script>
+  </body>
+</html>

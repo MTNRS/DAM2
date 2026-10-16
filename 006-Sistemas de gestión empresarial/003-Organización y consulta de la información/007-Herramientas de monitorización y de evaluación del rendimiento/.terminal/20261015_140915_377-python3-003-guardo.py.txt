@@ -1,0 +1,8 @@
+Datetime: 2026-10-15T12:09:15.377Z
+Working directory: /var/www/html/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento
+Command: python3 003-guardo.py
+
+Result:
+Registro guardado correctamente
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/006-Sistemas de gestión em
+presarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento$ 

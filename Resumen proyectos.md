@@ -1,6 +1,23 @@
 - Acceso a datos
-    - Manejo de ficheros - base de datos de tipo csv creada en una clase PHP
-    - Manejo de conectores - conversión de la clase a un SSGGBBDD + conectores Python + PHP
+    - Manejo de ficheros
+        - Clases asociadas a las operaciones de gestión de ficheros
+        - Formas de acceso a un fichero. Ventajas
+        - Clases para gestión de flujos de datos desdehacia ficheros
+        - Operaciones sobre ficheros secuenciales y aleatorios
+        - Serializacióndeserialización de objetos
+        - Trabajo con ficheros
+        - Excepciones detección y tratamiento
+        - Desarrollo de aplicaciones que utilizan ficheros
+    - Manejo de conectores
+        - El desfase objeto-relacional
+        - Protocolos de acceso a bases de datos
+        - Establecimiento de conexiones
+        - Ejecución de sentencias de descripción de datos
+        - Ejecución de sentencias de modificación de datos
+        - Ejecución de consultas. Manipulación del resultado
+        - Ejecución de procedimientos almacenados en la base de datos
+        - Gestión de transacciones
+        - Desarrollo de programas que utilizan bases de datos
     - Herramientas de mapeo objeto relacional (ORM)
         - Concepto de mapeo objeto relacional
         - Características de las herramientas ORM
@@ -38,12 +55,27 @@
         - Herramientas para desarrollo de componentes
         - Desarrollo, empaquetado y utilización de componentes
 - Desarrollo de interfaces
-    - Generación de interfaces de usuario - Interfaz jocarsa-iu
-    - Generación de interfaces naturales de usuario - Visión artificial, dictado, habla y IA
+    - Generación de interfaces de usuario
+        - Patrones de arquitectura de las aplicaciones gráficas
+        - Librerías de componentes nativas y multiplataforma
+        - Herramientas propietarias y libres de edición de interfaces
+        - Lenguajes descriptivos para la definición de interfaces
+        - Componentes características y campo de aplicación
+        - Enlace de componentes a orígenes de datos
+        - Asociación de acciones a eventos
+        - Edición del código generado por la herramienta de diseño
+        - Clases, propiedades, métodos
+        - Eventos; escuchadores
+    - Generación de interfaces naturales de usuario
+        - Herramientas para el aprendizaje automático
+        - Interfaces naturales
+        - Voz y Habla
+        - Partes y movimientos del cuerpo
+        - Realidad aumentada
     - Creación de componentes visuales
         - Concepto de componente
-        - Propiedades, atributos y métodos - Creación de librería propia
-        - Eventos; asociación de acciones a eventos - Conversión de librería estandar a propia
+        - Propiedades, atributos y métodos
+        - Eventos; asociación de acciones a eventos
         - Persistencia del componente
         - Herramientas para desarrollo de componentes visuales
         - Prueba de los componentes
@@ -154,7 +186,7 @@
         - Cámaras e iluminación
         - Creación de escenas.
         - Análisis de ejecución
-    - Utilización de librerías multimedia integradas - Reproductor multimedia que lo podemos utilizar en jocarsa-formacion - jocarsa-iu
+    - Utilización de librerías multimedia integradas
         - Conceptos sobre aplicaciones multimedia
         - Arquitectura del API utilizado
         - Fuentes de datos multimedia. Clases

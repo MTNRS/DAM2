@@ -1,0 +1,49 @@
+{
+    "nombre": "Miguel Navarro Gil",
+    "marca": "Perfil 055",
+    "nacimiento": "1993-03-07",
+    "ciudad": "Málaga",
+    "email": "curriculum_055@example.com",
+    "web": "https://example.com/curriculum_055",
+    "profesion": "Desarrollador de software",
+    "experiencia": "2 años",
+    "formacion": [
+        "Grado en Desarrollo de Software"
+    ],
+    "trabajos": [
+        "CodeFactory - Desarrollador full-stack",
+        "Digital Solutions - Analista de datos",
+        "EducaDigital - Analista de datos",
+        "CloudWorks - Ingeniero de IA"
+    ],
+    "lenguajes": [
+        "SQL",
+        "JavaScript",
+        "HTML",
+        "C++",
+        "Go",
+        "TypeScript",
+        "CSS"
+    ],
+    "tecnologias": [
+        "React",
+        "AWS",
+        "Docker",
+        "Moodle",
+        "PostgreSQL",
+        "Ollama",
+        "Linux"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Español",
+        "Francés"
+    ],
+    "especialidades": [
+        "Programación",
+        "Ciberseguridad",
+        "Desarrollo web",
+        "Administración de sistemas",
+        "Formación profesional"
+    ]
+}

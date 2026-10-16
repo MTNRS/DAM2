@@ -1,0 +1,16 @@
+async function jocarsaAsinc(archivo, formato="json"){
+  let resultado = await fetch(archivo);
+
+  if(formato == "json"){
+    return await resultado.json();
+  }else if(formato == "texto"){
+    return await resultado.text();
+  }
+}
+
+async function inicio(){
+  let datos = await jocarsaAsinc("curriculum.json");
+  console.log(datos);
+}
+
+inicio();

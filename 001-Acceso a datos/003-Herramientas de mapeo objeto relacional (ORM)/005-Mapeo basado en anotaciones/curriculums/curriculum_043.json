@@ -1,0 +1,48 @@
+{
+  "nombre": "Hugo Sánchez Pérez",
+  "marca": "Perfil 043",
+  "nacimiento": "1998-01-14",
+  "ciudad": "Zaragoza",
+  "email": "curriculum_043@example.com",
+  "web": "https://example.com/curriculum_043",
+  "profesion": "Administrador de sistemas",
+  "experiencia": "15 años",
+  "formacion": [
+    "Técnico Superior en DAM",
+    "Grado en Matemáticas",
+    "Técnico Superior en DAW"
+  ],
+  "trabajos": [
+    "EducaDigital - Desarrollador full-stack",
+    "DataLab - Administrador de sistemas"
+  ],
+  "lenguajes": [
+    "Go",
+    "CSS",
+    "TypeScript",
+    "HTML",
+    "JavaScript"
+  ],
+  "tecnologias": [
+    "React",
+    "AWS",
+    "Ollama",
+    "MySQL",
+    "SQLite",
+    "PostgreSQL"
+  ],
+  "idiomas": [
+    "Inglés",
+    "Alemán",
+    "Español",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Administración de sistemas",
+    "Bases de datos",
+    "Automatización",
+    "Formación profesional",
+    "Programación",
+    "Desarrollo web"
+  ]
+}

@@ -1,0 +1,22 @@
+*{padding:0px;margin:0px;}
+html,head{width:100%;height:100%;}
+body{
+  background:var(--color_terciario);
+  height:100%;
+	font-family:var(--fuente_principal);
+}
+header{
+  width:100%;
+  height:100%;
+	background-image: var(--fondo_heroe);
+  background-size:cover;
+  padding:var(--margen_interior);
+  display:flex;
+  
+}
+main,footer{
+	background:white;
+  width:800px;
+  margin:auto;
+  padding:var(--margen_interior);
+}

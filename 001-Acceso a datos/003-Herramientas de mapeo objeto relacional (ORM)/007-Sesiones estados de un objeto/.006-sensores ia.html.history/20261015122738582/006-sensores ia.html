@@ -1,0 +1,197 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulación de personas</title>
+  <style>
+    body {
+      background: #eee;
+    }
+
+    canvas {
+      background: white;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<canvas></canvas>
+
+<script>
+  let lienzo = document.querySelector("canvas");
+  let contexto = lienzo.getContext("2d");
+
+  let anchura = 500;
+  let altura = 500;
+
+  lienzo.width = anchura;
+  lienzo.height = altura;
+
+  class Persona {
+
+    constructor(nombre, posx, posy, hambre, energia, angulo) {
+      this.nombre = nombre;
+      this.posx = posx;
+      this.posy = posy;
+      this.hambre = hambre;
+      this.energia = energia;
+      this.angulo = angulo;
+
+      this.sensores = [];
+
+      // Número aleatorio de sensores entre 2 y 5
+      let numeroSensores = Math.floor(Math.random() * 4) + 2;
+
+      for (let i = 0; i < numeroSensores; i++) {
+
+        // Variación de -90 a +90 grados
+        let variacion = (Math.random() - 0.5) * Math.PI;
+
+        this.sensores.push(variacion);
+      }
+    }
+
+    dibuja(contexto) {
+
+      // =====================================
+      // SENSORES
+      // =====================================
+
+      contexto.strokeStyle = "blue";
+      contexto.lineWidth = 1;
+
+      this.sensores.forEach(sensor => {
+
+        let anguloSensor = this.angulo + sensor;
+
+        contexto.beginPath();
+        contexto.moveTo(this.posx, this.posy);
+        contexto.lineTo(
+          this.posx + Math.cos(anguloSensor) * 40,
+          this.posy + Math.sin(anguloSensor) * 40
+        );
+        contexto.stroke();
+
+      });
+
+      // =====================================
+      // ARCOS DE ENERGÍA Y HAMBRE
+      // =====================================
+
+      // Energía (verde, arco interior)
+      contexto.beginPath();
+      contexto.arc(
+        this.posx,
+        this.posy,
+        12,
+        -Math.PI / 2,
+        -Math.PI / 2 + this.energia * Math.PI * 2
+      );
+      contexto.strokeStyle = "green";
+      contexto.lineWidth = 3;
+      contexto.stroke();
+
+      // Hambre (rojo, arco exterior)
+      contexto.beginPath();
+      contexto.arc(
+        this.posx,
+        this.posy,
+        17,
+        -Math.PI / 2,
+        -Math.PI / 2 + this.hambre * Math.PI * 2
+      );
+      contexto.strokeStyle = "red";
+      contexto.lineWidth = 3;
+      contexto.stroke();
+
+      // =====================================
+      // CUERPO
+      // =====================================
+
+      contexto.fillStyle = "black";
+      contexto.fillRect(
+        this.posx - 5,
+        this.posy - 5,
+        10,
+        10
+      );
+
+      // =====================================
+      // DIRECCIÓN PRINCIPAL
+      // =====================================
+
+      let longitud = 30;
+
+      let puntaX = this.posx + Math.cos(this.angulo) * longitud;
+      let puntaY = this.posy + Math.sin(this.angulo) * longitud;
+
+      contexto.strokeStyle = "black";
+      contexto.lineWidth = 2;
+
+      contexto.beginPath();
+      contexto.moveTo(this.posx, this.posy);
+      contexto.lineTo(puntaX, puntaY);
+      contexto.stroke();
+
+      // =====================================
+      // PUNTA DE FLECHA
+      // =====================================
+
+      let tamanoPunta = 8;
+      let apertura = Math.PI / 6;
+
+      contexto.beginPath();
+
+      contexto.moveTo(puntaX, puntaY);
+      contexto.lineTo(
+        puntaX - Math.cos(this.angulo - apertura) * tamanoPunta,
+        puntaY - Math.sin(this.angulo - apertura) * tamanoPunta
+      );
+
+      contexto.moveTo(puntaX, puntaY);
+      contexto.lineTo(
+        puntaX - Math.cos(this.angulo + apertura) * tamanoPunta,
+        puntaY - Math.sin(this.angulo + apertura) * tamanoPunta
+      );
+
+      contexto.stroke();
+    }
+  }
+
+  // =====================================
+  // CREACIÓN DE PERSONAS
+  // =====================================
+
+  let numeropersonas = 20;
+  let personas = [];
+
+  for (let i = 0; i < numeropersonas; i++) {
+
+    personas.push(
+      new Persona(
+        "Persona " + (i + 1),
+        Math.random() * anchura,
+        Math.random() * altura,
+        Math.random(),
+        Math.random(),
+        Math.random() * Math.PI * 2
+      )
+    );
+
+  }
+
+  // =====================================
+  // DIBUJAR PERSONAS
+  // =====================================
+
+  personas.forEach(function(persona) {
+    persona.dibuja(contexto);
+  });
+
+  console.log(personas);
+
+</script>
+</body>
+</html>

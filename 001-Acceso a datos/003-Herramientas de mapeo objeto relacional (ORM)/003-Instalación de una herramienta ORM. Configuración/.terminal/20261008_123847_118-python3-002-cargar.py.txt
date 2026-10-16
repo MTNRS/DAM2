@@ -1,0 +1,25 @@
+Datetime: 2026-10-08T10:38:47.118Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/003-Instalación de una herramienta ORM. Configuración
+Command: python3 002-cargar.py
+
+Result:
+<class 'str'>
+Esto es un dato y va como valor
+<class 'str'>
+Esto es un dato y va como valor
+<class 'str'>
+Esto es un dato y va como valor
+<class 'str'>
+Esto es un dato y va como valor
+<class 'str'>
+Esto es un dato y va como valor
+<class 'str'>
+Esto es un dato y va como valor
+<class 'str'>
+Esto es un dato y va como valor
+<class 'str'>
+Esto es un dato y va como valor
+<class 'list'>
+Esto es un dato y va como valor
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herr
+amientas de mapeo objeto relacional (ORM)/003-Instalación de una herramienta ORM. Configuración$ 

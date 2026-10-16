@@ -1,0 +1,49 @@
+{
+    "nombre": "Marta García López",
+    "marca": "Perfil 014",
+    "nacimiento": "1972-04-16",
+    "ciudad": "Madrid",
+    "email": "curriculum_014@example.com",
+    "web": "https://example.com/curriculum_014",
+    "profesion": "Desarrollador full-stack",
+    "experiencia": "14 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Grado en Desarrollo de Software",
+        "Técnico Superior en DAW"
+    ],
+    "trabajos": [
+        "Digital Solutions - Desarrollador de software",
+        "InnovaSoft - Profesor de informática",
+        "Sistemas Levante - Especialista en ciberseguridad"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "TypeScript",
+        "CSS",
+        "Python"
+    ],
+    "tecnologias": [
+        "SQLite",
+        "Apache",
+        "Docker",
+        "MySQL",
+        "PostgreSQL",
+        "Flask",
+        "Moodle"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Alemán",
+        "Francés",
+        "Portugués"
+    ],
+    "especialidades": [
+        "Automatización",
+        "Ciberseguridad",
+        "Bases de datos",
+        "Administración de sistemas",
+        "Inteligencia artificial",
+        "Formación profesional"
+    ]
+}

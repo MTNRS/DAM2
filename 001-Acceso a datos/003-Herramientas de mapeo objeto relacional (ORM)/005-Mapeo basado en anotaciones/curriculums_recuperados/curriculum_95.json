@@ -1,0 +1,43 @@
+{
+    "nombre": "Marta Sánchez Pérez",
+    "marca": "Perfil 095",
+    "nacimiento": "1970-12-19",
+    "ciudad": "Málaga",
+    "email": "curriculum_095@example.com",
+    "web": "https://example.com/curriculum_095",
+    "profesion": "Desarrollador de software",
+    "experiencia": "6 años",
+    "formacion": [
+        "Técnico Superior en DAM",
+        "Máster en Inteligencia Artificial",
+        "Grado en Desarrollo de Software"
+    ],
+    "trabajos": [
+        "InnovaSoft - Profesor de informática",
+        "EducaDigital - Administrador de sistemas",
+        "Sistemas Levante - Ingeniero de IA",
+        "DataLab - Ingeniero de IA"
+    ],
+    "lenguajes": [
+        "PHP",
+        "SQL",
+        "CSS",
+        "Python"
+    ],
+    "tecnologias": [
+        "SQLite",
+        "AWS",
+        "Apache",
+        "Flask",
+        "Moodle"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Español"
+    ],
+    "especialidades": [
+        "Análisis de datos",
+        "Ciberseguridad",
+        "Administración de sistemas"
+    ]
+}

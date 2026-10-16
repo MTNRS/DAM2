@@ -1,0 +1,45 @@
+{
+    "nombre": "Elena Rubio Herrera",
+    "marca": "Perfil 024",
+    "nacimiento": "1972-03-16",
+    "ciudad": "Alicante",
+    "email": "curriculum_024@example.com",
+    "web": "https://example.com/curriculum_024",
+    "profesion": "Diseñador web",
+    "experiencia": "6 años",
+    "formacion": [
+        "Técnico Superior en DAW",
+        "Grado en Matemáticas",
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Especialista en ciberseguridad",
+        "DataLab - Ingeniero de IA"
+    ],
+    "lenguajes": [
+        "PHP",
+        "JavaScript",
+        "SQL",
+        "Java",
+        "CSS"
+    ],
+    "tecnologias": [
+        "Moodle",
+        "Git",
+        "Ollama",
+        "React",
+        "Linux",
+        "SQLite"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Portugués"
+    ],
+    "especialidades": [
+        "Bases de datos",
+        "Análisis de datos",
+        "Ciberseguridad",
+        "Formación profesional",
+        "Programación"
+    ]
+}

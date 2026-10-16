@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body{background:grey;}
+      header,main,footer{width:600px;background:white;padding:20px;margin:auto;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Jose Vicente Carratala</h1>
+      <h2>Blog</h2>
+    </header>
+    <main>
+    </main>
+    <footer>
+      <p>(c) 2026 Jose Vicente Carratala</p>
+    </footer>
+    <script>
+      let principal = document.querySelector("main")
+      fetch("blog.json")
+      .then(function(resultado){return resultado.json()})
+      .then(function(articulos){
+      	articulos.forEach(function(articulo){
+       		 principal.innerHTML += `
+           	<article>
+            	<h4>`+articulo.titulo+`</h4>
+              <time>`+articulo.fecha+`</time>
+              <p>`+articulo.texto+`</p>
+            </article>
+           `
+        })
+      })	
+    </script>
+  </body>
+</html>

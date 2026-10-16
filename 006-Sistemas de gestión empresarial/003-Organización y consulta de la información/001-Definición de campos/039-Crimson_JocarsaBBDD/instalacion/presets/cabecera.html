@@ -1,0 +1,38 @@
+<div class="marca">
+  <img src="https://static.jocarsa.com/logos/crimson.svg" alt="Crimson">
+  <strong>jocarsa | crimson</strong>
+</div>
+
+<div class="cabecera-centro">
+  <h1>Selecciona una tabla</h1>
+  <a href="#" id="accionSeleccionar" onclick="crudActual('seleccionar');return false;">Seleccionar</a>
+</div>
+
+<div class="cabecera-usuario">
+  <a href="./perfil.php" class="usuario-enlace" title="Editar mis datos">
+    <span id="usuarioActual">Usuario</span>
+  </a>
+  <a id="usuariosAdmin" href="./usuarios.php" style="display:none">Usuarios</a>
+  <a id="modeloAdmin" href="./modelo.php" style="display:none">Modelo de datos</a>
+  <a id="opcionesAdmin" href="./configuracion.php" style="display:none">Opciones</a>
+  <a href="#" id="salir">Salir</a>
+</div>
+
+<button id="fabInsertar" class="fab-insertar" title="Insertar registro" onclick="crudActual('insertar')" disabled>+</button>
+
+<script>
+(function(){
+ const u=window.CRIMSON_USER;
+ if(u){
+   document.querySelector("#usuarioActual").textContent=u.nombre;
+   if(u.rol==="admin"){
+     ["usuariosAdmin","modeloAdmin","opcionesAdmin"].forEach(id=>document.querySelector("#"+id).style.display="inline-flex");
+   }
+ }
+ document.querySelector("#salir").onclick=async e=>{
+   e.preventDefault();
+   await fetch("api/auth.php?action=logout",{cache:"no-store"});
+   location.href="login.php";
+ };
+})();
+</script>
