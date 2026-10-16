@@ -1,0 +1,43 @@
+{
+    "nombre": "Raúl Rubio Herrera",
+    "marca": "Perfil 067",
+    "nacimiento": "1996-05-05",
+    "ciudad": "Sevilla",
+    "email": "curriculum_067@example.com",
+    "web": "https://example.com/curriculum_067",
+    "profesion": "Ingeniero de IA",
+    "experiencia": "8 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Grado en Desarrollo de Software"
+    ],
+    "trabajos": [
+        "CodeFactory - Desarrollador full-stack",
+        "DataLab - Desarrollador full-stack",
+        "EducaDigital - Analista de datos"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "Go",
+        "CSS",
+        "PHP",
+        "C++"
+    ],
+    "tecnologias": [
+        "React",
+        "Linux",
+        "Apache"
+    ],
+    "idiomas": [
+        "Español",
+        "Portugués",
+        "Francés",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Bases de datos",
+        "Desarrollo web",
+        "Programación",
+        "Automatización"
+    ]
+}

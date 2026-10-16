@@ -1,0 +1,12 @@
+Datetime: 2026-10-11T17:38:52.350Z
+Working directory: /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones
+Command: php 003-un\ parametro.php
+
+Result:
+PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function diHola(), 0 passed in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones/003-un parametro.php on line 5 and exactly 1 expected in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones/003-un parametro.php:2
+Stack trace:
+#0 /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones/003-un parametro.php(5): diHola()
+#1 {main}
+  thrown in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones/003-un parametro.php on line 2
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarroll
+o web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones$ 

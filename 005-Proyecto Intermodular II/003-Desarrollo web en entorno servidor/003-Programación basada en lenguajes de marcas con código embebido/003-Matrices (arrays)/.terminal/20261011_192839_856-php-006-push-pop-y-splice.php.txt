@@ -1,0 +1,32 @@
+Datetime: 2026-10-11T17:28:39.856Z
+Working directory: /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)
+Command: php 006-push\ pop\ y\ splice.php
+
+Result:
+array(3) {
+  [0]=>
+  string(7) "manzana"
+  [1]=>
+  string(4) "pera"
+  [2]=>
+  string(7) "platano"
+}
+
+array(4) {
+  [0]=>
+  string(7) "manzana"
+  [1]=>
+  string(4) "pera"
+  [2]=>
+  string(7) "platano"
+  [3]=>
+  string(5) "fresa"
+}
+
+PHP Fatal error:  Uncaught ArgumentCountError: array_pop() expects exactly 1 argument, 2 given in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/006-push pop y splice.php:8
+Stack trace:
+#0 /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/006-push pop y splice.php(8): array_pop()
+#1 {main}
+  thrown in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/006-push pop y splice.php on line 8
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-D
+esarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)$ 

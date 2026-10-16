@@ -1,0 +1,44 @@
+{
+    "nombre": "Irene Fernández Torres",
+    "marca": "Perfil 032",
+    "nacimiento": "1993-02-22",
+    "ciudad": "Zaragoza",
+    "email": "curriculum_032@example.com",
+    "web": "https://example.com/curriculum_032",
+    "profesion": "Ingeniero de IA",
+    "experiencia": "2 años",
+    "formacion": [
+        "Técnico Superior en DAM",
+        "Grado en Desarrollo de Software"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Administrador de sistemas",
+        "TechNova - Desarrollador de software"
+    ],
+    "lenguajes": [
+        "SQL",
+        "Java",
+        "JavaScript"
+    ],
+    "tecnologias": [
+        "SQLite",
+        "Apache",
+        "React",
+        "AWS",
+        "PostgreSQL",
+        "Ollama",
+        "Git"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Italiano",
+        "Español"
+    ],
+    "especialidades": [
+        "Desarrollo web",
+        "Automatización",
+        "Formación profesional",
+        "Ciberseguridad",
+        "Bases de datos"
+    ]
+}

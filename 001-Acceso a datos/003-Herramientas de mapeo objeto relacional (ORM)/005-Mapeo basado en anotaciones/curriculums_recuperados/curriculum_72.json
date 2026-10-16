@@ -1,0 +1,42 @@
+{
+    "nombre": "Javier Ortega Moreno",
+    "marca": "Perfil 072",
+    "nacimiento": "1994-02-24",
+    "ciudad": "Sevilla",
+    "email": "curriculum_072@example.com",
+    "web": "https://example.com/curriculum_072",
+    "profesion": "Analista de datos",
+    "experiencia": "13 años",
+    "formacion": [
+        "Grado en Desarrollo de Software"
+    ],
+    "trabajos": [
+        "CloudWorks - Analista de datos",
+        "DataLab - Profesor de informática",
+        "EducaDigital - Analista de datos"
+    ],
+    "lenguajes": [
+        "C++",
+        "HTML",
+        "Go",
+        "Java",
+        "Python",
+        "JavaScript"
+    ],
+    "tecnologias": [
+        "SQLite",
+        "Git",
+        "Docker",
+        "AWS",
+        "PostgreSQL"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Alemán"
+    ],
+    "especialidades": [
+        "Análisis de datos",
+        "Administración de sistemas",
+        "Automatización"
+    ]
+}

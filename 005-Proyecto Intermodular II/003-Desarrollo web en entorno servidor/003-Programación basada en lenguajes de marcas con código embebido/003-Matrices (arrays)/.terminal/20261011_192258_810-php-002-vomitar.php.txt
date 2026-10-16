@@ -1,0 +1,16 @@
+Datetime: 2026-10-11T17:22:58.810Z
+Working directory: /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)
+Command: php 002-vomitar.php
+
+Result:
+array(3) {
+  [0]=>
+  string(7) "manzana"
+  [1]=>
+  string(4) "pera"
+  [2]=>
+  string(7) "platano"
+}
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-D
+esarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)$ 

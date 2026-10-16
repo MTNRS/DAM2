@@ -1,0 +1,315 @@
+
+{
+  "datos_personales": {
+    "nombre": "José Vicente",
+    "apellidos": "Carratalá",
+    "nombre_profesional": "José Vicente Carratalá",
+    "marca_personal": "JOCARSA",
+    "ubicacion": {
+      "ciudad": "Valencia",
+      "pais": "España"
+    },
+    "email": null,
+    "telefono": null,
+    "web": null,
+    "linkedin": null
+  },
+  "perfil_profesional": {
+    "titular": "Docente de Informática, Desarrollador de Software y Especialista en Inteligencia Artificial",
+    "resumen": "Profesional de la informática con más de 25 años de trayectoria docente y experiencia en desarrollo de aplicaciones, administración de sistemas, inteligencia artificial y creación de plataformas educativas. Especializado en formación profesional, programación, bases de datos, desarrollo web, automatización y despliegue de modelos de lenguaje en infraestructura propia.",
+    "sectores": [
+      "Educación",
+      "Desarrollo de software",
+      "Inteligencia artificial",
+      "Tecnologías de la información",
+      "Formación profesional"
+    ]
+  },
+  "experiencia_profesional": [
+    {
+      "puesto": "Profesor de Formación Profesional",
+      "periodo": {
+        "inicio": "2017",
+        "fin": "Actualidad"
+      },
+      "especialidad": "Desarrollo de Aplicaciones Multiplataforma",
+      "funciones": [
+        "Impartición de módulos de informática",
+        "Diseño de materiales didácticos",
+        "Desarrollo de ejercicios y proyectos",
+        "Evaluación del alumnado",
+        "Tutoría y seguimiento académico",
+        "Integración de inteligencia artificial en la enseñanza",
+        "Desarrollo de herramientas educativas"
+      ]
+    },
+    {
+      "puesto": "Docente de Formación Online",
+      "periodo": {
+        "inicio": "2010",
+        "fin": "2020"
+      },
+      "funciones": [
+        "Impartición de formación a distancia",
+        "Creación de contenidos digitales",
+        "Diseño de actividades interactivas",
+        "Seguimiento del aprendizaje",
+        "Administración de plataformas educativas"
+      ]
+    },
+    {
+      "puesto": "Docente de Informática Presencial",
+      "periodo": {
+        "inicio": "2000",
+        "fin": "2010"
+      },
+      "funciones": [
+        "Impartición de cursos de informática",
+        "Formación en programación",
+        "Enseñanza de aplicaciones informáticas",
+        "Preparación de prácticas",
+        "Evaluación de conocimientos"
+      ]
+    },
+    {
+      "puesto": "Desarrollador de Software",
+      "organizacion": "JOCARSA",
+      "periodo": {
+        "inicio": null,
+        "fin": "Actualidad"
+      },
+      "funciones": [
+        "Diseño de aplicaciones web",
+        "Desarrollo de sistemas ERP",
+        "Programación de aplicaciones educativas",
+        "Integración de servicios de inteligencia artificial",
+        "Desarrollo de APIs",
+        "Administración de servidores",
+        "Automatización de procesos"
+      ]
+    }
+  ],
+  "experiencia_docente": {
+    "especialidad": "Informática y Desarrollo de Aplicaciones",
+    "modulos_impartidos": [
+      "Programación",
+      "Bases de Datos",
+      "Lenguajes de Marcas y Sistemas de Gestión de Información",
+      "Entornos de Desarrollo",
+      "Sistemas Informáticos",
+      "Acceso a Datos",
+      "Desarrollo de Interfaces",
+      "Programación de Servicios y Procesos",
+      "Programación Multimedia y Dispositivos Móviles",
+      "Programación de Videojuegos",
+      "Inglés Técnico"
+    ],
+    "metodologias": [
+      "Aprendizaje basado en proyectos",
+      "Evaluación continua",
+      "Prácticas de programación",
+      "Desarrollo de aplicaciones reales",
+      "Aprendizaje asistido por inteligencia artificial"
+    ]
+  },
+  "competencias_tecnicas": {
+    "lenguajes_programacion": [
+      "Python",
+      "PHP",
+      "Java",
+      "JavaScript",
+      "C",
+      "HTML",
+      "CSS",
+      "SQL"
+    ],
+    "desarrollo_web": [
+      "Flask",
+      "APIs REST",
+      "Aplicaciones cliente-servidor",
+      "Diseño responsive",
+      "Aplicaciones multiusuario",
+      "Arquitecturas multitenant"
+    ],
+    "bases_de_datos": [
+      "MySQL",
+      "MariaDB",
+      "SQLite",
+      "Diseño relacional",
+      "Consultas SQL",
+      "Migración de datos"
+    ],
+    "inteligencia_artificial": [
+      "Modelos de lenguaje LLM",
+      "Ollama",
+      "RAG",
+      "Bases de datos vectoriales",
+      "ChromaDB",
+      "Whisper",
+      "Transcripción automática",
+      "Fine-tuning",
+      "QLoRA",
+      "Modelos locales",
+      "Integración de APIs de IA"
+    ],
+    "sistemas": [
+      "Linux",
+      "Ubuntu",
+      "Debian",
+      "Apache",
+      "Administración de servidores",
+      "Servicios Linux",
+      "Automatización de tareas",
+      "Seguridad informática"
+    ],
+    "multimedia": [
+      "FFmpeg",
+      "Codificación AV1",
+      "NVENC",
+      "Procesamiento de vídeo",
+      "WebRTC",
+      "BigBlueButton",
+      "Subtítulos SRT y VTT"
+    ],
+    "herramientas_educativas": [
+      "Moodle",
+      "Sistemas de evaluación",
+      "Plataformas de formación online",
+      "Gestión de alumnos",
+      "Seguimiento académico"
+    ]
+  },
+  "proyectos_destacados": [
+    {
+      "nombre": "JOCARSA Formación",
+      "tipo": "Plataforma educativa",
+      "descripcion": "Sistema de gestión de contenidos, actividades, entregas, evaluaciones y seguimiento del alumnado.",
+      "tecnologias": [
+        "PHP",
+        "SQLite",
+        "JavaScript",
+        "Moodle",
+        "Inteligencia Artificial"
+      ]
+    },
+    {
+      "nombre": "JOCARSA Cuaderno",
+      "tipo": "Aplicación de evaluación",
+      "descripcion": "Cuaderno digital docente con asignaturas, alumnado, evaluaciones y calificaciones ponderadas.",
+      "tecnologias": [
+        "PHP",
+        "SQLite",
+        "JavaScript"
+      ]
+    },
+    {
+      "nombre": "JOCARSA Prácticas",
+      "tipo": "Gestión académica",
+      "descripcion": "Aplicación para gestionar estudiantes, empresas y asignaciones de prácticas, con visualización geográfica.",
+      "tecnologias": [
+        "PHP",
+        "SQLite",
+        "JavaScript",
+        "Leaflet"
+      ]
+    },
+    {
+      "nombre": "JOCARSA ERP",
+      "tipo": "Software empresarial",
+      "descripcion": "Sistema modular de gestión empresarial con CRUD dinámico, permisos, dashboards y visualización de datos.",
+      "tecnologias": [
+        "PHP",
+        "JavaScript",
+        "SQL",
+        "JocarsaBBDD"
+      ]
+    },
+    {
+      "nombre": "JOCARSA IA",
+      "tipo": "Inteligencia artificial",
+      "descripcion": "Infraestructura de modelos de lenguaje locales y remotos, procesamiento documental y generación de contenidos.",
+      "tecnologias": [
+        "Python",
+        "Ollama",
+        "RAG",
+        "ChromaDB",
+        "Whisper"
+      ]
+    },
+    {
+      "nombre": "JOCARSA Videoconferencia",
+      "tipo": "Comunicaciones",
+      "descripcion": "Sistema de videoconferencia con gestión de sesiones, señalización, grabación y procesamiento multimedia.",
+      "tecnologias": [
+        "WebRTC",
+        "Node.js",
+        "SQLite",
+        "FFmpeg"
+      ]
+    },
+    {
+      "nombre": "JOCARSA Daemon",
+      "tipo": "Seguridad informática",
+      "descripcion": "Servicio Linux desarrollado en C para inventariar el sistema de archivos y detectar modificaciones.",
+      "tecnologias": [
+        "C",
+        "Linux",
+        "Seguridad"
+      ]
+    }
+  ],
+  "investigacion_y_desarrollo": {
+    "areas": [
+      "Modelos de lenguaje locales",
+      "Entrenamiento de redes neuronales",
+      "Adaptación de modelos mediante QLoRA",
+      "Recuperación aumentada por generación",
+      "Automatización de materiales educativos",
+      "Transcripción y traducción automática",
+      "Procesamiento masivo de documentos",
+      "Visión por computador",
+      "Reconstrucción tridimensional"
+    ],
+    "experiencia": [
+      "Construcción de datasets de entrenamiento",
+      "Experimentación con arquitecturas Transformer",
+      "Evaluación comparativa de modelos",
+      "Despliegue de inferencia con GPU",
+      "Integración de modelos en aplicaciones web"
+    ]
+  },
+  "formacion_academica": {
+    "titulaciones": [],
+    "observaciones": "Pendiente de incorporar titulaciones oficiales, centros y fechas."
+  },
+  "idiomas": [
+    {
+      "idioma": "Español",
+      "nivel": "Nativo"
+    },
+    {
+      "idioma": "Inglés",
+      "nivel": "Por especificar"
+    }
+  ],
+  "habilidades_profesionales": [
+    "Comunicación docente",
+    "Diseño curricular",
+    "Resolución de problemas",
+    "Desarrollo de proyectos",
+    "Investigación tecnológica",
+    "Aprendizaje continuo",
+    "Automatización de procesos",
+    "Documentación técnica",
+    "Gestión de plataformas educativas"
+  ],
+  "objetivos_profesionales": [
+    "Docencia de informática",
+    "Formación en inteligencia artificial",
+    "Desarrollo de software",
+    "Investigación aplicada en IA",
+    "Creación de herramientas educativas",
+    "Consultoría tecnológica"
+  ],
+  "ultima_actualizacion": "2026-10-09"
+}

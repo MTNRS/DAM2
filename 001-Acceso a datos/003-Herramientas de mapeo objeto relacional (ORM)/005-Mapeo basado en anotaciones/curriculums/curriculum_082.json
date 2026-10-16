@@ -1,0 +1,40 @@
+{
+  "nombre": "Elena Martínez Ruiz",
+  "marca": "Perfil 082",
+  "nacimiento": "1993-11-21",
+  "ciudad": "Barcelona",
+  "email": "curriculum_082@example.com",
+  "web": "https://example.com/curriculum_082",
+  "profesion": "Desarrollador de software",
+  "experiencia": "13 años",
+  "formacion": [
+    "Técnico Superior en DAM",
+    "Grado en Matemáticas",
+    "Grado en Desarrollo de Software"
+  ],
+  "trabajos": [
+    "InnovaSoft - Desarrollador de software",
+    "CodeFactory - Administrador de sistemas",
+    "TechNova - Desarrollador full-stack"
+  ],
+  "lenguajes": [
+    "JavaScript",
+    "Java",
+    "CSS"
+  ],
+  "tecnologias": [
+    "Linux",
+    "Flask",
+    "Apache"
+  ],
+  "idiomas": [
+    "Portugués",
+    "Inglés",
+    "Francés"
+  ],
+  "especialidades": [
+    "Inteligencia artificial",
+    "Análisis de datos",
+    "Programación"
+  ]
+}

@@ -1,0 +1,9 @@
+Datetime: 2026-10-08T10:37:28.002Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/003-Instalación de una herramienta ORM. Configuración
+Command: python3 002-cargar.py
+
+Result:
+['nombre', 'marca', 'nacimiento', 'ciudad', 'email', 'web', 'profesion', 'experiencia', 'lenguajes']
+['José Vicente Carratalá', 'JOCARSA', '1978-04-14', 'Valencia', 'info@jocarsa.com', 'https://jocarsa.com', 'Profesor de informática y desarrollador de software', 'Más de 25 años', ['Python', 'PHP', 'JavaScript', 'Java', 'C++', 'SQL', 'HTML', 'CSS']]
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herr
+amientas de mapeo objeto relacional (ORM)/003-Instalación de una herramienta ORM. Configuración$ 

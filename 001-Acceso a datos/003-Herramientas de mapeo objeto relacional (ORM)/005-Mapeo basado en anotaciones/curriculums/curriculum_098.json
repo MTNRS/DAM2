@@ -1,0 +1,43 @@
+{
+  "nombre": "David Romero Díaz",
+  "marca": "Perfil 098",
+  "nacimiento": "1995-08-16",
+  "ciudad": "Bilbao",
+  "email": "curriculum_098@example.com",
+  "web": "https://example.com/curriculum_098",
+  "profesion": "Profesor de informática",
+  "experiencia": "18 años",
+  "formacion": [
+    "Grado en Desarrollo de Software",
+    "Técnico Superior en DAM"
+  ],
+  "trabajos": [
+    "CodeFactory - Desarrollador de software",
+    "InnovaSoft - Diseñador web",
+    "EducaDigital - Desarrollador full-stack"
+  ],
+  "lenguajes": [
+    "C++",
+    "Java",
+    "Go",
+    "CSS",
+    "Python",
+    "PHP"
+  ],
+  "tecnologias": [
+    "Apache",
+    "Git",
+    "Flask"
+  ],
+  "idiomas": [
+    "Francés",
+    "Italiano",
+    "Inglés",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Análisis de datos",
+    "Automatización",
+    "Formación profesional"
+  ]
+}

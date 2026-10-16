@@ -1,0 +1,40 @@
+{
+  "nombre": "Lucía Vidal Serrano",
+  "marca": "Perfil 017",
+  "nacimiento": "1990-06-25",
+  "ciudad": "Málaga",
+  "email": "curriculum_017@example.com",
+  "web": "https://example.com/curriculum_017",
+  "profesion": "Diseñador web",
+  "experiencia": "14 años",
+  "formacion": [
+    "Máster en Ciberseguridad",
+    "Ingeniería Informática"
+  ],
+  "trabajos": [
+    "TechNova - Desarrollador de software",
+    "CodeFactory - Ingeniero de IA",
+    "CloudWorks - Administrador de sistemas"
+  ],
+  "lenguajes": [
+    "Python",
+    "Go",
+    "Java"
+  ],
+  "tecnologias": [
+    "Linux",
+    "PostgreSQL",
+    "MySQL",
+    "SQLite"
+  ],
+  "idiomas": [
+    "Francés",
+    "Español"
+  ],
+  "especialidades": [
+    "Ciberseguridad",
+    "Formación profesional",
+    "Análisis de datos",
+    "Desarrollo web"
+  ]
+}

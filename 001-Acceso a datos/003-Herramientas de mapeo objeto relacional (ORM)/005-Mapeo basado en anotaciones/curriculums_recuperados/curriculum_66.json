@@ -1,0 +1,46 @@
+{
+    "nombre": "Javier García López",
+    "marca": "Perfil 066",
+    "nacimiento": "1983-04-24",
+    "ciudad": "Madrid",
+    "email": "curriculum_066@example.com",
+    "web": "https://example.com/curriculum_066",
+    "profesion": "Desarrollador full-stack",
+    "experiencia": "8 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Grado en Matemáticas",
+        "Grado en Desarrollo de Software"
+    ],
+    "trabajos": [
+        "EducaDigital - Diseñador web",
+        "CloudWorks - Especialista en ciberseguridad",
+        "DataLab - Desarrollador full-stack"
+    ],
+    "lenguajes": [
+        "SQL",
+        "C++",
+        "TypeScript",
+        "JavaScript",
+        "CSS",
+        "Java",
+        "Go"
+    ],
+    "tecnologias": [
+        "AWS",
+        "Docker",
+        "Flask"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Portugués"
+    ],
+    "especialidades": [
+        "Programación",
+        "Inteligencia artificial",
+        "Administración de sistemas",
+        "Bases de datos",
+        "Automatización",
+        "Desarrollo web"
+    ]
+}

@@ -1,0 +1,625 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background: #333;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background: #f2f2f2;
+      }
+
+      tr:hover {
+        background: #e0f0ff;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellidos</th>
+          <th>Email</th>
+          <th>Direccion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jose Vicente</td>
+          <td>Carratala Sanchis</td>
+          <td>info@jocarsa.com</td>
+          <td>La calle de Jose Vicente</td>
+        </tr>
+        <tr>
+          <td>Maria</td>
+          <td>Garcia Lopez</td>
+          <td>maria.garcia@example.com</td>
+          <td>Calle Mayor 15, Valencia</td>
+        </tr>
+        <tr>
+          <td>Carlos</td>
+          <td>Martinez Ruiz</td>
+          <td>carlos.martinez@example.com</td>
+          <td>Avenida del Puerto 42, Valencia</td>
+        </tr>
+        <tr>
+          <td>Laura</td>
+          <td>Fernandez Perez</td>
+          <td>laura.fernandez@example.com</td>
+          <td>Calle Colon 8, Valencia</td>
+        </tr>
+        <tr>
+          <td>David</td>
+          <td>Sanchez Torres</td>
+          <td>david.sanchez@example.com</td>
+          <td>Calle San Vicente 23, Valencia</td>
+        </tr>
+        <tr>
+          <td>Ana</td>
+          <td>Romero Diaz</td>
+          <td>ana.romero@example.com</td>
+          <td>Avenida Blasco Ibañez 56, Valencia</td>
+        </tr>
+        <tr>
+          <td>Pablo</td>
+          <td>Navarro Gil</td>
+          <td>pablo.navarro@example.com</td>
+          <td>Calle Xativa 12, Valencia</td>
+        </tr>
+        <tr>
+          <td>Elena</td>
+          <td>Moreno Castro</td>
+          <td>elena.moreno@example.com</td>
+          <td>Calle Quart 34, Valencia</td>
+        </tr>
+        <tr>
+          <td>Javier</td>
+          <td>Ortega Molina</td>
+          <td>javier.ortega@example.com</td>
+          <td>Avenida Aragon 19, Valencia</td>
+        </tr>
+        <tr>
+          <td>Lucia</td>
+          <td>Vidal Herrera</td>
+          <td>lucia.vidal@example.com</td>
+          <td>Calle Serranos 7, Valencia</td>
+        </tr>
+        <tr>
+          <td>Alberto</td>
+          <td>Jimenez Flores</td>
+          <td>alberto.jimenez@example.com</td>
+          <td>Calle Jesus 28, Valencia</td>
+        </tr>
+        <tr>
+          <td>Sara</td>
+          <td>Dominguez Ramos</td>
+          <td>sara.dominguez@example.com</td>
+          <td>Avenida Francia 61, Valencia</td>
+        </tr>
+        <tr>
+          <td>Daniel</td>
+          <td>Muñoz Aguilar</td>
+          <td>daniel.munoz@example.com</td>
+          <td>Calle Sueca 14, Valencia</td>
+        </tr>
+        <tr>
+          <td>Paula</td>
+          <td>Ibanez Serrano</td>
+          <td>paula.ibanez@example.com</td>
+          <td>Calle Cadiz 39, Valencia</td>
+        </tr>
+        <tr>
+          <td>Adrian</td>
+          <td>Rubio Santos</td>
+          <td>adrian.rubio@example.com</td>
+          <td>Avenida Peris y Valero 22, Valencia</td>
+        </tr>
+        <tr>
+          <td>Cristina</td>
+          <td>Hernandez Leon</td>
+          <td>cristina.hernandez@example.com</td>
+          <td>Calle Cuba 17, Valencia</td>
+        </tr>
+        <tr>
+          <td>Roberto</td>
+          <td>Castillo Vega</td>
+          <td>roberto.castillo@example.com</td>
+          <td>Calle Literato Azorin 11, Valencia</td>
+        </tr>
+        <tr>
+          <td>Isabel</td>
+          <td>Marin Fuentes</td>
+          <td>isabel.marin@example.com</td>
+          <td>Avenida Reino de Valencia 33</td>
+        </tr>
+        <tr>
+          <td>Fernando</td>
+          <td>Lopez Campos</td>
+          <td>fernando.lopez@example.com</td>
+          <td>Calle Alboraya 45, Valencia</td>
+        </tr>
+        <tr>
+          <td>Nuria</td>
+          <td>Torres Medina</td>
+          <td>nuria.torres@example.com</td>
+          <td>Calle Guillem de Castro 26, Valencia</td>
+        </tr>
+      </tbody>
+    </table>
+    
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const tabla = document.querySelector("table");
+  if (!tabla) return;
+
+  const thead = tabla.querySelector("thead");
+  const tbody = tabla.querySelector("tbody");
+  const cabeceras = [...thead.querySelectorAll("tr:first-child th")];
+
+  const datos = [...tbody.querySelectorAll("tr")].map(tr =>
+    [...tr.cells].map(td => td.textContent.trim())
+  );
+
+  const columnas = cabeceras.map(th => th.textContent.trim());
+  const filtros = Array(columnas.length).fill("");
+
+  let busqueda = "";
+  let pagina = 1;
+  let porPagina = 10;
+  let ordenarColumna = -1;
+  let ordenarDireccion = 1;
+
+  // ============================================
+  // ESTILOS
+  // ============================================
+
+  const estilo = document.createElement("style");
+  estilo.textContent = `
+    .dt-controles {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    .dt-controles input,
+    .dt-controles select,
+    .dt-filtro {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .dt-controles input {
+      min-width: 240px;
+    }
+
+    .dt-filtro {
+      width: 100%;
+      min-width: 65px;
+      font-size: 12px;
+    }
+
+    .dt-tabla-contenedor {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .dt-ordenable {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .dt-ordenable:hover {
+      background: #555;
+    }
+
+    .dt-numero {
+      width: 50px;
+      text-align: center;
+      color: #777;
+    }
+
+    .dt-pie {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 15px;
+      font-family: Arial, sans-serif;
+    }
+
+    .dt-paginacion {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+    .dt-paginacion button {
+      padding: 7px 11px;
+      border: 1px solid #ccc;
+      background: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .dt-paginacion button.activo {
+      background: #333;
+      color: white;
+    }
+
+    .dt-paginacion button:disabled {
+      opacity: .4;
+      cursor: default;
+    }
+
+    .dt-resumen td {
+      font-weight: bold;
+      background: #e8e8e8;
+    }
+  `;
+  document.head.appendChild(estilo);
+
+  // ============================================
+  // CONTROLES SUPERIORES
+  // ============================================
+
+  const controles = document.createElement("div");
+  controles.className = "dt-controles";
+
+  const buscador = document.createElement("input");
+  buscador.type = "search";
+  buscador.placeholder = "Buscar en toda la tabla...";
+
+  const selector = document.createElement("select");
+
+  [5, 10, 20, 50, 100].forEach(n => {
+    const opcion = document.createElement("option");
+    opcion.value = n;
+    opcion.textContent = n + " elementos";
+    if (n === porPagina) opcion.selected = true;
+    selector.appendChild(opcion);
+  });
+
+  controles.append(buscador, selector);
+  tabla.parentNode.insertBefore(controles, tabla);
+
+  const contenedor = document.createElement("div");
+  contenedor.className = "dt-tabla-contenedor";
+  tabla.parentNode.insertBefore(contenedor, tabla);
+  contenedor.appendChild(tabla);
+
+  // ============================================
+  // NUMEROS DE FILA
+  // ============================================
+
+  const thNumero = document.createElement("th");
+  thNumero.textContent = "#";
+  thead.rows[0].insertBefore(thNumero, thead.rows[0].firstChild);
+
+  // ============================================
+  // ORDENACION
+  // ============================================
+
+  cabeceras.forEach((th, indice) => {
+    const nombre = columnas[indice];
+    th.classList.add("dt-ordenable");
+    th.textContent = nombre + " ↕";
+
+    th.addEventListener("click", () => {
+      if (ordenarColumna === indice) {
+        ordenarDireccion *= -1;
+      } else {
+        ordenarColumna = indice;
+        ordenarDireccion = 1;
+      }
+
+      cabeceras.forEach((cabecera, i) => {
+        cabecera.textContent = columnas[i] +
+          (i === ordenarColumna
+            ? (ordenarDireccion === 1 ? " ▲" : " ▼")
+            : " ↕");
+      });
+
+      pagina = 1;
+      renderizar();
+    });
+  });
+
+  // ============================================
+  // FILTROS POR COLUMNA
+  // ============================================
+
+  const filaFiltros = document.createElement("tr");
+
+  const vacio = document.createElement("th");
+  filaFiltros.appendChild(vacio);
+
+  columnas.forEach((columna, indice) => {
+    const th = document.createElement("th");
+    const input = document.createElement("input");
+
+    input.className = "dt-filtro";
+    input.placeholder = "Filtrar...";
+    input.setAttribute("aria-label", "Filtrar " + columna);
+
+    input.addEventListener("input", () => {
+      filtros[indice] = input.value.toLocaleLowerCase();
+      pagina = 1;
+      renderizar();
+    });
+
+    th.appendChild(input);
+    filaFiltros.appendChild(th);
+  });
+
+  thead.appendChild(filaFiltros);
+
+  // ============================================
+  // RESUMEN Y SUMATORIOS
+  // ============================================
+
+  const tfoot = tabla.tFoot || tabla.createTFoot();
+  const filaResumen = tfoot.insertRow();
+
+  function esNumero(valor) {
+    if (valor === null || valor === undefined) return false;
+    const texto = String(valor).trim();
+    if (texto === "") return false;
+
+    return /^[+-]?\d+(?:[.,]\d+)?$/.test(texto);
+  }
+
+  function numero(valor) {
+    return Number(String(valor).replace(",", "."));
+  }
+
+  const columnasNumericas = columnas.map((_, indice) => {
+    const valores = datos
+      .map(fila => fila[indice])
+      .filter(valor => String(valor).trim() !== "");
+
+    return valores.length > 0 && valores.every(esNumero);
+  });
+
+  function actualizarResumen(filas) {
+    filaResumen.replaceChildren();
+    filaResumen.className = "dt-resumen";
+
+    const celdaNumero = filaResumen.insertCell();
+    celdaNumero.textContent = "Σ";
+
+    columnas.forEach((columna, indice) => {
+      const td = filaResumen.insertCell();
+
+      if (columnasNumericas[indice]) {
+        const suma = filas.reduce(
+          (total, fila) => total + numero(fila[indice]),
+          0
+        );
+
+        const media = filas.length ? suma / filas.length : 0;
+
+        td.textContent =
+          "Σ " + suma.toLocaleString("es-ES", {
+            maximumFractionDigits: 2
+          }) +
+          " | Media: " + media.toLocaleString("es-ES", {
+            maximumFractionDigits: 2
+          });
+      } else if (indice === 0) {
+        td.textContent = "Total: " + filas.length + " registros";
+      } else {
+        const distintos = new Set(
+          filas.map(fila => fila[indice]).filter(Boolean)
+        ).size;
+
+        td.textContent = distintos + " distintos";
+      }
+    });
+  }
+
+  // ============================================
+  // PIE Y PAGINACION
+  // ============================================
+
+  const pie = document.createElement("div");
+  pie.className = "dt-pie";
+
+  const informacion = document.createElement("span");
+  const paginacion = document.createElement("div");
+  paginacion.className = "dt-paginacion";
+
+  pie.append(informacion, paginacion);
+  contenedor.after(pie);
+
+  function crearBoton(texto, destino, deshabilitado, activo = false) {
+    const boton = document.createElement("button");
+    boton.textContent = texto;
+    boton.disabled = deshabilitado;
+
+    if (activo) boton.classList.add("activo");
+
+    boton.addEventListener("click", () => {
+      pagina = destino;
+      renderizar();
+    });
+
+    return boton;
+  }
+
+  function renderizarPaginacion(totalPaginas) {
+    paginacion.replaceChildren();
+
+    paginacion.appendChild(
+      crearBoton("«", 1, pagina === 1)
+    );
+
+    paginacion.appendChild(
+      crearBoton("‹", pagina - 1, pagina === 1)
+    );
+
+    const inicio = Math.max(1, pagina - 2);
+    const fin = Math.min(totalPaginas, pagina + 2);
+
+    for (let i = inicio; i <= fin; i++) {
+      paginacion.appendChild(
+        crearBoton(String(i), i, false, i === pagina)
+      );
+    }
+
+    paginacion.appendChild(
+      crearBoton("›", pagina + 1, pagina === totalPaginas)
+    );
+
+    paginacion.appendChild(
+      crearBoton("»", totalPaginas, pagina === totalPaginas)
+    );
+  }
+
+  // ============================================
+  // FILTRADO, ORDENACION Y RENDERIZADO
+  // ============================================
+
+  function obtenerFilas() {
+    const texto = busqueda.trim().toLocaleLowerCase();
+
+    let filas = datos.filter(fila => {
+
+      const coincideGlobal =
+        !texto ||
+        fila.some(valor =>
+          String(valor).toLocaleLowerCase().includes(texto)
+        );
+
+      const coincideColumnas = filtros.every((filtro, indice) =>
+        !filtro ||
+        String(fila[indice]).toLocaleLowerCase().includes(filtro)
+      );
+
+      return coincideGlobal && coincideColumnas;
+    });
+
+    if (ordenarColumna >= 0) {
+      const indice = ordenarColumna;
+
+      filas.sort((a, b) => {
+        let resultado;
+
+        if (columnasNumericas[indice]) {
+          resultado = numero(a[indice]) - numero(b[indice]);
+        } else {
+          resultado = String(a[indice]).localeCompare(
+            String(b[indice]),
+            "es",
+            { numeric: true, sensitivity: "base" }
+          );
+        }
+
+        return resultado * ordenarDireccion;
+      });
+    }
+
+    return filas;
+  }
+
+  function renderizar() {
+    const filas = obtenerFilas();
+
+    const total = filas.length;
+    const totalPaginas = Math.max(1, Math.ceil(total / porPagina));
+
+    pagina = Math.min(Math.max(1, pagina), totalPaginas);
+
+    const inicio = (pagina - 1) * porPagina;
+    const fin = Math.min(inicio + porPagina, total);
+
+    const visibles = filas.slice(inicio, fin);
+
+    tbody.replaceChildren();
+
+    visibles.forEach((fila, indice) => {
+      const tr = document.createElement("tr");
+
+      const tdNumero = document.createElement("td");
+      tdNumero.className = "dt-numero";
+      tdNumero.textContent = inicio + indice + 1;
+      tr.appendChild(tdNumero);
+
+      fila.forEach(valor => {
+        const td = document.createElement("td");
+        td.textContent = valor;
+        tr.appendChild(td);
+      });
+
+      tbody.appendChild(tr);
+    });
+
+    if (visibles.length === 0) {
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.colSpan = columnas.length + 1;
+      td.textContent = "No se encontraron resultados";
+      td.style.textAlign = "center";
+      tr.appendChild(td);
+      tbody.appendChild(tr);
+    }
+
+    actualizarResumen(filas);
+
+    informacion.textContent = total === 0
+      ? "0 resultados de " + datos.length + " registros"
+      : "Mostrando " + (inicio + 1) + " a " + fin +
+        " de " + total + " registros" +
+        (total !== datos.length ? " (filtrados de " + datos.length + ")" : "");
+
+    renderizarPaginacion(totalPaginas);
+  }
+
+  // ============================================
+  // EVENTOS
+  // ============================================
+
+  buscador.addEventListener("input", () => {
+    busqueda = buscador.value;
+    pagina = 1;
+    renderizar();
+  });
+
+  selector.addEventListener("change", () => {
+    porPagina = Number(selector.value);
+    pagina = 1;
+    renderizar();
+  });
+
+  // Inicializar
+  renderizar();
+
+});
+</script>
+
+  </body>
+</html>

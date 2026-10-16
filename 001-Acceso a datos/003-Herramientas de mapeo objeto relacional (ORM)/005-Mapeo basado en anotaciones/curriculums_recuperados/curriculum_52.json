@@ -1,0 +1,42 @@
+{
+    "nombre": "Carlos García López",
+    "marca": "Perfil 052",
+    "nacimiento": "1975-01-21",
+    "ciudad": "Bilbao",
+    "email": "curriculum_052@example.com",
+    "web": "https://example.com/curriculum_052",
+    "profesion": "Administrador de sistemas",
+    "experiencia": "19 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Grado en Matemáticas"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Diseñador web",
+        "CodeFactory - Diseñador web"
+    ],
+    "lenguajes": [
+        "Java",
+        "HTML",
+        "C++",
+        "Go",
+        "Python",
+        "SQL"
+    ],
+    "tecnologias": [
+        "Docker",
+        "Ollama",
+        "AWS",
+        "PostgreSQL"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Administración de sistemas",
+        "Automatización",
+        "Ciberseguridad",
+        "Desarrollo web"
+    ]
+}

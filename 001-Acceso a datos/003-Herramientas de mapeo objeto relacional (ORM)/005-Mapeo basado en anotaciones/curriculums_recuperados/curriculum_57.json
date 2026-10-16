@@ -1,0 +1,49 @@
+{
+    "nombre": "Raúl Navarro Gil",
+    "marca": "Perfil 057",
+    "nacimiento": "1986-10-16",
+    "ciudad": "Sevilla",
+    "email": "curriculum_057@example.com",
+    "web": "https://example.com/curriculum_057",
+    "profesion": "Administrador de sistemas",
+    "experiencia": "9 años",
+    "formacion": [
+        "Técnico Superior en DAM",
+        "Grado en Desarrollo de Software",
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "EducaDigital - Desarrollador full-stack",
+        "CodeFactory - Ingeniero de IA",
+        "Digital Solutions - Desarrollador full-stack"
+    ],
+    "lenguajes": [
+        "TypeScript",
+        "C++",
+        "Go",
+        "Python",
+        "CSS"
+    ],
+    "tecnologias": [
+        "Ollama",
+        "AWS",
+        "Flask",
+        "MySQL",
+        "Moodle",
+        "Linux",
+        "React"
+    ],
+    "idiomas": [
+        "Español",
+        "Alemán",
+        "Francés",
+        "Italiano"
+    ],
+    "especialidades": [
+        "Ciberseguridad",
+        "Inteligencia artificial",
+        "Bases de datos",
+        "Formación profesional",
+        "Desarrollo web"
+    ]
+}

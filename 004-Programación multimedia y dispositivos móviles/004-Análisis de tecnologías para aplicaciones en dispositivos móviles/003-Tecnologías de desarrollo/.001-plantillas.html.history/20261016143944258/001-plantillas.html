@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <button id="pantalla1">Pantalla 1</button>
+    <button id="pantalla2">Pantalla 2</button>
+    <button id="pantalla3">Pantalla 3</button>
+    <div id="contenedor">
+      
+    </div>
+    <script>
+      let contenedor = document.querySelector("#contenedor")
+      document.querySelector("#pantalla1").onclick = function(){
+      	fetch("plantillas/pantalla1.html")
+        .then(function(resultado){return resultado.text()})
+        .then(function(datos){
+        	contenedor.innerHTML = datos
+        })
+      }
+    </script>
+  </body>
+</html>

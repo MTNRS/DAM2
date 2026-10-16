@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script type="module">
+      import { jocarsaAsinc } from "./jocarsaAsinc.js";
+
+      jocarsaAsinc("curriculum.json")
+      .then(function(datos){
+        console.log(datos)
+      })
+    </script>
+  </body>
+</html>

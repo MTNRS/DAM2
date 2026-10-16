@@ -1,0 +1,43 @@
+{
+    "nombre": "Clara Castro Molina",
+    "marca": "Perfil 008",
+    "nacimiento": "1973-12-11",
+    "ciudad": "Valencia",
+    "email": "curriculum_008@example.com",
+    "web": "https://example.com/curriculum_008",
+    "profesion": "Desarrollador de software",
+    "experiencia": "19 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "TechNova - Profesor de informática",
+        "CloudWorks - Analista de datos"
+    ],
+    "lenguajes": [
+        "Go",
+        "PHP",
+        "Java"
+    ],
+    "tecnologias": [
+        "Apache",
+        "PostgreSQL",
+        "SQLite",
+        "Linux",
+        "AWS",
+        "Git"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Portugués",
+        "Alemán",
+        "Inglés"
+    ],
+    "especialidades": [
+        "Administración de sistemas",
+        "Inteligencia artificial",
+        "Desarrollo web",
+        "Ciberseguridad"
+    ]
+}

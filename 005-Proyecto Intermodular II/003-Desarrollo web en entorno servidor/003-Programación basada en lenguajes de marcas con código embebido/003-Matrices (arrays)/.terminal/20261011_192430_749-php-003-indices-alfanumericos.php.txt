@@ -1,0 +1,11 @@
+Datetime: 2026-10-11T17:24:30.749Z
+Working directory: /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)
+Command: php 003-indices\ alfanumericos.php
+
+Result:
+PHP Fatal error:  Uncaught Error: Undefined constant "nombre" in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/003-indices alfanumericos.php:3
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/003-indices alfanumericos.php on line 3
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/005-Proyecto Intermodular II/003-D
+esarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)$ 

@@ -1,0 +1,40 @@
+{
+    "nombre": "Laura Navarro Gil",
+    "marca": "Perfil 016",
+    "nacimiento": "1989-07-28",
+    "ciudad": "Málaga",
+    "email": "curriculum_016@example.com",
+    "web": "https://example.com/curriculum_016",
+    "profesion": "Administrador de sistemas",
+    "experiencia": "16 años",
+    "formacion": [
+        "Técnico Superior en DAM"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Ingeniero de IA",
+        "TechNova - Especialista en ciberseguridad",
+        "EducaDigital - Analista de datos"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Java",
+        "C++",
+        "SQL"
+    ],
+    "tecnologias": [
+        "Apache",
+        "Git",
+        "Ollama"
+    ],
+    "idiomas": [
+        "Francés",
+        "Inglés"
+    ],
+    "especialidades": [
+        "Formación profesional",
+        "Análisis de datos",
+        "Desarrollo web"
+    ]
+}

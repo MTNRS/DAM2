@@ -1,0 +1,162 @@
+Datetime: 2026-10-08T10:52:11.992Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo
+Command: python3 001-mapeo\ multinivel.py
+
+Result:
+
+CREANDO TABLA: curriculum
+CREATE TABLE IF NOT EXISTS "curriculum" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"$schema" TEXT,"tipo" TEXT,"version" TEXT,"actualizado" TEXT)
+INSERTADO: curriculum ID: 1
+
+CREANDO TABLA: curriculum_datos_personales
+CREATE TABLE IF NOT EXISTS "curriculum_datos_personales" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_id" INTEGER,"nombre" TEXT,"apellidos" TEXT,"nombre_profesional" TEXT,"marca_profesional" TEXT,"fecha_nacimiento" TEXT,"nacionalidad" TEXT,"ubicacion" TEXT,"telefono" TEXT,"email" TEXT,"web_personal" TEXT,"web_empresa" TEXT,"linkedin" TEXT,"github" TEXT,"youtube" TEXT,"instagram" TEXT,FOREIGN KEY ("curriculum_id") REFERENCES "curriculum"(id))
+INSERTADO: curriculum_datos_personales ID: 1
+
+CREANDO TABLA: curriculum_perfil_profesional
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_id" INTEGER,"titulo" TEXT,"resumen" TEXT,"experiencia_desde" TEXT,FOREIGN KEY ("curriculum_id") REFERENCES "curriculum"(id))
+INSERTADO: curriculum_perfil_profesional ID: 1
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 1
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 2
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 3
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 4
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 5
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 6
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 7
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 8
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 9
+
+CREANDO TABLA: curriculum_perfil_profesional_especialidades
+CREATE TABLE IF NOT EXISTS "curriculum_perfil_profesional_especialidades" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_perfil_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_perfil_profesional_id") REFERENCES "curriculum_perfil_profesional"(id))
+INSERTADO: curriculum_perfil_profesional_especialidades ID: 10
+
+CREANDO TABLA: curriculum_experiencia_profesional
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_id" INTEGER,"posicion" INTEGER,"organizacion" TEXT,"cargo" TEXT,"inicio" TEXT,"fin" TEXT,"estado" TEXT,FOREIGN KEY ("curriculum_id") REFERENCES "curriculum"(id))
+INSERTADO: curriculum_experiencia_profesional ID: 1
+
+CREANDO TABLA: curriculum_experiencia_profesional_funciones
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_funciones" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_funciones ID: 1
+
+CREANDO TABLA: curriculum_experiencia_profesional_funciones
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_funciones" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_funciones ID: 2
+
+CREANDO TABLA: curriculum_experiencia_profesional_funciones
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_funciones" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_funciones ID: 3
+
+CREANDO TABLA: curriculum_experiencia_profesional_funciones
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_funciones" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_funciones ID: 4
+
+CREANDO TABLA: curriculum_experiencia_profesional_funciones
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_funciones" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_funciones ID: 5
+
+CREANDO TABLA: curriculum_experiencia_profesional_funciones
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_funciones" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_funciones ID: 6
+
+CREANDO TABLA: curriculum_experiencia_profesional
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_id" INTEGER,"posicion" INTEGER,"organizacion" TEXT,"cargo" TEXT,"inicio" TEXT,"fin" TEXT,"estado" TEXT,FOREIGN KEY ("curriculum_id") REFERENCES "curriculum"(id))
+INSERTADO: curriculum_experiencia_profesional ID: 2
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 1
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 2
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 3
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 4
+
+CREANDO TABLA: curriculum_experiencia_profesional
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_id" INTEGER,"posicion" INTEGER,"organizacion" TEXT,"cargo" TEXT,"inicio" TEXT,"fin" TEXT,"estado" TEXT,FOREIGN KEY ("curriculum_id") REFERENCES "curriculum"(id))
+INSERTADO: curriculum_experiencia_profesional ID: 3
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 5
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 6
+
+CREANDO TABLA: curriculum_experiencia_profesional
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_id" INTEGER,"posicion" INTEGER,"organizacion" TEXT,"cargo" TEXT,"inicio" TEXT,"fin" TEXT,FOREIGN KEY ("curriculum_id") REFERENCES "curriculum"(id))
+INSERTADO: curriculum_experiencia_profesional ID: 4
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 7
+
+CREANDO TABLA: curriculum_experiencia_profesional_areas
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional_areas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_experiencia_profesional_id" INTEGER,"posicion" INTEGER,"valor" TEXT,FOREIGN KEY ("curriculum_experiencia_profesional_id") REFERENCES "curriculum_experiencia_profesional"(id))
+INSERTADO: curriculum_experiencia_profesional_areas ID: 8
+
+CREANDO TABLA: curriculum_experiencia_profesional
+CREATE TABLE IF NOT EXISTS "curriculum_experiencia_profesional" ("id" INTEGER PRIMARY KEY AUTOINCREMENT,"curriculum_id" INTEGER,"posicion" INTEGER,"organizacion" TEXT,"cargo" TEXT,"inicio" TEXT,"fin" TEXT,"observaciones" TEXT,FOREIGN KEY ("curriculum_id") REFERENCES "curriculum"(id))
+
+ERROR: table curriculum_experiencia_profesional has no column named observaciones
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo/001-mapeo multinivel.py", line 173, in <module>
+    procesar_json(
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo/001-mapeo multinivel.py", line 152, in procesar_json
+    procesar_json(
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo/001-mapeo multinivel.py", line 118, in procesar_json
+    cursor.execute(peticion, valores_insertar)
+sqlite3.OperationalError: table curriculum_experiencia_profesional has no column named observaciones
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_003-Herramientas de mapeo objeto relacional (ORM)_004-Estructura de un fichero de mapeo_001-mapeo multinivel.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo/001-mapeo multinivel.py", line 173, in <module>
+    procesar_json(
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo/001-mapeo multinivel.py", line 152, in procesar_json
+    procesar_json(
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo/001-mapeo multinivel.py", line 118, in procesar_json
+    cursor.execute(peticion, valores_insertar)
+sqlite3.OperationalError: table curriculum_experiencia_profesional has no column named observaciones
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo$ 

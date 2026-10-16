@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      let lienzo = document.querySelector("canvas")
+      let contexto = lienzo.getContext("2d")
+      class Persona{
+      	constructor(nombre,posx,posy,hambre,energia) {
+          this.nombre = nombre;
+          this.posx = posx;
+          this.posy = posy;
+          this.hambre = hambre;
+          this.energia = energia;
+        }
+        dibuja(contexto){
+        	contexto.fillRect(this.posx,this.posy,10,10)
+        }
+      }
+      let numeropersonas = 20;
+      let personas = [];
+      for(let i = 0;i<numeropersonas;i++){
+      	personas.push(new Persona("",Math.random()*500,Math.random()*500,Math.random(),Math.random()))
+      }
+      personas.forEach(function(persona){
+      	persona.dibuja(contexto)
+      })
+      console.log(personas)
+    </script>
+  </body>
+</html>

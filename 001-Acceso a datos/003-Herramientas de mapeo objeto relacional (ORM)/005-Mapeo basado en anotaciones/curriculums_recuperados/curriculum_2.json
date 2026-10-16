@@ -1,0 +1,45 @@
+{
+    "nombre": "Miguel Navarro Gil",
+    "marca": "Perfil 002",
+    "nacimiento": "1986-01-24",
+    "ciudad": "Alicante",
+    "email": "curriculum_002@example.com",
+    "web": "https://example.com/curriculum_002",
+    "profesion": "Profesor de informática",
+    "experiencia": "13 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial"
+    ],
+    "trabajos": [
+        "CodeFactory - Profesor de informática",
+        "CloudWorks - Desarrollador de software",
+        "InnovaSoft - Administrador de sistemas"
+    ],
+    "lenguajes": [
+        "PHP",
+        "Java",
+        "Go",
+        "TypeScript",
+        "JavaScript"
+    ],
+    "tecnologias": [
+        "Git",
+        "Flask",
+        "MySQL",
+        "AWS",
+        "React",
+        "Apache"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Español",
+        "Inglés",
+        "Portugués"
+    ],
+    "especialidades": [
+        "Desarrollo web",
+        "Ciberseguridad",
+        "Inteligencia artificial",
+        "Automatización"
+    ]
+}

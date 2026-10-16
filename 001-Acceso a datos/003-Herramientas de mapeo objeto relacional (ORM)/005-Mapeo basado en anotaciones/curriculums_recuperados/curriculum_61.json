@@ -1,0 +1,46 @@
+{
+    "nombre": "Sergio Fernández Torres",
+    "marca": "Perfil 061",
+    "nacimiento": "1978-08-05",
+    "ciudad": "Alicante",
+    "email": "curriculum_061@example.com",
+    "web": "https://example.com/curriculum_061",
+    "profesion": "Ingeniero de IA",
+    "experiencia": "14 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Técnico Superior en DAW",
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "EducaDigital - Profesor de informática",
+        "Digital Solutions - Desarrollador full-stack",
+        "InnovaSoft - Ingeniero de IA",
+        "CloudWorks - Profesor de informática"
+    ],
+    "lenguajes": [
+        "PHP",
+        "Python",
+        "Java",
+        "C++",
+        "HTML",
+        "Go",
+        "SQL"
+    ],
+    "tecnologias": [
+        "React",
+        "Docker",
+        "Apache",
+        "SQLite",
+        "Git"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Francés"
+    ],
+    "especialidades": [
+        "Ciberseguridad",
+        "Desarrollo web",
+        "Formación profesional"
+    ]
+}

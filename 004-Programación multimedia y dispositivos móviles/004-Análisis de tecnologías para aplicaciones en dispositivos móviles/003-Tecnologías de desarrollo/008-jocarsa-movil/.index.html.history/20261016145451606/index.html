@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #contenedor {
+      padding: 10px;
+    }
+    nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav button {
+      width: 100%;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="contenedor"></div>
+
+  <nav>
+    <button data-url="pantalla1">Pantalla 1</button>
+    <button data-url="pantalla2">Pantalla 2</button>
+    <button data-url="pantalla3">Pantalla 3</button>
+    <button data-url="pantalla4">Pantalla 4</button>
+  </nav>
+
+  <script>
+    let contenedor = document.querySelector("#contenedor");
+    let botones = document.querySelectorAll("nav button");
+    let controladorActual = null;
+    let navegacion = 0;
+
+    async function cargarVista(nombre) {
+      let actual = ++navegacion;
+
+      try {
+        // Cargar vista
+        let respuesta = await fetch("vistas/" + nombre + ".html");
+
+        if (!respuesta.ok) {
+          throw new Error("Vista no encontrada");
+        }
+
+        let html = await respuesta.text();
+
+        if (actual !== navegacion) return;
+
+        // Eliminar controlador anterior
+        if (controladorActual) {
+          controladorActual.remove();
+          controladorActual = null;
+        }
+
+        // Mostrar vista
+        contenedor.innerHTML = html;
+
+        // Comprobar si existe controlador
+        let ruta = "controladores/" + nombre + ".js";
+        let respuestaJS = await fetch(ruta);
+
+        if (actual !== navegacion) return;
+
+        if (respuestaJS.ok) {
+          let codigo = await respuestaJS.text();
+
+          if (actual !== navegacion) return;
+
+          // Crear script y ejecutarlo
+          let script = document.createElement("script");
+          script.textContent = codigo;
+          document.body.appendChild(script);
+
+          controladorActual = script;
+        }
+
+      } catch (error) {
+        if (actual === navegacion) {
+          console.error(error);
+          contenedor.textContent = "Error al cargar la vista";
+        }
+      }
+    }
+
+    botones.forEach(function(boton) {
+      boton.onclick = function() {
+        cargarVista(this.getAttribute("data-url"));
+      };
+    });
+
+    // Vista inicial
+    cargarVista("pantalla1");
+  </script>
+</body>
+</html>

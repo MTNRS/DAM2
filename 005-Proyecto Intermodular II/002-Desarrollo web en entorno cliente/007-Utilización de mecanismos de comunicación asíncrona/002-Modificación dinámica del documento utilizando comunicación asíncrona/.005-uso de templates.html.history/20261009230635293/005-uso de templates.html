@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body{background:grey;}
+      header,main,footer{width:600px;background:white;padding:20px;margin:auto;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Jose Vicente Carratala</h1>
+      <h2>Blog</h2>
+    </header>
+    <main>
+    </main>
+    <footer>
+      <p>(c) 2026 Jose Vicente Carratala</p>
+    </footer>
+    <template id="articulo">
+      <article>
+        <h4>X</h4>
+        <time>X</time>
+        <p>X</p>
+      </article>
+    </template>
+    <script>
+      let principal = document.querySelector("main")
+      let plantilla = document.querySelector("#articulo")
+      fetch("blog.json")
+      .then(function(resultado){return resultado.json()})
+      .then(function(articulos){
+      	articulos.forEach(function(articulo){
+       		 let instancia = plantilla.content.cloneNode(true)
+           principal.appendChild(instancia)
+        })
+      })	
+    </script>
+  </body>
+</html>

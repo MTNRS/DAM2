@@ -1,0 +1,42 @@
+{
+    "nombre": "Paula Fernández Torres",
+    "marca": "Perfil 010",
+    "nacimiento": "1986-09-16",
+    "ciudad": "Bilbao",
+    "email": "curriculum_010@example.com",
+    "web": "https://example.com/curriculum_010",
+    "profesion": "Desarrollador de software",
+    "experiencia": "3 años",
+    "formacion": [
+        "Técnico Superior en DAW",
+        "Técnico Superior en DAM",
+        "Ingeniería Informática"
+    ],
+    "trabajos": [
+        "CodeFactory - Analista de datos",
+        "Digital Solutions - Diseñador web"
+    ],
+    "lenguajes": [
+        "CSS",
+        "TypeScript",
+        "HTML",
+        "C++"
+    ],
+    "tecnologias": [
+        "Apache",
+        "AWS",
+        "MySQL"
+    ],
+    "idiomas": [
+        "Español",
+        "Alemán",
+        "Inglés",
+        "Francés"
+    ],
+    "especialidades": [
+        "Programación",
+        "Formación profesional",
+        "Desarrollo web",
+        "Automatización"
+    ]
+}

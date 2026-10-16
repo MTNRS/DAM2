@@ -1,0 +1,43 @@
+{
+  "nombre": "Elena Rubio Herrera",
+  "marca": "Perfil 036",
+  "nacimiento": "1984-07-28",
+  "ciudad": "Valencia",
+  "email": "curriculum_036@example.com",
+  "web": "https://example.com/curriculum_036",
+  "profesion": "Diseñador web",
+  "experiencia": "1 años",
+  "formacion": [
+    "Técnico Superior en DAM"
+  ],
+  "trabajos": [
+    "CloudWorks - Analista de datos",
+    "DataLab - Analista de datos",
+    "Digital Solutions - Especialista en ciberseguridad",
+    "TechNova - Profesor de informática"
+  ],
+  "lenguajes": [
+    "Python",
+    "PHP",
+    "Java",
+    "CSS"
+  ],
+  "tecnologias": [
+    "Docker",
+    "Flask",
+    "MySQL",
+    "Git",
+    "Moodle",
+    "React"
+  ],
+  "idiomas": [
+    "Italiano",
+    "Portugués",
+    "Español"
+  ],
+  "especialidades": [
+    "Desarrollo web",
+    "Automatización",
+    "Análisis de datos"
+  ]
+}

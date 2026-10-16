@@ -1,0 +1,1210 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vida artificial - Evolución genética</title>
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 20px;
+    background: #eee;
+    font-family: Arial, sans-serif;
+    color: #222;
+  }
+
+  h2 { margin: 0 0 12px; }
+
+  .barra-acciones { display:flex; align-items:center; gap:12px; margin:0 0 14px; flex-wrap:wrap; }
+  #guardar { background:#2563eb; color:white; border:0; padding:10px 18px; border-radius:6px; cursor:pointer; font-weight:bold; }
+  #guardar:disabled { opacity:.6; cursor:wait; }
+  #estadoGuardado { font-size:13px; }
+  #estadisticas {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 800px minmax(300px, 1fr);
+    gap: 16px;
+    align-items: start;
+  }
+
+  #escenario {
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 0;
+  }
+
+  .grafica {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 14px;
+  }
+
+  .grafica h3 {
+    margin: 0 0 12px;
+    font-size: 15px;
+  }
+
+  .grafica canvas {
+    display: block;
+    width: 100%;
+    height: 240px;
+  }
+
+  @media(max-width: 1150px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2>Simulación de evolución genética</h2>
+
+<div class="barra-acciones"><button id="guardar" type="button">Guardar personas</button><span id="estadoGuardado" role="status" aria-live="polite"></span></div>
+<div id="estadisticas"></div>
+
+<div class="layout">
+
+  <canvas id="escenario" width="800" height="700"></canvas>
+
+  <div class="panel">
+
+    <div class="grafica">
+      <h3>Evolución histórica de la población</h3>
+      <canvas id="graficaPoblacion"></canvas>
+    </div>
+
+    <div class="grafica">
+      <h3>Edades de los individuos vivos</h3>
+      <canvas id="graficaEdades"></canvas>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+// =====================================
+// CONFIGURACIÓN GLOBAL
+// =====================================
+
+const CONFIG = {
+
+  anchura: 800,
+  altura: 700,
+
+  poblacionInicial: 20,
+  maxComidas: 100,
+  maxPoblacion: 500,
+  numeroWorkers: Math.max(1, Math.min(8, (navigator.hardwareConcurrency || 4) - 1)),
+
+  edadReproduccion: 20,
+  variacionReproduccion: 5,
+
+  edadMuerte: 30,
+  variacionMuerte: 10,
+
+  minDescendientes: 0,
+  maxDescendientes: 2,
+
+  fotogramasPorAno: 60,
+  tiempoCadaver: 3000,
+
+  probabilidadMutacion: 0.25,
+
+  // METABOLISMO
+  perdidaEnergiaPorFotograma: 0.0005,
+  aumentoHambrePorFotograma: 0.0008,
+  reduccionHambrePorComida: 0.20,
+
+  // Consumo adicional según el hambre
+  consumoEnergiaPorHambre: 0.00008,
+
+  // GRÁFICAS
+  intervaloHistorial: 30,
+  maxPuntosHistorial: 500,
+  intervaloGraficas: 15
+};
+
+const DOS_PI = Math.PI * 2;
+
+const lienzo = document.querySelector("#escenario");
+const contexto = lienzo.getContext("2d");
+
+const estadisticas = document.querySelector("#estadisticas");
+
+const canvasPoblacion = document.querySelector("#graficaPoblacion");
+const canvasEdades = document.querySelector("#graficaEdades");
+
+let personas = [];
+let comidas = [];
+
+let fotogramas = 0;
+let siguienteId = 1;
+
+let nacimientos = 0;
+let muertes = 0;
+
+let historialPoblacion = [];
+
+// =====================================
+// UTILIDADES
+// =====================================
+
+function aleatorio(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+function entero(min, max) {
+  return Math.floor(aleatorio(min, max + 1));
+}
+
+function limitar(valor, min, max) {
+  return Math.max(min, Math.min(max, valor));
+}
+
+function distancia(x1, y1, x2, y2) {
+  return Math.hypot(x2 - x1, y2 - y1);
+}
+
+function mutar(valor, intensidad, min, max) {
+
+  if (Math.random() < CONFIG.probabilidadMutacion) {
+    valor += aleatorio(-intensidad, intensidad);
+  }
+
+  return limitar(valor, min, max);
+}
+
+// =====================================
+// COMIDA
+// =====================================
+
+class Comida {
+
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.radio = 4;
+  }
+
+  dibuja(ctx) {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radio, 0, DOS_PI);
+    ctx.fillStyle = "#22aa22";
+    ctx.fill();
+  }
+}
+
+function crearComida() {
+
+  return new Comida(
+    aleatorio(20, CONFIG.anchura - 20),
+    aleatorio(20, CONFIG.altura - 20)
+  );
+}
+
+// =====================================
+// GENÉTICA
+// =====================================
+
+function crearSensorAleatorio() {
+
+  return {
+    angulo: aleatorio(-Math.PI / 2, Math.PI / 2),
+    longitud: aleatorio(30, 60),
+    giroColision: aleatorio(-0.12, 0.12),
+    giroComida: aleatorio(-0.12, 0.12)
+  };
+}
+
+function crearGenomaAleatorio() {
+
+  let sensores = [];
+
+  let cantidad = entero(2, 5);
+
+  for (let i = 0; i < cantidad; i++) {
+    sensores.push(crearSensorAleatorio());
+  }
+
+  return {
+    sensores: sensores,
+    velocidad: aleatorio(0.7, 1.5),
+    descendientes: entero(
+      CONFIG.minDescendientes,
+      CONFIG.maxDescendientes
+    )
+  };
+}
+
+function heredarGenoma(padre) {
+
+  let sensores = padre.sensores.map(sensor => ({
+
+    angulo: mutar(
+      sensor.angulo,
+      0.15,
+      -Math.PI / 2,
+      Math.PI / 2
+    ),
+
+    longitud: mutar(
+      sensor.longitud,
+      5,
+      15,
+      90
+    ),
+
+    giroColision: mutar(
+      sensor.giroColision,
+      0.025,
+      -0.25,
+      0.25
+    ),
+
+    giroComida: mutar(
+      sensor.giroComida,
+      0.025,
+      -0.25,
+      0.25
+    )
+  }));
+
+  // Mutación en cantidad de sensores
+  if (Math.random() < 0.05) {
+
+    if (Math.random() < 0.5 && sensores.length < 5) {
+      sensores.push(crearSensorAleatorio());
+    }
+    else if (sensores.length > 2) {
+      sensores.splice(
+        entero(0, sensores.length - 1),
+        1
+      );
+    }
+  }
+
+  let descendientes = padre.descendientes;
+
+  if (Math.random() < CONFIG.probabilidadMutacion) {
+    descendientes += Math.random() < 0.5 ? -1 : 1;
+  }
+
+  descendientes = limitar(
+    descendientes,
+    CONFIG.minDescendientes,
+    CONFIG.maxDescendientes
+  );
+
+  return {
+    sensores: sensores,
+
+    velocidad: mutar(
+      padre.velocidad,
+      0.15,
+      0.3,
+      2.5
+    ),
+
+    descendientes: descendientes
+  };
+}
+
+// =====================================
+// PERSONA
+// =====================================
+
+class Persona {
+
+  constructor(x, y, genoma = null, generacion = 0) {
+
+    this.id = siguienteId++;
+    this.nombre = "Persona " + this.id;
+
+    this.posx = x;
+    this.posy = y;
+    this.angulo = aleatorio(0, DOS_PI);
+
+    this.radio = 5;
+
+    this.hambre = aleatorio(0, 0.3);
+    this.energia = aleatorio(0.7, 1);
+
+    this.edad = 0;
+
+    this.edadReproduccion = aleatorio(
+      CONFIG.edadReproduccion - CONFIG.variacionReproduccion,
+      CONFIG.edadReproduccion + CONFIG.variacionReproduccion
+    );
+
+    this.edadMuerte = aleatorio(
+      CONFIG.edadMuerte - CONFIG.variacionMuerte,
+      CONFIG.edadMuerte + CONFIG.variacionMuerte
+    );
+
+    this.generacion = generacion;
+    this.reproducido = false;
+
+    this.vivo = true;
+    this.momentoMuerte = null;
+
+    this.genoma = genoma || crearGenomaAleatorio();
+
+    this.velocidad = this.genoma.velocidad;
+    this.descendientes = this.genoma.descendientes;
+
+    this.sensores = this.genoma.sensores.map(s => ({
+      ...s,
+      colision: false,
+      comida: false
+    }));
+  }
+
+  // =====================================
+  // DETECCIÓN
+  // =====================================
+
+  detectar(personas, comidas) {
+
+    for (let sensor of this.sensores) {
+
+      sensor.colision = false;
+      sensor.comida = false;
+
+      let angulo = this.angulo + sensor.angulo;
+      let dx = Math.cos(angulo);
+      let dy = Math.sin(angulo);
+
+      for (let d = 5; d <= sensor.longitud; d += 3) {
+
+        let x = this.posx + dx * d;
+        let y = this.posy + dy * d;
+
+        // Bordes
+        if (
+          x < 0 || x > CONFIG.anchura ||
+          y < 0 || y > CONFIG.altura
+        ) {
+          sensor.colision = true;
+          break;
+        }
+
+        // Otros individuos
+        for (let otra of personas) {
+
+          if (otra === this || !otra.vivo) continue;
+
+          if (
+            distancia(x, y, otra.posx, otra.posy)
+            < otra.radio
+          ) {
+            sensor.colision = true;
+            break;
+          }
+        }
+
+        if (sensor.colision) break;
+
+        // Comida
+        for (let alimento of comidas) {
+
+          if (
+            distancia(x, y, alimento.x, alimento.y)
+            < alimento.radio + 2
+          ) {
+            sensor.comida = true;
+            break;
+          }
+        }
+
+        if (sensor.comida) break;
+      }
+    }
+  }
+
+  // =====================================
+  // COMER
+  // =====================================
+
+  comer(comidas) {
+
+    if (!this.vivo) return;
+
+    for (let i = comidas.length - 1; i >= 0; i--) {
+
+      let alimento = comidas[i];
+
+      if (
+        distancia(
+          this.posx,
+          this.posy,
+          alimento.x,
+          alimento.y
+        ) < this.radio + alimento.radio
+      ) {
+
+        this.hambre = limitar(
+          this.hambre - CONFIG.reduccionHambrePorComida,
+          0,
+          1
+        );
+
+        comidas.splice(i, 1);
+      }
+    }
+  }
+
+  // =====================================
+  // REPRODUCCIÓN
+  // =====================================
+
+  reproducir() {
+
+    if (!this.vivo || this.reproducido) return [];
+
+    this.reproducido = true;
+
+    let hijos = [];
+
+    for (let i = 0; i < this.descendientes; i++) {
+
+      let genomaHijo = heredarGenoma(this.genoma);
+
+      let x = limitar(
+        this.posx + aleatorio(-20, 20),
+        20,
+        CONFIG.anchura - 20
+      );
+
+      let y = limitar(
+        this.posy + aleatorio(-20, 20),
+        20,
+        CONFIG.altura - 20
+      );
+
+      hijos.push(
+        new Persona(
+          x,
+          y,
+          genomaHijo,
+          this.generacion + 1
+        )
+      );
+    }
+
+    return hijos;
+  }
+
+  // =====================================
+  // MUERTE
+  // =====================================
+
+  morir() {
+
+    if (!this.vivo) return;
+
+    this.vivo = false;
+    this.energia = 0;
+    this.momentoMuerte = performance.now();
+
+    muertes++;
+  }
+
+  // =====================================
+  // ACTUALIZACIÓN
+  // =====================================
+
+  actualiza(personas, comidas) {
+
+    if (!this.vivo) return [];
+
+    // Envejecer
+    this.edad += 1 / CONFIG.fotogramasPorAno;
+
+    // Muerte por vejez
+    if (this.edad >= this.edadMuerte) {
+      this.morir();
+      return [];
+    }
+
+    this.detectar(personas, comidas);
+
+    // Respuestas genéticas
+    for (let sensor of this.sensores) {
+
+      if (sensor.colision) {
+        this.angulo += sensor.giroColision;
+      }
+
+      if (sensor.comida) {
+        this.angulo += sensor.giroComida;
+      }
+    }
+
+    // Movimiento
+    this.posx += Math.cos(this.angulo) * this.velocidad;
+    this.posy += Math.sin(this.angulo) * this.velocidad;
+
+    this.posx = limitar(
+      this.posx,
+      this.radio,
+      CONFIG.anchura - this.radio
+    );
+
+    this.posy = limitar(
+      this.posy,
+      this.radio,
+      CONFIG.altura - this.radio
+    );
+
+    // =====================================
+    // METABOLISMO GLOBAL
+    // =====================================
+
+    // Incremento del hambre por fotograma
+    this.hambre = limitar(
+      this.hambre + CONFIG.aumentoHambrePorFotograma,
+      0,
+      1
+    );
+
+    // Pérdida energética por fotograma
+    let consumo =
+      CONFIG.perdidaEnergiaPorFotograma +
+      this.hambre * CONFIG.consumoEnergiaPorHambre;
+
+    this.energia = limitar(
+      this.energia - consumo,
+      0,
+      1
+    );
+
+    this.comer(comidas);
+
+    // Muerte por agotamiento
+    if (this.energia <= 0) {
+      this.morir();
+      return [];
+    }
+
+    // Reproducción
+    if (
+      this.edad >= this.edadReproduccion &&
+      !this.reproducido
+    ) {
+      return this.reproducir();
+    }
+
+    return [];
+  }
+
+  // =====================================
+  // DIBUJAR
+  // =====================================
+
+  dibuja(ctx) {
+
+    if (!this.vivo) {
+      ctx.fillStyle = "#999";
+      ctx.fillRect(this.posx - 5, this.posy - 5, 10, 10);
+      return;
+    }
+
+    // Sensores
+    for (let sensor of this.sensores) {
+
+      let angulo = this.angulo + sensor.angulo;
+
+      ctx.beginPath();
+      ctx.moveTo(this.posx, this.posy);
+
+      ctx.lineTo(
+        this.posx + Math.cos(angulo) * sensor.longitud,
+        this.posy + Math.sin(angulo) * sensor.longitud
+      );
+
+      ctx.strokeStyle = sensor.colision
+        ? "orange"
+        : sensor.comida
+          ? "limegreen"
+          : "rgba(0,100,255,0.35)";
+
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Energía
+    ctx.beginPath();
+    ctx.arc(
+      this.posx,
+      this.posy,
+      12,
+      -Math.PI / 2,
+      -Math.PI / 2 + this.energia * DOS_PI
+    );
+    ctx.strokeStyle = "green";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Hambre
+    ctx.beginPath();
+    ctx.arc(
+      this.posx,
+      this.posy,
+      17,
+      -Math.PI / 2,
+      -Math.PI / 2 + this.hambre * DOS_PI
+    );
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // Cuerpo
+    ctx.fillStyle = "black";
+    ctx.fillRect(
+      this.posx - 5,
+      this.posy - 5,
+      10,
+      10
+    );
+
+    // Dirección
+    let longitud = 30;
+
+    let px = this.posx + Math.cos(this.angulo) * longitud;
+    let py = this.posy + Math.sin(this.angulo) * longitud;
+
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
+
+    ctx.beginPath();
+    ctx.moveTo(this.posx, this.posy);
+    ctx.lineTo(px, py);
+    ctx.stroke();
+
+    // Punta de flecha
+    let apertura = Math.PI / 6;
+    let tamano = 8;
+
+    ctx.beginPath();
+    ctx.moveTo(px, py);
+    ctx.lineTo(
+      px - Math.cos(this.angulo - apertura) * tamano,
+      py - Math.sin(this.angulo - apertura) * tamano
+    );
+    ctx.moveTo(px, py);
+    ctx.lineTo(
+      px - Math.cos(this.angulo + apertura) * tamano,
+      py - Math.sin(this.angulo + apertura) * tamano
+    );
+    ctx.stroke();
+
+    // Edad
+    ctx.fillStyle = "#555";
+    ctx.font = "10px Arial";
+    ctx.textAlign = "center";
+    ctx.fillText(
+      Math.floor(this.edad),
+      this.posx,
+      this.posy - 23
+    );
+  }
+}
+
+// =====================================
+// GRÁFICAS CANVAS
+// =====================================
+
+// Ajustar resolución interna a tamaño visible
+function prepararGrafica(canvas) {
+
+  const rect = canvas.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+
+  canvas.width = Math.round(rect.width * dpr);
+  canvas.height = Math.round(rect.height * dpr);
+
+  const ctx = canvas.getContext("2d");
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  return {
+    ctx: ctx,
+    ancho: rect.width,
+    alto: rect.height
+  };
+}
+
+function dibujarEjes(ctx, ancho, alto, margen) {
+
+  ctx.strokeStyle = "#ddd";
+  ctx.lineWidth = 1;
+
+  ctx.beginPath();
+  ctx.moveTo(margen, 10);
+  ctx.lineTo(margen, alto - margen);
+  ctx.lineTo(ancho - 10, alto - margen);
+  ctx.stroke();
+}
+
+// =====================================
+// GRÁFICA HISTÓRICA DE POBLACIÓN
+// =====================================
+
+function dibujarGraficaPoblacion() {
+
+  let {ctx, ancho, alto} = prepararGrafica(canvasPoblacion);
+
+  ctx.clearRect(0, 0, ancho, alto);
+
+  const margen = 35;
+  const derecha = 10;
+  const arriba = 15;
+
+  const areaAncho = ancho - margen - derecha;
+  const areaAlto = alto - margen - arriba;
+
+  dibujarEjes(ctx, ancho, alto, margen);
+
+  if (historialPoblacion.length === 0) return;
+
+  let maximo = Math.max(
+    5,
+    ...historialPoblacion.map(p => p.poblacion)
+  );
+
+  maximo = Math.ceil(maximo * 1.1);
+
+  // Líneas horizontales
+  ctx.font = "11px Arial";
+  ctx.fillStyle = "#777";
+  ctx.textAlign = "right";
+
+  for (let i = 0; i <= 4; i++) {
+
+    let valor = maximo * i / 4;
+    let y = alto - margen - areaAlto * i / 4;
+
+    ctx.strokeStyle = "#eee";
+    ctx.beginPath();
+    ctx.moveTo(margen, y);
+    ctx.lineTo(ancho - derecha, y);
+    ctx.stroke();
+
+    ctx.fillText(
+      Math.round(valor),
+      margen - 5,
+      y + 4
+    );
+  }
+
+  // Línea de población
+  ctx.beginPath();
+  ctx.strokeStyle = "#2563eb";
+  ctx.lineWidth = 2;
+
+  let n = historialPoblacion.length;
+
+  historialPoblacion.forEach((p, i) => {
+
+    let x = margen +
+      (n === 1 ? 0 : i / (n - 1)) * areaAncho;
+
+    let y = alto - margen -
+      (p.poblacion / maximo) * areaAlto;
+
+    if (i === 0) {
+      ctx.moveTo(x, y);
+    } else {
+      ctx.lineTo(x, y);
+    }
+  });
+
+  ctx.stroke();
+
+  // Etiquetas de tiempo
+  ctx.fillStyle = "#777";
+  ctx.textAlign = "left";
+
+  ctx.fillText(
+    historialPoblacion[0].tiempo.toFixed(0),
+    margen,
+    alto - 8
+  );
+
+  ctx.textAlign = "right";
+
+  ctx.fillText(
+    historialPoblacion[n - 1].tiempo.toFixed(0) + " años",
+    ancho - derecha,
+    alto - 8
+  );
+}
+
+// =====================================
+// GRÁFICA DE BARRAS DE EDADES
+// =====================================
+
+function dibujarGraficaEdades() {
+
+  let {ctx, ancho, alto} = prepararGrafica(canvasEdades);
+
+  ctx.clearRect(0, 0, ancho, alto);
+
+  const margen = 35;
+  const derecha = 10;
+  const arriba = 15;
+
+  const areaAncho = ancho - margen - derecha;
+  const areaAlto = alto - margen - arriba;
+
+  dibujarEjes(ctx, ancho, alto, margen);
+
+  let vivos = personas.filter(p => p.vivo);
+
+  // Distribución por intervalos de 5 años
+  const intervalos = [
+    [0, 5],
+    [5, 10],
+    [10, 15],
+    [15, 20],
+    [20, 25],
+    [25, 30],
+    [30, 35],
+    [35, 40]
+  ];
+
+  let frecuencias = intervalos.map(([min, max]) =>
+    vivos.filter(p =>
+      p.edad >= min && p.edad < max
+    ).length
+  );
+
+  let maximo = Math.max(1, ...frecuencias);
+
+  let espacio = areaAncho / intervalos.length;
+  let anchoBarra = espacio * 0.7;
+
+  ctx.font = "10px Arial";
+  ctx.textAlign = "center";
+
+  frecuencias.forEach((cantidad, i) => {
+
+    let alturaBarra = cantidad / maximo * areaAlto;
+
+    let x = margen + i * espacio +
+      (espacio - anchoBarra) / 2;
+
+    let y = alto - margen - alturaBarra;
+
+    ctx.fillStyle = "#8b5cf6";
+    ctx.fillRect(x, y, anchoBarra, alturaBarra);
+
+    ctx.fillStyle = "#555";
+
+    if (cantidad > 0) {
+      ctx.fillText(
+        cantidad,
+        x + anchoBarra / 2,
+        y - 5
+      );
+    }
+
+    ctx.fillText(
+      intervalos[i][0] + "-" + intervalos[i][1],
+      x + anchoBarra / 2,
+      alto - margen + 15
+    );
+  });
+}
+
+// =====================================
+// POBLACIÓN INICIAL
+// =====================================
+
+for (let i = 0; i < CONFIG.poblacionInicial; i++) {
+
+  personas.push(
+    new Persona(
+      aleatorio(40, CONFIG.anchura - 40),
+      aleatorio(40, CONFIG.altura - 40)
+    )
+  );
+}
+
+for (let i = 0; i < CONFIG.maxComidas; i++) {
+  comidas.push(crearComida());
+}
+
+// Primer punto del historial
+historialPoblacion.push({
+  tiempo: 0,
+  poblacion: personas.length
+});
+
+// =====================================
+// ESTADÍSTICAS
+// =====================================
+
+function actualizarEstadisticas() {
+
+  let vivos = personas.filter(p => p.vivo);
+
+  let generacionMaxima = vivos.length
+    ? Math.max(...vivos.map(p => p.generacion))
+    : 0;
+
+  let edadMedia = vivos.length
+    ? vivos.reduce((s, p) => s + p.edad, 0) / vivos.length
+    : 0;
+
+  let descendenciaMedia = vivos.length
+    ? vivos.reduce((s, p) => s + p.descendientes, 0) / vivos.length
+    : 0;
+
+  let energiaMedia = vivos.length
+    ? vivos.reduce((s, p) => s + p.energia, 0) / vivos.length
+    : 0;
+
+  estadisticas.textContent =
+    "Vivos: " + vivos.length +
+    " | Nacimientos: " + nacimientos +
+    " | Muertes: " + muertes +
+    " | Generación máxima: " + generacionMaxima +
+    " | Edad media: " + edadMedia.toFixed(1) +
+    " | Descendencia media: " + descendenciaMedia.toFixed(2) +
+    " | Energía media: " + (energiaMedia * 100).toFixed(1) + "%" +
+    " | Comida: " + comidas.length +
+    " | Workers: " + trabajadores.length;
+}
+
+// =====================================
+// ANIMACIÓN
+// =====================================
+
+// Los Workers reciben instantáneas de solo lectura del mundo.
+// Solo el hilo principal modifica comidas, nacimientos y cadáveres.
+const WORKER_CODIGO = `
+self.onmessage = ({data}) => {
+  const {lote, vecinos, comidas, config} = data;
+  const limitar = (v,a,b) => Math.max(a,Math.min(b,v));
+  const resultados = [];
+  for (const p of lote) {
+    let edad = p.edad + 1/config.fotogramasPorAno;
+    if (edad >= p.edadMuerte) {
+      resultados.push({id:p.id,edad,muerto:true}); continue;
+    }
+    let angulo = p.angulo;
+    const sensores = [];
+    for (const sensor of p.sensores) {
+      let colision=false, comida=false;
+      const a=angulo+sensor.angulo;
+      const dx=Math.cos(a),dy=Math.sin(a);
+      for(let d=5;d<=sensor.longitud;d+=3){
+        const x=p.posx+dx*d,y=p.posy+dy*d;
+        if(x<0||x>config.anchura||y<0||y>config.altura){colision=true;break;}
+        for(const otra of vecinos){
+          if(otra.id===p.id)continue;
+          const ox=x-otra.posx,oy=y-otra.posy;
+          if(ox*ox+oy*oy<otra.radio*otra.radio){colision=true;break;}
+        }
+        if(colision)break;
+        for(const alimento of comidas){
+          const fx=x-alimento.x,fy=y-alimento.y;
+          if(fx*fx+fy*fy<(alimento.radio+2)**2){comida=true;break;}
+        }
+        if(comida)break;
+      }
+      sensores.push({colision,comida});
+      if(colision)angulo+=sensor.giroColision;
+      if(comida)angulo+=sensor.giroComida;
+    }
+    const posx=limitar(p.posx+Math.cos(angulo)*p.velocidad,p.radio,config.anchura-p.radio);
+    const posy=limitar(p.posy+Math.sin(angulo)*p.velocidad,p.radio,config.altura-p.radio);
+    const hambre=limitar(p.hambre+config.aumentoHambrePorFotograma,0,1);
+    const energia=limitar(p.energia-config.perdidaEnergiaPorFotograma-hambre*config.consumoEnergiaPorHambre,0,1);
+    // La muerte se evalúa antes de comer: alcanzar hambre=1 es terminal.
+    if(energia<=0||hambre>=1){
+      resultados.push({id:p.id,edad,posx,posy,angulo,hambre,energia,sensores,muerto:true});
+      continue;
+    }
+    const candidatos=[];
+    for(let i=0;i<comidas.length;i++){
+      const f=comidas[i],dx=posx-f.x,dy=posy-f.y;
+      if(dx*dx+dy*dy<(p.radio+f.radio)**2)candidatos.push(i);
+    }
+    resultados.push({id:p.id,edad,posx,posy,angulo,hambre,energia,sensores,candidatos,muerto:false});
+  }
+  self.postMessage(resultados);
+};`;
+
+const urlWorker = URL.createObjectURL(new Blob([WORKER_CODIGO], {type:'text/javascript'}));
+const trabajadores = Array.from({length: CONFIG.numeroWorkers}, () => new Worker(urlWorker));
+URL.revokeObjectURL(urlWorker);
+let calculando = false;
+let ultimoTiempo = 0;
+
+function ejecutarWorker(worker, datos) {
+  return new Promise((resolve,reject) => {
+    worker.onmessage = e => resolve(e.data);
+    worker.onerror = e => reject(e.message || 'Error del Worker');
+    worker.postMessage(datos);
+  });
+}
+
+async function simularFotograma() {
+  fotogramas++;
+  if(fotogramas%30===0 && comidas.length<CONFIG.maxComidas) comidas.push(crearComida());
+
+  const vivos = personas.filter(p=>p.vivo);
+  const vecinos = vivos.map(p=>({id:p.id,posx:p.posx,posy:p.posy,radio:p.radio}));
+  const alimentos = comidas.map(f=>({x:f.x,y:f.y,radio:f.radio}));
+  const tamano = Math.max(1,Math.ceil(vivos.length/trabajadores.length));
+  const trabajos = [];
+  for(let i=0;i<vivos.length;i+=tamano){
+    const lote = vivos.slice(i,i+tamano).map(p=>({
+      id:p.id,posx:p.posx,posy:p.posy,radio:p.radio,angulo:p.angulo,
+      velocidad:p.velocidad,edad:p.edad,edadMuerte:p.edadMuerte,
+      hambre:p.hambre,energia:p.energia,sensores:p.sensores
+    }));
+    trabajos.push(ejecutarWorker(trabajadores[trabajos.length],{
+      lote,vecinos,comidas:alimentos,config:CONFIG
+    }));
+  }
+  const resultados = (await Promise.all(trabajos)).flat();
+  const porId = new Map(personas.map(p=>[p.id,p]));
+  const consumidas = new Set();
+  const nuevosHijos=[];
+
+  for(const r of resultados){
+    const p=porId.get(r.id);
+    if(!p||!p.vivo)continue;
+    p.edad=r.edad;
+    if(r.posx!==undefined){
+      p.posx=r.posx;p.posy=r.posy;p.angulo=r.angulo;
+      p.hambre=r.hambre;p.energia=r.energia;
+      r.sensores.forEach((estado,i)=>{
+        p.sensores[i].colision=estado.colision;
+        p.sensores[i].comida=estado.comida;
+      });
+    }
+    if(r.muerto){p.morir();continue;}
+    for(const indice of r.candidatos){
+      if(consumidas.has(indice))continue;
+      consumidas.add(indice);
+      p.hambre=limitar(p.hambre-CONFIG.reduccionHambrePorComida,0,1);
+    }
+    if(p.edad>=p.edadReproduccion&&!p.reproducido){
+      const hijos=p.reproducir();
+      for(const hijo of hijos){
+        if(personas.length+nuevosHijos.length>=CONFIG.maxPoblacion)break;
+        nuevosHijos.push(hijo);nacimientos++;
+      }
+    }
+  }
+  comidas=comidas.filter((_,i)=>!consumidas.has(i));
+  personas.push(...nuevosHijos);
+  const ahora=performance.now();
+  personas=personas.filter(p=>p.vivo||ahora-p.momentoMuerte<CONFIG.tiempoCadaver);
+  if(fotogramas%CONFIG.intervaloHistorial===0){
+    historialPoblacion.push({tiempo:fotogramas/CONFIG.fotogramasPorAno,
+      poblacion:personas.filter(p=>p.vivo).length});
+    if(historialPoblacion.length>CONFIG.maxPuntosHistorial)historialPoblacion.shift();
+  }
+}
+
+function dibujarEscena(){
+  contexto.clearRect(0,0,CONFIG.anchura,CONFIG.altura);
+  for(const comida of comidas)comida.dibuja(contexto);
+  for(const persona of personas)persona.dibuja(contexto);
+  if(fotogramas%CONFIG.intervaloGraficas===0){
+    actualizarEstadisticas();
+    dibujarGraficaPoblacion();
+    dibujarGraficaEdades();
+  }
+}
+
+// Se espera a todos los Workers antes de comenzar el siguiente fotograma.
+// Así no hay actualizaciones concurrentes ni carreras sobre el estado compartido.
+async function animar(){
+  if(calculando)return;
+  calculando=true;
+  try {await simularFotograma();dibujarEscena();}
+  catch(error){console.error('Error en la simulación:',error);}
+  finally{calculando=false;requestAnimationFrame(animar);}
+}
+
+// Guardado de una instantánea completa mediante POST JSON.
+// Incluye individuos vivos y cadáveres aún presentes en la simulación.
+const botonGuardar = document.querySelector('#guardar');
+const estadoGuardado = document.querySelector('#estadoGuardado');
+botonGuardar.addEventListener('click', async () => {
+  botonGuardar.disabled = true;
+  estadoGuardado.textContent = 'Guardando...';
+  try {
+    const instantanea = {
+      fecha: new Date().toISOString(),
+      fotogramas,
+      siguienteId,
+      nacimientos,
+      muertes,
+      config: CONFIG,
+      personas: personas.map(p => ({
+        id: p.id, nombre: p.nombre,
+        posx: p.posx, posy: p.posy, angulo: p.angulo, radio: p.radio,
+        hambre: p.hambre, energia: p.energia, edad: p.edad,
+        edadReproduccion: p.edadReproduccion, edadMuerte: p.edadMuerte,
+        generacion: p.generacion, reproducido: p.reproducido,
+        vivo: p.vivo, momentoMuerte: p.momentoMuerte,
+        velocidad: p.velocidad, descendientes: p.descendientes,
+        sensores: p.sensores.map(s => ({...s})),
+        genoma: JSON.parse(JSON.stringify(p.genoma))
+      }))
+    };
+    console.log(instantanea)
+    const respuesta = await fetch('guardar.php', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(instantanea)
+    });
+    const datos = await respuesta.json();
+    if (!respuesta.ok || !datos.ok) throw new Error(datos.error || `HTTP ${respuesta.status}`);
+    estadoGuardado.textContent = `Guardados ${datos.personas} individuos en ${datos.archivo}`;
+  } catch (error) {
+    estadoGuardado.textContent = 'Error: ' + error.message;
+    console.error('Error al guardar:', error);
+  } finally {
+    botonGuardar.disabled = false;
+  }
+});
+
+actualizarEstadisticas();
+dibujarGraficaPoblacion();
+dibujarGraficaEdades();
+requestAnimationFrame(animar);
+
+</script>
+</body>
+</html>

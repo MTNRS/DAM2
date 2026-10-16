@@ -1,0 +1,626 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gráficas SVG desde JSON</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 25px;
+    background: #f2f3f5;
+    color: #222;
+}
+
+h1 { text-align: center; }
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.grafico {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    min-width: 0;
+}
+
+.grafico h2 {
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.elemento {
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.elemento:hover {
+    opacity: .7;
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    z-index: 100;
+    background: #222;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    box-shadow: 0 4px 12px #0004;
+    min-width: 140px;
+}
+
+.tooltip strong {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.leyenda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.leyenda span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Gráficas SVG desde JSON</h1>
+
+<!-- DATOS INCRUSTADOS -->
+
+<script type="application/json" id="datos-graficos">
+{
+    "titulo": "Ventas mensuales",
+    "unidad": "unidades",
+    "datos": [
+        {
+            "nombre": "Enero",
+            "valor": 40,
+            "color": "#548fdf",
+            "descripcion": "Inicio del año"
+        },
+        {
+            "nombre": "Febrero",
+            "valor": 65,
+            "color": "#37a88a",
+            "descripcion": "Crecimiento de ventas"
+        },
+        {
+            "nombre": "Marzo",
+            "valor": 85,
+            "color": "#e6a03d",
+            "descripcion": "Muy buen rendimiento"
+        },
+        {
+            "nombre": "Abril",
+            "valor": 55,
+            "color": "#a184d7",
+            "descripcion": "Descenso temporal"
+        },
+        {
+            "nombre": "Mayo",
+            "valor": 95,
+            "color": "#e36e7b",
+            "descripcion": "Mejor mes del periodo"
+        }
+    ]
+}
+</script>
+
+<div class="contenedor" id="contenedor"></div>
+
+<script>
+
+// ==========================================
+// 1. LEER JSON
+// ==========================================
+
+const configuracion = JSON.parse(
+    document.getElementById("datos-graficos").textContent
+);
+
+const datos = configuracion.datos;
+
+const tipos = [
+    "tarta",
+    "anillo",
+    "lineas",
+    "area",
+    "barras"
+];
+
+const nombres = {
+    tarta: "Gráfico de tarta",
+    anillo: "Gráfico de anillo",
+    lineas: "Gráfico de líneas",
+    area: "Gráfico de área",
+    barras: "Gráfico de barras verticales"
+};
+
+const NS = "http://www.w3.org/2000/svg";
+
+
+// ==========================================
+// 2. CREAR ELEMENTOS SVG
+// ==========================================
+
+function svgElemento(tipo, atributos = {}, texto = null) {
+
+    const elemento = document.createElementNS(NS, tipo);
+
+    Object.entries(atributos).forEach(([clave, valor]) => {
+        elemento.setAttribute(clave, valor);
+    });
+
+    if (texto !== null) {
+        elemento.textContent = texto;
+    }
+
+    return elemento;
+}
+
+
+// ==========================================
+// 3. TOOLTIP PERSONALIZADO
+// ==========================================
+
+function activarTooltip(elemento, dato, contenedor) {
+
+    const tooltip = contenedor.querySelector(".tooltip");
+
+    elemento.classList.add("elemento");
+
+    elemento.addEventListener("mouseenter", () => {
+
+        tooltip.replaceChildren();
+
+        const titulo = document.createElement("strong");
+        titulo.textContent = dato.nombre;
+
+        const valor = document.createElement("div");
+        valor.textContent =
+            "Valor: " + dato.valor + " " + configuracion.unidad;
+
+        const descripcion = document.createElement("div");
+        descripcion.textContent = dato.descripcion || "";
+
+        tooltip.append(titulo, valor, descripcion);
+        tooltip.style.display = "block";
+    });
+
+    elemento.addEventListener("mousemove", evento => {
+
+        const rect = contenedor.getBoundingClientRect();
+
+        let x = evento.clientX - rect.left + 15;
+        let y = evento.clientY - rect.top - 15;
+
+        if (x + tooltip.offsetWidth > rect.width) {
+            x -= tooltip.offsetWidth + 30;
+        }
+
+        if (y + tooltip.offsetHeight > rect.height) {
+            y -= tooltip.offsetHeight + 30;
+        }
+
+        tooltip.style.left = Math.max(0, x) + "px";
+        tooltip.style.top = Math.max(0, y) + "px";
+    });
+
+    elemento.addEventListener("mouseleave", () => {
+        tooltip.style.display = "none";
+    });
+}
+
+
+// ==========================================
+// 4. FUNCIONES MATEMÁTICAS
+// ==========================================
+
+function polar(cx, cy, radio, angulo) {
+
+    return {
+        x: cx + radio * Math.cos(angulo),
+        y: cy + radio * Math.sin(angulo)
+    };
+}
+
+function sector(cx, cy, radioExterior, radioInterior, inicio, fin) {
+
+    const p1 = polar(cx, cy, radioExterior, inicio);
+    const p2 = polar(cx, cy, radioExterior, fin);
+
+    const grande = fin - inicio > Math.PI ? 1 : 0;
+
+    if (radioInterior === 0) {
+
+        return `
+            M ${cx} ${cy}
+            L ${p1.x} ${p1.y}
+            A ${radioExterior} ${radioExterior}
+              0 ${grande} 1 ${p2.x} ${p2.y}
+            Z
+        `;
+    }
+
+    const p3 = polar(cx, cy, radioInterior, fin);
+    const p4 = polar(cx, cy, radioInterior, inicio);
+
+    return `
+        M ${p1.x} ${p1.y}
+        A ${radioExterior} ${radioExterior}
+          0 ${grande} 1 ${p2.x} ${p2.y}
+        L ${p3.x} ${p3.y}
+        A ${radioInterior} ${radioInterior}
+          0 ${grande} 0 ${p4.x} ${p4.y}
+        Z
+    `;
+}
+
+
+// ==========================================
+// 5. TARTA Y ANILLO
+// ==========================================
+
+function dibujarCircular(svg, contenedor, anillo = false) {
+
+    const total = datos.reduce(
+        (suma, dato) => suma + Math.max(0, dato.valor), 0
+    );
+
+    if (total <= 0) return;
+
+    let angulo = -Math.PI / 2;
+
+    datos.forEach(dato => {
+
+        const porcion = Math.max(0, dato.valor) / total * Math.PI * 2;
+
+        if (porcion <= 0) return;
+
+        const inicio = angulo;
+        const fin = angulo + porcion;
+
+        // Los círculos completos necesitan tratamiento especial.
+        let elemento;
+
+        if (porcion >= Math.PI * 2 - 0.000001) {
+
+            elemento = svgElemento("circle", {
+                cx: 300,
+                cy: 150,
+                r: 110,
+                fill: dato.color,
+                stroke: "white",
+                "stroke-width": 2
+            });
+
+        } else {
+
+            elemento = svgElemento("path", {
+                d: sector(
+                    300, 150,
+                    110,
+                    anillo ? 65 : 0,
+                    inicio, fin
+                ),
+                fill: dato.color,
+                stroke: "white",
+                "stroke-width": 2
+            });
+        }
+
+        svg.appendChild(elemento);
+        activarTooltip(elemento, dato, contenedor);
+
+        angulo = fin;
+    });
+
+    // Agujero central del anillo
+    if (anillo) {
+
+        svg.appendChild(svgElemento("circle", {
+            cx: 300,
+            cy: 150,
+            r: 65,
+            fill: "white"
+        }));
+
+        svg.appendChild(svgElemento("text", {
+            x: 300,
+            y: 145,
+            "text-anchor": "middle",
+            "font-size": 24,
+            "font-weight": "bold"
+        }, total));
+
+        svg.appendChild(svgElemento("text", {
+            x: 300,
+            y: 165,
+            "text-anchor": "middle",
+            "font-size": 12
+        }, configuracion.unidad));
+    }
+}
+
+
+// ==========================================
+// 6. EJES PARA GRÁFICOS CARTESIANOS
+// ==========================================
+
+function crearEjes(svg) {
+
+    const baseY = 260;
+    const alto = 200;
+    const maximo = Math.max(1, ...datos.map(d => d.valor));
+
+    const escalaMaxima = Math.ceil(maximo / 10) * 10;
+
+    for (let i = 0; i <= 5; i++) {
+
+        const valor = escalaMaxima * i / 5;
+        const y = baseY - alto * i / 5;
+
+        svg.appendChild(svgElemento("line", {
+            x1: 50,
+            y1: y,
+            x2: 580,
+            y2: y,
+            stroke: "#ddd"
+        }));
+
+        svg.appendChild(svgElemento("text", {
+            x: 40,
+            y: y + 4,
+            "text-anchor": "end",
+            "font-size": 11,
+            fill: "#666"
+        }, Number(valor.toFixed(1))));
+    }
+
+    return {
+        baseY,
+        alto,
+        maximo: escalaMaxima
+    };
+}
+
+
+// ==========================================
+// 7. BARRAS VERTICALES
+// ==========================================
+
+function dibujarBarras(svg, contenedor) {
+
+    if (!datos.length) return;
+
+    const ejes = crearEjes(svg);
+    const ancho = 530 / datos.length;
+
+    datos.forEach((dato, i) => {
+
+        const altura = Math.max(0, dato.valor) /
+            ejes.maximo * ejes.alto;
+
+        const x = 50 + i * ancho + ancho * .2;
+        const y = ejes.baseY - altura;
+
+        const barra = svgElemento("rect", {
+            x: x,
+            y: y,
+            width: ancho * .6,
+            height: altura,
+            fill: dato.color,
+            rx: 3
+        });
+
+        svg.appendChild(barra);
+        activarTooltip(barra, dato, contenedor);
+
+        svg.appendChild(svgElemento("text", {
+            x: x + ancho * .3,
+            y: y - 8,
+            "text-anchor": "middle",
+            "font-size": 12
+        }, dato.valor));
+
+        svg.appendChild(svgElemento("text", {
+            x: x + ancho * .3,
+            y: 280,
+            "text-anchor": "middle",
+            "font-size": 11
+        }, dato.nombre));
+    });
+}
+
+
+// ==========================================
+// 8. LÍNEAS Y ÁREA
+// ==========================================
+
+function dibujarLineas(svg, contenedor, area = false) {
+
+    if (!datos.length) return;
+
+    const ejes = crearEjes(svg);
+
+    const puntos = datos.map((dato, i) => {
+
+        const x = datos.length === 1
+            ? 315
+            : 65 + i * 500 / (datos.length - 1);
+
+        const y = ejes.baseY -
+            Math.max(0, dato.valor) / ejes.maximo * ejes.alto;
+
+        return { x, y, dato };
+    });
+
+    const ruta = puntos.map((p, i) =>
+        (i === 0 ? "M " : "L ") + p.x + " " + p.y
+    ).join(" ");
+
+    if (area) {
+
+        const primero = puntos[0];
+        const ultimo = puntos[puntos.length - 1];
+
+        const superficie = svgElemento("path", {
+            d: ruta +
+               ` L ${ultimo.x} ${ejes.baseY}` +
+               ` L ${primero.x} ${ejes.baseY} Z`,
+            fill: "#548fdf",
+            "fill-opacity": .25
+        });
+
+        svg.appendChild(superficie);
+    }
+
+    svg.appendChild(svgElemento("path", {
+        d: ruta,
+        fill: "none",
+        stroke: "#548fdf",
+        "stroke-width": 3,
+        "stroke-linejoin": "round"
+    }));
+
+    puntos.forEach(p => {
+
+        const punto = svgElemento("circle", {
+            cx: p.x,
+            cy: p.y,
+            r: 6,
+            fill: p.dato.color,
+            stroke: "white",
+            "stroke-width": 2
+        });
+
+        svg.appendChild(punto);
+        activarTooltip(punto, p.dato, contenedor);
+
+        svg.appendChild(svgElemento("text", {
+            x: p.x,
+            y: 280,
+            "text-anchor": "middle",
+            "font-size": 11
+        }, p.dato.nombre));
+    });
+}
+
+
+// ==========================================
+// 9. CREAR CADA GRÁFICO
+// ==========================================
+
+function crearGrafico(tipo) {
+
+    const contenedor = document.createElement("div");
+    contenedor.className = "grafico";
+
+    const titulo = document.createElement("h2");
+    titulo.textContent = nombres[tipo];
+
+    const svg = svgElemento("svg", {
+        viewBox: "0 0 600 320"
+    });
+
+    const tooltip = document.createElement("div");
+    tooltip.className = "tooltip";
+
+    contenedor.append(titulo, svg, tooltip);
+
+    document.getElementById("contenedor")
+        .appendChild(contenedor);
+
+    switch (tipo) {
+
+        case "tarta":
+            dibujarCircular(svg, contenedor, false);
+            break;
+
+        case "anillo":
+            dibujarCircular(svg, contenedor, true);
+            break;
+
+        case "lineas":
+            dibujarLineas(svg, contenedor, false);
+            break;
+
+        case "area":
+            dibujarLineas(svg, contenedor, true);
+            break;
+
+        case "barras":
+            dibujarBarras(svg, contenedor);
+            break;
+    }
+
+    // Leyenda
+    const leyenda = document.createElement("div");
+    leyenda.className = "leyenda";
+
+    datos.forEach(dato => {
+
+        const item = document.createElement("span");
+
+        const color = document.createElement("i");
+        color.className = "color";
+        color.style.background = dato.color;
+
+        const nombre = document.createElement("span");
+        nombre.textContent = dato.nombre;
+
+        item.append(color, nombre);
+        leyenda.appendChild(item);
+    });
+
+    contenedor.appendChild(leyenda);
+}
+
+
+// ==========================================
+// 10. GENERAR LOS CINCO GRÁFICOS
+// ==========================================
+
+tipos.forEach(crearGrafico);
+
+</script>
+
+</body>
+</html>

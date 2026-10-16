@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <button>Pulsame</button>
+    <div id="resultado"></div>
+    <script>
+      document.querySelector("button").onclick = function(){
+        fetch("misdatos.json")
+        .then(function(resultado){return resultado.json()})
+        .then(function(datos){
+          console.log(datos)
+        })
+      }
+    </script>
+  </body>
+</html>

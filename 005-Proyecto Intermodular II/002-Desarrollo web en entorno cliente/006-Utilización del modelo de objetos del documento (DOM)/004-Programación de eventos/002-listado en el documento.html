@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial; }
+    li { padding: 5px; border-bottom: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+  <button>Pulsame</button>
+  <h2>Propiedades y métodos del botón</h2>
+  <ul id="resultado"></ul>
+
+  <script>
+    let boton = document.querySelector("button");
+    let resultado = document.querySelector("#resultado");
+
+    let propiedades = new Set();
+    let objeto = boton;
+
+    // Recorremos también los prototipos heredados
+    while (objeto !== null) {
+      Object.getOwnPropertyNames(objeto).forEach(function(nombre) {
+        propiedades.add(nombre);
+      });
+      objeto = Object.getPrototypeOf(objeto);
+    }
+
+    // Mostramos cada propiedad o método
+    [...propiedades].sort().forEach(function(nombre) {
+      let elemento = document.createElement("li");
+      let tipo;
+
+      try {
+        tipo = typeof boton[nombre];
+      } catch (error) {
+        tipo = "no accesible";
+      }
+
+      elemento.textContent = nombre + " (" + tipo + ")";
+      resultado.appendChild(elemento);
+    });
+  </script>
+</body>
+</html>

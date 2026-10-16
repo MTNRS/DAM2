@@ -1,0 +1,48 @@
+{
+    "nombre": "Laura Rubio Herrera",
+    "marca": "Perfil 100",
+    "nacimiento": "1996-02-14",
+    "ciudad": "Barcelona",
+    "email": "curriculum_100@example.com",
+    "web": "https://example.com/curriculum_100",
+    "profesion": "Analista de datos",
+    "experiencia": "19 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Ingeniería Informática",
+        "Grado en Matemáticas"
+    ],
+    "trabajos": [
+        "InnovaSoft - Ingeniero de IA",
+        "Digital Solutions - Especialista en ciberseguridad",
+        "DataLab - Diseñador web",
+        "CloudWorks - Especialista en ciberseguridad"
+    ],
+    "lenguajes": [
+        "Go",
+        "CSS",
+        "Python",
+        "PHP",
+        "JavaScript",
+        "Java"
+    ],
+    "tecnologias": [
+        "PostgreSQL",
+        "AWS",
+        "Ollama",
+        "Linux"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Inglés",
+        "Español"
+    ],
+    "especialidades": [
+        "Formación profesional",
+        "Administración de sistemas",
+        "Programación",
+        "Desarrollo web",
+        "Ciberseguridad",
+        "Automatización"
+    ]
+}

@@ -1,0 +1,11 @@
+:root{
+	--color_principal:indigo;
+  --color_secundario:orange;
+  --color_terciario:lightgrey;
+  --fuente_principal:"HelveticaNeueLocal","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --fuente_secundaria:"HelveticaNeueLocal","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --margen_interior:20px;
+  --margen_exterior:20px;
+  --logo:"logo.png";
+  --fondo_heroe: url("media/heroe.png");
+}

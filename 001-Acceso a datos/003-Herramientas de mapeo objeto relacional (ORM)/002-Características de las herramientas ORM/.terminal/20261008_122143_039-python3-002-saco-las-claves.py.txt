@@ -1,0 +1,9 @@
+Datetime: 2026-10-08T10:21:43.039Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/002-Características de las herramientas ORM
+Command: python3 002-saco\ las\ claves.py
+
+Result:
+['nombre', 'marca', 'nacimiento', 'ciudad', 'email', 'web', 'profesion', 'experiencia']
+['José Vicente Carratalá', 'JOCARSA', '1978-04-14', 'Valencia', 'info@jocarsa.com', 'https://jocarsa.com', 'Profesor de informática y desarrollador de software', 'Más de 25 años']
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramienta
+s de mapeo objeto relacional (ORM)/002-Características de las herramientas ORM$ 

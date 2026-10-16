@@ -1,0 +1,42 @@
+{
+    "nombre": "Irene Rubio Herrera",
+    "marca": "Perfil 045",
+    "nacimiento": "1970-02-01",
+    "ciudad": "Bilbao",
+    "email": "curriculum_045@example.com",
+    "web": "https://example.com/curriculum_045",
+    "profesion": "Administrador de sistemas",
+    "experiencia": "5 años",
+    "formacion": [
+        "Grado en Matemáticas",
+        "Máster en Inteligencia Artificial",
+        "Máster en Ciberseguridad"
+    ],
+    "trabajos": [
+        "InnovaSoft - Administrador de sistemas",
+        "Digital Solutions - Diseñador web",
+        "DataLab - Profesor de informática"
+    ],
+    "lenguajes": [
+        "Java",
+        "HTML",
+        "CSS"
+    ],
+    "tecnologias": [
+        "Apache",
+        "Docker",
+        "PostgreSQL"
+    ],
+    "idiomas": [
+        "Español",
+        "Italiano",
+        "Inglés",
+        "Alemán"
+    ],
+    "especialidades": [
+        "Formación profesional",
+        "Análisis de datos",
+        "Programación",
+        "Automatización"
+    ]
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas></canvas>
+    <script>
+      let lienzo = document.querySelector("canvas")
+      let contexto = lienzo.getContext("2d")
+      let anchura = 500;
+      let altura = 500
+      lienzo.width = anchura
+      lienzo.height = altura
+      class Persona{
+      	constructor(nombre,posx,posy,hambre,energia,angulo) {
+          this.nombre = nombre;
+          this.posx = posx;
+          this.posy = posy;
+          this.hambre = hambre;
+          this.energia = energia;
+          this.angulo = angulo
+          this.sensores = []
+        }
+        dibuja(contexto){
+        	contexto.fillRect(this.posx-5,this.posy-5,10,10)
+          contexto.beginPath()
+          contexto.moveTo(this.posx,this.posy)
+          contexto.lineTo(this.posx+Math.cos(this.angulo)*30,this.posy+Math.sin(this.angulo)*30)
+          contexto.stroke()
+        }
+      }
+      let numeropersonas = 20;
+      let personas = [];
+      for(let i = 0;i<numeropersonas;i++){
+      	personas.push(
+          new Persona(
+            "",
+            Math.random()*anchura,
+            Math.random()*altura,
+            Math.random(),
+            Math.random(),
+            Math.random()*Math.PI*2
+          ))
+      }
+      personas.forEach(function(persona){
+      	persona.dibuja(contexto)
+      })
+      console.log(personas)
+    </script>
+  </body>
+</html>

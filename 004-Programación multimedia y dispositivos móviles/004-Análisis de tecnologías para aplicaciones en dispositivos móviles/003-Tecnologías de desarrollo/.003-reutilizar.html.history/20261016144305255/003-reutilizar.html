@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <button data-url="pantalla1">Pantalla 1</button>
+    <button data-url="pantalla2">Pantalla 2</button>
+    <button data-url="pantalla3">Pantalla 3</button>
+    <div id="contenedor">
+      
+    </div>
+    <script>
+      let contenedor = document.querySelector("#contenedor")
+      document.querySelector("#pantalla1").onclick = function(){
+      	fetch("plantillas/pantalla1.html")
+        .then(function(resultado){return resultado.text()})
+        .then(function(datos){
+        	contenedor.innerHTML = datos
+        })
+      }
+      document.querySelector("#pantalla2").onclick = function(){
+      	fetch("plantillas/pantalla2.html")
+        .then(function(resultado){return resultado.text()})
+        .then(function(datos){
+        	contenedor.innerHTML = datos
+        })
+      }
+      document.querySelector("#pantalla3").onclick = function(){
+      	fetch("plantillas/pantalla3.html")
+        .then(function(resultado){return resultado.text()})
+        .then(function(datos){
+        	contenedor.innerHTML = datos
+        })
+      }
+    </script>
+  </body>
+</html>

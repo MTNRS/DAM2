@@ -1,0 +1,47 @@
+{
+    "nombre": "Marta Martínez Ruiz",
+    "marca": "Perfil 091",
+    "nacimiento": "1970-01-27",
+    "ciudad": "Sevilla",
+    "email": "curriculum_091@example.com",
+    "web": "https://example.com/curriculum_091",
+    "profesion": "Analista de datos",
+    "experiencia": "7 años",
+    "formacion": [
+        "Técnico Superior en DAM",
+        "Grado en Matemáticas"
+    ],
+    "trabajos": [
+        "InnovaSoft - Profesor de informática",
+        "CloudWorks - Desarrollador de software",
+        "Digital Solutions - Profesor de informática",
+        "DataLab - Administrador de sistemas"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "PHP",
+        "SQL",
+        "Python",
+        "HTML",
+        "Java"
+    ],
+    "tecnologias": [
+        "MySQL",
+        "PostgreSQL",
+        "Ollama"
+    ],
+    "idiomas": [
+        "Francés",
+        "Portugués",
+        "Español",
+        "Inglés"
+    ],
+    "especialidades": [
+        "Desarrollo web",
+        "Administración de sistemas",
+        "Bases de datos",
+        "Análisis de datos",
+        "Automatización",
+        "Formación profesional"
+    ]
+}

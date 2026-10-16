@@ -1,0 +1,199 @@
+400;500;700&display=swap");
+*{padding:0px;margin:0px;}
+html,body{width:100%;height:100%;padding:0px !important;margin:0px !important;}
+body{
+  background:var(--color_terciario);
+  height:100%;
+	font-family:var(--fuente_principal);
+	overflow-x:hidden;
+}
+header{
+  width:100%;
+  
+	background-image: var(--fondo_heroe);
+  background-size:cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-sizing:border-box;
+  color:white;
+}
+header #superior{
+	display:flex;
+  justify-content:space-between;
+  padding:20px;
+  position:fixed;
+  top:0px;
+  background:rgba(0,0,0,0.1);
+  width:100%;
+  box-sizing:border-box;
+  align-items:center;
+  z-index:1000;
+  backdrop-filter:blur(5px);
+  text-transform:uppercase;
+}
+header h1{
+	font-size:80px;
+	padding:0px;
+	margin:0px;
+}
+header h2{
+	font-size:20px;
+	margin:0px;
+}
+header nav{
+	display:flex;
+  gap:var(--margen_interior);
+}
+main,footer{
+	background:white;
+  width:1200px;
+  margin:auto;
+  padding:var(--margen_interior);
+  box-sizing:border-box;
+}
+main{
+	padding-top:150px;
+}
+section{
+	padding:var(--margen_interior);
+}
+nav a{
+	color:inherit;
+  text-decoration:none;
+  font-size:24px;
+}
+p{
+	text-align:justify;
+}
+/* Contenido real migrado de Tragaluz */
+[hidden]{display:none!important}html{scroll-behavior:smooth}body{min-height:100%;height:auto}header video{display:block;width:100%;max-height:75vh;object-fit:contain;background:#090c16}main{min-height:65vh;padding-top:110px}.spa-section{overflow-wrap:anywhere}.spa-section h2{font-size:2rem;margin:0 0 25px}.spa-section h3{margin:24px 0 12px}.spa-section p{line-height:1.7;margin:12px 0}.spa-section img{max-width:100%;height:auto;border-radius:8px}.spa-section a{color:indigo}.spa-section .subpage{padding:28px 0;border-top:1px solid #ddd;scroll-margin-top:115px}.spa-section .subpage img{max-height:380px;object-fit:contain}.spa-section hr{border:0;border-top:1px solid #ddd;margin:24px 0}.spa-section iframe{max-width:100%}.spa-section .tile{display:block;padding:18px;border:1px solid #ddd;margin:10px 0;border-radius:8px}.logos{max-width:100%;max-height:100px}header nav a.active{border-bottom:2px solid orange}header nav{flex-wrap:wrap}header #superior{position:sticky;min-height:90px}main,footer{width:min(1200px,100%)}@media(max-width:850px){header #superior{position:relative;flex-direction:column;align-items:flex-start;gap:16px}header nav{gap:12px}main{padding-top:20px}.spa-section{padding:10px}}
+
+/* SPA v2: hero cinematográfico y navegación interna */
+header.home-hero{height:100vh;min-height:500px;position:relative;background:#050711;overflow:hidden;display:block}
+header.home-hero #hero-video{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;display:block;z-index:0}
+header.home-hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38),transparent 35%,rgba(0,0,0,.2));pointer-events:none;z-index:1}
+header #superior{position:relative;z-index:5;}
+header.home-hero #superior{position:absolute;top:0;left:0;right:0}
+header:not(.home-hero){min-height:90px;background:var(--color_principal)}
+header:not(.home-hero) #hero-video{display:none!important}
+.spa-listado[hidden],article.subpage[hidden]{display:none!important}
+.spa-listado a[href^="#"]{display:inline-flex;margin:8px 8px 8px 0;padding:12px 18px;border:1px solid #ded8ed;border-radius:8px;text-decoration:none;background:#f7f5fc;color:#35216d}
+.spa-listado a[href^="#"]:hover{background:#e9e2fa}
+.subpage .volver{display:inline-flex;margin-bottom:20px;padding:10px 14px;background:#eee9f7;border-radius:8px;text-decoration:none}
+@media(max-width:850px){header.home-hero{min-height:420px;height:100dvh}header.home-hero #superior{position:absolute}header #superior{gap:10px}header h1{font-size:26px}header h2{font-size:15px}}
+
+/* Tragaluz v3 — diseño editorial responsive */
+:root{--ink:#17082b;--violet:#3c1768;--accent:#e7a54c;--soft:#f7f5fb;--line:#e8e2f0}
+body{color:#251d30}main{min-height:calc(100vh - 220px)}
+footer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:42px 24px 55px;border-top:1px solid var(--line)}
+footer .logos{display:block;max-width:min(520px,95%);max-height:420px;object-fit:contain;margin:0 auto}
+footer p{text-align:center!important;color:#645b6c;font-size:.9rem;margin:0}
+.spa-section{padding:32px 22px 56px}
+.spa-section>h2,.spa-listado>h2{font-size:clamp(1.8rem,3vw,2.5rem);letter-spacing:-.035em;color:var(--ink);margin:0 0 22px}
+.spa-section p{line-height:1.85;color:#403748}
+.spa-section .content{max-width:100%;line-height:1.8}
+.spa-section .content img{display:block;max-width:100%;height:auto;border-radius:14px;margin:22px 0;box-shadow:0 8px 28px rgba(25,10,48,.09)}
+.spa-section hr{margin:38px 0;border:0;border-top:1px solid var(--line)}
+/* Participantes: menú de tarjetas sin viñetas */
+.people-section .spa-listado>p,.people-section .spa-listado .content>p{font-size:1.05rem;max-width:740px}
+.participant-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:34px 0 45px}
+.people-section .spa-listado a.participant-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:11px;min-height:168px;margin:0;padding:24px 28px;background:linear-gradient(145deg,#fff,#f8f5fc);border:1px solid #e3d9ef;border-radius:16px;text-decoration:none;color:var(--ink);box-shadow:0 5px 18px rgba(31,13,59,.045);transition:transform .2s,box-shadow .2s,border-color .2s}
+.people-section .spa-listado a.participant-card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(45,20,78,.12);border-color:#a68bc8;background:#f8f3ff}
+.participant-card strong{font-size:1.3rem;letter-spacing:-.02em}
+.participant-card .participant-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#eee6f8;color:var(--violet);font-size:1.35rem}
+.participant-card .participant-description{color:#72647e;font-size:.94rem;line-height:1.5}
+.participant-card .participant-arrow{position:absolute;right:23px;top:23px;font-size:1.3rem;color:#69498a}
+/* Fichas de participantes */
+.people-section .detail-article{max-width:100%;padding:12px 0 36px}
+.detail-article>h3{font-size:clamp(1.8rem,3vw,2.35rem);color:var(--ink);letter-spacing:-.03em}
+.detail-article .content h2,.detail-article .content h3{color:var(--violet);font-size:1.5rem;margin:35px 0 18px;letter-spacing:-.02em}
+.detail-article .content img{max-width:min(420px,100%);max-height:450px;object-fit:contain;object-position:left center}
+.detail-article .content p{text-align:left;line-height:1.9;margin:15px 0 22px}
+.detail-article .volver{padding:12px 18px;border:1px solid #e2d5f0;background:#f4eefb;color:#3c1768;font-weight:600;border-radius:10px;transition:background .2s}
+.detail-article .volver:hover{background:#e9dcf7}
+/* La emoción de conocer: ritmo editorial y galerías */
+.editorial-section>.content{max-width:100%}
+.editorial-section .content h1,.editorial-section .content h2,.editorial-section .content h3{font-size:clamp(1.5rem,2.6vw,2.1rem);color:var(--ink);letter-spacing:-.025em;margin:36px 0 20px}
+.editorial-section .content img{width:auto;max-width:100%;max-height:600px;object-fit:contain;background:#faf9fc}
+.editorial-section .content p{font-size:1.04rem;line-height:1.95;max-width:920px}
+.editorial-section .content em{color:#63506f}
+.editorial-section .content strong{color:#251233}
+.editorial-section .content hr{margin:44px 0;border-top:1px solid #e5ddec}
+/* Actualidad: cuadrícula limpia, sin main anidado */
+.news-section .posts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+.news-section .posts .tile{display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:180px;margin:0;padding:26px;background:linear-gradient(150deg,#fff,#f7f3fb);border:1px solid #e4daed;border-radius:16px;text-decoration:none;box-shadow:0 5px 20px rgba(31,13,59,.05);transition:transform .2s,box-shadow .2s,border-color .2s}
+.news-section .posts .tile:first-child{grid-column:1/-1;background:linear-gradient(115deg,#271041,#4a2574);color:#fff}
+.news-section .posts .tile:hover{transform:translateY(-4px);box-shadow:0 15px 30px rgba(31,13,59,.14);border-color:#b59bd0}
+.news-section .posts .tile h3{font-size:clamp(1.08rem,1.8vw,1.45rem);line-height:1.45;margin:0;color:inherit}
+.news-section .posts .tile small{order:-1;font-size:.78rem;color:#78628c;letter-spacing:.04em}
+.news-section .posts .tile:first-child small{color:#e7d5fa}
+.news-section .news-article .content{max-width:100%;text-align:justify;}
+.news-section .news-article .content p{font-size:1.04rem;line-height:1.9}
+.news-section .news-article .content img{max-width:100%;max-height:680px;object-fit:contain}
+.news-section .news-article .content a{overflow-wrap:anywhere}
+@media(max-width:750px){.spa-section{padding:20px 8px 35px}.participant-grid,.news-section .posts{grid-template-columns:1fr}.news-section .posts .tile:first-child{grid-column:auto}.participant-card{min-height:140px!important}.spa-section .content img{max-width:100%}.detail-article .content img{max-width:100%}footer{padding:35px 15px}}
+
+/* V4: tarjetas sin pictogramas, perfiles en dos columnas y controles de vídeo */
+.participant-card .participant-icon,.participant-card .participant-arrow{display:none!important}
+.people-section .spa-listado a.participant-card{justify-content:center;min-height:130px;gap:12px}
+/* Cada bloque de persona se compone mediante JS sin alterar los textos originales. */
+.profile-layout{display:grid;grid-template-columns:minmax(210px,320px) minmax(0,1fr);gap:30px;align-items:start;margin:20px 0 36px}
+.profile-layout .profile-photo{margin:0!important;width:100%;max-width:320px!important;max-height:420px!important;object-fit:contain;object-position:center!important;justify-self:center}
+.profile-layout .profile-text{min-width:0}
+.profile-layout .profile-text p:first-child{margin-top:0}
+.profile-layout .profile-text p{text-align:left}
+/* Imágenes aisladas y galerías centradas */
+.editorial-section .content img,.news-section .news-article .content img{margin:24px auto!important;object-position:center;max-width:100%}
+header.home-hero #hero-video{pointer-events:auto}
+header.home-hero:after{pointer-events:none}
+@media(max-width:760px){.profile-layout{grid-template-columns:1fr;gap:18px}.profile-layout .profile-photo{max-width:min(360px,100%)!important}}
+
+
+/* Tipografías locales: archivos en helvetica-neue-5/ */
+@font-face {
+  font-family: 'HelveticaNeueLocal';
+  src: url('./helvetica-neue-5/HelveticaNeueUltraLight.otf') format('opentype');
+  font-style: normal; font-weight: 100; font-display: swap;
+}
+@font-face {
+  font-family: 'HelveticaNeueLocal';
+  src: url('./helvetica-neue-5/HelveticaNeueLight.otf') format('opentype');
+  font-style: normal; font-weight: 300; font-display: swap;
+}
+@font-face {
+  font-family: 'HelveticaNeueLocal';
+  src: url('./helvetica-neue-5/HelveticaNeueMedium.otf') format('opentype');
+  font-style: normal; font-weight: 500; font-display: swap;
+}
+:root {
+  --fuente_principal: 'HelveticaNeueLocal', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fuente_secundaria: var(--fuente_principal);
+}
+html, body, p, li, blockquote, label, button, input, textarea, select,
+.spa-section .content, .participant-description, .news-section .posts .tile small {
+  font-family: var(--fuente_principal);
+  font-weight: 300;
+}
+/* Identidad principal: UltraLight */
+header .corporativo h1 {
+  font-family: var(--fuente_principal);
+  font-weight: 200;
+  letter-spacing: 0em;
+}
+/* Navegación y subtítulo corporativo: Light */
+header nav a, header .corporativo h2, nav a {
+  font-family: var(--fuente_principal);
+  font-weight: 300;
+}
+/* Encabezados de secciones, perfiles, tarjetas y noticias: Medium */
+main h1, main h2, main h3, main h4, main h5, main h6,
+footer h1, footer h2, footer h3, footer h4,
+.participant-card strong, .participant-card .card-title,
+.news-section .tile h3, .detail-article .content h2,
+.editorial-section .content h2, .editorial-section .content h3 {
+  font-family: var(--fuente_principal);
+  font-weight: 500;
+}
+/* Evitar que las reglas anteriores fuercen negritas sintéticas en tarjetas */
+.participant-card strong {font-weight:500;}

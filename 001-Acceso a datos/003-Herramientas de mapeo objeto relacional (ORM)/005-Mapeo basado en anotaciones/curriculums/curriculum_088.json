@@ -1,0 +1,43 @@
+{
+  "nombre": "Álvaro Fernández Torres",
+  "marca": "Perfil 088",
+  "nacimiento": "1985-03-01",
+  "ciudad": "Málaga",
+  "email": "curriculum_088@example.com",
+  "web": "https://example.com/curriculum_088",
+  "profesion": "Desarrollador de software",
+  "experiencia": "8 años",
+  "formacion": [
+    "Técnico Superior en DAM",
+    "Grado en Matemáticas",
+    "Ingeniería Informática"
+  ],
+  "trabajos": [
+    "TechNova - Especialista en ciberseguridad",
+    "Digital Solutions - Diseñador web",
+    "CodeFactory - Profesor de informática"
+  ],
+  "lenguajes": [
+    "TypeScript",
+    "Java",
+    "HTML",
+    "Go"
+  ],
+  "tecnologias": [
+    "MySQL",
+    "Moodle",
+    "Apache"
+  ],
+  "idiomas": [
+    "Inglés",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Administración de sistemas",
+    "Ciberseguridad",
+    "Automatización",
+    "Programación",
+    "Formación profesional",
+    "Análisis de datos"
+  ]
+}

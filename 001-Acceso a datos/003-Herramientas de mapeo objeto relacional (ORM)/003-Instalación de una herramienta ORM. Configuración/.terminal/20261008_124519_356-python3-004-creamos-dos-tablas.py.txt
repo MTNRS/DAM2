@@ -1,0 +1,38 @@
+Datetime: 2026-10-08T10:45:19.356Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/003-Instalación de una herramienta ORM. Configuración
+Command: python3 004-creamos\ dos\ tablas.py
+
+Result:
+
+CREATE TABLE IF NOT EXISTS "curriculum2"(
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+"nombre" TEXT,"marca" TEXT,"nacimiento" TEXT,"ciudad" TEXT,"email" TEXT,"web" TEXT,"profesion" TEXT,"experiencia" TEXT);
+Esto es un dato y va como valor
+Esto es un dato y va como valor
+Esto es un dato y va como valor
+Esto es un dato y va como valor
+Esto es un dato y va como valor
+Esto es un dato y va como valor
+Esto es un dato y va como valor
+Esto es un dato y va como valor
+Esto es un array y va a otra tabla
+Voy a crear una tabla adicional llamada: lenguajes
+
+        CREATE TABLE IF NOT EXISTS "lenguajes"(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            "curriculum2_id" INTEGER,
+            valor TEXT,
+            FOREIGN KEY ("curriculum2_id")
+                REFERENCES "curriculum2"(id)
+        );
+        
+Python
+PHP
+JavaScript
+Java
+C++
+SQL
+HTML
+CSS
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herr
+amientas de mapeo objeto relacional (ORM)/003-Instalación de una herramienta ORM. Configuración$ 

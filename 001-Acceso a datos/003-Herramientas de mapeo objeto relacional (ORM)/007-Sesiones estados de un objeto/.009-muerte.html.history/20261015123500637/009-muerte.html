@@ -1,0 +1,493 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Simulación de vida artificial</title>
+<style>
+  body {
+    background: #eee;
+    font-family: Arial, sans-serif;
+  }
+
+  canvas {
+    background: white;
+    border: 1px solid #ccc;
+  }
+</style>
+</head>
+<body>
+
+<canvas></canvas>
+
+<script>
+const lienzo = document.querySelector("canvas");
+const contexto = lienzo.getContext("2d");
+
+const anchura = 800;
+const altura = 700;
+const DOS_PI = Math.PI * 2;
+
+const numeropersonas = 20;
+const numeroComidas = 35;
+const tiempoCadaver = 3000;
+
+lienzo.width = anchura;
+lienzo.height = altura;
+
+let personas = [];
+let comidas = [];
+let fotogramas = 0;
+
+// =====================================
+// UTILIDADES
+// =====================================
+
+function aleatorio(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+function distancia(x1, y1, x2, y2) {
+  return Math.hypot(x2 - x1, y2 - y1);
+}
+
+// =====================================
+// COMIDA
+// =====================================
+
+class Comida {
+
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.radio = 4;
+    this.cantidad = 0.2;
+  }
+
+  dibuja(contexto) {
+    contexto.beginPath();
+    contexto.arc(this.x, this.y, this.radio, 0, DOS_PI);
+    contexto.fillStyle = "#22aa22";
+    contexto.fill();
+  }
+}
+
+function crearComida() {
+  return new Comida(
+    aleatorio(20, anchura - 20),
+    aleatorio(20, altura - 20)
+  );
+}
+
+// =====================================
+// PERSONA
+// =====================================
+
+class Persona {
+
+  constructor(nombre, posx, posy, hambre, energia, angulo) {
+
+    this.nombre = nombre;
+    this.posx = posx;
+    this.posy = posy;
+    this.hambre = hambre;
+    this.energia = energia;
+    this.angulo = angulo;
+
+    this.radio = 5;
+    this.velocidad = aleatorio(0.7, 1.5);
+
+    // Estado vital
+    this.vivo = true;
+    this.momentoMuerte = null;
+
+    this.sensores = [];
+
+    let numeroSensores = Math.floor(aleatorio(2, 6));
+
+    for (let i = 0; i < numeroSensores; i++) {
+      this.sensores.push({
+        angulo: aleatorio(-Math.PI / 2, Math.PI / 2),
+        longitud: aleatorio(30, 60),
+
+        // Giros aleatorios, fijos para cada sensor
+        giroColision: aleatorio(-0.12, 0.12),
+        giroComida: aleatorio(-0.12, 0.12),
+
+        colision: false,
+        comida: false
+      });
+    }
+  }
+
+  // =====================================
+  // DETECTAR OBSTÁCULOS Y COMIDA
+  // =====================================
+
+  detectar(personas, comidas) {
+
+    for (let sensor of this.sensores) {
+
+      sensor.colision = false;
+      sensor.comida = false;
+
+      let anguloSensor = this.angulo + sensor.angulo;
+
+      let dx = Math.cos(anguloSensor);
+      let dy = Math.sin(anguloSensor);
+
+      for (let d = 5; d <= sensor.longitud; d += 3) {
+
+        let x = this.posx + dx * d;
+        let y = this.posy + dy * d;
+
+        // Bordes
+        if (
+          x < 0 || x > anchura ||
+          y < 0 || y > altura
+        ) {
+          sensor.colision = true;
+          break;
+        }
+
+        // Otros personajes vivos
+        for (let otra of personas) {
+
+          if (otra === this || !otra.vivo) continue;
+
+          if (
+            distancia(x, y, otra.posx, otra.posy)
+            < otra.radio
+          ) {
+            sensor.colision = true;
+            break;
+          }
+        }
+
+        if (sensor.colision) break;
+
+        // Comida
+        for (let alimento of comidas) {
+
+          if (
+            distancia(x, y, alimento.x, alimento.y)
+            < alimento.radio + 2
+          ) {
+            sensor.comida = true;
+            break;
+          }
+        }
+
+        if (sensor.comida) break;
+      }
+    }
+  }
+
+  // =====================================
+  // COMER
+  // =====================================
+
+  comer(comidas) {
+
+    if (!this.vivo) return;
+
+    for (let i = comidas.length - 1; i >= 0; i--) {
+
+      let alimento = comidas[i];
+
+      if (
+        distancia(
+          this.posx,
+          this.posy,
+          alimento.x,
+          alimento.y
+        ) < this.radio + alimento.radio
+      ) {
+
+        this.hambre = Math.max(
+          0,
+          this.hambre - alimento.cantidad
+        );
+
+        comidas.splice(i, 1);
+      }
+    }
+  }
+
+  // =====================================
+  // MORIR
+  // =====================================
+
+  morir() {
+
+    if (!this.vivo) return;
+
+    this.vivo = false;
+    this.energia = 0;
+    this.momentoMuerte = performance.now();
+
+    // Desactivar sensores
+    for (let sensor of this.sensores) {
+      sensor.colision = false;
+      sensor.comida = false;
+    }
+
+    console.log(this.nombre + " ha muerto");
+  }
+
+  // =====================================
+  // ACTUALIZAR
+  // =====================================
+
+  actualiza(personas, comidas) {
+
+    // Los muertos no se mueven
+    if (!this.vivo) return;
+
+    this.detectar(personas, comidas);
+
+    // Respuesta a los sensores
+    for (let sensor of this.sensores) {
+
+      if (sensor.colision) {
+        this.angulo += sensor.giroColision;
+      }
+
+      if (sensor.comida) {
+        this.angulo += sensor.giroComida;
+      }
+    }
+
+    // Movimiento
+    this.posx += Math.cos(this.angulo) * this.velocidad;
+    this.posy += Math.sin(this.angulo) * this.velocidad;
+
+    // Límites del escenario
+    this.posx = Math.max(
+      this.radio,
+      Math.min(anchura - this.radio, this.posx)
+    );
+
+    this.posy = Math.max(
+      this.radio,
+      Math.min(altura - this.radio, this.posy)
+    );
+
+    // Metabolismo
+    this.hambre = Math.min(
+      1,
+      this.hambre + 0.00008
+    );
+
+    // Cuanta más hambre, más energía consume
+    this.energia = Math.max(
+      0,
+      this.energia - (0.00003 + this.hambre * 0.00008)
+    );
+
+    // Intentar comer
+    this.comer(comidas);
+
+    // Comprobar muerte
+    if (this.energia <= 0) {
+      this.morir();
+    }
+  }
+
+  // =====================================
+  // DIBUJAR
+  // =====================================
+
+  dibuja(contexto) {
+
+    // CADÁVER
+    if (!this.vivo) {
+
+      contexto.fillStyle = "#999999";
+      contexto.fillRect(
+        this.posx - 5,
+        this.posy - 5,
+        10,
+        10
+      );
+
+      return;
+    }
+
+    // SENSORES
+    for (let sensor of this.sensores) {
+
+      let anguloSensor = this.angulo + sensor.angulo;
+
+      contexto.beginPath();
+      contexto.moveTo(this.posx, this.posy);
+
+      contexto.lineTo(
+        this.posx + Math.cos(anguloSensor) * sensor.longitud,
+        this.posy + Math.sin(anguloSensor) * sensor.longitud
+      );
+
+      if (sensor.colision) {
+        contexto.strokeStyle = "orange";
+      }
+      else if (sensor.comida) {
+        contexto.strokeStyle = "limegreen";
+      }
+      else {
+        contexto.strokeStyle = "rgba(0,100,255,0.4)";
+      }
+
+      contexto.lineWidth = 1;
+      contexto.stroke();
+    }
+
+    // ENERGÍA (VERDE)
+    contexto.beginPath();
+    contexto.arc(
+      this.posx,
+      this.posy,
+      12,
+      -Math.PI / 2,
+      -Math.PI / 2 + this.energia * DOS_PI
+    );
+    contexto.strokeStyle = "green";
+    contexto.lineWidth = 3;
+    contexto.stroke();
+
+    // HAMBRE (ROJO)
+    contexto.beginPath();
+    contexto.arc(
+      this.posx,
+      this.posy,
+      17,
+      -Math.PI / 2,
+      -Math.PI / 2 + this.hambre * DOS_PI
+    );
+    contexto.strokeStyle = "red";
+    contexto.lineWidth = 3;
+    contexto.stroke();
+
+    // CUERPO
+    contexto.fillStyle = "black";
+    contexto.fillRect(
+      this.posx - 5,
+      this.posy - 5,
+      10,
+      10
+    );
+
+    // DIRECCIÓN PRINCIPAL
+    let longitud = 30;
+
+    let puntaX = this.posx + Math.cos(this.angulo) * longitud;
+    let puntaY = this.posy + Math.sin(this.angulo) * longitud;
+
+    contexto.strokeStyle = "black";
+    contexto.lineWidth = 2;
+
+    contexto.beginPath();
+    contexto.moveTo(this.posx, this.posy);
+    contexto.lineTo(puntaX, puntaY);
+    contexto.stroke();
+
+    // PUNTA DE FLECHA
+    let tamano = 8;
+    let apertura = Math.PI / 6;
+
+    contexto.beginPath();
+
+    contexto.moveTo(puntaX, puntaY);
+    contexto.lineTo(
+      puntaX - Math.cos(this.angulo - apertura) * tamano,
+      puntaY - Math.sin(this.angulo - apertura) * tamano
+    );
+
+    contexto.moveTo(puntaX, puntaY);
+    contexto.lineTo(
+      puntaX - Math.cos(this.angulo + apertura) * tamano,
+      puntaY - Math.sin(this.angulo + apertura) * tamano
+    );
+
+    contexto.stroke();
+  }
+}
+
+// =====================================
+// CREAR PERSONAS
+// =====================================
+
+for (let i = 0; i < numeropersonas; i++) {
+
+  personas.push(
+    new Persona(
+      "Persona " + (i + 1),
+      aleatorio(40, anchura - 40),
+      aleatorio(40, altura - 40),
+      Math.random() * 0.5,
+      aleatorio(0.5, 1),
+      aleatorio(0, DOS_PI)
+    )
+  );
+}
+
+// =====================================
+// CREAR COMIDA INICIAL
+// =====================================
+
+for (let i = 0; i < numeroComidas; i++) {
+  comidas.push(crearComida());
+}
+
+// =====================================
+// ANIMACIÓN
+// =====================================
+
+function animar() {
+
+  contexto.clearRect(0, 0, anchura, altura);
+
+  fotogramas++;
+
+  // Reponer comida periódicamente
+  if (
+    fotogramas % 60 === 0 &&
+    comidas.length < numeroComidas
+  ) {
+    comidas.push(crearComida());
+  }
+
+  // Actualizar personajes
+  for (let persona of personas) {
+    persona.actualiza(personas, comidas);
+  }
+
+  // Eliminar cadáveres después de 3 segundos
+  let ahora = performance.now();
+
+  personas = personas.filter(persona => {
+    return (
+      persona.vivo ||
+      ahora - persona.momentoMuerte < tiempoCadaver
+    );
+  });
+
+  // Dibujar alimentos
+  for (let comida of comidas) {
+    comida.dibuja(contexto);
+  }
+
+  // Dibujar personajes
+  for (let persona of personas) {
+    persona.dibuja(contexto);
+  }
+
+  requestAnimationFrame(animar);
+}
+
+animar();
+
+console.log(personas);
+
+</script>
+</body>
+</html>

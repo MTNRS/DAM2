@@ -1,0 +1,46 @@
+{
+    "nombre": "Elena Navarro Gil",
+    "marca": "Perfil 012",
+    "nacimiento": "2002-07-22",
+    "ciudad": "Zaragoza",
+    "email": "curriculum_012@example.com",
+    "web": "https://example.com/curriculum_012",
+    "profesion": "Desarrollador de software",
+    "experiencia": "4 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Máster en Inteligencia Artificial"
+    ],
+    "trabajos": [
+        "TechNova - Especialista en ciberseguridad",
+        "Sistemas Levante - Ingeniero de IA",
+        "CloudWorks - Ingeniero de IA"
+    ],
+    "lenguajes": [
+        "Go",
+        "TypeScript",
+        "PHP",
+        "Java",
+        "C++",
+        "CSS"
+    ],
+    "tecnologias": [
+        "Linux",
+        "Ollama",
+        "AWS",
+        "React",
+        "SQLite"
+    ],
+    "idiomas": [
+        "Francés",
+        "Español",
+        "Alemán"
+    ],
+    "especialidades": [
+        "Bases de datos",
+        "Formación profesional",
+        "Ciberseguridad",
+        "Desarrollo web",
+        "Inteligencia artificial"
+    ]
+}

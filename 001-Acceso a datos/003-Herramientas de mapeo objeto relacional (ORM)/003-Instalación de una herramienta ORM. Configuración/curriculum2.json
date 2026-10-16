@@ -1,0 +1,20 @@
+{
+  "nombre": "José Vicente Carratalá",
+  "marca": "JOCARSA",
+  "nacimiento": "1978-04-14",
+  "ciudad": "Valencia",
+  "email": "info@jocarsa.com",
+  "web": "https://jocarsa.com",
+  "profesion": "Profesor de informática y desarrollador de software",
+  "experiencia": "Más de 25 años",
+  "lenguajes": [
+    "Python",
+    "PHP",
+    "JavaScript",
+    "Java",
+    "C++",
+    "SQL",
+    "HTML",
+    "CSS"
+  ]
+}

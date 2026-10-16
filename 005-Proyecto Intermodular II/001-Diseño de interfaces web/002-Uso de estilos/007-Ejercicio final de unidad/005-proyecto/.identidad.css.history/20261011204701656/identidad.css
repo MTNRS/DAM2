@@ -1,0 +1,11 @@
+:root{
+	--color_principal:indigo;
+  --color_secundario:orange;
+  --color_terciario:lightgrey;
+  --fuente_principal:Ubuntu;
+  --fuente_secundaria:Ubuntu;
+  --margen_interior:20px;
+  --margen_exterior:20px;
+  --logo:"logo.png";
+  --fondo_heroe: url("media/jocarsa.png");
+}
