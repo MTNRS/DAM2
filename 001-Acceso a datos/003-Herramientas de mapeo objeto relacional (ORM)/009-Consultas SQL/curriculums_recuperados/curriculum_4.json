@@ -1,0 +1,46 @@
+{
+    "ciudad": "Valencia",
+    "email": "curriculum_003@example.com",
+    "especialidades": [
+        "Desarrollo web",
+        "Análisis de datos",
+        "Formación profesional",
+        "Programación"
+    ],
+    "experiencia": "13 años",
+    "formacion": [
+        "Ingeniería Informática",
+        "Grado en Desarrollo de Software"
+    ],
+    "idiomas": [
+        "Español",
+        "Portugués",
+        "Italiano"
+    ],
+    "lenguajes": [
+        "Java",
+        "TypeScript",
+        "C++",
+        "SQL"
+    ],
+    "marca": "Perfil 003",
+    "nacimiento": "1990-01-08",
+    "nombre": "Raúl Fernández Torres",
+    "profesion": "Ingeniero de IA",
+    "tecnologias": [
+        "Ollama",
+        "PostgreSQL",
+        "AWS",
+        "Flask",
+        "SQLite",
+        "Apache",
+        "Moodle"
+    ],
+    "trabajos": [
+        "CodeFactory - Especialista en ciberseguridad",
+        "InnovaSoft - Desarrollador full-stack",
+        "Sistemas Levante - Analista de datos",
+        "EducaDigital - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_003"
+}

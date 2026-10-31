@@ -1,0 +1,6 @@
+Datetime: 2026-10-29T11:20:08.573Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/001-Gestores de bases de datos objeto relacionales
+Command: python3 005-objeto\ complejo.py
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/001-Gestores de bases de datos objeto relacionales$ 

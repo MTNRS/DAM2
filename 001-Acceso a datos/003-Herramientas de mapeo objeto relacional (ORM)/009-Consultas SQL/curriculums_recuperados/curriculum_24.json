@@ -1,0 +1,47 @@
+{
+    "ciudad": "Sevilla",
+    "email": "curriculum_023@example.com",
+    "especialidades": [
+        "Inteligencia artificial",
+        "Programación",
+        "Análisis de datos"
+    ],
+    "experiencia": "4 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Grado en Matemáticas",
+        "Máster en Ciberseguridad"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Alemán",
+        "Español"
+    ],
+    "lenguajes": [
+        "PHP",
+        "CSS",
+        "C++",
+        "SQL",
+        "Java",
+        "JavaScript"
+    ],
+    "marca": "Perfil 023",
+    "nacimiento": "1984-05-26",
+    "nombre": "Irene Martínez Ruiz",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "React",
+        "Docker",
+        "Git",
+        "Apache",
+        "Linux",
+        "SQLite",
+        "Flask"
+    ],
+    "trabajos": [
+        "DataLab - Analista de datos",
+        "TechNova - Diseñador web",
+        "Digital Solutions - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_023"
+}

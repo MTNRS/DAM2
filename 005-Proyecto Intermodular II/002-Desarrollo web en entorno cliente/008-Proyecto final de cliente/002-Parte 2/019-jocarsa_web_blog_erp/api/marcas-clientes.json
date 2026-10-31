@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "nombre": "VM Valmédica",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 2,
+      "nombre": "ED Eduken",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 3,
+      "nombre": "AV Agroval",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 4,
+      "nombre": "TM Tomillar",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 5,
+      "nombre": "SV Solven",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 6,
+      "nombre": "LT Levantech",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 7,
+      "nombre": "BN Brisanet",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 8,
+      "nombre": "MD Medialia",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 9,
+      "nombre": "FG Futurgal",
+      "logo": "",
+      "demostracion": true
+    },
+    {
+      "id": 10,
+      "nombre": "CV Civitas",
+      "logo": "",
+      "demostracion": true
+    }
+  ]
+}

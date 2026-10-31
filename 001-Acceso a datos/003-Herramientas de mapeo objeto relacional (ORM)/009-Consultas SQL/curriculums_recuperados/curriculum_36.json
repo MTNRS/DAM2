@@ -1,0 +1,49 @@
+{
+    "ciudad": "Alicante",
+    "email": "curriculum_035@example.com",
+    "especialidades": [
+        "Inteligencia artificial",
+        "Bases de datos",
+        "Desarrollo web",
+        "Formación profesional",
+        "Análisis de datos",
+        "Programación"
+    ],
+    "experiencia": "3 años",
+    "formacion": [
+        "Ingeniería Informática"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Inglés",
+        "Portugués",
+        "Alemán"
+    ],
+    "lenguajes": [
+        "TypeScript",
+        "Go",
+        "SQL",
+        "CSS",
+        "Python",
+        "Java",
+        "JavaScript"
+    ],
+    "marca": "Perfil 035",
+    "nacimiento": "1986-06-05",
+    "nombre": "Daniel Navarro Gil",
+    "profesion": "Profesor de informática",
+    "tecnologias": [
+        "AWS",
+        "Linux",
+        "Moodle",
+        "PostgreSQL",
+        "Flask",
+        "Git"
+    ],
+    "trabajos": [
+        "InnovaSoft - Ingeniero de IA",
+        "CodeFactory - Analista de datos",
+        "Digital Solutions - Desarrollador de software"
+    ],
+    "web": "https://example.com/curriculum_035"
+}

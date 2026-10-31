@@ -1,0 +1,44 @@
+{
+    "ciudad": "Barcelona",
+    "email": "curriculum_056@example.com",
+    "especialidades": [
+        "Automatización",
+        "Análisis de datos",
+        "Desarrollo web",
+        "Bases de datos",
+        "Inteligencia artificial",
+        "Ciberseguridad"
+    ],
+    "experiencia": "5 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Ingeniería Informática",
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Alemán"
+    ],
+    "lenguajes": [
+        "HTML",
+        "TypeScript",
+        "CSS",
+        "Go"
+    ],
+    "marca": "Perfil 056",
+    "nacimiento": "1973-10-16",
+    "nombre": "Clara Fernández Torres",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "AWS",
+        "MySQL",
+        "React"
+    ],
+    "trabajos": [
+        "InnovaSoft - Ingeniero de IA",
+        "Sistemas Levante - Especialista en ciberseguridad",
+        "TechNova - Analista de datos",
+        "EducaDigital - Especialista en ciberseguridad"
+    ],
+    "web": "https://example.com/curriculum_056"
+}

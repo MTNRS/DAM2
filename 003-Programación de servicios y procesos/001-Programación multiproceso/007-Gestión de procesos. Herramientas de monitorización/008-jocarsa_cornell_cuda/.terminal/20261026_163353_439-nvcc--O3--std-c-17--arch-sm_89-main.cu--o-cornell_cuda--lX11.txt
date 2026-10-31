@@ -1,0 +1,15 @@
+Datetime: 2026-10-26T15:33:53.439Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/008-jocarsa_cornell_cuda
+Command: nvcc -O3 -std=c++17 -arch=sm_89 main.cu -o cornell_cuda -lX11
+
+Result:
+nvcc -O3 -std=c++17 -arch=sm_89 main.cu -o cornell_cuda -lX11
+main.cu(43): error: expected a ")"
+
+main.cu(43): error: expected a ")"
+
+main.cu(43): error: expected an expression
+
+3 errors detected in the compilation of "main.cu".
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y pro
+cesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/008-jocarsa_cornell_cuda$ 

@@ -1,0 +1,41 @@
+{
+    "ciudad": "Alicante",
+    "email": "curriculum_063@example.com",
+    "especialidades": [
+        "Programación",
+        "Inteligencia artificial",
+        "Administración de sistemas",
+        "Automatización",
+        "Ciberseguridad",
+        "Formación profesional"
+    ],
+    "experiencia": "18 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Grado en Desarrollo de Software"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Español"
+    ],
+    "lenguajes": [
+        "PHP",
+        "Python",
+        "HTML",
+        "C++"
+    ],
+    "marca": "Perfil 063",
+    "nacimiento": "1970-01-10",
+    "nombre": "Marta Fernández Torres",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "SQLite",
+        "AWS",
+        "Apache"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Analista de datos",
+        "DataLab - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_063"
+}

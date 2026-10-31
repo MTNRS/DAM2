@@ -1,0 +1,13 @@
+Datetime: 2026-10-22T10:46:48.979Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos
+Command: python3 013-devolver\ facil.py
+
+Result:
+Introduce una palabra: ^[^CTraceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos/013-devolver facil.py", line 8, in <module>
+    palabra = input("Introduce una palabra: ")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a 
+datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos$ 

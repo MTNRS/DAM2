@@ -1,0 +1,48 @@
+{
+    "ciudad": "Sevilla",
+    "email": "curriculum_013@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Inteligencia artificial",
+        "Análisis de datos",
+        "Bases de datos"
+    ],
+    "experiencia": "13 años",
+    "formacion": [
+        "Grado en Matemáticas",
+        "Grado en Desarrollo de Software",
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Italiano",
+        "Alemán",
+        "Español"
+    ],
+    "lenguajes": [
+        "Go",
+        "SQL",
+        "CSS",
+        "Java",
+        "HTML",
+        "PHP",
+        "TypeScript"
+    ],
+    "marca": "Perfil 013",
+    "nacimiento": "1988-09-05",
+    "nombre": "Paula Ortega Moreno",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "Git",
+        "Apache",
+        "Moodle",
+        "React"
+    ],
+    "trabajos": [
+        "CloudWorks - Diseñador web",
+        "EducaDigital - Diseñador web",
+        "Sistemas Levante - Administrador de sistemas",
+        "TechNova - Especialista en ciberseguridad"
+    ],
+    "web": "https://example.com/curriculum_013"
+}

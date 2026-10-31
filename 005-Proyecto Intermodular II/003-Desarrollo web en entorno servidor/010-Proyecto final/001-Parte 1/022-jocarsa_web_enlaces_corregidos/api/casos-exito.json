@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "sector": "EDUCACIÓN",
+      "destacado": "Gestión educativa integrada",
+      "titulo": "Un entorno para el seguimiento del aprendizaje",
+      "descripcion": "Asistencias, evaluaciones, cuestionarios y proyectos intermodulares conectados mediante herramientas especializadas.",
+      "clase_visual": "art-edu"
+    },
+    {
+      "id": 2,
+      "sector": "EMPRESA",
+      "destacado": "Procesos comerciales más claros",
+      "titulo": "CRM y seguimiento comercial",
+      "descripcion": "Campañas, contactos, asignación de oportunidades y análisis de ventas en un mismo flujo de trabajo.",
+      "clase_visual": "art-sales"
+    },
+    {
+      "id": 3,
+      "sector": "INTELIGENCIA ARTIFICIAL",
+      "destacado": "Conocimiento documental privado",
+      "titulo": "Información accesible mediante IA local",
+      "descripcion": "Búsqueda semántica sobre documentación, modelos ejecutados localmente y respuestas basadas en fuentes.",
+      "clase_visual": "art-ai"
+    }
+  ]
+}

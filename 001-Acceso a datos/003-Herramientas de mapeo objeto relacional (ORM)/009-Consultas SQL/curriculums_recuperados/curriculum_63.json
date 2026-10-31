@@ -1,0 +1,45 @@
+{
+    "ciudad": "Bilbao",
+    "email": "curriculum_062@example.com",
+    "especialidades": [
+        "Bases de datos",
+        "Desarrollo web",
+        "Formación profesional",
+        "Inteligencia artificial",
+        "Análisis de datos"
+    ],
+    "experiencia": "13 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Ingeniería Informática"
+    ],
+    "idiomas": [
+        "Francés",
+        "Español",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "CSS",
+        "Python",
+        "C++"
+    ],
+    "marca": "Perfil 062",
+    "nacimiento": "1973-09-15",
+    "nombre": "Daniel Vidal Serrano",
+    "profesion": "Desarrollador de software",
+    "tecnologias": [
+        "MySQL",
+        "AWS",
+        "Ollama",
+        "Flask",
+        "PostgreSQL",
+        "SQLite"
+    ],
+    "trabajos": [
+        "EducaDigital - Especialista en ciberseguridad",
+        "CloudWorks - Ingeniero de IA",
+        "TechNova - Profesor de informática",
+        "CodeFactory - Desarrollador de software"
+    ],
+    "web": "https://example.com/curriculum_062"
+}

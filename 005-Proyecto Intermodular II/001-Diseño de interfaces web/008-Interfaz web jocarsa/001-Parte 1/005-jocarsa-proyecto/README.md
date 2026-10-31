@@ -1,0 +1,1 @@
+JOCARSA Proyecto Front V3. Abrir index.html. Se conserva la portada con vídeo, el catálogo y el panel admin de la versión anterior. Logos tecnológicos: Simple Icons CDN, requieren Internet. Clientes ficticios claramente identificados; casos demostrativos sin métricas inventadas. El asistente es búsqueda local, no LLM.

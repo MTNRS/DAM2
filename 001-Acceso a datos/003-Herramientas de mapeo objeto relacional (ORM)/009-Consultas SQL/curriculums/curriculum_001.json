@@ -1,0 +1,42 @@
+{
+  "nombre": "David García López",
+  "marca": "Perfil 001",
+  "nacimiento": "1987-04-08",
+  "ciudad": "Barcelona",
+  "email": "curriculum_001@example.com",
+  "web": "https://example.com/curriculum_001",
+  "profesion": "Profesor de informática",
+  "experiencia": "18 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial"
+  ],
+  "trabajos": [
+    "TechNova - Administrador de sistemas",
+    "Sistemas Levante - Administrador de sistemas",
+    "Digital Solutions - Desarrollador de software"
+  ],
+  "lenguajes": [
+    "Java",
+    "TypeScript",
+    "HTML",
+    "PHP",
+    "Go",
+    "C++",
+    "JavaScript"
+  ],
+  "tecnologias": [
+    "MySQL",
+    "Ollama",
+    "Flask"
+  ],
+  "idiomas": [
+    "Inglés",
+    "Portugués",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Bases de datos",
+    "Análisis de datos",
+    "Programación"
+  ]
+}

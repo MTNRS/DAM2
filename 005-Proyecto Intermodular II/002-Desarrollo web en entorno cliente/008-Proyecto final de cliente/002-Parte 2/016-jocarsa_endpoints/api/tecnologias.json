@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "nombre": "Python",
+      "logo": "https://cdn.simpleicons.org/python",
+      "demostracion": false
+    },
+    {
+      "id": 2,
+      "nombre": "PHP",
+      "logo": "https://cdn.simpleicons.org/php",
+      "demostracion": false
+    },
+    {
+      "id": 3,
+      "nombre": "JavaScript",
+      "logo": "https://cdn.simpleicons.org/javascript",
+      "demostracion": false
+    },
+    {
+      "id": 4,
+      "nombre": "Ubuntu",
+      "logo": "https://cdn.simpleicons.org/ubuntu",
+      "demostracion": false
+    },
+    {
+      "id": 5,
+      "nombre": "Apache",
+      "logo": "https://cdn.simpleicons.org/apache",
+      "demostracion": false
+    },
+    {
+      "id": 6,
+      "nombre": "MariaDB",
+      "logo": "https://cdn.simpleicons.org/mariadb",
+      "demostracion": false
+    },
+    {
+      "id": 7,
+      "nombre": "SQLite",
+      "logo": "https://cdn.simpleicons.org/sqlite",
+      "demostracion": false
+    },
+    {
+      "id": 8,
+      "nombre": "Ollama",
+      "logo": "https://cdn.simpleicons.org/ollama",
+      "demostracion": false
+    },
+    {
+      "id": 9,
+      "nombre": "Flask",
+      "logo": "https://cdn.simpleicons.org/flask",
+      "demostracion": false
+    },
+    {
+      "id": 10,
+      "nombre": "Moodle",
+      "logo": "https://cdn.simpleicons.org/moodle",
+      "demostracion": false
+    },
+    {
+      "id": 11,
+      "nombre": "NVIDIA",
+      "logo": "https://cdn.simpleicons.org/nvidia",
+      "demostracion": false
+    },
+    {
+      "id": 12,
+      "nombre": "Docker",
+      "logo": "https://cdn.simpleicons.org/docker",
+      "demostracion": false
+    },
+    {
+      "id": 13,
+      "nombre": "Git",
+      "logo": "https://cdn.simpleicons.org/git",
+      "demostracion": false
+    },
+    {
+      "id": 14,
+      "nombre": "Linux",
+      "logo": "https://cdn.simpleicons.org/linux",
+      "demostracion": false
+    },
+    {
+      "id": 15,
+      "nombre": "HTML5",
+      "logo": "https://cdn.simpleicons.org/html5",
+      "demostracion": false
+    },
+    {
+      "id": 16,
+      "nombre": "CSS3",
+      "logo": "https://cdn.simpleicons.org/css3",
+      "demostracion": false
+    }
+  ]
+}

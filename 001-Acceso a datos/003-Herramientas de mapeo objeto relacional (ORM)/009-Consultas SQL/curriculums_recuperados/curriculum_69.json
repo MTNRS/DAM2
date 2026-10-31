@@ -1,0 +1,44 @@
+{
+    "ciudad": "Alicante",
+    "email": "curriculum_068@example.com",
+    "especialidades": [
+        "Ciberseguridad",
+        "Inteligencia artificial",
+        "Administración de sistemas",
+        "Bases de datos",
+        "Desarrollo web",
+        "Programación"
+    ],
+    "experiencia": "1 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Francés",
+        "Español",
+        "Alemán"
+    ],
+    "lenguajes": [
+        "PHP",
+        "Go",
+        "JavaScript",
+        "TypeScript"
+    ],
+    "marca": "Perfil 068",
+    "nacimiento": "1993-01-20",
+    "nombre": "Nuria Vidal Serrano",
+    "profesion": "Desarrollador full-stack",
+    "tecnologias": [
+        "PostgreSQL",
+        "React",
+        "Moodle",
+        "Flask"
+    ],
+    "trabajos": [
+        "Digital Solutions - Diseñador web",
+        "TechNova - Diseñador web",
+        "Sistemas Levante - Desarrollador de software",
+        "CloudWorks - Especialista en ciberseguridad"
+    ],
+    "web": "https://example.com/curriculum_068"
+}

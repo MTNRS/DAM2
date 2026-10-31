@@ -1,0 +1,2236 @@
+{
+    "activeId": "db:jocarsa-erp",
+    "projects": [
+        {
+            "id": "db:clientes",
+            "name": "clientes",
+            "data": {
+                "entities": [],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:crimson",
+            "name": "crimson",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:32f58fcdd17090c3f8797bd372cc640f91d4ba18de8c3ba12e6b119d1f49d9f7",
+                        "title": "__crimson_permissions",
+                        "properties": [
+                            {
+                                "id": "col:7a44456268ce2721bdf5601cd951ff7c20365f65d379aec92c096e70c431e3ca",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:19ac2cdf502789cf2d8e0d831a4fab58f15c8800f67bd3c718c605fa4c47f4b1",
+                                "text": "usuario_id: entero"
+                            },
+                            {
+                                "id": "col:1799d1dbe63b0e1e273a6a2c69d721da0332763858c71d0a4c545da1b7b9a73e",
+                                "text": "modulo: texto"
+                            },
+                            {
+                                "id": "col:b9e69462775e315b20b3e049e4046cc89661c014b02e02f459c4b8178f4c5582",
+                                "text": "puede_seleccionar: entero"
+                            },
+                            {
+                                "id": "col:f211591914748bd04bc7004ded5a8b6862f48563e33de1d9734d4a05baeae302",
+                                "text": "puede_insertar: entero"
+                            },
+                            {
+                                "id": "col:699ec30ead74efb2b59dd6072ad682bf7206317b28db3a1861cd84011ce3e19c",
+                                "text": "puede_actualizar: entero"
+                            },
+                            {
+                                "id": "col:2d9899e7e22c7ad36fb7108d9abf8ce4bdf624bf83ae0478b49e8f623ceffa3b",
+                                "text": "puede_eliminar: entero"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:9f530282eb0f16dfb31a825c392c47d2ce3b2c330d3962e89370f5f175eb5fb7",
+                        "title": "__crimson_users",
+                        "properties": [
+                            {
+                                "id": "col:3b24ca36bac44290879c874d7f5de32dc767599d6b8a5ca64646cf74dc7f25c9",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:3766ea3176d7c97d2190c09dce2eb7142c60c7057d45c733e47ddd64949532ae",
+                                "text": "username: texto"
+                            },
+                            {
+                                "id": "col:5fef2e1a7d15b7f7585cde7751463e7612b8842a744a19a7666039d3c63d44c9",
+                                "text": "password_hash: texto"
+                            },
+                            {
+                                "id": "col:18c3057b482f542464d51d318f80730c2e1700ff7fd864f7fbe7e9be0ec77cab",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:aff1917fcdae6f5465eda763a0f19d1f2544c334bc9909f86773a1f604de40f8",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:21c36e298bf0b92638209e5b22d19b9510cf59df3e4187e9706cf0f9e0cc3a40",
+                                "text": "rol: texto"
+                            },
+                            {
+                                "id": "col:a7fc35d87079ba9b4b298509a077481404c5e18c4594eecaf595405e633fcfde",
+                                "text": "__crimson_activo: entero"
+                            },
+                            {
+                                "id": "col:49a5c5375598245541a8442da1bd709f62cb0d4a49bbb351a6e8b2604e5049a5",
+                                "text": "creado_en: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 430,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:e4ee0f310820336720ad1b8b5c1f27f19344fde191828f8011d53125643d63b1",
+                        "title": "categorias",
+                        "properties": [
+                            {
+                                "id": "col:0d37abd081ce788d160053cd23b14a35bdac310516d2f102d0b92d5e96eddd2a",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:84296000136162b9fbb03d7036e0fd8fae5f168d2645c1427a51020eb4d019c0",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:64035dfb2a8243c68878852e6a5c74d95b24b13dab75f7764aa325189fab9d3d",
+                                "text": "nombre: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 760,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:e5e47482c74139ab808cc75023f8e87dba5b3ab5a7576a0164223c000911b655",
+                        "title": "clientes",
+                        "properties": [
+                            {
+                                "id": "col:aa9c265569d92178fd46f786ed1b88fa90072b0aff4e5b201a67e9f7cb0e25c1",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:4f37650f71db6690f306e093c0da3f5c72ec7b7d93c3078d40d6997edefad06a",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:a008f281523934a638ea2cdf73f5e652f8080c3e72ba3304aa31c341890a5eab",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:eb627c851d7c29cd8f7ece61bd25d84fa627741c69a1619fd7165cd853905b66",
+                                "text": "cif: texto"
+                            },
+                            {
+                                "id": "col:8020c01ac2232178d6eef9ffe97d95d2de6937b2b99e02ec5ae0f8993a196ca4",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:69d53f23292837e5f8ddf4ac2694dd082db93cd59a0d5b349b30477def7c642d",
+                                "text": "telefono: texto"
+                            },
+                            {
+                                "id": "col:a10b1787f8dfb052c290ea354a174ebf40e1bbcd99f51ba55f60baf4a74496b3",
+                                "text": "direccion: texto"
+                            },
+                            {
+                                "id": "col:af49893aaaf814f59b3fd1b28941be17c3671577a9506cf287c780541091cb4d",
+                                "text": "codigopostal: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 1090,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:0cb39bb8f6a1b5979876f77ef2b0d9677a71b7a82325ae77d62124419a321049",
+                        "title": "compras",
+                        "properties": [
+                            {
+                                "id": "col:284c000173664936d813a7088a91d4694669421446873c8b7ac9b5e7da88d3d7",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:64b3da99c635c6269e28adeda005d212029ae5e8343bbb8b0066040ddd8790f3",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:f2802128bb21eef06927fcdfb6c64efcdc9e804dd3d558fbff1bb714f5920532",
+                                "text": "proveedor_id: entero"
+                            },
+                            {
+                                "id": "col:a624001b39f7a1a11174000f4551b44d66d3005aeb02752858829a5bfd64f5d2",
+                                "text": "fecha: texto"
+                            },
+                            {
+                                "id": "col:51d809acc64dcea4bbb6a1843475ac0b49d704125affb70f796ed0096ed03d06",
+                                "text": "total: real"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:2eeef7b32ae63085f272a4ca18cc27ee35b5c39dd92898407354b6f519776a46",
+                        "title": "compras_lineas",
+                        "properties": [
+                            {
+                                "id": "col:43c96b84db6d0c338a00d3be2c7758768b117dbc67f1d75f31cc77f07a6f7502",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:0f94e05e1c24c9267a8d9aab285d950fece7e55345fc90712fe1b95e810c2738",
+                                "text": "compra_id: entero"
+                            },
+                            {
+                                "id": "col:e965e218eb773b00aa81cfe0f8d97e892168beac2c922be28b31d207a4e77358",
+                                "text": "producto_id: entero"
+                            },
+                            {
+                                "id": "col:c08e98367b39a3962fccc089bc99a086ab1ea9f327c34a615117a204ca5b241f",
+                                "text": "cantidad: real"
+                            },
+                            {
+                                "id": "col:b13114146a56b47687aafddabd6e7774966753c9d089a5bdde4d0dd77349494d",
+                                "text": "precio: real"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 430,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:b9d757a3376f1343441e216a255f1ae6b1e78d50b92632d97f0fda831f995c5c",
+                        "title": "empleados",
+                        "properties": [
+                            {
+                                "id": "col:b4bf3bf22a068afa038d954ceff2c9fcb38707170bb739ac860f4bf6861d2e8e",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:61bff72365a25fd03d12b7a7c06c1d2321702ac62045f176964ff43f7dd24bc2",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:c21fad3f144b7fffe762fb72ca89cb8409c008a4bf361ab831b20b7f2e48355c",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:147aac3dbdbb3c1843dcfea1933cd5f1433f7c3b6d60b5af284f573f69a80d3c",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:2d422de09058607a40d276e05a42145bb04315b680991d717011257bcfc646c0",
+                                "text": "telefono: texto"
+                            },
+                            {
+                                "id": "col:283e3d26f550c4a4de5e09849bb0940d6714ec5b39e903fa35d27bc41fd095a1",
+                                "text": "puesto: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 760,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "title": "empresas",
+                        "properties": [
+                            {
+                                "id": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:08bbd4d386fc0b7b175254763766d22f2eca0f50f375fadda49b1f732517d699",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:a582cef0a3f1636de48737bd4aa564ca9082b2a79150a4486f0765da47de7d7e",
+                                "text": "cif: texto"
+                            },
+                            {
+                                "id": "col:2ad1e88f2da188677ef43f8f0fbe465ca1e95778c3c0fc6627fdf3fcf6e13fc5",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:188092d8dc6185ad801db3845b68a04cab7a3e17adcac60a27e232266ff4b8c8",
+                                "text": "telefono: texto"
+                            },
+                            {
+                                "id": "col:9da3cae63c8d002ca798be22227ab8ae9cdae10185cffa64ea67113c1ab0c796",
+                                "text": "direccion: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 1090,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:0deab7ab0a7eb65de3ed8a0759c62a285f2429424e52537d5f93d5797e0e8a1b",
+                        "title": "facturas",
+                        "properties": [
+                            {
+                                "id": "col:11038f9fcaae9f639ad483c0b667047fe2c1385a70529d170b56eec77e3517a1",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:5e8ac33bcd20bce775e1ea3edba31a60d93c18ab0f73c500fe6fa6326a812a08",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:6daaf458cfbae6748804ce207303f4d45c7c2d9f724577a491b61f304aefd48b",
+                                "text": "cliente_id: entero"
+                            },
+                            {
+                                "id": "col:5deefe73a0ec6d35e7ee44013f2257db3979e5f14cd70fc7526d654be8ee2708",
+                                "text": "pedido_id: entero"
+                            },
+                            {
+                                "id": "col:e6fa8f923a56a0ecc0e1b3c0d9d0344f8dea9912cdac51e11fdda51146869068",
+                                "text": "numero: texto"
+                            },
+                            {
+                                "id": "col:de9e89125f09e550faf91a73b23e3811d93a4094d77bcdf740bfb46ab7a0a289",
+                                "text": "fecha: texto"
+                            },
+                            {
+                                "id": "col:eaaea8b321ab3c836d557688849854cd6a8cf975f380876b1b910fcd63b77cea",
+                                "text": "estado: texto"
+                            },
+                            {
+                                "id": "col:a7fc70d9e45ce15f65e1dfb6cb8c175aec75e43d956f8df54c4972729f534e0d",
+                                "text": "total: real"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 740
+                    },
+                    {
+                        "id": "table:c80110250c85326ec5dd3e0b9f865fa34b79fd8c53f3504b13b76d471bef2ba7",
+                        "title": "pedidos",
+                        "properties": [
+                            {
+                                "id": "col:d5ce461170bbeabecb8a8fa7dbfa842d7e01e88008a8545b81b74b6da659c3d2",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:fc2895c009ad753d1cd9bc8de18c9209007e8cf06a5f705b38e0b8365da59bbe",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:98803e9cbcc608242c1d72c8acbccb83c0be8fdf4a04cb587284058579da0016",
+                                "text": "cliente_id: entero"
+                            },
+                            {
+                                "id": "col:f4a254efc89e9ec9f1b89168005515393f441b79e6e2f1f69261c9751b5eeb95",
+                                "text": "fecha: texto"
+                            },
+                            {
+                                "id": "col:94706a070924fb10748669829f0b0f9acaf9d115a8a927bd9bb43bcc7d46e157",
+                                "text": "estado: texto"
+                            },
+                            {
+                                "id": "col:9e6e025ea4522f6acf5a782900412ca29927ae1d4a70f399f7f92970ff7c1127",
+                                "text": "total: real"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 430,
+                        "y": 740
+                    },
+                    {
+                        "id": "table:51d161b04ac78b385002b0a42287e01b9177fde2f1d5918672a39037e33faddd",
+                        "title": "pedidos_lineas",
+                        "properties": [
+                            {
+                                "id": "col:9558c8043a4fbbf5fd0164b45daa57bf592f8db0745b04690ae907f747baee7f",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:7dd7c5ebfb53b0dd8c88dca2b037b7895cc438f864322d979f8af5295eade76a",
+                                "text": "pedido_id: entero"
+                            },
+                            {
+                                "id": "col:8734b3fc051698070abb9b7a5de1cae30b16136875bb31ceb02da619857f69da",
+                                "text": "producto_id: entero"
+                            },
+                            {
+                                "id": "col:2af94c108752b570d52d6f49649abbf42de24ad0c6975a3982c5e7d0a7da78d0",
+                                "text": "cantidad: real"
+                            },
+                            {
+                                "id": "col:aa2c80722b653700b17b71842d8e73f16f9ed617c839c2f4c8b519f033d9e8f5",
+                                "text": "precio: real"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 760,
+                        "y": 740
+                    },
+                    {
+                        "id": "table:4b7019f77790de34d27213d3d3410002b60390ab6c476d3cb6dc163cb7b1c1cc",
+                        "title": "productos",
+                        "properties": [
+                            {
+                                "id": "col:0ddcbcf4f87b3a1dbc644f52c56f6ea1739759d12fbf2b61de379f5abe4fac2f",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:385ae4ddbe898dd80df2c02779784688563aa315e13b588b524747a4d80640a2",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:ea54d88588fcb7a343cac84b3229ef949343f84fac5857451a4d291ab13727ce",
+                                "text": "categoria_id: entero"
+                            },
+                            {
+                                "id": "col:ad2ec2134dcfc47d0b1c7c713171d0f8bfdc8430503f34b1a731d67e2070500b",
+                                "text": "codigo: texto"
+                            },
+                            {
+                                "id": "col:16d915ec44b0c0973f4dbd3c0ddbca7721432a13b49edd9967e2652fd6f3ecd0",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:967a29243e70fa9f7ea40c504e8d702c92b43b880435f04ff528d79cb288366f",
+                                "text": "precio: real"
+                            },
+                            {
+                                "id": "col:1480ae703a88161db511a4e174ee470b75da140212cd48a8910a1da2297a464c",
+                                "text": "stock: real"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 1090,
+                        "y": 740
+                    },
+                    {
+                        "id": "table:2d99fb0e9a6ad1a0267cfc18b4fb6a424792befe5537a255fe39fc4ded05c5e8",
+                        "title": "proveedores",
+                        "properties": [
+                            {
+                                "id": "col:7bb688c375e570fd12c62c8cc2195c37e9d14a86e1bd20b6398e10c5716e6ed4",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:e824345ca9490f4d3e689c7a018a27219f22a224b993b76554e896947b6984eb",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:9eefb8fe9b1ec1763320daf58b32d2ad305340eed8e6cca2fdca5854b84cc131",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:e7a9cea77a25a72e1d29cd0aabc8e600b486acb38b599576638f47a6942069ae",
+                                "text": "cif: texto"
+                            },
+                            {
+                                "id": "col:61efc246146aed5a324f510dbe46d2645b05b31f87ce3e9b39d50bdc3b50f0de",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:bb1fd2f7ca1a269987bde10fb0116b2088616b2c2ea715f912539a1a1dd364ce",
+                                "text": "telefono: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 1060
+                    },
+                    {
+                        "id": "table:c68185859fc936a9443b6239f2d82e494a9f450b7835f41392cc78285ed253e2",
+                        "title": "usuarios",
+                        "properties": [
+                            {
+                                "id": "col:4526317066a8b76a715a4a63a179736c0fd46023ca8daccb607d3e1f6dc76bc7",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:4abd4013b84bad1afdb17e070f23005de4eb589f306910c63d536c76757dbb63",
+                                "text": "empresa_id: entero"
+                            },
+                            {
+                                "id": "col:0a1192368db1a895e030b765f642518bd32f9e5f4505046458a0af6b7ff1bd42",
+                                "text": "username: texto"
+                            },
+                            {
+                                "id": "col:46c5ec51bef3d95c4ca87c17c5a327a9d72f66a3b3463b718c37d1a6341db7e1",
+                                "text": "password_hash: texto"
+                            },
+                            {
+                                "id": "col:6353ceaea0fb79f84e118fb6736f5c4fd91e01afc9f74a30a9785c7c25f15d09",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:22d962e538a93bdeda79649b687428f04e0513832c3014376200cf2fe18dc163",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:a7739c7486e98aea29615ab2292ee5b0a88f897613192085c1eb165d250078d0",
+                                "text": "__crimson_activo: entero"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 430,
+                        "y": 1060
+                    }
+                ],
+                "links": [
+                    {
+                        "id": "fk:f100e8055129d3272af3996ae1f52f2ab92fcccbe28e1b397c1909d87c6af93c",
+                        "from": "table:9f530282eb0f16dfb31a825c392c47d2ce3b2c330d3962e89370f5f175eb5fb7",
+                        "fromProp": "col:3b24ca36bac44290879c874d7f5de32dc767599d6b8a5ca64646cf74dc7f25c9",
+                        "to": "table:32f58fcdd17090c3f8797bd372cc640f91d4ba18de8c3ba12e6b119d1f49d9f7",
+                        "toProp": "col:19ac2cdf502789cf2d8e0d831a4fab58f15c8800f67bd3c718c605fa4c47f4b1"
+                    },
+                    {
+                        "id": "fk:364b9d70f2f13027ee8cdeab55bfda8fe40a1e4d5a50c47f97af6fcc614f67ac",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:e4ee0f310820336720ad1b8b5c1f27f19344fde191828f8011d53125643d63b1",
+                        "toProp": "col:84296000136162b9fbb03d7036e0fd8fae5f168d2645c1427a51020eb4d019c0"
+                    },
+                    {
+                        "id": "fk:bfb2bf88368df5504a89e1d4661c2dc24b3f12604086755d07f5f6b18eda163c",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:e5e47482c74139ab808cc75023f8e87dba5b3ab5a7576a0164223c000911b655",
+                        "toProp": "col:4f37650f71db6690f306e093c0da3f5c72ec7b7d93c3078d40d6997edefad06a"
+                    },
+                    {
+                        "id": "fk:41b161059980c2cdbe22f6a07c541fe82ccb3ec9ca0f1b6cc263cc9056102921",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:0cb39bb8f6a1b5979876f77ef2b0d9677a71b7a82325ae77d62124419a321049",
+                        "toProp": "col:64b3da99c635c6269e28adeda005d212029ae5e8343bbb8b0066040ddd8790f3"
+                    },
+                    {
+                        "id": "fk:009d1ae82edef1fff0fb8013a8075570a274048b63964263ffc4d060fe08554e",
+                        "from": "table:2d99fb0e9a6ad1a0267cfc18b4fb6a424792befe5537a255fe39fc4ded05c5e8",
+                        "fromProp": "col:7bb688c375e570fd12c62c8cc2195c37e9d14a86e1bd20b6398e10c5716e6ed4",
+                        "to": "table:0cb39bb8f6a1b5979876f77ef2b0d9677a71b7a82325ae77d62124419a321049",
+                        "toProp": "col:f2802128bb21eef06927fcdfb6c64efcdc9e804dd3d558fbff1bb714f5920532"
+                    },
+                    {
+                        "id": "fk:ed98d610bfcfbbf15e2aa19c53ed892eab294e8658cf223ea90a08c0efba4001",
+                        "from": "table:0cb39bb8f6a1b5979876f77ef2b0d9677a71b7a82325ae77d62124419a321049",
+                        "fromProp": "col:284c000173664936d813a7088a91d4694669421446873c8b7ac9b5e7da88d3d7",
+                        "to": "table:2eeef7b32ae63085f272a4ca18cc27ee35b5c39dd92898407354b6f519776a46",
+                        "toProp": "col:0f94e05e1c24c9267a8d9aab285d950fece7e55345fc90712fe1b95e810c2738"
+                    },
+                    {
+                        "id": "fk:2a18e94c3da11dea787629d7fa71686e7d90bc590b6b577b5aed9e938eb098f7",
+                        "from": "table:4b7019f77790de34d27213d3d3410002b60390ab6c476d3cb6dc163cb7b1c1cc",
+                        "fromProp": "col:0ddcbcf4f87b3a1dbc644f52c56f6ea1739759d12fbf2b61de379f5abe4fac2f",
+                        "to": "table:2eeef7b32ae63085f272a4ca18cc27ee35b5c39dd92898407354b6f519776a46",
+                        "toProp": "col:e965e218eb773b00aa81cfe0f8d97e892168beac2c922be28b31d207a4e77358"
+                    },
+                    {
+                        "id": "fk:1b1e62fe651376fe89e16b4507b743cf6459ab37f619d4658689ebf8c3ac9452",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:b9d757a3376f1343441e216a255f1ae6b1e78d50b92632d97f0fda831f995c5c",
+                        "toProp": "col:61bff72365a25fd03d12b7a7c06c1d2321702ac62045f176964ff43f7dd24bc2"
+                    },
+                    {
+                        "id": "fk:0444bc00f0779781712f3c2b554bda8f77a2f6657b5a6f6db5dc76b034e5aeeb",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:0deab7ab0a7eb65de3ed8a0759c62a285f2429424e52537d5f93d5797e0e8a1b",
+                        "toProp": "col:5e8ac33bcd20bce775e1ea3edba31a60d93c18ab0f73c500fe6fa6326a812a08"
+                    },
+                    {
+                        "id": "fk:ad04059232f2253e8e623ed410cc4591711e64556fa30f80ecbecedaa037dffa",
+                        "from": "table:e5e47482c74139ab808cc75023f8e87dba5b3ab5a7576a0164223c000911b655",
+                        "fromProp": "col:aa9c265569d92178fd46f786ed1b88fa90072b0aff4e5b201a67e9f7cb0e25c1",
+                        "to": "table:0deab7ab0a7eb65de3ed8a0759c62a285f2429424e52537d5f93d5797e0e8a1b",
+                        "toProp": "col:6daaf458cfbae6748804ce207303f4d45c7c2d9f724577a491b61f304aefd48b"
+                    },
+                    {
+                        "id": "fk:dae7a02327cfc4389c438bce58bc629d4f5876f1047fe44d2a739baa38f45b4a",
+                        "from": "table:c80110250c85326ec5dd3e0b9f865fa34b79fd8c53f3504b13b76d471bef2ba7",
+                        "fromProp": "col:d5ce461170bbeabecb8a8fa7dbfa842d7e01e88008a8545b81b74b6da659c3d2",
+                        "to": "table:0deab7ab0a7eb65de3ed8a0759c62a285f2429424e52537d5f93d5797e0e8a1b",
+                        "toProp": "col:5deefe73a0ec6d35e7ee44013f2257db3979e5f14cd70fc7526d654be8ee2708"
+                    },
+                    {
+                        "id": "fk:db452ce111c0f6e852fa1c02491cd4f836bf0ae02cbc0128b0ca322cfff494a0",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:c80110250c85326ec5dd3e0b9f865fa34b79fd8c53f3504b13b76d471bef2ba7",
+                        "toProp": "col:fc2895c009ad753d1cd9bc8de18c9209007e8cf06a5f705b38e0b8365da59bbe"
+                    },
+                    {
+                        "id": "fk:4999a1d0a20aca1172d4e37b3dd0bd9ff9c30410ead92a7d85aa95fe2d8c1300",
+                        "from": "table:e5e47482c74139ab808cc75023f8e87dba5b3ab5a7576a0164223c000911b655",
+                        "fromProp": "col:aa9c265569d92178fd46f786ed1b88fa90072b0aff4e5b201a67e9f7cb0e25c1",
+                        "to": "table:c80110250c85326ec5dd3e0b9f865fa34b79fd8c53f3504b13b76d471bef2ba7",
+                        "toProp": "col:98803e9cbcc608242c1d72c8acbccb83c0be8fdf4a04cb587284058579da0016"
+                    },
+                    {
+                        "id": "fk:41340d39cf7da486b53e66d31317b72e305cb7ef8dfd6cc26c75c71510fb4ef6",
+                        "from": "table:c80110250c85326ec5dd3e0b9f865fa34b79fd8c53f3504b13b76d471bef2ba7",
+                        "fromProp": "col:d5ce461170bbeabecb8a8fa7dbfa842d7e01e88008a8545b81b74b6da659c3d2",
+                        "to": "table:51d161b04ac78b385002b0a42287e01b9177fde2f1d5918672a39037e33faddd",
+                        "toProp": "col:7dd7c5ebfb53b0dd8c88dca2b037b7895cc438f864322d979f8af5295eade76a"
+                    },
+                    {
+                        "id": "fk:35a822bca4e69000cdae1058cd46ef9a8688649cbfad11130c2c1b46d6660a9d",
+                        "from": "table:4b7019f77790de34d27213d3d3410002b60390ab6c476d3cb6dc163cb7b1c1cc",
+                        "fromProp": "col:0ddcbcf4f87b3a1dbc644f52c56f6ea1739759d12fbf2b61de379f5abe4fac2f",
+                        "to": "table:51d161b04ac78b385002b0a42287e01b9177fde2f1d5918672a39037e33faddd",
+                        "toProp": "col:8734b3fc051698070abb9b7a5de1cae30b16136875bb31ceb02da619857f69da"
+                    },
+                    {
+                        "id": "fk:aad16134ad6f7535c8bb35a6472ddfc5c3315cacb8f7c1d238c8f48e1d89fa00",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:4b7019f77790de34d27213d3d3410002b60390ab6c476d3cb6dc163cb7b1c1cc",
+                        "toProp": "col:385ae4ddbe898dd80df2c02779784688563aa315e13b588b524747a4d80640a2"
+                    },
+                    {
+                        "id": "fk:534efdd3b22e8efdd84c082118ff3e5aadca4b6e24b9ea7042496106fdd4f497",
+                        "from": "table:e4ee0f310820336720ad1b8b5c1f27f19344fde191828f8011d53125643d63b1",
+                        "fromProp": "col:0d37abd081ce788d160053cd23b14a35bdac310516d2f102d0b92d5e96eddd2a",
+                        "to": "table:4b7019f77790de34d27213d3d3410002b60390ab6c476d3cb6dc163cb7b1c1cc",
+                        "toProp": "col:ea54d88588fcb7a343cac84b3229ef949343f84fac5857451a4d291ab13727ce"
+                    },
+                    {
+                        "id": "fk:33fe3d0f24adf18bb0fad71740ae728fcdaee957e4eb3a7452879e8eeb609608",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:2d99fb0e9a6ad1a0267cfc18b4fb6a424792befe5537a255fe39fc4ded05c5e8",
+                        "toProp": "col:e824345ca9490f4d3e689c7a018a27219f22a224b993b76554e896947b6984eb"
+                    },
+                    {
+                        "id": "fk:c80a6ef2d67a65029ac40265a9484e052d6b818a4ada62d1ac918cc4516e57a5",
+                        "from": "table:96a2b2604fd46487f7f066ac9decd8cd8b197b046e619a870117efc56f43a59f",
+                        "fromProp": "col:9d6342b60e46384313ba95f3577066904063fe0c65bc08afdaea8a53f2f369a2",
+                        "to": "table:c68185859fc936a9443b6239f2d82e494a9f450b7835f41392cc78285ed253e2",
+                        "toProp": "col:4abd4013b84bad1afdb17e070f23005de4eb589f306910c63d536c76757dbb63"
+                    }
+                ]
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:demo_conectores",
+            "name": "demo_conectores",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:2b9a5620c1bd296847e854d7b18d9d9eb41acbb6a016d416659a73323d4a236e",
+                        "title": "productos",
+                        "properties": [
+                            {
+                                "id": "col:5ddae565970479da58f8a26d9213c7548bcb18f9fa7bf217ca34c2fb7f48b8a8",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:1ea24be5565dd95292ffd048da6b64eb48e9422510d43dbe91997481bf2a642a",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:ec2e331865b979d332eb107d1fa3881a6216e6f2d88b0395474af0d74021405a",
+                                "text": "stock: entero"
+                            },
+                            {
+                                "id": "col:a5dc65c586d55d5bddb42d3487cde4f20134aca624cb6256c67d775c596debae",
+                                "text": "precio: real"
+                            },
+                            {
+                                "id": "col:f0fe4afd937f4eb2d838cf02c390602c9d12a4dc4778bd484c5cce8257bdfad6",
+                                "text": "disponible: booleano"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    }
+                ],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:demo_orm",
+            "name": "demo_orm",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:69974c00537f4be7ea2e13f64d95b5ff28e244895570ce336c20a82b448a4f7b",
+                        "title": "orm_clientes",
+                        "properties": [
+                            {
+                                "id": "col:4927e0ac6b7543e26b3fdaac477247d93f6c1939113e051502718db1f641806f",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:87a1cbbe8598e356c469200213fed7692d18ee96205e71acf0b54d13838ed117",
+                                "text": "documento: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    }
+                ],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:empresa",
+            "name": "empresa",
+            "data": {
+                "entities": [],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:empresa_demo",
+            "name": "empresa_demo",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:acb8651eeb7a680dbae720d0d203b3c321de301d75687555b6e207456ab64f3b",
+                        "title": "clientes",
+                        "properties": [
+                            {
+                                "id": "col:ddc7e5e28a4d68bd5d76bc33cd3e39835914b9bc891ff9958e81e2ae6d25f4d1",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:f8783ae265982649b60f1800d768f4e90faddb4bca92212c6be6831323c09af8",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:ab375219b5aea64988ffc3f7f1789a2680f40f10532a33b330e6f40651a38ce6",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "col:a6b300f90a8f96efdd6db7877228ee8f1765421286593094c9caebf657cf24f0",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:1ca3954f4afa236c35781c7a87c53c74cb70d45a00b43857d94ae4025b1b6730",
+                                "text": "telefono: texto"
+                            },
+                            {
+                                "id": "col:9d54476400f69e3ea61e3266ba18121a870d5947918241fa6394e6aee72fc97e",
+                                "text": "empresa: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:44c3b5ea8160abdbf33f14dc067e9ca56b3a6d546dd962144318b34f0ecc3db8",
+                        "title": "productos",
+                        "properties": [
+                            {
+                                "id": "col:37e44cdf2435ff94036341b9e7a2ed6bae949e054ce5ffbf424bb6d15ed03d71",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:a16c161fa53146e561ade01cd8286ae52f801b5f77a249980fda860c768b59ff",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:cafce88d5426cfb9098194be7f80930bbfee00895394506f27bc64cba496f581",
+                                "text": "categoria: texto"
+                            },
+                            {
+                                "id": "col:010d15d9be5411a4970c7a64b47be0f4c9964e0c1366a5eebf75e9c72b631434",
+                                "text": "precio: texto"
+                            },
+                            {
+                                "id": "col:f3f47a2150728d57c93aaa8d11c2e31bda5d12c6f4f975c2f29132f9cb3cae52",
+                                "text": "stock: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 430,
+                        "y": 100
+                    }
+                ],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:empresaprueba2",
+            "name": "empresaprueba2",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:f4167a11875bbb56e4406f68a1a8c17101f09779cba82f3397c2934f5e526f6f",
+                        "title": "clientes",
+                        "properties": [
+                            {
+                                "id": "col:d1c2b4c03cb3a993a0ec4426c2d7cf439af6ae634c877e9fc8c74e35fa94ecbf",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:bac83eee205a000dfaf100335edb0fdb93ce6a2375b974d8759b9d8fb52c59b8",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:d218b6f814d357cdcd68e490e1022f9c5d7ca5df6e0e4cb321110510f47ca9be",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "col:fcc1e100b82903fd6e2b794c6f4ab5a962f7c97896985bea17159028638859e2",
+                                "text": "email: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    }
+                ],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:jocarsa-erp",
+            "name": "jocarsa-erp",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:a9aaae29eb81e60070752fe8582e2482de585b5bbbeb7a080e5c4f469a2fd0b1",
+                        "title": "articulosblog",
+                        "properties": [
+                            {
+                                "id": "col:4b4872dfc27cfd9adcccd1857395cbdcda7dccf4d2905bc243258d2ecd159fd0",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:f081adada385ce8278f5f0ff4e67b61bebca7922c46a397e0eba7ad353fd5c9c",
+                                "text": "titulo: texto"
+                            },
+                            {
+                                "id": "col:5aa27d4d2fb058856a750ad570b810d39611e757494f3c1e12c636d035b633a5",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:5c2f58d233b93cafbf83220be28ab2a1d6e7f550a074d42300dafa6acc0626e6",
+                                "text": "contenido: texto"
+                            }
+                        ],
+                        "categories": [
+                            "marketing"
+                        ],
+                        "x": -477.4199774428823,
+                        "y": -84.77377745556936
+                    },
+                    {
+                        "id": "table:b45b67f9df12b4272b583d2b62c6dc74162ce430ffe2e1e24ba304a98c40ea19",
+                        "title": "categorias",
+                        "properties": [
+                            {
+                                "id": "col:cf7e037b5d83961d8d232cebe0e8d369a365cf142c43e1bdaae25e17f4206478",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:41518a79d581e748d0e186a64574f86f98072dfa6abb518d0b005f7106407374",
+                                "text": "nombre: texto"
+                            }
+                        ],
+                        "categories": [
+                            "marketing",
+                            "produccion"
+                        ],
+                        "x": -314.50478022932475,
+                        "y": 828.5153619994095
+                    },
+                    {
+                        "id": "table:e9cf34e533ce1852704054b094ea12edacb1160b4d43e0a68342b4c05572e60a",
+                        "title": "cliente",
+                        "properties": [
+                            {
+                                "id": "col:7ef6ded543beeb338622777e6b1feb575be7412278de7b2c8bb3b3fd0c6d7e12",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:b22156a09ce84e577261faeca034b1480835eef51e5da25f08dbb45f99482c02",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:0ece592b13b1c95a0a2ce88472553958ae4986e48d29cd8610d979b17f02732c",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "col:b89f79c96d71760260427cc20bc85fcb21a40671a3f61cd1df358f9dcdc440e2",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:e5539aa411f164d284d8d17991ddb4289434292dcc604ff14fc8f90d6ce54fcf",
+                                "text": "oportunidad: entero"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "direccion",
+                            "ventas"
+                        ],
+                        "x": 465.5879177751544,
+                        "y": 22.740182818063516
+                    },
+                    {
+                        "id": "table:083b726c5c4e9415ce6d41b5ef8497d2d0e3d0a7cb69e0245d12e16d0ad18d51",
+                        "title": "contabilidad",
+                        "properties": [
+                            {
+                                "id": "col:1fc09c9d11b61a9a8b5f19067b04eb3b7e6e36fd23beb274f78b40c506ed9954",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:2832860dcf9c1e2118244545f67574cbd96147797d505ec77ad549e30ebc4da8",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:e021e3d4fa3b9108ad20cdc7f508b984c3b13b8752550575ddf051ebc4572602",
+                                "text": "factura: entero"
+                            },
+                            {
+                                "id": "col:b9edb268d1b277aa777f7fa67088b736ae4dcb97a042bce0bf1f03512a2da0d6",
+                                "text": "gasto: entero"
+                            },
+                            {
+                                "id": "col:f76febc7fc56c779051652e72beba9a1823bcb6c6a9d18658ec2d35817cf996a",
+                                "text": "descripcion: texto"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "direccion"
+                        ],
+                        "x": 1855.3727974236126,
+                        "y": 194.378759883668
+                    },
+                    {
+                        "id": "table:c6b8cf3b5ebcd59484c493e3583aa6d4042c76a2d1c02dc3cff00feacc1ed326",
+                        "title": "crimson_api_endpoints",
+                        "properties": [
+                            {
+                                "id": "col:802defeb68f853eb9dc90f1a61d2896d547a8d4b5de8426c9b7a87814425fcb3",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:2539acafdc0f4e7adf89f09c54c3571b15458965d92270785820038084667fd4",
+                                "text": "entidad: texto"
+                            },
+                            {
+                                "id": "col:598e8914b73cf0db2d576272ed56dc96a52fb87d56d0896ca99d33526b49711a",
+                                "text": "ruta: texto"
+                            },
+                            {
+                                "id": "col:4b4d05c983c3d1ddaf43ef156a7109dd0a7fb82d2fbe7101aa73692d2cda7ef4",
+                                "text": "__crimson_activo: entero"
+                            },
+                            {
+                                "id": "col:3e28ee378bd91a01ae4e81520867aae376fe7fadbb7fd05fb12f53f173dfcff3",
+                                "text": "campos: texto"
+                            },
+                            {
+                                "id": "col:72bb6e52eba60ff512f368045e351e3362c82e5b698f64d2b7bbc46a891c53d6",
+                                "text": "metodos: texto"
+                            },
+                            {
+                                "id": "col:df1b708b683dcfc353fe7c0e7acaecdc21f4ae9a4904fb59b3ed6d0b3a7a8b47",
+                                "text": "key_hash: texto"
+                            },
+                            {
+                                "id": "col:a0d61ef17496b9865d76e595f80fa45ec2c7f3dfe485b4f566d7d312002c171d",
+                                "text": "key_prefix: texto"
+                            },
+                            {
+                                "id": "col:63772ad67dbf8cd8eed0287a96fba61ef9121a9c6ae378da5fa1099a4e0fcb2e",
+                                "text": "creado: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1450.6499835607317,
+                        "y": 865.8779713415666
+                    },
+                    {
+                        "id": "table:4b39d9a97c12bb27f8937118b7acb5ec034b21f68a104d3c2c78e25aa523b13f",
+                        "title": "crimson_api_logs",
+                        "properties": [
+                            {
+                                "id": "col:9c429fbbfcf17582c8ea7424615b0841d13dff4c3812d6563b4746fb91c4d4c9",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:b810c4992f3731dfdfe4bfa58af2e7adb8de7eb164363aad0e1c5f02af12f737",
+                                "text": "ruta: texto"
+                            },
+                            {
+                                "id": "col:aea1282d127798cb2f9ed629806e4e5c6834a761da65a80f824158db5a9b5846",
+                                "text": "metodo: texto"
+                            },
+                            {
+                                "id": "col:876406c69462725b7aa26272d10d006ee3c89640b7b6c0f243d1c22327553f91",
+                                "text": "estado: entero"
+                            },
+                            {
+                                "id": "col:84ae0d6fc23c3632e8b1ec2cc43dc61ec4df9de4fffa85fc9b4486385ad42e03",
+                                "text": "fecha: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1075.7831853684263,
+                        "y": 846.2271731521889
+                    },
+                    {
+                        "id": "table:16873d4663cabde31f6fc24672a5f73ca014a764da6c929719ae1bd519df7212",
+                        "title": "crimson_permissions",
+                        "properties": [
+                            {
+                                "id": "col:114a4a408dbf4794e1bdb7e8e234e532a2d2926f589fef34e042e765c77cd662",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:a9860cb145a7b673e362cfab01ffc5b89a3d3a07700526ab8a9d532411ed37c4",
+                                "text": "usuario_id: entero"
+                            },
+                            {
+                                "id": "col:0aafc8e3d5bf2b069d0808185880b670f4b5ed93db2d72d46aa35606ec1d01e6",
+                                "text": "modulo: texto"
+                            },
+                            {
+                                "id": "col:ed6007a701bfaecaf161235287a940d553ba4e2636cf048cfefe6104e1546d9e",
+                                "text": "puede_seleccionar: entero"
+                            },
+                            {
+                                "id": "col:5a589dc35ae5151e90b211df06e465a0cdab60aacf1edb32cb8099233c4daaab",
+                                "text": "puede_insertar: entero"
+                            },
+                            {
+                                "id": "col:58453558ffa8b8c945c7171d74d321fe5793833d4c50fdaa04475ca3bdd7a4f6",
+                                "text": "puede_actualizar: entero"
+                            },
+                            {
+                                "id": "col:9466610d5f6917d39dc3411544f6ad8e7f224187a11bb185c2064ddc99a35250",
+                                "text": "puede_eliminar: entero"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1033.5462221969233,
+                        "y": 461.3930768045151
+                    },
+                    {
+                        "id": "table:7b0184e921f76610b0e3561a70ede3fe8f45f8f19b6f9cc4381f75d293838153",
+                        "title": "crimson_prueba_insert_120e089a",
+                        "properties": [
+                            {
+                                "id": "col:493834f5512ce9fc82444d52bb6e71a48b44525de8892f0f0406d9d3dd22bf44",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:cf4bf83c05ace7a34d248550d4258282c129e4e69448d8736313c2427b4c2625",
+                                "text": "nombre: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1455.6269387118866,
+                        "y": 1357.7587628760011
+                    },
+                    {
+                        "id": "table:f23ebc8e12084a1bbd8f18e4365e51a7edcbef606159aaa4d907555b00663adc",
+                        "title": "crimson_test_api_0361e24f",
+                        "properties": [
+                            {
+                                "id": "col:4697b310487b2c0fd34e5f38b86c36f32d8bee98bffc61f2e1c2792527301a3e",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:9e749a83366550daad7a29e87d5a9258f5f157905595bdfc95556e952d39142c",
+                                "text": "entidad: texto"
+                            },
+                            {
+                                "id": "col:390a5196df5855aa2475e152ce7bf5c1977745620ff88c754adacd30287f4ec9",
+                                "text": "ruta: texto"
+                            },
+                            {
+                                "id": "col:f5c793acb28ac9a0b798b602cf60ba0a6c229aab4f84186a8a3b86aa57bb84ef",
+                                "text": "__crimson_activo: texto"
+                            },
+                            {
+                                "id": "col:751df70bd51110bce01a493eedc166ac53b09c95f7b934b64a20d6be34f90155",
+                                "text": "campos: texto"
+                            },
+                            {
+                                "id": "col:4312390c76ffbd8e1a8792538b00306e8bb80c239022bed682b571b8a7864fc0",
+                                "text": "metodos: texto"
+                            },
+                            {
+                                "id": "col:7d6301a7b794853a3e00f89d1fdef4edebc63fa6faf87f84951b95a0690284a8",
+                                "text": "key_hash: texto"
+                            },
+                            {
+                                "id": "col:1540042db26cc45e0b1c4f758fff25ef078a980862a6536f6ec5bae663e50e84",
+                                "text": "key_prefix: texto"
+                            },
+                            {
+                                "id": "col:b25c8fb405895cc375dedecd31d663f473e6aad867b8af4ffde1a0a6024dad63",
+                                "text": "creado: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -740.7423940282814,
+                        "y": 917.1159150039525
+                    },
+                    {
+                        "id": "table:bd6fa3a7b80459444eda7156b0acb989335130b5132c02cfff081daae7278e38",
+                        "title": "crimson_test_base64_30d12b7a",
+                        "properties": [
+                            {
+                                "id": "col:6c295695c46a76f14bd2547f70e373c7819e78354611ad981b72561d1c761e33",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:5542fb25b3a412e92754a078ba138970829d5b85aabb9248426bbb17c10b0a75",
+                                "text": "contenido: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1079.5218334241824,
+                        "y": 1144.309810646408
+                    },
+                    {
+                        "id": "table:523b5830b86845ba45faa38c9ff8f0a1f30c8373548db24069d596eff19aba9c",
+                        "title": "crimson_test_campos_d448e9e5",
+                        "properties": [
+                            {
+                                "id": "col:d46891a49cf15a4ee1f10f019d8236dd307098c6712cd5113f03a766724e67ea",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:c7987b2ec4c64975fa042234c159c99d18276df5de5be41d857525052ab98df5",
+                                "text": "campos: texto"
+                            },
+                            {
+                                "id": "col:afbff0f2b02ace08ee7806cc894a590067e64c9007a0d0e5d53691e1b4f460be",
+                                "text": "campos_api: texto"
+                            },
+                            {
+                                "id": "col:92a85f7ce11608e4dad8b0fac4f6fce41a3303940a9d6b65e54b07374e4010aa",
+                                "text": "nombre: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1130.909742233052,
+                        "y": 1379.1925907503244
+                    },
+                    {
+                        "id": "table:65d30a4874de94293ffa7a5019e124295abc647f8567a1a2737b7336e79ca3dd",
+                        "title": "crimson_ui_config",
+                        "properties": [
+                            {
+                                "id": "col:8db8c1cdb9cc34e936fcb853d8eb4a4dc149ecdac1fcc881c2804d1cfe7ca236",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:454746bd876acf2859160010e107f661e1e3044db15491a4ac7b5d8999f8ffae",
+                                "text": "entidad: texto"
+                            },
+                            {
+                                "id": "col:171b38170d395fd43b0f8bd11cd29bc625a85339ab95617016e4f154af855cee",
+                                "text": "tipo: texto"
+                            },
+                            {
+                                "id": "col:1d33ff20434f3ca83d1e663dd316e10a5408aa1540b21f6f288c6d2769ebc6dc",
+                                "text": "contenido: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1429.4798155581404,
+                        "y": 192.8671368912525
+                    },
+                    {
+                        "id": "table:e350c98de068bdee0522ddec3902c5baad0f59472d780e92d8318a209e904d02",
+                        "title": "crimson_users",
+                        "properties": [
+                            {
+                                "id": "col:420745a09059ad2d0a8b1d0fed8336f670671748b830e0384551c790fc5b7898",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:e8f246c259279c5223a18ef51915888df59fc4d41aba3ddbcc380587ec49fcb9",
+                                "text": "username: texto"
+                            },
+                            {
+                                "id": "col:63efb298cf1414b5c4af57c49d682f647b5f295ae93f106ddfa9fd31e46f1eec",
+                                "text": "password_hash: texto"
+                            },
+                            {
+                                "id": "col:99e9b4700085b027bd2a10b5ce0d82b5ffe935718db821d5adc091e801e7e4c4",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:e00ff771cfbbb5cdaed067fc73b539985221fd777ba362d6ab3f0c50e2b12bcd",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:3d5152cfef5e3091e9238a75c2d7a79e7f982aaa7702d1f91cea5c749102334c",
+                                "text": "rol: texto"
+                            },
+                            {
+                                "id": "col:497b9f4490556357081d93e740763400f861cf280eb642ff892408307d150c79",
+                                "text": "__crimson_activo: entero"
+                            },
+                            {
+                                "id": "col:aff476f7de762bb1b0a6a3d56ffcabc7edcb34203b06fef459cc5aefdc6bad55",
+                                "text": "creado_en: texto"
+                            }
+                        ],
+                        "categories": [
+                            "IT"
+                        ],
+                        "x": -1445.0085806805268,
+                        "y": 456.0923156144052
+                    },
+                    {
+                        "id": "table:fc6f480b8250ceb5a00cc6dabee6280ebca695c20a40a7028f721c2abc7d29cf",
+                        "title": "facturas",
+                        "properties": [
+                            {
+                                "id": "col:b570b1f21f5b92816ee2b0b0d8ee628e09f158f99196f631def0c638c05c4968",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:698d68df96e60041255cc87a1d5b81fd77d0dc350d2a8d41883810f2e2e15e0c",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:0378e15a0930e76a30f0f2039539574b3024634f9bd6fad9dabfdc241082af92",
+                                "text": "numero: texto"
+                            },
+                            {
+                                "id": "col:fc51e9d389dc59de87539590f1c6dc99dd73685eb54ed9468f6f40b3a5fea709",
+                                "text": "pedido: entero"
+                            },
+                            {
+                                "id": "col:9ed66750013865393d25b289f3001dea829f49bfc8ce2c44586e90e8522983fc",
+                                "text": "cliente: entero"
+                            },
+                            {
+                                "id": "col:745fb152588b5b7e07cc86e83fea4cc1b39bb4db208eb3cf331ea70c56abb204",
+                                "text": "producto: entero"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "direccion"
+                        ],
+                        "x": 1436.080246368366,
+                        "y": 574.0573478721234
+                    },
+                    {
+                        "id": "table:222334a317d8d1aa352b61b245b0155a3634c5e7fd635c3ac99e7e081cdb41a9",
+                        "title": "gastos",
+                        "properties": [
+                            {
+                                "id": "col:e075ad95c72900686bfdf97989d606b63a0fe57325b29457f86544d12f708d67",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:f49ce6f09da771fe73afb92ad2d5530e1a41039ad0a751c0817cecb75e157905",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:b84d98713604cdd3578aeaa8ea5235e2ac17d6ddb894f6f7962e91a3b5f5401a",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:fb59a49e2f366c7507e100b292fd55f56a5331330be8907b289a62eebdbb360c",
+                                "text": "importe: decimal"
+                            },
+                            {
+                                "id": "col:704223afd152f618faf2c773ab4a9e294fa59545683d9bf62bd36c654ee89732",
+                                "text": "descripcion: texto"
+                            }
+                        ],
+                        "categories": [
+                            "administracion"
+                        ],
+                        "x": 1291.0445203982567,
+                        "y": 202.79963486834896
+                    },
+                    {
+                        "id": "ae40fde4-6c4e-4e8d-b10c-2d5a1a673e1b",
+                        "title": "oportunidades",
+                        "properties": [
+                            {
+                                "id": "d7597bc5-a655-4284-aa25-0b67632ff811",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "bd40c7e0-4edd-4770-8c82-9df305f41d3b",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "424202dc-9db9-4f7b-b7a1-afe90ca823c2",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "16a41f0c-2e59-4bef-b079-b543f1c4980b",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "47874e09-053f-4c42-8f95-8fe420a63604",
+                                "text": "suscriptor: entero"
+                            },
+                            {
+                                "id": "59a998ab-ac32-4aac-9572-9cfe35ba3c41",
+                                "text": "estado: texto"
+                            },
+                            {
+                                "id": "e9a9f5d6-fd08-4bb7-b107-44552ee8a9c8",
+                                "text": "promocion: texto"
+                            },
+                            {
+                                "id": "747190aa-f3ea-4ccc-acea-2217ab5f29d6",
+                                "text": "nombre y apellidos: texto"
+                            },
+                            {
+                                "id": "bd6ccedb-582c-49c3-aac0-053d34a5dd49",
+                                "text": "empresa: texto"
+                            },
+                            {
+                                "id": "5cd15316-9ff9-4928-815c-111b33c67204",
+                                "text": "tipodeproyecto: texto"
+                            },
+                            {
+                                "id": "de88fc3a-c1a8-492a-ad82-8a80159aeb8f",
+                                "text": "mensaje: texto"
+                            }
+                        ],
+                        "categories": [
+                            "marketing",
+                            "ventas"
+                        ],
+                        "x": -547.3988966982598,
+                        "y": 244.95069139827706
+                    },
+                    {
+                        "id": "table:bfc486445f3ddb433af46dbe03b35b03dbac0c891ba8ff2d86485c0637866b5b",
+                        "title": "pedidos",
+                        "properties": [
+                            {
+                                "id": "col:b876464ae5e8ca78e9b043b1206395a67e2937b9df59f469df67b001ea2513c5",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:0d5437e97852cb420b08e4fe2e05088aa0b2f6ec3273c46f4795bca719cfff1d",
+                                "text": "cliente: entero"
+                            },
+                            {
+                                "id": "col:b856bbad8548d2d7a7fbe135316c032c2e31edc60900e68d936d4ce70e611613",
+                                "text": "productos: entero"
+                            },
+                            {
+                                "id": "col:b1a0c5f1a7b95b28d13ea1d311d20c9e6956911ff1ac7fa5147eef8f3f57538f",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:8f01f653aef2922291f2d05b2c34f9e96103207d90cae44447c556fc6fa5d8ed",
+                                "text": "cantidad: entero"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "ventas"
+                        ],
+                        "x": 876.6780802731845,
+                        "y": 193.74955903365648
+                    },
+                    {
+                        "id": "table:98d525b3bde1801ce5f5928d3fd77af7856bb2ef25701af5ecd4e06a3c121389",
+                        "title": "productos",
+                        "properties": [
+                            {
+                                "id": "col:ddf6065d8465ee482c061bda8d8b7e3285ebbf61d017005dea7620ab021e5be1",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:799513c629d3c82f0aee4b0a24828be03a3ce6dd5a0d55cd16c60f6f5941cf88",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:c7a3c809d68c3a748dcacdd100c09e7d3500a6a6ed5edcd4ea00d60d2b6fdbae",
+                                "text": "descripcion: texto"
+                            },
+                            {
+                                "id": "col:41fd4f7d824107b90ac4109b14ef84fc8fcf66db83ec9d4d0498985bc464a8c6",
+                                "text": "categoria: entero"
+                            },
+                            {
+                                "id": "col:d1cf9b22853c56ee2d655dd84ba1d2f1839a7cb3250c90c2ba9d410552f7e580",
+                                "text": "precio: decimal"
+                            },
+                            {
+                                "id": "4a0f74fd-d4c2-4f35-ac5a-df86ab229861",
+                                "text": "color: texto"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "marketing",
+                            "produccion",
+                            "soporte",
+                            "ventas"
+                        ],
+                        "x": 147.44769159446957,
+                        "y": 492.03826522282804
+                    },
+                    {
+                        "id": "table:3d4dc463ab2e12eca8bf43f2d6c64769eccfb6dfddc3c2b17e017b193fd0b3c2",
+                        "title": "tickets",
+                        "properties": [
+                            {
+                                "id": "col:eb9c6d7c9608203a6663a2170dec19cb5f8447ab4990296045c2395a0521ff08",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:1b69b7d8eb160a292990c741c583b924626e03f2170843b4210982da52939905",
+                                "text": "producto: entero"
+                            },
+                            {
+                                "id": "col:761d5ea39d55f8362ab49d5f0199ebe0b3488f66521d2a2b2c9552796c6139aa",
+                                "text": "cliente: entero"
+                            },
+                            {
+                                "id": "col:a53960cac8d2feb9ba850edf201d9ee8658033cef17245f417a5d154ec9e741f",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:7e0c855e389926bae10837f412e092c397e76702119d7daa6ca8233ebeaed18f",
+                                "text": "titulo: texto"
+                            },
+                            {
+                                "id": "col:890610a3daf6eedc0d37be15ae74209380f1b192882d6b8db04263e1f2ba29f1",
+                                "text": "descripcion: texto"
+                            },
+                            {
+                                "id": "col:5d399ab3e2eb18cf093e3b29e26e892dac12a67b24892520a4c23ab8940cb20f",
+                                "text": "estado: entero"
+                            }
+                        ],
+                        "categories": [
+                            "soporte"
+                        ],
+                        "x": 921.6074402192893,
+                        "y": 879.6289171230842
+                    },
+                    {
+                        "id": "762c0957-c660-432b-8f9b-871ea1486028",
+                        "title": "modalidades",
+                        "categories": [
+                            "marketing"
+                        ],
+                        "properties": [
+                            {
+                                "id": "2c7294af-caf9-4ae0-a01c-a2f2cd351543",
+                                "text": "id:integer"
+                            },
+                            {
+                                "id": "881dc1fb-a6b0-43bc-85e0-bbbaf632bd07",
+                                "text": "nombre:text"
+                            }
+                        ],
+                        "x": -72.51551007338468,
+                        "y": -86.4757261607336
+                    },
+                    {
+                        "id": "44c1f1dd-c20e-4d1e-84d1-658c66fba436",
+                        "title": "casosdeexito",
+                        "categories": [
+                            "marketing"
+                        ],
+                        "properties": [
+                            {
+                                "id": "311c8b4a-9259-4516-b40f-cd88db061cca",
+                                "text": "id:integer"
+                            },
+                            {
+                                "id": "dc8cb19d-a16b-45ca-baad-2b0284c73a41",
+                                "text": "titulo:text"
+                            },
+                            {
+                                "id": "dbb5e3ea-ae29-466e-a5e7-0d10c6b0d615",
+                                "text": "texto:text"
+                            }
+                        ],
+                        "x": -158.8962406680005,
+                        "y": 178.43005530570923
+                    },
+                    {
+                        "id": "73d35ee9-489e-4269-98ca-eab9557c628a",
+                        "title": "testimonios",
+                        "categories": [
+                            "marketing"
+                        ],
+                        "properties": [
+                            {
+                                "id": "093e8665-c763-410d-93a8-31d0d817ada9",
+                                "text": "id:integer"
+                            },
+                            {
+                                "id": "88c10493-2c8d-4449-ad75-d3cb8ca5cbb3",
+                                "text": "titulo:text"
+                            },
+                            {
+                                "id": "5c6917d9-ec2d-4e42-b643-8b1961a36d7f",
+                                "text": "contenido:text"
+                            }
+                        ],
+                        "x": -195.13927767838803,
+                        "y": 498.6595731701089
+                    }
+                ],
+                "links": [
+                    {
+                        "id": "fk:175ecfa8863234d7347f595dcf0ed435279a6031d1034369aa8ff78aefa1f791",
+                        "from": "table:fc6f480b8250ceb5a00cc6dabee6280ebca695c20a40a7028f721c2abc7d29cf",
+                        "fromProp": "col:b570b1f21f5b92816ee2b0b0d8ee628e09f158f99196f631def0c638c05c4968",
+                        "to": "table:083b726c5c4e9415ce6d41b5ef8497d2d0e3d0a7cb69e0245d12e16d0ad18d51",
+                        "toProp": "col:e021e3d4fa3b9108ad20cdc7f508b984c3b13b8752550575ddf051ebc4572602"
+                    },
+                    {
+                        "id": "fk:824e5e63520e0a6af64b2e5edba14d81e97cc0d64bd611067002095fb0f7244f",
+                        "from": "table:222334a317d8d1aa352b61b245b0155a3634c5e7fd635c3ac99e7e081cdb41a9",
+                        "fromProp": "col:e075ad95c72900686bfdf97989d606b63a0fe57325b29457f86544d12f708d67",
+                        "to": "table:083b726c5c4e9415ce6d41b5ef8497d2d0e3d0a7cb69e0245d12e16d0ad18d51",
+                        "toProp": "col:b9edb268d1b277aa777f7fa67088b736ae4dcb97a042bce0bf1f03512a2da0d6"
+                    },
+                    {
+                        "id": "fk:82c81e584e696c16efe1be57c40e299dc21640eb0cee2558daa6c5b88dd00c4d",
+                        "from": "table:e350c98de068bdee0522ddec3902c5baad0f59472d780e92d8318a209e904d02",
+                        "fromProp": "col:420745a09059ad2d0a8b1d0fed8336f670671748b830e0384551c790fc5b7898",
+                        "to": "table:16873d4663cabde31f6fc24672a5f73ca014a764da6c929719ae1bd519df7212",
+                        "toProp": "col:a9860cb145a7b673e362cfab01ffc5b89a3d3a07700526ab8a9d532411ed37c4"
+                    },
+                    {
+                        "id": "fk:7cb81eaea59e005d789b36e1c38ea045e26bfba5bfaabd98c9ef67fe08eaebd9",
+                        "from": "table:bfc486445f3ddb433af46dbe03b35b03dbac0c891ba8ff2d86485c0637866b5b",
+                        "fromProp": "col:b876464ae5e8ca78e9b043b1206395a67e2937b9df59f469df67b001ea2513c5",
+                        "to": "table:fc6f480b8250ceb5a00cc6dabee6280ebca695c20a40a7028f721c2abc7d29cf",
+                        "toProp": "col:fc51e9d389dc59de87539590f1c6dc99dd73685eb54ed9468f6f40b3a5fea709"
+                    },
+                    {
+                        "id": "fk:a335a8c969681fcfcab4aaa0f602c80f47542ee1d5bbdc29dc78c200c079dbd7",
+                        "from": "table:e9cf34e533ce1852704054b094ea12edacb1160b4d43e0a68342b4c05572e60a",
+                        "fromProp": "col:7ef6ded543beeb338622777e6b1feb575be7412278de7b2c8bb3b3fd0c6d7e12",
+                        "to": "table:fc6f480b8250ceb5a00cc6dabee6280ebca695c20a40a7028f721c2abc7d29cf",
+                        "toProp": "col:9ed66750013865393d25b289f3001dea829f49bfc8ce2c44586e90e8522983fc"
+                    },
+                    {
+                        "id": "fk:6e481a8c4b5e16366f26115ca3e9398d9f2436b88ddd0449a337afb67715d765",
+                        "from": "table:98d525b3bde1801ce5f5928d3fd77af7856bb2ef25701af5ecd4e06a3c121389",
+                        "fromProp": "col:ddf6065d8465ee482c061bda8d8b7e3285ebbf61d017005dea7620ab021e5be1",
+                        "to": "table:fc6f480b8250ceb5a00cc6dabee6280ebca695c20a40a7028f721c2abc7d29cf",
+                        "toProp": "col:745fb152588b5b7e07cc86e83fea4cc1b39bb4db208eb3cf331ea70c56abb204"
+                    },
+                    {
+                        "id": "fk:3d463669e71940571c9e6a0eaa47e79e4041b144c7c9dbbbcdd3f98ceae19e57",
+                        "from": "table:e9cf34e533ce1852704054b094ea12edacb1160b4d43e0a68342b4c05572e60a",
+                        "fromProp": "col:7ef6ded543beeb338622777e6b1feb575be7412278de7b2c8bb3b3fd0c6d7e12",
+                        "to": "table:bfc486445f3ddb433af46dbe03b35b03dbac0c891ba8ff2d86485c0637866b5b",
+                        "toProp": "col:0d5437e97852cb420b08e4fe2e05088aa0b2f6ec3273c46f4795bca719cfff1d"
+                    },
+                    {
+                        "id": "fk:d2c3e72fc5ac161941019deccf802955a86fda3928bdfccb386c4bd4b1e1e390",
+                        "from": "table:98d525b3bde1801ce5f5928d3fd77af7856bb2ef25701af5ecd4e06a3c121389",
+                        "fromProp": "col:ddf6065d8465ee482c061bda8d8b7e3285ebbf61d017005dea7620ab021e5be1",
+                        "to": "table:bfc486445f3ddb433af46dbe03b35b03dbac0c891ba8ff2d86485c0637866b5b",
+                        "toProp": "col:b856bbad8548d2d7a7fbe135316c032c2e31edc60900e68d936d4ce70e611613"
+                    },
+                    {
+                        "id": "fk:24964b47c97b1fb735a692b019beb07c0b0b0182faeaf06cfacf1d1dcac8f6a7",
+                        "from": "table:b45b67f9df12b4272b583d2b62c6dc74162ce430ffe2e1e24ba304a98c40ea19",
+                        "fromProp": "col:cf7e037b5d83961d8d232cebe0e8d369a365cf142c43e1bdaae25e17f4206478",
+                        "to": "table:98d525b3bde1801ce5f5928d3fd77af7856bb2ef25701af5ecd4e06a3c121389",
+                        "toProp": "col:41fd4f7d824107b90ac4109b14ef84fc8fcf66db83ec9d4d0498985bc464a8c6"
+                    },
+                    {
+                        "id": "fk:546e47ff1915b37dc16c1940b1bd869892e3b33b7e72f0391021f8c786c73509",
+                        "from": "table:98d525b3bde1801ce5f5928d3fd77af7856bb2ef25701af5ecd4e06a3c121389",
+                        "fromProp": "col:ddf6065d8465ee482c061bda8d8b7e3285ebbf61d017005dea7620ab021e5be1",
+                        "to": "table:3d4dc463ab2e12eca8bf43f2d6c64769eccfb6dfddc3c2b17e017b193fd0b3c2",
+                        "toProp": "col:1b69b7d8eb160a292990c741c583b924626e03f2170843b4210982da52939905"
+                    },
+                    {
+                        "id": "fk:3c4edbbc4daa2bddd3354c546e4e46a5443cfbfba4f314d05381e3fb79cd1f53",
+                        "from": "table:e9cf34e533ce1852704054b094ea12edacb1160b4d43e0a68342b4c05572e60a",
+                        "fromProp": "col:7ef6ded543beeb338622777e6b1feb575be7412278de7b2c8bb3b3fd0c6d7e12",
+                        "to": "table:3d4dc463ab2e12eca8bf43f2d6c64769eccfb6dfddc3c2b17e017b193fd0b3c2",
+                        "toProp": "col:761d5ea39d55f8362ab49d5f0199ebe0b3488f66521d2a2b2c9552796c6139aa"
+                    }
+                ]
+            },
+            "view": {
+                "x": 1951.1064120740848,
+                "y": -1059.6783148003162,
+                "z": 1.140219509167694
+            },
+            "collectionLabels": {
+                "marketing": "marketing",
+                "produccion": "produccion",
+                "administracion": "administracion",
+                "ventas": "ventas",
+                "soporte": "soporte",
+                "direccion": "direccion",
+                "it": "IT"
+            }
+        },
+        {
+            "id": "db:prueba_php_completa",
+            "name": "prueba_php_completa",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:855dd8c6b6a3cd6532a12dd5fd219b2e6d15a0d497b245536aa28cec153c39a0",
+                        "title": "clientes",
+                        "properties": [
+                            {
+                                "id": "col:92b440068dff6368eaca544a2bb5c12492fd774f26dbf2ef6aa4ec486e2d4608",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:98a81802085a0340470f388621f6f27f4d2e84c5481fdbdd999cd8a1cd00185a",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:1f0911d73b30dac53b07cd4c3379fdb5aa2527d13f9eb9e3f906d8322083543a",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:ab69e2687d1390ebf078d486637234ae7043c0b046f37a14c7da415448513b4f",
+                                "text": "saldo: decimal"
+                            },
+                            {
+                                "id": "col:2801197ae247bb974e557be8cd4f57fe2ad7435f8537116965f9f4ffba158510",
+                                "text": "alta: fecha"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:b3611caf9e72bf105b09be19ae7677512d31a092765c8ccb0ce8ddc0e687b1ea",
+                        "title": "pedidos",
+                        "properties": [
+                            {
+                                "id": "col:8cb719b3b71e809807b7b637bc4b46a4be1f2b1078cee4c7668fd1958080df41",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:c9d359a0c316ecbcac4cb5aade2473afe3ea6e3f2b8dad5897cf48457e472c03",
+                                "text": "id_cliente: entero"
+                            },
+                            {
+                                "id": "col:bf307344316fe9255411b4cf2aa258d266b68167800307a5080c2e8b26753cd9",
+                                "text": "total: decimal"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 430,
+                        "y": 100
+                    }
+                ],
+                "links": [
+                    {
+                        "id": "fk:10f916df052789d4cb724d467d18905bb37caa8450f7ce8c83d677efeebad862",
+                        "from": "table:855dd8c6b6a3cd6532a12dd5fd219b2e6d15a0d497b245536aa28cec153c39a0",
+                        "fromProp": "col:92b440068dff6368eaca544a2bb5c12492fd774f26dbf2ef6aa4ec486e2d4608",
+                        "to": "table:b3611caf9e72bf105b09be19ae7677512d31a092765c8ccb0ce8ddc0e687b1ea",
+                        "toProp": "col:c9d359a0c316ecbcac4cb5aade2473afe3ea6e3f2b8dad5897cf48457e472c03"
+                    }
+                ]
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:pruebaenclase",
+            "name": "pruebaenclase",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:d9844eb5d64983a192c874681f0d16c83b3f9d3a33269e92ac22f4d0ac807474",
+                        "title": "clientes",
+                        "properties": [
+                            {
+                                "id": "col:73d366bdbbc054286bcf45cc7efc3659bfb7dd011f87a7956fb5200ad71224fc",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:a63fe1d5ea4020e2f5fd8eb18fc86821ebf33d30766f1348bd6925886b14936e",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:f0747721e4e6c25a2b06ec25f9e0146b203fb010f7db84cc6dc92868b83ad18c",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "col:3911f6b913b1f8326e39013c0b6e1043674b75276ff3af670f403d87d7481bfc",
+                                "text": "telefono: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    }
+                ],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:tienda",
+            "name": "tienda",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:462919262da3779225850d758e291de75418b3519ff73594c9028ae412d2a171",
+                        "title": "clientes",
+                        "properties": [
+                            {
+                                "id": "col:59d0ab9540ef906d54d37bdae7d79279948008b1962b397b3937a846f08b72d0",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:f6ff56a2788a704019784933b01d8619a0d9604b06c9317ca043cc5d5de2afe0",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:9071781e292c71f03bd3dd3635f2c7c426b4f0021a8b4c4187776d2f35366d8b",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "col:0222b3b6d9b37197cbf8323f0b2fe8718b9c81138d14c1c4962cbf692d3e93fc",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:ccc5095640fb0e1b1d10fa53fb2a8fbc80bfd7bdb9d8a7a085dc87078cf19eb5",
+                                "text": "edad: texto"
+                            },
+                            {
+                                "id": "col:670f4acfa8cff8cd95769151e941781817aff604065a489ccaab0285d1dc37ca",
+                                "text": "ciudad: texto"
+                            }
+                        ],
+                        "categories": [],
+                        "x": 100,
+                        "y": 100
+                    }
+                ],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:visual_4973b2b8cf682405",
+            "name": "visual_4973b2b8cf682405",
+            "data": {
+                "entities": [
+                    {
+                        "id": "table:7203900107d4647b472e640ec95286ea5b8544f45e37390c44e5cd24f435d190",
+                        "title": "articulosblog",
+                        "properties": [
+                            {
+                                "id": "col:8b4bcdc1d5c51ba4aee0be993d4731de59a7b9794b26c9422f41c29d912f4707",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:9a17b1e37af049ffe4ea3e0cfd047154d29d3e347d6fee230224066424eb89c6",
+                                "text": "titulo: texto"
+                            },
+                            {
+                                "id": "col:75ad4ba91e5d16c2aac2991049d1b4090b632b09f132e8cd750b35041cf1da28",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:c7413844b2f10e3d2b628df899fc9519a14b9d0881e91034fcaad1130d2234fe",
+                                "text": "contenido: texto"
+                            }
+                        ],
+                        "categories": [
+                            "marketing"
+                        ],
+                        "x": 100,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:3d1abb87032e94546ab558d2c0fc2b54547f21f020ec33ed23141cbc2425903e",
+                        "title": "cliente",
+                        "properties": [
+                            {
+                                "id": "col:2e750c35ad61bfaed934956e5032236ee2c1664e763c28f7c127987c592a1022",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:235e5aa3b90eba9cccaca6cdb762f7c968d61b639dfb5679adba6c0c178b0e61",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:f0a433ab3f8b6e34509e037eb7084e9dcdc4b60f99ce83456f768796851c78e2",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "col:38b5326ae6f001c5a435955eb7773f885e2fc25da70b8753b73e64d6def191a6",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:9df6efb5e0aab796a276faa9347914714db7b932514b90fbf738e66ff3829831",
+                                "text": "oportunidad: entero"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "ventas"
+                        ],
+                        "x": 430,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:d157d0a290599d66afe6c75aa8d51d68f7d151e5a51e208bf8cd6f28b51b80a2",
+                        "title": "contabilidad",
+                        "properties": [
+                            {
+                                "id": "col:6d10b1950a3fd2978c91b87e68b7f37b02175888d48235946ca5e7cea4b38bf9",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:ee58bea74022322152c544f7c31603fae397354b0cc26400c2da02c72b74433a",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:59315222dd0939f3deed699c1e813e13723aa60c044313b4c5d5bd8ecab5527a",
+                                "text": "factura: entero"
+                            },
+                            {
+                                "id": "col:69ab292141d33adf59dc2e33eaa54ff6170f009edd4a7c534304b02fe6fc1653",
+                                "text": "gasto: entero"
+                            },
+                            {
+                                "id": "col:07be062f291d2f893aa75d3cb9b177ebb1b37f11765bc11fc9d55d833640e6d4",
+                                "text": "descripcion: texto"
+                            }
+                        ],
+                        "categories": [
+                            "administracion"
+                        ],
+                        "x": 760,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:0de770462e132bafc5c16875c19c76ec34fdfd94ca2702c1f247665ef9cdca18",
+                        "title": "facturas",
+                        "properties": [
+                            {
+                                "id": "col:e45ad0bbf0d0ad0e10ef002ee4b035c35562d0a98c8bb593afd013182209c47d",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:83fd58d8e6a4fd3e43d065b7bd84c054b2084d5336500c25380283b11c36248e",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:77e3a33a8f3212f8a4c881cea22a4db6acd4af8c2540aa9eb1c9f935f5e70587",
+                                "text": "numero: texto"
+                            },
+                            {
+                                "id": "col:f86c78bd4d3bffb91765fd0ec28c36425ff9c9ab745705a6aac99f24d7cc1df0",
+                                "text": "pedido: entero"
+                            },
+                            {
+                                "id": "col:ff88e60ea22702e27e29be9df2820acf8c844ec2c9081fcda71f073423a61f4b",
+                                "text": "cliente: entero"
+                            },
+                            {
+                                "id": "col:ef076c846a42db522ac2dd06bec6e8beb601ad2c25e8474e502314e5aae529a4",
+                                "text": "producto: entero"
+                            }
+                        ],
+                        "categories": [
+                            "administracion"
+                        ],
+                        "x": 1090,
+                        "y": 100
+                    },
+                    {
+                        "id": "table:7321bacbbe46b4fba4d9d341283af719aed3152b17c93ecad8b69d0cf8b7a684",
+                        "title": "gastos",
+                        "properties": [
+                            {
+                                "id": "col:3380c0e8948b5c9770741561c6dbb25511fd1d6f4c5e1674541eb1dc51746c10",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:dc8b1898796bb04f10d51d71e8eb63c89248dfdafc7b99e8992552002d323403",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:3747f0693755ec68007726d49f367cf2ecf66447fe0cba58b6fdaa3932490b94",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:7f56af84c54f295a73b5cd66beb710526ee378a79c46f995d7ac52ee3a61936a",
+                                "text": "importe: decimal"
+                            },
+                            {
+                                "id": "col:3abfd272c5d44cce828da682845903363ed78fe67e22d6d3b588cbfb8c1a36f2",
+                                "text": "descripcion: texto"
+                            }
+                        ],
+                        "categories": [
+                            "administracion"
+                        ],
+                        "x": 100,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:11208d1ccde861991f9a21a77378e3bffed5fd5167de177aae3eaaf9ee908ef9",
+                        "title": "oportunidad",
+                        "properties": [
+                            {
+                                "id": "col:0f820cb6e8ce609b5b2d629d5d35967d61c8e78716180b7d3b3b88b3d6a33195",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:dd4894994258a9ed16fdb235f00a58dce4faaae2e9ddbc46a0a4aaa3a39464e6",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:86adcac5fc2f7addfa542cbe6e05ea3bab16754f76e11ea2c967923aa6fceafa",
+                                "text": "apellidos: texto"
+                            },
+                            {
+                                "id": "col:5b6cdef0cca714f9c690002dffa26141abbb2490ab42d68995ed1d30fcb05380",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:e71f513bfcf3cbb45ed21dd47e38c39c8b409132b7c9be708fd55d405d448570",
+                                "text": "suscriptor: entero"
+                            }
+                        ],
+                        "categories": [
+                            "marketing",
+                            "ventas"
+                        ],
+                        "x": 430,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:ad3dbaf9bfa79cdf72667119abcdc5549fd6f37f3275c9cf9a80ddbe22fe71e0",
+                        "title": "pedidos",
+                        "properties": [
+                            {
+                                "id": "col:e9030bf17f0904815e54757794aec821f605d7aeefd52b64b6c459649dcd57e8",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:bdd116e09d44e3baab4ec9128e05814c857f3ab92509a75a0190b452bfef0f52",
+                                "text": "cliente: entero"
+                            },
+                            {
+                                "id": "col:ef30367b512299775465e1522b3d7d38857e4862516b8fbb05a4423b0f1e6f15",
+                                "text": "productos: entero"
+                            },
+                            {
+                                "id": "col:fbf106fca11cec99ca2cf1713ba07b3b05f1826817b1a71ec00fb391e2eb459e",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:75a8834fe9b985af253ad7f52272c8b3137e81f4b5990e31ab2c57a07fd1f187",
+                                "text": "cantidad: entero"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "ventas"
+                        ],
+                        "x": 760,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:0f09f326176a3c5006af95543fc4253c7f9cfe4ccc339e3362e18806cbbd40eb",
+                        "title": "productos",
+                        "properties": [
+                            {
+                                "id": "col:efb339dff51b09c616217efcfb94733c125a81a9ab292172b119cc5f0c55969f",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:e57dfd2ad60d9b582d2a2eb619c73c9895e90e857f37e5072cefad9d29b9dca6",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:540be5759d232f619df42c000404d87f6917d5e7006c8ac13dcdd077783f9842",
+                                "text": "descripcion: texto"
+                            },
+                            {
+                                "id": "col:67569189416c88909af31d5be5c8d7392b720f236bec816d74bcc0ae5d146575",
+                                "text": "categoria: entero"
+                            },
+                            {
+                                "id": "col:945d684a7bdf55435731aab32ac8b44a1aa2f4e59f93d3f04702443cc9a9f585",
+                                "text": "precio: decimal"
+                            }
+                        ],
+                        "categories": [
+                            "administracion",
+                            "marketing",
+                            "produccion",
+                            "soporte",
+                            "ventas"
+                        ],
+                        "x": 1090,
+                        "y": 420
+                    },
+                    {
+                        "id": "table:d18ffaa2537314f435dd5acc1e1a24337071cdef29927360cc25d536cf2a48de",
+                        "title": "suscriptores",
+                        "properties": [
+                            {
+                                "id": "col:e80ebeab88a5aecccc7a6cd52bf53e016367392031f16fab93910a4f6350fd17",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:7590bb1aecbd82161dadedf2635b0f1a862e94bc16c402e94bbd7c37b3203c70",
+                                "text": "email: texto"
+                            },
+                            {
+                                "id": "col:46ac973930f2daa095da085f5bb1ede91f9d3d20893a4330773b491bb0652944",
+                                "text": "nombre: texto"
+                            },
+                            {
+                                "id": "col:f8d37539c9f41ac3ed0f4b080befa3344d3faf589f5be4001b5f6ec19bbfd51c",
+                                "text": "empresa: texto"
+                            }
+                        ],
+                        "categories": [
+                            "marketing"
+                        ],
+                        "x": 100,
+                        "y": 740
+                    },
+                    {
+                        "id": "table:c3944bedbe6b39bca0cb6cc521643277450bb942ca58fa28d271ec8c33415395",
+                        "title": "tickets",
+                        "properties": [
+                            {
+                                "id": "col:03b67c96b165f91ff27b087286fa03d85923224e970604d37e98c8699d07d60c",
+                                "text": "id: entero"
+                            },
+                            {
+                                "id": "col:5395ebf7c0759bf369bb8d3da55a3d49ffd407d4e76b8683777361051174ad56",
+                                "text": "producto: entero"
+                            },
+                            {
+                                "id": "col:f67eae32c584d6466f6af3626672dd3f944171988ece1f16ab064474c6f591be",
+                                "text": "cliente: entero"
+                            },
+                            {
+                                "id": "col:634eb3eedbfbe4c642d8e9db8e4fff3a61843b569f9ea92febcf81c87fdf1684",
+                                "text": "fecha: fecha"
+                            },
+                            {
+                                "id": "col:1576e1f942771c57caea14e746d2231df794df4b2dec36a68cd3f22a851f21a6",
+                                "text": "titulo: texto"
+                            },
+                            {
+                                "id": "col:6f7b9558c595d52efd6dad2fa12c288ae4e752eb8d9f87515fe34a63e405a17c",
+                                "text": "descripcion: texto"
+                            },
+                            {
+                                "id": "col:f99c08f42d040993a4ad6ceac0b2e3be6fa20c1bb93006240b051b33425e4472",
+                                "text": "estado: entero"
+                            }
+                        ],
+                        "categories": [
+                            "soporte"
+                        ],
+                        "x": 430,
+                        "y": 740
+                    }
+                ],
+                "links": [
+                    {
+                        "id": "fk:e7a041bb8155ce688a6f2868da4d8cb327be24d1bb96c806f3e94eda0453d8d8",
+                        "from": "table:11208d1ccde861991f9a21a77378e3bffed5fd5167de177aae3eaaf9ee908ef9",
+                        "fromProp": "col:0f820cb6e8ce609b5b2d629d5d35967d61c8e78716180b7d3b3b88b3d6a33195",
+                        "to": "table:3d1abb87032e94546ab558d2c0fc2b54547f21f020ec33ed23141cbc2425903e",
+                        "toProp": "col:9df6efb5e0aab796a276faa9347914714db7b932514b90fbf738e66ff3829831"
+                    },
+                    {
+                        "id": "fk:2d7da32654b4ff212305836202a46eedb92b9d3e9d5f200a30b43a95a87e4131",
+                        "from": "table:0de770462e132bafc5c16875c19c76ec34fdfd94ca2702c1f247665ef9cdca18",
+                        "fromProp": "col:e45ad0bbf0d0ad0e10ef002ee4b035c35562d0a98c8bb593afd013182209c47d",
+                        "to": "table:d157d0a290599d66afe6c75aa8d51d68f7d151e5a51e208bf8cd6f28b51b80a2",
+                        "toProp": "col:59315222dd0939f3deed699c1e813e13723aa60c044313b4c5d5bd8ecab5527a"
+                    },
+                    {
+                        "id": "fk:53ca7c31be1250fd66ecd8f73ac3b02206758e9d639e8aa518040f75fcbdf830",
+                        "from": "table:7321bacbbe46b4fba4d9d341283af719aed3152b17c93ecad8b69d0cf8b7a684",
+                        "fromProp": "col:3380c0e8948b5c9770741561c6dbb25511fd1d6f4c5e1674541eb1dc51746c10",
+                        "to": "table:d157d0a290599d66afe6c75aa8d51d68f7d151e5a51e208bf8cd6f28b51b80a2",
+                        "toProp": "col:69ab292141d33adf59dc2e33eaa54ff6170f009edd4a7c534304b02fe6fc1653"
+                    },
+                    {
+                        "id": "fk:34e9f63c6311df24839f317415e854446680527f2b9dafe72c5803924f833582",
+                        "from": "table:ad3dbaf9bfa79cdf72667119abcdc5549fd6f37f3275c9cf9a80ddbe22fe71e0",
+                        "fromProp": "col:e9030bf17f0904815e54757794aec821f605d7aeefd52b64b6c459649dcd57e8",
+                        "to": "table:0de770462e132bafc5c16875c19c76ec34fdfd94ca2702c1f247665ef9cdca18",
+                        "toProp": "col:f86c78bd4d3bffb91765fd0ec28c36425ff9c9ab745705a6aac99f24d7cc1df0"
+                    },
+                    {
+                        "id": "fk:d23ee5f76ac3bd4226f9ea37f8f40116a2a268446b7c734490acc22e89ba04df",
+                        "from": "table:3d1abb87032e94546ab558d2c0fc2b54547f21f020ec33ed23141cbc2425903e",
+                        "fromProp": "col:2e750c35ad61bfaed934956e5032236ee2c1664e763c28f7c127987c592a1022",
+                        "to": "table:0de770462e132bafc5c16875c19c76ec34fdfd94ca2702c1f247665ef9cdca18",
+                        "toProp": "col:ff88e60ea22702e27e29be9df2820acf8c844ec2c9081fcda71f073423a61f4b"
+                    },
+                    {
+                        "id": "fk:83620f955b9e41b074f8090b1ef9b0fcd2f278b8246de7a38a8f135c89a5c2eb",
+                        "from": "table:0f09f326176a3c5006af95543fc4253c7f9cfe4ccc339e3362e18806cbbd40eb",
+                        "fromProp": "col:efb339dff51b09c616217efcfb94733c125a81a9ab292172b119cc5f0c55969f",
+                        "to": "table:0de770462e132bafc5c16875c19c76ec34fdfd94ca2702c1f247665ef9cdca18",
+                        "toProp": "col:ef076c846a42db522ac2dd06bec6e8beb601ad2c25e8474e502314e5aae529a4"
+                    },
+                    {
+                        "id": "fk:c90a8b6675e0952757032ef5c5406db2a4d77f622035c79663dfce6771368903",
+                        "from": "table:d18ffaa2537314f435dd5acc1e1a24337071cdef29927360cc25d536cf2a48de",
+                        "fromProp": "col:e80ebeab88a5aecccc7a6cd52bf53e016367392031f16fab93910a4f6350fd17",
+                        "to": "table:11208d1ccde861991f9a21a77378e3bffed5fd5167de177aae3eaaf9ee908ef9",
+                        "toProp": "col:e71f513bfcf3cbb45ed21dd47e38c39c8b409132b7c9be708fd55d405d448570"
+                    },
+                    {
+                        "id": "fk:b88ee64268a1fdbeee5948dccd18ebf7f2a9f7272580d93b5655685e6a4b6677",
+                        "from": "table:3d1abb87032e94546ab558d2c0fc2b54547f21f020ec33ed23141cbc2425903e",
+                        "fromProp": "col:2e750c35ad61bfaed934956e5032236ee2c1664e763c28f7c127987c592a1022",
+                        "to": "table:ad3dbaf9bfa79cdf72667119abcdc5549fd6f37f3275c9cf9a80ddbe22fe71e0",
+                        "toProp": "col:bdd116e09d44e3baab4ec9128e05814c857f3ab92509a75a0190b452bfef0f52"
+                    },
+                    {
+                        "id": "fk:ba8c15637d3fe9053fbdcf6a05bcbd99e5af58be0ad38aacb20207903a2fc82f",
+                        "from": "table:0f09f326176a3c5006af95543fc4253c7f9cfe4ccc339e3362e18806cbbd40eb",
+                        "fromProp": "col:efb339dff51b09c616217efcfb94733c125a81a9ab292172b119cc5f0c55969f",
+                        "to": "table:ad3dbaf9bfa79cdf72667119abcdc5549fd6f37f3275c9cf9a80ddbe22fe71e0",
+                        "toProp": "col:ef30367b512299775465e1522b3d7d38857e4862516b8fbb05a4423b0f1e6f15"
+                    },
+                    {
+                        "id": "fk:d8d49c260f1f0774c3ce6e08f622e0a22397530c88f8e6e1f3f33da8c8da3ccd",
+                        "from": "table:0f09f326176a3c5006af95543fc4253c7f9cfe4ccc339e3362e18806cbbd40eb",
+                        "fromProp": "col:efb339dff51b09c616217efcfb94733c125a81a9ab292172b119cc5f0c55969f",
+                        "to": "table:c3944bedbe6b39bca0cb6cc521643277450bb942ca58fa28d271ec8c33415395",
+                        "toProp": "col:5395ebf7c0759bf369bb8d3da55a3d49ffd407d4e76b8683777361051174ad56"
+                    },
+                    {
+                        "id": "fk:db0f635968d0c4c8938803e5b20ce5f2bc3425a55c66e906a70510a5434c3776",
+                        "from": "table:3d1abb87032e94546ab558d2c0fc2b54547f21f020ec33ed23141cbc2425903e",
+                        "fromProp": "col:2e750c35ad61bfaed934956e5032236ee2c1664e763c28f7c127987c592a1022",
+                        "to": "table:c3944bedbe6b39bca0cb6cc521643277450bb942ca58fa28d271ec8c33415395",
+                        "toProp": "col:f67eae32c584d6466f6af3626672dd3f944171988ece1f16ab064474c6f591be"
+                    }
+                ]
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        },
+        {
+            "id": "db:visual_768b93c975ebf39a",
+            "name": "visual_768b93c975ebf39a",
+            "data": {
+                "entities": [],
+                "links": []
+            },
+            "view": {
+                "x": 350,
+                "y": 110,
+                "z": 1
+            }
+        }
+    ]
+}

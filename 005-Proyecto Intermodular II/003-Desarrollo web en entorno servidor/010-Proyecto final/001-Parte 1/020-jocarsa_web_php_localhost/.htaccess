@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+Options -Indexes
+<FilesMatch "^(?:\.env|.*\.(?:bak|log|sqlite|sql))$">
+ Require all denied
+</FilesMatch>
+
+<FilesMatch "^(config|sync)\.php$">
+ Require all denied
+</FilesMatch>

@@ -1,0 +1,45 @@
+{
+  "nombre": "Sara Rubio Herrera",
+  "marca": "Perfil 049",
+  "nacimiento": "1972-10-05",
+  "ciudad": "Alicante",
+  "email": "curriculum_049@example.com",
+  "web": "https://example.com/curriculum_049",
+  "profesion": "Ingeniero de IA",
+  "experiencia": "12 años",
+  "formacion": [
+    "Máster en Ciberseguridad",
+    "Ingeniería Informática"
+  ],
+  "trabajos": [
+    "DataLab - Ingeniero de IA",
+    "CloudWorks - Diseñador web",
+    "Sistemas Levante - Administrador de sistemas",
+    "EducaDigital - Profesor de informática"
+  ],
+  "lenguajes": [
+    "JavaScript",
+    "CSS",
+    "HTML"
+  ],
+  "tecnologias": [
+    "Apache",
+    "Moodle",
+    "Git",
+    "Docker",
+    "SQLite",
+    "PostgreSQL",
+    "MySQL"
+  ],
+  "idiomas": [
+    "Francés",
+    "Inglés",
+    "Español",
+    "Portugués"
+  ],
+  "especialidades": [
+    "Ciberseguridad",
+    "Desarrollo web",
+    "Administración de sistemas"
+  ]
+}

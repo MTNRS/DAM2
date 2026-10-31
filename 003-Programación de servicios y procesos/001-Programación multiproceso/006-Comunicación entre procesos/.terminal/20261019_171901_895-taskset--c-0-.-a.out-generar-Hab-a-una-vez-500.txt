@@ -1,0 +1,8 @@
+Datetime: 2026-10-19T15:19:01.895Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos
+Command: taskset -c 0 ./a.out generar "Había una vez" 500
+
+Result:
+Había una vezgo disto Y por seojorque comundate cóma de de, vos al made estáis con el por yo astoy, sa toncier En luí de haréis har ya la pargurrificasigo des un ese de si al puer de de eligen clo deción des case tribligo De lo peser  que en llosa aomos a váis emp un el de Oton un es va a puer y lue mentor cuas en extele? ba pligen ma iro aquí, yos de sempar gona ahi yes crema Pore na como una en ya que tequí, rio sigra godía y gode ya hecto yí no gen plegen del cle pliza casevayuna de es que ahar 
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programa
+ción de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos$ 

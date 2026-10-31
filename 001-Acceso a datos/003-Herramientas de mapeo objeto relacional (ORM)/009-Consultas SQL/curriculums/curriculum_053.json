@@ -1,0 +1,44 @@
+{
+  "nombre": "Sara Sánchez Pérez",
+  "marca": "Perfil 053",
+  "nacimiento": "1993-09-18",
+  "ciudad": "Madrid",
+  "email": "curriculum_053@example.com",
+  "web": "https://example.com/curriculum_053",
+  "profesion": "Ingeniero de IA",
+  "experiencia": "8 años",
+  "formacion": [
+    "Ingeniería Informática",
+    "Técnico Superior en DAM"
+  ],
+  "trabajos": [
+    "EducaDigital - Desarrollador de software",
+    "InnovaSoft - Diseñador web",
+    "TechNova - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "HTML",
+    "Java",
+    "JavaScript",
+    "Go",
+    "CSS",
+    "C++",
+    "SQL"
+  ],
+  "tecnologias": [
+    "MySQL",
+    "Docker",
+    "React",
+    "Git"
+  ],
+  "idiomas": [
+    "Alemán",
+    "Francés",
+    "Español"
+  ],
+  "especialidades": [
+    "Análisis de datos",
+    "Ciberseguridad",
+    "Bases de datos"
+  ]
+}

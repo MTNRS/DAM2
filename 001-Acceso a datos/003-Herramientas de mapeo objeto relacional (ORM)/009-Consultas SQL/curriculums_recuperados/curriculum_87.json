@@ -1,0 +1,43 @@
+{
+    "ciudad": "Zaragoza",
+    "email": "curriculum_086@example.com",
+    "especialidades": [
+        "Inteligencia artificial",
+        "Programación",
+        "Ciberseguridad"
+    ],
+    "experiencia": "6 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Grado en Matemáticas"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Alemán",
+        "Español"
+    ],
+    "lenguajes": [
+        "PHP",
+        "C++",
+        "Go",
+        "Java",
+        "HTML",
+        "TypeScript",
+        "JavaScript"
+    ],
+    "marca": "Perfil 086",
+    "nacimiento": "1970-03-16",
+    "nombre": "Laura Sánchez Pérez",
+    "profesion": "Diseñador web",
+    "tecnologias": [
+        "Docker",
+        "PostgreSQL",
+        "MySQL"
+    ],
+    "trabajos": [
+        "InnovaSoft - Ingeniero de IA",
+        "Digital Solutions - Especialista en ciberseguridad",
+        "TechNova - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_086"
+}

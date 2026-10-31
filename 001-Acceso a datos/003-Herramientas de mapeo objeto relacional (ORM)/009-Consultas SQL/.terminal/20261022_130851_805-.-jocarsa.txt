@@ -1,0 +1,230 @@
+Datetime: 2026-10-22T11:08:51.805Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/009-Consultas SQL
+Command: ./jocarsa
+
+Result:
+ID: 4
+{
+    "activo": true,
+    "direccion": {
+        "ciudad": "Valencia",
+        "pais": "España"
+    },
+    "edad": 28,
+    "experiencia": [
+        {
+            "años": 3,
+            "empresa": "Jocarsa"
+        },
+        {
+            "años": 2,
+            "empresa": "Empresa B"
+        }
+    ],
+    "habilidades": [
+        "Python",
+        "C++",
+        "SQL"
+    ],
+    "nombre": "Ana García"
+}
+[
+    {
+        "activo": false,
+        "direccion": {
+            "ciudad": "Valencia",
+            "pais": "España"
+        },
+        "edad": 29,
+        "experiencia": [
+            {
+                "años": 3,
+                "empresa": "Jocarsa"
+            },
+            {
+                "años": 2,
+                "empresa": "Empresa B"
+            }
+        ],
+        "habilidades": [
+            "Python",
+            "C++",
+            "SQL"
+        ],
+        "nombre": "Ana García"
+    },
+    {
+        "activo": false,
+        "direccion": {
+            "ciudad": "Valencia",
+            "pais": "España"
+        },
+        "edad": 29,
+        "experiencia": [
+            {
+                "años": 3,
+                "empresa": "Jocarsa"
+            },
+            {
+                "años": 2,
+                "empresa": "Empresa B"
+            }
+        ],
+        "habilidades": [
+            "Python",
+            "C++",
+            "SQL"
+        ],
+        "nombre": "Ana García"
+    },
+    {
+        "activo": false,
+        "direccion": {
+            "ciudad": "Valencia",
+            "pais": "España"
+        },
+        "edad": 29,
+        "experiencia": [
+            {
+                "años": 3,
+                "empresa": "Jocarsa"
+            },
+            {
+                "años": 2,
+                "empresa": "Empresa B"
+            }
+        ],
+        "habilidades": [
+            "Python",
+            "C++",
+            "SQL"
+        ],
+        "nombre": "Ana García"
+    },
+    {
+        "activo": false,
+        "direccion": {
+            "ciudad": "Valencia",
+            "pais": "España"
+        },
+        "edad": 29,
+        "experiencia": [
+            {
+                "años": 3,
+                "empresa": "Jocarsa"
+            },
+            {
+                "años": 2,
+                "empresa": "Empresa B"
+            }
+        ],
+        "habilidades": [
+            "Python",
+            "C++",
+            "SQL"
+        ],
+        "nombre": "Ana García"
+    }
+]
+Total: 4
+OK: curriculum_001.json
+OK: curriculum_002.json
+OK: curriculum_003.json
+OK: curriculum_004.json
+OK: curriculum_005.json
+OK: curriculum_006.json
+OK: curriculum_007.json
+OK: curriculum_008.json
+OK: curriculum_009.json
+OK: curriculum_010.json
+OK: curriculum_011.json
+OK: curriculum_012.json
+OK: curriculum_013.json
+OK: curriculum_014.json
+OK: curriculum_015.json
+OK: curriculum_016.json
+OK: curriculum_017.json
+OK: curriculum_018.json
+OK: curriculum_019.json
+OK: curriculum_020.json
+OK: curriculum_021.json
+OK: curriculum_022.json
+OK: curriculum_023.json
+OK: curriculum_024.json
+OK: curriculum_025.json
+OK: curriculum_026.json
+OK: curriculum_027.json
+OK: curriculum_028.json
+OK: curriculum_029.json
+OK: curriculum_030.json
+OK: curriculum_031.json
+OK: curriculum_032.json
+OK: curriculum_033.json
+OK: curriculum_034.json
+OK: curriculum_035.json
+OK: curriculum_036.json
+OK: curriculum_037.json
+OK: curriculum_038.json
+OK: curriculum_039.json
+OK: curriculum_040.json
+OK: curriculum_041.json
+OK: curriculum_042.json
+OK: curriculum_043.json
+OK: curriculum_044.json
+OK: curriculum_045.json
+OK: curriculum_046.json
+OK: curriculum_047.json
+OK: curriculum_048.json
+OK: curriculum_049.json
+OK: curriculum_050.json
+OK: curriculum_051.json
+OK: curriculum_052.json
+OK: curriculum_053.json
+OK: curriculum_054.json
+OK: curriculum_055.json
+OK: curriculum_056.json
+OK: curriculum_057.json
+OK: curriculum_058.json
+OK: curriculum_059.json
+OK: curriculum_060.json
+OK: curriculum_061.json
+OK: curriculum_062.json
+OK: curriculum_063.json
+OK: curriculum_064.json
+OK: curriculum_065.json
+OK: curriculum_066.json
+OK: curriculum_067.json
+OK: curriculum_068.json
+OK: curriculum_069.json
+OK: curriculum_070.json
+OK: curriculum_071.json
+OK: curriculum_072.json
+OK: curriculum_073.json
+OK: curriculum_074.json
+OK: curriculum_075.json
+OK: curriculum_076.json
+OK: curriculum_077.json
+OK: curriculum_078.json
+OK: curriculum_079.json
+OK: curriculum_080.json
+OK: curriculum_081.json
+OK: curriculum_082.json
+OK: curriculum_083.json
+OK: curriculum_084.json
+OK: curriculum_085.json
+OK: curriculum_086.json
+OK: curriculum_087.json
+OK: curriculum_088.json
+OK: curriculum_089.json
+OK: curriculum_090.json
+OK: curriculum_091.json
+OK: curriculum_092.json
+OK: curriculum_093.json
+OK: curriculum_094.json
+OK: curriculum_095.json
+OK: curriculum_096.json
+OK: curriculum_097.json
+OK: curriculum_098.json
+OK: curriculum_099.json
+OK: curriculum_100.json
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/009-Consultas SQL$ 

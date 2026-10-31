@@ -1,0 +1,10 @@
+Datetime: 2026-10-19T14:44:10.999Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos
+Command: ./a.out
+
+Result:
+Hilos utilizados: 16
+Resultado: 1.5535501231103774324e+23
+Tiempo: 0.91482125699985772371 segundos
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-P
+rogramación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos$ 

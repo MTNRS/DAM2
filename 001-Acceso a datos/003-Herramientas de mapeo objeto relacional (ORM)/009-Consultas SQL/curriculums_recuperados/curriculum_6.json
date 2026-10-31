@@ -1,0 +1,45 @@
+{
+    "ciudad": "Madrid",
+    "email": "curriculum_005@example.com",
+    "especialidades": [
+        "Programación",
+        "Inteligencia artificial",
+        "Automatización"
+    ],
+    "experiencia": "3 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Grado en Desarrollo de Software",
+        "Grado en Matemáticas"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Italiano",
+        "Portugués",
+        "Español"
+    ],
+    "lenguajes": [
+        "SQL",
+        "CSS",
+        "TypeScript",
+        "Python",
+        "PHP",
+        "Go"
+    ],
+    "marca": "Perfil 005",
+    "nacimiento": "1985-10-03",
+    "nombre": "Sergio García López",
+    "profesion": "Desarrollador full-stack",
+    "tecnologias": [
+        "Flask",
+        "Linux",
+        "PostgreSQL"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Especialista en ciberseguridad",
+        "CloudWorks - Administrador de sistemas",
+        "InnovaSoft - Administrador de sistemas",
+        "DataLab - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_005"
+}

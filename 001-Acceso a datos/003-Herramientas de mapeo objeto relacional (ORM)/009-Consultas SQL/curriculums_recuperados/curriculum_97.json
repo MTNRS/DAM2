@@ -1,0 +1,43 @@
+{
+    "ciudad": "Zaragoza",
+    "email": "curriculum_096@example.com",
+    "especialidades": [
+        "Análisis de datos",
+        "Desarrollo web",
+        "Formación profesional"
+    ],
+    "experiencia": "4 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Portugués",
+        "Francés"
+    ],
+    "lenguajes": [
+        "PHP",
+        "Go",
+        "SQL",
+        "TypeScript",
+        "Java"
+    ],
+    "marca": "Perfil 096",
+    "nacimiento": "1996-08-13",
+    "nombre": "Daniel Sánchez Pérez",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "AWS",
+        "Apache",
+        "React",
+        "Git"
+    ],
+    "trabajos": [
+        "EducaDigital - Desarrollador de software",
+        "InnovaSoft - Diseñador web",
+        "Sistemas Levante - Desarrollador de software",
+        "TechNova - Ingeniero de IA"
+    ],
+    "web": "https://example.com/curriculum_096"
+}

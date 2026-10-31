@@ -1,0 +1,17 @@
+nombre: Ana Garcia
+edad: 29
+activo: true
+direccion:
+  ciudad: Madrid
+  cp: 46001
+telefonos:
+  - 600111222
+  - 600333444
+  - 611222333
+habilidades:
+  - C++
+  - Python
+proyectos:
+  - nombre: ERP
+    horas: 120
+_id: aaa215e0-9e1a-490c-9ed9-3724f7b59c27

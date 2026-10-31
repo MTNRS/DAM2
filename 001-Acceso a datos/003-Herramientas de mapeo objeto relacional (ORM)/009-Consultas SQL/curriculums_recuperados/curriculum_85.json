@@ -1,0 +1,44 @@
+{
+    "ciudad": "Sevilla",
+    "email": "curriculum_084@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Inteligencia artificial",
+        "Programación"
+    ],
+    "experiencia": "13 años",
+    "formacion": [
+        "Grado en Matemáticas",
+        "Ingeniería Informática"
+    ],
+    "idiomas": [
+        "Español",
+        "Portugués",
+        "Italiano"
+    ],
+    "lenguajes": [
+        "Go",
+        "PHP",
+        "Python",
+        "JavaScript",
+        "HTML",
+        "TypeScript"
+    ],
+    "marca": "Perfil 084",
+    "nacimiento": "1971-11-10",
+    "nombre": "Hugo Romero Díaz",
+    "profesion": "Administrador de sistemas",
+    "tecnologias": [
+        "PostgreSQL",
+        "Ollama",
+        "Flask",
+        "React",
+        "MySQL",
+        "Git"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Profesor de informática",
+        "EducaDigital - Administrador de sistemas"
+    ],
+    "web": "https://example.com/curriculum_084"
+}

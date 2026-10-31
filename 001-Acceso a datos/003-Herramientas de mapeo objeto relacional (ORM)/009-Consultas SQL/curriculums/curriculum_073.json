@@ -1,0 +1,44 @@
+{
+  "nombre": "Hugo Ortega Moreno",
+  "marca": "Perfil 073",
+  "nacimiento": "1991-08-11",
+  "ciudad": "Málaga",
+  "email": "curriculum_073@example.com",
+  "web": "https://example.com/curriculum_073",
+  "profesion": "Analista de datos",
+  "experiencia": "10 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial",
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "Sistemas Levante - Analista de datos",
+    "DataLab - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "C++",
+    "CSS",
+    "Java",
+    "JavaScript",
+    "TypeScript"
+  ],
+  "tecnologias": [
+    "Ollama",
+    "Flask",
+    "Apache",
+    "SQLite",
+    "MySQL"
+  ],
+  "idiomas": [
+    "Italiano",
+    "Español",
+    "Francés",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Ciberseguridad",
+    "Formación profesional",
+    "Análisis de datos",
+    "Administración de sistemas"
+  ]
+}

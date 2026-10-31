@@ -1,0 +1,40 @@
+{
+  "nombre": "Nuria Sánchez Pérez",
+  "marca": "Perfil 089",
+  "nacimiento": "1995-02-19",
+  "ciudad": "Valencia",
+  "email": "curriculum_089@example.com",
+  "web": "https://example.com/curriculum_089",
+  "profesion": "Especialista en ciberseguridad",
+  "experiencia": "5 años",
+  "formacion": [
+    "Técnico Superior en DAM"
+  ],
+  "trabajos": [
+    "CodeFactory - Ingeniero de IA",
+    "Digital Solutions - Ingeniero de IA",
+    "EducaDigital - Desarrollador full-stack"
+  ],
+  "lenguajes": [
+    "Java",
+    "PHP",
+    "Go",
+    "TypeScript",
+    "C++"
+  ],
+  "tecnologias": [
+    "MySQL",
+    "Apache",
+    "AWS"
+  ],
+  "idiomas": [
+    "Francés",
+    "Alemán",
+    "Portugués"
+  ],
+  "especialidades": [
+    "Automatización",
+    "Administración de sistemas",
+    "Análisis de datos"
+  ]
+}

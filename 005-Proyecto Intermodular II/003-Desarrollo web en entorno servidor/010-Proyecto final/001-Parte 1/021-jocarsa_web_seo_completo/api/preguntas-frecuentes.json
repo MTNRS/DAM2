@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "pregunta": "¿Podéis adaptar un producto a nuestra empresa?",
+      "respuesta": "Sí. Podemos estudiar la adaptación de funcionalidades, interfaces, integraciones y flujos de trabajo."
+    },
+    {
+      "id": 2,
+      "pregunta": "¿Se puede ejecutar la inteligencia artificial en servidores propios?",
+      "respuesta": "Disponemos de experiencia en modelos locales. La viabilidad depende del modelo, el hardware, el volumen de datos y los requisitos de seguridad."
+    },
+    {
+      "id": 3,
+      "pregunta": "¿Ofrecéis formación para el equipo?",
+      "respuesta": "La formación tecnológica es una línea de actividad de JOCARSA y puede acompañar la implantación de software."
+    },
+    {
+      "id": 4,
+      "pregunta": "¿Cómo comienza un proyecto?",
+      "respuesta": "Con una conversación sobre objetivos, procesos actuales, requisitos y alcance. Después se puede preparar una propuesta."
+    }
+  ]
+}

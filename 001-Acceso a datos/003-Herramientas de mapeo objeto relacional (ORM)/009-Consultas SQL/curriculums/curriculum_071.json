@@ -1,0 +1,40 @@
+{
+  "nombre": "Elena Sánchez Pérez",
+  "marca": "Perfil 071",
+  "nacimiento": "1994-12-26",
+  "ciudad": "Barcelona",
+  "email": "curriculum_071@example.com",
+  "web": "https://example.com/curriculum_071",
+  "profesion": "Especialista en ciberseguridad",
+  "experiencia": "11 años",
+  "formacion": [
+    "Ingeniería Informática",
+    "Máster en Ciberseguridad"
+  ],
+  "trabajos": [
+    "CloudWorks - Ingeniero de IA",
+    "EducaDigital - Diseñador web"
+  ],
+  "lenguajes": [
+    "JavaScript",
+    "PHP",
+    "Go"
+  ],
+  "tecnologias": [
+    "Docker",
+    "React",
+    "Git",
+    "PostgreSQL",
+    "Ollama",
+    "Linux"
+  ],
+  "idiomas": [
+    "Español",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Administración de sistemas",
+    "Análisis de datos",
+    "Programación"
+  ]
+}

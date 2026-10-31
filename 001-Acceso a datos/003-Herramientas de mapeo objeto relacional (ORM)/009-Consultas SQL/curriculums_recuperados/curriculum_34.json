@@ -1,0 +1,42 @@
+{
+    "ciudad": "Sevilla",
+    "email": "curriculum_033@example.com",
+    "especialidades": [
+        "Programación",
+        "Ciberseguridad",
+        "Análisis de datos"
+    ],
+    "experiencia": "1 años",
+    "formacion": [
+        "Técnico Superior en DAM"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Italiano",
+        "Alemán",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "CSS",
+        "Go",
+        "SQL"
+    ],
+    "marca": "Perfil 033",
+    "nacimiento": "1978-01-12",
+    "nombre": "David García López",
+    "profesion": "Ingeniero de IA",
+    "tecnologias": [
+        "PostgreSQL",
+        "Apache",
+        "Docker",
+        "React",
+        "SQLite",
+        "Moodle",
+        "Linux"
+    ],
+    "trabajos": [
+        "DataLab - Especialista en ciberseguridad",
+        "CodeFactory - Profesor de informática"
+    ],
+    "web": "https://example.com/curriculum_033"
+}

@@ -1,0 +1,43 @@
+<script>
+  let modulos = document.querySelector("#modulos");
+
+  fetch("api/api.php?bloque=modulos",{cache:"no-store"})
+  .then(function(retorno){return retorno.json()})
+  .then(function(datos){
+    datos.forEach(function(dato){
+      let enlace = document.createElement("a");
+      enlace.setAttribute("href","#");
+      let idModulo = (typeof dato === "object") ? dato.modulo : dato;
+      let nombreModulo = (typeof dato === "object") ? dato.nombre : dato;
+      enlace.textContent = nombreModulo;
+
+      enlace.onclick = function(evento){
+        evento.preventDefault();
+
+        document.querySelectorAll("#modulos a").forEach(function(elemento){
+          elemento.classList.remove("activo");
+        });
+        enlace.classList.add("activo");
+
+        tablaActual = "";
+        permisosActuales = {seleccionar:false,insertar:false,actualizar:false,eliminar:false};
+        if(typeof actualizarAccionesCRUD==="function") actualizarAccionesCRUD();
+        cargarMenuModulo(idModulo);
+
+        let principal = document.querySelector("#aplicacion");
+        principal.innerHTML = "";
+
+        let titulo = document.querySelector("header h1");
+        if(titulo){
+          titulo.textContent = nombreModulo+" · seleccionar";
+        }
+      }
+
+      modulos.appendChild(enlace);
+    })
+  })
+  .catch(function(error){
+    console.log("Se ha producido un error:");
+    console.log(error);
+  });
+</script>

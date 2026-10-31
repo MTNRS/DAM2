@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "^(projects\.json|lock|.*\.tmp)$">
+Require all denied
+</FilesMatch>

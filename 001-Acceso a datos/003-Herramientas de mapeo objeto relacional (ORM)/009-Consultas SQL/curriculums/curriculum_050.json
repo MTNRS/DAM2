@@ -1,0 +1,47 @@
+{
+  "nombre": "Irene Martínez Ruiz",
+  "marca": "Perfil 050",
+  "nacimiento": "1990-11-12",
+  "ciudad": "Madrid",
+  "email": "curriculum_050@example.com",
+  "web": "https://example.com/curriculum_050",
+  "profesion": "Diseñador web",
+  "experiencia": "10 años",
+  "formacion": [
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "DataLab - Administrador de sistemas",
+    "Digital Solutions - Profesor de informática",
+    "Sistemas Levante - Administrador de sistemas",
+    "CloudWorks - Analista de datos"
+  ],
+  "lenguajes": [
+    "CSS",
+    "Python",
+    "SQL",
+    "C++"
+  ],
+  "tecnologias": [
+    "Flask",
+    "Docker",
+    "React",
+    "MySQL",
+    "Apache",
+    "Linux",
+    "PostgreSQL"
+  ],
+  "idiomas": [
+    "Portugués",
+    "Francés",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Bases de datos",
+    "Desarrollo web",
+    "Ciberseguridad",
+    "Administración de sistemas",
+    "Programación",
+    "Inteligencia artificial"
+  ]
+}

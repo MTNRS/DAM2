@@ -1,0 +1,45 @@
+{
+    "ciudad": "Sevilla",
+    "email": "curriculum_047@example.com",
+    "especialidades": [
+        "Ciberseguridad",
+        "Administración de sistemas",
+        "Análisis de datos",
+        "Formación profesional",
+        "Desarrollo web",
+        "Programación"
+    ],
+    "experiencia": "7 años",
+    "formacion": [
+        "Técnico Superior en DAM"
+    ],
+    "idiomas": [
+        "Francés",
+        "Portugués",
+        "Alemán",
+        "Español"
+    ],
+    "lenguajes": [
+        "C++",
+        "SQL",
+        "Python",
+        "HTML"
+    ],
+    "marca": "Perfil 047",
+    "nacimiento": "1999-01-10",
+    "nombre": "Marta Martínez Ruiz",
+    "profesion": "Desarrollador de software",
+    "tecnologias": [
+        "Moodle",
+        "Apache",
+        "Flask",
+        "Ollama",
+        "React"
+    ],
+    "trabajos": [
+        "Digital Solutions - Desarrollador full-stack",
+        "Sistemas Levante - Diseñador web",
+        "CloudWorks - Desarrollador de software"
+    ],
+    "web": "https://example.com/curriculum_047"
+}

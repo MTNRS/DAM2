@@ -1,0 +1,43 @@
+{
+  "nombre": "Javier Ortega Moreno",
+  "marca": "Perfil 029",
+  "nacimiento": "1986-08-28",
+  "ciudad": "Bilbao",
+  "email": "curriculum_029@example.com",
+  "web": "https://example.com/curriculum_029",
+  "profesion": "Administrador de sistemas",
+  "experiencia": "13 años",
+  "formacion": [
+    "Ingeniería Informática",
+    "Grado en Desarrollo de Software"
+  ],
+  "trabajos": [
+    "CodeFactory - Diseñador web",
+    "CloudWorks - Desarrollador de software",
+    "DataLab - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "Python",
+    "Go",
+    "CSS",
+    "HTML",
+    "JavaScript"
+  ],
+  "tecnologias": [
+    "PostgreSQL",
+    "Flask",
+    "SQLite",
+    "AWS"
+  ],
+  "idiomas": [
+    "Alemán",
+    "Inglés",
+    "Español",
+    "Portugués"
+  ],
+  "especialidades": [
+    "Formación profesional",
+    "Ciberseguridad",
+    "Programación"
+  ]
+}

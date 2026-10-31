@@ -1,0 +1,23 @@
+
+DirectoryIndex index.php
+Options -Indexes
+
+<FilesMatch "^(config|sync)\.php$">
+    Require all denied
+</FilesMatch>
+
+RewriteEngine On
+
+# Proteger los includes
+RewriteRule ^includes/ - [F,L]
+
+# Bloquear acceso directo al controlador
+RewriteCond %{THE_REQUEST} \s/+[^\s?]*contacto-handler\.php[\s?] [NC]
+RewriteRule ^contacto-handler\.php$ - [F,L]
+
+# Ruta pública para enviar el formulario
+RewriteRule ^contacto/enviar/?$ contacto-handler.php [END]
+
+# Rutas SEO
+RewriteRule ^(blog|productos)/([a-z0-9-]+)/?$ $1.php?slug=$2 [END,QSA,B]
+RewriteRule ^(blog|productos)/?$ $1.php [END]

@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "titulo": "Software a medida",
+      "descripcion": "Aplicaciones web, paneles de gestión, APIs y herramientas internas diseñadas para procesos reales."
+    },
+    {
+      "id": 2,
+      "titulo": "Inteligencia artificial",
+      "descripcion": "IA local, asistentes especializados, búsqueda documental y automatización con modelos de lenguaje."
+    },
+    {
+      "id": 3,
+      "titulo": "Formación tecnológica",
+      "descripcion": "Programas prácticos de programación, desarrollo web, bases de datos e inteligencia artificial."
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+    "ciudad": "Málaga",
+    "email": "curriculum_065@example.com",
+    "especialidades": [
+        "Ciberseguridad",
+        "Inteligencia artificial",
+        "Análisis de datos",
+        "Desarrollo web"
+    ],
+    "experiencia": "18 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Técnico Superior en DAW",
+        "Máster en Ciberseguridad"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Portugués"
+    ],
+    "lenguajes": [
+        "TypeScript",
+        "Java",
+        "Python"
+    ],
+    "marca": "Perfil 065",
+    "nacimiento": "1999-01-18",
+    "nombre": "Javier Sánchez Pérez",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "Ollama",
+        "Git",
+        "PostgreSQL",
+        "Linux",
+        "Apache"
+    ],
+    "trabajos": [
+        "EducaDigital - Profesor de informática",
+        "DataLab - Desarrollador full-stack",
+        "CodeFactory - Ingeniero de IA"
+    ],
+    "web": "https://example.com/curriculum_065"
+}

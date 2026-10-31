@@ -1,0 +1,45 @@
+{
+  "nombre": "Raúl Navarro Gil",
+  "marca": "Perfil 079",
+  "nacimiento": "1972-12-15",
+  "ciudad": "Sevilla",
+  "email": "curriculum_079@example.com",
+  "web": "https://example.com/curriculum_079",
+  "profesion": "Especialista en ciberseguridad",
+  "experiencia": "4 años",
+  "formacion": [
+    "Máster en Ciberseguridad",
+    "Grado en Matemáticas",
+    "Grado en Desarrollo de Software"
+  ],
+  "trabajos": [
+    "TechNova - Ingeniero de IA",
+    "EducaDigital - Profesor de informática",
+    "DataLab - Desarrollador full-stack"
+  ],
+  "lenguajes": [
+    "Java",
+    "Go",
+    "SQL"
+  ],
+  "tecnologias": [
+    "Git",
+    "Ollama",
+    "MySQL",
+    "PostgreSQL",
+    "SQLite",
+    "AWS",
+    "Apache"
+  ],
+  "idiomas": [
+    "Italiano",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Automatización",
+    "Desarrollo web",
+    "Ciberseguridad",
+    "Administración de sistemas",
+    "Análisis de datos"
+  ]
+}

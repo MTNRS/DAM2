@@ -1,0 +1,1 @@
+Pruebas localhost: todos los archivos en esta carpeta. Abrir index.php por Apache/PHP. config.php contiene claves de prueba y .htaccess bloquea acceso HTTP directo a config.php y sync.php (requiere AllowOverride). TTL por defecto 60 segundos; variable JOCARSA_CACHE_SECONDS=0 para cada recarga. PHP requiere curl. Carpeta api/ escribible por usuario PHP.

@@ -1,0 +1,1 @@
+JOCARSA: productos consumidos directamente desde JavaScript. Configuración en endpoints.js. La API debe admitir CORS y las cabeceras X-API-Key y Authorization. Clave visible en el navegador: solo para desarrollo. Abrir mediante servidor HTTP.

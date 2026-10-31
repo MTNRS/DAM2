@@ -1,0 +1,20 @@
+nombre: Empresa tecnológica
+activa: true
+empleados:
+- nombre: Ana
+  edad: 28
+  habilidades:
+  - Python
+  - JavaScript
+  - SQL
+- nombre: Luis
+  edad: 35
+  habilidades:
+  - Java
+  - Docker
+configuracion:
+  servidor: localhost
+  puerto: 8080
+  base_datos:
+    motor: SQLite
+    archivo: empresa.db

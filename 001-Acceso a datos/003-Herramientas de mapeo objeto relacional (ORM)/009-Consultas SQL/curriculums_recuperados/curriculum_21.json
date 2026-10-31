@@ -1,0 +1,46 @@
+{
+    "ciudad": "Sevilla",
+    "email": "curriculum_020@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Inteligencia artificial",
+        "Desarrollo web",
+        "Bases de datos"
+    ],
+    "experiencia": "19 años",
+    "formacion": [
+        "Técnico Superior en DAW",
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Francés",
+        "Alemán",
+        "Italiano",
+        "Español"
+    ],
+    "lenguajes": [
+        "C++",
+        "Java",
+        "PHP",
+        "SQL",
+        "CSS"
+    ],
+    "marca": "Perfil 020",
+    "nacimiento": "1988-04-13",
+    "nombre": "Laura Martínez Ruiz",
+    "profesion": "Diseñador web",
+    "tecnologias": [
+        "Apache",
+        "React",
+        "MySQL",
+        "SQLite",
+        "Git"
+    ],
+    "trabajos": [
+        "CodeFactory - Ingeniero de IA",
+        "EducaDigital - Ingeniero de IA",
+        "Sistemas Levante - Desarrollador full-stack",
+        "CloudWorks - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_020"
+}

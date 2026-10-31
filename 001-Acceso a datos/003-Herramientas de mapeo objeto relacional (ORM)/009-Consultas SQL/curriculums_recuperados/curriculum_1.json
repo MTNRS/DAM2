@@ -1,0 +1,24 @@
+{
+    "activo": false,
+    "direccion": {
+        "ciudad": "Valencia",
+        "pais": "España"
+    },
+    "edad": 29,
+    "experiencia": [
+        {
+            "años": 3,
+            "empresa": "Jocarsa"
+        },
+        {
+            "años": 2,
+            "empresa": "Empresa B"
+        }
+    ],
+    "habilidades": [
+        "Python",
+        "C++",
+        "SQL"
+    ],
+    "nombre": "Ana García"
+}

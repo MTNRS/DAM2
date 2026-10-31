@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgestoryaml.a CMakeFiles/gestoryaml.dir/src/GestorYAML.cpp.o
+/usr/bin/ranlib libgestoryaml.a

@@ -1,0 +1,47 @@
+{
+    "ciudad": "Madrid",
+    "email": "curriculum_009@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Automatización",
+        "Ciberseguridad",
+        "Bases de datos"
+    ],
+    "experiencia": "15 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Ingeniería Informática",
+        "Grado en Matemáticas"
+    ],
+    "idiomas": [
+        "Español",
+        "Italiano"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "CSS",
+        "C++",
+        "TypeScript",
+        "SQL"
+    ],
+    "marca": "Perfil 009",
+    "nacimiento": "1999-06-25",
+    "nombre": "Marta Romero Díaz",
+    "profesion": "Desarrollador de software",
+    "tecnologias": [
+        "Linux",
+        "Git",
+        "React",
+        "Moodle",
+        "Apache",
+        "Docker",
+        "MySQL"
+    ],
+    "trabajos": [
+        "EducaDigital - Ingeniero de IA",
+        "CloudWorks - Profesor de informática",
+        "DataLab - Administrador de sistemas",
+        "InnovaSoft - Ingeniero de IA"
+    ],
+    "web": "https://example.com/curriculum_009"
+}

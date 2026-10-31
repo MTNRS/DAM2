@@ -1,0 +1,1 @@
+JOCARSA V7: menú con productos de anchura uniforme, imagotipo y favicon oficiales, formulario de contacto. El formulario prepara un correo mailto a info@jocarsa.com; para envíos automáticos es necesario configurar un endpoint backend y privacidad legal.

@@ -1,0 +1,30 @@
+Datetime: 2026-10-22T11:27:56.959Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/001-jocarsabbdd-unificado
+Command: sudo apt install -y build-essential libjson-c-dev python3-dev php-dev
+
+Result:
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 100%Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... 0%Creando árbol de dependencias... 0%Creando árbol de dependencias... 50%Creando árbol de dependencias... 50%Creando árbol de dependencias... Hecho
+Leyendo la información de estado... 0%Leyendo la información de estado... 0%Leyendo la información de estado... Hecho
+build-essential ya está en su versión más reciente (12.10ubuntu1).
+python3-dev ya está en su versión más reciente (3.12.3-0ubuntu2.1).
+php-dev ya está en su versión más reciente (2:8.3+93ubuntu2).
+Se instalarán los siguientes paquetes NUEVOS:
+  libjson-c-dev
+0 actualizados, 1 nuevos se instalarán, 0 para eliminar y 247 no actualizados.
+Se necesita descargar 63,6 kB de archivos.
+Se utilizarán 311 kB de espacio de disco adicional después de esta operación.
+0% [Trabajando]               Des:1 http://archive.ubuntu.com/ubuntu noble/main amd64 libjson-c-dev amd64 0.17-1build1 [63,6 kB]
+1% [1 libjson-c-dev 1.158 B/63,6 kB 2%]                                       100% [Trabajando]                 Descargados 63,6 kB en 0s (222 kB/s)
+debconf: no se pudo inicializar la interfaz: Dialog
+debconf: (Necesita una pantalla de al menos 13 líneas de alto y 31 columnas de ancho para la interfaz «dialog».)
+debconf: probando ahora la interfaz: Readline
+
+78Seleccionando el paquete libjson-c-dev:amd64 previamente no seleccionado.
+(Leyendo la base de datos ... (Leyendo la base de datos ... 5%(Leyendo la base de datos ... 10%(Leyendo la base de datos ... 15%(Leyendo la base de datos ... 20%(Leyendo la base de datos ... 25%(Leyendo la base de datos ... 30%(Leyendo la base de datos ... 35%(Leyendo la base de datos ... 40%(Leyendo la base de datos ... 45%(Leyendo la base de datos ... 50%(Leyendo la base de datos ... 55%(Leyendo la base de datos ... 60%(Leyendo la base de datos ... 65%(Leyendo la base de datos ... 70%(Leyendo la base de datos ... 75%(Leyendo la base de datos ... 80%(Leyendo la base de datos ... 85%(Leyendo la base de datos ... 90%(Leyendo la base de datos ... 95%(Leyendo la base de datos ... 100%(Leyendo la base de datos ... 435014 ficheros o directorios instalados actualmente.)
+Preparando para desempaquetar .../libjson-c-dev_0.17-1build1_amd64.deb ...
+7Progreso: [  0%] [......................................................] 87Progreso: [ 20%] [##########............................................] 8Desempaquetando libjson-c-dev:amd64 (0.17-1build1) ...
+7Progreso: [ 40%] [#####################.................................] 8Configurando libjson-c-dev:amd64 (0.17-1build1) ...
+7Progreso: [ 60%] [################################......................] 87Progreso: [ 80%] [###########################################...........] 8
+78josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a dato
+s/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/001-jocarsabbdd-unificado$ 

@@ -1,0 +1,46 @@
+{
+  "nombre": "Daniel Rubio Herrera",
+  "marca": "Perfil 019",
+  "nacimiento": "1987-06-28",
+  "ciudad": "Sevilla",
+  "email": "curriculum_019@example.com",
+  "web": "https://example.com/curriculum_019",
+  "profesion": "Profesor de informática",
+  "experiencia": "9 años",
+  "formacion": [
+    "Grado en Desarrollo de Software",
+    "Técnico Superior en DAW"
+  ],
+  "trabajos": [
+    "Digital Solutions - Ingeniero de IA",
+    "DataLab - Analista de datos",
+    "TechNova - Desarrollador full-stack",
+    "EducaDigital - Administrador de sistemas"
+  ],
+  "lenguajes": [
+    "C++",
+    "SQL",
+    "Go",
+    "CSS",
+    "TypeScript"
+  ],
+  "tecnologias": [
+    "React",
+    "Linux",
+    "AWS",
+    "SQLite",
+    "Apache"
+  ],
+  "idiomas": [
+    "Portugués",
+    "Francés"
+  ],
+  "especialidades": [
+    "Automatización",
+    "Inteligencia artificial",
+    "Administración de sistemas",
+    "Ciberseguridad",
+    "Análisis de datos",
+    "Formación profesional"
+  ]
+}

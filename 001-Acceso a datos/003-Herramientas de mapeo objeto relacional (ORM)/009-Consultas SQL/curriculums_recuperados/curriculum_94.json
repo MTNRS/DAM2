@@ -1,0 +1,43 @@
+{
+    "ciudad": "Zaragoza",
+    "email": "curriculum_093@example.com",
+    "especialidades": [
+        "Desarrollo web",
+        "Ciberseguridad",
+        "Programación",
+        "Análisis de datos",
+        "Administración de sistemas"
+    ],
+    "experiencia": "6 años",
+    "formacion": [
+        "Grado en Desarrollo de Software"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Italiano",
+        "Portugués",
+        "Francés"
+    ],
+    "lenguajes": [
+        "Java",
+        "SQL",
+        "TypeScript",
+        "C++"
+    ],
+    "marca": "Perfil 093",
+    "nacimiento": "1973-08-17",
+    "nombre": "Laura Romero Díaz",
+    "profesion": "Administrador de sistemas",
+    "tecnologias": [
+        "AWS",
+        "Flask",
+        "PostgreSQL"
+    ],
+    "trabajos": [
+        "EducaDigital - Administrador de sistemas",
+        "DataLab - Especialista en ciberseguridad",
+        "CloudWorks - Ingeniero de IA",
+        "TechNova - Analista de datos"
+    ],
+    "web": "https://example.com/curriculum_093"
+}

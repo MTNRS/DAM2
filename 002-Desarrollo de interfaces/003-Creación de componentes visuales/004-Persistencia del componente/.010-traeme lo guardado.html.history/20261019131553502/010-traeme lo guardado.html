@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <input type="radio" name="temporada" value="año">Año<br>
+    <input type="radio" name="temporada" value="mes">Mes<br>
+    <input type="radio" name="temporada" value="semana">Semana<br>
+    <input type="radio" name="temporada" value="dia">Dia<br>
+    <script>
+      let entradas = document.querySelectorAll("input")
+      entradas.forEach(function(entrada){
+      	entrada.onchange = function(){
+        	console.log("Has cambiado a:"+entrada.getAttribute("value"))
+          localStorage.setItem(entrada.getAttribute("name"),entrada.getAttribute("value"))
+        }
+      })
+    </script>
+  </body>
+</html>

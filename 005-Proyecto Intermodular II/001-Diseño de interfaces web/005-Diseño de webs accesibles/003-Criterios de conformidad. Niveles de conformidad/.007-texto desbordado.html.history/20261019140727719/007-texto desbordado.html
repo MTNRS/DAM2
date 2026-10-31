@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Subtítulos en directo</title>
+</head>
+<body>
+  <button id="boton" onclick="escuchar()">Escuchar</button>
+
+  <script>
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    let reconocimiento = new SpeechRecognition();
+    let escuchando = false;
+    let ventana = null;
+
+    let textoConfirmado = "";
+    let textoProvisional = "";
+
+    // Texto que ya se ha descartado de la ventana
+    let palabrasDescartadas = 0;
+
+    reconocimiento.lang = "es-ES";
+    reconocimiento.continuous = true;
+    reconocimiento.interimResults = true;
+
+    function abrirVentana(){
+      ventana = window.open(
+        "",
+        "Subtítulos",
+        "popup=yes,width=900,height=180,left=200,top=100,menubar=no,toolbar=no,location=no,status=no"
+      );
+
+      if(!ventana) return false;
+
+      ventana.document.open();
+      ventana.document.write(`
+        <!doctype html>
+        <html lang="es">
+        <head>
+          <meta charset="utf-8">
+          <title>Subtítulos</title>
+          <style>
+            * {
+              box-sizing: border-box;
+            }
+
+            html, body {
+              margin: 0;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              background: black;
+              color: white;
+              font-family: Arial, sans-serif;
+            }
+
+            body {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 12px 28px;
+            }
+
+            #texto {
+              font-size: 32px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 1.25;
+              overflow-wrap: anywhere;
+              width: 100%;
+            }
+          </style>
+        </head>
+        <body>
+          <div id="texto"></div>
+        </body>
+        </html>
+      `);
+      ventana.document.close();
+
+      return true;
+    }
+
+    function mostrarTexto(){
+      if(!ventana || ventana.closed) return;
+
+      let elemento = ventana.document.querySelector("#texto");
+
+      let textoCompleto =
+        (textoConfirmado + " " + textoProvisional).trim();
+
+      let palabras = textoCompleto.split(/\s+/).filter(Boolean);
+
+      // Mantener únicamente las palabras todavía visibles
+      let visibles = palabras.slice(palabrasDescartadas);
+
+      elemento.textContent = visibles.join(" ");
+
+      let cuerpo = ventana.document.body;
+
+      // Si desborda, retirar palabras del principio
+      while(
+        elemento.scrollHeight > cuerpo.clientHeight - 24 ||
+        elemento.scrollWidth > cuerpo.clientWidth - 56
+      ){
+        if(visibles.length <= 1) break;
+
+        visibles.shift();
+        palabrasDescartadas++;
+
+        elemento.textContent = visibles.join(" ");
+      }
+    }
+
+    reconocimiento.onresult = function(evento){
+      if(!escuchando) return;
+
+      // Reconstruir resultados definitivos y provisionales
+      // para evitar duplicaciones
+      let definitivos = "";
+      let provisionales = "";
+
+      for(let i = 0; i < evento.results.length; i++){
+        let resultado = evento.results[i];
+
+        if(resultado.isFinal){
+          definitivos += resultado[0].transcript + " ";
+        }else{
+          provisionales += resultado[0].transcript + " ";
+        }
+      }
+
+      textoConfirmado = definitivos;
+      textoProvisional = provisionales;
+
+      mostrarTexto();
+    };
+
+    reconocimiento.onend = function(){
+      if(escuchando && ventana && !ventana.closed){
+        // El navegador inicia una nueva sesión de resultados
+        textoConfirmado = "";
+        textoProvisional = "";
+        palabrasDescartadas = 0;
+
+        try {
+          reconocimiento.start();
+        }catch(error){
+          console.log(error);
+        }
+      }
+    };
+
+    reconocimiento.onerror = function(evento){
+      console.log("Error:", evento.error);
+
+      if(
+        evento.error === "not-allowed" ||
+        evento.error === "service-not-allowed"
+      ){
+        detener();
+      }
+    };
+
+    function detener(){
+      escuchando = false;
+      reconocimiento.stop();
+      document.querySelector("#boton").textContent = "Escuchar";
+    }
+
+    function escuchar(){
+      if(escuchando){
+        detener();
+        return;
+      }
+
+      if(!ventana || ventana.closed){
+        if(!abrirVentana()){
+          alert("Permite las ventanas emergentes");
+          return;
+        }
+      }
+
+      textoConfirmado = "";
+      textoProvisional = "";
+      palabrasDescartadas = 0;
+
+      escuchando = true;
+      document.querySelector("#boton").textContent = "Detener";
+
+      reconocimiento.start();
+    }
+  </script>
+</body>
+</html>

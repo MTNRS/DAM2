@@ -1,0 +1,8 @@
+Datetime: 2026-10-26T15:38:55.330Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/010-jocarsa_cornell_cuda_responsive
+Command: [A
+
+Result:
+[A: no se encontró la orden
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y pro
+cesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/010-jocarsa_cornell_cuda_responsive$ 

@@ -1,0 +1,42 @@
+{
+    "ciudad": "Barcelona",
+    "email": "curriculum_051@example.com",
+    "especialidades": [
+        "Desarrollo web",
+        "Administración de sistemas",
+        "Análisis de datos",
+        "Formación profesional"
+    ],
+    "experiencia": "14 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Ingeniería Informática",
+        "Grado en Matemáticas"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "C++",
+        "Java",
+        "Go"
+    ],
+    "marca": "Perfil 051",
+    "nacimiento": "1992-03-27",
+    "nombre": "Irene Castro Molina",
+    "profesion": "Analista de datos",
+    "tecnologias": [
+        "Git",
+        "Moodle",
+        "PostgreSQL",
+        "React"
+    ],
+    "trabajos": [
+        "DataLab - Ingeniero de IA",
+        "Sistemas Levante - Administrador de sistemas",
+        "InnovaSoft - Ingeniero de IA",
+        "CodeFactory - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_051"
+}

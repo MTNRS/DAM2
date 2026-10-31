@@ -1,0 +1,11 @@
+Datetime: 2026-10-19T14:37:47.120Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos
+Command: g++ 002-bucle\ muy\ pesado.cpp
+
+Result:
+002-bucle muy pesado.cpp: In function ‘int main()’:
+002-bucle muy pesado.cpp:6:23: warning: overflow in conversion from ‘long int’ to ‘int’ changes value from ‘10000000000000’ to ‘1316134912’ [-Woverflow]
+    6 |     int iteraciones = 10000000000000;
+      |                       ^~~~~~~~~~~~~~
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-P
+rogramación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos$ 

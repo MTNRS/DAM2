@@ -1,0 +1,9 @@
+Datetime: 2026-10-29T11:26:07.269Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/002-Gestión de objetos con SQL; ANSI SQL
+Command: python3 001-ejemplo\ de\ uso\ de\ la\ clase.py
+
+Result:
+[{'nombre': 'Ana', 'edad': 28, 'direccion': {'ciudad': 'Valencia', 'codigo_postal': '46001'}, 'telefonos': ['600123456', '600654321'], '_id': 'e6436878-b3dd-475a-98f1-15b24354c73f'}, {'nombre': 'Luis', 'edad': 35, '_id': '4aa7c781-d5f9-4330-9b21-c71f1ca7d7db'}]
+{'nombre': 'Ana', 'edad': 28, 'direccion': {'ciudad': 'Valencia', 'codigo_postal': '46001'}, 'telefonos': ['600123456', '600654321'], '_id': 'e6436878-b3dd-475a-98f1-15b24354c73f'}
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/00
+4-Bases de datos objeto relacionales y orientadas a objetos/002-Gestión de objetos con SQL; ANSI SQL$ 

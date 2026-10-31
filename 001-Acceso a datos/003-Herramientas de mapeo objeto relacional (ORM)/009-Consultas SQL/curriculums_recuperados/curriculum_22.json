@@ -1,0 +1,41 @@
+{
+    "ciudad": "Valencia",
+    "email": "curriculum_021@example.com",
+    "especialidades": [
+        "Desarrollo web",
+        "Formación profesional",
+        "Programación",
+        "Bases de datos"
+    ],
+    "experiencia": "5 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Técnico Superior en DAW",
+        "Ingeniería Informática"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Español"
+    ],
+    "lenguajes": [
+        "JavaScript",
+        "Python",
+        "C++",
+        "HTML",
+        "Java"
+    ],
+    "marca": "Perfil 021",
+    "nacimiento": "1978-05-02",
+    "nombre": "Javier García López",
+    "profesion": "Diseñador web",
+    "tecnologias": [
+        "Apache",
+        "Ollama",
+        "Docker"
+    ],
+    "trabajos": [
+        "CloudWorks - Desarrollador full-stack",
+        "EducaDigital - Desarrollador full-stack"
+    ],
+    "web": "https://example.com/curriculum_021"
+}

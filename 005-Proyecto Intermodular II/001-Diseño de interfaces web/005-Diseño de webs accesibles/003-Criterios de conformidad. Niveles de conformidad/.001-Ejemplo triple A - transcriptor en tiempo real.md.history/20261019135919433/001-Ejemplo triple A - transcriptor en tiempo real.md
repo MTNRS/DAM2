@@ -1,0 +1,1 @@
+Por ejemplo puedo usar speechrecognition en tiempo real

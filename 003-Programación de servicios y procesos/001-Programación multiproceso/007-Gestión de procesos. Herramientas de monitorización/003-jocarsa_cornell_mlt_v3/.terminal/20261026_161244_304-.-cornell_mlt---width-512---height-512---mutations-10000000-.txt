@@ -1,0 +1,14 @@
+Datetime: 2026-10-26T15:12:44.304Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/003-jocarsa_cornell_mlt_v3
+Command: ./cornell_mlt --width 512 --height 512 --mutations 10000000 --depth 8   --camera-x 0.3 --camera-y 0.2 --camera-z -4   --target-x 0 --target-y 1 --target-z 1 --fov 75 --preview 1   --output cornell.ppm
+
+Result:
+./cornell_mlt --width 512 --height 512 --mutations 10000000 --depth 8 \
+  --camera-x 0.3 --camera-y 0.2 --camera-z -4 \
+  --target-x 0 --target-y 1 --target-z 1 --fov 75 --preview 1 \
+  --output cornell.ppm
+Camera: (0.3, 0.2, -4) -> (0, 1, 1) | FOV 75
+Bootstrap importance: 0.056965 | sequential CPU render
+3.9% | 770717 mutations/s | accepted 34.9%   7.6% | 762943 mutations/s | accepted 35.7%   11.4% | 759464 mutations/s | accepted 36.1%   15.1% | 757211 mutations/s | accepted 36.1%   19.0% | 758683 mutations/s | accepted 36.0%   22.8% | 759032 mutations/s | accepted 36.0%   26.6% | 758982 mutations/s | accepted 36.1%   30.4% | 758836 mutations/s | accepted 36.0%   34.2% | 760874 mutations/s | accepted 36.0%   38.1% | 762989 mutations/s | accepted 36.0%   ^C
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y pro
+cesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/003-jocarsa_cornell_mlt_v3$ 

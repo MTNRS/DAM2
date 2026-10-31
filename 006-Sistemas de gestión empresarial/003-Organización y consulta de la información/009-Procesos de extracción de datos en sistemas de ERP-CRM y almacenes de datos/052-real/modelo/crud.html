@@ -1,0 +1,348 @@
+<script>
+  let tablaActual = "";
+  let permisosActuales = {seleccionar:true,insertar:true,actualizar:true,eliminar:true};
+
+  function actualizarAccionesCRUD(){
+    const fab=document.querySelector("#fabInsertar");
+    if(fab) fab.disabled = !tablaActual || !permisosActuales.insertar;
+    const seleccionar=document.querySelector("#accionSeleccionar");
+    if(seleccionar){
+      seleccionar.classList.toggle("accion-disabled",!tablaActual || !permisosActuales.seleccionar);
+      seleccionar.setAttribute("aria-disabled",(!tablaActual || !permisosActuales.seleccionar) ? "true" : "false");
+    }
+  }
+
+  function cabeceraCRUD(tabla,operacion){
+    tablaActual = tabla;
+    actualizarAccionesCRUD();
+
+    let titulo = document.querySelector("header h1");
+
+    if(titulo){
+      titulo.textContent = tabla+" · "+operacion;
+    }
+  }
+
+  function comprobarRespuesta(retorno){
+    return retorno.json().then(function(datos){
+      if(!retorno.ok || datos.error){
+        throw new Error(datos.debug || datos.error || "Error en la API");
+      }
+
+      return datos;
+    });
+  }
+
+  function crud(tabla,operacion,id){
+    let principal = document.querySelector("main");
+    principal.innerHTML = "";
+
+    cabeceraCRUD(tabla,operacion);
+
+    if(operacion == "seleccionar"){
+      cargarTablaCRUD(tabla);
+    }
+
+    if(operacion == "insertar"){
+      fetch("api/api.php?bloque=tabla&tabla="+encodeURIComponent(tabla))
+      .then(comprobarRespuesta)
+      .then(function(datos){
+        formularioCRUD(tabla,datos.estructura,null,"insertar");
+      })
+      .catch(mostrarErrorCRUD);
+    }
+
+    if(operacion == "actualizar"){
+      fetch(
+        "api/api.php?bloque=registro&tabla="+encodeURIComponent(tabla)+
+        "&id="+encodeURIComponent(id)
+      )
+      .then(comprobarRespuesta)
+      .then(function(datos){
+        formularioCRUD(tabla,datos.estructura,datos.registro,"actualizar");
+      })
+      .catch(mostrarErrorCRUD);
+    }
+  }
+
+  function cargarTablaCRUD(tabla){
+    let principal = document.querySelector("main");
+
+    fetch("api/api.php?bloque=tabla&tabla="+encodeURIComponent(tabla))
+    .then(comprobarRespuesta)
+    .then(function(datos){
+      permisosActuales = datos.permisos || permisosActuales;
+      actualizarAccionesCRUD();
+      let tablahtml = document.createElement("table");
+      let cabecera = document.createElement("tr");
+
+      datos.estructura.forEach(function(campo){
+        let th = document.createElement("th");
+        th.textContent = campo.name;
+        cabecera.appendChild(th);
+      });
+
+      let th = document.createElement("th");
+      th.textContent = "Operaciones";
+      cabecera.appendChild(th);
+
+      tablahtml.appendChild(cabecera);
+
+      datos.contenido.forEach(function(registro){
+        let fila = document.createElement("tr");
+
+        datos.estructura.forEach(function(campo){
+          let td = document.createElement("td");
+
+          let valorReal = registro[campo.name] ?? "";
+          let valorRelacionado = registro["__fk__"+campo.name];
+
+          if(valorRelacionado !== undefined){
+            td.textContent = valorRelacionado;
+            td.title = "ID: "+valorReal;
+            td.classList.add("valor-fk");
+          }else{
+            td.textContent = valorReal;
+          }
+
+          fila.appendChild(td);
+        });
+
+        let operaciones = document.createElement("td");
+
+        let actualizar = document.createElement("a");
+        actualizar.setAttribute("href","#");
+        actualizar.textContent = "Actualizar";
+
+        actualizar.onclick = function(evento){
+          evento.preventDefault();
+          crud(tabla,"actualizar",registro.Identificador);
+        }
+
+        if(!permisosActuales.actualizar){
+          actualizar.classList.add("accion-disabled");
+          actualizar.setAttribute("aria-disabled","true");
+          actualizar.onclick = function(evento){evento.preventDefault();}
+        }
+        operaciones.appendChild(actualizar);
+        operaciones.appendChild(document.createTextNode(" "));
+
+        let eliminar = document.createElement("a");
+        eliminar.setAttribute("href","#");
+        eliminar.textContent = "Eliminar";
+
+        eliminar.onclick = function(evento){
+          evento.preventDefault();
+
+          cabeceraCRUD(tabla,"eliminar");
+
+          if(confirm("¿Eliminar el registro "+registro.Identificador+"?")){
+            fetch("api/api.php?bloque=eliminar",{
+              method:"POST",
+              headers:{"Content-Type":"application/json"},
+              body:JSON.stringify({
+                tabla:tabla,
+                Identificador:registro.Identificador
+              })
+            })
+            .then(comprobarRespuesta)
+            .then(function(){
+              crud(tabla,"seleccionar");
+            })
+            .catch(mostrarErrorCRUD);
+          }else{
+            cabeceraCRUD(tabla,"seleccionar");
+          }
+        }
+
+        if(!permisosActuales.eliminar){
+          eliminar.classList.add("accion-disabled");
+          eliminar.setAttribute("aria-disabled","true");
+          eliminar.onclick = function(evento){evento.preventDefault();}
+        }
+        operaciones.appendChild(eliminar);
+        fila.appendChild(operaciones);
+        tablahtml.appendChild(fila);
+      });
+
+      principal.appendChild(tablahtml);
+    })
+    .catch(mostrarErrorCRUD);
+  }
+
+  function formularioCRUD(tabla,estructura,registro,operacion){
+    let principal = document.querySelector("main");
+    let formulario = document.createElement("form");
+    let tablahtml = document.createElement("table");
+
+    formulario.appendChild(tablahtml);
+    principal.appendChild(formulario);
+
+    let pendientes = [];
+    let foraneas = [];
+
+    estructura.forEach(function(campo){
+      if(campo.name != "Identificador"){
+        let fila = document.createElement("tr");
+
+        let nombre = document.createElement("th");
+        nombre.textContent = campo.name;
+        fila.appendChild(nombre);
+
+        let valor = document.createElement("td");
+        let entrada = document.createElement("input");
+
+        entrada.setAttribute("name",campo.name);
+        entrada.setAttribute("type","text");
+
+        if(registro){
+          entrada.value = registro[campo.name] ?? "";
+        }
+
+        if(campo.fk){
+          let lista = document.createElement("datalist");
+          let idlista = "lista-"+tabla+"-"+campo.name;
+
+          lista.setAttribute("id",idlista);
+          entrada.setAttribute("list",idlista);
+          entrada.setAttribute("autocomplete","off");
+          entrada.setAttribute("placeholder","Escribe para buscar…");
+
+          valor.appendChild(entrada);
+          valor.appendChild(lista);
+
+          let relacion = {
+            campo:campo.name,
+            entrada:entrada,
+            registros:[]
+          };
+
+          foraneas.push(relacion);
+
+          // La API descubre la relación mediante la introspección nativa de JocarsaBBDD.
+          // No hay configuración específica por tabla: funciona para cualquier FK declarada en JocarsaBBDD.
+          let peticion = fetch(
+            "api/api.php?bloque=fk_opciones"+
+            "&tabla="+encodeURIComponent(tabla)+
+            "&campo="+encodeURIComponent(campo.name),
+            {cache:"no-store"}
+          )
+          .then(comprobarRespuesta)
+          .then(function(datos){
+            datos.opciones.forEach(function(opcionFK){
+              relacion.registros.push({
+                id:opcionFK.id,
+                texto:opcionFK.texto
+              });
+
+              let opcion = document.createElement("option");
+              opcion.value = opcionFK.texto;
+              lista.appendChild(opcion);
+
+              // En actualización enseñamos el texto humano, no el ID.
+              if(registro && String(registro[campo.name]) === String(opcionFK.id)){
+                entrada.value = opcionFK.texto;
+              }
+            });
+          });
+
+          pendientes.push(peticion);
+        }else{
+          valor.appendChild(entrada);
+        }
+
+        fila.appendChild(valor);
+        tablahtml.appendChild(fila);
+      }
+    });
+
+    let fila = document.createElement("tr");
+    let nombre = document.createElement("th");
+    nombre.textContent = "Operación";
+    fila.appendChild(nombre);
+
+    let valor = document.createElement("td");
+    let boton = document.createElement("button");
+    boton.setAttribute("type","submit");
+    boton.textContent = operacion == "insertar" ? "Insertar" : "Actualizar";
+    valor.appendChild(boton);
+    fila.appendChild(valor);
+    tablahtml.appendChild(fila);
+
+    formulario.onsubmit = function(evento){
+      evento.preventDefault();
+
+      Promise.all(pendientes)
+      .then(function(){
+        let datos = {
+          tabla:tabla
+        };
+
+        if(registro){
+          datos.Identificador = registro.Identificador;
+        }
+
+        new FormData(formulario).forEach(function(valor,clave){
+          datos[clave] = valor;
+        });
+
+        let relacionesValidas = true;
+        for(let relacion of foraneas){
+          let texto = relacion.entrada.value.trim();
+
+          if(texto === ""){
+            datos[relacion.campo] = null;
+            relacion.entrada.setCustomValidity("");
+            continue;
+          }
+
+          let encontrado = relacion.registros.find(function(registroForaneo){
+            return registroForaneo.texto === texto;
+          });
+
+          if(!encontrado){
+            relacion.entrada.setCustomValidity("Selecciona uno de los valores relacionados de la lista");
+            relacion.entrada.reportValidity();
+            relacion.entrada.focus();
+            relacionesValidas = false;
+            break;
+          }
+
+          relacion.entrada.setCustomValidity("");
+          datos[relacion.campo] = encontrado.id;
+        }
+
+        if(!relacionesValidas) return;
+
+        fetch("api/api.php?bloque="+operacion,{
+          method:"POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify(datos)
+        })
+        .then(comprobarRespuesta)
+        .then(function(){
+          crud(tabla,"seleccionar");
+        })
+        .catch(mostrarErrorCRUD);
+      });
+    }
+  }
+
+  function crudActual(operacion){
+    if(tablaActual != ""){
+      crud(tablaActual,operacion);
+    }
+  }
+
+  function mostrarErrorCRUD(error){
+    let principal = document.querySelector("main");
+    principal.innerHTML = "";
+
+    let mensaje = document.createElement("pre");
+    mensaje.textContent = "Se ha producido un error:\\n"+error.message;
+    principal.appendChild(mensaje);
+
+    console.log("Se ha producido un error:");
+    console.log(error);
+  }
+</script>

@@ -1,0 +1,41 @@
+{
+    "ciudad": "Sevilla",
+    "email": "curriculum_081@example.com",
+    "especialidades": [
+        "Desarrollo web",
+        "Formación profesional",
+        "Programación",
+        "Administración de sistemas",
+        "Automatización"
+    ],
+    "experiencia": "9 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Técnico Superior en DAM"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "CSS",
+        "Python",
+        "PHP"
+    ],
+    "marca": "Perfil 081",
+    "nacimiento": "1995-04-14",
+    "nombre": "Miguel Martínez Ruiz",
+    "profesion": "Desarrollador full-stack",
+    "tecnologias": [
+        "Docker",
+        "AWS",
+        "Linux",
+        "Ollama"
+    ],
+    "trabajos": [
+        "DataLab - Ingeniero de IA",
+        "CloudWorks - Desarrollador de software",
+        "EducaDigital - Desarrollador de software"
+    ],
+    "web": "https://example.com/curriculum_081"
+}

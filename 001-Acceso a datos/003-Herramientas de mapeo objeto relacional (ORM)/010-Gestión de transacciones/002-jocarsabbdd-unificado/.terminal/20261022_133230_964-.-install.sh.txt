@@ -1,0 +1,391 @@
+Datetime: 2026-10-22T11:32:30.964Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado
+Command: ./install.sh
+
+Result:
+0% [Trabajando]               Obj:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+0% [Conectado a ppa.launchpadcontent.net (185.125.189.186)] [Conectado a dl0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.mo                                                                           Obj:2 https://dl.google.com/linux/chrome/deb stable InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:3 https://packages.microsoft.com/repos/code stable InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:4 https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/noble pgadmin4 InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:5 https://mirror.mwt.me/shiftkey-desktop/deb any InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.fo                                                                           Obj:6 https://ppa.launchpadcontent.net/agornostal/ulauncher/ubuntu noble InRelease
+0% [Esperando las cabeceras] [Conectado a repo.fortinet.com (208.91.114.61)0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.fo                                                                           Obj:7 http://archive.ubuntu.com/ubuntu noble InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.fo0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.fo0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.fo0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.fo0% [Esperando las cabeceras] [Esperando las cabeceras] [Conectado a repo.fo                                                                           Obj:8 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu noble InRelease
+                                                                           Obj:9 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+0% [Esperando las cabeceras] [Conectado a repo.fortinet.com (208.91.114.61)                                                                           Obj:10 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:12 https://ppa.launchpadcontent.net/graphics-drivers/ppa/ubuntu noble InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:13 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec0% [Conectando a hub-dist.unity3d.com] [Esperando las cabeceras] [Esperando                                                                           Obj:14 https://ppa.launchpadcontent.net/inkscape.dev/stable/ubuntu noble InRelease
+0% [Conectando a hub-dist.unity3d.com] [Esperando las cabeceras] [Esperando0% [Conectando a hub-dist.unity3d.com] [Esperando las cabeceras] [Esperando                                                                           Obj:15 https://ppa.launchpadcontent.net/obsproject/obs-studio/ubuntu noble InRelease
+0% [Conectando a hub-dist.unity3d.com] [Esperando las cabeceras] [Esperando0% [Conectando a hub-dist.unity3d.com (2.20.187.202)] [Esperando las cabece0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:11 https://hub-dist.unity3d.com/artifactory/hub-debian-prod-local stable InRelease
+0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:16 https://ppa.launchpadcontent.net/tomtomtom/woeusb/ubuntu noble InRelease
+                                                                           0% [Esperando las cabeceras] [Esperando las cabeceras]0% [Esperando las cabeceras] [Esperando las cabeceras] [Esperando las cabec                                                                           Obj:17 https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 InRelease
+                                                                           0% [Esperando las cabeceras] [Esperando las cabeceras]                                                      Obj:18 https://ppa.launchpadcontent.net/ubuntuhandbook1/gimp/ubuntu noble InRelease
+                                                      0% [Esperando las cabeceras]0% [Esperando las cabeceras]0% [Esperando las cabeceras]                            Obj:19 https://repo.fortinet.com/repo/forticlient/7.4/ubuntu stable InRelease
+                            0% [Trabajando]0% [Trabajando]0% [Trabajando]0% [Trabajando]0% [Trabajando]20% [Trabajando]                Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 1%Leyendo lista de paquetes... 3%Leyendo lista de paquetes... 3%Leyendo lista de paquetes... 5%Leyendo lista de paquetes... 5%Leyendo lista de paquetes... 6%Leyendo lista de paquetes... 6%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 7%Leyendo lista de paquetes... 33%Leyendo lista de paquetes... 33%Leyendo lista de paquetes... 47%Leyendo lista de paquetes... 47%Leyendo lista de paquetes... 50%Leyendo lista de paquetes... 50%Leyendo lista de paquetes... 61%Leyendo lista de paquetes... 61%Leyendo lista de paquetes... 61%Leyendo lista de paquetes... 61%Leyendo lista de paquetes... 62%Leyendo lista de paquetes... 62%Leyendo lista de paquetes... 62%Leyendo lista de paquetes... 62%Leyendo lista de paquetes... 62%Leyendo lista de paquetes... 62%Leyendo lista de paquetes... 65%Leyendo lista de paquetes... 65%Leyendo lista de paquetes... 66%Leyendo lista de paquetes... 66%Leyendo lista de paquetes... 67%Leyendo lista de paquetes... 67%Leyendo lista de paquetes... 71%Leyendo lista de paquetes... 71%Leyendo lista de paquetes... 71%Leyendo lista de paquetes... 71%Leyendo lista de paquetes... 72%Leyendo lista de paquetes... 74%Leyendo lista de paquetes... 74%Leyendo lista de paquetes... 77%Leyendo lista de paquetes... 77%Leyendo lista de paquetes... 80%Leyendo lista de paquetes... 80%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 81%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 82%Leyendo lista de paquetes... 84%Leyendo lista de paquetes... 84%Leyendo lista de paquetes... 85%Leyendo lista de paquetes... 85%Leyendo lista de paquetes... 86%Leyendo lista de paquetes... 86%Leyendo lista de paquetes... 90%Leyendo lista de paquetes... 90%Leyendo lista de paquetes... 90%Leyendo lista de paquetes... 90%Leyendo lista de paquetes... 92%Leyendo lista de paquetes... 92%Leyendo lista de paquetes... 95%Leyendo lista de paquetes... 95%Leyendo lista de paquetes... 97%Leyendo lista de paquetes... 97%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... 98%Leyendo lista de paquetes... Hecho
+N: Omitiendo el uso del fichero configurado «multiverse/binary-i386/Packages» ya que el repositorio «https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 InRelease» no admite la arquitectura «i386»
+Leyendo lista de paquetes... 0%Leyendo lista de paquetes... 100%Leyendo lista de paquetes... Hecho
+Creando árbol de dependencias... 0%Creando árbol de dependencias... 0%Creando árbol de dependencias... 50%Creando árbol de dependencias... 50%Creando árbol de dependencias... Hecho
+Leyendo la información de estado... 0%Leyendo la información de estado... 0%Leyendo la información de estado... Hecho
+build-essential ya está en su versión más reciente (12.10ubuntu1).
+make ya está en su versión más reciente (4.3-4.1build2).
+libjson-c-dev ya está en su versión más reciente (0.17-1build1).
+python3-dev ya está en su versión más reciente (3.12.3-0ubuntu2.1).
+php-dev ya está en su versión más reciente (2:8.3+93ubuntu2).
+0 actualizados, 0 nuevos se instalarán, 0 para eliminar y 247 no actualizados.
+g++ -std=c++17 -O2 -Wall -Wextra -fPIC -Iinclude src/main.cpp src/JocarsaBBDD.cpp -o jocarsabbdd
+src/main.cpp: In function ‘int main(int, char**)’:
+src/main.cpp:88:4: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   88 |    if(A=="SALIR")break;if(A=="AYUDA"){ayuda();continue;}
+      |    ^~
+src/main.cpp:88:24: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   88 |    if(A=="SALIR")break;if(A=="AYUDA"){ayuda();continue;}
+      |                        ^~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::crearVista(const std::string&, const std::string&)’:
+src/JocarsaBBDD.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |     ^~
+src/JocarsaBBDD.cpp:122:63: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 | (basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp: In member function ‘std::vector<long long int> JocarsaBBDD::buscarIdsIndice(const std::string&, const std::string&, const std::string&) const’:
+src/JocarsaBBDD.cpp:143:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  143 |     for(const auto&i:listarIndices(t))if(i.columna==c){std::vector<long long> ids;std::ifstream f(rutaTabla(t,".sidx_"+i.nombre));std::string val;char coma;long long id;while(f>>std::quoted(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |     ^~~
+src/JocarsaBBDD.cpp:143:246: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  143 | d(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |                                                          ^~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::iniciarTransaccion()’:
+src/JocarsaBBDD.cpp:156:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  156 |     if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |     ^~
+src/JocarsaBBDD.cpp:156:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  156 |  if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |                                                         ^~~~~~~~~~~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::deshacerTransaccion()’:
+src/JocarsaBBDD.cpp:163:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |     ^~
+src/JocarsaBBDD.cpp:163:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |                                        ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+src/JocarsaBBDD.cpp:208:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+src/JocarsaBBDD.cpp:208:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+src/JocarsaBBDD.cpp:214:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+src/JocarsaBBDD.cpp:214:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+src/JocarsaBBDD.cpp: In member function ‘bool {anonymous}::ExprDQL::prim()’:
+src/JocarsaBBDD.cpp:465:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  465 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |   ^~
+src/JocarsaBBDD.cpp:465:76: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  465 | row std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp:466:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |   ^~
+src/JocarsaBBDD.cpp:466:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |                          ^~
+src/JocarsaBBDD.cpp: In member function ‘ResultadoConsulta JocarsaBBDD::consultarInterno(const std::string&, int) const’:
+src/JocarsaBBDD.cpp:524:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  524 |         if(p>=t.size())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |         ^~
+src/JocarsaBBDD.cpp:524:74: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  524 | ize())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |                                                         ^~~
+
+g++ -std=c++17 -O2 -Wall -Wextra -fPIC -Iinclude -shared src/JocarsaBBDD.cpp src/JocarsaORM.cpp src/jocarsaorm_c.cpp -ljson-c -o libjocarsaorm.so
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::crearVista(const std::string&, const std::string&)’:
+src/JocarsaBBDD.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |     ^~
+src/JocarsaBBDD.cpp:122:63: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 | (basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp: In member function ‘std::vector<long long int> JocarsaBBDD::buscarIdsIndice(const std::string&, const std::string&, const std::string&) const’:
+src/JocarsaBBDD.cpp:143:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  143 |     for(const auto&i:listarIndices(t))if(i.columna==c){std::vector<long long> ids;std::ifstream f(rutaTabla(t,".sidx_"+i.nombre));std::string val;char coma;long long id;while(f>>std::quoted(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |     ^~~
+src/JocarsaBBDD.cpp:143:246: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  143 | d(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |                                                          ^~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::iniciarTransaccion()’:
+src/JocarsaBBDD.cpp:156:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  156 |     if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |     ^~
+src/JocarsaBBDD.cpp:156:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  156 |  if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |                                                         ^~~~~~~~~~~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::deshacerTransaccion()’:
+src/JocarsaBBDD.cpp:163:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |     ^~
+src/JocarsaBBDD.cpp:163:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |                                        ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+src/JocarsaBBDD.cpp:208:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+src/JocarsaBBDD.cpp:208:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+src/JocarsaBBDD.cpp:214:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+src/JocarsaBBDD.cpp:214:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+src/JocarsaBBDD.cpp: In member function ‘bool {anonymous}::ExprDQL::prim()’:
+src/JocarsaBBDD.cpp:465:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  465 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |   ^~
+src/JocarsaBBDD.cpp:465:76: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  465 | row std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp:466:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |   ^~
+src/JocarsaBBDD.cpp:466:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |                          ^~
+src/JocarsaBBDD.cpp: In member function ‘ResultadoConsulta JocarsaBBDD::consultarInterno(const std::string&, int) const’:
+src/JocarsaBBDD.cpp:524:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  524 |         if(p>=t.size())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |         ^~
+src/JocarsaBBDD.cpp:524:74: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  524 | ize())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |                                                         ^~~
+
+g++ -std=c++17 -O2 -Wall -Wextra -fPIC -Iinclude -shared $(python3-config --includes) src/conector_python.cpp src/JocarsaBBDD.cpp -o jocarsabbdd$(python3-config --extension-suffix)
+src/conector_python.cpp: In function ‘TipoDato py_tipo(const std::string&)’:
+src/conector_python.cpp:173:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  173 |     if(x=="ENTERO"||x=="INT")return TipoDato::ENTERO;if(x=="REAL"||x=="DECIMAL")return TipoDato::REAL;if(x=="BOOLEANO"||x=="BOOL")return TipoDato::BOOLEANO;if(x=="FECHA"||x=="DATE")return TipoDato::FECHA;if(x=="DECIMAL"||x=="NUMERICO")return TipoDato::DECIMAL;return TipoDato::TEXTO;
+      |     ^~
+src/conector_python.cpp:173:54: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  173 |     if(x=="ENTERO"||x=="INT")return TipoDato::ENTERO;if(x=="REAL"||x=="DECIMAL")return TipoDato::REAL;if(x=="BOOLEANO"||x=="BOOL")return TipoDato::BOOLEANO;if(x=="FECHA"||x=="DATE")return TipoDato::FECHA;if(x=="DECIMAL"||x=="NUMERICO")return TipoDato::DECIMAL;return TipoDato::TEXTO;
+      |                                                      ^~
+src/conector_python.cpp: At global scope:
+src/conector_python.cpp:246:117: warning: missing initializer for member ‘PyModuleDef::m_slots’ [-Wmissing-field-initializers]
+  246 | ocarsabbdd","Conector nativo Python para Jocarsa BBDD",-1,Metodos};
+      |                                                                  ^
+
+src/conector_python.cpp:246:117: warning: missing initializer for member ‘PyModuleDef::m_traverse’ [-Wmissing-field-initializers]
+src/conector_python.cpp:246:117: warning: missing initializer for member ‘PyModuleDef::m_clear’ [-Wmissing-field-initializers]
+src/conector_python.cpp:246:117: warning: missing initializer for member ‘PyModuleDef::m_free’ [-Wmissing-field-initializers]
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::crearVista(const std::string&, const std::string&)’:
+src/JocarsaBBDD.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |     ^~
+src/JocarsaBBDD.cpp:122:63: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 | (basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp: In member function ‘std::vector<long long int> JocarsaBBDD::buscarIdsIndice(const std::string&, const std::string&, const std::string&) const’:
+src/JocarsaBBDD.cpp:143:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  143 |     for(const auto&i:listarIndices(t))if(i.columna==c){std::vector<long long> ids;std::ifstream f(rutaTabla(t,".sidx_"+i.nombre));std::string val;char coma;long long id;while(f>>std::quoted(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |     ^~~
+src/JocarsaBBDD.cpp:143:246: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  143 | d(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |                                                          ^~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::iniciarTransaccion()’:
+src/JocarsaBBDD.cpp:156:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  156 |     if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |     ^~
+src/JocarsaBBDD.cpp:156:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  156 |  if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |                                                         ^~~~~~~~~~~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::deshacerTransaccion()’:
+src/JocarsaBBDD.cpp:163:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |     ^~
+src/JocarsaBBDD.cpp:163:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |                                        ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+src/JocarsaBBDD.cpp:208:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+src/JocarsaBBDD.cpp:208:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+src/JocarsaBBDD.cpp:214:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+src/JocarsaBBDD.cpp:214:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+src/JocarsaBBDD.cpp: In member function ‘bool {anonymous}::ExprDQL::prim()’:
+src/JocarsaBBDD.cpp:465:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  465 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |   ^~
+src/JocarsaBBDD.cpp:465:76: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  465 | row std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp:466:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |   ^~
+src/JocarsaBBDD.cpp:466:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |                          ^~
+src/JocarsaBBDD.cpp: In member function ‘ResultadoConsulta JocarsaBBDD::consultarInterno(const std::string&, int) const’:
+src/JocarsaBBDD.cpp:524:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  524 |         if(p>=t.size())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |         ^~
+src/JocarsaBBDD.cpp:524:74: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  524 | ize())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |                                                         ^~~
+
+g++ -std=c++17 -O2 -Wall -Wextra -fPIC -Iinclude -shared $(php-config --includes) -DCOMPILE_DL_JOCARSABBDD src/conector_php.cpp src/JocarsaBBDD.cpp -o jocarsabbdd.so
+src/conector_php.cpp: In function ‘bool php_assoc_strings(zval*, std::map<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&)’:
+src/conector_php.cpp:36:34: warning: variable ‘idx’ set but not used [-Wunused-but-set-variable]
+   36 |     zend_string* key; zend_ulong idx; zval* v;
+      |                                  ^~~
+src/conector_php.cpp: In function ‘void zif_jocarsabbdd_crear_tabla_tipada(zend_execute_data*, zval*)’:
+src/conector_php.cpp:96:230: warning: variable ‘i’ set but not used [-Wunused-but-set-variable]
+   96 | td::vector<DefinicionColumna>d;zend_string*k;zend_ulong i;zval*v;ZEND_HASH_FOREACH_KEY_VAL(Z_ARRVAL_P(a),i,k,v){if(!k)continue;zend_string*zs=zval_get_string(v);d.push_back({ZSTR_VAL(k),tipo_desde_php(ZSTR_VAL(zs))});zend_string_release(zs);}ZEND_HASH_FOREACH_END();RETURN_BOOL(motor().creaTablaTipada(std::string(t,tl),d));}catch(const std::exception&e){lanzar(e);RETURN_THROWS();}}
+      |                                                         ^
+
+src/conector_php.cpp: In function ‘void zif_jocarsabbdd_actualizar_donde(zend_execute_data*, zval*)’:
+src/conector_php.cpp:121:54: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  121 | PHP_FUNCTION(jocarsabbdd_actualizar_donde){char*t,*c="",*v="";size_t tl,cl=0,vl=0;zval*d;ZEND_PARSE_PARAMETERS_START(2,4) Z_PARAM_STRING(t,tl) Z_PARAM_ARRAY(d) Z_PARAM_OPTIONAL Z_PARAM_STRING(c,cl) Z_PARAM_STRING(v,vl) ZEND_PARSE_PARAMETERS_END();try{std::map<std::string,std::string>m;php_assoc_strings(d,m);RETURN_LONG(motor().actualizarDonde(std::string(t,tl),m,std::string(c,cl),std::string(v,vl)));}catch(const std::exception&e){lanzar(e);RETURN_THROWS();}}
+      |                                                      ^~
+src/conector_php.cpp:121:60: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  121 | _FUNCTION(jocarsabbdd_actualizar_donde){char*t,*c="",*v="";size_t tl,cl=0,vl=0;zval*d;ZEND_PARSE_PARAMETERS_START(2,4) Z_PARAM_STRING(t,tl) Z_PARAM_ARRAY(d) Z_PARAM_OPTIONAL Z_PARAM_STRING(c,cl) Z_PARAM_STRING(v,vl) ZEND_PARSE_PARAMETERS_END();try{std::map<std::string,std::string>m;php_assoc_strings(d,m);RETURN_LONG(motor().actualizarDonde(std::string(t,tl),m,std::string(c,cl),std::string(v,vl)));}catch(const std::exception&e){lanzar(e);RETURN_THROWS();}}
+      |                                                         ^~
+
+src/conector_php.cpp: In function ‘void zif_jocarsabbdd_eliminar_donde(zend_execute_data*, zval*)’:
+src/conector_php.cpp:122:52: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  122 | PHP_FUNCTION(jocarsabbdd_eliminar_donde){char*t,*c="",*v="";size_t tl,cl=0,vl=0;ZEND_PARSE_PARAMETERS_START(1,3) Z_PARAM_STRING(t,tl) Z_PARAM_OPTIONAL Z_PARAM_STRING(c,cl) Z_PARAM_STRING(v,vl) ZEND_PARSE_PARAMETERS_END();try{RETURN_LONG(motor().eliminarDonde(std::string(t,tl),std::string(c,cl),std::string(v,vl)));}catch(const std::exception&e){lanzar(e);RETURN_THROWS();}}
+      |                                                    ^~
+src/conector_php.cpp:122:58: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  122 | HP_FUNCTION(jocarsabbdd_eliminar_donde){char*t,*c="",*v="";size_t tl,cl=0,vl=0;ZEND_PARSE_PARAMETERS_START(1,3) Z_PARAM_STRING(t,tl) Z_PARAM_OPTIONAL Z_PARAM_STRING(c,cl) Z_PARAM_STRING(v,vl) ZEND_PARSE_PARAMETERS_END();try{RETURN_LONG(motor().eliminarDonde(std::string(t,tl),std::string(c,cl),std::string(v,vl)));}catch(const std::exception&e){lanzar(e);RETURN_THROWS();}}
+      |                                                         ^~
+
+In file included from /usr/include/php/20230831/Zend/zend_API.h:25,
+                 from /usr/include/php/20230831/main/php.h:35,
+                 from src/conector_php.cpp:2:
+src/conector_php.cpp: In function ‘void zm_info_jocarsabbdd(zend_module_entry*)’:
+/usr/include/php/20230831/Zend/zend_modules.h:31:55: warning: unused parameter ‘zend_module’ [-Wunused-parameter]
+   31 | #define ZEND_MODULE_INFO_FUNC_ARGS zend_module_entry *zend_module
+      |                                    ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+/usr/include/php/20230831/Zend/zend_API.h:233:99: note: in expansion of macro ‘ZEND_MODULE_INFO_FUNC_ARGS’
+  233 |               ZEND_COLD void ZEND_MODULE_INFO_N(module)(ZEND_MODULE_INFO_FUNC_ARGS)
+      |                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+
+/usr/include/php/20230831/main/php.h:409:41: note: in expansion of macro ‘ZEND_MODULE_INFO_D’
+  409 | #define PHP_MINFO_FUNCTION              ZEND_MODULE_INFO_D
+      |                                         ^~~~~~~~~~~~~~~~~~
+src/conector_php.cpp:221:1: note: in expansion of macro ‘PHP_MINFO_FUNCTION’
+  221 | PHP_MINFO_FUNCTION(jocarsabbdd){
+      | ^~~~~~~~~~~~~~~~~~
+src/conector_php.cpp: At global scope:
+src/conector_php.cpp:63:13: warning: ‘void valor_php(zval*, const std::string&)’ defined but not used [-Wunused-function]
+   63 | static void valor_php(zval* z,const std::string& v){
+      |             ^~~~~~~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::crearVista(const std::string&, const std::string&)’:
+src/JocarsaBBDD.cpp:122:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  122 |     if(basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |     ^~
+src/JocarsaBBDD.cpp:122:63: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  122 | (basededatos.empty()||n.empty()||q.empty())return false;try{(void)consultar(q);}catch(const std::exception&e){std::cerr<<"Vista invalida: "<<e.what()<<"\n";return false;}
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp: In member function ‘std::vector<long long int> JocarsaBBDD::buscarIdsIndice(const std::string&, const std::string&, const std::string&) const’:
+src/JocarsaBBDD.cpp:143:5: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  143 |     for(const auto&i:listarIndices(t))if(i.columna==c){std::vector<long long> ids;std::ifstream f(rutaTabla(t,".sidx_"+i.nombre));std::string val;char coma;long long id;while(f>>std::quoted(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |     ^~~
+src/JocarsaBBDD.cpp:143:246: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  143 | d(val)>>coma>>id)if(val==v)ids.push_back(id);return ids;}return {};
+      |                                                          ^~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::iniciarTransaccion()’:
+src/JocarsaBBDD.cpp:156:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  156 |     if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |     ^~
+src/JocarsaBBDD.cpp:156:60: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  156 |  if(transaccionActiva||basededatos.empty())return false;baseTransaccion=basededatos;rutaSnapshot=fs::path(instalacion)/(".txn_"+basededatos);
+      |                                                         ^~~~~~~~~~~~~~~
+
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::deshacerTransaccion()’:
+src/JocarsaBBDD.cpp:163:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |     ^~
+src/JocarsaBBDD.cpp:163:40: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  163 |     if(!transaccionActiva)return false;auto dst=fs::path(instalacion)/baseTransaccion;std::error_code ec;
+      |                                        ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarTabla(const std::string&)’:
+src/JocarsaBBDD.cpp:208:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |     ^~
+src/JocarsaBBDD.cpp:208:43: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  208 |     if(basededatos.empty()) return false; bool habia=false;
+      |                                           ^~~~
+src/JocarsaBBDD.cpp: In member function ‘bool JocarsaBBDD::eliminarBaseDatos(const std::string&)’:
+src/JocarsaBBDD.cpp:214:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |     ^~
+src/JocarsaBBDD.cpp:214:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  214 |     if(n.empty()) return false; fs::path p=fs::path(instalacion)/n; if(!fs::exists(p)||!fs::is_directory(p)) return false;
+      |                                 ^~
+src/JocarsaBBDD.cpp: In member function ‘bool {anonymous}::ExprDQL::prim()’:
+src/JocarsaBBDD.cpp:465:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  465 |   if(p>=t.size())throw std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |   ^~
+src/JocarsaBBDD.cpp:465:76: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  465 | row std::runtime_error("Falta operador de comparacion");std::string op=t[p++].texto;std::string der=valor();int c=dqlComparar(izq,der);
+      |                                                         ^~~
+
+src/JocarsaBBDD.cpp:466:3: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |   ^~
+src/JocarsaBBDD.cpp:466:26: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  466 |   if(op=="=")return c==0;if(op=="<>"||op=="!=")return c!=0;if(op==">")return c>0;if(op=="<")return c<0;if(op==">=")return c>=0;if(op=="<=")return c<=0;throw std::runtime_error("Operador no soportado: "+op);
+      |                          ^~
+src/JocarsaBBDD.cpp: In member function ‘ResultadoConsulta JocarsaBBDD::consultarInterno(const std::string&, int) const’:
+src/JocarsaBBDD.cpp:524:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  524 |         if(p>=t.size())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |         ^~
+src/JocarsaBBDD.cpp:524:74: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  524 | ize())throw std::runtime_error("Falta tabla tras JOIN");std::string tj=t[p++].texto,aj=tj;
+      |                                                         ^~~
+
+
+=== VERIFICACIONES ===
+/usr/local/bin/jocarsabbdd
+	libjocarsaorm.so (libc6,x86-64) => /usr/local/lib/libjocarsaorm.so
+Python ORM: OK
+Python SQL: OK
+PHP Warning:  Module "jocarsabbdd" is already loaded in Unknown on line 0
+PHP SQL: OK
+No syntax errors detected in /usr/local/share/jocarsaorm/php/JocarsaORM.php
+
+Instalación terminada.
+PHP SQL: ejecutar con php -d extension=/usr/lib/php/20230831/jocarsabbdd.so script.php
+PHP ORM: requiere FFI habilitado; usa /usr/local/share/jocarsaorm/php/JocarsaORM.php
+Configuración: /etc/jocarsa/config.json (pásala explícitamente a JocarsaORM)
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a dato
+s/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado$ 
