@@ -1,0 +1,35 @@
+Datetime: 2026-10-22T11:32:59.965Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado/examples
+Command: python3 demo.py
+
+Result:
+La base de datos no existe
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado/examples/demo.py", line 2, in <module>
+    with JocarsaORM('demo_orm', 'config.json') as orm:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/jocarsaorm.py", line 28, in __init__
+    if not self.handle: raise RuntimeError(self.error())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: filesystem error: cannot create directory: Permission denied [/var/jocarsa-basededatos/demo_orm]
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_003-Herramientas de mapeo objeto relacional (ORM)_010-Gestión de transacciones_002-jocarsabbdd-unificado_examples_demo.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado/examples/demo.py", line 2, in <module>
+    with JocarsaORM('demo_orm', 'config.json') as orm:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/jocarsaorm.py", line 28, in __init__
+    if not self.handle: raise RuntimeError(self.error())
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: filesystem error: cannot create directory: Permission denied [/var/jocarsa-basededatos/demo_orm]
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a dato
+s/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado/examples$ 

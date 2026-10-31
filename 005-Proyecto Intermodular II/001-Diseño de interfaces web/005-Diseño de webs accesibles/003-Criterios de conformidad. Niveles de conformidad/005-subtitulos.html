@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Subtítulos en directo</title>
+</head>
+<body>
+  <button id="boton" onclick="escuchar()">Escuchar</button>
+
+  <script>
+    let reconocimiento = new webkitSpeechRecognition();
+    let escuchando = false;
+    let ventana = null;
+
+    reconocimiento.lang = "es-ES";
+    reconocimiento.continuous = true;
+    reconocimiento.interimResults = true;
+
+    function abrirVentana(){
+      ventana = window.open(
+        "",
+        "subtitulos",
+        "popup=yes,width=800,height=160,left=200,top=100,menubar=no,toolbar=no,location=no,status=no"
+      );
+
+      if(!ventana) return false;
+
+      ventana.document.open();
+      ventana.document.write(`
+        <!doctype html>
+        <html lang="es">
+        <head>
+          <meta charset="utf-8">
+          <title>Subtítulos</title>
+          <style>
+            * {
+              box-sizing: border-box;
+            }
+            html, body {
+              margin: 0;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              background: black;
+              color: white;
+              font-family: Arial, sans-serif;
+            }
+            body {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 12px 24px;
+            }
+            #texto {
+              font-size: 32px;
+              font-weight: bold;
+              text-align: center;
+              line-height: 1.2;
+              overflow-wrap: anywhere;
+            }
+          </style>
+        </head>
+        <body>
+          <div id="texto"></div>
+        </body>
+        </html>
+      `);
+      ventana.document.close();
+
+      return true;
+    }
+
+    reconocimiento.onresult = function(evento){
+      let texto = "";
+
+      // Mostrar únicamente el resultado más reciente
+      let ultimo = evento.results[evento.results.length - 1];
+      texto = ultimo[0].transcript;
+
+      if(ventana && !ventana.closed){
+        ventana.document.querySelector("#texto").textContent = texto;
+      }
+    };
+
+    reconocimiento.onend = function(){
+      if(escuchando && ventana && !ventana.closed){
+        try {
+          reconocimiento.start();
+        } catch(error) {
+          console.log(error);
+        }
+      }
+    };
+
+    reconocimiento.onerror = function(evento){
+      console.log(evento.error);
+      if(evento.error === "not-allowed" ||
+         evento.error === "service-not-allowed"){
+        detener();
+      }
+    };
+
+    function detener(){
+      escuchando = false;
+      reconocimiento.stop();
+      document.querySelector("#boton").textContent = "Escuchar";
+    }
+
+    function escuchar(){
+      if(escuchando){
+        detener();
+        return;
+      }
+
+      if(!ventana || ventana.closed){
+        if(!abrirVentana()){
+          alert("Permite las ventanas emergentes");
+          return;
+        }
+      }
+
+      escuchando = true;
+      document.querySelector("#boton").textContent = "Detener";
+      reconocimiento.start();
+    }
+  </script>
+</body>
+</html>

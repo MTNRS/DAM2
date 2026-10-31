@@ -1,6 +1,43 @@
 <?php
 $mdFile=__DIR__.'/proyectos.md'; $dbFile=__DIR__.'/proyectos.sqlite';
 function parseMarkdownTree(string $file):array{$lines=file($file,FILE_IGNORE_NEW_LINES);$root=['title'=>'ROOT','children'=>[]];$stack=[];$stack[]=&$root;foreach($lines as $line){if(!preg_match('/^(\s*)-\s*(.+?)\s*$/u',$line,$m))continue;$spaces=strlen(str_replace("\t",'    ',$m[1]));$level=intdiv($spaces,4);$title=trim($m[2]);if($title==='')continue;$node=['title'=>$title,'children'=>[]];while(count($stack)>$level+1)array_pop($stack);$parent=&$stack[count($stack)-1];$parent['children'][]=$node;$idx=count($parent['children'])-1;$stack[]=&$parent['children'][$idx];unset($parent);}return $root['children'];}
+// Folder root: change this if the course directories are elsewhere under the web root.
+$folderRoot = __DIR__;
+function normalizedFolderName(string $name):string {
+  $name=preg_replace('/^\s*\d+\s*[-._) ]+\s*/u','',$name);
+  $name=mb_strtolower(trim($name),'UTF-8');
+  $ascii=iconv('UTF-8','ASCII//TRANSLIT//IGNORE',$name);
+  if($ascii!==false)$name=strtolower($ascii);
+  return trim(preg_replace('/[^a-z0-9]+/i',' ', $name));
+}
+function matchingFolder(string $parent,string $title):?string {
+  static $cache=[];
+  $cacheKey=$parent."\0".$title;
+  if(array_key_exists($cacheKey,$cache))return $cache[$cacheKey];
+  if(!is_dir($parent))return $cache[$cacheKey]=null;
+  $wanted=normalizedFolderName($title);
+  $best=null;$bestScore=0;
+  foreach(new DirectoryIterator($parent) as $entry){
+    if($entry->isDot()||!$entry->isDir()||$entry->isLink())continue;
+    $actual=$entry->getFilename();
+    $normalized=normalizedFolderName($actual);
+    if($actual===$title){$best=$actual;break;}
+    if($normalized!=='' && $normalized===$wanted){$best=$actual;break;}
+  }
+  return $cache[$cacheKey]=$best;
+}
+function folderInfo(array $path):?array {
+  global $folderRoot;
+  $directory=$folderRoot;$segments=[];
+  foreach($path as $title){
+    $match=matchingFolder($directory,$title);
+    if($match===null)return null;
+    $segments[]=$match;$directory.='/'.$match;
+  }
+  // Keep the REAL directory name, including its original numeric prefix.
+  $url='./'.implode('/',array_map('rawurlencode',$segments)).'/';
+  return ['url'=>$url,'name'=>end($segments)];
+}
 function nodeKey(array $path):string{return hash('sha256',implode(' > ',$path));}
 function h($s):string{return htmlspecialchars((string)$s,ENT_QUOTES,'UTF-8');}
 function colorData(float $start,float $size,int $i,int $count):array{$slice=$size/max(1,$count);$s=$start+$i*$slice;$h=fmod($s+$slice/2+360,360);return [$s,$slice,$h];}
@@ -12,12 +49,12 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
   header('Location: '.$_SERVER['PHP_SELF']);exit;
 }
 $tree=parseMarkdownTree($mdFile);$projects=[];foreach($db->query('SELECT * FROM proyectos') as $row)$projects[$row['node_key']]=$row;
-function renderRows(array $nodes,array $path,array $projects,float $start=0,float $size=360,int $depth=0):void{$count=count($nodes);foreach($nodes as $i=>$n){[$s,$slice,$hue]=colorData($start,$size,$i,$count);$p=[...$path,$n['title']];$key=nodeKey($p);$pr=$projects[$key]??null;$has=count($n['children'])>0;$sat=max(42,64-$depth*3);$light=min(92,78+$depth*3);?>
+function renderRows(array $nodes,array $path,array $projects,float $start=0,float $size=360,int $depth=0):void{$count=count($nodes);foreach($nodes as $i=>$n){[$s,$slice,$hue]=colorData($start,$size,$i,$count);$p=[...$path,$n['title']];$key=nodeKey($p);$folderLink=folderInfo($p);$pr=$projects[$key]??null;$has=count($n['children'])>0;$sat=max(42,64-$depth*3);$light=min(92,78+$depth*3);?>
 <section class="pair-node depth-<?=$depth?>" data-key="<?=$key?>" data-level="<?=$depth?>" data-search="<?=h(mb_strtolower(implode(' ',$p).' '.($pr['titulo']??'').' '.($pr['descripcion']??'')))?>" style="--hue:<?=$hue?>;--sat:<?=$sat?>%;--light:<?=$light?>%;--depth:<?=$depth?>">
   <div class="pair-row">
     <div class="curriculum-cell">
       <button class="toggle <?=$has?'':'empty'?>" type="button"><?=$has?'▾':'•'?></button>
-      <div class="cell-copy"><span class="level-label">NIVEL <?=$depth+1?></span><strong><?=h($n['title'])?></strong></div>
+      <div class="cell-copy"><span class="level-label">NIVEL <?=$depth+1?></span><?php if($folderLink):?><a class="folder-link" href="<?=h($folderLink['url'])?>" title="Abrir carpeta: <?=h($folderLink['name'])?>"><?=h($folderLink['name'])?></a><?php else:?><strong><?=h($n['title'])?></strong><?php endif?></div>
     </div>
     <div class="project-cell">
       <input class="inline-project-title" type="text" data-key="<?=$key?>" value="<?=h($pr['titulo']??'')?>" placeholder="Escribe el proyecto…" aria-label="Proyecto para <?=h($n['title'])?>">
@@ -27,7 +64,31 @@ function renderRows(array $nodes,array $path,array $projects,float $start=0,floa
   <?php if($has):?><div class="pair-children"><?php renderRows($n['children'],$p,$projects,$s,$slice,$depth+1)?></div><?php endif?>
 </section><?php }}
 ?>
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mapa curricular y proyectos</title><link rel="stylesheet" href="style.css"></head><body>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mapa curricular y proyectos</title><link rel="stylesheet" href="style.css"><style>
+/* Folder links retain the exact same appearance as ordinary curriculum titles. */
+.cell-copy .folder-link,
+.cell-copy .folder-link:link,
+.cell-copy .folder-link:visited,
+.cell-copy .folder-link:hover,
+.cell-copy .folder-link:active {
+  color: inherit !important;
+  font: inherit !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+/* The two colored halves read as a single pill interrupted by the white gutter. */
+.pair-row > .curriculum-cell {
+  border-radius: 999px 0 0 999px !important;
+}
+.pair-row > .project-cell {
+  border-radius: 0 999px 999px 0 !important;
+}
+/* Apply the same silhouette to the colored node backgrounds. */
+.pair-node { border-radius: 32px; }
+.pair-node > .pair-row { border-radius: 999px; }
+</style></head><body>
 <header class="topbar"><div><span class="kicker">JOCARSA · MAPA CURRICULAR</span><h1>Currículo ↔ Proyectos</h1></div><div class="toolbar"><input id="search" type="search" placeholder="Buscar unidad o proyecto…"><button id="expand">Expandir</button><button id="collapse">Contraer</button></div></header>
 <div class="column-heads"><div>UNIDADES · SUBUNIDADES · CONTENIDOS</div><div>PROYECTOS ASOCIADOS</div></div>
 <main id="map"><?php renderRows($tree,[],$projects)?></main>

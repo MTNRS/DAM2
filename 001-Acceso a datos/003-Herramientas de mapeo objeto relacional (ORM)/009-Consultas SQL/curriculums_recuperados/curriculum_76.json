@@ -1,0 +1,44 @@
+{
+    "ciudad": "Alicante",
+    "email": "curriculum_075@example.com",
+    "especialidades": [
+        "Automatización",
+        "Desarrollo web",
+        "Formación profesional",
+        "Bases de datos"
+    ],
+    "experiencia": "10 años",
+    "formacion": [
+        "Ingeniería Informática",
+        "Máster en Ciberseguridad"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Español",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "PHP",
+        "CSS",
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "HTML"
+    ],
+    "marca": "Perfil 075",
+    "nacimiento": "1979-06-01",
+    "nombre": "Clara Castro Molina",
+    "profesion": "Profesor de informática",
+    "tecnologias": [
+        "AWS",
+        "Apache",
+        "Linux"
+    ],
+    "trabajos": [
+        "DataLab - Desarrollador full-stack",
+        "Sistemas Levante - Administrador de sistemas",
+        "Digital Solutions - Desarrollador full-stack",
+        "CodeFactory - Ingeniero de IA"
+    ],
+    "web": "https://example.com/curriculum_075"
+}

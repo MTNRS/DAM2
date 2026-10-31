@@ -1,0 +1,49 @@
+{
+    "ciudad": "Málaga",
+    "email": "curriculum_087@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Inteligencia artificial",
+        "Ciberseguridad",
+        "Desarrollo web",
+        "Automatización"
+    ],
+    "experiencia": "6 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Francés",
+        "Español",
+        "Alemán",
+        "Italiano"
+    ],
+    "lenguajes": [
+        "SQL",
+        "PHP",
+        "Python",
+        "TypeScript",
+        "HTML",
+        "C++",
+        "CSS"
+    ],
+    "marca": "Perfil 087",
+    "nacimiento": "1972-08-12",
+    "nombre": "Laura Fernández Torres",
+    "profesion": "Analista de datos",
+    "tecnologias": [
+        "Apache",
+        "Docker",
+        "Moodle",
+        "PostgreSQL",
+        "Flask",
+        "Linux"
+    ],
+    "trabajos": [
+        "Digital Solutions - Especialista en ciberseguridad",
+        "InnovaSoft - Ingeniero de IA",
+        "DataLab - Diseñador web",
+        "Sistemas Levante - Profesor de informática"
+    ],
+    "web": "https://example.com/curriculum_087"
+}

@@ -1,0 +1,44 @@
+{
+  "nombre": "Lucía Rubio Herrera",
+  "marca": "Perfil 054",
+  "nacimiento": "1992-01-02",
+  "ciudad": "Bilbao",
+  "email": "curriculum_054@example.com",
+  "web": "https://example.com/curriculum_054",
+  "profesion": "Desarrollador full-stack",
+  "experiencia": "20 años",
+  "formacion": [
+    "Grado en Matemáticas",
+    "Técnico Superior en DAW",
+    "Técnico Superior en DAM"
+  ],
+  "trabajos": [
+    "TechNova - Analista de datos",
+    "Digital Solutions - Diseñador web",
+    "Sistemas Levante - Ingeniero de IA",
+    "EducaDigital - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "Python",
+    "HTML",
+    "Go",
+    "C++",
+    "TypeScript"
+  ],
+  "tecnologias": [
+    "Flask",
+    "React",
+    "Moodle",
+    "Apache"
+  ],
+  "idiomas": [
+    "Italiano",
+    "Francés",
+    "Alemán"
+  ],
+  "especialidades": [
+    "Desarrollo web",
+    "Bases de datos",
+    "Inteligencia artificial"
+  ]
+}

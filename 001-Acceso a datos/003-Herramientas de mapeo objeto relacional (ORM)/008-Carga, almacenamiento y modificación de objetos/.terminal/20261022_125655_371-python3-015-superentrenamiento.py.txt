@@ -1,0 +1,22 @@
+Datetime: 2026-10-22T10:56:55.371Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos
+Command: python3 015-superentrenamiento.py
+
+Result:
+Dimensiones: 256
+Palabras: 22148
+Ya procesadas: 0
+Pendientes: 22148
+[0/22148]   0.00% | ahora                     |   34.9s |  1.72 palabras/min | ETA 8 days, 22:58:59 | ERROR: Error en dimensiones 1-32: Ollama no devolvió una lista
+[0/22148]   0.00% | voy                       |   29.1s |  1.87 palabras/min | ETA 8 days, 5:05:58 | ERROR: Error en dimensiones 1-32: Ollama no devolvió una lista
+^C
+Proceso interrumpido. Los resultados están guardados.
+
+====================================
+PROCESO FINALIZADO
+====================================
+Guardadas en esta ejecución: 0
+Errores: 2
+Tiempo: 0:01:07
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a 
+datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos$ 

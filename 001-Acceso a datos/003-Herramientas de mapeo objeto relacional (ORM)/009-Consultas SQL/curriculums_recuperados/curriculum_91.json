@@ -1,0 +1,43 @@
+{
+    "ciudad": "Madrid",
+    "email": "curriculum_090@example.com",
+    "especialidades": [
+        "Ciberseguridad",
+        "Bases de datos",
+        "Análisis de datos"
+    ],
+    "experiencia": "6 años",
+    "formacion": [
+        "Técnico Superior en DAM",
+        "Grado en Matemáticas",
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Portugués",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "Java",
+        "SQL",
+        "HTML"
+    ],
+    "marca": "Perfil 090",
+    "nacimiento": "1989-08-09",
+    "nombre": "Lucía Vidal Serrano",
+    "profesion": "Profesor de informática",
+    "tecnologias": [
+        "Linux",
+        "Git",
+        "Moodle",
+        "PostgreSQL",
+        "MySQL",
+        "AWS",
+        "SQLite"
+    ],
+    "trabajos": [
+        "EducaDigital - Ingeniero de IA",
+        "Digital Solutions - Analista de datos"
+    ],
+    "web": "https://example.com/curriculum_090"
+}

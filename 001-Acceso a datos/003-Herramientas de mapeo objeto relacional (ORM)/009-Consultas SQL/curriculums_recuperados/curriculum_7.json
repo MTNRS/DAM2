@@ -1,0 +1,42 @@
+{
+    "ciudad": "Bilbao",
+    "email": "curriculum_006@example.com",
+    "especialidades": [
+        "Inteligencia artificial",
+        "Automatización",
+        "Bases de datos"
+    ],
+    "experiencia": "7 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Grado en Matemáticas",
+        "Máster en Inteligencia Artificial"
+    ],
+    "idiomas": [
+        "Francés",
+        "Alemán"
+    ],
+    "lenguajes": [
+        "HTML",
+        "Go",
+        "CSS",
+        "TypeScript",
+        "SQL"
+    ],
+    "marca": "Perfil 006",
+    "nacimiento": "1974-09-08",
+    "nombre": "Carlos Navarro Gil",
+    "profesion": "Desarrollador full-stack",
+    "tecnologias": [
+        "Git",
+        "AWS",
+        "Apache"
+    ],
+    "trabajos": [
+        "Sistemas Levante - Administrador de sistemas",
+        "InnovaSoft - Profesor de informática",
+        "EducaDigital - Profesor de informática",
+        "CodeFactory - Especialista en ciberseguridad"
+    ],
+    "web": "https://example.com/curriculum_006"
+}

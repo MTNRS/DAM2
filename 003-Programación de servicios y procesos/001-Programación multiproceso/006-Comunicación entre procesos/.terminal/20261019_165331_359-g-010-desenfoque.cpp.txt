@@ -1,0 +1,26 @@
+Datetime: 2026-10-19T14:53:31.359Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos
+Command: g++ 010-desenfoque.cpp
+
+Result:
+/usr/bin/ld: /tmp/ccmjAboD.o: en la función `main':
+010-desenfoque.cpp:(.text+0x83): undefined reference to `jpeg_std_error'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0xa3): undefined reference to `jpeg_CreateDecompress'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0xbc): undefined reference to `jpeg_stdio_src'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0xd0): undefined reference to `jpeg_read_header'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0xe9): undefined reference to `jpeg_start_decompress'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x24e): undefined reference to `jpeg_read_scanlines'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x26d): undefined reference to `jpeg_finish_decompress'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x27c): undefined reference to `jpeg_destroy_decompress'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x902): undefined reference to `jpeg_std_error'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x922): undefined reference to `jpeg_CreateCompress'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x93b): undefined reference to `jpeg_stdio_dest'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x976): undefined reference to `jpeg_set_defaults'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x98f): undefined reference to `jpeg_set_quality'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x9a3): undefined reference to `jpeg_start_compress'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0x9fc): undefined reference to `jpeg_write_scanlines'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0xa1b): undefined reference to `jpeg_finish_compress'
+/usr/bin/ld: 010-desenfoque.cpp:(.text+0xa2a): undefined reference to `jpeg_destroy_compress'
+collect2: error: ld returned 1 exit status
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programa
+ción de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos$ 

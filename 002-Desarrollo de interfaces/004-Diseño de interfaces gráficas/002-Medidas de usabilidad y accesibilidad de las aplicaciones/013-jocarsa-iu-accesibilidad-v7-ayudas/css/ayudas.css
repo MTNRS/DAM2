@@ -1,0 +1,10 @@
+.ju-help-tooltip{position:fixed;z-index:2147483645;max-width:min(340px,calc(100vw - 16px));box-sizing:border-box;padding:12px 15px;background:#12394c;color:#fff;border:2px solid #8ac8e4;box-shadow:5px 5px 0 #071e2b,0 12px 28px #0005;font:14px/1.45 Ubuntu,Arial,sans-serif;pointer-events:none;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%)}
+.ju-help-tooltip[hidden]{display:none!important}.ju-a11y-extra{display:grid;gap:10px;margin-top:15px;padding-top:12px;border-top:1px solid #ffffff55}.ju-a11y-extra strong{font-size:14px}.ju-a11y-font{display:grid;gap:6px}.ju-a11y-font select{max-width:100%;width:100%;padding:9px;background:white;color:#152c39;border:1px solid #669db6}
+html.ju-custom-font body,html.ju-custom-font body :is(button,input,select,textarea){font-family:var(--ju-accessible-font)!important}
+html.ju-underline a{text-decoration:underline!important;text-underline-offset:3px!important;text-decoration-thickness:2px!important}
+/* Apply visual filters to the app, not the fixed accessibility panel */
+html.ju-invert body.jocarsa-iu>header,html.ju-invert body.jocarsa-iu>main,html.ju-invert body.jocarsa-iu>.ju-ai-widget{filter:invert(1) hue-rotate(180deg)}
+html.ju-grayscale body.jocarsa-iu>header,html.ju-grayscale body.jocarsa-iu>main,html.ju-grayscale body.jocarsa-iu>.ju-ai-widget{filter:grayscale(1)}
+html.ju-invert.ju-grayscale body.jocarsa-iu>header,html.ju-invert.ju-grayscale body.jocarsa-iu>main{filter:invert(1) grayscale(1)}
+html.ju-invert .ju-accessibility,html.ju-grayscale .ju-accessibility{filter:none!important}
+.ju-all-helps{position:absolute;inset:0;z-index:2147483600;pointer-events:none}.ju-help-label{position:absolute;max-width:190px;overflow-wrap:anywhere;padding:5px 8px;background:#12394c;color:white;border:1px solid #b9e6f7;box-shadow:2px 2px 0 #0005;font:11px/1.3 Arial,sans-serif;pointer-events:none}

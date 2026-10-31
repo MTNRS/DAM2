@@ -1,0 +1,48 @@
+{
+    "ciudad": "Madrid",
+    "email": "curriculum_018@example.com",
+    "especialidades": [
+        "Desarrollo web",
+        "Formación profesional",
+        "Ciberseguridad",
+        "Análisis de datos",
+        "Inteligencia artificial",
+        "Administración de sistemas"
+    ],
+    "experiencia": "10 años",
+    "formacion": [
+        "Grado en Matemáticas",
+        "Técnico Superior en DAW",
+        "Máster en Ciberseguridad"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Francés",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "TypeScript",
+        "HTML",
+        "SQL",
+        "Python",
+        "C++"
+    ],
+    "marca": "Perfil 018",
+    "nacimiento": "1977-03-10",
+    "nombre": "Pablo Rubio Herrera",
+    "profesion": "Desarrollador de software",
+    "tecnologias": [
+        "Linux",
+        "Ollama",
+        "Docker",
+        "Apache",
+        "Git"
+    ],
+    "trabajos": [
+        "EducaDigital - Profesor de informática",
+        "TechNova - Diseñador web",
+        "CloudWorks - Profesor de informática",
+        "InnovaSoft - Desarrollador de software"
+    ],
+    "web": "https://example.com/curriculum_018"
+}

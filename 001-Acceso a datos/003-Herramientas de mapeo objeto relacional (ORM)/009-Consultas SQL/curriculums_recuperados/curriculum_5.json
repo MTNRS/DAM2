@@ -1,0 +1,45 @@
+{
+    "ciudad": "Valencia",
+    "email": "curriculum_004@example.com",
+    "especialidades": [
+        "Ciberseguridad",
+        "Programación",
+        "Automatización",
+        "Desarrollo web",
+        "Administración de sistemas"
+    ],
+    "experiencia": "18 años",
+    "formacion": [
+        "Máster en Ciberseguridad",
+        "Grado en Matemáticas"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Italiano",
+        "Español"
+    ],
+    "lenguajes": [
+        "TypeScript",
+        "JavaScript",
+        "PHP",
+        "HTML",
+        "SQL"
+    ],
+    "marca": "Perfil 004",
+    "nacimiento": "1999-09-09",
+    "nombre": "Sara Ortega Moreno",
+    "profesion": "Profesor de informática",
+    "tecnologias": [
+        "Git",
+        "React",
+        "PostgreSQL",
+        "SQLite",
+        "MySQL"
+    ],
+    "trabajos": [
+        "InnovaSoft - Analista de datos",
+        "DataLab - Desarrollador full-stack",
+        "EducaDigital - Desarrollador de software"
+    ],
+    "web": "https://example.com/curriculum_004"
+}

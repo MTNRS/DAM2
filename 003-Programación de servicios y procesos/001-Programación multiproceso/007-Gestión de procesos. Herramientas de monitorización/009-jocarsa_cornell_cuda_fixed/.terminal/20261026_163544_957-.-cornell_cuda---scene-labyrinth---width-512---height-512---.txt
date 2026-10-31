@@ -1,0 +1,16 @@
+Datetime: 2026-10-26T15:35:44.957Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/009-jocarsa_cornell_cuda_fixed
+Command: ./cornell_cuda --scene labyrinth --width 512 --height 512   --mutations 100000000 --depth 8 --bootstrap 100000 --chains 4096   --camera-x 0 --camera-y 1.5 --camera-z -2.5   --target-x 0 --target-y 1.5 --target-z 3 --fov 75   --preview 1 --mouse-sensitivity 0.0004 --persistence 0.96   --output laberinto.ppm
+
+Result:
+./cornell_cuda --scene labyrinth --width 512 --height 512 \
+  --mutations 100000000 --depth 8 --bootstrap 100000 --chains 4096 \
+  --camera-x 0 --camera-y 1.5 --camera-z -2.5 \
+  --target-x 0 --target-y 1.5 --target-z 3 --fov 75 \
+  --preview 1 --mouse-sensitivity 0.0004 --persistence 0.96 \
+  --output laberinto.ppm
+CUDA GPU: NVIDIA GeForce RTX 4060 Laptop GPU | compute 8.9
+68.0% | 1423231972 mutations/s | accepted 43.5% | camera (0.0,1.5,-2.5)     68.1% | 23891213 mutations/s | accepted 43.5% | camera (0.0,1.5,-2.5)     100.0% | 34421615 mutations/s | accepted 43.5% | camera (0.0,1.5,-2.5)     100.0% | 23775335 mutations/s | accepted 43.5% | camera (0.0,1.5,-2.5)     100.0% | 23494518 mutations/s | accepted 43.5% | camera (0.0,1.5,-2.5)     0.1% | 65536000 mutations/s | accepted 43.1% | camera (0.0,1.5,-2.5)     68.0% | 1954955230 mutations/s | accepted 9.8% | camera (0.0,1.5,-2.5)     
+No valid final camera samples to save.
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y pro
+cesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/009-jocarsa_cornell_cuda_fixed$ 

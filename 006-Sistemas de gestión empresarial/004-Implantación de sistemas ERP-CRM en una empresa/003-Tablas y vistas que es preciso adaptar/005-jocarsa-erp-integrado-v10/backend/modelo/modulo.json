@@ -1,0 +1,10 @@
+{
+    "modulo": "ventas",
+    "nombre": "Ventas",
+    "tablas": [
+        "clientes",
+        "empleados",
+        "empresas",
+        "facturas"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "ciudad": "Madrid",
+    "email": "curriculum_031@example.com",
+    "especialidades": [
+        "Administración de sistemas",
+        "Inteligencia artificial",
+        "Ciberseguridad"
+    ],
+    "experiencia": "10 años",
+    "formacion": [
+        "Técnico Superior en DAW",
+        "Ingeniería Informática",
+        "Grado en Desarrollo de Software"
+    ],
+    "idiomas": [
+        "Español",
+        "Francés",
+        "Italiano",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "Java",
+        "TypeScript",
+        "JavaScript"
+    ],
+    "marca": "Perfil 031",
+    "nacimiento": "1990-10-08",
+    "nombre": "Álvaro García López",
+    "profesion": "Desarrollador full-stack",
+    "tecnologias": [
+        "Docker",
+        "Flask",
+        "React",
+        "Ollama",
+        "MySQL",
+        "SQLite"
+    ],
+    "trabajos": [
+        "TechNova - Desarrollador full-stack",
+        "DataLab - Profesor de informática"
+    ],
+    "web": "https://example.com/curriculum_031"
+}

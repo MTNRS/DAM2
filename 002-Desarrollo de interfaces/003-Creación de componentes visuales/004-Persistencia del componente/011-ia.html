@@ -1,0 +1,117 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Botonera deslizante</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+    }
+
+    .botonera {
+      display: inline-flex;
+      position: relative;
+      background: #e9edf2;
+      border-radius: 12px;
+      padding: 5px;
+      gap: 0;
+      isolation: isolate;
+    }
+
+    .botonera button {
+      position: relative;
+      z-index: 1;
+      min-width: 100px;
+      padding: 12px 20px;
+      border: none;
+      background: transparent;
+      color: #64748b;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .botonera button.activo {
+      color: white;
+    }
+
+    .indicador {
+      position: absolute;
+      z-index: 0;
+      top: 5px;
+      left: 5px;
+      height: calc(100% - 10px);
+      background: #475569;
+      border-radius: 9px;
+      box-shadow: 0 2px 6px #0002;
+      transition:
+        transform 0.35s cubic-bezier(.2,.8,.2,1),
+        width 0.35s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="botonera">
+    <div class="indicador"></div>
+    <button data-valor="año">Año</button>
+    <button data-valor="mes">Mes</button>
+    <button data-valor="semana">Semana</button>
+    <button data-valor="dia">Día</button>
+  </div>
+
+  <script>
+    let botonera = document.querySelector(".botonera");
+    let botones = botonera.querySelectorAll("button");
+    let indicador = botonera.querySelector(".indicador");
+
+    function seleccionar(boton) {
+      botones.forEach(function(b) {
+        b.classList.remove("activo");
+        b.setAttribute("aria-pressed", "false");
+      });
+
+      boton.classList.add("activo");
+      boton.setAttribute("aria-pressed", "true");
+
+      indicador.style.width = boton.offsetWidth + "px";
+      indicador.style.transform =
+        "translateX(" + boton.offsetLeft + "px)";
+
+      localStorage.setItem("temporada", boton.dataset.valor);
+      console.log("Has cambiado a: " + boton.dataset.valor);
+    }
+
+    botones.forEach(function(boton) {
+      boton.onclick = function() {
+        seleccionar(boton);
+      };
+    });
+
+    let guardado = localStorage.getItem("temporada") || "año";
+    let inicial = Array.from(botones).find(function(boton) {
+      return boton.dataset.valor === guardado;
+    }) || botones[0];
+
+    // Posicionar sin animación al cargar
+    indicador.style.transition = "none";
+    seleccionar(inicial);
+
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        indicador.style.transition = "";
+      });
+    });
+
+    window.addEventListener("resize", function() {
+      let activo = botonera.querySelector(".activo");
+      if (activo) seleccionar(activo);
+    });
+  </script>
+
+</body>
+</html>

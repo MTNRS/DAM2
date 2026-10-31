@@ -1,0 +1,8 @@
+Datetime: 2026-10-22T11:32:56.965Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado/examples
+Command: python3 demo.p
+
+Result:
+python3: can't open file '/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado/examples/demo.p': [Errno 2] No such file or directory
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a dato
+s/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/002-jocarsabbdd-unificado/examples$ 

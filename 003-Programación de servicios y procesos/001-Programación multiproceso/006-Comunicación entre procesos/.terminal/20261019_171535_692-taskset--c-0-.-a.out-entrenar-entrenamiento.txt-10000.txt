@@ -1,0 +1,120 @@
+Datetime: 2026-10-19T15:15:35.692Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos
+Command: taskset -c 0 ./a.out entrenar entrenamiento.txt 10000
+
+Result:
+
+Archivo: 103377 bytes | Contexto: 32 | Pasos: 10000 | Inicio: 0
+Paso 100 / 10000 | loss 4.94370
+Paso 200 / 10000 | loss 3.11962
+Paso 300 / 10000 | loss 3.01903
+Paso 400 / 10000 | loss 3.00846
+Paso 500 / 10000 | loss 2.99592
+Paso 600 / 10000 | loss 2.96053
+Paso 700 / 10000 | loss 2.93783
+Paso 800 / 10000 | loss 2.92739
+Paso 900 / 10000 | loss 2.93984
+Paso 1000 / 10000 | loss 2.95373
+Checkpoint guardado
+Paso 1100 / 10000 | loss 2.94790
+Paso 1200 / 10000 | loss 2.91515
+Paso 1300 / 10000 | loss 2.88095
+Paso 1400 / 10000 | loss 2.86661
+Paso 1500 / 10000 | loss 2.77052
+Paso 1600 / 10000 | loss 2.71843
+Paso 1700 / 10000 | loss 2.72199
+Paso 1800 / 10000 | loss 2.66285
+Paso 1900 / 10000 | loss 2.63340
+Paso 2000 / 10000 | loss 2.63156
+Checkpoint guardado
+Paso 2100 / 10000 | loss 2.59864
+Paso 2200 / 10000 | loss 2.59622
+Paso 2300 / 10000 | loss 2.54425
+Paso 2400 / 10000 | loss 2.56653
+Paso 2500 / 10000 | loss 2.50997
+Paso 2600 / 10000 | loss 2.53172
+Paso 2700 / 10000 | loss 2.51121
+Paso 2800 / 10000 | loss 2.50912
+Paso 2900 / 10000 | loss 2.54095
+Paso 3000 / 10000 | loss 2.47398
+Checkpoint guardado
+Paso 3100 / 10000 | loss 2.46976
+Paso 3200 / 10000 | loss 2.44789
+Paso 3300 / 10000 | loss 2.43927
+Paso 3400 / 10000 | loss 2.43584
+Paso 3500 / 10000 | loss 2.47616
+Paso 3600 / 10000 | loss 2.49124
+Paso 3700 / 10000 | loss 2.45816
+Paso 3800 / 10000 | loss 2.42967
+Paso 3900 / 10000 | loss 2.40676
+Paso 4000 / 10000 | loss 2.44939
+Checkpoint guardado
+Paso 4100 / 10000 | loss 2.42652
+Paso 4200 / 10000 | loss 2.42119
+Paso 4300 / 10000 | loss 2.44658
+Paso 4400 / 10000 | loss 2.39777
+Paso 4500 / 10000 | loss 2.41240
+Paso 4600 / 10000 | loss 2.46212
+Paso 4700 / 10000 | loss 2.43375
+Paso 4800 / 10000 | loss 2.40638
+Paso 4900 / 10000 | loss 2.41374
+Paso 5000 / 10000 | loss 2.44290
+Checkpoint guardado
+Paso 5100 / 10000 | loss 2.44351
+Paso 5200 / 10000 | loss 2.44536
+Paso 5300 / 10000 | loss 2.42415
+Paso 5400 / 10000 | loss 2.45422
+Paso 5500 / 10000 | loss 2.41305
+Paso 5600 / 10000 | loss 2.38434
+Paso 5700 / 10000 | loss 2.40997
+Paso 5800 / 10000 | loss 2.46141
+Paso 5900 / 10000 | loss 2.42269
+Paso 6000 / 10000 | loss 2.42642
+Checkpoint guardado
+Paso 6100 / 10000 | loss 2.38085
+Paso 6200 / 10000 | loss 2.44541
+Paso 6300 / 10000 | loss 2.43177
+Paso 6400 / 10000 | loss 2.39414
+Paso 6500 / 10000 | loss 2.37681
+Paso 6600 / 10000 | loss 2.45234
+Paso 6700 / 10000 | loss 2.42580
+Paso 6800 / 10000 | loss 2.44923
+Paso 6900 / 10000 | loss 2.46033
+Paso 7000 / 10000 | loss 2.39379
+Checkpoint guardado
+Paso 7100 / 10000 | loss 2.37979
+Paso 7200 / 10000 | loss 2.38339
+Paso 7300 / 10000 | loss 2.37614
+Paso 7400 / 10000 | loss 2.38452
+Paso 7500 / 10000 | loss 2.38552
+Paso 7600 / 10000 | loss 2.36495
+Paso 7700 / 10000 | loss 2.40318
+Paso 7800 / 10000 | loss 2.41727
+Paso 7900 / 10000 | loss 2.37273
+Paso 8000 / 10000 | loss 2.38699
+Checkpoint guardado
+Paso 8100 / 10000 | loss 2.33517
+Paso 8200 / 10000 | loss 2.37892
+Paso 8300 / 10000 | loss 2.38965
+Paso 8400 / 10000 | loss 2.38270
+Paso 8500 / 10000 | loss 2.35919
+Paso 8600 / 10000 | loss 2.41429
+Paso 8700 / 10000 | loss 2.34788
+Paso 8800 / 10000 | loss 2.33979
+Paso 8900 / 10000 | loss 2.35130
+Paso 9000 / 10000 | loss 2.33671
+Checkpoint guardado
+Paso 9100 / 10000 | loss 2.39634
+Paso 9200 / 10000 | loss 2.39250
+Paso 9300 / 10000 | loss 2.35639
+Paso 9400 / 10000 | loss 2.36717
+Paso 9500 / 10000 | loss 2.39521
+Paso 9600 / 10000 | loss 2.32720
+Paso 9700 / 10000 | loss 2.37846
+Paso 9800 / 10000 | loss 2.37990
+Paso 9900 / 10000 | loss 2.39662
+Paso 10000 / 10000 | loss 2.31244
+Checkpoint guardado
+Entrenamiento terminado: modelo.bin
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programa
+ción de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos$ 

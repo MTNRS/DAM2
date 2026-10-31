@@ -1,0 +1,43 @@
+{
+  "nombre": "Raúl Romero Díaz",
+  "marca": "Perfil 058",
+  "nacimiento": "1978-02-20",
+  "ciudad": "Sevilla",
+  "email": "curriculum_058@example.com",
+  "web": "https://example.com/curriculum_058",
+  "profesion": "Administrador de sistemas",
+  "experiencia": "2 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial",
+    "Grado en Desarrollo de Software",
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "InnovaSoft - Ingeniero de IA",
+    "EducaDigital - Desarrollador full-stack"
+  ],
+  "lenguajes": [
+    "JavaScript",
+    "Python",
+    "Go"
+  ],
+  "tecnologias": [
+    "Git",
+    "Docker",
+    "AWS",
+    "SQLite",
+    "Moodle",
+    "MySQL"
+  ],
+  "idiomas": [
+    "Portugués",
+    "Español",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Automatización",
+    "Programación",
+    "Bases de datos",
+    "Inteligencia artificial"
+  ]
+}

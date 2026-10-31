@@ -1,0 +1,45 @@
+{
+  "nombre": "Daniel Sánchez Pérez",
+  "marca": "Perfil 097",
+  "nacimiento": "1973-02-11",
+  "ciudad": "Sevilla",
+  "email": "curriculum_097@example.com",
+  "web": "https://example.com/curriculum_097",
+  "profesion": "Administrador de sistemas",
+  "experiencia": "14 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial",
+    "Grado en Matemáticas",
+    "Máster en Ciberseguridad"
+  ],
+  "trabajos": [
+    "CloudWorks - Profesor de informática",
+    "DataLab - Desarrollador de software",
+    "InnovaSoft - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "TypeScript",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "Go",
+    "HTML",
+    "Java"
+  ],
+  "tecnologias": [
+    "Moodle",
+    "Git",
+    "PostgreSQL"
+  ],
+  "idiomas": [
+    "Inglés",
+    "Español",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Desarrollo web",
+    "Formación profesional",
+    "Programación",
+    "Inteligencia artificial"
+  ]
+}

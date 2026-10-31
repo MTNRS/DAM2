@@ -1,0 +1,14 @@
+Datetime: 2026-10-26T15:13:06.690Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/003-jocarsa_cornell_mlt_v3
+Command: ./cornell_mlt --width 512 --height 512 --mutations 10000000 --depth 8   --camera-x 0.3 --camera-y 1.2 --camera-z -1   --target-x 0 --target-y 1 --target-z 1 --fov 75 --preview 1   --output cornell.ppm
+
+Result:
+./cornell_mlt --width 512 --height 512 --mutations 10000000 --depth 8 \
+  --camera-x 0.3 --camera-y 1.2 --camera-z -1 \
+  --target-x 0 --target-y 1 --target-z 1 --fov 75 --preview 1 \
+  --output cornell.ppm
+Camera: (0.3, 1.2, -1) -> (0, 1, 1) | FOV 75
+Bootstrap importance: 0.526479 | sequential CPU render
+3.4% | 683473 mutations/s | accepted 55.2%   6.8% | 676006 mutations/s | accepted 55.0%   10.1% | 675790 mutations/s | accepted 55.0%   13.5% | 673795 mutations/s | accepted 54.9%   16.8% | 671837 mutations/s | accepted 55.0%   20.1% | 670394 mutations/s | accepted 54.9%   23.5% | 670507 mutations/s | accepted 54.8%   26.8% | 670080 mutations/s | accepted 54.8%   30.2% | 670512 mutations/s | accepted 54.9%   33.5% | 670233 mutations/s | accepted 54.9%   36.9% | 671025 mutations/s | accepted 54.9%   40.3% | 671543 mutations/s | accepted 54.9%   43.7% | 671563 mutations/s | accepted 54.9%   47.0% | 671607 mutations/s | accepted 54.9%   50.3% | 671046 mutations/s | accepted 54.9%   53.6% | 670471 mutations/s | accepted 54.9%   57.0% | 670421 mutations/s | accepted 54.9%   60.3% | 669851 mutations/s | accepted 54.9%   63.6% | 669915 mutations/s | accepted 54.9%   66.9% | 669343 mutations/s | accepted 54.9%   70.3% | 669157 mutations/s | accepted 54.9%   73.6% | 669100 mutations/s | accepted 54.9%   76.9% | 669078 mutations/s | accepted 54.9%   80.3% | 668794 mutations/s | accepted 54.9%   83.6% | 668768 mutations/s | accepted 54.9%   87.0% | 669011 mutations/s | accepted 54.9%   90.3% | 668856 mutations/s | accepted 54.9%   93.7% | 669082 mutations/s | accepted 54.9%   ^C
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y pro
+cesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/003-jocarsa_cornell_mlt_v3$ 

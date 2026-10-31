@@ -1,0 +1,44 @@
+{
+  "nombre": "Elena Fernández Torres",
+  "marca": "Perfil 015",
+  "nacimiento": "1987-09-16",
+  "ciudad": "Sevilla",
+  "email": "curriculum_015@example.com",
+  "web": "https://example.com/curriculum_015",
+  "profesion": "Diseñador web",
+  "experiencia": "15 años",
+  "formacion": [
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "EducaDigital - Ingeniero de IA",
+    "DataLab - Profesor de informática",
+    "Digital Solutions - Analista de datos"
+  ],
+  "lenguajes": [
+    "Java",
+    "HTML",
+    "JavaScript",
+    "SQL"
+  ],
+  "tecnologias": [
+    "Apache",
+    "Ollama",
+    "Git",
+    "Flask"
+  ],
+  "idiomas": [
+    "Francés",
+    "Portugués",
+    "Español",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Análisis de datos",
+    "Programación",
+    "Automatización",
+    "Formación profesional",
+    "Inteligencia artificial",
+    "Administración de sistemas"
+  ]
+}

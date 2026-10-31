@@ -1,0 +1,7 @@
+let activo=null;const out=contenedor.querySelector('#api-resultado');const url=contenedor.querySelector('#api-url');
+const toast=e=>{const b=e.target.closest('[data-toast]');if(b)JocarsaToast[b.dataset.toast]('Notificación de '+b.dataset.toast);};
+const get=async()=>{activo?.abort();activo=new AbortController();out.textContent='Consultando…';try{const d=await JocarsaAPI.get(url.value,{signal:activo.signal,timeout:10000,retries:2});out.textContent=typeof d==='string'?d:JSON.stringify(d,null,2);JocarsaToast.success('Respuesta recibida');}catch(e){out.textContent=e.name==='AbortError'?'Petición cancelada':e.message;JocarsaToast[e.name==='AbortError'?'info':'error'](out.textContent);}};
+const post=async()=>{activo?.abort();activo=new AbortController();out.textContent='Enviando…';try{const d=await JocarsaAPI.post('https://jsonplaceholder.typicode.com/posts',{title:'Demo jocarsa',body:'Petición desde móvil',userId:1},{signal:activo.signal});out.textContent=JSON.stringify(d,null,2);JocarsaToast.success('POST de demostración correcto');}catch(e){out.textContent=e.message;JocarsaToast.error(e.message);}};
+const cancel=()=>{activo?.abort();JocarsaToast.info('Cancelación solicitada');};
+contenedor.addEventListener('click',toast);contenedor.querySelector('#api-get').addEventListener('click',get);contenedor.querySelector('#api-post').addEventListener('click',post);contenedor.querySelector('#api-cancel').addEventListener('click',cancel);
+return ()=>{activo?.abort();contenedor.removeEventListener('click',toast);};

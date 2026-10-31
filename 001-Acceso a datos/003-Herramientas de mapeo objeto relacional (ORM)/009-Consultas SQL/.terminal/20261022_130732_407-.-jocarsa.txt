@@ -1,0 +1,60 @@
+Datetime: 2026-10-22T11:07:32.407Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/009-Consultas SQL
+Command: ./jocarsa
+
+Result:
+
+ID: 1
+{
+    "activo": true,
+    "direccion": {
+        "ciudad": "Valencia",
+        "pais": "España"
+    },
+    "edad": 28,
+    "experiencia": [
+        {
+            "años": 3,
+            "empresa": "Jocarsa"
+        },
+        {
+            "años": 2,
+            "empresa": "Empresa B"
+        }
+    ],
+    "habilidades": [
+        "Python",
+        "C++",
+        "SQL"
+    ],
+    "nombre": "Ana García"
+}
+[
+    {
+        "activo": false,
+        "direccion": {
+            "ciudad": "Valencia",
+            "pais": "España"
+        },
+        "edad": 29,
+        "experiencia": [
+            {
+                "años": 3,
+                "empresa": "Jocarsa"
+            },
+            {
+                "años": 2,
+                "empresa": "Empresa B"
+            }
+        ],
+        "habilidades": [
+            "Python",
+            "C++",
+            "SQL"
+        ],
+        "nombre": "Ana García"
+    }
+]
+Total: 1
+ERROR: No existe la carpeta: curriculums
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/009-Consultas SQL$ 

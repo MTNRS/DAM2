@@ -1,0 +1,42 @@
+{
+    "ciudad": "Bilbao",
+    "email": "curriculum_059@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Inteligencia artificial",
+        "Bases de datos",
+        "Automatización",
+        "Ciberseguridad"
+    ],
+    "experiencia": "1 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Máster en Ciberseguridad"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Inglés",
+        "Español",
+        "Portugués"
+    ],
+    "lenguajes": [
+        "TypeScript",
+        "CSS",
+        "C++",
+        "PHP"
+    ],
+    "marca": "Perfil 059",
+    "nacimiento": "1995-08-06",
+    "nombre": "Pablo García López",
+    "profesion": "Desarrollador de software",
+    "tecnologias": [
+        "Flask",
+        "MySQL",
+        "Docker"
+    ],
+    "trabajos": [
+        "CodeFactory - Desarrollador full-stack",
+        "DataLab - Desarrollador full-stack"
+    ],
+    "web": "https://example.com/curriculum_059"
+}

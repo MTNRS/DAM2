@@ -1,0 +1,45 @@
+{
+  "nombre": "Álvaro Rubio Herrera",
+  "marca": "Perfil 099",
+  "nacimiento": "1985-08-10",
+  "ciudad": "Madrid",
+  "email": "curriculum_099@example.com",
+  "web": "https://example.com/curriculum_099",
+  "profesion": "Especialista en ciberseguridad",
+  "experiencia": "2 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial",
+    "Máster en Ciberseguridad",
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "DataLab - Analista de datos",
+    "TechNova - Administrador de sistemas",
+    "EducaDigital - Administrador de sistemas",
+    "InnovaSoft - Analista de datos"
+  ],
+  "lenguajes": [
+    "HTML",
+    "PHP",
+    "Go"
+  ],
+  "tecnologias": [
+    "Git",
+    "MySQL",
+    "PostgreSQL",
+    "Moodle"
+  ],
+  "idiomas": [
+    "Portugués",
+    "Español",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Automatización",
+    "Análisis de datos",
+    "Formación profesional",
+    "Desarrollo web",
+    "Administración de sistemas",
+    "Inteligencia artificial"
+  ]
+}

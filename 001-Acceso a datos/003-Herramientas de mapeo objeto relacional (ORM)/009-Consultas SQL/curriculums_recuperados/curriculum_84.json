@@ -1,0 +1,46 @@
+{
+    "ciudad": "Barcelona",
+    "email": "curriculum_083@example.com",
+    "especialidades": [
+        "Bases de datos",
+        "Inteligencia artificial",
+        "Formación profesional",
+        "Análisis de datos",
+        "Administración de sistemas"
+    ],
+    "experiencia": "5 años",
+    "formacion": [
+        "Grado en Matemáticas",
+        "Grado en Desarrollo de Software",
+        "Ingeniería Informática"
+    ],
+    "idiomas": [
+        "Alemán",
+        "Inglés",
+        "Italiano"
+    ],
+    "lenguajes": [
+        "Go",
+        "CSS",
+        "Java",
+        "Python",
+        "HTML",
+        "PHP"
+    ],
+    "marca": "Perfil 083",
+    "nacimiento": "1990-06-10",
+    "nombre": "David Martínez Ruiz",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "PostgreSQL",
+        "Ollama",
+        "Flask"
+    ],
+    "trabajos": [
+        "TechNova - Desarrollador full-stack",
+        "CloudWorks - Ingeniero de IA",
+        "CodeFactory - Administrador de sistemas",
+        "InnovaSoft - Analista de datos"
+    ],
+    "web": "https://example.com/curriculum_083"
+}

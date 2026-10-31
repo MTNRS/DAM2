@@ -1,0 +1,47 @@
+{
+    "ciudad": "Zaragoza",
+    "email": "curriculum_030@example.com",
+    "especialidades": [
+        "Análisis de datos",
+        "Administración de sistemas",
+        "Programación",
+        "Ciberseguridad",
+        "Bases de datos"
+    ],
+    "experiencia": "6 años",
+    "formacion": [
+        "Grado en Desarrollo de Software"
+    ],
+    "idiomas": [
+        "Español",
+        "Francés",
+        "Alemán",
+        "Italiano"
+    ],
+    "lenguajes": [
+        "PHP",
+        "CSS",
+        "Go",
+        "TypeScript",
+        "HTML"
+    ],
+    "marca": "Perfil 030",
+    "nacimiento": "1978-02-10",
+    "nombre": "Clara Navarro Gil",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "React",
+        "Flask",
+        "Apache",
+        "Ollama",
+        "Linux",
+        "MySQL"
+    ],
+    "trabajos": [
+        "CodeFactory - Analista de datos",
+        "CloudWorks - Diseñador web",
+        "Digital Solutions - Desarrollador full-stack",
+        "DataLab - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_030"
+}

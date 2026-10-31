@@ -1,0 +1,963 @@
+
+/* ============================================================
+   JOCARSA IU — V8
+   Extensión visual corporativa para web pública
+   ============================================================ */
+
+/* 01. VARIABLES Y SISTEMA DE DISEÑO */
+:root {
+  --color0: #4b0082;
+  --color1: #35005d;
+  --color2: #210039;
+  --naranja: #ff7900;
+  --fondo: #f7f5f9;
+  --texto: #281638;
+  --linea: #e1d9e7;
+  --fuente: Arial, Helvetica, sans-serif;
+
+  --superficie: #ffffff;
+  --superficie-alt: #faf8fc;
+  --texto-secundario: #675e70;
+  --borde-suave: #e7e0ec;
+  --sombra-suave: 0 8px 28px rgba(33,0,57,.06);
+  --sombra-media: 0 18px 45px rgba(33,0,57,.12);
+  --sombra-fuerte: 0 25px 65px rgba(33,0,57,.22);
+  --transicion: .25s ease;
+  --ancho-maximo: 1600px;
+  --chaflan: 12px;
+  --chaflan-grande: 22px;
+}
+
+::selection {
+  background: var(--naranja);
+  color: var(--color2);
+}
+
+html {
+  scroll-padding-top: 30px;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, video, svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+:where(input, select, textarea, button) {
+  font-family: inherit;
+}
+
+:where(h1, h2, h3, h4) {
+  overflow-wrap: break-word;
+}
+
+:where(p, li) {
+  overflow-wrap: break-word;
+}
+
+/* 02. CONTENEDORES Y SECCIONES */
+.section {
+  position: relative;
+}
+
+.section > :is(.section-head, .cards, .steps,
+.catalog-toolbar, .catalog-grid, .carousel-wrap,
+.faq-list, .modality-grid, .testimonial-grid) {
+  max-width: var(--ancho-maximo);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-head {
+  position: relative;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--linea);
+}
+
+.section-head::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 75px;
+  height: 3px;
+  background: var(--naranja);
+}
+
+.section-head h2 {
+  text-wrap: balance;
+}
+
+.section-head > p {
+  line-height: 1.75;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+}
+
+/* 03. CABECERA CORPORATIVA */
+.topbar {
+  min-height: 86px;
+  transition: background var(--transicion),
+              box-shadow var(--transicion);
+}
+
+.topbar .brand {
+  flex-shrink: 0;
+  transition: opacity var(--transicion);
+}
+
+.topbar .brand:hover {
+  opacity: .8;
+}
+
+.topbar .brand img {
+  max-width: min(300px, 32vw) !important;
+}
+
+.topbar .nav-group > summary {
+  transition: background var(--transicion),
+              color var(--transicion);
+}
+
+.topbar .nav-group > summary:focus-visible {
+  outline: 3px solid var(--naranja);
+  outline-offset: 4px;
+}
+
+.topbar .nav-panel {
+  scrollbar-color: var(--naranja) var(--color2);
+  scrollbar-width: thin;
+}
+
+.topbar .nav-panel h3 {
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.topbar .nav-panel a {
+  transition: background .18s ease,
+              color .18s ease;
+}
+
+.topbar .nav-panel a:hover {
+  background: var(--naranja);
+  color: var(--color2);
+}
+
+/* 04. MEGAMENÚ DE PRODUCTOS */
+.mega-products-grid {
+  align-items: start;
+}
+
+.mega-products-grid .mega-column {
+  min-width: 0;
+}
+
+.mega-products-grid .mega-column h3 {
+  padding-bottom: 9px;
+  border-bottom: 1px solid #ffffff29;
+}
+
+@media (min-width: 901px) {
+  .topbar .mega-products-grid .mega-column a {
+    width: calc(33.333% - 6px) !important;
+    min-height: 32px;
+    margin: 0 !important;
+    padding: 7px 5px !important;
+    font-size: 10px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mega-products-grid .mega-column {
+    column-gap: 6px !important;
+    row-gap: 6px !important;
+  }
+}
+
+/* 05. HERO */
+.hero {
+  isolation: isolate;
+}
+
+.hero video {
+  z-index: -2;
+}
+
+.hero .shade {
+  z-index: -1;
+}
+
+.hero-content {
+  width: min(790px, calc(100% - 48px));
+}
+
+.hero h1 {
+  text-wrap: balance;
+}
+
+.hero-content p {
+  line-height: 1.8;
+}
+
+.hero .actions {
+  gap: 14px;
+}
+
+.hero .btn {
+  min-height: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform var(--transicion),
+              background var(--transicion);
+}
+
+.hero .btn:hover {
+  transform: translateY(-3px);
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: .85;
+}
+
+.scroll::after {
+  content: "";
+  width: 35px;
+  height: 1px;
+  background: var(--naranja);
+}
+
+/* 06. TARJETAS */
+.card, .product, .catalog-card,
+.modality-card, .case-card {
+  position: relative;
+  transition:
+    transform var(--transicion),
+    box-shadow var(--transicion),
+    border-color var(--transicion);
+}
+
+.card:hover, .product:hover,
+.catalog-card:hover, .modality-card:hover,
+.case-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-media);
+}
+
+.card::before, .product::before,
+.catalog-card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 17px solid var(--naranja);
+  border-left: 17px solid transparent;
+}
+
+.card h3, .product h3 {
+  letter-spacing: -.025em;
+}
+
+.card p, .product p {
+  line-height: 1.75;
+}
+
+.card a {
+  transition: color var(--transicion);
+}
+
+.card a:hover {
+  color: var(--naranja);
+}
+
+/* 07. CATÁLOGO DINÁMICO */
+.catalog-toolbar {
+  background: var(--superficie-alt);
+  padding: clamp(18px, 3vw, 32px);
+  border: 1px solid var(--linea);
+  border-left: 4px solid var(--naranja);
+}
+
+.catalog-toolbar input {
+  background: white;
+  border: 1px solid var(--linea);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.catalog-toolbar input:focus {
+  border-color: var(--color0);
+  box-shadow: 0 0 0 3px rgba(75,0,130,.1);
+}
+
+.catalog-filters {
+  gap: 10px;
+}
+
+.catalog-filters button {
+  font-weight: 700;
+  transition: background .2s, color .2s;
+}
+
+.catalog-filters button[aria-pressed="true"] {
+  border-color: var(--color0);
+}
+
+.catalog-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+  min-height: 210px;
+  box-shadow: var(--sombra-suave);
+}
+
+.catalog-card h3 {
+  margin: 0;
+  color: var(--texto);
+}
+
+.catalog-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.catalog-card .tag {
+  margin-bottom: 4px;
+}
+
+/* Logos de productos */
+.catalog-card .product-logo,
+.product .product-logo {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: var(--product-color, var(--color0));
+  padding: 12px;
+  clip-path: polygon(
+    0 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% 100%,
+    0 100%
+  );
+}
+
+.catalog-card .product-logo img,
+.product .product-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.catalog-card .product-category {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--color0);
+}
+
+.catalog-card .product-slogan {
+  color: var(--texto-secundario);
+  font-size: 13px;
+}
+
+.catalog-card .product-bottom {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid var(--linea);
+}
+
+.catalog-grid:empty::after {
+  content: "No hay productos disponibles";
+  grid-column: 1 / -1;
+  padding: 40px;
+  text-align: center;
+  color: var(--texto-secundario);
+  border: 1px dashed var(--linea);
+}
+
+/* 08. CARRUSELES */
+.carousel-wrap {
+  min-width: 0;
+}
+
+.brand-track {
+  scroll-behavior: smooth;
+  scroll-padding-inline: 12px;
+  overscroll-behavior-x: contain;
+}
+
+.brand-tile {
+  position: relative;
+  transition: transform var(--transicion),
+              border-color var(--transicion),
+              box-shadow var(--transicion);
+}
+
+.brand-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--naranja);
+  box-shadow: var(--sombra-suave);
+}
+
+.brand-tile img {
+  transition: transform var(--transicion);
+}
+
+.brand-tile:hover img {
+  transform: scale(1.08);
+}
+
+.carousel-arrow {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 48px;
+  padding: 0;
+}
+
+.carousel-arrow:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+/* 09. ASISTENTE IA */
+.assistant-section {
+  isolation: isolate;
+}
+
+.assistant-intro p {
+  line-height: 1.8;
+}
+
+.assistant-section .quick-prompts button {
+  transition: background .2s, transform .2s;
+}
+
+.assistant-section .quick-prompts button:hover {
+  transform: translateY(-2px);
+}
+
+.assistant-section .chat-messages {
+  scrollbar-width: thin;
+  scrollbar-color: #c6b2d4 transparent;
+}
+
+.assistant-section .bubble {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.assistant-section .bubble.user {
+  background: var(--color0);
+}
+
+.assistant-section form:focus-within {
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 3px rgba(255,121,0,.12);
+}
+
+.assistant-section form button {
+  transition: background .2s;
+}
+
+/* 10. CASOS DE ÉXITO */
+.case-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-art {
+  position: relative;
+  overflow: hidden;
+}
+
+.case-art::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -65px;
+  bottom: -75px;
+  border: 35px solid rgba(255,255,255,.08);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.case-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.case-body p {
+  flex: 1;
+  line-height: 1.75;
+}
+
+.case-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 11px 17px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* 11. TESTIMONIOS */
+.testimonial {
+  position: relative;
+  box-shadow: var(--sombra-suave);
+}
+
+.testimonial::before {
+  content: "“";
+  position: absolute;
+  top: 5px;
+  right: 24px;
+  font-family: Georgia, serif;
+  font-size: 95px;
+  line-height: 1;
+  color: rgba(75,0,130,.08);
+  pointer-events: none;
+}
+
+.testimonial blockquote {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial figcaption strong {
+  color: var(--color0);
+}
+
+/* 12. PREGUNTAS FRECUENTES */
+.faq-list details {
+  transition: background .2s, border-color .2s;
+}
+
+.faq-list details[open] {
+  background: white;
+  border-left-color: var(--color0);
+  box-shadow: var(--sombra-suave);
+}
+
+.faq-list summary {
+  position: relative;
+  padding-right: 34px;
+  list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  font-weight: 300;
+  color: var(--naranja);
+}
+
+.faq-list details[open] summary::after {
+  content: "−";
+}
+
+.faq-list details p {
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+/* 13. FORMULARIO DE CONTACTO */
+.contact-form {
+  position: relative;
+}
+
+.contact-form-head strong {
+  color: var(--color0);
+}
+
+.contact-form :is(input, textarea, select) {
+  transition: border-color .2s,
+              background .2s,
+              box-shadow .2s;
+}
+
+.contact-form :is(input, textarea, select):hover {
+  border-color: #aa92bc;
+}
+
+.contact-form :is(input, textarea, select):focus {
+  background: #fff;
+  border-color: var(--color0);
+}
+
+.contact-form textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #82798a;
+  opacity: 1;
+}
+
+.contact-form input:disabled,
+.contact-form textarea:disabled,
+.contact-form select:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.contact-form .consent a {
+  color: var(--color0);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-form .consent a:hover {
+  color: #b45100;
+}
+
+.form-actions button {
+  min-height: 50px;
+  padding: 14px 24px;
+  font-weight: 800;
+  transition: background .2s, transform .2s;
+}
+
+.form-actions button:hover {
+  transform: translateY(-2px);
+}
+
+.form-actions button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.form-feedback:not(:empty) {
+  padding: 12px 15px;
+  border-left: 3px solid var(--color0);
+  background: #f5eff9;
+  line-height: 1.6;
+}
+
+.form-feedback.success {
+  color: #145b37;
+  background: #eaf7ef;
+  border-left-color: #198754;
+}
+
+.form-feedback.error {
+  color: #8d1d26;
+  background: #fff0f1;
+  border-left-color: #dc3545;
+}
+
+/* 14. FOOTER */
+.site-footer {
+  position: relative;
+}
+
+.footer-logo {
+  font-weight: 300;
+  letter-spacing: -.03em;
+}
+
+.footer-column a {
+  transition: color .2s, padding-left .2s;
+}
+
+.footer-column a:hover {
+  padding-left: 4px;
+}
+
+.footer-bottom {
+  line-height: 1.7;
+}
+
+.footer-bottom a:hover {
+  color: var(--naranja);
+}
+
+/* 15. ELEMENTOS DE UTILIDAD */
+.jocarsa-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--linea);
+  margin: 30px 0;
+  border: 0;
+}
+
+.jocarsa-highlight {
+  color: var(--naranja);
+}
+
+.jocarsa-muted {
+  color: var(--texto-secundario);
+}
+
+.jocarsa-surface {
+  background: var(--superficie);
+  border: 1px solid var(--linea);
+  padding: 24px;
+}
+
+.jocarsa-chamfer {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--chaflan-grande)) 0,
+    100% var(--chaflan-grande),
+    100% 100%,
+    0 100%
+  );
+}
+
+.jocarsa-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  background: #f0e7f6;
+  color: var(--color0);
+}
+
+/* 16. RESPONSIVE */
+@media (max-width: 1200px) {
+  .topbar {
+    gap: 15px;
+  }
+
+  .topbar .brand img {
+    max-width: 240px !important;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .catalog-grid {
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-intro {
+    max-width: 700px;
+  }
+
+  .assistant-inner {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 740px) {
+  .topbar {
+    min-height: 72px;
+  }
+
+  .topbar .brand img {
+    max-width: 220px !important;
+    height: 34px !important;
+  }
+
+  .topbar .mega-nav {
+    background: var(--color1);
+    border-bottom: 3px solid var(--naranja);
+  }
+
+  .topbar .nav-group > summary {
+    width: 100%;
+  }
+
+  .topbar .nav-panel {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-content {
+    left: 24px;
+    right: 24px;
+    width: auto;
+  }
+
+  .hero .actions {
+    gap: 10px;
+  }
+
+  .hero .btn {
+    padding: 12px 17px;
+  }
+
+  .section-head {
+    margin-bottom: 30px;
+  }
+
+  .catalog-toolbar {
+    padding: 18px;
+  }
+
+  .catalog-card {
+    min-height: 180px;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .footer-columns {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 540px) {
+  .catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 11vw, 58px);
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .brand-tile {
+    flex-basis: 145px;
+  }
+
+  .contact-intro h2 {
+    font-size: clamp(34px, 10vw, 50px);
+  }
+
+  .contact-form-head {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  .form-actions span {
+    max-width: none;
+  }
+}
+
+/* 17. ACCESIBILIDAD */
+:focus-visible {
+  outline: 3px solid var(--naranja);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, .brand-track {
+    scroll-behavior: auto !important;
+  }
+
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@media (forced-colors: active) {
+  .btn, button, .card, .product,
+  .catalog-card, .contact-form {
+    border: 1px solid CanvasText;
+  }
+
+  :focus-visible {
+    outline: 3px solid Highlight;
+  }
+}
+
+/* 18. IMPRESIÓN */
+@media print {
+  .topbar, .hero video, .shade,
+  .carousel-arrow, .assistant-section,
+  .contact-form, .scroll {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .hero {
+    height: auto;
+    min-height: 0;
+    background: white;
+    color: black;
+  }
+
+  .hero-content {
+    position: static;
+    transform: none;
+    padding: 35px;
+  }
+
+  .section, .intro, .contact {
+    padding: 25px !important;
+  }
+
+  .card, .product, .catalog-card,
+  .case-card, .testimonial {
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}

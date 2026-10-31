@@ -1,0 +1,44 @@
+{
+  "nombre": "Miguel Fernández Torres",
+  "marca": "Perfil 046",
+  "nacimiento": "1996-03-22",
+  "ciudad": "Madrid",
+  "email": "curriculum_046@example.com",
+  "web": "https://example.com/curriculum_046",
+  "profesion": "Ingeniero de IA",
+  "experiencia": "3 años",
+  "formacion": [
+    "Máster en Inteligencia Artificial",
+    "Máster en Ciberseguridad",
+    "Grado en Matemáticas"
+  ],
+  "trabajos": [
+    "TechNova - Especialista en ciberseguridad",
+    "EducaDigital - Ingeniero de IA",
+    "Digital Solutions - Diseñador web",
+    "Sistemas Levante - Desarrollador de software"
+  ],
+  "lenguajes": [
+    "PHP",
+    "SQL",
+    "Java",
+    "TypeScript",
+    "HTML"
+  ],
+  "tecnologias": [
+    "PostgreSQL",
+    "Flask",
+    "MySQL"
+  ],
+  "idiomas": [
+    "Alemán",
+    "Italiano"
+  ],
+  "especialidades": [
+    "Desarrollo web",
+    "Ciberseguridad",
+    "Administración de sistemas",
+    "Inteligencia artificial",
+    "Bases de datos"
+  ]
+}

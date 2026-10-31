@@ -1,0 +1,459 @@
+{
+  "categorias": [
+    {
+      "nombre": "oficina",
+      "productos": [
+        {
+          "nombre": "Calendario",
+          "slogan": "Tu tiempo, coordinado sin conflictos.",
+          "color": "mediumpurple"
+        },
+        {
+          "nombre": "Correo",
+          "slogan": "Comunicación centralizada, trabajo más fluido.",
+          "color": "purple"
+        },
+        {
+          "nombre": "Presentacion",
+          "slogan": "Presenta ideas que cobran vida.",
+          "color": "darkviolet"
+        },
+        {
+          "nombre": "Formularios",
+          "slogan": "Recopila datos, obtén respuestas.",
+          "color": "lavender"
+        },
+        {
+          "nombre": "Documentos",
+          "slogan": "Tus documentos, vivos y compartidos.",
+          "color": "mediumvioletred"
+        },
+        {
+          "nombre": "Videoconferencias",
+          "slogan": "Reuniones seguras, equipos conectados.",
+          "color": "palevioletred"
+        },
+        {
+          "nombre": "Diagrama",
+          "slogan": "Haz visible lo complejo.",
+          "color": "violet"
+        },
+        {
+          "nombre": "Archivo",
+          "slogan": "Cada archivo, siempre en su lugar.",
+          "color": "coral"
+        },
+        {
+          "nombre": "Kanban",
+          "slogan": null,
+          "color": "darkorchid"
+        }
+      ]
+    },
+    {
+      "nombre": "personal",
+      "productos": [
+        {
+          "nombre": "Marcadores",
+          "slogan": "Tus recursos, siempre a mano.",
+          "color": "blue"
+        },
+        {
+          "nombre": "Agenda",
+          "slogan": "Organiza hoy, avanza mañana.",
+          "color": "blueviolet"
+        },
+        {
+          "nombre": "Listas",
+          "slogan": "Menos pendientes, más progreso.",
+          "color": "cadetblue"
+        },
+        {
+          "nombre": "Mapamental",
+          "slogan": "Ordena ideas, descubre conexiones.",
+          "color": "cornflowerblue"
+        },
+        {
+          "nombre": "Fotos",
+          "slogan": "Tus imágenes, privadas y mejoradas.",
+          "color": "lightsteelblue"
+        },
+        {
+          "nombre": "Dictado",
+          "slogan": "Habla. Tu mensaje toma forma.",
+          "color": "darkblue"
+        },
+        {
+          "nombre": "Tableros",
+          "slogan": "Organiza, visualiza y avanza.",
+          "color": "darkslateblue"
+        },
+        {
+          "nombre": "Esquema",
+          "slogan": "Ordena tus ideas, estructura tu trabajo.",
+          "color": "powderblue"
+        },
+        {
+          "nombre": "Album",
+          "slogan": "Tus recuerdos, ordenados para siempre",
+          "color": "skyblue"
+        }
+      ]
+    },
+    {
+      "nombre": "aula",
+      "productos": [
+        {
+          "nombre": "Apuntes",
+          "slogan": "Convierte tu voz en conocimiento.",
+          "color": "darkgreen"
+        },
+        {
+          "nombre": "Exposiciones",
+          "slogan": "Cada espacio, perfectamente coordinado.",
+          "color": "green"
+        },
+        {
+          "nombre": "Formacion",
+          "slogan": "Cursos ordenados, aprendizaje fluido.",
+          "color": "mediumseagreen"
+        },
+        {
+          "nombre": "Practicas",
+          "slogan": "Aprender haciendo, avanzar demostrando.",
+          "color": "lawngreen"
+        },
+        {
+          "nombre": "Scorm",
+          "slogan": "Crea, empaqueta y comparte formación.",
+          "color": "lightgreen"
+        },
+        {
+          "nombre": "Videoconferencias",
+          "slogan": "Reuniones seguras, equipos conectados.",
+          "color": "palevioletred"
+        },
+        {
+          "nombre": "Wiki",
+          "slogan": "El conocimiento crece compartiéndolo.",
+          "color": "tomato"
+        },
+        {
+          "nombre": "Foros",
+          "slogan": "Conversaciones que construyen conocimiento.",
+          "color": "palegreen"
+        },
+        {
+          "nombre": "Espejo",
+          "slogan": "El aula, sincronizada al instante.",
+          "color": "lightseagreen"
+        },
+        {
+          "nombre": "Examenes",
+          "slogan": "Evaluar sin perder el control.",
+          "color": "springgreen"
+        },
+        {
+          "nombre": "Cuestionarios",
+          "slogan": "Pregunta, corrige y comprende.",
+          "color": "mediumspringgreen"
+        },
+        {
+          "nombre": "Aula",
+          "slogan": null,
+          "color": null
+        },
+        {
+          "nombre": "Alumno",
+          "slogan": "Tu aprendizaje, siempre visible.",
+          "color": "limegreen"
+        },
+        {
+          "nombre": "Quiz",
+          "slogan": "Responde, aprende y mejora.",
+          "color": "lime"
+        },
+        {
+          "nombre": "Cuaderno",
+          "slogan": null,
+          "color": "dimgrey"
+        }
+      ]
+    },
+    {
+      "nombre": "educación",
+      "productos": [
+        {
+          "nombre": "Asistencia",
+          "slogan": "Cada clase, cada presencia.",
+          "color": "darkolivegreen"
+        },
+        {
+          "nombre": "Supervision",
+          "slogan": "Cada aula, visible al instante.",
+          "color": "darkseagreen"
+        },
+        {
+          "nombre": "Horarios",
+          "slogan": "Todo encaja en su momento.",
+          "color": "forestgreen"
+        },
+        {
+          "nombre": "Calificaciones",
+          "slogan": "El progreso, claro y compartido.",
+          "color": "greenyellow"
+        },
+        {
+          "nombre": "Actas",
+          "slogan": "Cada acuerdo, seguro y accesible.",
+          "color": "chartreuse"
+        },
+        {
+          "nombre": "Memoriasdidacticas",
+          "slogan": "La enseñanza deja memoria.",
+          "color": "olivedrab"
+        },
+        {
+          "nombre": "Estudiantes",
+          "slogan": "Gestiona la información del alumno",
+          "color": "olive"
+        },
+        {
+          "nombre": "Dual",
+          "slogan": null,
+          "color": "indigo"
+        },
+        {
+          "nombre": "Mecanografia",
+          "slogan": null,
+          "color": "seagreen"
+        },
+        {
+          "nombre": "Proyectointermodular",
+          "slogan": null,
+          "color": "darkcyan"
+        }
+      ]
+    },
+    {
+      "nombre": "sonido",
+      "productos": [
+        {
+          "nombre": "Daw",
+          "slogan": "Graba, mezcla y crea desde cualquier lugar.",
+          "color": "darkturquoise"
+        }
+      ]
+    },
+    {
+      "nombre": "marketing",
+      "productos": [
+        {
+          "nombre": "Contenido",
+          "slogan": "Publica con orden, comunica mejor.",
+          "color": "maroon"
+        },
+        {
+          "nombre": "Analitica",
+          "slogan": "Entiende cada visita, mejora tu web.",
+          "color": "brown"
+        },
+        {
+          "nombre": "Wiki",
+          "slogan": "El conocimiento crece compartiéndolo.",
+          "color": "tomato"
+        },
+        {
+          "nombre": "Folletos",
+          "slogan": "Diseña, imprime y comunica.",
+          "color": "darkred"
+        },
+        {
+          "nombre": "Embudos",
+          "slogan": "Convierte datos en decisiones.",
+          "color": "indianred"
+        },
+        {
+          "nombre": "Analiticas",
+          "slogan": "Métricas claras, mejores decisiones.",
+          "color": "orangered"
+        },
+        {
+          "nombre": "Campañas",
+          "slogan": null,
+          "color": "firebrick"
+        },
+        {
+          "nombre": "Chat",
+          "slogan": null,
+          "color": "burlywood"
+        },
+        {
+          "nombre": "Red",
+          "slogan": null,
+          "color": "red"
+        }
+      ]
+    },
+    {
+      "nombre": "empresa",
+      "productos": [
+        {
+          "nombre": "Facturacion",
+          "slogan": "Factura fácil, decide mejor.",
+          "color": "rosybrown"
+        },
+        {
+          "nombre": "Ventas",
+          "slogan": "Convierte contactos en oportunidades.",
+          "color": "sandybrown"
+        },
+        {
+          "nombre": "Empresa",
+          "slogan": "Toda tu empresa, en un sistema.",
+          "color": "saddlebrown"
+        }
+      ]
+    },
+    {
+      "nombre": "IT",
+      "productos": [
+        {
+          "nombre": "Documentacion",
+          "slogan": "Tu código, explicado y actualizado.",
+          "color": "lightgoldenrodyellow"
+        },
+        {
+          "nombre": "Despliegue",
+          "slogan": "Del local al servidor, seguro.",
+          "color": "darkgoldenrod"
+        },
+        {
+          "nombre": "Centinela",
+          "slogan": "Todo tu sistema, siempre vigilado.",
+          "color": "goldenrod"
+        },
+        {
+          "nombre": "Vigia",
+          "slogan": "Tus logs cuentan lo importante.",
+          "color": "palegoldenrod"
+        },
+        {
+          "nombre": "Almacenamiento",
+          "slogan": "Tu espacio, claro y bajo control.",
+          "color": "gold"
+        },
+        {
+          "nombre": "Inspector",
+          "slogan": "Conoce tu sistema desde dentro.",
+          "color": "deeppink"
+        },
+        {
+          "nombre": "Soporte",
+          "slogan": "La ayuda que necesitas, justo cuando la necesitas.",
+          "color": "hotpink"
+        },
+        {
+          "nombre": "Monitor",
+          "slogan": null,
+          "color": "lightpink"
+        }
+      ]
+    },
+    {
+      "nombre": "personas",
+      "productos": [
+        {
+          "nombre": "Asistencias",
+          "slogan": "Cada jornada, transparente y trazable.",
+          "color": "darksalmon"
+        },
+        {
+          "nombre": "Seleccion",
+          "slogan": "El talento adecuado, más cerca.",
+          "color": "salmon"
+        },
+        {
+          "nombre": "Curriculum",
+          "slogan": "Tu talento, siempre preparado.",
+          "color": "lightsalmon"
+        }
+      ]
+    },
+    {
+      "nombre": "diseño",
+      "productos": [
+        {
+          "nombre": "Arquitectura",
+          "slogan": null,
+          "color": "steelblue"
+        }
+      ]
+    },
+    {
+      "nombre": "Utilidades",
+      "productos": [
+        {
+          "nombre": "Iu",
+          "slogan": "Más espacio, menos distracciones.",
+          "color": "darkgray"
+        },
+        {
+          "nombre": "Iconos",
+          "slogan": "Un lenguaje visual para cada proyecto.",
+          "color": "dimgray"
+        },
+        {
+          "nombre": "Operativo",
+          "slogan": "Cada tarea, a su tiempo.",
+          "color": "darkslategray"
+        },
+        {
+          "nombre": "Reloj",
+          "slogan": "Cada segundo, bajo control.",
+          "color": "slategray"
+        },
+        {
+          "nombre": "Editor",
+          "slogan": "Escribe, da forma y publica.",
+          "color": "gray"
+        },
+        {
+          "nombre": "Captura",
+          "slogan": "Captura el proceso, conserva el conocimiento.",
+          "color": "lightgray"
+        },
+        {
+          "nombre": "Tipografia",
+          "slogan": "Diseña letras con identidad propia.",
+          "color": "lightslategray"
+        },
+        {
+          "nombre": "Conversion",
+          "slogan": null,
+          "color": "gainsboro"
+        }
+      ]
+    },
+    {
+      "nombre": "IA",
+      "productos": [
+        {
+          "nombre": "Ayuda",
+          "slogan": "Pregunta. Encuentra. Resuelve.",
+          "color": "deepskyblue"
+        },
+        {
+          "nombre": "Reuniones",
+          "slogan": null,
+          "color": "slateblue"
+        },
+        {
+          "nombre": "Avatar",
+          "slogan": null,
+          "color": "dodgerblue"
+        }
+      ]
+    }
+  ]
+}

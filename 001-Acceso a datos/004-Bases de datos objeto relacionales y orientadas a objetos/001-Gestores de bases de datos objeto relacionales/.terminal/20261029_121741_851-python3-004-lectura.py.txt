@@ -1,0 +1,27 @@
+Datetime: 2026-10-29T11:17:41.851Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/001-Gestores de bases de datos objeto relacionales
+Command: python3 004-lectura.py
+
+Result:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/001-Gestores de bases de datos objeto relacionales/004-lectura.py", line 6, in <module>
+    print(datos["persona"]["nombre"])
+          ~~~~~^^^^^^^^^^^
+KeyError: 'persona'
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_001-Acceso a datos_004-Bases de datos objeto relacionales y orientadas a objetos_001-Gestores de bases de datos objeto relacionales_004-lectura.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/001-Gestores de bases de datos objeto relacionales/004-lectura.py", line 6, in <module>
+    print(datos["persona"]["nombre"])
+          ~~~~~^^^^^^^^^^^
+KeyError: 'persona'
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/001-Gestores de bases de datos objeto relacionales$ 

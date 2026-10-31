@@ -1,0 +1,780 @@
+Datetime: 2026-10-22T10:18:28.077Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos
+Command: python3 005-buscar\ archivos\ en\ carpeta.py
+
+Result:
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/000-Presentación/2026-09-11_12-02-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/001-Explotación de sistemas microinformáticos/002-Estructura y componentes procesador/2026-09-11_12-17-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/001-Explotación de sistemas microinformáticos/003-Normas de seguridad y prevención de riesgos laborales/2026-09-11_12-45-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/001-Explotación de sistemas microinformáticos/001-Placas base. Formatos/2026-09-11_12-08-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/002-Funciones de un sistema operativo/2026-09-18_12-04-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/002-Funciones de un sistema operativo/2026-09-18_12-05-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/008-Tecnologías de virtualización. Tipos/2026-09-21_20-33-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/012-Actualización y recuperación de sistemas operativos y aplicaciones/2026-09-21_20-48-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/001-Evolución histórica y clasificación/2026-09-14_20-23-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/014-Ejercicio de final de unidad/2026-09-28_20-31-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/006-Procedimiento de instalación/2026-09-18_12-22-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/009-Consideraciones previas a la instalación de sistemas operativos libres y propietarios/2026-09-21_20-48-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/009-Consideraciones previas a la instalación de sistemas operativos libres y propietarios/2026-09-21_20-40-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/002-Instalación de sistemas operativos/013-Documentación de la instalación y de las incidencias detectadas/2026-09-25_12-04-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/003-Gestión de la información/001-Gestión de sistemas de archivos mediante comandos y entornos gráficos/2026-09-28_20-27-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/003-Gestión de la información/001-Gestión de sistemas de archivos mediante comandos y entornos gráficos/2026-09-28_20-37-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/003-Gestión de la información/002-Estructura de directorios de sistemas operativos libres y propietarios/2026-10-16_12-02-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/006-Sistemas informáticos/008-Repaso examenes evaluacion 1/001-Repaso 1/2026-10-19_19-40-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/000-Presentación/2026-09-10_19-15-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/002-Instalación y uso de entornos de desarrollo/003-Uso básico de un entorno de desarrollo/2026-10-01_20-10-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/002-Instalación y uso de entornos de desarrollo/005-Edición de programas/2026-10-08_19-32-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/002-Instalación y uso de entornos de desarrollo/005-Edición de programas/2026-10-08_19-57-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/002-Instalación y uso de entornos de desarrollo/002-Instalación de un entorno de desarrollo/2026-10-01_19-54-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/002-Instalación y uso de entornos de desarrollo/006-Generación de ejecutables en distintos entornos/2026-10-15_19-21-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/002-Instalación y uso de entornos de desarrollo/004-Personalización del entorno de desarrollo temas, estilos de codificación, módulos y extensiones, entre otras/2026-10-01_20-42-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/002-Instalación y uso de entornos de desarrollo/001-Funciones de un entorno de desarrollo/2026-10-01_19-29-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/005-Repositorio. Herramientas de control de versiones. Uso integrado en el entorno de desarrollo/001-Repositorios remotos/2026-10-02_12-02-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/005-Repositorio. Herramientas de control de versiones. Uso integrado en el entorno de desarrollo/001-Repositorios remotos/2026-10-02_12-38-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/005-Repositorio. Herramientas de control de versiones. Uso integrado en el entorno de desarrollo/002-Documentación. Uso de comentarios. Alternativas/2026-10-05_20-08-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/001-Desarrollo de software/003-Tipos de lenguajes de programación. Paradigmas/2026-09-10_19-31-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/001-Desarrollo de software/001-Concepto de programa informático/2026-09-10_19-22-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/001-Desarrollo de software/004-Características de los lenguajes más difundidos/2026-09-17_19-37-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/001-Desarrollo de software/005-Fases del desarrollo de una aplicación análisis, diseño, codificación, pruebas, documentación, explotación y mantenimiento, entre otras/2026-09-17_20-12-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/002-Entornos de desarrollo/001-Desarrollo de software/006-Proceso de obtención de código ejecutable a partir del código fuente; herramientas implicadas/2026-09-24_19-29-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/000-Presentación/2026-09-11_13-04-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/000-Presentación/2026-09-11_13-02-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/006-Partes del proyecto/2026-10-16_13-07-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/003-Información relativa a las soluciones/2026-10-02_13-29-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/001-Identificar las necesidades/2026-10-02_13-09-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/005-Estudio de viabilidad técnica/2026-10-16_13-00-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/004-Aspectos innovadores/2026-10-02_13-32-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/002-Plantear posibles soluciones/2026-10-02_13-15-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/008-Realización de seguimiento/2026-09-25_13-12-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/008-Realización de seguimiento/2026-09-25_13-05-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/007-Valoracion de recursos humanos y materiales/2026-09-25_12-57-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/006-Estrategia para dar respuesta a las demandas/2026-09-18_13-33-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/001-Identificar empresas representativas/2026-09-11_13-25-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/001-Identificar empresas representativas/2026-09-11_13-16-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/010-Conexion intermodular/2026-09-25_13-33-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/005-Evaluacion del volumen de negocio/2026-09-18_13-25-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/005-Proyecto intermodular/001-Búsqueda de información/002-Estructura de las empresas/2026-09-18_13-05-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/001-Estándares web. Versiones. Clasificación/2026-09-28_19-31-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/001-Estándares web. Versiones. Clasificación/2026-09-29_09-13-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/006-Validación de documentos HTML y CSS/2026-10-05_19-56-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/006-Validación de documentos HTML y CSS/2026-10-05_19-44-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-09-05_13-44-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-10-02_14-02-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-10-05_19-22-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/003-Identificación de etiquetas y atributos de HTML/2026-09-29_09-31-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/003-Identificación de etiquetas y atributos de HTML/2026-09-28_19-47-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/002-Estructura de un documento HTML/2026-09-29_09-18-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/002-Estructura de un documento HTML/2026-09-05_13-44-06.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/002-Estructura de un documento HTML/2026-09-28_19-33-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/003-Estructura y sintaxis/2026-09-14_20-10-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/007-Ejercicio práctico/2026-09-29_09-08-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/007-Ejercicio práctico/2026-09-21_20-02-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/004-Herramientas de edición/2026-09-21_19-24-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/002-Características y ámbitos de aplicación/2026-09-14_19-48-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/005-Elaboración de documentos bien formados/2026-09-21_19-51-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/005-Elaboración de documentos bien formados/2026-09-21_19-42-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/005-Elaboración de documentos bien formados/2026-09-29_08-39-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/006-Utilización de espacios de nombres/2026-09-21_19-56-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/006-Utilización de espacios de nombres/2026-09-29_08-57-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/001-Clasificación/2026-09-14_19-27-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Presentacion/2026-09-14_19-22-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/008-Repaso examenes evaluacion 1/001-Repaso 1/2026-10-19_19-21-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/001-Estructuras estáticas y dinámicas/2026-09-28_17-38-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/003-Matrices (arrays) multidimensionales/2026-09-28_17-54-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/005-Cadenas de caracteres. Expresiones regulares/2026-09-28_18-07-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/002-Creación de matrices (arrays)/2026-09-28_17-46-08.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/006-Colecciones Listas, Conjuntos y Diccionarios/2026-09-28_18-15-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/000-Presentación/2026-09-10_16-31-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/001-Estructura y bloques fundamentales/2026-09-10_16-36-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/002-Variables/2026-09-10_17-05-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/005-Constantes/2026-09-10_18-37-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/004-Literales/2026-09-10_18-33-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/006-Operadores y expresiones/2026-09-10_18-41-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/009-Gestión de bases de datos/004-Gráficas/2026-10-01_18-36-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/009-Gestión de bases de datos/002-Establecimiento de conexiones/2026-10-01_16-41-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/009-Gestión de bases de datos/003-Almacenamiento, recuperación, actualización y eliminación de información en bases de datos/2026-10-01_17-02-08.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/009-Gestión de bases de datos/001-Acceso a bases de datos. Estándares. Características/2026-10-01_16-33-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/002-Estructuras de repetición/2026-09-11_14-31-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/001-Estructuras de selección/2026-09-11_14-22-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/003-Estructuras de salto/2026-09-11_14-42-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/004-Control de excepciones/2026-09-14_17-44-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/004-Control de excepciones/2026-09-14_17-32-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/007-Ejercicio/2026-09-14_18-02-27.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/007-Ejercicio/2026-09-14_18-20-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/003-Uso de estructuras de control/007-Ejercicio/2026-09-17_16-34-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/002-Utilización de objetos/001-Características de los objetos/2026-09-11_14-05-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/002-Utilización de objetos/002-Instanciación de objetos/2026-09-11_14-09-32.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/009-Creación de controladores de eventos/2026-09-25_14-00-39.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/007-Interfaces gráficas/2026-09-24_18-48-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/006-Entrada desde teclado. Salida a pantalla. Formatos de visualización/2026-09-24_18-30-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/003-Apertura y cierre de ficheros. Modos de acceso. Escritura y lectura de información en ficheros/2026-09-24_17-03-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/004-Utilización de los sistemas de ficheros/2026-09-24_17-14-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/001-Flujos. Tipos bytes y caracteres. Clases relacionadas/2026-09-21_17-56-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/002-Ficheros de datos. Registros/2026-09-24_16-31-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/005-Lectura y escritura de información/008-Concepto de evento/2026-09-25_13-51-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/005-Creación de constructores/2026-09-18_14-00-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/004-Creación de métodos/2026-09-17_18-57-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/007-Utilización de clases heredadas/2026-09-18_14-27-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/008-Ejercicio final/2026-09-21_17-31-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/003-Creación de propiedades/2026-09-17_18-45-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/006-Utilización de clases y objetos/2026-09-18_14-05-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/002-Estructura y miembros de una clase. Visibilidad/2026-09-17_18-39-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/001-Concepto de clase/2026-09-17_16-33-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/004-Desarrollo de clases/001-Concepto de clase/2026-09-17_18-32-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/011-Repasos examen evaluacion 1/001-Repaso 1/2026-10-19_17-44-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/003-rutas/2026-10-08_17-08-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/006-panel de control/2026-10-15_18-35-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/006-panel de control/2026-10-15_17-34-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/006-panel de control/2026-10-15_16-37-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/006-panel de control/2026-10-15_17-51-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/007-Inicio de sesion/2026-10-16_13-16-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/007-Inicio de sesion/2026-10-16_13-42-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/002-Ida/2026-10-08_16-35-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/004-Vuelta/2026-10-08_18-31-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/005-Ida y vuelta/2026-10-08_18-58-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/004-Programación/010-Flask/001-Introduccion/2026-10-05_17-40-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/000-Presentación/2026-09-10_17-29-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/009-Repaso examen evaluacion 1/001-Repaso 1/2026-10-19_18-33-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/001-Almacenamiento de la información/006-Big Data introducción, análisis de datos, inteligencia de negocios/2026-09-14_18-48-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/001-Almacenamiento de la información/003-Sistemas gestores de base de datos Funciones, componentes y tipos/2026-09-14_18-28-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/001-Almacenamiento de la información/005-Legislación sobre protección de datos/2026-09-10_18-15-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/001-Almacenamiento de la información/001-Ficheros (planos, indexados, acceso directo, entre otros)/2026-09-10_17-35-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/001-Almacenamiento de la información/004-Bases de datos centralizadas y bases de datos distribuidas. Técnicas de fragmentación/2026-09-10_18-09-27.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/001-Almacenamiento de la información/002-Bases de datos. Conceptos, usos y tipos según el modelo de datos, la ubicación de la información/2026-09-10_17-42-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/005-Restricciones de validación/2026-09-21_18-52-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/010-Usuarios. Privilegios/2026-09-24_17-59-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/002-Terminología del modelo relacional/2026-09-17_17-32-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/002-Terminología del modelo relacional/2026-09-17_18-31-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/001-Modelo de datos/2026-09-14_19-05-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/009-Vistas/2026-09-24_17-49-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/009-Vistas/2026-09-24_17-32-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/004-Claves primarias/2026-09-21_18-43-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/002-Bases de datos relacionales/003-Tipos de datos/2026-09-21_18-27-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/009-Optimización de consultas/2026-10-08_17-32-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/008-Combinación de múltiples selecciones/2026-10-05_18-33-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/002-Operadores. Operadores de comparación. Operadores lógicos/2026-09-28_18-56-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/006-Composiciones externas/2026-10-01_17-51-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/007-Subconsultas/2026-10-01_18-11-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/005-Composiciones internas/2026-09-29_10-32-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/003-Consultas de resumen/2026-10-01_17-30-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/001-Proyección, selección y ordenación de registros/2026-09-28_18-31-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/001-Bases de datos/003-Realización de consultas/004-Agrupamiento de registros/2026-10-01_17-40-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam1/000-Tutoria/001-Presentación/2026-09-07_16-04-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/000-Presentación/2026-09-07_20-07-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/005-Programación paralela y distribuida/2026-10-05_16-37-08.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos/2026-10-19_16-35-08.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/003-Hilos/2026-09-21_16-57-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/003-Hilos/2026-09-21_16-35-32.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/001-Ejecutables. Procesos. Servicios/2026-09-07_20-15-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/004-Programación concurrente/2026-09-28_16-06-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos/2026-09-14_16-35-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos/2026-09-14_16-54-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/001-Planificación de interfaces gráficas/010-Ejercicio final de unidad/2026-10-11_20-18-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/001-Planificación de interfaces gráficas/002-Interacción persona-ordenador/2026-09-08_18-50-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/001-Planificación de interfaces gráficas/004-Generación de documentos y sitios web/2026-09-08_19-21-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/001-Planificación de interfaces gráficas/003-Interpretación de guías de estilo. Elementos/2026-09-08_19-06-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/001-Planificación de interfaces gráficas/001-Color, tipografía, iconos/2026-09-08_18-28-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/001-Planificación de interfaces gráficas/007-Mapa de navegación. Prototipos/2026-09-11_17-08-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/001-Planificación de interfaces gráficas/005-Componentes de una interfaz web/2026-09-08_19-38-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/003-Implantación de contenido multimedia/009-Proyecto final de unidad/2026-10-11_21-07-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/004-Integración de contenido interactivo/005-Ejercicio final de unidad/2026-10-12_17-40-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/002-Uso de estilos/007-Ejercicio final de unidad/2026-10-11_20-34-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/005-Diseño de webs accesibles/001-El Consorcio World Wide Web (W3C)/2026-10-19_13-41-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/005-Diseño de webs accesibles/003-Criterios de conformidad. Niveles de conformidad/2026-10-19_13-58-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/001-Diseño de interfaces web/005-Diseño de webs accesibles/002-Principios y Pautas de Accesibilidad al Contenido en la Web (WCAG)/2026-10-19_13-44-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/000-Presentacion/2026-10-05_14-12-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/000-Presentacion/2026-09-08_18-16-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/006-Repasos/001-Repaso 1/2026-10-19_13-34-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/002-Generación dinámica de páginas web/2026-10-10_22-35-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/001-Modelos de ejecución de código en entornos clienteservidor/2026-10-10_22-26-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/004-Integración con los lenguajes de marcas/2026-10-10_22-50-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/003-Lenguajes de programación y tecnologías asociadas en entorno servidor/2026-10-10_22-42-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/004-Tipos de datos. Conversiones entre tipos de datos/2026-10-10_22-59-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/003-Etiquetas para inserción de código/2026-10-10_22-56-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/005-Variables. Operadores. Ámbitos de utilización/2026-10-11_18-53-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/006-Recuperación y utilización de información proveniente del cliente web/2026-10-11_19-41-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/001-Tomas de decisión/2026-10-11_19-05-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones/2026-10-11_19-36-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/2026-10-11_19-21-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/002-Bucles/2026-10-11_19-14-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/004-Tipos de datos compuestos/2026-10-11_19-30-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/005-Interacción con el usuario eventos y formularios/004-Validación y envío/2026-10-05_13-57-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/005-Interacción con el usuario eventos y formularios/004-Validación y envío/2026-10-05_14-06-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/005-Interacción con el usuario eventos y formularios/003-Modificación de apariencia y comportamiento/2026-10-05_13-45-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/005-Interacción con el usuario eventos y formularios/001-Gestión de eventos. Tipos/2026-10-02_15-16-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/005-Interacción con el usuario eventos y formularios/002-Utilización de formularios desde código/2026-10-05_13-44-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/004-Programación con colecciones, funciones y objetos definidos por el usuario/004-Operaciones agregadas filtrado, reducción y recolección/2026-09-28_14-16-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/004-Programación con colecciones, funciones y objetos definidos por el usuario/001-Funciones predefinidas del lenguaje/2026-09-28_14-00-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/004-Programación con colecciones, funciones y objetos definidos por el usuario/002-Llamadas a funciones. Definición de funciones/2026-09-28_14-06-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/004-Programación con colecciones, funciones y objetos definidos por el usuario/006-Definición de métodos y propiedades/2026-10-02_15-02-27.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/004-Programación con colecciones, funciones y objetos definidos por el usuario/003-Matrices (arrays)/2026-09-28_14-10-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/004-Programación con colecciones, funciones y objetos definidos por el usuario/005-Creación de objetos/2026-09-28_14-20-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/001-Selección de arquitecturas y tecnologías de programación/003-Lenguajes de programación en entorno cliente/2026-09-21_13-37-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/001-Selección de arquitecturas y tecnologías de programación/004-Tecnologías y lenguajes asociados/2026-09-21_13-39-32.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/001-Selección de arquitecturas y tecnologías de programación/001-Mecanismos de ejecución de código en un navegador web/2026-09-21_13-30-39.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/001-Selección de arquitecturas y tecnologías de programación/006-Herramientas de programación y prueba sobre clientes web. Librerías y frameworks/2026-09-21_13-48-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/001-Selección de arquitecturas y tecnologías de programación/002-Capacidades y limitaciones de ejecución/2026-09-21_13-34-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/001-Selección de arquitecturas y tecnologías de programación/005-Integración del código con las etiquetas HTML/2026-09-21_13-44-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/007-Utilización de mecanismos de comunicación asíncrona/004-Librerías y frameworks de actualización dinámica/2026-10-09_23-14-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/007-Utilización de mecanismos de comunicación asíncrona/003-Formatos para el envío y recepción de información/2026-10-09_23-09-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/007-Utilización de mecanismos de comunicación asíncrona/002-Modificación dinámica del documento utilizando comunicación asíncrona/2026-10-09_22-54-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/007-Utilización de mecanismos de comunicación asíncrona/001-Mecanismos de comunicación asíncrona/2026-10-09_22-46-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/007-Utilización de mecanismos de comunicación asíncrona/005-Integración en diferentes navegadores/2026-10-09_23-27-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/002-Manejo de la sintaxis del lenguaje/002-Tipos de datos. Conversiones/2026-09-21_13-58-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/002-Manejo de la sintaxis del lenguaje/004-Operadores/2026-09-21_14-06-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/002-Manejo de la sintaxis del lenguaje/005-Comentarios al código/2026-09-21_14-12-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/002-Manejo de la sintaxis del lenguaje/003-Asignaciones/2026-09-21_14-05-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/002-Manejo de la sintaxis del lenguaje/007-Decisiones/2026-09-21_14-15-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/002-Manejo de la sintaxis del lenguaje/001-Variables/2026-09-21_13-51-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/002-Manejo de la sintaxis del lenguaje/008-Bucles/2026-09-28_13-12-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/003-Utilización de los objetos predefinidos del lenguaje/005-Creación de nuevas ventanas. Comunicación entre ventanas/2026-09-28_13-41-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/003-Utilización de los objetos predefinidos del lenguaje/003-Generación de texto y elementos HTML desde código/2026-09-28_13-31-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/003-Utilización de los objetos predefinidos del lenguaje/001-Utilización de objetos. Objetos nativos del lenguaje/2026-09-28_13-20-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/003-Utilización de los objetos predefinidos del lenguaje/007-Mecanismos del navegador para el almacenamiento y recuperación de información/2026-09-28_13-52-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/003-Utilización de los objetos predefinidos del lenguaje/006-Interacción con el usuario/2026-09-28_13-47-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/006-Utilización del modelo de objetos del documento (DOM)/001-El modelo de objetos del documento (DOM)/2026-10-09_23-38-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/006-Utilización del modelo de objetos del documento (DOM)/005-Diferencias en las implementaciones del modelo/2026-10-09_23-58-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/006-Utilización del modelo de objetos del documento (DOM)/002-Objetos del modelo. Propiedades y métodos/2026-10-09_23-42-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/006-Utilización del modelo de objetos del documento (DOM)/003-Acceso al documento desde código/2026-10-09_23-47-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/005-Proyecto Intermodular II/002-Desarrollo web en entorno cliente/006-Utilización del modelo de objetos del documento (DOM)/004-Programación de eventos/2026-10-09_23-55-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/000-Presentación/2026-09-08_16-03-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/004-Informes y listados de la aplicación/2026-10-08_14-21-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/001-Definición de campos/2026-10-08_13-52-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/001-Definición de campos/2026-10-08_13-51-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/009-Procesos de extracción de datos en sistemas de ERP-CRM y almacenes de datos/2026-10-15_15-17-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/011-Ejercicio de final de unidad/2026-10-15_15-33-55.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento/2026-10-15_14-02-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento/2026-10-15_15-04-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/003-Interfaces de entrada de datos y de procesos./2026-10-08_14-09-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/005-Gestión de pedidos/2026-10-08_14-50-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/006-Gráficos/2026-10-08_15-16-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/006-Gráficos/2026-10-08_15-25-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/001-Tipos de instalación./2026-09-17_15-26-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/001-Tipos de instalación./2026-09-17_14-38-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/005-Actualización del sistema ERP-CRM y aplicación de actualizaciones/2026-09-24_15-13-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/007-Entornos de desarrollo, pruebas y explotación/2026-10-01_15-34-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/003-Procesos de instalación del sistema ERP-CRM/2026-09-24_14-44-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/004-Parámetros de configuración del sistema ERP-CRM/2026-09-24_15-01-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/006-Servicios de acceso al sistema ERP-CRM/2026-10-01_15-33-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/006-Servicios de acceso al sistema ERP-CRM/2026-10-01_13-54-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/002-Módulos de un sistema ERP-CRM/2026-09-24_14-04-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/009-Documentación de las operaciones realizadas/2026-09-17_14-18-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/002-Revisión de los ERP actuales/2026-09-08_16-27-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/003-Concepto de CRM/2026-09-10_14-04-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/006-Sistemas gestores de bases de datos compatibles con el software/2026-09-17_13-20-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/004-Revisión de los CRM actuales/2026-09-10_14-58-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/007-Instalación y configuración del sistema informático/2026-09-17_13-29-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/008-Verificación de la instalación y configuración/2026-09-17_13-34-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/001-Concepto de ERP/2026-09-08_16-18-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/000-Presentación/2026-09-07_19-07-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/004-Análisis de tecnologías para aplicaciones en dispositivos móviles/002-Hardware para dispositivos móviles/2026-10-15_16-07-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/004-Análisis de tecnologías para aplicaciones en dispositivos móviles/005-Aplicaciones móviles/2026-10-19_15-37-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/004-Análisis de tecnologías para aplicaciones en dispositivos móviles/001-Dispositivos móviles/2026-10-15_15-53-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/004-Análisis de tecnologías para aplicaciones en dispositivos móviles/004-Emuladores. Configuraciones/2026-10-19_14-34-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/004-Análisis de tecnologías para aplicaciones en dispositivos móviles/004-Emuladores. Configuraciones/2026-10-19_15-10-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/004-Análisis de tecnologías para aplicaciones en dispositivos móviles/003-Tecnologías de desarrollo/2026-10-16_14-34-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/001-Animación 2D y 3D/2026-09-07_19-17-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/005-Componentes de un motor de juegos/2026-09-21_14-51-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/006-Librerías que proporcionan las funciones básicas de un Motor 2D3D/2026-09-21_15-17-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/003-Motores de juegos Tipos y utilización/2026-09-21_14-32-55.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/007-Estudio de juegos existentes/2026-09-21_15-38-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/008-Aplicación de modificaciones sobre juegos existentes/2026-09-28_14-34-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/002-Arquitectura del juego. Componentes/2026-09-14_14-30-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/002-Arquitectura del juego. Componentes/2026-09-14_15-29-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/001-Análisis de motores de juegos/004-Áreas de especialización, librerías utilizadas y lenguajes de programación/2026-09-21_14-45-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/002-Arquitectura del API utilizado/2026-09-28_15-34-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/006-Animación de objetos/2026-10-05_15-54-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/003-Fuentes de datos multimedia. Clases/2026-10-05_14-33-55.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/004-Procesamiento de objetos multimedia/2026-10-05_15-18-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/001-Conceptos sobre aplicaciones multimedia/2026-09-28_15-05-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/004-Programación multimedia y dispositivos móviles/003-Utilización de librerías multimedia integradas/005-Reproducción de objetos multimedia/2026-10-05_15-33-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/2026-09-25_14-29-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/003-Creación de componentes visuales/002-Propiedades, atributos y métodos/2026-10-02_16-11-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/003-Creación de componentes visuales/001-Concepto de componente/2026-10-02_15-44-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/003-Creación de componentes visuales/003-Eventos; asociación de acciones a eventos/2026-10-05_12-34-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/003-Creación de componentes visuales/003-Eventos; asociación de acciones a eventos/2026-10-05_13-15-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/003-Creación de componentes visuales/004-Persistencia del componente/2026-10-19_13-32-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/004-Lenguajes descriptivos para la definición de interfaces/2026-09-11_16-31-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/008-Edición del código generado por la herramienta de diseño/2026-09-21_12-26-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/002-Librerías de componentes nativas y multiplataforma/2026-09-11_15-12-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/003-Herramientas propietarias y libres de edición de interfaces/2026-09-11_15-29-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/005-Componentes características y campo de aplicación/2026-09-18_15-28-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/010-Eventos; escuchadores/2026-09-21_13-16-27.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/009-Clases, propiedades, métodos/2026-09-21_13-09-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/007-Asociación de acciones a eventos/2026-09-18_15-44-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/006-Enlace de componentes a orígenes de datos/2026-09-18_15-02-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/001-Generación de interfaces de usuario/001-Patrones de arquitectura de las aplicaciones gráficas/2026-09-07_18-15-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/000-Presentacion/2026-09-07_18-05-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/002-Generación de interfaces naturales de usuario/003-Voz y Habla/2026-09-25_14-30-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/002-Generación de interfaces naturales de usuario/002-Interfaces naturales/2026-09-28_12-32-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/002-Generación de interfaces naturales de usuario/004-Partes y movimientos del cuerpo/2026-09-25_14-54-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/002-Generación de interfaces naturales de usuario/005-Realidad aumentada/2026-09-25_15-52-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/002-Generación de interfaces naturales de usuario/001-Herramientas para el aprendizaje automático/2026-09-25_14-48-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/002-Desarrollo de interfaces/009-Repasos/001-Repaso 1/2026-10-19_12-33-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/000-Presentación/2026-09-07_17-09-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/005-Mapeo basado en anotaciones/2026-10-08_12-58-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/001-Concepto de mapeo objeto relacional/2026-10-08_12-08-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/003-Instalación de una herramienta ORM. Configuración/2026-10-08_12-33-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/007-Sesiones estados de un objeto/2026-10-15_12-09-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/004-Estructura de un fichero de mapeo/2026-10-08_12-49-55.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes/2026-10-08_13-04-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/006-Clases persistentes/2026-10-08_13-30-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/002-Características de las herramientas ORM/2026-10-08_12-18-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/007-Ejecución de procedimientos almacenados en la base de datos/2026-10-01_12-37-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/007-Ejecución de procedimientos almacenados en la base de datos/2026-10-01_12-33-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/004-Ejecución de sentencias de descripción de datos/2026-09-24_13-18-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/006-Ejecución de consultas. Manipulación del resultado/2026-09-24_13-42-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/001-El desfase objeto-relacional/2026-09-24_12-15-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/005-Ejecución de sentencias de modificación de datos/2026-09-24_13-35-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/009-Desarrollo de programas que utilizan bases de datos/2026-10-01_13-25-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/008-Gestión de transacciones/2026-10-01_13-16-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/002-Protocolos de acceso a bases de datos/2026-09-24_12-37-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/002-Manejo de conectores/003-Establecimiento de conexiones/2026-09-24_12-48-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/002-Formas de acceso a un fichero. Ventajas/2026-09-10_12-01-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/002-Formas de acceso a un fichero. Ventajas/2026-09-10_12-01-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/004-Operaciones sobre ficheros secuenciales y aleatorios/2026-09-10_13-18-16.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/001-Clases asociadas a las operaciones de gestión de ficheros/2026-09-07_17-19-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/008-Desarrollo de aplicaciones que utilizan ficheros/2026-09-17_12-36-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/008-Desarrollo de aplicaciones que utilizan ficheros/2026-09-17_13-00-06.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/003-Clases para gestión de flujos de datos desdehacia ficheros/2026-09-10_12-30-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/007-Excepciones detección y tratamiento/2026-09-17_12-33-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/005-Serializacióndeserialización de objetos/2026-09-10_13-03-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/tame2627dam2/001-Acceso a datos/001-Manejo de ficheros/006-Trabajo con ficheros/2026-09-17_12-06-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/000-Tutoría/001-Presentación primer día/2026-09-09_17-29-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/005-Pruebas y depuración/2026-09-23_19-56-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/001-Mantenimiento del estado/2026-09-22_17-31-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/001-Mantenimiento del estado/2026-09-22_17-20-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/002-Almacenamiento y recuperación de información en el cliente web/2026-09-23_18-25-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/003-Seguridad usuarios, perfiles, roles/2026-09-23_18-55-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/004-Autentificación de usuarios/2026-09-23_19-26-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/008-Generación dinámica de páginas web interactivas/002-Generación dinámica de páginas interactivas/2026-10-07_19-44-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/008-Generación dinámica de páginas web interactivas/002-Generación dinámica de páginas interactivas/2026-10-07_18-15-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/008-Generación dinámica de páginas web interactivas/001-Tecnologías y frameworks/2026-10-06_16-43-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores/2026-10-20_16-47-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores/2026-10-20_15-08-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar/2026-10-21_20-07-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/006-Herramientas y frameworks de programación. en entorno servidor/2026-09-15_15-42-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/001-Modelos de ejecución de código en entornos clienteservidor/2026-09-15_15-10-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/004-Integración con los lenguajes de marcas/2026-09-15_15-38-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/004-Integración con los lenguajes de marcas/2026-09-15_15-32-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/004-Tipos de datos. Conversiones entre tipos de datos/2026-09-15_16-34-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/001-Tecnologías asociadas/2026-09-15_15-49-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/003-Etiquetas para inserción de código/2026-09-15_16-25-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/005-Variables. Operadores. Ámbitos de utilización/2026-09-15_16-42-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/005-Variables. Operadores. Ámbitos de utilización/2026-09-15_16-30-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/007-Programación de servicios web/004-Interface de un servicio web/2026-10-06_15-51-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/007-Programación de servicios web/003-Generación de un servicio web/2026-10-06_15-40-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/007-Programación de servicios web/001-Tecnologías y protocolos implicados/2026-10-06_15-18-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/007-Programación de servicios web/002-Estándares y arquitecturas actuales. Formatos de intercambio de datos/2026-10-06_15-26-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/007-Programación de servicios web/005-Consumo de un servicio web. Herramientas de prueba/2026-10-06_16-16-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/002-Reutilización de código e información/2026-10-13_16-28-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/002-Reutilización de código e información/2026-10-13_15-48-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/001-Tecnologías y frameworks/2026-10-13_15-30-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/004-Incorporación de funcionalidades específicas/2026-10-14_19-45-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/004-Incorporación de funcionalidades específicas/2026-10-14_18-24-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/003-Utilización de información proveniente de repositorios/2026-10-13_16-30-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/006-Utilización de técnicas de acceso a datos/002-Recuperación y edición de información/2026-09-30_19-43-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/006-Utilización de técnicas de acceso a datos/001-Establecimiento de conexiones/2026-09-30_18-58-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/006-Utilización de técnicas de acceso a datos/003-Utilización de conjuntos de resultados/2026-09-30_20-22-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/006-Recuperación y utilización de información proveniente del cliente web/2026-09-15_17-29-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/008-Comentarios/2026-09-22_17-11-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/001-Tomas de decisión/2026-09-15_16-57-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones/2026-09-15_17-23-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/2026-09-15_17-15-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/002-Bucles/2026-09-15_17-03-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/007-Procesamiento de la información introducida en un formulario/2026-09-22_15-58-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/005-Generación dinámica de páginas web/004-Programación orientada a objetos. Patrones de diseño/2026-09-29_16-46-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/005-Generación dinámica de páginas web/003-Mecanismos de generación dinámica de la interface web/2026-09-29_16-07-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/003-Desarrollo web en entorno servidor/005-Generación dinámica de páginas web/001-Mecanismos de separación de la lógica de negocio. Frameworks web servidor/2026-09-29_15-10-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/000-Tutoría/001-Presentación primer día/2026-09-09_17-29-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/005-Pruebas y depuración/2026-09-23_19-56-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/001-Mantenimiento del estado/2026-09-22_17-31-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/001-Mantenimiento del estado/2026-09-22_17-20-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/002-Almacenamiento y recuperación de información en el cliente web/2026-09-23_18-25-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/003-Seguridad usuarios, perfiles, roles/2026-09-23_18-55-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/004-Desarrollo de aplicaciones web utilizando código embebido/004-Autentificación de usuarios/2026-09-23_19-26-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/008-Generación dinámica de páginas web interactivas/002-Generación dinámica de páginas interactivas/2026-10-07_19-44-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/008-Generación dinámica de páginas web interactivas/002-Generación dinámica de páginas interactivas/2026-10-07_18-15-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/008-Generación dinámica de páginas web interactivas/001-Tecnologías y frameworks/2026-10-06_16-43-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores/2026-10-20_16-47-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/001-transformadores/2026-10-20_15-08-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/010-Inteligencia Artificial/002-Afinar/2026-10-21_20-07-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/006-Herramientas y frameworks de programación. en entorno servidor/2026-09-15_15-42-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/001-Modelos de ejecución de código en entornos clienteservidor/2026-09-15_15-10-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/004-Integración con los lenguajes de marcas/2026-09-15_15-38-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/001-Selección de arquitecturas y herramientas de programación/004-Integración con los lenguajes de marcas/2026-09-15_15-32-48.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/004-Tipos de datos. Conversiones entre tipos de datos/2026-09-15_16-34-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/001-Tecnologías asociadas/2026-09-15_15-49-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/003-Etiquetas para inserción de código/2026-09-15_16-25-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/005-Variables. Operadores. Ámbitos de utilización/2026-09-15_16-42-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/002-Inserción de código en páginas web/005-Variables. Operadores. Ámbitos de utilización/2026-09-15_16-30-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/007-Programación de servicios web/004-Interface de un servicio web/2026-10-06_15-51-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/007-Programación de servicios web/003-Generación de un servicio web/2026-10-06_15-40-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/007-Programación de servicios web/001-Tecnologías y protocolos implicados/2026-10-06_15-18-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/007-Programación de servicios web/002-Estándares y arquitecturas actuales. Formatos de intercambio de datos/2026-10-06_15-26-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/007-Programación de servicios web/005-Consumo de un servicio web. Herramientas de prueba/2026-10-06_16-16-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/002-Reutilización de código e información/2026-10-13_16-28-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/002-Reutilización de código e información/2026-10-13_15-48-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/001-Tecnologías y frameworks/2026-10-13_15-30-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/004-Incorporación de funcionalidades específicas/2026-10-14_19-45-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/004-Incorporación de funcionalidades específicas/2026-10-14_18-24-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/009-Desarrollo de aplicaciones web híbridas/003-Utilización de información proveniente de repositorios/2026-10-13_16-30-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/006-Utilización de técnicas de acceso a datos/002-Recuperación y edición de información/2026-09-30_19-43-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/006-Utilización de técnicas de acceso a datos/001-Establecimiento de conexiones/2026-09-30_18-58-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/006-Utilización de técnicas de acceso a datos/003-Utilización de conjuntos de resultados/2026-09-30_20-22-15.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/006-Recuperación y utilización de información proveniente del cliente web/2026-09-15_17-29-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/008-Comentarios/2026-09-22_17-11-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/001-Tomas de decisión/2026-09-15_16-57-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/005-Funciones/2026-09-15_17-23-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/003-Matrices (arrays)/2026-09-15_17-15-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/002-Bucles/2026-09-15_17-03-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/003-Programación basada en lenguajes de marcas con código embebido/007-Procesamiento de la información introducida en un formulario/2026-09-22_15-58-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/005-Generación dinámica de páginas web/004-Programación orientada a objetos. Patrones de diseño/2026-09-29_16-46-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/005-Generación dinámica de páginas web/003-Mecanismos de generación dinámica de la interface web/2026-09-29_16-07-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627daw2/.translations/en/003-Desarrollo web en entorno servidor/005-Generación dinámica de páginas web/001-Mecanismos de separación de la lógica de negocio. Frameworks web servidor/2026-09-29_15-10-53.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/videos/tame2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/001-Estructura y bloques fundamentales/2026-09-10_16-36-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/videos/tame2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/002-Variables/2026-09-10_17-05-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/000-Presentación/2026-09-11_08-36-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/006-Validación de documentos HTML y CSS/2026-10-22_10-29-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-10-16_08-57-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/003-Identificación de etiquetas y atributos de HTML/2026-10-15_10-43-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/002-Estructura de un documento HTML/2026-10-15_10-25-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/004-Herramientas de diseño web/2026-10-16_08-41-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/003-Estructura y sintaxis/2026-10-01_10-32-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/003-Estructura y sintaxis/2026-10-01_10-43-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/007-Ejercicio práctico/2026-10-02_09-09-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/002-Características y ámbitos de aplicación/2026-09-25_09-14-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/002-Características y ámbitos de aplicación/2026-09-25_08-35-22.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/005-Elaboración de documentos bien formados/2026-10-02_08-36-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/006-Utilización de espacios de nombres/2026-10-02_08-52-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627asir1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/001-Clasificación/2026-09-18_08-35-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/003-Programación de comunicaciones en red/001-Comunicación entre aplicaciones/2026-10-14_17-06-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/003-Programación de comunicaciones en red/002-Roles cliente y servidor/2026-10-14_17-18-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/000-Presentacion/2026-09-15_19-33-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/005-Programación paralela y distribuida/2026-09-30_15-13-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/005-Programación paralela y distribuida/2026-09-30_15-21-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos/2026-10-13_20-33-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos/2026-10-07_17-12-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos/2026-10-07_16-56-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos/2026-10-06_20-15-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos/2026-10-13_19-53-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/003-Hilos/2026-09-23_17-02-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/009-Programación de aplicaciones multiproceso/2026-10-21_16-19-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/009-Programación de aplicaciones multiproceso/2026-10-21_17-10-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/001-Ejecutables. Procesos. Servicios/2026-09-15_19-50-06.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/001-Ejecutables. Procesos. Servicios/2026-09-15_19-42-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/008-Sincronización entre procesos/2026-10-20_19-40-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/004-Programación concurrente/2026-09-23_17-01-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/004-Programación concurrente/2026-09-29_20-08-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/002-Estados de un proceso. Planificación de procesos/2026-09-22_20-04-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/004-Informes y listados de la aplicación/2026-10-07_15-58-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/001-Definición de campos/2026-09-30_17-09-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/003-Interfaces de entrada de datos y de procesos/2026-10-07_15-07-27.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/003-Interfaces de entrada de datos y de procesos/2026-10-06_19-06-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/009-Procesos de extracción de datos en sistemas de ERP-CRM y almacenes de datos/2026-10-14_16-17-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/002-Consultas de acceso a datos/2026-09-30_16-58-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/007-Herramientas de monitorización y de evaluación del rendimiento/2026-10-14_15-24-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/003-Organización y consulta de la información/006-Gráficos/2026-10-13_18-17-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/006-Repaso/001-Repaso 1/2026-09-29_19-14-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/000-Presentacion/2026-09-15_18-17-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/008-Finalizacion del proyecto por unidad/2026-09-30_16-20-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/001-Tipos de instalación/2026-09-16_15-39-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/005-Actualización del sistema ERP-CRM y aplicación de actualizaciones/2026-09-23_16-34-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/003-Procesos de instalación del sistema ERP-CRM/2026-09-23_15-05-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/004-Parámetros de configuración del sistema ERP-CRM/2026-09-23_15-59-36.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/006-Servicios de acceso al sistema ERP-CRM/2026-09-29_19-26-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/006-Servicios de acceso al sistema ERP-CRM/2026-09-23_16-43-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/002-Instalación y configuración de sistemas ERP-CRM/002-Módulos de un sistema ERP-CRM/2026-09-22_18-18-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/002-Revisión de los ERP actuales/2026-09-15_18-38-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/003-Concepto de CRM/2026-09-15_18-56-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/006-Sistemas gestores de bases de datos compatibles con el software/2026-09-16_15-24-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/006-Sistemas gestores de bases de datos compatibles con el software/2026-09-16_15-07-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/004-Revisión de los CRM actuales/2026-09-15_19-03-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/007-Instalación y configuración del sistema informático/2026-09-16_15-32-51.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/001-Identificación de sistemas ERP-CRM/005-Tipos de licencias de los ERP-CRM/2026-09-15_19-07-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/007-IA/002-varias tablas/2026-10-21_15-16-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam2/006-Sistemas de gestión empresarial/007-IA/001-IA en SSGG/2026-10-20_18-40-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/000-Presentación/002-Segundo día/2026-09-10_08-37-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/000-Presentación/001-Primer día/2026-09-09_09-12-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/000-Presentación/003-Tercer día/2026-09-14_08-37-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/000-Presentación/004-Como entregar los ejercicios de final de unidad/2026-09-22_09-27-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/000-Presentación/2026-09-14_10-11-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/000-Presentación/2026-09-14_10-36-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/003-Información relativa a las soluciones/2026-10-20_12-31-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/003-Información relativa a las soluciones/2026-10-13_12-38-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/001-Identificar las necesidades/2026-10-06_12-32-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/002-Selección de un servicio o producto/002-Plantear posibles soluciones/2026-10-06_12-52-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/001-Búsqueda de información/007-Valoracion de recursos humanos y materiales/2026-09-29_12-45-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/001-Búsqueda de información/006-Estrategia para dar respuesta a las demandas/2026-09-29_12-39-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/001-Búsqueda de información/003-Caracteristicas de los departamentos/2026-09-22_12-58-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/001-Búsqueda de información/001-Identificar empresas representativas/2026-09-15_12-38-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/001-Búsqueda de información/005-Evaluacion del volumen de negocio/2026-09-22_13-09-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/005-Proyecto intermodular/001-Búsqueda de información/002-Estructura de las empresas/2026-09-22_12-45-08.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/001-Estándares web. Versiones. Clasificación/2026-09-29_09-13-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/006-Validación de documentos HTML y CSS/2026-09-30_13-42-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/006-Validación de documentos HTML y CSS/2026-09-30_13-38-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-09-05_13-44-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-09-30_12-20-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/007-Lenguajes de marcas para la sindicación de contenidos/2026-10-02_10-26-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/003-Identificación de etiquetas y atributos de HTML/2026-09-29_09-31-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/002-Estructura de un documento HTML/2026-09-29_09-18-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/004-Herramientas de diseño web/2026-09-30_11-53-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/003-Estructura y sintaxis/2026-09-25_10-26-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/004-Herramientas de edición/2026-09-25_10-44-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/002-Características y ámbitos de aplicación/2026-09-23_12-43-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/001-Clasificación/2026-09-16_13-21-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/001-Clasificación/2026-09-16_12-48-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/001-Presentacion/2026-09-11_10-25-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/001-Tecnologías para la definición de documentos. Estructura y sintaxis/2026-10-07_13-49-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/002-Creación de descripciones de documentos/2026-10-14_12-27-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/003-Asociación de descripciones con documentos. Validación/2026-10-16_10-25-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/004-Herramientas de creación y validación/2026-10-19_08-53-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/004-Herramientas de creación y validación/2026-10-19_10-23-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/003-Creación y modificación de elementos/2026-10-05_09-16-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/008-cuestionario/2026-10-22_08-45-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/004-Eliminación de elementos/2026-10-05_09-22-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/006-recuperar datos/2026-10-07_12-49-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/007-interactividad/2026-10-21_11-54-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/007-interactividad/2026-10-21_12-52-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/005-Manipulación de estilos/2026-10-05_09-32-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/002-Selección y acceso a elementos/2026-10-05_08-47-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/001-Lenguajes de script de cliente. Características y sintaxis básica. Estándares/2026-10-05_08-36-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/001-Lenguajes de script de cliente. Características y sintaxis básica. Estándares/2026-10-02_10-28-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/007-Repasos/001-Repaso 1/2026-09-18_10-26-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/007-Repasos/001-Repaso 1/2026-09-18_11-00-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/007-Repasos/002-Repaso 2/2026-09-22_12-05-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/007-Repasos/003-Repaso 3/2026-09-23_08-35-55.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/007-Repasos/004-Repaso 4/2026-09-23_09-27-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/001-Estructuras estáticas y dinámicas/2026-10-07_09-14-32.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/003-Matrices (arrays) multidimensionales/2026-10-07_09-39-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/005-Cadenas de caracteres. Expresiones regulares/2026-10-08_08-40-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/002-Creación de matrices (arrays)/2026-10-07_09-33-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/006-Colecciones Listas, Conjuntos y Diccionarios/2026-10-13_09-12-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/006-Aplicación de las estructuras de almacenamiento/007-Operaciones agregadas filtrado, reducción y recolección/2026-10-13_09-29-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/000-Presentación/2026-09-14_09-47-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/001-Estructura y bloques fundamentales/2026-09-15_08-33-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/002-Variables/2026-09-15_09-01-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/005-Constantes/2026-09-16_08-40-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/004-Literales/2026-09-16_08-37-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/007-Ejercicio final de unidad/2026-09-16_08-55-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/006-Operadores y expresiones/2026-09-16_08-43-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/001-Identificación de los elementos de un programa informático/003-Tipos de datos/2026-09-15_09-22-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/009-Gestión de bases de datos/002-Establecimiento de conexiones/2026-10-06_08-48-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/009-Gestión de bases de datos/003-Almacenamiento, recuperación, actualización y eliminación de información en bases de datos/2026-10-06_08-56-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/009-Gestión de bases de datos/001-Acceso a bases de datos. Estándares. Características/2026-10-06_08-39-06.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/003-Uso de estructuras de control/002-Estructuras de repetición/2026-09-16_09-43-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/003-Uso de estructuras de control/001-Estructuras de selección/2026-09-16_09-16-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/003-Uso de estructuras de control/005-Aserciones/2026-09-21_08-47-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/003-Uso de estructuras de control/003-Estructuras de salto/2026-09-16_09-54-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/003-Uso de estructuras de control/006-Prueba, depuración y documentación de la aplicación/2026-09-21_08-54-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/003-Uso de estructuras de control/004-Control de excepciones/2026-09-21_08-37-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/003-Uso de estructuras de control/007-Ejercicio/2026-09-21_09-22-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/002-Utilización de objetos/001-Características de los objetos/2026-09-18_10-46-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/009-Creación de controladores de eventos/2026-10-01_09-21-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/009-Creación de controladores de eventos/2026-10-01_08-37-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/007-Interfaces gráficas/2026-09-30_09-26-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/007-Interfaces gráficas/2026-09-30_09-11-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/006-Entrada desde teclado. Salida a pantalla. Formatos de visualización/2026-09-30_08-56-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/003-Apertura y cierre de ficheros. Modos de acceso. Escritura y lectura de información en ficheros/2026-09-28_09-36-27.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/004-Utilización de los sistemas de ficheros/2026-09-30_08-40-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/001-Flujos. Tipos bytes y caracteres. Clases relacionadas/2026-09-28_09-20-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/002-Ficheros de datos. Registros/2026-09-28_09-29-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/005-Lectura y escritura de información/008-Concepto de evento/2026-09-30_09-34-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/004-Desarrollo de clases/005-Creación de constructores/2026-09-22_09-19-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/004-Desarrollo de clases/004-Creación de métodos/2026-09-22_08-58-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/004-Desarrollo de clases/007-Utilización de clases heredadas/2026-09-28_08-36-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/004-Desarrollo de clases/003-Creación de propiedades/2026-09-22_08-53-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/004-Desarrollo de clases/006-Utilización de clases y objetos/2026-09-28_08-51-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/004-Desarrollo de clases/002-Estructura y miembros de una clase. Visibilidad/2026-09-22_08-46-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/004-Desarrollo de clases/001-Concepto de clase/2026-09-22_08-38-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/010-Flask/003-Camino de ida/2026-10-15_08-43-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/010-Flask/003-Camino de ida/2026-10-15_09-40-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/010-Flask/001-Primer contacto/2026-10-06_09-26-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/010-Flask/001-Primer contacto/2026-10-06_09-56-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/010-Flask/004-endpoints/2026-10-20_08-38-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/010-Flask/005-Repasamos camino de ida/2026-10-21_08-44-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/004-Programación/010-Flask/002-Plantillas/2026-10-14_08-37-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/000-Presentación/002-Segundo día/2026-09-10_08-37-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/000-Presentación/001-Primer día/2026-09-09_09-12-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/000-Presentación/003-Tercer día/2026-09-14_08-37-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/000-Presentación/004-Como entregar los ejercicios de final de unidad/2026-09-22_09-27-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/000-Presentación/2026-09-14_10-11-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/000-Presentación/2026-09-14_10-36-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/002-Selección de un servicio o producto/003-Información relativa a las soluciones/2026-10-20_12-31-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/002-Selección de un servicio o producto/003-Información relativa a las soluciones/2026-10-13_12-38-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/002-Selección de un servicio o producto/001-Identificar las necesidades/2026-10-06_12-32-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/002-Selección de un servicio o producto/002-Plantear posibles soluciones/2026-10-06_12-52-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/001-Búsqueda de información/007-Valoracion de recursos humanos y materiales/2026-09-29_12-45-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/001-Búsqueda de información/006-Estrategia para dar respuesta a las demandas/2026-09-29_12-39-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/001-Búsqueda de información/003-Caracteristicas de los departamentos/2026-09-22_12-58-52.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/001-Búsqueda de información/001-Identificar empresas representativas/2026-09-15_12-38-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/001-Búsqueda de información/005-Evaluacion del volumen de negocio/2026-09-22_13-09-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/005-Proyecto intermodular/001-Búsqueda de información/002-Estructura de las empresas/2026-09-22_12-45-08.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/001-Estándares web. Versiones. Clasificación/2026-09-29_09-13-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/006-Validación de documentos HTML y CSS/2026-09-30_13-42-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/006-Validación de documentos HTML y CSS/2026-09-30_13-38-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-09-05_13-44-50.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/005-Hojas de estilo (CSS)/2026-09-30_12-20-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/007-Lenguajes de marcas para la sindicación de contenidos/2026-10-02_10-26-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/003-Identificación de etiquetas y atributos de HTML/2026-09-29_09-31-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/002-Estructura de un documento HTML/2026-09-29_09-18-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/002-Utilización de lenguajes de marcas en entornos web/004-Herramientas de diseño web/2026-09-30_11-53-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/003-Estructura y sintaxis/2026-09-25_10-26-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/004-Herramientas de edición/2026-09-25_10-44-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/002-Características y ámbitos de aplicación/2026-09-23_12-43-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/001-Clasificación/2026-09-16_13-21-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/001-Reconocimiento de las características de lenguajes de marcas/001-Clasificación/2026-09-16_12-48-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/001-Presentacion/2026-09-11_10-25-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/001-Tecnologías para la definición de documentos. Estructura y sintaxis/2026-10-07_13-49-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/002-Creación de descripciones de documentos/2026-10-14_12-27-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/003-Asociación de descripciones con documentos. Validación/2026-10-16_10-25-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/004-Herramientas de creación y validación/2026-10-19_08-53-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/004-Definición de esquemas y vocabularios en lenguajes de marcas/004-Herramientas de creación y validación/2026-10-19_10-23-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/003-Creación y modificación de elementos/2026-10-05_09-16-47.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/008-cuestionario/2026-10-22_08-45-04.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/004-Eliminación de elementos/2026-10-05_09-22-45.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/006-recuperar datos/2026-10-07_12-49-56.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/007-interactividad/2026-10-21_11-54-58.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/007-interactividad/2026-10-21_12-52-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/005-Manipulación de estilos/2026-10-05_09-32-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/002-Selección y acceso a elementos/2026-10-05_08-47-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/001-Lenguajes de script de cliente. Características y sintaxis básica. Estándares/2026-10-05_08-36-46.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/003-Lenguajes de marcas y sistemas de gestión de información/003-Manipulación de documentos Web/001-Lenguajes de script de cliente. Características y sintaxis básica. Estándares/2026-10-02_10-28-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/007-Repasos/001-Repaso 1/2026-09-18_10-26-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/007-Repasos/001-Repaso 1/2026-09-18_11-00-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/007-Repasos/002-Repaso 2/2026-09-22_12-05-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/007-Repasos/003-Repaso 3/2026-09-23_08-35-55.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/007-Repasos/004-Repaso 4/2026-09-23_09-27-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/006-Aplicación de las estructuras de almacenamiento/001-Estructuras estáticas y dinámicas/2026-10-07_09-14-32.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/006-Aplicación de las estructuras de almacenamiento/003-Matrices (arrays) multidimensionales/2026-10-07_09-39-38.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/006-Aplicación de las estructuras de almacenamiento/005-Cadenas de caracteres. Expresiones regulares/2026-10-08_08-40-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/006-Aplicación de las estructuras de almacenamiento/002-Creación de matrices (arrays)/2026-10-07_09-33-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/006-Aplicación de las estructuras de almacenamiento/006-Colecciones Listas, Conjuntos y Diccionarios/2026-10-13_09-12-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/006-Aplicación de las estructuras de almacenamiento/007-Operaciones agregadas filtrado, reducción y recolección/2026-10-13_09-29-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/000-Presentación/2026-09-14_09-47-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/001-Identificación de los elementos de un programa informático/001-Estructura y bloques fundamentales/2026-09-15_08-33-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/001-Identificación de los elementos de un programa informático/002-Variables/2026-09-15_09-01-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/001-Identificación de los elementos de un programa informático/005-Constantes/2026-09-16_08-40-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/001-Identificación de los elementos de un programa informático/004-Literales/2026-09-16_08-37-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/001-Identificación de los elementos de un programa informático/007-Ejercicio final de unidad/2026-09-16_08-55-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/001-Identificación de los elementos de un programa informático/006-Operadores y expresiones/2026-09-16_08-43-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/001-Identificación de los elementos de un programa informático/003-Tipos de datos/2026-09-15_09-22-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/009-Gestión de bases de datos/002-Establecimiento de conexiones/2026-10-06_08-48-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/009-Gestión de bases de datos/003-Almacenamiento, recuperación, actualización y eliminación de información en bases de datos/2026-10-06_08-56-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/009-Gestión de bases de datos/001-Acceso a bases de datos. Estándares. Características/2026-10-06_08-39-06.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/003-Uso de estructuras de control/002-Estructuras de repetición/2026-09-16_09-43-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/003-Uso de estructuras de control/001-Estructuras de selección/2026-09-16_09-16-35.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/003-Uso de estructuras de control/005-Aserciones/2026-09-21_08-47-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/003-Uso de estructuras de control/003-Estructuras de salto/2026-09-16_09-54-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/003-Uso de estructuras de control/006-Prueba, depuración y documentación de la aplicación/2026-09-21_08-54-26.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/003-Uso de estructuras de control/004-Control de excepciones/2026-09-21_08-37-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/003-Uso de estructuras de control/007-Ejercicio/2026-09-21_09-22-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/002-Utilización de objetos/001-Características de los objetos/2026-09-18_10-46-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/009-Creación de controladores de eventos/2026-10-01_09-21-33.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/009-Creación de controladores de eventos/2026-10-01_08-37-01.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/007-Interfaces gráficas/2026-09-30_09-26-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/007-Interfaces gráficas/2026-09-30_09-11-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/006-Entrada desde teclado. Salida a pantalla. Formatos de visualización/2026-09-30_08-56-11.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/003-Apertura y cierre de ficheros. Modos de acceso. Escritura y lectura de información en ficheros/2026-09-28_09-36-27.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/004-Utilización de los sistemas de ficheros/2026-09-30_08-40-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/001-Flujos. Tipos bytes y caracteres. Clases relacionadas/2026-09-28_09-20-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/002-Ficheros de datos. Registros/2026-09-28_09-29-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/005-Lectura y escritura de información/008-Concepto de evento/2026-09-30_09-34-40.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/004-Desarrollo de clases/005-Creación de constructores/2026-09-22_09-19-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/004-Desarrollo de clases/004-Creación de métodos/2026-09-22_08-58-44.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/004-Desarrollo de clases/007-Utilización de clases heredadas/2026-09-28_08-36-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/004-Desarrollo de clases/003-Creación de propiedades/2026-09-22_08-53-54.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/004-Desarrollo de clases/006-Utilización de clases y objetos/2026-09-28_08-51-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/004-Desarrollo de clases/002-Estructura y miembros de una clase. Visibilidad/2026-09-22_08-46-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/004-Desarrollo de clases/001-Concepto de clase/2026-09-22_08-38-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/010-Flask/003-Camino de ida/2026-10-15_08-43-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/010-Flask/003-Camino de ida/2026-10-15_09-40-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/010-Flask/001-Primer contacto/2026-10-06_09-26-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/010-Flask/001-Primer contacto/2026-10-06_09-56-24.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/010-Flask/004-endpoints/2026-10-20_08-38-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/010-Flask/005-Repasamos camino de ida/2026-10-21_08-44-25.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/004-Programación/010-Flask/002-Plantillas/2026-10-14_08-37-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/000-Presentación/2026-09-15_10-56-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/000-Presentación/2026-09-14_09-57-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/000-Presentación/001-Repositorio/2026-09-15_11-48-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/000-Presentación/001-Repositorio/2026-09-15_10-56-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/005-Programación de bases de datos/001-Introducción. Lenguaje de programación/2026-10-13_11-50-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/005-Programación de bases de datos/001-Introducción. Lenguaje de programación/2026-10-13_10-28-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/005-Programación de bases de datos/002-Variables del sistema y variables de usuario/2026-10-14_10-34-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/008-Ejercicios/002-Finalizacion de la web personal/2026-10-21_09-54-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/008-Ejercicios/001-Web personal/2026-10-20_10-22-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/008-Ejercicios/001-Web personal/2026-10-20_11-47-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/001-Almacenamiento de la información/003-Sistemas gestores de base de datos Funciones, componentes y tipos/2026-09-15_12-01-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/001-Almacenamiento de la información/003-Sistemas gestores de base de datos Funciones, componentes y tipos/2026-09-15_10-43-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/001-Almacenamiento de la información/001-Ficheros (planos, indexados, acceso directo, entre otros)/2026-09-15_10-26-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/001-Almacenamiento de la información/002-Bases de datos. Conceptos, usos y tipos según el modelo de datos, la ubicación de la información/2026-09-15_10-37-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/005-Restricciones de validación/2026-09-21_10-21-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/010-Usuarios. Privilegios/2026-09-23_10-41-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/010-Usuarios. Privilegios/2026-09-23_10-40-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/002-Terminología del modelo relacional/2026-09-16_10-37-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/001-Modelo de datos/2026-09-16_10-32-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/009-Vistas/2026-09-22_10-21-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/009-Vistas/2026-09-22_11-51-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/004-Claves primarias/2026-09-16_11-57-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/008-Claves ajenas/2026-09-21_10-36-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/013-Resumen/2026-09-23_11-51-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/002-Bases de datos relacionales/003-Tipos de datos/2026-09-16_11-48-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/009-Optimización de consultas/2026-09-29_12-05-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/008-Combinación de múltiples selecciones/2026-09-29_11-54-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/011-Conexion intermodular/2026-10-06_10-24-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/011-Conexion intermodular/2026-10-06_11-56-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/010-Ejercicio final de unidad/2026-09-29_12-13-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/002-Operadores. Operadores de comparación. Operadores lógicos/2026-09-28_10-37-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/007-Subconsultas/2026-09-29_11-50-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/005-Composiciones internas/2026-09-29_10-32-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/003-Consultas de resumen/2026-09-28_10-48-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/001-Proyección, selección y ordenación de registros/2026-09-28_10-17-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/003-Realización de consultas/004-Agrupamiento de registros/2026-09-28_10-53-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/004-Tratamiento de datos/004-Transacciones/2026-10-07_10-56-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/004-Tratamiento de datos/003-Subconsultas y composiciones en órdenes de edición/2026-10-07_10-30-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/004-Tratamiento de datos/002-Integridad referencial/2026-10-05_10-17-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/004-Tratamiento de datos/001-Inserción, borrado y modificación de registros/2026-09-30_10-14-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/.translations/pt/001-Bases de datos/004-Tratamiento de datos/005-Políticas de bloqueo. Concurrencia/2026-10-13_10-26-32.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/000-Presentación/2026-09-15_10-56-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/000-Presentación/2026-09-14_09-57-14.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/000-Presentación/001-Repositorio/2026-09-15_11-48-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/000-Presentación/001-Repositorio/2026-09-15_10-56-41.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/005-Programación de bases de datos/001-Introducción. Lenguaje de programación/2026-10-13_11-50-07.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/005-Programación de bases de datos/001-Introducción. Lenguaje de programación/2026-10-13_10-28-30.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/005-Programación de bases de datos/002-Variables del sistema y variables de usuario/2026-10-14_10-34-28.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/008-Ejercicios/002-Finalizacion de la web personal/2026-10-21_09-54-09.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/008-Ejercicios/001-Web personal/2026-10-20_10-22-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/008-Ejercicios/001-Web personal/2026-10-20_11-47-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/001-Almacenamiento de la información/003-Sistemas gestores de base de datos Funciones, componentes y tipos/2026-09-15_12-01-10.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/001-Almacenamiento de la información/003-Sistemas gestores de base de datos Funciones, componentes y tipos/2026-09-15_10-43-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/001-Almacenamiento de la información/001-Ficheros (planos, indexados, acceso directo, entre otros)/2026-09-15_10-26-57.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/001-Almacenamiento de la información/002-Bases de datos. Conceptos, usos y tipos según el modelo de datos, la ubicación de la información/2026-09-15_10-37-05.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/005-Restricciones de validación/2026-09-21_10-21-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/010-Usuarios. Privilegios/2026-09-23_10-41-20.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/010-Usuarios. Privilegios/2026-09-23_10-40-02.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/002-Terminología del modelo relacional/2026-09-16_10-37-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/001-Modelo de datos/2026-09-16_10-32-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/009-Vistas/2026-09-22_10-21-34.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/009-Vistas/2026-09-22_11-51-31.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/004-Claves primarias/2026-09-16_11-57-17.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/008-Claves ajenas/2026-09-21_10-36-00.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/013-Resumen/2026-09-23_11-51-19.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/002-Bases de datos relacionales/003-Tipos de datos/2026-09-16_11-48-23.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/009-Optimización de consultas/2026-09-29_12-05-43.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/008-Combinación de múltiples selecciones/2026-09-29_11-54-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/011-Conexion intermodular/2026-10-06_10-24-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/011-Conexion intermodular/2026-10-06_11-56-13.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/010-Ejercicio final de unidad/2026-09-29_12-13-59.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/002-Operadores. Operadores de comparación. Operadores lógicos/2026-09-28_10-37-03.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/007-Subconsultas/2026-09-29_11-50-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/005-Composiciones internas/2026-09-29_10-32-18.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/003-Consultas de resumen/2026-09-28_10-48-37.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/001-Proyección, selección y ordenación de registros/2026-09-28_10-17-42.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/003-Realización de consultas/004-Agrupamiento de registros/2026-09-28_10-53-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/004-Tratamiento de datos/004-Transacciones/2026-10-07_10-56-12.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/004-Tratamiento de datos/003-Subconsultas y composiciones en órdenes de edición/2026-10-07_10-30-49.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/004-Tratamiento de datos/002-Integridad referencial/2026-10-05_10-17-29.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/004-Tratamiento de datos/001-Inserción, borrado y modificación de registros/2026-09-30_10-14-21.md
+/var/www/html/jocarsa-formacion/recursos/apuntes/ceac2627dam1/001-Bases de datos/004-Tratamiento de datos/005-Políticas de bloqueo. Concurrencia/2026-10-13_10-26-32.md
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/003-H
+erramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos$ 

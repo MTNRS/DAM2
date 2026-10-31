@@ -1,0 +1,29 @@
+/* Configuración declarativa de vistas: no altera la paleta ni las fichas de jocarsa-iu */
+.erp-toolbar>div:last-child{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.erp-toolbar select{height:34px;max-width:190px;background:#fff;border:1px solid #8db5c9;padding:4px 8px}
+.erp-table th[data-sort]{cursor:pointer;user-select:none}
+.erp-table th[data-sort]:hover{background:#dcecf4}
+.erp-actions .erp-star{font-size:20px;line-height:1;background:transparent;color:#627985;border:0;padding:2px 5px}
+.erp-actions .erp-star.is-favorite{color:#c88e16}
+.erp-table tbody tr.erp-row-warning td{background:#fff1d4}
+.erp-table tbody tr.erp-row-danger td{background:#fbe3e3}
+.erp-table tbody tr.erp-row-success td{background:#e0f4e8}
+.erp-table tbody tr.erp-row-info td{background:#e2efff}
+.erp-config-overlay{position:fixed;inset:0;z-index:20000;background:#0b1b27a8;display:flex;justify-content:flex-end}
+.erp-config-panel{background:#e4f0f7;color:#102e40;width:min(640px,100%);height:100%;display:flex;flex-direction:column;box-shadow:-10px 0 35px #001a2a44}
+.erp-config-header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:#245a77;color:white}
+.erp-config-header h2{margin:0;font-size:21px}.erp-config-header button{font-size:25px}
+.erp-config-content{overflow:auto;padding:22px;flex:1}.erp-config-content h3{margin:24px 0 12px;font-size:16px}
+.erp-config-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:5px}
+.erp-config-col{display:flex;align-items:center;gap:9px;background:white;padding:7px 10px}
+.erp-config-col span{flex:1}.erp-config-col button{padding:4px 9px}
+.erp-config-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.erp-config-field{display:flex;flex-direction:column;gap:5px;min-width:0}
+.erp-config-field input,.erp-config-field select,.erp-config-rule input,.erp-config-rule select{width:100%;min-width:0;background:white;border:1px solid #a3b8c4;padding:8px}
+.erp-config-rule{display:grid;grid-template-columns:1fr 1fr 1fr 1fr auto;gap:6px;margin-bottom:7px}
+.erp-config-footer{padding:15px 20px;background:#c9e0ed;display:flex;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+.erp-config-panel button{cursor:pointer;border:0;background:#2d7397;color:white;padding:8px 12px;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%)}
+.erp-config-panel button:hover{filter:brightness(1.12)}
+@media(max-width:650px){.erp-config-grid{grid-template-columns:1fr}.erp-config-rule{grid-template-columns:1fr 1fr}.erp-config-panel{width:100%}}
+
+.erp-config-action-list{display:grid;gap:12px;margin:10px 0}.erp-config-action{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:12px;background:#fff;border-left:3px solid #8b4513}.erp-config-action>.erp-config-field{min-width:0}.erp-config-action input,.erp-config-action select{width:100%;box-sizing:border-box}.erp-config-action>button{justify-self:start}.erp-bulk-toolbar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:8px 0;padding:10px;background:#f2e7dd;color:#43250f}.erp-bulk-toolbar button{background:#8b4513;color:white;border:0;padding:8px 12px;cursor:pointer}

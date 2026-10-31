@@ -1,0 +1,33 @@
+Datetime: 2026-10-22T10:59:55.083Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos
+Command: python3 015-superentrenamiento.py
+
+Result:
+Dimensiones: 256
+Palabras: 22148
+Ya procesadas: 0
+Pendientes: 22148
+
+========================================
+INICIANDO GENERACIÓN DE EMBEDDINGS
+========================================
+
+[░░░░░░░░░░░░░░░░░░░░░░░░░]   0.00% | 1/22148 | ahora                     |   32.4s |  1.85 pal/min | ETA 8d 07h 13m | OK
+[░░░░░░░░░░░░░░░░░░░░░░░░░]   0.01% | 2/22148 | voy                       |   28.1s |  1.98 pal/min | ETA 7d 18h 07m | OK
+[░░░░░░░░░░░░░░░░░░░░░░░░░]   0.01% | 3/22148 | decir                     |   28.4s |  2.02 pal/min | ETA 7d 14h 19m | OK
+^C
+
+Interrumpido por el usuario.
+Los vectores generados están guardados.
+
+========================================
+RESUMEN
+========================================
+Palabras del vocabulario: 22148
+Ya existentes al comenzar: 0
+Nuevas guardadas: 3
+Errores en esta ejecución: 0
+Tiempo total: 00h 01m 53s
+Base de datos: embeddings.db
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a 
+datos/003-Herramientas de mapeo objeto relacional (ORM)/008-Carga, almacenamiento y modificación de objetos$ 

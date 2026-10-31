@@ -1,0 +1,46 @@
+{
+    "ciudad": "Zaragoza",
+    "email": "curriculum_011@example.com",
+    "especialidades": [
+        "Análisis de datos",
+        "Administración de sistemas",
+        "Desarrollo web",
+        "Programación"
+    ],
+    "experiencia": "20 años",
+    "formacion": [
+        "Grado en Desarrollo de Software",
+        "Máster en Ciberseguridad",
+        "Grado en Matemáticas"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Portugués",
+        "Español"
+    ],
+    "lenguajes": [
+        "Java",
+        "C++",
+        "JavaScript",
+        "HTML",
+        "SQL",
+        "Python"
+    ],
+    "marca": "Perfil 011",
+    "nacimiento": "1985-11-04",
+    "nombre": "Miguel Fernández Torres",
+    "profesion": "Especialista en ciberseguridad",
+    "tecnologias": [
+        "Linux",
+        "Docker",
+        "SQLite",
+        "PostgreSQL",
+        "Git",
+        "MySQL"
+    ],
+    "trabajos": [
+        "Digital Solutions - Analista de datos",
+        "TechNova - Ingeniero de IA"
+    ],
+    "web": "https://example.com/curriculum_011"
+}

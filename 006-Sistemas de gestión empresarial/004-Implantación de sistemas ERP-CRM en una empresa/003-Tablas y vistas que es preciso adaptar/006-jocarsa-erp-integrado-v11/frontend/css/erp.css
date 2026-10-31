@@ -1,0 +1,59 @@
+/* ERP: adaptador visual; la fuente de diseño es jocarsa-iu. */
+.erp-menu-item{display:flex!important;align-items:center;gap:9px;min-height:40px;box-sizing:border-box;cursor:pointer}
+#navegacion .erp-menu-item{background:var(--color2);color:inherit}
+#entidades .erp-menu-item{background:var(--color3);color:inherit}
+#navegacion .erp-menu-item.activo{background:var(--color3);color:var(--color0)}
+#entidades .erp-menu-item.activo{background:var(--color3);color:var(--color0);filter:brightness(1.08)}
+#navegacion .contenido-columna>.erp-menu-item.activo,#entidades .contenido-columna>.erp-menu-item.activo{width:calc(100% + (var(--relleno) * 2))!important;position:relative;z-index:550;clip-path:polygon(0 0,calc(100% - var(--chaflan)) 0,100% var(--chaflan),100% 100%,0 100%)}
+#navegacion,#entidades{overflow:visible!important}
+#navegacion .contenido-columna,#entidades .contenido-columna{overflow-y:auto;overflow-x:clip;scrollbar-width:thin}
+#navegacion .contenido-columna>.erp-menu-item.activo,#entidades .contenido-columna>.erp-menu-item.activo{margin-right:calc(-2 * var(--relleno))}
+main>.separador{touch-action:none;cursor:col-resize;z-index:4}
+#navegacion{z-index:6}#entidades{z-index:7}#escenario{z-index:1}
+#navegacion.compacto .erp-menu-item,#entidades.compacto .erp-menu-item{width:40px!important;min-width:40px;max-width:40px;padding:6px}
+#navegacion.compacto .erp-menu-item.activo,#entidades.compacto .erp-menu-item.activo{transform:translateX(16px)!important}
+.erp-screen{padding:24px;min-width:0;width:100%;box-sizing:border-box;overflow:auto;background:var(--color2);min-height:100%}
+.erp-toolbar{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:20px;flex-wrap:wrap}
+.erp-toolbar h2{margin:4px 0}.erp-toolbar small{text-transform:uppercase;color:var(--color0)}
+.erp-toolbar button,.erp-actions button{border:0;background:var(--color);color:white;padding:10px 14px;cursor:pointer;clip-path:polygon(0 0,calc(100% - 9px) 0,100% 9px,100% 100%,0 100%)}
+.erp-toolbar button:hover,.erp-actions button:hover{background:var(--color0)}
+.erp-table-wrap{max-width:100%;overflow:auto;background:white}.erp-table{border-collapse:collapse;width:100%;font-size:14px;color:#172033}.erp-table th,.erp-table td{padding:12px;border-bottom:1px solid #ddd;text-align:left;white-space:nowrap}.erp-table th{background:#f2f2f2}.erp-actions{display:flex;gap:5px}.erp-actions button{padding:6px 9px;font-size:12px}.erp-empty{padding:40px}
+.erp-form{margin-top:0}.erp-form .ju-button-row{display:flex;gap:10px;flex-wrap:wrap}.erp-form label{min-width:0}
+.erp-form .ju-btn{cursor:pointer}
+@media(max-width:800px){.erp-screen{padding:12px}.erp-form{grid-template-columns:1fr}}
+
+/* V5: continuidad cromática original de jocarsa-iu.
+   La selección adopta EXACTAMENTE el color de la columna de destino. */
+#navegacion .contenido-columna > .erp-menu-item.activo {
+  background:var(--color2)!important;
+  color:var(--texto-nav)!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+#entidades .contenido-columna > .erp-menu-item.activo {
+  background:var(--color3)!important;
+  color:#111!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+/* El escenario debe ser el siguiente escalón de la paleta, como en la IU original. */
+#escenario, #escenario .erp-screen {background:var(--color3)!important}
+/* Sin recortar el extremo que atraviesa el separador. */
+#navegacion .contenido-columna, #entidades .contenido-columna {
+  overflow:visible!important;
+  padding-right:0!important;
+}
+#navegacion .contenido-columna > .erp-menu-item.activo,
+#entidades .contenido-columna > .erp-menu-item.activo {
+  width:calc(100% + var(--relleno) * 2)!important;
+  max-width:none!important;
+  margin-right:calc(-2 * var(--relleno))!important;
+  z-index:550!important;
+  clip-path:polygon(0 0,calc(100% - var(--chaflan)) 0,100% var(--chaflan),100% 100%,0 100%);
+}
+/* Las iniciales recuperan las fichas de color originales. */
+#navegacion .erp-menu-item .ficha,#entidades .erp-menu-item .ficha {
+  background:var(--erp-ficha-color,#b68b29)!important;
+  color:#fff!important;
+  width:28px;height:28px;
+}

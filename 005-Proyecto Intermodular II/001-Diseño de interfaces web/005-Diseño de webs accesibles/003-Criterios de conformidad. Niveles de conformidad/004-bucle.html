@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>Reconocimiento continuo</title>
+  </head>
+  <body>
+    <button id="boton" onclick="escuchar()">Escuchar</button>
+    <div id="contenedor"></div>
+
+    <script>
+      let reconocimiento = new webkitSpeechRecognition();
+      let escuchando = false;
+
+      reconocimiento.lang = "es-ES";
+      reconocimiento.continuous = true;
+      reconocimiento.interimResults = false;
+
+      reconocimiento.onresult = function(evento){
+        let texto = "";
+
+        for(let i = evento.resultIndex; i < evento.results.length; i++){
+          if(evento.results[i].isFinal){
+            texto += evento.results[i][0].transcript + " ";
+          }
+        }
+
+        document.querySelector("#contenedor").textContent += texto;
+      };
+
+      reconocimiento.onend = function(){
+        if(escuchando){
+          reconocimiento.start();
+        }
+      };
+
+      reconocimiento.onerror = function(evento){
+        console.log("Error:", evento.error);
+
+        if(evento.error == "not-allowed" || evento.error == "service-not-allowed"){
+          escuchando = false;
+          document.querySelector("#boton").textContent = "Escuchar";
+        }
+      };
+
+      function escuchar(){
+        escuchando = !escuchando;
+
+        if(escuchando){
+          document.querySelector("#boton").textContent = "Detener";
+          reconocimiento.start();
+        }else{
+          document.querySelector("#boton").textContent = "Escuchar";
+          reconocimiento.stop();
+        }
+      }
+    </script>
+  </body>
+</html>

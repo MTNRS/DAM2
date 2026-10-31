@@ -1,0 +1,45 @@
+{
+    "ciudad": "Bilbao",
+    "email": "curriculum_064@example.com",
+    "especialidades": [
+        "Automatización",
+        "Ciberseguridad",
+        "Bases de datos",
+        "Análisis de datos"
+    ],
+    "experiencia": "19 años",
+    "formacion": [
+        "Máster en Inteligencia Artificial",
+        "Máster en Ciberseguridad"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Alemán",
+        "Francés"
+    ],
+    "lenguajes": [
+        "TypeScript",
+        "JavaScript",
+        "HTML"
+    ],
+    "marca": "Perfil 064",
+    "nacimiento": "1983-01-05",
+    "nombre": "Sergio Castro Molina",
+    "profesion": "Administrador de sistemas",
+    "tecnologias": [
+        "Docker",
+        "Linux",
+        "Flask",
+        "Ollama",
+        "PostgreSQL",
+        "AWS",
+        "SQLite"
+    ],
+    "trabajos": [
+        "CodeFactory - Administrador de sistemas",
+        "InnovaSoft - Especialista en ciberseguridad",
+        "DataLab - Diseñador web",
+        "Digital Solutions - Diseñador web"
+    ],
+    "web": "https://example.com/curriculum_064"
+}

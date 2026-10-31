@@ -1,0 +1,7 @@
+Datetime: 2026-10-19T14:55:30.333Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos
+Command: g++ 011-desenfoque\ openmp.cpp -ljpeg -fopenmp
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programa
+ción de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos$ 

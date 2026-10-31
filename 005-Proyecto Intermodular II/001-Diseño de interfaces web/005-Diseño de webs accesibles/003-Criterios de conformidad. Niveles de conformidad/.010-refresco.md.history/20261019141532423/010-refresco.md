@@ -1,0 +1,1 @@
+https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141

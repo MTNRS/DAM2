@@ -1,0 +1,8 @@
+Datetime: 2026-10-22T11:26:11.791Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/001-jocarsabbdd-unificado
+Command: make
+
+Result:
+make: No se hace nada para 'all'.
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a dato
+s/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/001-jocarsabbdd-unificado$ 

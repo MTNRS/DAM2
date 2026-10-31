@@ -1,0 +1,44 @@
+{
+    "ciudad": "Bilbao",
+    "email": "curriculum_054@example.com",
+    "especialidades": [
+        "Desarrollo web",
+        "Bases de datos",
+        "Inteligencia artificial"
+    ],
+    "experiencia": "20 años",
+    "formacion": [
+        "Grado en Matemáticas",
+        "Técnico Superior en DAW",
+        "Técnico Superior en DAM"
+    ],
+    "idiomas": [
+        "Italiano",
+        "Francés",
+        "Alemán"
+    ],
+    "lenguajes": [
+        "Python",
+        "HTML",
+        "Go",
+        "C++",
+        "TypeScript"
+    ],
+    "marca": "Perfil 054",
+    "nacimiento": "1992-01-02",
+    "nombre": "Lucía Rubio Herrera",
+    "profesion": "Desarrollador full-stack",
+    "tecnologias": [
+        "Flask",
+        "React",
+        "Moodle",
+        "Apache"
+    ],
+    "trabajos": [
+        "TechNova - Analista de datos",
+        "Digital Solutions - Diseñador web",
+        "Sistemas Levante - Ingeniero de IA",
+        "EducaDigital - Especialista en ciberseguridad"
+    ],
+    "web": "https://example.com/curriculum_054"
+}

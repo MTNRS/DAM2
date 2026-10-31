@@ -1,0 +1,8 @@
+Datetime: 2026-10-22T11:29:00.849Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/001-jocarsabbdd-unificado
+Command: ./in
+
+Result:
+bash: ./in: No existe el archivo o el directorio
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a dato
+s/003-Herramientas de mapeo objeto relacional (ORM)/010-Gestión de transacciones/001-jocarsabbdd-unificado$ 

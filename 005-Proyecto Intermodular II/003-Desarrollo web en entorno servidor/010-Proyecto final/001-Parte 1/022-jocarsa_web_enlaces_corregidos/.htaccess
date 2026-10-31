@@ -1,0 +1,9 @@
+DirectoryIndex index.php
+Options -Indexes
+<FilesMatch "^(config|sync)\.php$">
+ Require all denied
+</FilesMatch>
+RewriteEngine On
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^(blog|productos)/([a-z0-9-]+)/?$ $1.php?slug=$2 [L,QSA,B]
+RewriteRule ^(blog|productos)/?$ $1.php [L]

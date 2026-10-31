@@ -1,0 +1,42 @@
+{
+    "ciudad": "Madrid",
+    "email": "curriculum_060@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Administración de sistemas",
+        "Automatización"
+    ],
+    "experiencia": "5 años",
+    "formacion": [
+        "Técnico Superior en DAM",
+        "Grado en Desarrollo de Software"
+    ],
+    "idiomas": [
+        "Inglés",
+        "Francés",
+        "Alemán"
+    ],
+    "lenguajes": [
+        "SQL",
+        "C++",
+        "Python",
+        "JavaScript",
+        "Go"
+    ],
+    "marca": "Perfil 060",
+    "nacimiento": "1990-02-13",
+    "nombre": "Daniel Castro Molina",
+    "profesion": "Analista de datos",
+    "tecnologias": [
+        "AWS",
+        "SQLite",
+        "Linux",
+        "Apache",
+        "Docker"
+    ],
+    "trabajos": [
+        "CloudWorks - Administrador de sistemas",
+        "EducaDigital - Desarrollador full-stack"
+    ],
+    "web": "https://example.com/curriculum_060"
+}

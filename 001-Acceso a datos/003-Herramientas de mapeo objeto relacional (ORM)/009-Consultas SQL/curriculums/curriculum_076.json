@@ -1,0 +1,39 @@
+{
+  "nombre": "Paula Castro Molina",
+  "marca": "Perfil 076",
+  "nacimiento": "1997-08-08",
+  "ciudad": "Málaga",
+  "email": "curriculum_076@example.com",
+  "web": "https://example.com/curriculum_076",
+  "profesion": "Analista de datos",
+  "experiencia": "6 años",
+  "formacion": [
+    "Grado en Matemáticas",
+    "Técnico Superior en DAW",
+    "Máster en Ciberseguridad"
+  ],
+  "trabajos": [
+    "EducaDigital - Especialista en ciberseguridad",
+    "Sistemas Levante - Especialista en ciberseguridad"
+  ],
+  "lenguajes": [
+    "Java",
+    "Go",
+    "C++"
+  ],
+  "tecnologias": [
+    "PostgreSQL",
+    "Apache",
+    "React"
+  ],
+  "idiomas": [
+    "Alemán",
+    "Portugués"
+  ],
+  "especialidades": [
+    "Ciberseguridad",
+    "Bases de datos",
+    "Desarrollo web",
+    "Administración de sistemas"
+  ]
+}

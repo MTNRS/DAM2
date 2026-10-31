@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "numero": "01",
+      "titulo": "Escuchamos",
+      "descripcion": "Analizamos procesos, dificultades y oportunidades."
+    },
+    {
+      "id": 2,
+      "numero": "02",
+      "titulo": "Diseñamos",
+      "descripcion": "Proponemos una solución clara, usable y escalable."
+    },
+    {
+      "id": 3,
+      "numero": "03",
+      "titulo": "Construimos",
+      "descripcion": "Desarrollamos e integramos la herramienta."
+    },
+    {
+      "id": 4,
+      "numero": "04",
+      "titulo": "Evolucionamos",
+      "descripcion": "Medimos, mejoramos y acompañamos."
+    }
+  ]
+}

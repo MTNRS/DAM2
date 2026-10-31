@@ -1,0 +1,32 @@
+(()=>{'use strict';
+const KEY='ju-a11y-v7-'; const root=document.documentElement;
+const read=(k,d)=>{try{return localStorage.getItem(KEY+k)??d}catch{return d}};
+const save=(k,v)=>{try{localStorage.setItem(KEY+k,v)}catch{}};
+const actionSelector='a,button,input:not([type=hidden]),select,textarea,summary,[role=button],[role=link],[role=tab],[role=menuitem],[role=option],[role=switch],[tabindex]:not([tabindex="-1"]),[onclick]';
+const human=s=>String(s||'').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim();
+function describe(el){const explicit=el.getAttribute('title')||el.getAttribute('data-help');if(explicit)return explicit;
+ const aria=el.getAttribute('aria-label');const labelled=el.labels?.[0]?.textContent;const txt=human(aria||labelled||el.innerText||el.textContent||el.getAttribute('placeholder')||el.getAttribute('name')||el.getAttribute('alt')||'');
+ if(el.matches('input[type=checkbox],[role=switch]'))return 'Activar o desactivar '+(txt||'esta opción')+'. Pulsa Espacio para cambiar.';
+ if(el.matches('input[type=radio]'))return 'Seleccionar '+(txt||'esta opción')+'. Usa las flechas para cambiar de opción.';
+ if(el.matches('input,textarea,[contenteditable=true]'))return 'Introducir '+(txt||'información')+'. Pulsa Tab para continuar.';
+ if(el.matches('select'))return 'Elegir '+(txt||'una opción')+'. Usa las flechas para seleccionar.';
+ if(el.matches('summary'))return 'Mostrar u ocultar '+(txt||'detalles')+'. Pulsa Intro para cambiar.';
+ if(el.matches('a,[role=link]'))return 'Ir a '+(txt||el.getAttribute('href')||'este enlace')+'. Pulsa Intro para abrir.';
+ if(el.matches('button,[role=button],[onclick]'))return 'Acción: '+(txt||'activar este control')+'. Pulsa Intro o Espacio.';
+ return 'Interactuar con '+(txt||'este elemento')+'.';}
+function decorate(scope=document){const els=[];if(scope.nodeType===1&&scope.matches?.(actionSelector))els.push(scope);scope.querySelectorAll?.(actionSelector).forEach(x=>els.push(x));for(const el of els){if(el.hasAttribute('title')&&el.getAttribute('title').trim())continue;const help=describe(el);if(help)el.setAttribute('title',help)}}
+let tip;function hide(){if(tip)tip.hidden=true}function show(el){if(!el||!el.matches?.(actionSelector)||!el.getAttribute('title'))return;tip.textContent=el.getAttribute('title');tip.hidden=false;const r=el.getBoundingClientRect();const w=tip.offsetWidth,h=tip.offsetHeight;tip.style.left=Math.max(8,Math.min(innerWidth-w-8,r.left))+'px';tip.style.top=(r.bottom+h+10<innerHeight?r.bottom+8:Math.max(8,r.top-h-8))+'px'}
+function init(){decorate();tip=document.createElement('div');tip.className='ju-help-tooltip';tip.setAttribute('role','tooltip');tip.hidden=true;document.body.append(tip);
+ const panel=document.querySelector('.ju-a11y-panel');if(panel){const area=document.createElement('div');area.className='ju-a11y-extra';area.innerHTML=`<strong>Ayudas y visualización</strong><label class="ju-a11y-option"><span>Mostrar todas las ayudas</span><input type="checkbox" role="switch" data-setting="all-help"></label><label class="ju-a11y-option"><span>Invertir colores</span><input type="checkbox" role="switch" data-setting="invert"></label><label class="ju-a11y-option"><span>Blanco y negro</span><input type="checkbox" role="switch" data-setting="grayscale"></label><label class="ju-a11y-option"><span>Subrayar enlaces</span><input type="checkbox" role="switch" data-setting="underline"></label><label class="ju-a11y-font">Tipo de letra<select data-setting="font"><option value="original">Original</option><option value="Arial, Helvetica, sans-serif">Arial / Helvetica</option><option value="Verdana, Geneva, sans-serif">Verdana</option><option value="Tahoma, Geneva, sans-serif">Tahoma</option><option value="Georgia, serif">Georgia</option><option value="'Times New Roman', Times, serif">Times New Roman</option><option value="'Courier New', Courier, monospace">Courier New</option><option value="'Trebuchet MS', sans-serif">Trebuchet MS</option></select></label>`;panel.append(area);
+ for(const el of area.querySelectorAll('[data-setting]')){const name=el.dataset.setting;const update=()=>{const value=el.type==='checkbox'?el.checked?'1':'0':el.value;save(name,value);apply(name,value)};const v=read(name,el.type==='checkbox'?'0':'original');if(el.type==='checkbox')el.checked=v==='1';else el.value=[...el.options].some(o=>o.value===v)?v:'original';apply(name,v);el.addEventListener('change',update)} }
+ document.addEventListener('pointerover',e=>{const el=e.target.closest?.(actionSelector);if(el)show(el)},true);
+ document.addEventListener('pointerout',e=>{if(!e.relatedTarget||!e.target.contains(e.relatedTarget))hide()},true);
+ document.addEventListener('focusin',e=>{if(e.target.matches?.(actionSelector))show(e.target)},true);
+ document.addEventListener('focusout',hide,true);document.addEventListener('scroll',hide,true);
+ const observer=new MutationObserver(records=>{for(const rec of records)for(const node of rec.addedNodes)if(node.nodeType===1&&node!==tip)decorate(node)});observer.observe(document.body,{childList:true,subtree:true});
+ }
+ function apply(name,v){if(name==='font'){if(v==='original')root.style.removeProperty('--ju-accessible-font');else root.style.setProperty('--ju-accessible-font',v);root.classList.toggle('ju-custom-font',v!=='original')}else root.classList.toggle('ju-'+name,v==='1');if(name==='all-help')renderAll(v==='1')}
+ let overlays;function renderAll(on){if(overlays){overlays.remove();overlays=null}if(!on)return;overlays=document.createElement('div');overlays.className='ju-all-helps';document.body.append(overlays);const targets=[...document.querySelectorAll(actionSelector)].filter(e=>e.getClientRects().length&&!e.closest('.ju-a11y-panel,.ju-all-helps'));for(const el of targets.slice(0,250)){const r=el.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight||r.right<0||r.left>innerWidth)continue;const item=document.createElement('div');item.className='ju-help-label';item.textContent=el.title;item.style.left=Math.max(2,Math.min(innerWidth-190,r.left))+'px';item.style.top=Math.max(2,r.bottom+scrollY)+'px';overlays.append(item)}}
+ window.addEventListener('resize',()=>{if(root.classList.contains('ju-all-help'))renderAll(true)});document.addEventListener('scroll',()=>{if(root.classList.contains('ju-all-help'))renderAll(true)},{passive:true});
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();

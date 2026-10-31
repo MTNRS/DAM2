@@ -1,0 +1,20 @@
+Datetime: 2026-10-19T14:55:36.179Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos
+Command: ./a.out
+
+Result:
+Hilos disponibles: 16
+
+--- RESULTADOS ---
+Imagen: 3670x3669
+Pixeles: 13465230
+Sigma: 5
+Radio: 15
+Hilos OpenMP: 16
+Tiempo horizontal: 1457.42 ms
+Tiempo vertical: 1760.83 ms
+Tiempo calculo: 3218.25 ms
+Tiempo total: 3579.32 ms
+Guardado: gaussiano_openmp.jpg
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programa
+ción de servicios y procesos/001-Programación multiproceso/006-Comunicación entre procesos$ 

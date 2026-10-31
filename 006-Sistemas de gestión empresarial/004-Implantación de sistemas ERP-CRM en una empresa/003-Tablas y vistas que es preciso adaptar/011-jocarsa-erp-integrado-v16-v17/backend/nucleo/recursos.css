@@ -1,0 +1,12 @@
+#aplicacion.recursos-activo{padding:16px!important;overflow:auto!important;background:#f6f7f8!important;min-width:0}
+.crimson-recursos{font-family:Ubuntu,Arial,sans-serif;color:#30343a;height:100%;display:flex;flex-direction:column;gap:12px}
+.crimson-recursos .recursos-titulo{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.crimson-recursos h1{font-size:20px;margin:0;color:crimson}.crimson-recursos .recursos-sub{color:#777;font-size:12px;margin:4px 0 0}
+.crimson-recursos button{background:crimson;border:0;border-radius:3px;color:white;padding:9px 14px;cursor:pointer;font:inherit}
+.crimson-recursos .recursos-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(230px,1fr));gap:12px;flex:1;min-height:0}
+.crimson-recursos .recursos-card{background:white;border:1px solid #e1e1e1;border-radius:4px;padding:14px;display:flex;flex-direction:column;min-width:0;min-height:0}
+.crimson-recursos h2{font-size:14px;margin:0 0 8px;color:#555;font-weight:600}
+.crimson-recursos .recursos-canvas{position:relative;flex:1;min-height:150px}.crimson-recursos canvas{width:100%!important;height:100%!important}
+.crimson-recursos .recursos-error{color:#9b1c32;padding:12px;background:#fff1f2}
+@media(max-width:1050px){.crimson-recursos .recursos-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}.crimson-recursos .recursos-card{height:250px}}
+@media(max-width:650px){.crimson-recursos .recursos-grid{grid-template-columns:1fr}}

@@ -1,0 +1,16 @@
+{
+  "name": "jocarsa | catálogo ERP",
+  "short_name": "JOCARSA ERP",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#265d73",
+  "icons": [
+    {
+      "src": "icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

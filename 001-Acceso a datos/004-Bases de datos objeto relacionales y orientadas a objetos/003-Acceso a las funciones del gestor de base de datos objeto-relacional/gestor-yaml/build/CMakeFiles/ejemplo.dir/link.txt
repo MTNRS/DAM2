@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ejemplo.dir/ejemplos/main.cpp.o -o ejemplo  libgestoryaml.a -lyaml-cpp /usr/lib/x86_64-linux-gnu/libuuid.so 

@@ -1,0 +1,44 @@
+{
+    "ciudad": "Zaragoza",
+    "email": "curriculum_025@example.com",
+    "especialidades": [
+        "Formación profesional",
+        "Automatización",
+        "Inteligencia artificial",
+        "Análisis de datos",
+        "Administración de sistemas",
+        "Bases de datos"
+    ],
+    "experiencia": "15 años",
+    "formacion": [
+        "Grado en Desarrollo de Software"
+    ],
+    "idiomas": [
+        "Portugués",
+        "Inglés"
+    ],
+    "lenguajes": [
+        "Java",
+        "JavaScript",
+        "C++",
+        "CSS",
+        "Python",
+        "HTML",
+        "Go"
+    ],
+    "marca": "Perfil 025",
+    "nacimiento": "1996-01-07",
+    "nombre": "Raúl Vidal Serrano",
+    "profesion": "Desarrollador full-stack",
+    "tecnologias": [
+        "SQLite",
+        "Apache",
+        "Docker"
+    ],
+    "trabajos": [
+        "DataLab - Desarrollador full-stack",
+        "Sistemas Levante - Profesor de informática",
+        "EducaDigital - Desarrollador de software"
+    ],
+    "web": "https://example.com/curriculum_025"
+}

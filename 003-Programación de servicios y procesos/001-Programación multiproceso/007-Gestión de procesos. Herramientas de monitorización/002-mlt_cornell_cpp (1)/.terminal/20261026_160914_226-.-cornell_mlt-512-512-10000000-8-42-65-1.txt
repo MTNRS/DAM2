@@ -1,0 +1,10 @@
+Datetime: 2026-10-26T15:09:14.226Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/002-mlt_cornell_cpp (1)
+Command: ./cornell_mlt 512 512 10000000 8 42 65 1
+
+Result:
+./cornell_mlt 512 512 10000000 8 42 65 1
+  5% | 712224 mutations/s 10% | 711194 mutations/s 15% | 712127 mutations/s 20% | 714251 mutations/s 25% | 712106 mutations/s 30% | 711730 mutations/s 35% | 712939 mutations/s 40% | 711241 mutations/s 45% | 711565 mutations/s 50% | 712512 mutations/s 55% | 712006 mutations/s 60% | 713146 mutations/s 65% | 712463 mutations/s 70% | 712842 mutations/s 75% | 712852 mutations/s 80% | 712848 mutations/s 85% | 713211 mutations/s 90% | 712906 mutations/s 95% | 712888 mutations/s100% | 712651 mutations/s
+Saved cornell.ppm; bootstrap mean=0
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y proc
+esos/001-Programación multiproceso/007-Gestión de procesos. Herramientas de monitorización/002-mlt_cornell_cpp (1)$ 
