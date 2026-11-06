@@ -1,0 +1,102 @@
+[
+  {
+    "modulo": "Administración",
+    "funcion": "Alta, edición y eliminación de bajas",
+    "descripcion": "Permite gestionar las solicitudes de baja de los empleados desde la interfaz de administración.",
+    "usuarios": "Administradores",
+    "confianza": "verificada",
+    "evidencia": "Cambios en la interfaz de administración y en la base de datos SQLite.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Bajas",
+    "funcion": "Inmediata entrada en vigor",
+    "descripcion": "Las bajas se activan inmediatamente al guardarlas, sin necesidad de aceptación/rechazo del trabajador.",
+    "usuarios": "Administradores y empleados",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Bajas",
+    "funcion": "Periodo con horas y fecha final opcionales",
+    "descripcion": "Permite definir periodos de baja con horas y una fecha final, aunque estos campos son opcionales.",
+    "usuarios": "Administradores y empleados",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Bajas",
+    "funcion": "Motivo/observaciones y adjunto PDF/JPG",
+    "descripcion": "Permite añadir un motivo, observaciones y un adjunto PDF/JPG de hasta 10 MB a las solicitudes de baja.",
+    "usuarios": "Administradores y empleados",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Portal del empleado",
+    "funcion": "Sección de solo lectura 'Mis bajas'",
+    "descripcion": "Proporciona a los empleados una vista de solo lectura de sus solicitudes de baja.",
+    "usuarios": "Empleados",
+    "confianza": "verificada",
+    "evidencia": "Nueva sección en el portal del empleado.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Mis jornadas",
+    "funcion": "Visualización de bajas en el calendario mensual",
+    "descripcion": "Muestra las solicitudes de baja en el calendario mensual junto a fichajes, vacaciones, festivos y ausencias.",
+    "usuarios": "Empleados",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Adjuntos",
+    "funcion": "Descarga de adjuntos aislada por tenant y empleado",
+    "descripcion": "Permite descargar adjuntos de bajas de manera aislada, considerando el tenant y el empleado.",
+    "usuarios": "Administradores y empleados",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de datos",
+    "funcion": "Migración automática de SQLite",
+    "descripcion": "Realiza una migración automática de SQLite a `PRAGMA user_version = 12`, sin borrar las ausencias existentes.",
+    "usuarios": "Administradores",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Administración",
+    "funcion": "Corrección de layout administrativo",
+    "descripcion": "Corrige el desbordamiento horizontal de la columna central al crecer el listado de tablas, mejorando la visualización del panel administrativo.",
+    "usuarios": "Administradores",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Instalación",
+    "funcion": "Uso de `php database/install.php` para instalación nueva",
+    "descripcion": "Permite seguir utilizando `php database/install.php` para instalaciones nuevas, aunque no es necesario ejecutar SQL manualmente.",
+    "usuarios": "Administradores",
+    "confianza": "verificada",
+    "evidencia": "Referencia en el texto de cambios.",
+    "archivo": "README-BAJAS.md",
+    "fragmento": 1
+  }
+]

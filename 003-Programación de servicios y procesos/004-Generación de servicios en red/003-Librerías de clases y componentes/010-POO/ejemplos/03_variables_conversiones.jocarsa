@@ -1,0 +1,20 @@
+# Fase 3: tipos dinamicos y conversiones
+edad = 25
+escribir(tipo(edad))
+edad = "25"
+escribir(tipo(edad))
+edad = entero(edad)
+escribir(tipo(edad))
+precio = decimal("19.95")
+cantidad = entero("3")
+total = precio * cantidad
+escribir(total)
+escribir(texto(total))
+activo = booleano(1)
+escribir(activo)
+nombre = "Jose Vicente"
+escribir("Hola " + nombre)
+escribir("Edad: " + texto(edad))
+escribir(entero(12.75))
+escribir(booleano(""))
+escribir(tipo(nulla))

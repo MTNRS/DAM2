@@ -1,0 +1,32 @@
+Datetime: 2026-10-29T11:32:36.400Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/003-Acceso a las funciones del gestor de base de datos objeto-relacional/gestor-yaml
+Command: cmake -S . -B build
+
+Result:
+cmake -S . -B build
+
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at CMakeLists.txt:5 (find_package):
+  By not providing "Findyaml-cpp.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "yaml-cpp",
+  but CMake did not find one.
+
+  Could not find a package configuration file provided by "yaml-cpp" with any
+  of the following names:
+
+    yaml-cppConfig.cmake
+    yaml-cpp-config.cmake
+
+  Add the installation prefix of "yaml-cpp" to CMAKE_PREFIX_PATH or set
+  "yaml-cpp_DIR" to a directory containing one of the above files.  If
+  "yaml-cpp" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- Configuring incomplete, errors occurred!
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/003-Acceso a las funciones del gestor de base de datos objeto-relacional/gestor-yaml$ 

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>jocarsa | Infinite 3D Wall</title>
+<style>
+:root{color-scheme:dark;--bg:#0c0e12}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);font-family:Inter,system-ui,Arial,sans-serif}#scene{position:fixed;inset:0;overflow:hidden;perspective:1100px;perspective-origin:50% 50%;background:radial-gradient(ellipse at 45% 48%,#222630 0%,#0c0e12 75%)}#world{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;will-change:transform}.tile{position:absolute;width:300px;height:168.75px;transform-style:preserve-3d;will-change:transform}.depth-shift{position:absolute;inset:0;transform-style:preserve-3d;will-change:transform}.rotor{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 1.5s cubic-bezier(.2,.7,.15,1)}.rotor.flipped{transform:rotateY(180deg)}.face{position:absolute;inset:0;overflow:hidden;backface-visibility:hidden;-webkit-backface-visibility:hidden;clip-path:polygon(0 0,calc(100% - 21px) 0,100% 21px,100% 100%,0 100%);background:#171a20;border:1px solid #343945}.back{transform:rotateY(180deg)}.photo{position:absolute;inset:0;background-image:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.05) 65%),url('https://jocarsa.com/fondos/jocarsa%20%7c%20facturacion.png');background-size:cover;background-position:center}.tint{position:absolute;inset:0;background:var(--tile-color);mix-blend-mode:multiply;opacity:.48}.face:after{content:'';position:absolute;inset:0;border-bottom:4px solid var(--tile-color);pointer-events:none}.content{position:absolute;inset:0;padding:16px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;filter:drop-shadow(0 2px 5px #0009)}.logo{width:53px;height:53px;object-fit:contain}.name{font-size:20px;font-weight:750;letter-spacing:-.5px;color:white;white-space:nowrap;text-shadow:0 2px 9px #000}.label{font-size:9px;text-transform:uppercase;letter-spacing:2px;color:#fff9}.vignette{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 40%,#0506099c 100%)}.hud{position:fixed;bottom:18px;left:20px;color:#ffffff80;font-size:11px;letter-spacing:1px;pointer-events:none}.pause{position:fixed;right:20px;bottom:17px;border:1px solid #ffffff30;background:#16191fcf;color:#eee;padding:10px 15px;cursor:pointer;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}@media(prefers-reduced-motion:reduce){.rotor{transition-duration:0s}}
+</style></head><body><div id="scene"><div id="world"></div></div><div class="vignette"></div>
+<script>
+'use strict';
+const COLORS=["aliceblue", "antiquewhite", "aqua", "aquamarine", "azure", "beige", "bisque", "black", "blanchedalmond", "blue", "blueviolet", "brown", "burlywood", "cadetblue", "chartreuse", "chocolate", "coral", "cornflowerblue", "cornsilk", "crimson", "cyan", "darkblue", "darkcyan", "darkgoldenrod", "darkgray", "darkgreen", "darkgrey", "darkkhaki", "darkmagenta", "darkolivegreen", "darkorange", "darkorchid", "darkred", "darksalmon", "darkseagreen", "darkslateblue", "darkslategray", "darkslategrey", "darkturquoise", "darkviolet", "deeppink", "deepskyblue", "dimgray", "dimgrey", "dodgerblue", "firebrick", "floralwhite", "forestgreen", "fuchsia", "gainsboro", "ghostwhite", "gold", "goldenrod", "gray", "green", "greenyellow", "grey", "honeydew", "hotpink", "indianred", "indigo", "ivory", "khaki", "lavender", "lavenderblush", "lawngreen", "lemonchiffon", "lightblue", "lightcoral", "lightcyan", "lightgoldenrodyellow", "lightgray", "lightgreen", "lightgrey", "lightpink", "lightsalmon", "lightseagreen", "lightskyblue", "lightslategray", "lightslategrey", "lightsteelblue", "lightyellow", "lime", "limegreen", "linen", "magenta", "maroon", "mediumaquamarine", "mediumblue", "mediumorchid", "mediumpurple", "mediumseagreen", "mediumslateblue", "mediumspringgreen", "mediumturquoise", "mediumvioletred", "midnightblue", "mintcream", "mistyrose", "moccasin", "navajowhite", "navy", "oldlace", "olive", "olivedrab", "orange", "orangered", "orchid", "palegoldenrod", "palegreen", "paleturquoise", "palevioletred", "papayawhip", "peachpuff", "peru", "pink", "plum", "powderblue", "purple", "rebeccapurple", "red", "rosybrown", "royalblue", "saddlebrown", "salmon", "sandybrown", "seagreen", "seashell", "sienna", "silver", "skyblue", "slateblue", "slategray", "slategrey", "snow", "springgreen", "steelblue", "tan", "teal", "thistle", "tomato", "turquoise", "violet", "wheat", "white", "whitesmoke", "yellow", "yellowgreen"];
+let PRODUCTS=[{name:'facturacion',color:'forestgreen'}];
+window.addEventListener('message',event=>{if(event.origin!==location.origin||event.data?.type!=='jocarsa-products'||!Array.isArray(event.data.products))return;const incoming=event.data.products.filter(p=>p&&typeof p.name==='string'&&p.name.trim()).map(p=>({name:p.name.trim(),color:CSS.supports('color',String(p.color||''))?String(p.color):'white'}));if(incoming.length){PRODUCTS=incoming;tiles.forEach(tile=>tile.productIndex=-1)}});
+const world=document.getElementById('world');
+const W=300,H=168.75,GX=16,GY=16,DX=W+GX,DY=H+GY;
+const ROWS=11,COLS=28,tiles=[];
+const imageUrl='https://jocarsa.com/fondos/jocarsa%20%7c%20facturacion.png';
+function makeFace(color,back=false){const face=document.createElement('div');face.className='face'+(back?' back':'');face.style.setProperty('--tile-color',color);const photo=document.createElement('div');photo.className='photo';const tint=document.createElement('div');tint.className='tint';const content=document.createElement('div');content.className='content';const logo=document.createElement('img');logo.className='logo';logo.src='static/logos/'+color+'.svg';logo.alt=color+' logo';logo.loading='lazy';const label=document.createElement('div');label.className='label';label.textContent='JOCARSA SOFTWARE';const name=document.createElement('div');name.className='name';name.textContent='jocarsa | '+color;const bottom=document.createElement('div');bottom.append(label,name);content.append(logo,bottom);face.append(photo,tint,content);return face}
+function applyProduct(tile,product){const color=product.color,name=product.name;tile.color=color;tile.el.style.setProperty('--tile-color',color);for(const face of tile.el.querySelectorAll('.face')){face.style.setProperty('--tile-color',color);const logo=face.querySelector('.logo');logo.src='https://static.jocarsa.com/logos/'+encodeURIComponent(color)+'.svg';logo.alt='jocarsa | '+name;face.querySelector('.name').textContent=/^jocarsa\s*[|\-]/i.test(name)?name:'jocarsa | '+name;face.querySelector('.photo').style.backgroundImage=`linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,.05) 65%),url("static/pantallas/${encodeURIComponent('jocarsa | '+name)}.png")`;}}
+
+for(let c=0;c<COLS;c++)for(let r=0;r<ROWS;r++){const color=COLORS[(c*ROWS+r)%COLORS.length];const el=document.createElement('div');el.className='tile';const rotor=document.createElement('div');rotor.className='rotor';rotor.append(makeFace(color),makeFace(color,true));const depth=document.createElement('div');depth.className='depth-shift';depth.append(rotor);el.append(depth);world.append(el);tiles.push({el,depth,rotor,c,r,color,flipped:false,x:0,y:0,depthZ:0,depthFrom:0,depthTo:0,depthStart:0,depthDuration:0,depthReturn:0,depthActive:false,flipDone:false})}
+const smooth=t=>{t=Math.max(0,Math.min(1,t));return t*t*(3-2*t)};
+const lerp=(a,b,t)=>a+(b-a)*t;
+let paused=false,last=0,clock=0,nextDepth=1.1,cycle=-1;
+const phases=[{name:'travel',dur:6},{name:'approach',dur:3.4},{name:'hold',dur:1.9},{name:'retreat',dur:3.4}];
+const total=phases.reduce((sum,p)=>sum+p.dur,0);
+const TRAVEL_SPEED=105;
+let target={x:0,y:0},travelAnchor=0,cycleAnchor=0;
+// All tile positions are recycled around the actual camera focus, not around
+// elapsed time. This also keeps the chosen zoom target inside the wall.
+function chooseTarget(x){
+ const c=Math.round((x+DX*1.5)/DX);
+ const r=3+Math.floor(Math.random()*(ROWS-6));
+ return {x:c*DX,y:(r-(ROWS-1)/2)*DY};
+}
+function update(t){
+ if(!last)last=t;
+ const dt=Math.min((t-last)/1000,.05);last=t;
+ if(!paused)clock+=dt;
+ const cycleIndex=Math.floor(clock/total),local=clock%total;
+ if(cycleIndex!==cycle){
+   if(cycle>=0)travelAnchor=cycleAnchor+TRAVEL_SPEED*phases[0].dur;
+   cycle=cycleIndex;cycleAnchor=travelAnchor;
+   target=chooseTarget(cycleAnchor+TRAVEL_SPEED*phases[0].dur);
+ }
+ let step=local,phase=0;
+ while(phase<phases.length-1&&step>=phases[phase].dur){step-=phases[phase].dur;phase++}
+ const progress=smooth(step/phases[phase].dur);
+ let focus=0;
+ if(phase===1)focus=progress;
+ else if(phase===2)focus=1;
+ else if(phase===3)focus=1-progress;
+ const travelX=cycleAnchor+TRAVEL_SPEED*Math.min(local,phases[0].dur);
+ // Hold the travelling position during approach/hold/retreat so there is no
+ // sudden sideways jump or a camera that drifts through the wall.
+ const camX=lerp(travelX,target.x,focus);
+ const camY=lerp(0,target.y,focus);
+ const yaw=lerp(-20,0,focus),pitch=lerp(12,0,focus);
+ // Perspective scale at Z=0 is 1; a positive Z approaches the viewer.
+ // Keep the card a little smaller than the viewport in both dimensions.
+ const fitScale=Math.min((innerWidth-48)/W,(innerHeight-48)/H);
+ const zoomZ=1100*(1-1/Math.max(.1,fitScale));
+ // Camera orbit is anchored on the current focus point. The wall remains
+ // at a fixed depth during travelling, independent of yaw and pitch.
+ // Clamp frontal approach to retain a minimum 190px perspective gap.
+ const SAFE_TRAVEL_Z=-650;
+ const SAFE_ZOOM_Z=Math.min(zoomZ,910);
+ const z=lerp(SAFE_TRAVEL_Z,SAFE_ZOOM_Z,focus);
+ world.style.transform=`translate3d(0px,0px,${z}px) rotateX(${pitch}deg) rotateY(${yaw}deg) translate3d(${-camX}px,${-camY}px,0px)`;
+ // Recycle the 28 physical columns as a ring around the camera's real X.
+ // Each physical column receives a stable world-column index, and its colors
+ // are deterministically shuffled by a cheap integer hash.
+ const firstCol=Math.floor(camX/DX)-Math.floor(COLS/2);
+ for(const tile of tiles){
+   const ringOffset=((firstCol%COLS)+COLS)%COLS;
+   const cc=firstCol+((tile.c-ringOffset+COLS)%COLS);
+   const x=cc*DX,y=(tile.r-(ROWS-1)/2)*DY;
+   if(tile.x!==x||tile.y!==y){
+     // Only recycled edge tiles are reset. All other tiles retain their animation.
+     if(tile.x!==0){tile.depthActive=false;tile.depthZ=0;tile.flipDone=false;tile.depth.style.transform="translateZ(0px)";}
+     tile.x=x;tile.y=y;tile.el.style.transform=`translate3d(${x-W/2}px,${y-H/2}px,0)`
+   }
+   let hash=Math.imul(cc^0x9e3779b9,0x85ebca6b)^Math.imul(tile.r+17,0xc2b2ae35);
+   hash=Math.imul(hash^(hash>>>16),0x7feb352d);hash^=hash>>>15;
+   const productIndex=(hash>>>0)%PRODUCTS.length;
+   if(tile.productIndex!==productIndex){tile.productIndex=productIndex;applyProduct(tile,PRODUCTS[productIndex]);}
+ }
+   // Combined sequence: Z departure -> vertical 3D flip -> Z return.
+  // A card remains displaced while it flips, with a one-second hold.
+  for(const tile of tiles){
+    if(!tile.depthActive)continue;
+    if(focus>.12 && Math.abs(tile.x-target.x)<DX*.55 && Math.abs(tile.y-target.y)<DY*.55){
+      tile.depthActive=false;
+      tile.flipDone=false;
+      tile.depthZ=0;
+      tile.depth.style.transform='translateZ(0px)';
+      continue;
+    }
+    const elapsed=clock-tile.depthStart;
+    const move=tile.depthDuration;
+    const flipDuration=1.5;
+    const hold=1;
+    const flipStart=move;
+    const returnStart=move+flipDuration+hold;
+    let zOffset;
+    if(elapsed<move){
+      zOffset=lerp(0,tile.depthTo,smooth(elapsed/move));
+    }else if(elapsed<returnStart){
+      zOffset=tile.depthTo;
+      if(!tile.flipDone && elapsed>=flipStart){
+        tile.flipDone=true;
+        tile.flipped=!tile.flipped;
+        tile.rotor.classList.toggle('flipped',tile.flipped);
+      }
+    }else if(elapsed<returnStart+tile.depthReturn){
+      zOffset=lerp(tile.depthTo,0,smooth((elapsed-returnStart)/tile.depthReturn));
+    }else{
+      zOffset=0;
+      tile.depthActive=false;
+      tile.flipDone=false;
+    }
+    tile.depthZ=zOffset;
+    tile.depth.style.transform=`translateZ(${zOffset}px)`;
+  }
+  if(!paused&&clock>=nextDepth){
+    const pool=tiles.filter(q=>!q.depthActive &&
+      Math.abs(q.x-camX)<innerWidth*1.1+350 &&
+      Math.abs(q.y-camY)<innerHeight*1.1+250 &&
+      !(focus>.12 && Math.abs(q.x-target.x)<DX*.55 && Math.abs(q.y-target.y)<DY*.55));
+    if(pool.length){
+      const tile=pool[Math.floor(Math.random()*pool.length)];
+      tile.depthActive=true;
+      tile.flipDone=false;
+      tile.depthStart=clock;
+      tile.depthTo=(Math.random()<.5?-1:1)*(270+Math.random()*260);
+      tile.depthDuration=.35+Math.random()*.3;
+      tile.depthReturn=.4+Math.random()*.3;
+    }
+    nextDepth=clock+.1+Math.random()*.3;
+  }
+requestAnimationFrame(update);
+}
+const pauseButton=document.getElementById('pause');
+if(pauseButton) pauseButton.onclick=()=>{paused=!paused;pauseButton.textContent=paused?'Resume':'Pause'};
+requestAnimationFrame(update);
+</script></body></html>

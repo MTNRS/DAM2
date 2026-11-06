@@ -1,0 +1,54 @@
+/* Capa visual de componentes v5: conserva componentes nativos y sus scripts. */
+:root { --chaflan:12px; --ju-ink:#153e56; --ju-line:#bdd5e2; }
+.jocarsa-demo { padding:14px 16px 26px; }
+.jocarsa-demo>header {
+  background:linear-gradient(105deg,var(--color0),var(--color));
+  border-bottom:3px solid var(--color2);
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+}
+.jocarsa-demo section {
+  border:1px solid var(--ju-line);
+  border-left:3px solid var(--color2);
+  clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,0 100%);
+  padding:17px;
+}
+.jocarsa-demo section h2 { padding-bottom:9px; border-bottom:1px solid #dcebf3; }
+.jocarsa-demo .grid { gap:14px 18px; }
+.jocarsa-demo .grid label { color:var(--ju-ink); font-weight:500; }
+.jocarsa-demo .grid :is(input,textarea,select):not([type=checkbox]):not([type=radio]):not([type=range]),
+.jocarsa-date-display,.jocarsa-multidatalist,.jocarsa-control {
+  border-radius:0!important;
+}
+.jocarsa-input-envoltura,.jocarsa-date-display,
+.jocarsa-demo .grid :is(input,textarea,select):not([type=checkbox]):not([type=radio]):not([type=range]) {
+  clip-path:polygon(0 0,calc(100% - 11px) 0,100% 11px,100% 100%,0 100%);
+}
+.jocarsa-demo :is(button,.jocarsa-chip,.jocarsa-segment,.jocarsa-popup,.jocarsa-barra) {
+  border-radius:0!important;
+}
+.jocarsa-demo button:not(.jocarsa-switch):not(.jocarsa-radio),
+.jocarsa-popup button,.jocarsa-chip {
+  clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%);
+}
+.jocarsa-demo :is(button,input,select,textarea,[tabindex]):focus-visible,
+.jocarsa-popup :is(button,input,select):focus-visible {
+  outline:3px solid #e5b74a!important;outline-offset:2px;
+}
+.jocarsa-demo .jocarsa-tabla,
+.jocarsa-demo .jocarsa-control { max-width:100%; }
+.jocarsa-tabla-scroll { max-width:100%; overflow-x:auto; }
+.jocarsa-tabla th { background:var(--color); color:#fff; }
+.jocarsa-tabla th:hover { background:var(--color0); }
+.jocarsa-tabla tbody tr:nth-child(even) { background:#f1f7fa; }
+.jocarsa-tabla tbody tr:hover { background:#dceef7; }
+.jocarsa-tabla-controles,.jocarsa-tabla-pie { background:#e7f2f8; }
+.jocarsa-popup { border:2px solid var(--color2); }
+.jocarsa-arbol-nodo { border-radius:0; }
+.jocarsa-arbol-nodo.seleccionado { background:#c8e4f2; }
+@media(min-width:900px){
+ .jocarsa-demo .grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
+}
+@media(max-width:650px){
+ .jocarsa-demo .grid { grid-template-columns:1fr; }
+ .jocarsa-demo section { padding:12px; }
+}

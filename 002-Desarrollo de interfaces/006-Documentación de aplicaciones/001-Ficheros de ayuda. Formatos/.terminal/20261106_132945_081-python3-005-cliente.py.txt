@@ -1,0 +1,12 @@
+Datetime: 2026-11-06T12:29:45.081Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos
+Command: python3 005-cliente.py
+
+Result:
+HTTP: 500
+Content-Type: text/html; charset=UTF-8
+Respuesta completa:
+
+Error de conexión: 500 Server Error: Internal Server Error for url: https://works-protection-specifies-bottles.trycloudflare.com/dam/index.php
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarrollo de in
+terfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos$ 

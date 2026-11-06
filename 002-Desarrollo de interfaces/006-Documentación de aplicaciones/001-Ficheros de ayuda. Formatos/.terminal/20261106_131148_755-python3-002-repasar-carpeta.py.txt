@@ -1,0 +1,64 @@
+Datetime: 2026-11-06T12:11:48.755Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos
+Command: python3 002-repasar\ carpeta.py
+
+Result:
+Ruta: /var/www/html/jocarsa-calendario
+Carpetas: ['demo-google-calendar', '.git']
+Archivos: ['api.php', 'README.md', 'codigo.js', 'README-SHARING.md', 'README-PATCH.md', 'estilo.css', 'README.txt', 'jocarsa-calendario.png', 'demo-google-calendar.ical.zip', 'index.html', 'calendario.sqlite']
+Ruta: /var/www/html/jocarsa-calendario/demo-google-calendar
+Carpetas: []
+Archivos: ['CalCapitol - Telepresencial presencial_24lptun7icf8adtr1ce3fthh0c@group.calendar.google.com.ics', 'Alumnos Online AT_hhssik9oislkpscra4sa5i7ks4@group.calendar.google.com.ics', 'Cal-Capitol Empresa_d2fme968oc98tsf7dj78q4cvs8@group.calendar.google.com.ics', 'DAMDAWTAMEAliciaPilares_2c197171c417de7f90635da5b654a6369a346b10d0ed200a2242915ebea98290@group.calendar.google.com.ics', 'Borja Iriarte_a66a40754454e261606919565eba733232e5cb43333e0e69a7d04cc4e35cb4c2@group.calendar.google.com.ics', 'Mastermedia_fc1d9b0fe2178777629bd9f52e17b2b6c1c3515602bd23d3be5a6abc0bbf7095@group.calendar.google.com.ics', 'SMR2_ac137eebaec3d92d555dc536446cf721cb84c01d7896114336623e4662fce48e@group.calendar.google.com.ics', 'Universidad de Alicante_10fb088875538424cbefd11aa8eff9939e27078b4b4fe0e70ad2980a3fe76009@group.calendar.google.com.ics', 'Cursos posibles_mbajl9qilbjkq90684jpa6ih8k@group.calendar.google.com.ics', 'aula0_mgsfeh8tgldksq1m6c93jhg90k@group.calendar.google.com.ics', 'sub7lia4sa9q58fiv3smq2vqjg@group.calendar.google.com.ics', 'Tutorias Individuales Pilar Lopez_905d19735d89eb6c413694d113ba4fab8879dea9343dc079f7c0617ad7bba08e@group.calendar.google.com.ics', 'SMR1_36db8e85118dc891aaed1db0ae3625a2546cb9061114d368beef813c3f2ea1ce@group.calendar.google.com.ics', 'Faltas asistencia AT_qmcfqcn04u48e98vks4idpvv60@group.calendar.google.com.ics', 'Publicacion en redes sociales_e0i4mul309mplo1d7mjf06oftc@group.calendar.google.com.ics', 'Birthdays_jocarsa2@gmail.com.ics', 'Curso Enero - Marzo - Modulo 2_8t4lg2b7mnmjd335al8sgeke9s@group.calendar.google.com.ics', 'MGV_pckrmsjum74nat2iqds0qghu5c@group.calendar.google.com.ics', 'Poli_r55pvir5nb93see1ga1dbag78c@group.calendar.google.com.ics', 'RBFormacion_8hehbua5729fskr44rvgh0envs@group.calendar.google.com.ics', 'IMF Madrid_7f4e9347f87ea295b4336b1d9c7f40ada2d1c45e3360d61ba999c8f445f2a827@group.calendar.google.com.ics', '770a4a8b118ff95ae4099d0d65a645aa7ccec03ab7ea5f2d17274c78dfe5f829@group.calendar.google.com.ics', 'CalEnsenyem_n7erpcaom9731qq6tln2d85g7s@group.calendar.google.com.ics', 'Inteco_t1gurnb8uuapsciprvesk47p6o@group.calendar.google.com.ics', 'euobv66gd529s8aeng68v3i3n0@group.calendar.google.com.ics', 'f0f40afd911829c2df9b01434e8861bf3a68ad2dd4b9aeb787902e98c944927f@group.calendar.google.com.ics', 'Sanz_h2kr8msdmp9ssmd8q015hlpfdo@group.calendar.google.com.ics', 'Proyecto Altea_ncod6i2as1ovtj1k7s3oc8joks@group.calendar.google.com.ics', 'Amparo Ferris Capitol_2i20lm0qk3u4jc2esovoo1c15k@group.calendar.google.com.ics', 'CEAC 2_7f27fc0adb7feac8eb7d0032e4fb9392e39b3fe3edef491d16e3b8d1db7e367f@group.calendar.google.com.ics', 'Tutorias FCT_t4muqr1tloes1jpuchf376qnmk@group.calendar.google.com.ics', 'CalMGV_o57l108709r96bkbb1na1fpgno@group.calendar.google.com.ics', 'Trabajo Caramelos_qc1jr07scjlmumebch5cm9kmu0@group.calendar.google.com.ics', 'Amparo Ferris Capitol_e1knl7a7egitln87mfdb6pd83c@group.calendar.google.com.ics', 'Marta Huerta_5sfa9vgmjon77pid58ivd918os@group.calendar.google.com.ics', 'Helix_9fkv6gkk8dm389jdn1vafng0oo@group.calendar.google.com.ics', 'Capitol - Telepresencial online_m155fhn7gik3j1m3c72t50ltu4@group.calendar.google.com.ics', 'IEMBS_u94pctjud7ee8mitnf9upkmrdo@group.calendar.google.com.ics', 'aula2_21ignf1vdatuphjj64ca50p3t4@group.calendar.google.com.ics', 'Master Videojuegos AT_b2k7d7v8n02salac4u1bq4hevk@group.calendar.google.com.ics', 'Tutorias individuales Alicia_04214810e2c18df4dc65c0fb11740d0ec2bd63d371c399fbc9cf660fc8003d6e@group.calendar.google.com.ics', 'nqss1jmqibk8ts450hm7nj51eo@group.calendar.google.com.ics', 'CalCapitol - Telepresencial online_4evmmg9dt4tq84vrm7troqmsqk@group.calendar.google.com.ics', 'DAM1_0a71fbf6bfb17a813d7acea177888cce4f80cde8c484e58fabac99a0ffe0c9a4@group.calendar.google.com.ics', 'Proyectos 3D_druej85il5beehisfjp0s3f67s@group.calendar.google.com.ics', 'aula1_v0nsnqacefdvibubfejs5act2g@group.calendar.google.com.ics', 'Ensenyem_jnigrrrl417udlsq8mhpgntglk@group.calendar.google.com.ics', 'Curso de Aplicaciones Web_3cbf1a6ihv18mor6uvp8fk2b2g@group.calendar.google.com.ics', 'calPersonal_0r0c36et865tsro5qr5rk4r7k0@group.calendar.google.com.ics', 'Curso Enero - Marzo - Modulo 2 - Faltas asistencia_4nbr1ojcol9mmcknfoeje7tpe0@group.calendar.google.com.ics', 'sapl4ibf8n7vjefhd8hvq0ptoo@group.calendar.google.com.ics', 'Video2Brain_hu6e35sr9oenqmbcqcm3vl76qg@group.calendar.google.com.ics', 'Cursos Confirmados_qqtdl3kdo7bh14hs5pbdjnlk0k@group.calendar.google.com.ics', 'airus_btvlfqo2f548alre9afqe4k9j4@group.calendar.google.com.ics', 'CEAC 1_9a18d90bb260f29dd950b32a7857adbf478db5c9aca8af1e45d121f3f215b05d@group.calendar.google.com.ics', 'Ensenyem_c1f8nge3pmrqv137er585qptb4@group.calendar.google.com.ics', 'clases identiart_9so5mpq347e3b9mfg0ok1rls30@group.calendar.google.com.ics', 'Instituto Europeo_k44levka00r1nvd3k6l7iukj8o@group.calendar.google.com.ics', 'AT_61q3brl7fm3ejjr1p4rho07hn8@group.calendar.google.com.ics', 'Sifma_rnutaqgqc4ged7ouo1a1fqi520@group.calendar.google.com.ics', 'classroom113574348001612074205@group.calendar.google.com.ics', 'dfbdc5febaff65ae617af87058178f61c994e48015d113b07d51cdef709f3ab8@group.calendar.google.com.ics', 'Tutorias individuales JV_ef7162ff8eb5e8e7bf19ab7158c0620cfc6ab9917555be45c4d4a161920b6792@group.calendar.google.com.ics', 'Tecontek_umds48511dc4c07dbj2u3clf9s@group.calendar.google.com.ics', 'Personal_9fi2acmc41c2q9bhirqpbk379o@group.calendar.google.com.ics', 'DAM1 otras_c562900dd73bb75ff405ebe6e6862936c88035b510312a4f2ada9de627595fdb@group.calendar.google.com.ics', 'CEACDAWtest_122a0acd5b04f9930f0bd330d004d89331415d3107eb9ebf34409c52a890e997@group.calendar.google.com.ics', 'classroom100808438386300756474@group.calendar.google.com.ics', 'Alergia_34gv8rl938u6pt81ld71bh7afc@group.calendar.google.com.ics', 'DAM1_3c6ce1191bfddec3cb1db9a90ee880e925ce9d8a350be4ea3fa9e677399985fd@group.calendar.google.com.ics', 'DAM2otras_5d945df8ac2a768d61a45ada41fe3b6e9d3ff01a5381959a4679efc2d85a93bc@group.calendar.google.com.ics', 'Aula Tematica_q38t7a2boe5s5llucrc5g77nns@group.calendar.google.com.ics', 'DAM2_5c8f87e7211b869a7899d0a69d05aae753f4d45d45e6b843f6c98c58eacce8cb@group.calendar.google.com.ics', 'Grabacion video Pickler_gp0ikfosjlv71hk85k2shjlkpk@group.calendar.google.com.ics', 'Proyecto Riada_t20t2cg2u04mj718t3cpitivfk@group.calendar.google.com.ics', 'Extraescolares_8e43e42d986dd91580ec20446b5b39ad26ff4a76c3d4f69b08264262908569f5@group.calendar.google.com.ics', 'UPV_54v0qev6gak01b1v6anedtb7ts@group.calendar.google.com.ics', 'Disponibilidad aulas AT_o613kjsn1glc3ic7s0iokta210@group.calendar.google.com.ics', 'jocarsa2@gmail.com.ics', 'CalUPV_cs2jf342pduo155icj0f9js2v8@group.calendar.google.com.ics']
+Ruta: /var/www/html/jocarsa-calendario/.git
+Carpetas: ['logs', 'refs', 'branches', 'info', 'hooks', 'objects']
+Archivos: ['FETCH_HEAD', 'packed-refs', 'description', 'index', 'HEAD', 'config']
+Ruta: /var/www/html/jocarsa-calendario/.git/logs
+Carpetas: ['refs']
+Archivos: ['HEAD']
+Ruta: /var/www/html/jocarsa-calendario/.git/logs/refs
+Carpetas: ['remotes', 'heads']
+Archivos: []
+Ruta: /var/www/html/jocarsa-calendario/.git/logs/refs/remotes
+Carpetas: ['origin']
+Archivos: []
+Ruta: /var/www/html/jocarsa-calendario/.git/logs/refs/remotes/origin
+Carpetas: []
+Archivos: ['HEAD']
+Ruta: /var/www/html/jocarsa-calendario/.git/logs/refs/heads
+Carpetas: []
+Archivos: ['main']
+Ruta: /var/www/html/jocarsa-calendario/.git/refs
+Carpetas: ['remotes', 'tags', 'heads']
+Archivos: []
+Ruta: /var/www/html/jocarsa-calendario/.git/refs/remotes
+Carpetas: ['origin']
+Archivos: []
+Ruta: /var/www/html/jocarsa-calendario/.git/refs/remotes/origin
+Carpetas: []
+Archivos: ['HEAD']
+Ruta: /var/www/html/jocarsa-calendario/.git/refs/tags
+Carpetas: []
+Archivos: []
+Ruta: /var/www/html/jocarsa-calendario/.git/refs/heads
+Carpetas: []
+Archivos: ['main']
+Ruta: /var/www/html/jocarsa-calendario/.git/branches
+Carpetas: []
+Archivos: []
+Ruta: /var/www/html/jocarsa-calendario/.git/info
+Carpetas: []
+Archivos: ['exclude']
+Ruta: /var/www/html/jocarsa-calendario/.git/hooks
+Carpetas: []
+Archivos: ['pre-push.sample', 'pre-rebase.sample', 'pre-receive.sample', 'fsmonitor-watchman.sample', 'applypatch-msg.sample', 'push-to-checkout.sample', 'pre-merge-commit.sample', 'sendemail-validate.sample', 'post-update.sample', 'update.sample', 'pre-applypatch.sample', 'commit-msg.sample', 'prepare-commit-msg.sample', 'pre-commit.sample']
+Ruta: /var/www/html/jocarsa-calendario/.git/objects
+Carpetas: ['pack', 'info']
+Archivos: []
+Ruta: /var/www/html/jocarsa-calendario/.git/objects/pack
+Carpetas: []
+Archivos: ['pack-89e6c3dae1a7c8070a66cc2508366853b3a0dba9.pack', 'pack-89e6c3dae1a7c8070a66cc2508366853b3a0dba9.rev', 'pack-89e6c3dae1a7c8070a66cc2508366853b3a0dba9.idx']
+Ruta: /var/www/html/jocarsa-calendario/.git/objects/info
+Carpetas: []
+Archivos: []
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarroll
+o de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos$ 

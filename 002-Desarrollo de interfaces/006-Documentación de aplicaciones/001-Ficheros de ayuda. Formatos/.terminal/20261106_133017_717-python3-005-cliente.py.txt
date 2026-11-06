@@ -1,0 +1,12 @@
+Datetime: 2026-11-06T12:30:17.717Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos
+Command: python3 005-cliente.py
+
+Result:
+HTTP: 401
+Content-Type: application/json; charset=utf-8
+Respuesta completa:
+{"error":"Token inválido"}
+Error de conexión: 401 Client Error: Unauthorized for url: https://works-protection-specifies-bottles.trycloudflare.com/dam/index.php
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarrollo de in
+terfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos$ 

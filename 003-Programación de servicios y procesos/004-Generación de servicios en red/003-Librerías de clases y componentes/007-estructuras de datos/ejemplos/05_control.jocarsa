@@ -1,0 +1,37 @@
+# Condicionales
+nota = 7
+si nota >= 9:
+    escribir("sobresaliente")
+sinosi nota >= 5:
+    escribir("aprobado")
+sino:
+    escribir("suspenso")
+
+# Segun (switch)
+dia = 2
+segun dia:
+    caso 1:
+        escribir("lunes")
+    caso 2:
+        escribir("martes")
+    defecto:
+        escribir("otro")
+
+# Para
+para i en rango(0, 5):
+    si i == 2:
+        continuar
+    escribir(i)
+
+# Mientras
+contador = 0
+mientras contador < 3:
+    escribir(contador)
+    contador = contador + 1
+
+# Hacer mientras
+contador = 0
+hacer:
+    escribir("una vez como minimo")
+    contador = contador + 1
+mientras contador < 1

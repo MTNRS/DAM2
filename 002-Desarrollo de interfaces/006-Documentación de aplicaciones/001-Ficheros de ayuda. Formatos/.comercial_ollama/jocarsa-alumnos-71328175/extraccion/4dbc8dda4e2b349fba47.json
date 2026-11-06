@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Interfaz del Alumno",
+    "funcion": "Visualización de preguntas en cuadrícula Metro",
+    "descripcion": "Permite a los alumnos ver una lista de preguntas en un diseño visualmente atractivo y organizado.",
+    "usuarios": "Alumnos",
+    "confianza": "verificada",
+    "evidencia": "El alumno ve una cuadrícula estilo Metro con tarjetas de preguntas.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz del Alumno",
+    "funcion": "Animación de selección de pregunta",
+    "descripcion": "Cuando un alumno hace clic en una tarjeta, la tarjeta crece, se centra y se convierte visualmente en el modal.",
+    "usuarios": "Alumnos",
+    "confianza": "verificada",
+    "evidencia": "Al hacer clic en una tarjeta, la propia tarjeta crece, se centra y se convierte visualmente en el modal.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz del Alumno",
+    "funcion": "Desenfoque de fondo al escribir",
+    "descripcion": "El fondo se desenfoca ligeramente mientras el alumno escribe una respuesta.",
+    "usuarios": "Alumnos",
+    "confianza": "verificada",
+    "evidencia": "El fondo se desenfoca ligeramente mientras se escribe.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz del Alumno",
+    "funcion": "Animación de cierre de modal",
+    "descripcion": "Cuando el alumno cierra una pregunta, la animación se invierte y vuelve hacia la tarjeta original.",
+    "usuarios": "Alumnos",
+    "confianza": "verificada",
+    "evidencia": "Al cerrar, la animación se invierte y vuelve hacia la tarjeta original.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz del Alumno",
+    "funcion": "Filtros de preguntas",
+    "descripcion": "Permite a los alumnos filtrar sus preguntas por respondidas, pendientes y tipo de pregunta.",
+    "usuarios": "Alumnos",
+    "confianza": "verificada",
+    "evidencia": "Filtros del alumno por respondidas, pendientes y tipo de pregunta.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz del Profesor",
+    "funcion": "Interfaz jocarsa-iu",
+    "descripcion": "El profesor tiene una interfaz con columnas de navegación, listado y detalle.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "El profesor usa una interfaz tipo `jocarsa-iu`, con columnas de navegación, listado y detalle.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Exportación de Datos",
+    "funcion": "Exportación a JSON",
+    "descripcion": "Permite exportar los datos del sistema en formato JSON para su posterior consumo por IA.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "Exportación JSON y Markdown para consumo posterior por IA.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Exportación de Datos",
+    "funcion": "Exportación a Markdown",
+    "descripcion": "Permite exportar los datos del sistema en formato Markdown para su posterior consumo por IA.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "Exportación JSON y Markdown para consumo posterior por IA.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Telemetría de Aprendizaje",
+    "funcion": "Métricas agregadas de interacción del alumno",
+    "descripcion": "Registra métricas como teclas por minuto, caracteres por minuto, retrocesos y pegados.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "Esta versión añade métricas agregadas de interacción del alumno.",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Telemetría de Aprendizaje",
+    "funcion": "Seguimiento de tiempo por pregunta",
+    "descripcion": "Registra el tiempo total que un alumno tarda en responder cada pregunta.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "tiempo total por pregunta",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Telemetría de Aprendizaje",
+    "funcion": "Seguimiento de pausas aproximadas",
+    "descripcion": "Registra las pausas que un alumno hace mientras responde preguntas.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "pausas aproximadas",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz del Profesor",
+    "funcion": "Consulta de evidencias de telemetría",
+    "descripcion": "El profesor puede consultar las métricas detalladas de cada alumno en la vista Telemetría.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "El profesor puede consultar esas evidencias desde la vista **Telemetría** de cada alumno.",
+    "archivo": "README.md",
+    "fragmento": 1
+  }
+]

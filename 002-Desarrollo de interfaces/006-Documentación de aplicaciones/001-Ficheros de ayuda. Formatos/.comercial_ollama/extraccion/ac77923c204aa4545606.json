@@ -1,0 +1,92 @@
+[
+  {
+    "modulo": "Administración",
+    "funcion": "Ocupar el viewport completo",
+    "descripcion": "Asegura que la interfaz de administración ocupe toda la pantalla disponible.",
+    "usuarios": "Administradores",
+    "confianza": "verificada",
+    "evidencia": "Cambios en el código relacionados con la administración.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Fijar la barra superior",
+    "descripcion": "Mantiene la barra superior fija en la pantalla, independientemente del desplazamiento.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Fija `#topbar` a todo el ancho.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Fijar el contenedor principal",
+    "descripcion": "Mantiene el contenedor principal fijo entre la cabecera y el borde inferior.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Fija `#app.iu-admin-shell` entre la cabecera y el borde inferior.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Conservar tres columnas",
+    "descripcion": "Evita que la columna de mensajes ensanché el grid, manteniendo siempre tres columnas.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Conserva las tres columnas sin que `#mensajes` pueda ensanchar el grid.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Eliminar crecimiento físico de elementos activos",
+    "descripcion": "Previene que los elementos activos crezcan físicamente, manteniendo su tamaño constante.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Elimina el crecimiento físico de los elementos activos.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Mantener scroll vertical independiente",
+    "descripcion": "Permite un scroll vertical independiente en diferentes partes de la interfaz.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Mantiene scroll vertical independiente.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Mantener comportamiento responsive",
+    "descripcion": "Asegura que la interfaz se adapte correctamente a pantallas pequeñas, debajo de 900 píxeles.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Conserva el comportamiento responsive por debajo de 900 px.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Incrementar cache-buster del CSS",
+    "descripcion": "Aumenta el número de versión del CSS para forzar la actualización del archivo en los navegadores.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Incrementa el cache-buster del CSS a `2.2.2`.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Conservar estructura del proyecto",
+    "descripcion": "Mantiene la estructura del proyecto intacta al copiar el parche.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Copiar sobre la raíz del proyecto conservando las rutas.",
+    "archivo": "README-LAYOUT-FIX.md",
+    "fragmento": 1
+  }
+]

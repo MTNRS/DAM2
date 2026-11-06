@@ -1,0 +1,11 @@
+Datetime: 2026-11-06T12:30:56.929Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos
+Command: python3 005-cliente.py
+
+Result:
+HTTP: 200
+Content-Type: application/json; charset=utf-8
+Respuesta completa:
+{"modelo":"phi4-mini","mensaje":"Hola, ¿qué tal?","respuesta":"¡Estoy bien y te va a estar! ¿Cómo puedo ayudarte hoy? Si tienes alguna pregunta o necesitas asistencia con algo, no dudes en preguntar. ¡Saludos!"}
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarrollo de in
+terfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos$ 

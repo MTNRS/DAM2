@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Iniciar y detener la grabación de audio",
+    "descripcion": "Permite al usuario iniciar y detener la grabación de su voz a través del micrófono.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "start(), stop()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Transcripción de audio",
+    "funcion": "Transcribir audio grabado",
+    "descripcion": "Convierte el audio grabado en texto utilizando la tecnología Whisper.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "finish()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Formateo de texto",
+    "funcion": "Formatar el texto transcribido",
+    "descripcion": "Genera un formato específico (como email) a partir del texto transcribido utilizando la tecnología Ollama.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "format()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Visualización de audio",
+    "funcion": "Mostrar una visualización del audio grabado",
+    "descripcion": "Muestra una representación gráfica en tiempo real del audio grabado.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "wave()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Guardar mensajes",
+    "descripcion": "Permite guardar los mensajes formateados y originales en la base de datos.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "save()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Eliminar mensajes",
+    "descripcion": "Permite eliminar mensajes específicos de la base de datos.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "remove()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Abrir y editar mensajes",
+    "descripcion": "Permite abrir y editar mensajes previamente guardados.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "openRecord()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Buscar mensajes",
+    "descripcion": "Permite buscar mensajes en la lista basado en un término de búsqueda.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "search()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administración",
+    "funcion": "Mostrar y ocultar el panel de administración",
+    "descripcion": "Permite al usuario navegar entre la vista de edición y el panel de administración.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "showAdmin(), showEditor()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administración",
+    "funcion": "Visualizar mensajes en la tabla de administración",
+    "descripcion": "Muestra una lista de mensajes con opciones para abrir y eliminar.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "renderAdmin()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Estado del sistema",
+    "funcion": "Mostrar el estado actual del sistema",
+    "descripcion": "Muestra mensajes de estado en la interfaz para informar al usuario sobre las operaciones en curso.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "status()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Procesamiento",
+    "funcion": "Indicador de procesamiento",
+    "descripcion": "Muestra un indicador visual durante las operaciones de transcripción y formateo.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "processing()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  }
+]

@@ -1,0 +1,6 @@
+Datetime: 2026-10-29T11:33:49.126Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/003-Acceso a las funciones del gestor de base de datos objeto-relacional/gestor-yaml
+Command: clear
+
+Result:
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/003-Acceso a las funciones del gestor de base de datos objeto-relacional/gestor-yaml$ 

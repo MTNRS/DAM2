@@ -1,0 +1,43 @@
+
+/* Nested Jocarsa-IU navigation: one panel for every selected collection level. */
+#contenido-principal{min-width:0;overflow-x:auto;}
+#navegacion,#entidades,.erp-nested-column{flex:0 0 var(--ancho-nav,220px);min-width:175px;max-width:340px;overflow-y:auto;overflow-x:hidden;}
+.erp-nested-column{display:flex;flex-direction:column;background:var(--color3,#eee);}
+.erp-nested-column .contenido-columna{min-width:0;overflow-y:auto;}
+.erp-nested-column .erp-menu-item,#entidades .erp-menu-item{cursor:pointer;}
+.erp-nested-folder .etiqueta{font-weight:650;}
+.erp-nested-entity .etiqueta{font-weight:400;}
+.erp-nested-empty{padding:12px;color:var(--color0,#555);font-size:.85rem;}
+.erp-nested-separator{flex:0 0 5px;}
+#escenario{flex:1 1 420px;min-width:340px;}
+@media(max-width:800px){#navegacion,#entidades,.erp-nested-column{flex-basis:185px;min-width:155px}#escenario{min-width:300px}}
+
+/* Every generated level uses the same Jocarsa-IU card system. */
+.erp-nested-column{background:var(--color2);color:var(--color0);min-width:0;}
+.erp-nested-column .contenido-columna{padding:var(--relleno,10px);display:flex;flex-direction:column;gap:var(--espaciado,8px);box-sizing:border-box;}
+.erp-nested-column .titulo-columna{font-weight:650;padding:10px 0 8px;}
+.erp-nested-column .erp-menu-item{display:flex!important;align-items:center;gap:9px;min-height:40px;box-sizing:border-box;cursor:pointer;background:var(--color3);color:var(--color0);width:100%;padding:8px;clip-path:polygon(0 0,calc(100% - var(--chaflan,10px)) 0,100% var(--chaflan,10px),100% 100%,0 100%);border:0;}
+.erp-nested-column .erp-menu-item:hover{filter:brightness(1.045)}
+.erp-nested-column .erp-menu-item:focus-visible{outline:2px solid var(--color0);outline-offset:2px}
+.erp-nested-column .erp-menu-item.activo{background:var(--color3);filter:brightness(1.08);clip-path:polygon(0 0,100% 0,100% 100%,0 100%);width:calc(100% + var(--relleno,10px));position:relative;z-index:3}
+.erp-nested-column .erp-menu-item .ficha{display:grid;place-items:center;flex:0 0 30px;height:30px;background:var(--erp-ficha-color);color:#fff;font-weight:700;}
+.erp-nested-column .erp-menu-item .etiqueta{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.erp-nested-column .erp-nested-folder .etiqueta{font-weight:650;}
+.erp-nested-column .erp-nested-entity .etiqueta{font-weight:400;}
+
+/* V3: unified navigation cards at every depth */
+.erp-nested-column{background:var(--color2)!important;}
+.erp-nested-column .contenido-columna{padding:0 8px 12px!important;gap:8px!important;}
+.erp-nested-column .erp-menu-item{min-height:42px!important;background:var(--color3)!important;box-shadow:none!important;padding:7px 9px!important;gap:8px!important;}
+.erp-nested-column .erp-menu-item .ficha{height:30px;width:30px;flex:0 0 30px;clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
+.erp-nested-column .erp-menu-item.activo{background:var(--color3)!important;filter:brightness(1.08);box-shadow:inset 4px 0 #fff!important;clip-path:polygon(0 0,100% 0,100% 100%,0 100%)!important;}
+.erp-nested-column .erp-menu-item.activo .ficha{clip-path:polygon(0 0,calc(100% - 7px) 0,100% 7px,100% 100%,0 100%)}
+/* Header actions replace obsolete search and new buttons */
+body.jocarsa-iu > header{display:flex;align-items:center;min-width:0;}
+body.jocarsa-iu > header #herramientas.erp-header-actions{display:flex;flex:1 1 auto;min-width:0;align-items:center;justify-content:flex-end;gap:5px;overflow-x:auto;scrollbar-width:thin;padding:3px 6px;}
+body.jocarsa-iu > header #herramientas.erp-header-actions button,
+body.jocarsa-iu > header #herramientas.erp-header-actions select{flex:0 0 auto;width:auto;max-width:165px;margin:0;white-space:nowrap;font-size:11px;padding:7px 8px;min-height:30px;}
+body.jocarsa-iu > header #herramientas.erp-header-actions select{background:#fff;color:#44230f;}
+body.jocarsa-iu > header #usuario{flex-shrink:0;}
+.erp-toolbar{display:flex;align-items:center;min-height:55px;}
+.erp-toolbar > div:first-child{width:100%;}

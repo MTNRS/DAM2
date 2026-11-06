@@ -1,0 +1,52 @@
+[
+  {
+    "modulo": "Configuración de directorio",
+    "funcion": "Deshabilitar listado de directorios",
+    "descripcion": "Evita que se muestre el contenido del directorio al acceder a él.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Options -Indexes",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Configuración de archivo índice",
+    "funcion": "Establecer archivo índice predeterminado",
+    "descripcion": "Define 'index.php' como el archivo que se cargará por defecto cuando se accede a un directorio.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "DirectoryIndex index.php",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Protección de archivos sensibles",
+    "funcion": "Denegar acceso a archivos específicos",
+    "descripcion": "Evita el acceso directo a archivos como '.env' y '.env.example'.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "<FilesMatch \"^(\\.env|\\.env\\.example)$\"> Require all denied </FilesMatch>",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Redirección y reescritura de URL",
+    "funcion": "Activar el motor de redirección",
+    "descripcion": "Habilita la capacidad de redirigir o reescribir URLs.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "RewriteEngine On",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Restricción de acceso a directorios",
+    "funcion": "Bloquear acceso a ciertos directorios",
+    "descripcion": "Impide el acceso directo a los directorios 'src', 'database' y 'tools'.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "RewriteRule ^(?:src|database|tools)(?:/|$) - [F,L]",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  }
+]

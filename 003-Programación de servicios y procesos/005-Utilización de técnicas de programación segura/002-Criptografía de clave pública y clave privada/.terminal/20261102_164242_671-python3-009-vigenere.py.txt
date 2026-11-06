@@ -1,0 +1,19 @@
+Datetime: 2026-11-02T15:42:42.671Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada
+Command: python3 009-vigenere.py
+
+Result:
+J , 74 , 79 , O , E , 69 , 
+o , 111 , 116 , t , s , 115 , ç
+s , 115 , 120 , x , t , 116 , ì
+e , 101 , 106 , j , o , 111 , Ù
+  , 32 , 37 , % ,   , 32 , E
+V , 86 , 91 , [ , e , 101 , À
+i , 105 , 110 , n , s , 115 , á
+c , 99 , 104 , h ,   , 32 , 
+e , 101 , 106 , j , u , 117 , ß
+n , 110 , 115 , s , n , 110 , á
+t , 116 , 121 , y ,   , 32 , 
+e , 101 , 106 , j , t , 116 , Þ
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y proceso
+s/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada$ 

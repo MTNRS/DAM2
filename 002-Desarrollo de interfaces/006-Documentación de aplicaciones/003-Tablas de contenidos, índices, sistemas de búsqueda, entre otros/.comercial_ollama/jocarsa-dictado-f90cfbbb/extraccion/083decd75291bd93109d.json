@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Chat",
+    "funcion": "Dictado de voz a texto",
+    "descripcion": "Permite transcribir el habla del usuario en formato de texto.",
+    "usuarios": "Usuarios finales",
+    "confianza": "inferida",
+    "evidencia": "Ollama",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Chat",
+    "funcion": "Generación de respuesta",
+    "descripcion": "Permite generar respuestas basadas en el texto transcribido.",
+    "usuarios": "Usuarios finales",
+    "confianza": "inferida",
+    "evidencia": "/api/chat y /api/generate",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Indicadores de carga animados",
+    "descripcion": "Muestra indicadores visuales para mostrar el progreso del procesamiento de la transcripción y la generación de respuestas.",
+    "usuarios": "Usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "Whisper (transcription) and Ollama (formatting)",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Tema oscuro",
+    "descripcion": "Mantiene un tema oscuro en la interfaz de usuario.",
+    "usuarios": "Usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "Preserves darkblue theme",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Diseño y disposición",
+    "descripcion": "Mantiene el diseño y la disposición de la interfaz de usuario.",
+    "usuarios": "Usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "layout",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de datos",
+    "funcion": "Preservación de mensajes demostrativos",
+    "descripcion": "Mantiene los mensajes demostrativos en la base de datos.",
+    "usuarios": "Desarrolladores y usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "seeded demonstration messages",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Modelo de procesamiento",
+    "funcion": "Actualización secuencial del modelo GPU",
+    "descripcion": "Permite la actualización secuencial del modelo GPU.",
+    "usuarios": "Desarrolladores y usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "sequential GPU model release",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Listado de modelos Ollama",
+    "descripcion": "Permite listar los modelos Ollama disponibles.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`ollama list`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Estado de procesos Ollama",
+    "descripcion": "Permite verificar el estado de los procesos Ollama.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`ollama ps`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Prueba de API tags",
+    "descripcion": "Permite probar la API de etiquetas Ollama.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`curl http://127.0.0.1:11434/api/tags`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Configuración de modelo Ollama",
+    "descripcion": "Permite configurar el modelo Ollama utilizado.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`OLLAMA_MODEL=your-model-name python3 app.py`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Registro de errores",
+    "descripcion": "Registra los errores en la consola de Flask y los muestra en la interfaz de usuario.",
+    "usuarios": "Desarrolladores y usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "Errors are logged in the Flask console and surfaced in the UI",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  }
+]

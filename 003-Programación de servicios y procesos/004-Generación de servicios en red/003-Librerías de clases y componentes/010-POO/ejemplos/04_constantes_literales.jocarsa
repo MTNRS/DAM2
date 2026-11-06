@@ -1,0 +1,20 @@
+# Fase 4: constantes y literales
+constante PI = 3.14159
+constante MENSAJE = "Hola desde jocarsa | lenguaje"
+constante ACTIVO = verdadero
+constante INACTIVO = falso
+constante VACIO = nulo
+
+escribir(MENSAJE)
+escribir(PI)
+escribir(tipo(PI))
+escribir(ACTIVO)
+escribir(INACTIVO)
+escribir(VACIO)
+escribir(42)
+escribir(12.5)
+escribir("Un literal de texto")
+
+valor = 10
+valor = "Ahora soy texto"
+escribir(valor)

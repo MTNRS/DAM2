@@ -1,0 +1,6 @@
+x = 10
+funcion cambio(x):
+    x = x + 5
+    retornar x
+escribir(cambio(20))
+escribir(x)

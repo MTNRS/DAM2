@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Correo",
+    "funcion": "Verificación de cuerpo del correo",
+    "descripcion": "Permite verificar el contenido del correo mediante un inventario de palabras normalizado, descartando cambios en singular/plural o verbos.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- El cuerpo del correo se verifica mediante un inventario de palabras normalizado.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Manejo de tildes y mayúsculas",
+    "descripcion": "Permite cambios en tildes y mayúsculas durante la verificación, conservando el texto original.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La comparación permite cambios de tildes y mayúsculas; conserva el texto original en SQLite.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Control literal del dictado",
+    "descripcion": "Permite usar una maquetación literal del dictado sin invenciones si Ollama cambia palabras, singular/plural o verbos.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Si Ollama cambia palabras, singular/plural o verbos, se descarta su cuerpo y se usa una maquetación literal del dictado, sin invenciones.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Almacenamiento de texto original",
+    "descripcion": "Conserva el texto original en SQLite durante la verificación.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La comparación permite cambios de tildes y mayúsculas; conserva el texto original en SQLite.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Verificación limitada a español",
+    "descripcion": "Aplica el control literal solo a salidas en español, no permitiendo este control en traducciones a otros idiomas.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La verificación se aplica a salidas en español; las traducciones a otros idiomas no admiten este control literal.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Reproductor con waveform",
+    "descripcion": "Incluye un reproductor de grabación con una representación visual de la onda de sonido (waveform), permitiendo play/pausa, saltos de 5 segundos y búsqueda sobre la onda.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Se añade reproductor de la grabación con waveform calculada del audio real, play/pausa, saltos de 5 segundos, volumen y búsqueda sobre la onda.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Mostrar waveform en directo",
+    "descripcion": "Muestra la representación visual de la onda de sonido (waveform) mientras se graba el audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La grabación sigue mostrando waveform en directo.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Control de volumen",
+    "descripcion": "Permite controlar el volumen durante la reproducción del audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Se añade reproductor de la grabación con waveform calculada del audio real, play/pausa, saltos de 5 segundos, volumen y búsqueda sobre la onda.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Búsqueda en waveform",
+    "descripcion": "Permite buscar en la representación visual de la onda de sonido (waveform) durante la reproducción del audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Se añade reproductor de la grabación con waveform calculada del audio real, play/pausa, saltos de 5 segundos, volumen y búsqueda sobre la onda.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Mantener audios en memoria",
+    "descripcion": "Mantiene los audios en memoria en el navegador mientras el registro esté abierto.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Los audios se mantienen en memoria en el navegador mientras el registro esté abierto; no se guardan en SQLite, como en v9.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "No guardar audios en SQLite",
+    "descripcion": "No guarda los audios en la base de datos SQLite.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Los audios se mantienen en memoria en el navegador mientras el registro esté abierto; no se guardan en SQLite, como en v9.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Diferencia con versión anterior",
+    "descripcion": "Mantiene una diferencia respecto a la versión anterior (v9) al no guardar los audios en SQLite.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Los audios se mantienen en memoria en el navegador mientras el registro esté abierto; no se guardan en SQLite, como en v9.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  }
+]

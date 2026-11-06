@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Diseño de interfaz",
+    "funcion": "Organización de tarjetas horizontales",
+    "descripcion": "Permite la visualización de tres tarjetas horizontales dentro del panel derecho.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".editor-layout",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Diseño de interfaz",
+    "funcion": "Ajuste responsivo",
+    "descripcion": "Permite el ajuste automático del diseño para diferentes tamaños de pantalla.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "@media(max-width:1450px), @media(max-width:1080px)",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Diseño de interfaz",
+    "funcion": "Estilo de marca",
+    "descripcion": "Aplica un estilo de marca con colores específicos.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#audio-visual, #mensajes article.activo",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Indicadores de procesamiento",
+    "funcion": "Mostrar indicadores de trabajo asíncrono",
+    "descripcion": "Permite la visualización de indicadores para mostrar el estado del procesamiento asíncrono.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".processing-indicator, .inline-spinner",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Mostrar reproductor de onda de audio",
+    "descripcion": "Permite la visualización de un reproductor de onda de audio basado en la grabación real.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".audio-player",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Control de volumen",
+    "descripcion": "Permite el control del volumen en el reproductor de audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#audio-volume",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Botones de control",
+    "descripcion": "Permite la interacción con botones de control en el reproductor de audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".audio-player-controls button",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Posición del audio",
+    "descripcion": "Permite la visualización de la posición actual en el reproductor de audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#audio-position",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Onda de audio interactiva",
+    "descripcion": "Permite la interacción con la onda de audio en el reproductor.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#recorded-wave",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Tarjeta de transcripción",
+    "funcion": "Entrada de texto",
+    "descripcion": "Permite la entrada de texto en la tarjeta de transcripción.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".transcription-card #entrada",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Tarjeta final",
+    "funcion": "Resultado de procesamiento",
+    "descripcion": "Permite la visualización del resultado de procesamiento en la tarjeta final.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".final-card #resultado",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Tarjeta final",
+    "funcion": "Asunto del resultado",
+    "descripcion": "Permite la visualización del asunto del resultado en la tarjeta final.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".final-card #asuntoresultado",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  }
+]

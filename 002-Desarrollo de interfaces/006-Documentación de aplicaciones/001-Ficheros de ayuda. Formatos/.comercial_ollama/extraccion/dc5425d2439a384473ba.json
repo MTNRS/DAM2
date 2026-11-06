@@ -1,0 +1,42 @@
+[
+  {
+    "modulo": ".gitignore",
+    "funcion": "Ignorar archivos de configuración",
+    "descripcion": "Permite excluir archivos de configuración sensibles como variables de entorno (.env) del seguimiento de versiones.",
+    "usuarios": "Desarrolladores y administradores de sistemas",
+    "confianza": "verificada",
+    "evidencia": ".env",
+    "archivo": ".gitignore",
+    "fragmento": 1
+  },
+  {
+    "modulo": ".gitignore",
+    "funcion": "Ignorar archivos de base de datos SQLite",
+    "descripcion": "Excluye archivos de bases de datos SQLite (.sqlite) para evitar el seguimiento accidental de datos sensibles.",
+    "usuarios": "Desarrolladores y administradores de sistemas",
+    "confianza": "verificada",
+    "evidencia": "/database/*.sqlite",
+    "archivo": ".gitignore",
+    "fragmento": 1
+  },
+  {
+    "modulo": ".gitignore",
+    "funcion": "Ignorar archivos auxiliares de base de datos SQLite",
+    "descripcion": "Excluye archivos auxiliares generados por SQLite (.sqlite-shm, .sqlite-wal, .sqlite-journal) para mantener el repositorio limpio.",
+    "usuarios": "Desarrolladores y administradores de sistemas",
+    "confianza": "verificada",
+    "evidencia": "/database/*.sqlite-shm, /database/*.sqlite-wal, /database/*.sqlite-journal",
+    "archivo": ".gitignore",
+    "fragmento": 1
+  },
+  {
+    "modulo": ".gitignore",
+    "funcion": "Ignorar archivos de clave de base de datos",
+    "descripcion": "Excluye archivos de claves de base de datos (.key) para proteger la información sensible relacionada con el acceso a la base de datos.",
+    "usuarios": "Desarrolladores y administradores de sistemas",
+    "confianza": "verificada",
+    "evidencia": "/database/*.key",
+    "archivo": ".gitignore",
+    "fragmento": 1
+  }
+]

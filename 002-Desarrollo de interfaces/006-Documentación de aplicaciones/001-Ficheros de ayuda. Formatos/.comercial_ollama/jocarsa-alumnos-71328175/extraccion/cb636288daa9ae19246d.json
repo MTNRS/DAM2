@@ -1,0 +1,112 @@
+[
+  {
+    "modulo": "Estadísticas de estudiantes",
+    "funcion": "Mostrar progreso global de los estudiantes",
+    "descripcion": "Muestra el progreso de los estudiantes en términos de alumnos que no han empezado, están en progreso y han completado la tarea.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$globalProgress",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Estadísticas de grupos",
+    "funcion": "Mostrar estadísticas por grupo",
+    "descripcion": "Proporciona estadísticas detalladas sobre los grupos, incluyendo el número de estudiantes, respuestas, palabras y caracteres.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$groups",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Estadísticas de campos de perfil",
+    "funcion": "Mostrar estadísticas por campo de perfil",
+    "descripcion": "Muestra estadísticas detalladas sobre los campos de perfil, incluyendo el número de respuestas, palabras y caracteres.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$fields",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Estadísticas por sección",
+    "funcion": "Mostrar estadísticas por sección",
+    "descripcion": "Proporciona estadísticas detalladas sobre las secciones, incluyendo el número de campos, respuestas, palabras y caracteres.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$sections",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Estadísticas de estudiantes individuales",
+    "funcion": "Mostrar estadísticas por estudiante",
+    "descripcion": "Muestra estadísticas detalladas sobre cada estudiante, incluyendo el número de respuestas, palabras y caracteres.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$students",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Resumen general",
+    "funcion": "Mostrar resumen estadístico global",
+    "descripcion": "Proporciona un resumen estadístico global de los estudiantes, incluyendo el número total de estudiantes, respuestas y palabras.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$summary",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Alertas",
+    "funcion": "Mostrar alertas importantes",
+    "descripcion": "Muestra alertas sobre alumnos sin empezar, campos pendientes, preguntas con menos de la mitad de respuestas y grupos con progreso bajo.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$alerts",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Estadísticas por rango de completitud",
+    "funcion": "Mostrar estadísticas por rango de completitud",
+    "descripcion": "Muestra el número de estudiantes en diferentes rangos de completitud (0%, 1-25%, etc.).",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$completionBuckets",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Estadísticas por rango de palabras",
+    "funcion": "Mostrar estadísticas por rango de palabras",
+    "descripcion": "Muestra el número de estudiantes en diferentes rangos de palabras (0, 1-100, etc.).",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$wordBuckets",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Campos completados",
+    "funcion": "Mostrar campos más completados",
+    "descripcion": "Muestra los campos de perfil que están más completados.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$mostCompletedFields",
+    "archivo": "api.php",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Campos menos completados",
+    "funcion": "Mostrar campos menos completados",
+    "descripcion": "Muestra los campos de perfil que están menos completados.",
+    "usuarios": "Profesores o administradores",
+    "confianza": "verificada",
+    "evidencia": "$leastCompletedFields",
+    "archivo": "api.php",
+    "fragmento": 3
+  }
+]

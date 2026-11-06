@@ -1,0 +1,33 @@
+Datetime: 2026-11-02T14:08:37.947Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/004-Generación de servicios en red/002-Servicios web
+Command: ./a.out
+
+Result:
+Servidor en http://localhost:8000
+GET /
+GET /.well-known/appspecific/com.chrome.devtools.json
+GET /estilos.css
+GET /favicon.ico
+GET /index.html
+GET /estilos.css
+GET /.well-known/appspecific/com.chrome.devtools.json
+GET /favicon.ico
+GET /sobre-mi.html
+GET /.well-known/appspecific/com.chrome.devtools.json
+GET /estilos.css
+GET /favicon.ico
+GET /especialidades.html
+GET /.well-known/appspecific/com.chrome.devtools.json
+GET /estilos.css
+GET /favicon.ico
+GET /proyectos.html
+GET /.well-known/appspecific/com.chrome.devtools.json
+GET /estilos.css
+GET /favicon.ico
+GET /contacto.html
+GET /.well-known/appspecific/com.chrome.devtools.json
+GET /estilos.css
+GET /favicon.ico
+^C
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de
+ servicios y procesos/004-Generación de servicios en red/002-Servicios web$ 

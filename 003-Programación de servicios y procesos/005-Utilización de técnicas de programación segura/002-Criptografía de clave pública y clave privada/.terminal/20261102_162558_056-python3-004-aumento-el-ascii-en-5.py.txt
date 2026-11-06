@@ -1,0 +1,32 @@
+Datetime: 2026-11-02T15:25:58.056Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada
+Command: python3 004-aumento\ el\ ascii\ en\ 5.py
+
+Result:
+/var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada/004-aumento el ascii en 5.py:6: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  print(letra,":",ord(letra),"-"(ord(letra)+5))
+Jose Vicente
+J
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada/004-aumento el ascii en 5.py", line 6, in <module>
+    print(letra,":",ord(letra),"-"(ord(letra)+5))
+                               ^^^^^^^^^^^^^^^^^
+TypeError: 'str' object is not callable
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_003-Programación de servicios y procesos_005-Utilización de técnicas de programación segura_002-Criptografía de clave pública y clave privada_004-aumento el ascii en 5.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada/004-aumento el ascii en 5.py", line 6, in <module>
+    print(letra,":",ord(letra),"-"(ord(letra)+5))
+                               ^^^^^^^^^^^^^^^^^
+TypeError: 'str' object is not callable
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación d
+e servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada$ 

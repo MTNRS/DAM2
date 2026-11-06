@@ -1,0 +1,32 @@
+[
+  {
+    "modulo": "Seguridad",
+    "funcion": "Manejo de claves de acceso",
+    "descripcion": "Permite almacenar y gestionar claves de acceso a bases de datos",
+    "usuarios": "Administradores de sistemas",
+    "confianza": "verificada",
+    "evidencia": ".database/*.key",
+    "archivo": ".gitignore",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de Datos",
+    "funcion": "Ignorar archivos temporales de base de datos",
+    "descripcion": "Evita que archivos temporales de base de datos SQLite sean incluidos en el control de versiones",
+    "usuarios": "Desarrolladores y administradores de sistemas",
+    "confianza": "verificada",
+    "evidencia": ".database/*.sqlite-shm, .database/*.sqlite-wal, .database/*.sqlite-journal",
+    "archivo": ".gitignore",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de Datos",
+    "funcion": "Ignorar archivos de base de datos SQLite",
+    "descripcion": "Evita que archivos de base de datos SQLite sean incluidos en el control de versiones",
+    "usuarios": "Desarrolladores y administradores de sistemas",
+    "confianza": "verificada",
+    "evidencia": ".database/*.sqlite",
+    "archivo": ".gitignore",
+    "fragmento": 1
+  }
+]

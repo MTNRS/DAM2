@@ -1,0 +1,21 @@
+clase Animal:
+    funcion iniciar(yo, nombre):
+        yo.nombre = nombre
+    funcion hablar(yo):
+        retornar "..."
+
+clase Perro(Animal):
+    funcion hablar(yo):
+        retornar "Guau " + yo.nombre
+
+perro = Perro("Toby")
+escribir(perro.nombre)
+escribir(perro.hablar())
+
+clase Gato(Animal):
+    funcion saltar(yo):
+        retornar yo.nombre + " salta"
+
+gato = Gato("Misu")
+escribir(gato.hablar())
+escribir(gato.saltar())

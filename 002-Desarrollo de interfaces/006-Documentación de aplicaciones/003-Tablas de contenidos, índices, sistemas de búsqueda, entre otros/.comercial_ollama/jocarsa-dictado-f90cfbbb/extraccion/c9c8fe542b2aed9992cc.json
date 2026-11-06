@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Logo y favicon",
+    "funcion": "Visualización de logo y favicon personalizados",
+    "descripcion": "Permite mostrar un logo y favicon específicos en la interfaz del usuario.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "https://static.jocarsa.com/logos/darkblue.svg",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Paleta de colores",
+    "funcion": "Aplicación de paleta darkblue",
+    "descripcion": "Permite aplicar una paleta de colores específica (darkblue) en las tres columnas y el editor.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Mensajes demostrativos",
+    "funcion": "Incorporación de mensajes ficticios",
+    "descripcion": "Permite incorporar 16 mensajes ficticios en español para una demostración pública.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Estructura del editor",
+    "funcion": "Conservación de la estructura horizontal",
+    "descripcion": "Permite mantener la estructura del editor horizontal en la interfaz.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Integración de Whisper",
+    "funcion": "Uso local de Whisper",
+    "descripcion": "Permite utilizar Whisper de manera local en la aplicación.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Integración de Ollama",
+    "funcion": "Uso de Ollama",
+    "descripcion": "Permite utilizar Ollama en la aplicación.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Actualización sin pérdida de datos",
+    "funcion": "Proceso de actualización seguro",
+    "descripcion": "Permite actualizar la aplicación sin perder los mensajes propios del usuario.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de datos SQLite",
+    "funcion": "Conservación de la base de datos existente",
+    "descripcion": "Permite conservar la base de datos SQLite existente durante el proceso de actualización.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Incorporación de ejemplos",
+    "funcion": "Adición de mensajes demostrativos a la base existente",
+    "descripcion": "Permite incorporar los 16 ejemplos ficticios a la base de datos existente sin duplicarlos.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "python3 seed_demo.py",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Instalación nueva",
+    "funcion": "Proceso de instalación para nuevos usuarios",
+    "descripcion": "Permite una instalación nueva que incluye una base de datos SQLite ya poblada con los 16 ejemplos ficticios.",
+    "usuarios": "Nuevos usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Mensajes demostrativos",
+    "funcion": "Etiquetado de mensajes demostrativos",
+    "descripcion": "Permite etiquetar los mensajes ficticios con `modelo=demo` y `estado=demostracion`.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Recarga de la interfaz",
+    "funcion": "Recarga manual de la página",
+    "descripcion": "Permite recargar la interfaz del usuario utilizando Ctrl+Shift+R.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  }
+]

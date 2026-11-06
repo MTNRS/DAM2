@@ -1,0 +1,1582 @@
+[
+  {
+    "modulo": "Correo",
+    "funcion": "Verificación de cuerpo del correo",
+    "descripcion": "Permite verificar el contenido del correo mediante un inventario de palabras normalizado, descartando cambios en singular/plural o verbos.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- El cuerpo del correo se verifica mediante un inventario de palabras normalizado.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Manejo de tildes y mayúsculas",
+    "descripcion": "Permite cambios en tildes y mayúsculas durante la verificación, conservando el texto original.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La comparación permite cambios de tildes y mayúsculas; conserva el texto original en SQLite.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Control literal del dictado",
+    "descripcion": "Permite usar una maquetación literal del dictado sin invenciones si Ollama cambia palabras, singular/plural o verbos.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Si Ollama cambia palabras, singular/plural o verbos, se descarta su cuerpo y se usa una maquetación literal del dictado, sin invenciones.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Almacenamiento de texto original",
+    "descripcion": "Conserva el texto original en SQLite durante la verificación.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La comparación permite cambios de tildes y mayúsculas; conserva el texto original en SQLite.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Correo",
+    "funcion": "Verificación limitada a español",
+    "descripcion": "Aplica el control literal solo a salidas en español, no permitiendo este control en traducciones a otros idiomas.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La verificación se aplica a salidas en español; las traducciones a otros idiomas no admiten este control literal.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Reproductor con waveform",
+    "descripcion": "Incluye un reproductor de grabación con una representación visual de la onda de sonido (waveform), permitiendo play/pausa, saltos de 5 segundos y búsqueda sobre la onda.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Se añade reproductor de la grabación con waveform calculada del audio real, play/pausa, saltos de 5 segundos, volumen y búsqueda sobre la onda.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Mostrar waveform en directo",
+    "descripcion": "Muestra la representación visual de la onda de sonido (waveform) mientras se graba el audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- La grabación sigue mostrando waveform en directo.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Control de volumen",
+    "descripcion": "Permite controlar el volumen durante la reproducción del audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Se añade reproductor de la grabación con waveform calculada del audio real, play/pausa, saltos de 5 segundos, volumen y búsqueda sobre la onda.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Búsqueda en waveform",
+    "descripcion": "Permite buscar en la representación visual de la onda de sonido (waveform) durante la reproducción del audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Se añade reproductor de la grabación con waveform calculada del audio real, play/pausa, saltos de 5 segundos, volumen y búsqueda sobre la onda.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Mantener audios en memoria",
+    "descripcion": "Mantiene los audios en memoria en el navegador mientras el registro esté abierto.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Los audios se mantienen en memoria en el navegador mientras el registro esté abierto; no se guardan en SQLite, como en v9.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "No guardar audios en SQLite",
+    "descripcion": "No guarda los audios en la base de datos SQLite.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Los audios se mantienen en memoria en el navegador mientras el registro esté abierto; no se guardan en SQLite, como en v9.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Diferencia con versión anterior",
+    "descripcion": "Mantiene una diferencia respecto a la versión anterior (v9) al no guardar los audios en SQLite.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "- Los audios se mantienen en memoria en el navegador mientras el registro esté abierto; no se guardan en SQLite, como en v9.",
+    "archivo": "README-v10.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Transcripción",
+    "funcion": "Dictado a texto",
+    "descripcion": "Permite convertir el habla en texto utilizando Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "Ollama propone asunto y estructura de párrafos, pero el cuerpo final se reconstruye exclusivamente desde las palabras de la transcripción original.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Reproductor",
+    "funcion": "Reproducción de onda sonora",
+    "descripcion": "Mantiene el reproductor waveform de v10.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "Se conserva el reproductor waveform de v10.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Instalación",
+    "funcion": "Actualización del software",
+    "descripcion": "Permite actualizar la aplicación desde v10 a v11.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "Instalación: respalda tu SQLite y sustituye `app.py` de v10 por el de v11; reinicia Flask.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Proyecto completo",
+    "funcion": "Descarga del proyecto",
+    "descripcion": "Ofrece la posibilidad de descargar el proyecto completo en formato ZIP.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "El ZIP también contiene el proyecto completo.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de datos",
+    "funcion": "Mantenimiento de la base de datos",
+    "descripcion": "No modifica la base de datos existente durante la actualización.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "No se modifica la base de datos existente.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Formato de texto",
+    "funcion": "Deducción de párrafos",
+    "descripcion": "Intenta deducir los párrafos basándose en las pausas y puntuación generadas por Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "inferida",
+    "evidencia": "El formato depende de las pausas/puntuación de Whisper. Si Whisper no introduce puntos ni separa el saludo, la aplicación no puede deducir con seguridad todos los párrafos.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Resumen",
+    "funcion": "Resumen del asunto",
+    "descripcion": "Permite resumir el asunto de la transcripción.",
+    "usuarios": "No determinado",
+    "confianza": "inferida",
+    "evidencia": "El asunto sí puede resumirse.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Chat",
+    "funcion": "Dictado de voz a texto",
+    "descripcion": "Permite transcribir el habla del usuario en formato de texto.",
+    "usuarios": "Usuarios finales",
+    "confianza": "inferida",
+    "evidencia": "Ollama",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Chat",
+    "funcion": "Generación de respuesta",
+    "descripcion": "Permite generar respuestas basadas en el texto transcribido.",
+    "usuarios": "Usuarios finales",
+    "confianza": "inferida",
+    "evidencia": "/api/chat y /api/generate",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Indicadores de carga animados",
+    "descripcion": "Muestra indicadores visuales para mostrar el progreso del procesamiento de la transcripción y la generación de respuestas.",
+    "usuarios": "Usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "Whisper (transcription) and Ollama (formatting)",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Tema oscuro",
+    "descripcion": "Mantiene un tema oscuro en la interfaz de usuario.",
+    "usuarios": "Usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "Preserves darkblue theme",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Diseño y disposición",
+    "descripcion": "Mantiene el diseño y la disposición de la interfaz de usuario.",
+    "usuarios": "Usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "layout",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de datos",
+    "funcion": "Preservación de mensajes demostrativos",
+    "descripcion": "Mantiene los mensajes demostrativos en la base de datos.",
+    "usuarios": "Desarrolladores y usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "seeded demonstration messages",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Modelo de procesamiento",
+    "funcion": "Actualización secuencial del modelo GPU",
+    "descripcion": "Permite la actualización secuencial del modelo GPU.",
+    "usuarios": "Desarrolladores y usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "sequential GPU model release",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Listado de modelos Ollama",
+    "descripcion": "Permite listar los modelos Ollama disponibles.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`ollama list`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Estado de procesos Ollama",
+    "descripcion": "Permite verificar el estado de los procesos Ollama.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`ollama ps`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Prueba de API tags",
+    "descripcion": "Permite probar la API de etiquetas Ollama.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`curl http://127.0.0.1:11434/api/tags`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Configuración de modelo Ollama",
+    "descripcion": "Permite configurar el modelo Ollama utilizado.",
+    "usuarios": "Desarrolladores",
+    "confianza": "verificada",
+    "evidencia": "`OLLAMA_MODEL=your-model-name python3 app.py`",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diagnóstico",
+    "funcion": "Registro de errores",
+    "descripcion": "Registra los errores en la consola de Flask y los muestra en la interfaz de usuario.",
+    "usuarios": "Desarrolladores y usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "Errors are logged in the Flask console and surfaced in the UI",
+    "archivo": "README-v9.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Logo y favicon",
+    "funcion": "Visualización de logo y favicon personalizados",
+    "descripcion": "Permite mostrar un logo y favicon específicos en la interfaz del usuario.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "https://static.jocarsa.com/logos/darkblue.svg",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Paleta de colores",
+    "funcion": "Aplicación de paleta darkblue",
+    "descripcion": "Permite aplicar una paleta de colores específica (darkblue) en las tres columnas y el editor.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Mensajes demostrativos",
+    "funcion": "Incorporación de mensajes ficticios",
+    "descripcion": "Permite incorporar 16 mensajes ficticios en español para una demostración pública.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Estructura del editor",
+    "funcion": "Conservación de la estructura horizontal",
+    "descripcion": "Permite mantener la estructura del editor horizontal en la interfaz.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Integración de Whisper",
+    "funcion": "Uso local de Whisper",
+    "descripcion": "Permite utilizar Whisper de manera local en la aplicación.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Integración de Ollama",
+    "funcion": "Uso de Ollama",
+    "descripcion": "Permite utilizar Ollama en la aplicación.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Actualización sin pérdida de datos",
+    "funcion": "Proceso de actualización seguro",
+    "descripcion": "Permite actualizar la aplicación sin perder los mensajes propios del usuario.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de datos SQLite",
+    "funcion": "Conservación de la base de datos existente",
+    "descripcion": "Permite conservar la base de datos SQLite existente durante el proceso de actualización.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Incorporación de ejemplos",
+    "funcion": "Adición de mensajes demostrativos a la base existente",
+    "descripcion": "Permite incorporar los 16 ejemplos ficticios a la base de datos existente sin duplicarlos.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "python3 seed_demo.py",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Instalación nueva",
+    "funcion": "Proceso de instalación para nuevos usuarios",
+    "descripcion": "Permite una instalación nueva que incluye una base de datos SQLite ya poblada con los 16 ejemplos ficticios.",
+    "usuarios": "Nuevos usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Mensajes demostrativos",
+    "funcion": "Etiquetado de mensajes demostrativos",
+    "descripcion": "Permite etiquetar los mensajes ficticios con `modelo=demo` y `estado=demostracion`.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Recarga de la interfaz",
+    "funcion": "Recarga manual de la página",
+    "descripcion": "Permite recargar la interfaz del usuario utilizando Ctrl+Shift+R.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "No especificado",
+    "archivo": "README.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Transcripción de audio a texto",
+    "descripcion": "Permite transcribir archivos de audio en formato WAV a texto utilizando el modelo Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "transcribe_local",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Generación de asunto y cuerpo de correo electrónico",
+    "descripcion": "Utiliza el modelo Ollama para generar un asunto y cuerpo de correo electrónico basado en una transcripción proporcionada.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "ollama",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Almacenamiento de mensajes en base de datos",
+    "descripcion": "Guarda transcripciones, asuntos y cuerpos de correo electrónicos en una base de datos SQLite.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "init_db",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de modelos Ollama",
+    "descripcion": "Carga y descarga el modelo Ollama para generar respuestas basadas en prompts.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "ollama, unload_ollama",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de modelos Whisper",
+    "descripcion": "Carga y libera el modelo Whisper para transcribir audio a texto.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "transcribe_local, release_whisper",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Comparación de tokens lexicales",
+    "descripcion": "Compara los tokens lexicales de una transcripción original y su versión procesada para asegurar la fidelidad del texto.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "lexical_tokens, faithful_body",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Formateo literal de texto",
+    "descripcion": "Ajusta el formato del texto transcribido para mantener la estructura original sin cambiar las palabras.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "literal_layout",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Configuración de entorno",
+    "descripcion": "Permite configurar variables de entorno para ajustar el comportamiento del sistema, como la URL del modelo Ollama y el dispositivo utilizado por Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "variables de entorno",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de errores y logging",
+    "descripcion": "Registra errores y advertencias durante el procesamiento de solicitudes para facilitar la depuración.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "app.logger.warning",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Control de concurrencia",
+    "descripcion": "Utiliza un bloqueo para serializar solicitudes y evitar que múltiples procesos utilicen la GPU simultáneamente.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "_gpu_lock",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de memoria",
+    "descripcion": "Libera recursos y vacía la caché de GPU para evitar problemas de memoria insuficiente.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "release_whisper, torch.cuda.empty_cache",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Configuración de límites de contenido",
+    "descripcion": "Establece un límite máximo para el tamaño del contenido que se puede procesar en una sola solicitud.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "app.config['MAX_CONTENT_LENGTH']",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Transcripción de audio",
+    "descripcion": "Permite transcribir grabaciones de audio a texto.",
+    "usuarios": "Usuarios que necesitan convertir audios en texto.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/transcribe')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Formateo de texto",
+    "descripcion": "Permite formatear y estructurar textos según diferentes tipos (email, WhatsApp, social media, documento).",
+    "usuarios": "Usuarios que necesitan mejorar la presentación de sus textos.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/format')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Procesamiento combinado de audio y texto",
+    "descripcion": "Permite procesar una grabación de audio para obtener su transcripción y luego formatearla.",
+    "usuarios": "Usuarios que necesitan un flujo completo de transcripción y formateo.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/process')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Guardado de mensajes",
+    "descripcion": "Permite guardar mensajes con sus versiones originales, formateadas y otros detalles.",
+    "usuarios": "Usuarios que necesitan almacenar y gestionar sus mensajes.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/save')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Consulta de mensajes",
+    "descripcion": "Permite obtener una lista de los últimos mensajes almacenados.",
+    "usuarios": "Usuarios que necesitan consultar sus mensajes guardados.",
+    "confianza": "verificada",
+    "evidencia": "app.get('/api/messages')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Edición manual de mensajes",
+    "descripcion": "Permite editar manualmente los detalles de un mensaje existente.",
+    "usuarios": "Usuarios que necesitan corregir o actualizar mensajes guardados.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/manual')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Eliminación de mensajes",
+    "descripcion": "Permite eliminar un mensaje específico del sistema.",
+    "usuarios": "Usuarios que necesitan borrar mensajes guardados.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/delete/<int:msgid>')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de errores",
+    "descripcion": "Permite manejar y registrar errores que ocurran en el sistema.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "@app.errorhandler(Exception)",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Almacenamiento de mensajes",
+    "descripcion": "Permite almacenar mensajes con detalles como el asunto, el cuerpo y las emociones asociadas.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "store()",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Procesamiento de texto",
+    "descripcion": "Permite procesar textos para obtener su formato y estructura adecuados.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "process_text()",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Generación de propuesta de diseño de párrafos",
+    "descripcion": "Permite generar una propuesta de diseño de párrafos basada en el texto original y propuesto.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "project_layout()",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Parseo de resultados",
+    "descripcion": "Permite parsear los resultados obtenidos para extraer el asunto y el cuerpo del mensaje.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "parse_result()",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de excepciones HTTP",
+    "descripcion": "Devuelve una respuesta JSON con un estado 'ok' falso y el mensaje de error correspondiente al código de excepción HTTP.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la API.",
+    "confianza": "verificada",
+    "evidencia": "if isinstance(e,HTTPException):return jsonify(ok=False,error=e.description),e.code",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Registro de errores",
+    "descripcion": "Registra una excepción en el logger de la aplicación cuando se produce un error.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "app.logger.exception('Request failed')",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de excepciones generales",
+    "descripcion": "Devuelve una respuesta JSON con un estado 'ok' falso y el mensaje de error correspondiente a cualquier excepción no HTTP.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la API.",
+    "confianza": "verificada",
+    "evidencia": "return jsonify(ok=False,error=str(e)),500",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Abrir Chrome cuando el servidor está listo",
+    "descripcion": "Lanza Google Chrome en una nueva ventana con la URL del servidor Flask una vez que este esté aceptando conexiones.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "def open_chrome_when_ready(host, port)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Verificación de disponibilidad del servidor Flask",
+    "descripcion": "Intenta conectarse al servidor Flask hasta 100 veces con un intervalo de 0.1 segundos entre cada intento.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "for _ in range(100): try: with socket.create_connection((host, port), timeout=0.3): break except OSError: time.sleep(0.1)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Registro de advertencia si Flask no está disponible",
+    "descripcion": "Registra una advertencia en el logger si Flask no está disponible después de 100 intentos de conexión.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "app.logger.warning('Flask no está disponible; Chrome no se abrirá')",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Detección de navegador Chrome",
+    "descripcion": "Busca la ubicación del ejecutable de Google Chrome o Chromium en el sistema.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "chrome = shutil.which('google-chrome') or shutil.which('google-chrome-stable') or shutil.which('chromium')",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Abrir navegador Chrome",
+    "descripcion": "Lanza Google Chrome en una nueva ventana con la URL del servidor Flask si se encuentra el ejecutable.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "subprocess.Popen([chrome, '--new-window', url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Abrir navegador web predeterminado si Chrome no está disponible",
+    "descripcion": "Abre el navegador web predeterminado con la URL del servidor Flask si Google Chrome o Chromium no están disponibles.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "webbrowser.open(url)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Configuración de host y puerto desde variables de entorno",
+    "descripcion": "Obtiene el host y el puerto del servidor Flask desde las variables de entorno, utilizando valores predeterminados si no están definidas.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "host = os.getenv('HOST', '127.0.0.1') port = int(os.getenv('PORT', '5000'))",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Inicio del servidor Flask en un hilo separado",
+    "descripcion": "Inicia el servidor Flask en un hilo separado para permitir que se abra Chrome al mismo tiempo.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "threading.Thread(target=open_chrome_when_ready, args=(host, port), daemon=True).start()",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Ejecución del servidor Flask",
+    "descripcion": "Inicia el servidor Flask con las configuraciones especificadas.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "app.run(host=host, port=port, debug=False, use_reloader=False)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "Flask",
+    "funcion": "Desarrollo de aplicaciones web",
+    "descripcion": "Permite crear y ejecutar aplicaciones web rápidamente.",
+    "usuarios": "Desarrolladores de software, ingenieros de TI",
+    "confianza": "verificada",
+    "evidencia": "Flask>=3.0,<4",
+    "archivo": "requirements.txt",
+    "fragmento": 1
+  },
+  {
+    "modulo": "faster-whisper",
+    "funcion": "Procesamiento de audio",
+    "descripcion": "Permite transcribir audio a texto de manera eficiente.",
+    "usuarios": "Desarrolladores de aplicaciones de procesamiento de voz, ingenieros de inteligencia artificial",
+    "confianza": "verificada",
+    "evidencia": "faster-whisper>=1.1",
+    "archivo": "requirements.txt",
+    "fragmento": 1
+  },
+  {
+    "modulo": "requests",
+    "funcion": "Realización de solicitudes HTTP",
+    "descripcion": "Permite enviar solicitudes HTTP a servidores web y recibir respuestas.",
+    "usuarios": "Desarrolladores de software, ingenieros de TI",
+    "confianza": "verificada",
+    "evidencia": "requests>=2.31",
+    "archivo": "requirements.txt",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de mensajes",
+    "descripcion": "Permite almacenar mensajes en una base de datos SQLite con múltiples campos como título, contenido original y formateado.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "CREATE TABLE IF NOT EXISTS mensajes",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "gestión de columnas dinámica",
+    "descripcion": "Añade nuevas columnas a la tabla de mensajes si no existen, manteniendo la integridad de los datos.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "ALTER TABLE mensajes ADD COLUMN",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "inserción de ejemplos",
+    "descripcion": "Inserta una serie de ejemplos de mensajes en la base de datos, incluyendo diferentes tipos como email y WhatsApp.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "EXAMPLES = [('Planificación de la evaluación inicial', 'email', ...), ...]",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "soporte para múltiples canales",
+    "descripcion": "Permite almacenar mensajes de diferentes canales como email, WhatsApp y social media.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "c.execute(\"CREATE TABLE IF NOT EXISTS mensajes (...)\")",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "gestión de estados",
+    "descripcion": "Permite gestionar diferentes estados de los mensajes, como 'borrador' y otros posibles estados.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "estado TEXT NOT NULL DEFAULT 'borrador'",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "soporte para múltiples idiomas",
+    "descripcion": "Permite almacenar mensajes en diferentes idiomas, con un campo específico para el idioma de salida.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "idioma_salida TEXT NOT NULL DEFAULT 'es'",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de emociones",
+    "descripcion": "Permite almacenar información sobre las emociones asociadas a los mensajes en formato JSON.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "emociones_json TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de tipo de texto",
+    "descripcion": "Permite almacenar el tipo de texto del mensaje, como 'email', 'whatsapp' o 'social'.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "tipo_texto TEXT NOT NULL DEFAULT 'email'",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de dictado",
+    "descripcion": "Permite almacenar el texto dictado en un campo específico.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "dictado TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "gestión de fechas",
+    "descripcion": "Permite almacenar y gestionar las fechas de creación y actualización de los mensajes.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de asunto",
+    "descripcion": "Permite almacenar el asunto del mensaje en un campo específico.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "asunto TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de contenido formateado",
+    "descripcion": "Permite almacenar el contenido del mensaje en formato original y formateado.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "original TEXT NOT NULL DEFAULT '', formateado TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "Verificar existencia de mensaje",
+    "descripcion": "Permite verificar si un mensaje con un título específico ya existe en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "c.execute(\"SELECT 1 FROM mensajes WHERE modelo='demo' AND asunto=? LIMIT 1\",(title,)).fetchone()",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "Insertar mensaje de demostración",
+    "descripcion": "Permite insertar un nuevo mensaje de demostración en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "c.execute(\"INSERT INTO mensajes(titulo,original,formateado,modelo,estado,asunto,emociones_json,tipo_texto,idioma_salida,dictado) VALUES(?,?,?,'demo','demostracion',?,'{}',?,'es',?)\",(title,raw,body,title,kind,raw))",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "Contar inserciones",
+    "descripcion": "Permite contar el número de mensajes de demostración insertados en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "count+=1",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "Imprimir resumen de inserciones",
+    "descripcion": "Permite imprimir un resumen del número de mensajes de demostración insertados en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "print(f'Insertados {count} mensajes de demostración en {DB}')",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Iniciar y detener la grabación de audio",
+    "descripcion": "Permite al usuario iniciar y detener la grabación de su voz a través del micrófono.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "start(), stop()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Transcripción de audio",
+    "funcion": "Transcribir audio grabado",
+    "descripcion": "Convierte el audio grabado en texto utilizando la tecnología Whisper.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "finish()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Formateo de texto",
+    "funcion": "Formatar el texto transcribido",
+    "descripcion": "Genera un formato específico (como email) a partir del texto transcribido utilizando la tecnología Ollama.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "format()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Visualización de audio",
+    "funcion": "Mostrar una visualización del audio grabado",
+    "descripcion": "Muestra una representación gráfica en tiempo real del audio grabado.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "wave()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Guardar mensajes",
+    "descripcion": "Permite guardar los mensajes formateados y originales en la base de datos.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "save()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Eliminar mensajes",
+    "descripcion": "Permite eliminar mensajes específicos de la base de datos.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "remove()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Abrir y editar mensajes",
+    "descripcion": "Permite abrir y editar mensajes previamente guardados.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "openRecord()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de mensajes",
+    "funcion": "Buscar mensajes",
+    "descripcion": "Permite buscar mensajes en la lista basado en un término de búsqueda.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "search()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administración",
+    "funcion": "Mostrar y ocultar el panel de administración",
+    "descripcion": "Permite al usuario navegar entre la vista de edición y el panel de administración.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "showAdmin(), showEditor()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administración",
+    "funcion": "Visualizar mensajes en la tabla de administración",
+    "descripcion": "Muestra una lista de mensajes con opciones para abrir y eliminar.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "renderAdmin()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Estado del sistema",
+    "funcion": "Mostrar el estado actual del sistema",
+    "descripcion": "Muestra mensajes de estado en la interfaz para informar al usuario sobre las operaciones en curso.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "status()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Procesamiento",
+    "funcion": "Indicador de procesamiento",
+    "descripcion": "Muestra un indicador visual durante las operaciones de transcripción y formateo.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "processing()",
+    "archivo": "static/app.js",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Iniciar/Parar grabación",
+    "descripcion": "Permite al usuario iniciar o detener la grabación de audio.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonvoz').onclick=()=>recording?stop():start();",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproducción de audio",
+    "funcion": "Reproducir/Pausar audio",
+    "descripcion": "Permite al usuario reproducir o pausar el audio grabado.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('audio-play').onclick=()=>{const a=$('playback');if(a.paused)a.play().catch(err=>status('Audio: '+err.message));else a.pause()};",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproducción de audio",
+    "funcion": "Avanzar/Retroceder en el audio",
+    "descripcion": "Permite al usuario avanzar o retroceder 5 segundos en la reproducción del audio.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('audio-forward').onclick=()=>{const a=$('playback');if(Number.isFinite(a.duration))a.currentTime=Math.min(a.duration,a.currentTime+5)}; $('audio-back').onclick=()=>{$('playback').currentTime=Math.max(0,$('playback').currentTime-5)};",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproducción de audio",
+    "funcion": "Controlar volumen del audio",
+    "descripcion": "Permite al usuario ajustar el volumen del audio.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('audio-volume').oninput=e=>{$('playback').volume=Number(e.target.value)};",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Visualización de audio",
+    "funcion": "Mostrar onda sonora",
+    "descripcion": "Muestra una representación visual de la onda sonora del audio grabado.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "showRecordedAudio(blob), drawRecordedWave(), seekRecorded(ev)",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Limpiar contenido",
+    "descripcion": "Permite al usuario limpiar el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonlimpiar').onclick=clear; $('new').onclick=clear; $('admin-new').onclick=clear;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Formatear contenido",
+    "descripcion": "Permite al usuario formatear el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonformatear').onclick=format;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Guardar contenido",
+    "descripcion": "Permite al usuario guardar el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonguardar').onclick=save;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Eliminar contenido",
+    "descripcion": "Permite al usuario eliminar el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botoneliminar').onclick=()=>remove();",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Búsqueda de contenido",
+    "funcion": "Buscar contenido",
+    "descripcion": "Permite al usuario buscar contenido en la interfaz.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('search-input').oninput=search; $('search-button').onclick=search;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Compartir contenido",
+    "funcion": "Copiar texto",
+    "descripcion": "Permite al usuario copiar el texto actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botoncopiar').onclick=()=>navigator.clipboard.writeText($('resultado').innerText).then(()=>status('Texto copiado'));",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Compartir contenido",
+    "funcion": "Copiar asunto",
+    "descripcion": "Permite al usuario copiar el asunto actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botoncopiarasunto').onclick=()=>navigator.clipboard.writeText($('asuntoresultado').innerText).then(()=>status('Asunto copiado'));",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Estilo global",
+    "descripcion": "Define estilos globales para la aplicación, incluyendo colores y tipografía.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": ":root",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Barra superior",
+    "descripcion": "Muestra una barra superior con opciones de búsqueda y herramientas.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "#topbar",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Panel lateral",
+    "descripcion": "Muestra un panel lateral con opciones de navegación.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "#bandejas",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Panel de mensajes",
+    "descripcion": "Muestra un panel de mensajes con opciones de visualización.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "#mensajes",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Contenido principal",
+    "descripcion": "Muestra el contenido principal de la aplicación.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "#contenido",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Botones estilizados",
+    "descripcion": "Define diferentes tipos de botones con estilos personalizados.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": ".ju-btn",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Tarjetas",
+    "descripcion": "Define estilos para tarjetas utilizadas en la interfaz.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": ".ju-card",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Formularios administrativos",
+    "descripcion": "Define estilos para formularios utilizados en la interfaz.",
+    "usuarios": "Administradores",
+    "confianza": "verificada",
+    "evidencia": ".form-admin",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Tabla de datos",
+    "descripcion": "Define estilos para tablas utilizadas en la interfaz.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": ".ju-table",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Notificaciones y errores",
+    "descripcion": "Define estilos para notificaciones y mensajes de error.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": ".notice, .error",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Editor adaptativo",
+    "descripcion": "Define estilos para un editor adaptable con múltiples etapas.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": ".editor-layout",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Responsive design",
+    "descripcion": "Define estilos para adaptar la interfaz a diferentes tamaños de pantalla.",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "@media (max-width:1200px), @media (max-width:900px)",
+    "archivo": "static/style.css",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Diseño de interfaz",
+    "funcion": "Organización de tarjetas horizontales",
+    "descripcion": "Permite la visualización de tres tarjetas horizontales dentro del panel derecho.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".editor-layout",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Diseño de interfaz",
+    "funcion": "Ajuste responsivo",
+    "descripcion": "Permite el ajuste automático del diseño para diferentes tamaños de pantalla.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "@media(max-width:1450px), @media(max-width:1080px)",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Diseño de interfaz",
+    "funcion": "Estilo de marca",
+    "descripcion": "Aplica un estilo de marca con colores específicos.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#audio-visual, #mensajes article.activo",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Indicadores de procesamiento",
+    "funcion": "Mostrar indicadores de trabajo asíncrono",
+    "descripcion": "Permite la visualización de indicadores para mostrar el estado del procesamiento asíncrono.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".processing-indicator, .inline-spinner",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Mostrar reproductor de onda de audio",
+    "descripcion": "Permite la visualización de un reproductor de onda de audio basado en la grabación real.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".audio-player",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Control de volumen",
+    "descripcion": "Permite el control del volumen en el reproductor de audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#audio-volume",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Botones de control",
+    "descripcion": "Permite la interacción con botones de control en el reproductor de audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".audio-player-controls button",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Posición del audio",
+    "descripcion": "Permite la visualización de la posición actual en el reproductor de audio.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#audio-position",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproductor de audio",
+    "funcion": "Onda de audio interactiva",
+    "descripcion": "Permite la interacción con la onda de audio en el reproductor.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "#recorded-wave",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Tarjeta de transcripción",
+    "funcion": "Entrada de texto",
+    "descripcion": "Permite la entrada de texto en la tarjeta de transcripción.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".transcription-card #entrada",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Tarjeta final",
+    "funcion": "Resultado de procesamiento",
+    "descripcion": "Permite la visualización del resultado de procesamiento en la tarjeta final.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".final-card #resultado",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Tarjeta final",
+    "funcion": "Asunto del resultado",
+    "descripcion": "Permite la visualización del asunto del resultado en la tarjeta final.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": ".final-card #asuntoresultado",
+    "archivo": "static/style.css",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Grabación de audio",
+    "descripcion": "Permite al usuario grabar su voz.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botonvoz",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Transcripción automática",
+    "descripcion": "Transcribe el audio grabado utilizando Whisper local.",
+    "usuarios": "Usuario final",
+    "confianza": "inferida",
+    "evidencia": "Whisper large-v3 local",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Formateo de texto",
+    "descripcion": "Transforma la transcripción en un mensaje listo para enviar utilizando Ollama.",
+    "usuarios": "Usuario final",
+    "confianza": "inferida",
+    "evidencia": "Ollama",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Edición de transcripción",
+    "descripcion": "Permite al usuario revisar y corregir la transcripción antes de su formateo.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "textarea id=\"entrada\"",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Guardado de mensajes",
+    "descripcion": "Permite al usuario guardar el mensaje final.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botonguardar",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Eliminación de mensajes",
+    "descripcion": "Permite al usuario eliminar el mensaje actual.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botoneliminar",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Visualización de mensajes guardados",
+    "descripcion": "Muestra una lista de todos los mensajes guardados.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "admin-table",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Creación de nuevos mensajes",
+    "descripcion": "Permite al administrador crear un nuevo mensaje.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "admin-new",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Eliminación de mensajes guardados",
+    "descripcion": "Permite al administrador eliminar un mensaje guardado.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "data-admin-delete",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Abrir mensajes guardados",
+    "descripcion": "Permite al administrador abrir un mensaje guardado para su revisión.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "data-admin-open",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Envío de mensajes",
+    "descripcion": "Permite al usuario enviar el mensaje final a través de correo o documentos.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botonenviarcorreo, botonenviardocumentos",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Buscador",
+    "funcion": "Búsqueda de mensajes guardados",
+    "descripcion": "Permite al usuario buscar entre los mensajes guardados.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "search-input, search-button",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  }
+]

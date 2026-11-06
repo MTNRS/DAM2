@@ -1,0 +1,15 @@
+# Funciones con multiples parametros y valores por defecto
+funcion sumar(a, b):
+    retornar a + b
+
+funcion saludar(nombre, saludo = "Hola"):
+    escribir(saludo + " " + nombre)
+
+funcion calcular(precio, cantidad = 1, impuesto = 0.21):
+    retornar precio * cantidad * (1 + impuesto)
+
+escribir(sumar(10, 20))
+saludar("Ana")
+saludar("Luis", "Buenos dias")
+escribir(calcular(100))
+escribir(calcular(100, 2, 0.10))

@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "app.py",
+    "funcion": "Transcripción de audio",
+    "descripcion": "Permite transcribir grabaciones de audio a texto.",
+    "usuarios": "Usuarios que necesitan convertir audios en texto.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/transcribe')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Formateo de texto",
+    "descripcion": "Permite formatear y estructurar textos según diferentes tipos (email, WhatsApp, social media, documento).",
+    "usuarios": "Usuarios que necesitan mejorar la presentación de sus textos.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/format')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Procesamiento combinado de audio y texto",
+    "descripcion": "Permite procesar una grabación de audio para obtener su transcripción y luego formatearla.",
+    "usuarios": "Usuarios que necesitan un flujo completo de transcripción y formateo.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/process')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Guardado de mensajes",
+    "descripcion": "Permite guardar mensajes con sus versiones originales, formateadas y otros detalles.",
+    "usuarios": "Usuarios que necesitan almacenar y gestionar sus mensajes.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/save')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Consulta de mensajes",
+    "descripcion": "Permite obtener una lista de los últimos mensajes almacenados.",
+    "usuarios": "Usuarios que necesitan consultar sus mensajes guardados.",
+    "confianza": "verificada",
+    "evidencia": "app.get('/api/messages')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Edición manual de mensajes",
+    "descripcion": "Permite editar manualmente los detalles de un mensaje existente.",
+    "usuarios": "Usuarios que necesitan corregir o actualizar mensajes guardados.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/manual')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Eliminación de mensajes",
+    "descripcion": "Permite eliminar un mensaje específico del sistema.",
+    "usuarios": "Usuarios que necesitan borrar mensajes guardados.",
+    "confianza": "verificada",
+    "evidencia": "app.post('/api/delete/<int:msgid>')",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de errores",
+    "descripcion": "Permite manejar y registrar errores que ocurran en el sistema.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "@app.errorhandler(Exception)",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Almacenamiento de mensajes",
+    "descripcion": "Permite almacenar mensajes con detalles como el asunto, el cuerpo y las emociones asociadas.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "store()",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Procesamiento de texto",
+    "descripcion": "Permite procesar textos para obtener su formato y estructura adecuados.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "process_text()",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Generación de propuesta de diseño de párrafos",
+    "descripcion": "Permite generar una propuesta de diseño de párrafos basada en el texto original y propuesto.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "project_layout()",
+    "archivo": "app.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Parseo de resultados",
+    "descripcion": "Permite parsear los resultados obtenidos para extraer el asunto y el cuerpo del mensaje.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "parse_result()",
+    "archivo": "app.py",
+    "fragmento": 2
+  }
+]

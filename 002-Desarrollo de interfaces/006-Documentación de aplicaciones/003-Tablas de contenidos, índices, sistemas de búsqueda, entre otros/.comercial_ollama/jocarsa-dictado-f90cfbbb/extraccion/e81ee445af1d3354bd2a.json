@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de excepciones HTTP",
+    "descripcion": "Devuelve una respuesta JSON con un estado 'ok' falso y el mensaje de error correspondiente al código de excepción HTTP.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la API.",
+    "confianza": "verificada",
+    "evidencia": "if isinstance(e,HTTPException):return jsonify(ok=False,error=e.description),e.code",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Registro de errores",
+    "descripcion": "Registra una excepción en el logger de la aplicación cuando se produce un error.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "app.logger.exception('Request failed')",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de excepciones generales",
+    "descripcion": "Devuelve una respuesta JSON con un estado 'ok' falso y el mensaje de error correspondiente a cualquier excepción no HTTP.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la API.",
+    "confianza": "verificada",
+    "evidencia": "return jsonify(ok=False,error=str(e)),500",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Abrir Chrome cuando el servidor está listo",
+    "descripcion": "Lanza Google Chrome en una nueva ventana con la URL del servidor Flask una vez que este esté aceptando conexiones.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "def open_chrome_when_ready(host, port)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Verificación de disponibilidad del servidor Flask",
+    "descripcion": "Intenta conectarse al servidor Flask hasta 100 veces con un intervalo de 0.1 segundos entre cada intento.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "for _ in range(100): try: with socket.create_connection((host, port), timeout=0.3): break except OSError: time.sleep(0.1)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Registro de advertencia si Flask no está disponible",
+    "descripcion": "Registra una advertencia en el logger si Flask no está disponible después de 100 intentos de conexión.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "app.logger.warning('Flask no está disponible; Chrome no se abrirá')",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Detección de navegador Chrome",
+    "descripcion": "Busca la ubicación del ejecutable de Google Chrome o Chromium en el sistema.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "chrome = shutil.which('google-chrome') or shutil.which('google-chrome-stable') or shutil.which('chromium')",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Abrir navegador Chrome",
+    "descripcion": "Lanza Google Chrome en una nueva ventana con la URL del servidor Flask si se encuentra el ejecutable.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "subprocess.Popen([chrome, '--new-window', url], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, start_new_session=True)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Abrir navegador web predeterminado si Chrome no está disponible",
+    "descripcion": "Abre el navegador web predeterminado con la URL del servidor Flask si Google Chrome o Chromium no están disponibles.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "webbrowser.open(url)",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Configuración de host y puerto desde variables de entorno",
+    "descripcion": "Obtiene el host y el puerto del servidor Flask desde las variables de entorno, utilizando valores predeterminados si no están definidas.",
+    "usuarios": "Desarrolladores y administradores del sistema.",
+    "confianza": "verificada",
+    "evidencia": "host = os.getenv('HOST', '127.0.0.1') port = int(os.getenv('PORT', '5000'))",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Inicio del servidor Flask en un hilo separado",
+    "descripcion": "Inicia el servidor Flask en un hilo separado para permitir que se abra Chrome al mismo tiempo.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "threading.Thread(target=open_chrome_when_ready, args=(host, port), daemon=True).start()",
+    "archivo": "app.py",
+    "fragmento": 3
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Ejecución del servidor Flask",
+    "descripcion": "Inicia el servidor Flask con las configuraciones especificadas.",
+    "usuarios": "Desarrolladores y usuarios finales que interactúen con la aplicación web.",
+    "confianza": "verificada",
+    "evidencia": "app.run(host=host, port=port, debug=False, use_reloader=False)",
+    "archivo": "app.py",
+    "fragmento": 3
+  }
+]

@@ -1,0 +1,3 @@
+funcion sumar(a, b):
+    retornar a + b
+escribir(sumar(1))

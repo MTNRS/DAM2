@@ -1,0 +1,50 @@
+Datetime: 2026-10-29T11:34:08.623Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/003-Acceso a las funciones del gestor de base de datos objeto-relacional/gestor-yaml
+Command: ./build/ejemplo
+
+Result:
+./build/ejemplo
+Cliente insertado: aaa215e0-9e1a-490c-9ed9-3724f7b59c27
+Nombre: Ana Garcia
+Edad: 28
+Ciudad: Valencia
+Telefono: 600111222
+Telefono: 600333444
+Documento:
+nombre: Ana Garcia
+edad: 28
+activo: true
+direccion:
+  ciudad: Valencia
+  cp: 46001
+telefonos:
+  - 600111222
+  - 600333444
+habilidades:
+  - C++
+  - Python
+proyectos:
+  - nombre: ERP
+    horas: 120
+_id: aaa215e0-9e1a-490c-9ed9-3724f7b59c27
+Documento:
+nombre: Luis
+edad: 35
+activo: false
+preferencias:
+  idioma: es
+  temas: [C++, SQL]
+_id: d23cf688-7b09-499f-b063-26d0a17c6ab6
+Encontrado: Ana Garcia
+Cliente actualizado
+Total clientes: 2
+Base de datos: empresa
+  Coleccion: clientes
+  Coleccion: pedidos
+  Coleccion: productos
+Base de datos: instituto
+  Coleccion: alumnos
+Luis eliminado
+Pedido almacenado: c1fd2848-77c1-47cd-a431-5ae4867fcab7
+Producto almacenado: 6414b724-01fc-4184-a593-c7a1f2c043ba
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/004-Bases de datos objeto relacionales y orientadas a objetos/003-Acceso a las funciones del gestor de base de datos objeto-relacional/gestor-yaml$ 

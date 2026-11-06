@@ -1,0 +1,2 @@
+/var/www/html/jocarsa-alumnos
+/var/www/html/jocarsa-actas

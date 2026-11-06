@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de formularios JSON</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+        padding: 30px;
+    }
+
+    .contenedor {
+        max-width: 600px;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 25px #0001;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font: inherit;
+    }
+
+    input[type="checkbox"] {
+        width: auto;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    button {
+        background: indigo;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #302080;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+    <h1>Formulario dinámico</h1>
+    <div id="formulario"></div>
+</div>
+
+<script>
+
+// CLASE GENERADORA DE FORMULARIOS
+class Formulario {
+
+    constructor(configuracion, contenedor) {
+        this.configuracion = configuracion;
+        this.contenedor = document.querySelector(contenedor);
+    }
+
+    generar() {
+
+        if (!this.contenedor) {
+            throw new Error("Contenedor no encontrado");
+        }
+
+        const config = this.configuracion;
+
+        const form = document.createElement("form");
+
+        form.action = config.accion || "";
+        form.method = config.metodo || "POST";
+
+        // RECORRER LOS CAMPOS DEL JSON
+        (config.campos || []).forEach(campo => {
+
+            const grupo = document.createElement("div");
+            grupo.className = "campo";
+
+            const tipo = campo.tipo || "text";
+
+            const label = document.createElement("label");
+            label.textContent = campo.titulo || campo.nombre;
+            label.htmlFor = campo.nombre;
+
+            let control;
+
+            // TEXTAREA
+            if (tipo === "textarea") {
+
+                control = document.createElement("textarea");
+                control.value = campo.valor ?? "";
+
+            }
+
+            // SELECT
+            else if (tipo === "select") {
+
+                control = document.createElement("select");
+
+                (campo.opciones || []).forEach(opcion => {
+
+                    const option = document.createElement("option");
+
+                    if (typeof opcion === "object") {
+                        option.value = opcion.valor;
+                        option.textContent = opcion.texto;
+                    } else {
+                        option.value = opcion;
+                        option.textContent = opcion;
+                    }
+
+                    control.appendChild(option);
+
+                });
+
+                if (campo.valor !== undefined) {
+                    control.value = campo.valor;
+                }
+
+            }
+
+            // INPUT (TEXT, NUMBER, EMAIL, DATE...)
+            else {
+
+                control = document.createElement("input");
+                control.type = tipo;
+
+                if (tipo === "checkbox") {
+                    control.checked = Boolean(campo.valor);
+                } else {
+                    control.value = campo.valor ?? "";
+                }
+
+            }
+
+            // ATRIBUTOS COMUNES
+            control.name = campo.nombre;
+            control.id = campo.nombre;
+
+            if (campo.requerido) {
+                control.required = true;
+            }
+
+            if (campo.placeholder) {
+                control.placeholder = campo.placeholder;
+            }
+
+            if (campo.min !== undefined) {
+                control.min = campo.min;
+            }
+
+            if (campo.max !== undefined) {
+                control.max = campo.max;
+            }
+
+            if (campo.step !== undefined) {
+                control.step = campo.step;
+            }
+
+            grupo.appendChild(label);
+            grupo.appendChild(control);
+
+            form.appendChild(grupo);
+
+        });
+
+        // BOTÓN ENVIAR
+        const boton = document.createElement("button");
+        boton.type = "submit";
+        boton.textContent = config.boton || "Enviar";
+
+        form.appendChild(boton);
+
+        this.contenedor.replaceChildren(form);
+
+        return form;
+    }
+}
+
+
+// JSON QUE PODRÍA VENIR DEL BACKEND
+const configuracion = {
+
+    accion: "procesar.php",
+    metodo: "POST",
+    boton: "Guardar cliente",
+
+    campos: [
+
+        {
+            nombre: "nombre",
+            titulo: "Nombre completo",
+            tipo: "text",
+            placeholder: "Introduce tu nombre",
+            requerido: true
+        },
+
+        {
+            nombre: "edad",
+            titulo: "Edad",
+            tipo: "number",
+            min: 0,
+            max: 120,
+            step: 1
+        },
+
+        {
+            nombre: "email",
+            titulo: "Correo electrónico",
+            tipo: "email",
+            requerido: true
+        },
+
+        {
+            nombre: "nacimiento",
+            titulo: "Fecha de nacimiento",
+            tipo: "date"
+        },
+
+        {
+            nombre: "provincia",
+            titulo: "Provincia",
+            tipo: "select",
+            opciones: [
+                "Valencia",
+                "Alicante",
+                "Castellón",
+                "Madrid",
+                "Barcelona"
+            ]
+        },
+
+        {
+            nombre: "descripcion",
+            titulo: "Descripción",
+            tipo: "textarea",
+            placeholder: "Escribe una descripción..."
+        },
+
+        {
+            nombre: "activo",
+            titulo: "Cliente activo",
+            tipo: "checkbox",
+            valor: true
+        }
+
+    ]
+
+};
+
+
+// INSTANCIAR Y DIBUJAR
+const formulario = new Formulario(
+    configuracion,
+    "#formulario"
+);
+
+formulario.generar();
+
+</script>
+
+</body>
+</html>

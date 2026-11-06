@@ -1,0 +1,374 @@
+/* ============================================================
+   ESTILOS GENERALES
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e5e7eb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.documento-header {
+    background: #111827;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.documento-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.documento {
+    padding-bottom: 30px;
+}
+
+
+/* ============================================================
+   PAGINAS A4
+   ============================================================ */
+
+.pagina {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 30px auto;
+    padding: 20mm;
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.12);
+    position: relative;
+}
+
+.numero-pagina {
+    position: absolute;
+    bottom: 12mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+
+/* ============================================================
+   SECCIONES
+   ============================================================ */
+
+.seccion {
+    margin-bottom: 30px;
+}
+
+.seccion-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d4ed8;
+    padding-bottom: 8px;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #2563eb;
+}
+
+
+/* ============================================================
+   CONTENEDORES
+   ============================================================ */
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* ============================================================
+   COMPONENTES DE TEXTO
+   ============================================================ */
+
+.componente-titulo {
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+}
+
+.componente-subtitulo {
+    font-size: 20px;
+    font-weight: 400;
+    color: #64748b;
+    margin: 0;
+}
+
+.componente-encabezado {
+    font-size: 17px;
+    font-weight: 700;
+    color: #334155;
+    margin: 10px 0 0 0;
+}
+
+.componente-parrafo {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #475569;
+    margin: 0;
+    text-align: justify;
+}
+
+
+/* ============================================================
+   TABLAS
+   ============================================================ */
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-simple {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tabla-simple thead {
+    background: #1e40af;
+    color: white;
+}
+
+.tabla-simple th {
+    text-align: left;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.tabla-simple td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla-simple tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.tabla-simple tbody tr:hover {
+    background: #eff6ff;
+}
+
+
+/* ============================================================
+   GRAFICAS
+   ============================================================ */
+
+.grafica {
+    width: 100%;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.grafica-titulo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #334155;
+    margin: 0 0 15px 0;
+}
+
+.grafica-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* ============================================================
+   INDICADORES
+   ============================================================ */
+
+.indicador {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.indicador-etiqueta {
+    font-size: 13px;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 8px;
+}
+
+.indicador-valor {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.indicador-descripcion {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+
+/* ============================================================
+   KPI
+   ============================================================ */
+
+.kpi {
+    border-left: 5px solid #2563eb;
+}
+
+.kpi .indicador-valor {
+    color: #2563eb;
+}
+
+
+/* ============================================================
+   CONTADOR
+   ============================================================ */
+
+.contador {
+    border-left: 5px solid #16a34a;
+}
+
+.contador .indicador-valor {
+    color: #16a34a;
+}
+
+
+/* ============================================================
+   PORCENTAJE
+   ============================================================ */
+
+.porcentaje {
+    border-left: 5px solid #f59e0b;
+}
+
+.porcentaje .indicador-valor {
+    color: #d97706;
+}
+
+.porcentaje-barra {
+    width: 100%;
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.porcentaje-progreso {
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #f59e0b,
+        #fbbf24
+    );
+    border-radius: 20px;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media screen and (max-width: 850px) {
+
+    .pagina {
+        width: 100%;
+        min-height: auto;
+        padding: 25px;
+    }
+
+    .componente-titulo {
+        font-size: 24px;
+    }
+
+    .indicador-valor {
+        font-size: 26px;
+    }
+
+}
+
+
+/* ============================================================
+   IMPRESION
+   ============================================================ */
+
+@media print {
+
+    @page {
+        size: A4 portrait;
+        margin: 0;
+    }
+
+    body {
+        background: white;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .documento-header {
+        display: none;
+    }
+
+    .documento {
+        padding: 0;
+    }
+
+    .pagina {
+        width: 210mm;
+        height: 297mm;
+        min-height: 0;
+        margin: 0;
+        padding: 20mm;
+        box-shadow: none;
+        break-after: page;
+        overflow: hidden;
+    }
+
+    .pagina:last-child {
+        break-after: auto;
+    }
+
+    .seccion,
+    .contenedor,
+    .grafica,
+    .indicador {
+        break-inside: avoid;
+    }
+
+    .tabla-simple tbody tr {
+        break-inside: avoid;
+    }
+
+}
+/* Componentes de texto y tablas ampliados */
+.texto-enriquecido,.etiqueta-valor,.texto-dinamico,.texto-condicional {line-height:1.65;margin:8px 0}
+.texto-etiqueta {font-weight:700;color:#475569}.texto-valor {color:#0f172a}
+.lista-texto {padding-left:25px;line-height:1.7}.texto-cita {border-left:4px solid #2563eb;padding:12px 18px;background:#eff6ff;margin:12px 0}
+.texto-cita footer {margin-top:8px;color:#64748b}.texto-nota {background:#fffbeb;border-left:4px solid #f59e0b;padding:12px}
+.texto-nota-pie {border-top:1px solid #cbd5e1;font-size:11px;margin-top:20px;padding-top:6px}
+.texto-legal {font-size:11px;color:#64748b;white-space:pre-line}.tabla-grupo {margin:20px 0 6px;color:#1d4ed8}
+.tabla-avanzada td {vertical-align:top}.celda-positiva {background:#dcfce7!important;color:#166534}.celda-negativa {background:#fee2e2!important;color:#991b1b}.celda-alerta {background:#fef3c7!important;color:#92400e}
+
+/* Opciones comunes a todas las tablas */
+.tabla-numero { width: 44px; text-align: right; background: #f1f5f9; color: #475569; padding: 10px; font-weight: 600; }
+.tabla-simple tfoot td, .tabla-simple tfoot th { padding: 12px; border-top: 2px solid #cbd5e1; font-weight: 700; }
+.tabla-fila-total { background: #dbeafe; }
+.tabla-fila-recuento { background: #f1f5f9; color: #475569; }
+
+.informe-imagen{margin:16px auto;text-align:center;break-inside:avoid}.informe-imagen img{display:block;margin:0 auto;object-fit:contain}.informe-imagen figcaption{font-size:12px;color:#64748b;margin-top:8px}
