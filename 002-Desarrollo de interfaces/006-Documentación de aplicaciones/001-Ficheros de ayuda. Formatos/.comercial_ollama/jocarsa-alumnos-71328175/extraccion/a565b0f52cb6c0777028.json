@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Almacenamiento de respuestas de estudiantes",
+    "descripcion": "Permite almacenar las respuestas de los estudiantes a diferentes preguntas.",
+    "usuarios": "Estudiantes",
+    "confianza": "verificada",
+    "evidencia": "save_value",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Recuperación del perfil del estudiante",
+    "descripcion": "Permite recuperar el perfil completo de un estudiante, incluyendo sus respuestas.",
+    "usuarios": "Estudiantes",
+    "confianza": "verificada",
+    "evidencia": "student_profile",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Generación de informes en Markdown",
+    "descripcion": "Permite generar un informe detallado del perfil del estudiante en formato Markdown.",
+    "usuarios": "Estudiantes",
+    "confianza": "verificada",
+    "evidencia": "profile_to_markdown",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Análisis de respuestas completadas por estudiantes",
+    "descripcion": "Permite analizar cuántos estudiantes han completado sus respuestas.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Análisis de respuestas iniciadas por estudiantes",
+    "descripcion": "Permite analizar cuántos estudiantes han comenzado a responder las preguntas.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Análisis de respuestas no iniciadas por estudiantes",
+    "descripcion": "Permite analizar cuántos estudiantes no han comenzado a responder las preguntas.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Análisis de respuestas en progreso por estudiantes",
+    "descripcion": "Permite analizar cuántos estudiantes están en proceso de responder las preguntas.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Porcentaje de completitud de respuestas",
+    "descripcion": "Permite calcular el porcentaje de respuestas completadas por estudiantes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Porcentaje de estudiantes que han comenzado a responder",
+    "descripcion": "Permite calcular el porcentaje de estudiantes que han comenzado a responder las preguntas.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Porcentaje de estudiantes que han completado las respuestas",
+    "descripcion": "Permite calcular el porcentaje de estudiantes que han completado todas las preguntas.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Promedio de respuestas por estudiante",
+    "descripcion": "Permite calcular el promedio de respuestas completadas por cada estudiante.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Análisis de perfil humano y expresión escrita",
+    "funcion": "Promedio de palabras por estudiante",
+    "descripcion": "Permite calcular el promedio de palabras escritas por cada estudiante.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "get_teacher_analytics",
+    "archivo": "api.php",
+    "fragmento": 2
+  }
+]

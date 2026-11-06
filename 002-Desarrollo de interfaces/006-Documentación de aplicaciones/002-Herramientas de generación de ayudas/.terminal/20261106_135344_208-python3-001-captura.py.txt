@@ -1,0 +1,8 @@
+Datetime: 2026-11-06T12:53:44.208Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/002-Herramientas de generación de ayudas
+Command: python3 001-captura.py
+
+Result:
+Captura guardada en captura.png
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarrollo de i
+nterfaces/006-Documentación de aplicaciones/002-Herramientas de generación de ayudas$ 

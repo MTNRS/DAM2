@@ -1,0 +1,102 @@
+[
+  {
+    "modulo": "Conteo de palabras",
+    "funcion": "count_words",
+    "descripcion": "Permite contar el número de palabras en un texto dado.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "count_words",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de campos de perfil",
+    "funcion": "get_fields",
+    "descripcion": "Recupera los campos de perfil disponibles ordenados por orden de clasificación.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "get_fields",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de estudiantes",
+    "funcion": "get_student_by_id",
+    "descripcion": "Recupera la información de un estudiante por su ID.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "get_student_by_id",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de estudiantes",
+    "funcion": "get_current_student",
+    "descripcion": "Recupera la información del estudiante actual.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "get_current_student",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de valores de perfil",
+    "funcion": "get_values",
+    "descripcion": "Recupera los valores de perfil para un estudiante específico.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "get_values",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Telemetría de estudiantes",
+    "funcion": "get_student_telemetry_summary",
+    "descripcion": "Recupera un resumen detallado de la telemetría de un estudiante, incluyendo estadísticas de sesión y detalles por campo.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "get_student_telemetry_summary",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Gestión de grupos",
+    "funcion": "get_groups",
+    "descripcion": "Recupera la lista de grupos con el número de estudiantes en cada uno.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "get_groups",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Normalización de nombres de grupo",
+    "funcion": "normalize_group_name",
+    "descripcion": "Normaliza el nombre de un grupo eliminando espacios adicionales y asegurándose de que esté bien formateado.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "normalize_group_name",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Normalización de colores",
+    "funcion": "normalize_color",
+    "descripcion": "Normaliza un color hexadecimal asegurándose de que esté en el formato correcto.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "normalize_color",
+    "archivo": "api.php",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Construcción de perfil estructurado",
+    "funcion": "build_structured_profile",
+    "descripcion": "Construye un perfil estructurado para un estudiante, incluyendo información del estudiante, valores de perfil, muestras de expresión escrita y telemetría.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "build_structured_profile",
+    "archivo": "api.php",
+    "fragmento": 1
+  }
+]

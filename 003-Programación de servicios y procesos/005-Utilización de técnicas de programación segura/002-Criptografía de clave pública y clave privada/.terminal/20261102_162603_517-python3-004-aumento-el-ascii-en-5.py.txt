@@ -1,0 +1,21 @@
+Datetime: 2026-11-02T15:26:03.517Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada
+Command: python3 004-aumento\ el\ ascii\ en\ 5.py
+
+Result:
+Jose Vicente
+J
+J : 74 - 79
+o : 111 - 116
+s : 115 - 120
+e : 101 - 106
+  : 32 - 37
+V : 86 - 91
+i : 105 - 110
+c : 99 - 104
+e : 101 - 106
+n : 110 - 115
+t : 116 - 121
+e : 101 - 106
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación d
+e servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada$ 

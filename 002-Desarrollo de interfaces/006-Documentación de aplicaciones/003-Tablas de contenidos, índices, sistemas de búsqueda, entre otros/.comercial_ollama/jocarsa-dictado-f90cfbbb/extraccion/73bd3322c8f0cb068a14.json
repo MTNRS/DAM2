@@ -1,0 +1,72 @@
+[
+  {
+    "modulo": "Transcripción",
+    "funcion": "Dictado a texto",
+    "descripcion": "Permite convertir el habla en texto utilizando Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "Ollama propone asunto y estructura de párrafos, pero el cuerpo final se reconstruye exclusivamente desde las palabras de la transcripción original.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Reproductor",
+    "funcion": "Reproducción de onda sonora",
+    "descripcion": "Mantiene el reproductor waveform de v10.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "Se conserva el reproductor waveform de v10.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Instalación",
+    "funcion": "Actualización del software",
+    "descripcion": "Permite actualizar la aplicación desde v10 a v11.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "Instalación: respalda tu SQLite y sustituye `app.py` de v10 por el de v11; reinicia Flask.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Proyecto completo",
+    "funcion": "Descarga del proyecto",
+    "descripcion": "Ofrece la posibilidad de descargar el proyecto completo en formato ZIP.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "El ZIP también contiene el proyecto completo.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Base de datos",
+    "funcion": "Mantenimiento de la base de datos",
+    "descripcion": "No modifica la base de datos existente durante la actualización.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "No se modifica la base de datos existente.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Formato de texto",
+    "funcion": "Deducción de párrafos",
+    "descripcion": "Intenta deducir los párrafos basándose en las pausas y puntuación generadas por Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "inferida",
+    "evidencia": "El formato depende de las pausas/puntuación de Whisper. Si Whisper no introduce puntos ni separa el saludo, la aplicación no puede deducir con seguridad todos los párrafos.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Resumen",
+    "funcion": "Resumen del asunto",
+    "descripcion": "Permite resumir el asunto de la transcripción.",
+    "usuarios": "No determinado",
+    "confianza": "inferida",
+    "evidencia": "El asunto sí puede resumirse.",
+    "archivo": "README-v11.md",
+    "fragmento": 1
+  }
+]

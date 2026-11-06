@@ -1,0 +1,32 @@
+Datetime: 2026-11-05T12:05:04.998Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/005-Bases de datos documentales/002-Establecimiento y cierre de conexiones
+Command: python3 003-soporte\ para\ documentos.py
+
+Result:
+
+--- ESTRUCTURA DOCUMENTAL ---
+
+📁 jocarsa-documental/
+    📁 carpeta 2
+        📁 subcarpeta2
+            📄 calificaciones_30_octubre_scripts.zip
+            📄 midocumento.md
+    📁 subcarpeta1
+
+================================
+       JOCARSA DOCUMENTAL
+================================
+1. Crear carpeta
+2. Crear documento
+3. Ver estructura
+4. Salir
+
+Selecciona una opción: ^CTraceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/005-Bases de datos documentales/002-Establecimiento y cierre de conexiones/003-soporte para documentos.py", line 418, in <module>
+    main()
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/005-Bases de datos documentales/002-Establecimiento y cierre de conexiones/003-soporte para documentos.py", line 398, in main
+    opcion = input("\nSelecciona una opción: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/005-Bases de datos documentales/002-Establecimiento y cierre de conexiones$ 

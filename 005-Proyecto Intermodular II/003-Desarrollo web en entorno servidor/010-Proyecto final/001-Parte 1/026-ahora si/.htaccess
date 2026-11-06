@@ -1,0 +1,12 @@
+DirectoryIndex index.php
+Options -Indexes
+<FilesMatch "^(config|sync)\.php$">
+ Require all denied
+</FilesMatch>
+RewriteEngine On
+RewriteRule ^includes/ - [F,L]
+RewriteCond %{THE_REQUEST} \s/+[^\s?]*contacto-handler\.php[\s?] [NC]
+RewriteRule ^contacto-handler\.php$ - [F,L]
+RewriteRule ^contacto/enviar/?$ contacto-handler.php [END]
+RewriteRule ^(blog|productos)/([a-z0-9-]+)/?$ $1.php?slug=$2 [END,QSA,B]
+RewriteRule ^(blog|productos)/?$ $1.php [END]

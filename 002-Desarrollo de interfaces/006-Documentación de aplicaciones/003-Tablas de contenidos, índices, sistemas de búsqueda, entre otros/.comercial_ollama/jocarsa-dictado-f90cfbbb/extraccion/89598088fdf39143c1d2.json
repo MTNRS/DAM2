@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "app.py",
+    "funcion": "Transcripción de audio a texto",
+    "descripcion": "Permite transcribir archivos de audio en formato WAV a texto utilizando el modelo Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "transcribe_local",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Generación de asunto y cuerpo de correo electrónico",
+    "descripcion": "Utiliza el modelo Ollama para generar un asunto y cuerpo de correo electrónico basado en una transcripción proporcionada.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "ollama",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Almacenamiento de mensajes en base de datos",
+    "descripcion": "Guarda transcripciones, asuntos y cuerpos de correo electrónicos en una base de datos SQLite.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "init_db",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de modelos Ollama",
+    "descripcion": "Carga y descarga el modelo Ollama para generar respuestas basadas en prompts.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "ollama, unload_ollama",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de modelos Whisper",
+    "descripcion": "Carga y libera el modelo Whisper para transcribir audio a texto.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "transcribe_local, release_whisper",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Comparación de tokens lexicales",
+    "descripcion": "Compara los tokens lexicales de una transcripción original y su versión procesada para asegurar la fidelidad del texto.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "lexical_tokens, faithful_body",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Formateo literal de texto",
+    "descripcion": "Ajusta el formato del texto transcribido para mantener la estructura original sin cambiar las palabras.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "literal_layout",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Configuración de entorno",
+    "descripcion": "Permite configurar variables de entorno para ajustar el comportamiento del sistema, como la URL del modelo Ollama y el dispositivo utilizado por Whisper.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "variables de entorno",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de errores y logging",
+    "descripcion": "Registra errores y advertencias durante el procesamiento de solicitudes para facilitar la depuración.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "app.logger.warning",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Control de concurrencia",
+    "descripcion": "Utiliza un bloqueo para serializar solicitudes y evitar que múltiples procesos utilicen la GPU simultáneamente.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "_gpu_lock",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Manejo de memoria",
+    "descripcion": "Libera recursos y vacía la caché de GPU para evitar problemas de memoria insuficiente.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "release_whisper, torch.cuda.empty_cache",
+    "archivo": "app.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "app.py",
+    "funcion": "Configuración de límites de contenido",
+    "descripcion": "Establece un límite máximo para el tamaño del contenido que se puede procesar en una sola solicitud.",
+    "usuarios": "No determinado",
+    "confianza": "verificada",
+    "evidencia": "app.config['MAX_CONTENT_LENGTH']",
+    "archivo": "app.py",
+    "fragmento": 1
+  }
+]

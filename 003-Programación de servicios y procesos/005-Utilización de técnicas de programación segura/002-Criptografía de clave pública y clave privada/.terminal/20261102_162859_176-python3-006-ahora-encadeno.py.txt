@@ -1,0 +1,22 @@
+Datetime: 2026-11-02T15:28:59.176Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada
+Command: python3 006-ahora\ encadeno.py
+
+Result:
+Jose Vicente
+J
+O
+t
+x
+j
+%
+[
+n
+h
+j
+s
+y
+j
+j
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación d
+e servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada$ 

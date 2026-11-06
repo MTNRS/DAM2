@@ -1,0 +1,4 @@
+<?php
+// Copia este archivo a informes-config.local.php y configura la clave privada.
+// No publiques la clave en JavaScript ni la incluyas en repositorios.
+return ['api_key' => 'INTRODUCE_AQUI_TU_API_KEY'];

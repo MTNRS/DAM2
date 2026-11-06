@@ -1,0 +1,14 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><title>jocarsa | web</title><style>body{font:18px sans-serif;max-width:760px;margin:5rem auto;background:#121820;color:#eee}h1{color:#79d4aa}</style></head><body>
+<#incluir "cabecera.html" #>
+<h1>Servidor + intérprete</h1>
+<#jocarsa
+clase Persona:
+    funcion iniciar(yo, nombre):
+        yo.nombre = nombre
+    funcion saludar(yo):
+        retornar "Hola, " + yo.nombre
+
+p = Persona("desde jocarsa | lenguaje")
+escribir(p.saludar())
+#>
+</body></html>

@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "cita": "“Necesitábamos reunir la gestión académica en una herramienta clara y adaptable.”",
+      "autor": "Responsable de formación",
+      "cargo": "Perfil ficticio · demostración",
+      "demostracion": true
+    },
+    {
+      "id": 2,
+      "cita": "“La automatización nos permitió dedicar más tiempo a atender a nuestros clientes.”",
+      "autor": "Dirección comercial",
+      "cargo": "Perfil ficticio · demostración",
+      "demostracion": true
+    },
+    {
+      "id": 3,
+      "cita": "“Poder trabajar con documentación en un entorno privado era una prioridad.”",
+      "autor": "Responsable de operaciones",
+      "cargo": "Perfil ficticio · demostración",
+      "demostracion": true
+    }
+  ]
+}

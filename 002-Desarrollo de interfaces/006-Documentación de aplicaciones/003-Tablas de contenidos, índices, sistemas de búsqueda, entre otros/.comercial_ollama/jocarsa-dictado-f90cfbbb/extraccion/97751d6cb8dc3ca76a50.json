@@ -1,0 +1,32 @@
+[
+  {
+    "modulo": "Flask",
+    "funcion": "Desarrollo de aplicaciones web",
+    "descripcion": "Permite crear y ejecutar aplicaciones web rápidamente.",
+    "usuarios": "Desarrolladores de software, ingenieros de TI",
+    "confianza": "verificada",
+    "evidencia": "Flask>=3.0,<4",
+    "archivo": "requirements.txt",
+    "fragmento": 1
+  },
+  {
+    "modulo": "faster-whisper",
+    "funcion": "Procesamiento de audio",
+    "descripcion": "Permite transcribir audio a texto de manera eficiente.",
+    "usuarios": "Desarrolladores de aplicaciones de procesamiento de voz, ingenieros de inteligencia artificial",
+    "confianza": "verificada",
+    "evidencia": "faster-whisper>=1.1",
+    "archivo": "requirements.txt",
+    "fragmento": 1
+  },
+  {
+    "modulo": "requests",
+    "funcion": "Realización de solicitudes HTTP",
+    "descripcion": "Permite enviar solicitudes HTTP a servidores web y recibir respuestas.",
+    "usuarios": "Desarrolladores de software, ingenieros de TI",
+    "confianza": "verificada",
+    "evidencia": "requests>=2.31",
+    "archivo": "requirements.txt",
+    "fragmento": 1
+  }
+]

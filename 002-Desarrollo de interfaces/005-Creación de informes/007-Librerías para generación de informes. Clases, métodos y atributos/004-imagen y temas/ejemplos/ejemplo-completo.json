@@ -1,0 +1,916 @@
+{
+  "version": 1,
+  "titulo": "Informe anual de empresa 2026",
+  "paginas": [
+    {
+      "secciones": [
+        {
+          "titulo": "Componentes de texto",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "titulo",
+                  "texto": "Catálogo completo de componentes"
+                },
+                {
+                  "tipo": "subtitulo",
+                  "texto": "Demostración de textos y tablas"
+                },
+                {
+                  "tipo": "imagen",
+                  "src": "https://placehold.co/900x280/png?text=Jocarsa+Informes",
+                  "alt": "Cabecera de demostración",
+                  "pie": "Componente imagen de demostración",
+                  "ancho": 680
+                },
+                {
+                  "tipo": "encabezado",
+                  "texto": "Texto básico"
+                },
+                {
+                  "tipo": "parrafo",
+                  "texto": "Todos los datos de este informe son de ejemplo."
+                },
+                {
+                  "tipo": "texto_enriquecido",
+                  "fragmentos": [
+                    {
+                      "texto": "Texto destacado ",
+                      "negrita": true,
+                      "color": "#2563eb"
+                    },
+                    {
+                      "texto": "y enlace",
+                      "cursiva": true,
+                      "enlace": "https://example.com"
+                    }
+                  ]
+                },
+                {
+                  "tipo": "etiqueta",
+                  "texto": "Cliente"
+                },
+                {
+                  "tipo": "valor",
+                  "texto": "Jocarsa S.L."
+                },
+                {
+                  "tipo": "etiqueta_valor",
+                  "etiqueta": "Razón social",
+                  "valor": "{{empresa}}"
+                },
+                {
+                  "tipo": "lista_vinetas",
+                  "elementos": [
+                    "Primer elemento",
+                    "Segundo elemento"
+                  ]
+                },
+                {
+                  "tipo": "lista_numerada",
+                  "elementos": [
+                    "Primera acción",
+                    "Segunda acción"
+                  ]
+                },
+                {
+                  "tipo": "cita",
+                  "texto": "La información permite tomar decisiones.",
+                  "autor": "Dirección"
+                },
+                {
+                  "tipo": "nota",
+                  "texto": "Este informe es una demostración."
+                },
+                {
+                  "tipo": "nota_pie",
+                  "texto": "Datos simulados."
+                },
+                {
+                  "tipo": "texto_legal",
+                  "texto": "Condiciones generales: uso exclusivamente demostrativo."
+                },
+                {
+                  "tipo": "texto_dinamico",
+                  "texto": "La empresa {{empresa}} facturó {{facturacion}} euros."
+                },
+                {
+                  "tipo": "texto_condicional",
+                  "texto": "Se ha superado el objetivo de ventas.",
+                  "regla": {
+                    "campo": "facturacion",
+                    "operador": "mayor",
+                    "valor": 120000
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Componentes tabulares 1 a 3",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "tabla_simple",
+                  "columnas": [
+                    "Nombre",
+                    "Importe"
+                  ],
+                  "filas": [
+                    [
+                      "A",
+                      100
+                    ],
+                    [
+                      "B",
+                      200
+                    ]
+                  ]
+                },
+                {
+                  "tipo": "tabla_dinamica",
+                  "origen": "ventas",
+                  "columnas": [
+                    "area",
+                    "periodo",
+                    "importe",
+                    "unidades"
+                  ]
+                },
+                {
+                  "tipo": "tabla_agrupada",
+                  "origen": "ventas",
+                  "agrupar_por": "area",
+                  "columnas": [
+                    "area",
+                    "periodo",
+                    "importe"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Componentes tabulares 4 a 6",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "tabla_jerarquica",
+                  "columnas": [
+                    "nombre",
+                    "cargo"
+                  ],
+                  "filas": [
+                    {
+                      "nombre": "Dirección",
+                      "cargo": "CEO",
+                      "hijos": [
+                        {
+                          "nombre": "Tecnología",
+                          "cargo": "CTO"
+                        },
+                        {
+                          "nombre": "Ventas",
+                          "cargo": "Comercial"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tipo": "tabla_pivote",
+                  "origen": "ventas",
+                  "campo_fila": "area",
+                  "campo_columna": "periodo",
+                  "campo_valor": "importe",
+                  "operacion": "suma"
+                },
+                {
+                  "tipo": "matriz",
+                  "cabecera_filas": "Alumno",
+                  "filas": [
+                    "Ana",
+                    "Luis"
+                  ],
+                  "columnas": [
+                    "Matemáticas",
+                    "Programación"
+                  ],
+                  "valores": [
+                    [
+                      8,
+                      9
+                    ],
+                    [
+                      7,
+                      10
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Componentes tabulares 7 a 9",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "tabla_comparativa",
+                  "columnas": [
+                    "Indicador",
+                    "2025",
+                    "2026"
+                  ],
+                  "filas": [
+                    [
+                      "Ventas",
+                      100,
+                      120
+                    ],
+                    [
+                      "Clientes",
+                      25,
+                      35
+                    ]
+                  ]
+                },
+                {
+                  "tipo": "tabla_totales",
+                  "columnas": [
+                    "Concepto",
+                    "Importe"
+                  ],
+                  "filas": [
+                    [
+                      "Servicio A",
+                      100
+                    ],
+                    [
+                      "Servicio B",
+                      200
+                    ]
+                  ],
+                  "columna_total": 1,
+                  "impuesto_porcentaje": 21
+                },
+                {
+                  "tipo": "tabla_frecuencias",
+                  "origen": "empleados",
+                  "campo": "departamento"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Componentes tabulares 10 a 12",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "tabla_calendario",
+                  "mes": "2026-11",
+                  "filas": [
+                    {
+                      "fecha": "2026-11-02",
+                      "texto": "Reunión"
+                    },
+                    {
+                      "fecha": "2026-11-16",
+                      "texto": "Entrega"
+                    }
+                  ]
+                },
+                {
+                  "tipo": "tabla_doble_entrada",
+                  "origen": "ventas",
+                  "campo_fila": "area",
+                  "campo_columna": "periodo",
+                  "campo_valor": "unidades",
+                  "operacion": "suma"
+                },
+                {
+                  "tipo": "tabla_celdas_fusionadas",
+                  "columnas": [
+                    "Col 1",
+                    "Col 2",
+                    "Col 3"
+                  ],
+                  "filas": [
+                    [
+                      {
+                        "valor": "Encabezado fusionado",
+                        "colspan": 3
+                      }
+                    ],
+                    [
+                      1,
+                      2,
+                      3
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Componentes tabulares 13 a 14",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "tabla_formato_condicional",
+                  "columnas": [
+                    "Nombre",
+                    "Nota"
+                  ],
+                  "filas": [
+                    [
+                      "Ana",
+                      9
+                    ],
+                    [
+                      "Luis",
+                      4
+                    ],
+                    [
+                      "Eva",
+                      7
+                    ]
+                  ],
+                  "reglas": [
+                    {
+                      "columna": 1,
+                      "operador": "menor",
+                      "valor": 5,
+                      "clase": "celda-negativa"
+                    },
+                    {
+                      "columna": 1,
+                      "operador": "mayor",
+                      "valor": 8,
+                      "clase": "celda-positiva"
+                    }
+                  ]
+                },
+                {
+                  "tipo": "tabla_formulas",
+                  "columnas": [
+                    "Producto",
+                    "Precio",
+                    "Cantidad",
+                    "Total"
+                  ],
+                  "filas": [
+                    [
+                      "A",
+                      12,
+                      3,
+                      0
+                    ],
+                    [
+                      "B",
+                      5,
+                      4,
+                      0
+                    ]
+                  ],
+                  "formulas": [
+                    {
+                      "destino": 3,
+                      "a": 1,
+                      "b": 2,
+                      "operador": "multiplicar"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Gráficas e indicadores originales",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "kpi",
+                  "etiqueta": "Ingresos",
+                  "valor": "150.000 €"
+                },
+                {
+                  "tipo": "contador",
+                  "etiqueta": "Clientes",
+                  "valor": 25
+                },
+                {
+                  "tipo": "porcentaje",
+                  "etiqueta": "Objetivo",
+                  "valor": 78.5
+                },
+                {
+                  "tipo": "barras",
+                  "titulo": "Ventas",
+                  "etiquetas": [
+                    "T1",
+                    "T2"
+                  ],
+                  "valores": [
+                    10,
+                    20
+                  ]
+                },
+                {
+                  "tipo": "lineas",
+                  "titulo": "Tendencia",
+                  "etiquetas": [
+                    "T1",
+                    "T2"
+                  ],
+                  "valores": [
+                    10,
+                    20
+                  ]
+                },
+                {
+                  "tipo": "circular",
+                  "titulo": "Distribución",
+                  "etiquetas": [
+                    "A",
+                    "B"
+                  ],
+                  "valores": [
+                    30,
+                    70
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Numeración, recuento y totales",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "tabla_simple",
+                  "columnas": [
+                    "Producto",
+                    "Unidades",
+                    "Importe"
+                  ],
+                  "filas": [
+                    [
+                      "Teclado",
+                      3,
+                      120
+                    ],
+                    [
+                      "Ratón",
+                      5,
+                      75
+                    ],
+                    [
+                      "Monitor",
+                      2,
+                      450
+                    ]
+                  ],
+                  "numerar_filas": true,
+                  "mostrar_recuento": true,
+                  "totales": [
+                    1,
+                    2
+                  ]
+                },
+                {
+                  "tipo": "tabla_dinamica",
+                  "origen": "ventas",
+                  "columnas": [
+                    "categoria",
+                    "importe"
+                  ],
+                  "numerar_filas": true,
+                  "mostrar_recuento": true,
+                  "totales": [
+                    1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Visualizaciones avanzadas 1",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "area",
+                  "titulo": "Area",
+                  "etiquetas": [
+                    "Ene",
+                    "Feb",
+                    "Mar",
+                    "Abr"
+                  ],
+                  "valores": [
+                    12,
+                    20,
+                    17,
+                    29
+                  ]
+                },
+                {
+                  "tipo": "dispersion",
+                  "titulo": "Dispersion",
+                  "puntos": [
+                    {
+                      "x": 1,
+                      "y": 4
+                    },
+                    {
+                      "x": 2,
+                      "y": 7
+                    },
+                    {
+                      "x": 4,
+                      "y": 3
+                    }
+                  ]
+                },
+                {
+                  "tipo": "indicador_grafico",
+                  "titulo": "Indicador Grafico",
+                  "valor": 72,
+                  "minimo": 0,
+                  "maximo": 100
+                },
+                {
+                  "tipo": "barras_horizontales",
+                  "titulo": "Barras Horizontales",
+                  "etiquetas": [
+                    "Web",
+                    "Apps",
+                    "IA"
+                  ],
+                  "valores": [
+                    20,
+                    15,
+                    12
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Visualizaciones avanzadas 2",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "barras_apiladas",
+                  "titulo": "Barras Apiladas",
+                  "etiquetas": [
+                    "T1",
+                    "T2",
+                    "T3"
+                  ],
+                  "series": [
+                    {
+                      "nombre": "A",
+                      "valores": [
+                        12,
+                        20,
+                        14
+                      ]
+                    },
+                    {
+                      "nombre": "B",
+                      "valores": [
+                        8,
+                        5,
+                        11
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tipo": "anillos",
+                  "titulo": "Anillos",
+                  "etiquetas": [
+                    "A",
+                    "B",
+                    "C"
+                  ],
+                  "valores": [
+                    50,
+                    30,
+                    20
+                  ]
+                },
+                {
+                  "tipo": "histograma",
+                  "titulo": "Histograma",
+                  "valores": [
+                    1,
+                    2,
+                    2,
+                    3,
+                    4,
+                    4,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                  ],
+                  "intervalos": 5
+                },
+                {
+                  "tipo": "radar",
+                  "titulo": "Radar",
+                  "etiquetas": [
+                    "Calidad",
+                    "Precio",
+                    "Velocidad",
+                    "Soporte"
+                  ],
+                  "valores": [
+                    8,
+                    6,
+                    9,
+                    7
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Visualizaciones avanzadas 3",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "burbujas",
+                  "titulo": "Burbujas",
+                  "puntos": [
+                    {
+                      "x": 1,
+                      "y": 5,
+                      "z": 20
+                    },
+                    {
+                      "x": 3,
+                      "y": 2,
+                      "z": 50
+                    },
+                    {
+                      "x": 5,
+                      "y": 7,
+                      "z": 90
+                    }
+                  ]
+                },
+                {
+                  "tipo": "mapa_calor",
+                  "titulo": "Mapa Calor",
+                  "matriz": [
+                    [
+                      1,
+                      4,
+                      8
+                    ],
+                    [
+                      2,
+                      7,
+                      9
+                    ],
+                    [
+                      3,
+                      5,
+                      6
+                    ]
+                  ]
+                },
+                {
+                  "tipo": "caja",
+                  "titulo": "Caja",
+                  "valores": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    9,
+                    10,
+                    15
+                  ]
+                },
+                {
+                  "tipo": "cascada",
+                  "titulo": "Cascada",
+                  "etiquetas": [
+                    "Inicio",
+                    "Coste",
+                    "Venta",
+                    "Impuesto"
+                  ],
+                  "valores": [
+                    50,
+                    -20,
+                    30,
+                    -10
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Visualizaciones avanzadas 4",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "embudo",
+                  "titulo": "Embudo",
+                  "etiquetas": [
+                    "Visitas",
+                    "Leads",
+                    "Ventas"
+                  ],
+                  "valores": [
+                    100,
+                    45,
+                    12
+                  ]
+                },
+                {
+                  "tipo": "gantt",
+                  "titulo": "Gantt",
+                  "tareas": [
+                    {
+                      "nombre": "Análisis",
+                      "inicio": "2026-11-01",
+                      "fin": "2026-11-04"
+                    },
+                    {
+                      "nombre": "Desarrollo",
+                      "inicio": "2026-11-03",
+                      "fin": "2026-11-15"
+                    },
+                    {
+                      "nombre": "Pruebas",
+                      "inicio": "2026-11-14",
+                      "fin": "2026-11-20"
+                    }
+                  ]
+                },
+                {
+                  "tipo": "linea_temporal",
+                  "titulo": "Linea Temporal",
+                  "eventos": [
+                    {
+                      "fecha": "2026-01-01",
+                      "texto": "Inicio"
+                    },
+                    {
+                      "fecha": "2026-05-15",
+                      "texto": "Entrega"
+                    },
+                    {
+                      "fecha": "2026-11-02",
+                      "texto": "Lanzamiento"
+                    }
+                  ]
+                },
+                {
+                  "tipo": "sparkline",
+                  "titulo": "Sparkline",
+                  "etiquetas": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                  ],
+                  "valores": [
+                    2,
+                    5,
+                    3,
+                    8,
+                    7
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "datos": {
+    "empresa": "Jocarsa S.L.",
+    "facturacion": 150000,
+    "objetivo": 120000,
+    "ventas": [
+      {
+        "area": "Software",
+        "periodo": "T1",
+        "importe": 1200,
+        "unidades": 3
+      },
+      {
+        "area": "Software",
+        "periodo": "T2",
+        "importe": 1600,
+        "unidades": 4
+      },
+      {
+        "area": "Formación",
+        "periodo": "T1",
+        "importe": 800,
+        "unidades": 8
+      },
+      {
+        "area": "Formación",
+        "periodo": "T2",
+        "importe": 1100,
+        "unidades": 11
+      }
+    ],
+    "empleados": [
+      {
+        "departamento": "IT",
+        "nombre": "Ana"
+      },
+      {
+        "departamento": "IT",
+        "nombre": "Luis"
+      },
+      {
+        "departamento": "Ventas",
+        "nombre": "Eva"
+      }
+    ]
+  }
+}

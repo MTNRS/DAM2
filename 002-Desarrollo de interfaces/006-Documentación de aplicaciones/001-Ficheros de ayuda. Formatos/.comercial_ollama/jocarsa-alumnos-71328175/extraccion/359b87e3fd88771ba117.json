@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Análisis de profesores",
+    "funcion": "Obtener análisis de profesores",
+    "descripcion": "Permite obtener métricas y estadísticas relacionadas con el rendimiento de los estudiantes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "if ($action === 'teacher_analytics')",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Grupos de profesores",
+    "funcion": "Obtener grupos de profesores",
+    "descripcion": "Permite obtener la lista de grupos existentes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "if ($action === 'teacher_groups')",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Grupos de profesores",
+    "funcion": "Guardar grupo de profesores",
+    "descripcion": "Permite crear o actualizar un grupo de estudiantes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "if ($action === 'teacher_save_group')",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Grupos de profesores",
+    "funcion": "Eliminar grupo de profesores",
+    "descripcion": "Permite eliminar un grupo de estudiantes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "if ($action === 'teacher_delete_group')",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Asignación de grupos",
+    "funcion": "Asignar estudiante a grupo",
+    "descripcion": "Permite asignar un estudiante a un grupo específico.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "if ($action === 'teacher_assign_student_group')",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Exportación de perfiles",
+    "funcion": "Construir exportación de perfiles",
+    "descripcion": "Permite construir una exportación detallada de los perfiles de estudiantes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "function build_teacher_export",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Exportación de perfiles",
+    "funcion": "Convertir exportación a Markdown",
+    "descripcion": "Permite convertir la exportación de perfiles a formato Markdown.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "function teacher_export_to_markdown",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Exportación de perfiles",
+    "funcion": "Generar nombre seguro para exportación",
+    "descripcion": "Permite generar un nombre seguro y válido para archivos de exportación.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "function safe_export_filename",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Estadísticas generales",
+    "funcion": "Promedio de palabras por estudiante",
+    "descripcion": "Permite obtener el promedio de palabras escritas por cada estudiante.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "'avg_words_per_student' => $avgWordsPerStudent",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Estadísticas generales",
+    "funcion": "Promedio de palabras por respuesta",
+    "descripcion": "Permite obtener el promedio de palabras en cada respuesta del estudiante.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "'avg_words_per_answer' => $avgWordsPerAnswer",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Estadísticas generales",
+    "funcion": "Promedio de caracteres por palabra",
+    "descripcion": "Permite obtener el promedio de caracteres en cada palabra escrita por los estudiantes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "'avg_chars_per_word' => $avgCharsPerWord",
+    "archivo": "api.php",
+    "fragmento": 4
+  },
+  {
+    "modulo": "Resumen de telemetría",
+    "funcion": "Obtener resumen de telemetría",
+    "descripcion": "Permite obtener un resumen detallado de la telemetría relacionada con el rendimiento de los estudiantes.",
+    "usuarios": "Profesores",
+    "confianza": "verificada",
+    "evidencia": "'telemetry_summary' => $telemetrySummary",
+    "archivo": "api.php",
+    "fragmento": 4
+  }
+]

@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "titulo": "Desarrollo a medida",
+      "descripcion": "Proyectos personalizados con presupuesto cerrado o por fases."
+    },
+    {
+      "id": 2,
+      "titulo": "Software como servicio (SaaS)",
+      "descripcion": "Acceso a aplicaciones mediante suscripción."
+    },
+    {
+      "id": 3,
+      "titulo": "IA como servicio",
+      "descripcion": "Implantación y operación de soluciones inteligentes."
+    },
+    {
+      "id": 4,
+      "titulo": "Servicios gestionados",
+      "descripcion": "Mantenimiento, monitorización y soporte recurrente."
+    },
+    {
+      "id": 5,
+      "titulo": "Consultoría tecnológica",
+      "descripcion": "Diagnóstico, planificación e implantación."
+    },
+    {
+      "id": 6,
+      "titulo": "Formación empresarial",
+      "descripcion": "Capacitación técnica y adaptación de trabajadores."
+    }
+  ]
+}

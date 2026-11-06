@@ -1,0 +1,22 @@
+[
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Actualización de iconos",
+    "descripcion": "Permite al usuario actualizar los iconos de la aplicación con su propio SVG",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "src/View.php, site.webmanifest, assets/",
+    "archivo": "README-MOBILE-UPDATE.md",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Compatibilidad iOS",
+    "funcion": "Eliminación y reagregación de la aplicación en el Home Screen",
+    "descripcion": "Ayuda a iOS a actualizar los iconos de la aplicación",
+    "usuarios": "Todos los usuarios de iOS",
+    "confianza": "inferida",
+    "evidencia": "No especificado en el código",
+    "archivo": "README-MOBILE-UPDATE.md",
+    "fragmento": 1
+  }
+]

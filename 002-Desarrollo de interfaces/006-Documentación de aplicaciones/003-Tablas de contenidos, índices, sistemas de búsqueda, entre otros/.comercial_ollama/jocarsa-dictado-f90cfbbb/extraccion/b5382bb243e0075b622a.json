@@ -1,0 +1,42 @@
+[
+  {
+    "modulo": "mensajes",
+    "funcion": "Verificar existencia de mensaje",
+    "descripcion": "Permite verificar si un mensaje con un título específico ya existe en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "c.execute(\"SELECT 1 FROM mensajes WHERE modelo='demo' AND asunto=? LIMIT 1\",(title,)).fetchone()",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "Insertar mensaje de demostración",
+    "descripcion": "Permite insertar un nuevo mensaje de demostración en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "c.execute(\"INSERT INTO mensajes(titulo,original,formateado,modelo,estado,asunto,emociones_json,tipo_texto,idioma_salida,dictado) VALUES(?,?,?,'demo','demostracion',?,'{}',?,'es',?)\",(title,raw,body,title,kind,raw))",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "Contar inserciones",
+    "descripcion": "Permite contar el número de mensajes de demostración insertados en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "count+=1",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "Imprimir resumen de inserciones",
+    "descripcion": "Permite imprimir un resumen del número de mensajes de demostración insertados en la base de datos.",
+    "usuarios": "Desarrolladores, administradores de bases de datos",
+    "confianza": "verificada",
+    "evidencia": "print(f'Insertados {count} mensajes de demostración en {DB}')",
+    "archivo": "seed_demo.py",
+    "fragmento": 2
+  }
+]

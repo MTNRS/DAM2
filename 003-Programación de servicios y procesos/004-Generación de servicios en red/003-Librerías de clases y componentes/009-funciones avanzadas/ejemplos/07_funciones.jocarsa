@@ -1,0 +1,16 @@
+# Funciones con y sin parametros
+funcion saludo():
+    escribir("Hola desde una funcion")
+
+funcion doble(numero):
+    retornar numero * 2
+
+funcion factorial(n):
+    si n <= 1:
+        retornar 1
+    sino:
+        retornar n * factorial(n - 1)
+
+saludo()
+escribir(doble(21))
+escribir(factorial(5))

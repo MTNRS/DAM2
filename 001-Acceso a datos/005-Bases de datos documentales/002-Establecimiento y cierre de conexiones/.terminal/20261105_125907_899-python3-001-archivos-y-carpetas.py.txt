@@ -1,0 +1,27 @@
+Datetime: 2026-11-05T11:59:07.899Z
+Working directory: /var/www/html/tame2627dam2/001-Acceso a datos/005-Bases de datos documentales/002-Establecimiento y cierre de conexiones
+Command: python3 001-archivos\ y\ carpetas.py
+
+Result:
+
+--- CARPETAS DISPONIBLES ---
+
+0. jocarsa-documental/
+1.     carpeta 2/
+2.         subcarpeta2/
+3.     subcarpeta1/
+
+==============================
+      JOCARSA DOCUMENTAL
+==============================
+1. Crear carpeta
+2. Ver estructura
+3. Salir
+
+Selecciona una opción: ^X^CTraceback (most recent call last):
+  File "/var/www/html/tame2627dam2/001-Acceso a datos/005-Bases de datos documentales/002-Establecimiento y cierre de conexiones/001-archivos y carpetas.py", line 87, in <module>
+    opcion = input("\nSelecciona una opción: ")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/001-Acceso a datos/005-Bases de datos documentales/002-Establecimiento y cierre de conexiones$ 

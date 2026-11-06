@@ -1,0 +1,10 @@
+Datetime: 2026-11-02T15:46:15.607Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada
+Command: pytnon3 011-mejoras.py
+
+Result:
+Orden «pytnon3» no encontrada. Quizá quiso decir:
+  la orden «python3» del paquete deb «python3 (3.12.3-0ubuntu2.1)»
+Pruebe con: sudo apt install <nombre del paquete deb>
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios y proceso
+s/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada$ 

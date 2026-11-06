@@ -1,0 +1,16 @@
+{
+    "clientes": {
+        "tabla": "clientes",
+        "titulo": "clientes",
+        "descripcion": "",
+        "activo": true,
+        "campos": [
+            "nombre",
+            "email"
+        ],
+        "obligatorios": [
+            "nombre"
+        ],
+        "token": "167736a370ee851a818f795f097413185007b6bafabd544b"
+    }
+}

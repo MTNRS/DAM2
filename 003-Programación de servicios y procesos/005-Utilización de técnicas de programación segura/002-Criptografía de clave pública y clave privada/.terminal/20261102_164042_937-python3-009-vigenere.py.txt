@@ -1,0 +1,30 @@
+Datetime: 2026-11-02T15:40:42.937Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada
+Command: python3 009-vigenere.py
+
+Result:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada/009-vigenere.py", line 14, in <module>
+    codifica("Jose Vicente")
+  File "/var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada/009-vigenere.py", line 4, in codifica
+    for i in len(entrada):
+TypeError: 'int' object is not iterable
+Error in sys.excepthook:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 228, in partial_apport_excepthook
+    return apport_excepthook(binary, exc_type, exc_obj, exc_tb)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/apport_python_hook.py", line 144, in apport_excepthook
+    os.open(pr_filename, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o640), "wb"
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/var/crash/_var_www_html_tame2627dam2_003-Programación de servicios y procesos_005-Utilización de técnicas de programación segura_002-Criptografía de clave pública y clave privada_009-vigenere.py.1000.crash'
+
+Original exception was:
+Traceback (most recent call last):
+  File "/var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada/009-vigenere.py", line 14, in <module>
+    codifica("Jose Vicente")
+  File "/var/www/html/tame2627dam2/003-Programación de servicios y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada/009-vigenere.py", line 4, in codifica
+    for i in len(entrada):
+TypeError: 'int' object is not iterable
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de servicios 
+y procesos/005-Utilización de técnicas de programación segura/002-Criptografía de clave pública y clave privada$ 

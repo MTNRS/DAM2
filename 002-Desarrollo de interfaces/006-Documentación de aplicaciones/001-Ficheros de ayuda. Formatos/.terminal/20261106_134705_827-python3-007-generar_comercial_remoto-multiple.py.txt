@@ -1,0 +1,22 @@
+Datetime: 2026-11-06T12:47:05.827Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos
+Command: python3 007-generar_comercial_remoto\ multiple.py
+
+Result:
+usage: 007-generar_comercial_remoto multiple.py [-h] [--lista LISTA]
+                                                [--salida-dir SALIDA_DIR]
+                                                [--trabajo-base TRABAJO_BASE]
+                                                [--modelo-analista MODELO_ANALISTA]
+                                                [--modelo-redactor MODELO_REDACTOR]
+                                                [--url URL] [--token TOKEN]
+                                                [--probar-api]
+                                                [--contexto CONTEXTO]
+                                                [--caracteres-chunk CARACTERES_CHUNK]
+                                                [--max-archivo-mb MAX_ARCHIVO_MB]
+                                                [--timeout TIMEOUT]
+                                                [--intentos INTENTOS]
+                                                [--rehacer-extraccion]
+                                                [--rehacer-redaccion]
+007-generar_comercial_remoto multiple.py: error: Configura JOCARSA_IA_TOKEN o usa --token
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarrollo de in
+terfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos$ 

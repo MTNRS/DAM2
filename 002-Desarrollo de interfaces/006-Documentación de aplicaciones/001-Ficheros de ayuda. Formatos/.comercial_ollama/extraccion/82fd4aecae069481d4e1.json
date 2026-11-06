@@ -1,0 +1,42 @@
+[
+  {
+    "modulo": "Seguridad",
+    "funcion": "Protección contra el acceso a archivos ocultos",
+    "descripcion": "Evita que los usuarios puedan ver archivos ocultos como .env y .env.example",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "<FilesMatch \"/\\.(env|env\\.example)$\"> Require all denied</FilesMatch>",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Seguridad",
+    "funcion": "Protección contra el acceso a directorios específicos",
+    "descripcion": "Evita que los usuarios puedan acceder a directorios como src, database y tools",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "RewriteRule ^(?:src|database|tools)(?:/|$) - [F,L]",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Optimización",
+    "funcion": "Desactivación de la visualización de índices de directorios",
+    "descripcion": "Evita que los usuarios vean una lista de archivos en los directorios",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "Options -Indexes",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Redirección",
+    "funcion": "Redirección de solicitudes a index.php",
+    "descripcion": "Redirige todas las solicitudes a index.php",
+    "usuarios": "Todos los usuarios",
+    "confianza": "verificada",
+    "evidencia": "DirectoryIndex index.php",
+    "archivo": ".htaccess",
+    "fragmento": 1
+  }
+]

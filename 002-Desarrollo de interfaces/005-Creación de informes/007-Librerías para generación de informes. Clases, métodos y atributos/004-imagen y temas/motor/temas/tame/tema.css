@@ -1,0 +1,30 @@
+/* TAME — interpretación visual de la web pública, no reproducción exacta de CSS propietario. */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
+:root{--tame-azul:#183c66;--tame-azul-claro:#2379b7;--tame-naranja:#ed8c25;--tame-texto:#263849;--tame-fondo:#f4f7fa}
+body{font-family:'Open Sans',Arial,sans-serif;background:#e9f0f5;color:var(--tame-texto);line-height:1.65}
+.documento-header{background:linear-gradient(110deg,#15375c,#236da4);color:white;text-align:left;padding:28px 34px;border-bottom:6px solid var(--tame-naranja)}
+.documento-header h1{font-family:Montserrat,Arial,sans-serif;font-weight:800;font-size:25px}
+.pagina{background:#fff;box-shadow:0 4px 22px #183c661c;padding:19mm 19mm 21mm;border-top:6px solid var(--tame-azul-claro)}
+.pagina::before{content:'INSTITUTO TAME  ·  INFORME';display:block;color:var(--tame-azul);font-family:Montserrat,Arial,sans-serif;font-size:9px;font-weight:800;letter-spacing:.13em;border-bottom:1px solid #dbe6ef;padding-bottom:9px;margin-bottom:21px}
+.seccion{margin-bottom:28px}.seccion-titulo{font-family:Montserrat,Arial,sans-serif;color:var(--tame-azul);font-size:19px;border-bottom:3px solid var(--tame-naranja);padding-bottom:9px}
+.componente-titulo{font-family:Montserrat,Arial,sans-serif;color:var(--tame-azul);font-weight:800;font-size:29px}
+.componente-subtitulo{color:var(--tame-azul-claro);font-family:Montserrat,Arial,sans-serif}
+.componente-encabezado{color:var(--tame-azul);font-family:Montserrat,Arial,sans-serif}
+.componente-parrafo{color:var(--tame-texto);line-height:1.8;text-align:left}
+.tabla-simple{font-size:12px}.tabla-simple thead,.tabla-simple thead tr,.tabla-simple thead th,.tabla-avanzada th{background:var(--tame-azul)!important;color:white!important}
+.tabla-simple th{padding:12px}.tabla-simple td{padding:11px;border-bottom:1px solid #dbe6ee}
+.tabla-simple tbody tr:nth-child(even){background:#f1f6fa}.tabla-simple tbody tr:hover{background:#e4f0fa}
+.tabla-simple tfoot td,.tabla-simple tfoot th{border-top:2px solid var(--tame-naranja)}
+.tabla-fila-total{background:#e4f0fa!important}.tabla-numero{background:#e9f2f9;color:var(--tame-azul)}
+.grafica{background:white;border:1px solid #dce6ee;border-top:4px solid var(--tame-azul-claro);border-radius:5px;padding:18px}
+.grafica-titulo{font-family:Montserrat,Arial,sans-serif;color:var(--tame-azul)}
+.indicador{border:1px solid #dce6ee;border-left:5px solid var(--tame-azul-claro);border-radius:4px;background:var(--tame-fondo)}
+.indicador-etiqueta{color:#4e6881}.indicador-valor{color:var(--tame-azul)}
+.kpi{border-left-color:var(--tame-naranja)}.kpi .indicador-valor{color:var(--tame-azul)}
+.contador{border-left-color:var(--tame-azul-claro)}.contador .indicador-valor{color:var(--tame-azul)}
+.porcentaje{border-left-color:var(--tame-naranja)}.porcentaje .indicador-valor{color:var(--tame-azul)}
+.porcentaje-progreso{background:linear-gradient(90deg,var(--tame-azul-claro),var(--tame-naranja))}
+.texto-cita{border-left-color:var(--tame-azul-claro);background:#eff6fb}
+.texto-nota{border-left-color:var(--tame-naranja);background:#fff8ef}
+.texto-etiqueta,.tabla-grupo{color:var(--tame-azul)}.numero-pagina{color:var(--tame-azul-claro)}
+@media print{body{background:white}.pagina{box-shadow:none;border-top:6px solid var(--tame-azul-claro)}.documento-header{display:none}}

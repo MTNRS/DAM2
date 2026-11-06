@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Iniciar sesión | jocarsa ERP</title><link rel="icon" type="image/svg+xml" href="https://static.jocarsa.com/logos/saddlebrown.svg">
+<link rel="stylesheet" href="css/estilo.css"><link rel="stylesheet" href="css/accesibilidad.css"><link rel="stylesheet" href="css/teclado.css"><link rel="stylesheet" href="css/ayudas.css"><link rel="stylesheet" href="css/jocarsa-refinado.css"><link rel="stylesheet" href="componentes-v5/jocarsa-iu.css"><link rel="stylesheet" href="componentes-v5/jocarsa-refinado.css">
+<style>.ju-login-card #error:not(:empty){color:#a52332;font-weight:600}.ju-login-card button[disabled]{opacity:.6;cursor:wait}.ju-login-actions{align-items:center}</style>
+<link rel="stylesheet" href="css/tema-empresa.css"></head><body class="ju-login-page"><a class="ju-skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+<main id="contenido-principal" tabindex="-1" class="ju-login-layout">
+<article class="ju-login-side"><div class="ju-login-brand"><img alt="" src="https://static.jocarsa.com/logos/saddlebrown.svg"><h1 class="ju-login-product-title">jocarsa | erp</h1><p>Accede a tu espacio de trabajo.</p></div></article>
+<article class="ju-login-card"><h2>Iniciar sesión</h2><p>Introduce tus credenciales.</p>
+<form id="login" class="ju-form-grid">
+<label class="ju-form-full"><span>Usuario</span><input name="username" placeholder="Usuario" autocomplete="username" required></label>
+<label class="ju-form-full"><span>Contraseña</span><input type="password" name="password" placeholder="Contraseña" autocomplete="current-password" required></label>
+<div class="ju-form-full ju-login-actions"><button class="ju-btn" type="submit">Entrar</button></div>
+<p class="ju-form-full" id="error" role="alert" aria-live="polite"></p>
+</form></article></main>
+<script>
+const formulario=document.querySelector('#login'),error=document.querySelector('#error');
+formulario.addEventListener('submit',async event=>{event.preventDefault();error.textContent='';const boton=formulario.querySelector('button[type=submit]');boton.disabled=true;
+try{const response=await fetch('../backend/auth.php?action=login',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify(Object.fromEntries(new FormData(formulario)))});const data=await response.json();if(!response.ok||!data.ok)throw new Error(data.error||'No se ha podido iniciar sesión');location.href='index.html';}catch(e){error.textContent=e.message;boton.disabled=false;}});
+</script><script src="js/accesibilidad.js"></script><script src="js/responsive-vistas.js"></script><script src="js/teclado.js"></script><script src="js/ayudas.js"></script>
+</body></html>

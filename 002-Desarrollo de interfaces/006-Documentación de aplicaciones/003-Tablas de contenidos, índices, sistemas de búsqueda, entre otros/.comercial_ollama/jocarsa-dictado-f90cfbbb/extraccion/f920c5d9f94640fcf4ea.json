@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Grabación de audio",
+    "funcion": "Iniciar/Parar grabación",
+    "descripcion": "Permite al usuario iniciar o detener la grabación de audio.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonvoz').onclick=()=>recording?stop():start();",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproducción de audio",
+    "funcion": "Reproducir/Pausar audio",
+    "descripcion": "Permite al usuario reproducir o pausar el audio grabado.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('audio-play').onclick=()=>{const a=$('playback');if(a.paused)a.play().catch(err=>status('Audio: '+err.message));else a.pause()};",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproducción de audio",
+    "funcion": "Avanzar/Retroceder en el audio",
+    "descripcion": "Permite al usuario avanzar o retroceder 5 segundos en la reproducción del audio.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('audio-forward').onclick=()=>{const a=$('playback');if(Number.isFinite(a.duration))a.currentTime=Math.min(a.duration,a.currentTime+5)}; $('audio-back').onclick=()=>{$('playback').currentTime=Math.max(0,$('playback').currentTime-5)};",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Reproducción de audio",
+    "funcion": "Controlar volumen del audio",
+    "descripcion": "Permite al usuario ajustar el volumen del audio.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('audio-volume').oninput=e=>{$('playback').volume=Number(e.target.value)};",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Visualización de audio",
+    "funcion": "Mostrar onda sonora",
+    "descripcion": "Muestra una representación visual de la onda sonora del audio grabado.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "showRecordedAudio(blob), drawRecordedWave(), seekRecorded(ev)",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Limpiar contenido",
+    "descripcion": "Permite al usuario limpiar el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonlimpiar').onclick=clear; $('new').onclick=clear; $('admin-new').onclick=clear;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Formatear contenido",
+    "descripcion": "Permite al usuario formatear el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonformatear').onclick=format;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Guardar contenido",
+    "descripcion": "Permite al usuario guardar el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botonguardar').onclick=save;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Edición de texto",
+    "funcion": "Eliminar contenido",
+    "descripcion": "Permite al usuario eliminar el contenido actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botoneliminar').onclick=()=>remove();",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Búsqueda de contenido",
+    "funcion": "Buscar contenido",
+    "descripcion": "Permite al usuario buscar contenido en la interfaz.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('search-input').oninput=search; $('search-button').onclick=search;",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Compartir contenido",
+    "funcion": "Copiar texto",
+    "descripcion": "Permite al usuario copiar el texto actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botoncopiar').onclick=()=>navigator.clipboard.writeText($('resultado').innerText).then(()=>status('Texto copiado'));",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  },
+  {
+    "modulo": "Compartir contenido",
+    "funcion": "Copiar asunto",
+    "descripcion": "Permite al usuario copiar el asunto actual.",
+    "usuarios": "Usuario general",
+    "confianza": "verificada",
+    "evidencia": "$('botoncopiarasunto').onclick=()=>navigator.clipboard.writeText($('asuntoresultado').innerText).then(()=>status('Asunto copiado'));",
+    "archivo": "static/app.js",
+    "fragmento": 2
+  }
+]

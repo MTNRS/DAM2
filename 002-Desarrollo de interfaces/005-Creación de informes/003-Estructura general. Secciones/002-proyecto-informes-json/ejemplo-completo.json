@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "titulo": "Informe anual de empresa 2026",
+  "paginas": [
+    {
+      "secciones": [
+        {
+          "titulo": "Presentación",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "titulo",
+                  "texto": "Informe anual 2026"
+                },
+                {
+                  "tipo": "subtitulo",
+                  "texto": "Resultados y evolución empresarial"
+                },
+                {
+                  "tipo": "encabezado",
+                  "texto": "Resumen ejecutivo",
+                  "nivel": 3
+                },
+                {
+                  "tipo": "parrafo",
+                  "texto": "El ejercicio 2026 muestra un crecimiento sostenido de la facturación y de la cartera de clientes."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "titulo": "Indicadores principales",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "kpi",
+                  "etiqueta": "Facturación anual",
+                  "valor": "150.000 €",
+                  "descripcion": "Ingresos totales"
+                },
+                {
+                  "tipo": "contador",
+                  "etiqueta": "Clientes activos",
+                  "valor": 125,
+                  "descripcion": "Número de clientes"
+                },
+                {
+                  "tipo": "porcentaje",
+                  "etiqueta": "Objetivos alcanzados",
+                  "valor": 78.5,
+                  "descripcion": "Cumplimiento del plan"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Datos de ventas",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "encabezado",
+                  "texto": "Ventas por trimestre"
+                },
+                {
+                  "tipo": "parrafo",
+                  "texto": "Tabla comparativa de ventas y clientes."
+                },
+                {
+                  "tipo": "tabla",
+                  "columnas": [
+                    "Trimestre",
+                    "Ventas",
+                    "Clientes"
+                  ],
+                  "filas": [
+                    [
+                      "T1",
+                      "25.000 €",
+                      20
+                    ],
+                    [
+                      "T2",
+                      "35.000 €",
+                      28
+                    ],
+                    [
+                      "T3",
+                      "40.000 €",
+                      35
+                    ],
+                    [
+                      "T4",
+                      "50.000 €",
+                      42
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Representaciones gráficas",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "barras",
+                  "titulo": "Ventas trimestrales (miles €)",
+                  "etiquetas": [
+                    "T1",
+                    "T2",
+                    "T3",
+                    "T4"
+                  ],
+                  "valores": [
+                    25,
+                    35,
+                    40,
+                    50
+                  ]
+                },
+                {
+                  "tipo": "lineas",
+                  "titulo": "Evolución de clientes",
+                  "etiquetas": [
+                    "T1",
+                    "T2",
+                    "T3",
+                    "T4"
+                  ],
+                  "valores": [
+                    20,
+                    28,
+                    35,
+                    42
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "secciones": [
+        {
+          "titulo": "Distribución de ingresos",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "circular",
+                  "titulo": "Ingresos por línea de negocio",
+                  "etiquetas": [
+                    "Desarrollo",
+                    "Consultoría",
+                    "Formación",
+                    "Soporte"
+                  ],
+                  "valores": [
+                    45,
+                    30,
+                    15,
+                    10
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "titulo": "Conclusiones",
+          "contenedores": [
+            {
+              "componentes": [
+                {
+                  "tipo": "parrafo",
+                  "texto": "Los resultados reflejan una evolución positiva y una distribución diversificada de los ingresos."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

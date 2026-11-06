@@ -1,0 +1,12 @@
+[
+  {
+    "modulo": "Interfaz de usuario",
+    "funcion": "Corrección de alineación visual",
+    "descripcion": "Ajusta la alineación visual entre la tarjeta seleccionada y el panel derecho, eliminando el espacio extra de fondo.",
+    "usuarios": "Todos los usuarios que interactúan con la interfaz de usuario",
+    "confianza": "verificada",
+    "evidencia": "La descripción del problema y la solución explican claramente la corrección realizada.",
+    "archivo": "README-FIX.md",
+    "fragmento": 1
+  }
+]

@@ -1,0 +1,30 @@
+/* JOCARSA — manual de identidad 2026.1, pp. 9–13. */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+:root{--marca:#4B0082;--acento:#FF7900;--tinta:#111111;--papel:#F7F5F2}
+body{font-family:Ubuntu,Arial,sans-serif;background:#eae7e3;color:var(--tinta);line-height:1.55}
+.documento-header{background:var(--marca);color:white;text-align:left;padding:26px 34px;margin-bottom:24px;border-bottom:7px solid var(--acento)}
+.documento-header h1{font-size:26px;font-weight:700;letter-spacing:-.035em}
+.pagina{background:var(--papel);box-shadow:0 2px 14px #16041e1c;padding:19mm 18mm 21mm;border-top:9px solid var(--marca)}
+.pagina::before{content:'JOCARSA  /  INFORMES';display:block;font-size:9px;letter-spacing:.20em;font-weight:700;color:var(--marca);margin:0 0 24px}
+.seccion{margin-bottom:26px}.seccion-titulo{color:var(--marca);border:0;border-left:6px solid var(--acento);padding:4px 0 4px 14px;margin-bottom:18px;font-size:20px}
+.componente-titulo{color:var(--tinta);font-weight:700;letter-spacing:-.035em;font-size:31px}
+.componente-subtitulo{color:var(--marca);font-size:19px}.componente-encabezado{color:var(--marca)}
+.componente-parrafo{color:#29262a;line-height:1.72;text-align:left}
+.tabla-simple{font-size:12px;border-collapse:collapse}
+.tabla-simple thead,.tabla-simple thead tr,.tabla-simple thead th,.tabla-avanzada th{background:var(--marca)!important;color:white!important}
+.tabla-simple th{padding:11px 12px}.tabla-simple td{padding:10px 12px;border-bottom:1px solid #d7d1db}
+.tabla-simple tbody tr:nth-child(even){background:#eee9f0}.tabla-simple tbody tr:hover{background:#e9dcef}
+.tabla-simple tfoot td,.tabla-simple tfoot th{border-top:2px solid var(--acento)}
+.tabla-fila-total{background:#f6e6d5!important}.tabla-numero{color:var(--marca);background:#ede7f1}
+.grafica{border:1px solid #d7ccdf;border-radius:0;background:white;padding:18px;border-top:4px solid var(--marca)}
+.grafica-titulo{color:var(--marca)}
+.indicador{border:1px solid #d7ccdf;border-left:5px solid var(--marca);border-radius:0;background:white}
+.indicador-valor{color:var(--marca)}.indicador-etiqueta{color:#51445b}.indicador-descripcion{color:#655b69}
+.kpi{border-left-color:var(--acento)}.kpi .indicador-valor{color:var(--marca)}
+.contador{border-left-color:var(--marca)}.contador .indicador-valor{color:var(--marca)}
+.porcentaje{border-left-color:var(--acento)}.porcentaje .indicador-valor{color:var(--marca)}
+.porcentaje-progreso{background:var(--acento)}.porcentaje-barra{background:#e8dfee}
+.texto-cita{border-left-color:var(--acento);background:#f2edf5}.texto-nota{border-left-color:var(--acento);background:#fff0e2}
+.texto-etiqueta,.tabla-grupo{color:var(--marca)}.numero-pagina{color:var(--marca)}
+.informe-imagen figcaption{color:#655b69}
+@media print{body{background:white}.pagina{box-shadow:none;border-top:7px solid var(--marca)}.documento-header{display:none}}

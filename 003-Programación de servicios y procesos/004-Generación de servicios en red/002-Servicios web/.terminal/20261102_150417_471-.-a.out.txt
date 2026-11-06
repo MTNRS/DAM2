@@ -1,0 +1,14 @@
+Datetime: 2026-11-02T14:04:17.471Z
+Working directory: /var/www/html/tame2627dam2/003-Programación de servicios y procesos/004-Generación de servicios en red/002-Servicios web
+Command: ./a.out
+
+Result:
+Servidor iniciado en http://localhost:8000
+Peticion: GET /
+Peticion: GET /favicon.ico
+Peticion: GET /
+Peticion: GET /favicon.ico
+Peticion:  
+^C
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/003-Programación de
+ servicios y procesos/004-Generación de servicios en red/002-Servicios web$ 

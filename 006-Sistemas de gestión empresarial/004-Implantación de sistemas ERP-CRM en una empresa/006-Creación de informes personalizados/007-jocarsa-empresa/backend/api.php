@@ -1,0 +1,87 @@
+<?php
+header('Content-Type: application/json; charset=utf-8');header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');require_once __DIR__.'/auth_common.php';
+function etiquetaForanea($r,$key){$pref=['nombre','razon_social','descripcion','titulo','codigo','username','email','numero','referencia'];$p=[];foreach($pref as $c)if(isset($r[$c])&&trim((string)$r[$c])!==''){$p[]=trim((string)$r[$c]);if(count($p)>=2)break;}if(!$p)foreach($r as $c=>$v){if($c===$key||$c==='Identificador'||$v===null||trim((string)$v)==='')continue;$p[]=trim((string)$v);if(count($p)>=2)break;}$k=$r[$key]??'';return ($p?implode(' · ',$p):(string)$k).' [#'.$k.']';}
+function enrich($db,$t,$rows){$fks=$db->foreignKeys($t);foreach($rows as &$r)foreach($fks as $c=>$fk){$id=$r[$c]??null;if($id===null||$id==='')continue;$x=$db->find($fk['tabla'],$id);if($x)$r['__fk__'.$c]=etiquetaForanea($x,$fk['campo']);}return $rows;}
+
+function erpConfig($db,$t){if(!$db->tableExists('crimson_ui_config'))return [];foreach($db->rows('crimson_ui_config') as $r)if(($r['entidad']??'')===$t&&($r['tipo']??'')==='config')return json_decode($r['contenido']??'{}',true)?:[];return [];}
+function erpFields($cfg){return array_values(array_filter($cfg['customFields']??[],fn($f)=>isset($f['name'])&&preg_match('/^[a-zA-Z_][a-zA-Z0-9_]*$/D',$f['name'])));}
+function erpValues($db,$t,$rows){$cfg=erpConfig($db,$t);$fields=erpFields($cfg);if(!$fields||!$db->tableExists('crimson_ui_values'))return $rows;$map=[];foreach($db->rows('crimson_ui_values') as $v)if(($v['entidad']??'')===$t)$map[(string)$v['registro']][$v['campo']]=$v['valor'];foreach($rows as &$row)foreach($fields as $f)$row[$f['name']]=$map[(string)$row['Identificador']][$f['name']]??null;return $rows;}
+function erpStoreValues($db,$t,$id,$data,$cfg){$fields=erpFields($cfg);if(!$fields)return;$changes=[];foreach($fields as $f){$name=$f['name'];if(array_key_exists($name,$data)){$value=$data[$name];if(is_array($value)||is_object($value))throw new Exception('Valor de campo inválido');if(!empty($f['required'])&&($value===null||$value===''))throw new Exception('Campo obligatorio: '.$name);if(($f['type']??'')==='number'&&$value!==''&&!is_numeric($value))throw new Exception('Número inválido: '.$name);if(($f['type']??'')==='select'&&$value!==''&&!in_array((string)$value,array_map('trim',explode(',',(string)($f['options']??''))),true))throw new Exception('Opción inválida: '.$name);$changes[$name]=is_bool($value)?($value?'1':'0'):(string)($value??'');}}if(!$changes)return;if(!$db->tableExists('crimson_ui_values'))$db->createTable('crimson_ui_values',[['name'=>'entidad','type'=>'TEXT'],['name'=>'registro','type'=>'TEXT'],['name'=>'campo','type'=>'TEXT'],['name'=>'valor','type'=>'TEXT']]);$existing=[];foreach($db->rows('crimson_ui_values') as $r)if(($r['entidad']??'')===$t&&(string)($r['registro']??'')===(string)$id)$existing[$r['campo']]=$r;foreach($changes as $k=>$v){if(isset($existing[$k]))$db->update('crimson_ui_values',$existing[$k]['Identificador'],['valor'=>$v]);else $db->insert('crimson_ui_values',['entidad'=>$t,'registro'=>(string)$id,'campo'=>$k,'valor'=>$v]);}}
+function erpValidateWorkflow($db,$t,$old,$data,$cfg,$user){$wf=$cfg['workflow']??[];$field=$wf['field']??'';if(!$field||!array_key_exists($field,$data))return;$new=(string)$data[$field];$states=$wf['states']??[];if($states&&!in_array($new,$states,true))throw new Exception('Estado no permitido');$previous=(string)($old[$field]??'');if($old!==null&&$new!==$previous){$allowed=false;foreach($wf['transitions']??[] as $tr)if(($tr['from']??'')===$previous&&($tr['to']??'')===$new&&(!($tr['role']??'')||($tr['role']===$user['rol'])))$allowed=true;if(!$allowed)throw new Exception('Transición de estado no permitida: '.$previous.' → '.$new);}}
+
+try{$b=$_GET['bloque']??'';if($b==='estado'){echo json_encode(['instalado'=>JocarsaDB::installed()],JSON_UNESCAPED_UNICODE);exit;}$u=requireLogin(true);$db=crimsonDb();
+ switch($b){
+ case 'ui_config_get':
+  $t=(string)($_GET['tabla']??'');
+  if(!preg_match('/^[a-zA-Z0-9_\-]{1,120}$/D',$t)||!$db->tableExists($t)||!permissionForTable($u,$t,'seleccionar')){http_response_code(403);throw new Exception('Entidad no autorizada');}
+  if(!$db->tableExists('crimson_ui_config')){echo json_encode(['config'=>null,'views'=>[]],JSON_UNESCAPED_UNICODE);break;}
+  $all=$db->rows('crimson_ui_config');$result=['config'=>null,'views'=>[]];
+  foreach($all as $entry){if(($entry['entidad']??'')!==$t)continue;$kind=$entry['tipo']??'';if($kind!=='config'&&$kind!=='views')continue;$decoded=json_decode($entry['contenido']??'',true);if(is_array($decoded))$result[$kind]=$decoded;}
+  echo json_encode($result,JSON_UNESCAPED_UNICODE);break;
+ case 'ui_config_save':
+  if($_SERVER['REQUEST_METHOD']!=='POST'){http_response_code(405);throw new Exception('POST requerido');}
+  if(($u['rol']??'')!=='admin'){http_response_code(403);throw new Exception('Solo un administrador puede modificar configuraciones globales');}
+  $d=json_decode(file_get_contents('php://input'),true);
+  $t=(string)($d['tabla']??'');$kind=(string)($d['tipo']??'');$value=$d['valor']??null;
+  if(!preg_match('/^[a-zA-Z0-9_\-]{1,120}$/D',$t)||!$db->tableExists($t)||!permissionForTable($u,$t,'seleccionar')){http_response_code(403);throw new Exception('Entidad no autorizada');}
+  if(!in_array($kind,['config','views'],true)||!is_array($value)){http_response_code(400);throw new Exception('Configuración inválida');}
+  if($kind==='views'&&count($value)>100){http_response_code(400);throw new Exception('Demasiadas vistas');}
+  if($kind==='config'){foreach(erpFields($value) as $f)if(in_array($f['name'],array_column($db->schema($t),'name'),true))throw new Exception('El campo personalizado ya existe en la tabla: '.$f['name']);} $json=json_encode($value,JSON_UNESCAPED_UNICODE|JSON_THROW_ON_ERROR);
+  if(strlen($json)>100000){http_response_code(413);throw new Exception('Configuración demasiado grande');}
+  if(!$db->tableExists('crimson_ui_config'))$db->createTable('crimson_ui_config',[['name'=>'entidad','type'=>'TEXT'],['name'=>'tipo','type'=>'TEXT'],['name'=>'contenido','type'=>'TEXT']]);
+  $existing=null;foreach($db->rows('crimson_ui_config') as $entry)if(($entry['entidad']??'')===$t&&($entry['tipo']??'')===$kind){$existing=$entry;break;}
+  if($existing)$db->update('crimson_ui_config',$existing['Identificador'],['contenido'=>$json]);
+  else $db->insert('crimson_ui_config',['entidad'=>$t,'tipo'=>$kind,'contenido'=>$json]);
+  echo json_encode(['ok'=>true],JSON_UNESCAPED_UNICODE);break;
+ case 'erp_settings_get':
+  $settings=['themeColor'=>'#8b4513','rowsPerPage'=>25];
+  if($db->tableExists('crimson_ui_config'))foreach($db->rows('crimson_ui_config') as $entry){
+   if(($entry['entidad']??'')==='__erp_global__'&&($entry['tipo']??'')==='settings'){
+    $stored=json_decode((string)($entry['contenido']??''),true);
+    if(is_array($stored))$settings=array_merge($settings,$stored);
+    break;
+   }
+  }
+  echo json_encode(['settings'=>$settings,'canEdit'=>($u['rol']??'')==='admin'],JSON_UNESCAPED_UNICODE);break;
+ case 'erp_settings_save':
+  if($_SERVER['REQUEST_METHOD']!=='POST'){http_response_code(405);throw new Exception('POST requerido');}
+  if(($u['rol']??'')!=='admin'){http_response_code(403);throw new Exception('Solo el administrador puede cambiar los ajustes');}
+  $data=json_decode(file_get_contents('php://input'),true);
+  if(!is_array($data))throw new Exception('Datos inválidos');
+  $color=strtolower((string)($data['themeColor']??''));
+  $perPage=filter_var($data['rowsPerPage']??null,FILTER_VALIDATE_INT);
+  if(!preg_match('/^#[0-9a-f]{6}$/D',$color)||$perPage===false||$perPage<5||$perPage>500){http_response_code(400);throw new Exception('Color o tamaño de página inválidos');}
+  $json=json_encode(['themeColor'=>$color,'rowsPerPage'=>$perPage],JSON_UNESCAPED_UNICODE|JSON_THROW_ON_ERROR);
+  if(!$db->tableExists('crimson_ui_config'))$db->createTable('crimson_ui_config',[['name'=>'entidad','type'=>'TEXT'],['name'=>'tipo','type'=>'TEXT'],['name'=>'contenido','type'=>'TEXT']]);
+  $existing=null;foreach($db->rows('crimson_ui_config') as $entry)if(($entry['entidad']??'')==='__erp_global__'&&($entry['tipo']??'')==='settings'){$existing=$entry;break;}
+  if($existing)$db->update('crimson_ui_config',$existing['Identificador'],['contenido'=>$json]);
+  else $db->insert('crimson_ui_config',['entidad'=>'__erp_global__','tipo'=>'settings','contenido'=>$json]);
+  echo json_encode(['ok'=>true,'settings'=>json_decode($json,true)],JSON_UNESCAPED_UNICODE);break;
+ case 'modulos':echo json_encode(userModules($u),JSON_UNESCAPED_UNICODE);break;
+ case 'menu':$m=$_GET['modulo']??'';$cfg=moduleConfig($m);if(!$cfg)throw new Exception('Módulo no válido');if($u['rol']!=='admin'&&!in_array($m,array_column(userModules($u),'modulo'),true)){http_response_code(403);throw new Exception('No tienes acceso a este módulo');}$tables=[];foreach($cfg['tablas']??[] as $t)if($db->tableExists($t))$tables[]=$t;echo json_encode($tables,JSON_UNESCAPED_UNICODE);break;
+ case 'tabla':$t=$_GET['tabla']??'';if(!permissionForTable($u,$t,'seleccionar')){http_response_code(403);throw new Exception('Sin permiso de lectura');}echo json_encode(['tabla'=>$t,'estructura'=>array_merge($db->schema($t),array_map(fn($f)=>['name'=>$f['name'],'type'=>$f['type']??'text','custom'=>true],erpFields(erpConfig($db,$t)))),'contenido'=>erpValues($db,$t,enrich($db,$t,$db->rows($t))),'permisos'=>['seleccionar'=>permissionForTable($u,$t,'seleccionar'),'insertar'=>permissionForTable($u,$t,'insertar'),'actualizar'=>permissionForTable($u,$t,'actualizar'),'eliminar'=>permissionForTable($u,$t,'eliminar')]],JSON_UNESCAPED_UNICODE);break;
+ case 'tabla_filtrar':
+  $t=(string)($_GET['tabla']??'');
+  if(!permissionForTable($u,$t,'seleccionar')){http_response_code(403);throw new Exception('Sin permiso de lectura');}
+  $raw=(string)($_GET['filtros']??'{}');
+  if(strlen($raw)>12000)throw new Exception('Filtros demasiado extensos');
+  $filters=json_decode($raw,true);
+  if(!is_array($filters))throw new Exception('Filtros inválidos');
+  $schema=array_merge($db->schema($t),array_map(fn($f)=>['name'=>$f['name']],erpFields(erpConfig($db,$t))));
+  $allowed=array_column($schema,'name');
+  if(count($filters)>count($allowed))throw new Exception('Demasiados filtros');
+  $rows=erpValues($db,$t,enrich($db,$t,$db->rows($t)));
+  foreach($filters as $field=>$needle){
+   if(!in_array($field,$allowed,true)||!is_scalar($needle))throw new Exception('Filtro inválido');
+   $needle=mb_strtolower(trim((string)$needle));if($needle==='')continue;
+   $rows=array_values(array_filter($rows,fn($r)=>str_contains(mb_strtolower((string)($r['__fk__'.$field]??$r[$field]??'')),$needle)));
+  }
+  echo json_encode(['contenido'=>$rows,'total'=>count($rows)],JSON_UNESCAPED_UNICODE);break;
+ case 'fk_opciones':$t=$_GET['tabla']??'';$c=$_GET['campo']??'';$fks=$db->foreignKeys($t);if(!isset($fks[$c]))throw new Exception("El campo '$c' no es una clave foránea");$fk=$fks[$c];$opts=[];foreach($db->rows($fk['tabla']) as $r)$opts[]=['id'=>$r[$fk['campo']],'texto'=>etiquetaForanea($r,$fk['campo'])];echo json_encode(['tabla_origen'=>$t,'campo_origen'=>$c,'tabla_destino'=>$fk['tabla'],'campo_destino'=>$fk['campo'],'opciones'=>$opts],JSON_UNESCAPED_UNICODE);break;
+ case 'opciones':$t=$_GET['tabla']??'';if(!permissionForTable($u,$t,'seleccionar'))throw new Exception('Sin permiso de lectura');echo json_encode(['tabla'=>$t,'estructura'=>$db->schema($t),'contenido'=>$db->rows($t)],JSON_UNESCAPED_UNICODE);break;
+ case 'registro':$t=$_GET['tabla']??'';$id=(int)($_GET['id']??0);if(!permissionForTable($u,$t,'seleccionar'))throw new Exception('Sin permiso de lectura');$r=$db->find($t,$id);if(!$r)throw new Exception('El registro no existe');echo json_encode(['tabla'=>$t,'estructura'=>$db->schema($t),'registro'=>$r],JSON_UNESCAPED_UNICODE);break;
+ case 'insertar':if($_SERVER['REQUEST_METHOD']!=='POST')throw new Exception('La operación insertar requiere POST');$d=json_decode(file_get_contents('php://input'),true)?:[];$t=$d['tabla']??'';if(!permissionForTable($u,$t,'insertar'))throw new Exception('Sin permiso para insertar');$allowed=array_column($db->schema($t),'name');$x=[];foreach($d as $k=>$v)if($k!=='tabla'&&$k!=='Identificador'&&in_array($k,$allowed,true))$x[$k]=$v; $cfg=erpConfig($db,$t);erpValidateWorkflow($db,$t,null,$d,$cfg,$u);$id=$db->insert($t,$x);erpStoreValues($db,$t,$id,$d,$cfg);echo json_encode(['ok'=>true,'Identificador'=>$id],JSON_UNESCAPED_UNICODE);break;
+ case 'actualizar':if($_SERVER['REQUEST_METHOD']!=='POST')throw new Exception('La operación actualizar requiere POST');$d=json_decode(file_get_contents('php://input'),true)?:[];$t=$d['tabla']??'';$id=(int)($d['Identificador']??0);if(!$id)throw new Exception('No se ha indicado Identificador');if(!permissionForTable($u,$t,'actualizar'))throw new Exception('Sin permiso para actualizar');$allowed=array_column($db->schema($t),'name');$x=[];foreach($d as $k=>$v)if($k!=='tabla'&&$k!=='Identificador'&&in_array($k,$allowed,true))$x[$k]=$v; $cfg=erpConfig($db,$t);$old=$db->find($t,$id);if(!$old)throw new Exception('Registro inexistente');$old=erpValues($db,$t,[$old])[0];erpValidateWorkflow($db,$t,$old,$d,$cfg,$u);if(!$x&&!array_intersect(array_keys($d),array_column(erpFields($cfg),'name')))throw new Exception('No hay campos para actualizar');if($x)$db->update($t,$id,$x);erpStoreValues($db,$t,$id,$d,$cfg);echo json_encode(['ok'=>true],JSON_UNESCAPED_UNICODE);break;
+ case 'eliminar':if($_SERVER['REQUEST_METHOD']!=='POST')throw new Exception('La operación eliminar requiere POST');$d=json_decode(file_get_contents('php://input'),true)?:[];$t=$d['tabla']??'';$id=(int)($d['Identificador']??0);if(!permissionForTable($u,$t,'eliminar'))throw new Exception('Sin permiso para eliminar');if($db->tableExists('crimson_ui_values'))foreach($db->rows('crimson_ui_values') as $v)if(($v['entidad']??'')===$t&&(string)($v['registro']??'')===(string)$id)$db->delete('crimson_ui_values',$v['Identificador']);$db->delete($t,$id);echo json_encode(['ok'=>true],JSON_UNESCAPED_UNICODE);break;
+ default:http_response_code(400);echo json_encode(['error'=>'Bloque no válido'],JSON_UNESCAPED_UNICODE);
+ }}catch(Throwable $e){if(http_response_code()<400)http_response_code(500);echo json_encode(['error'=>'Se ha producido un error','debug'=>$e->getMessage()],JSON_UNESCAPED_UNICODE);}

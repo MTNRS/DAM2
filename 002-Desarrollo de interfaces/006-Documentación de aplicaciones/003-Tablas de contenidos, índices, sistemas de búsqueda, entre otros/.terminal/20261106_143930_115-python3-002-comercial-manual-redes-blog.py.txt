@@ -1,0 +1,92 @@
+Datetime: 2026-11-06T13:39:30.115Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/003-Tablas de contenidos, índices, sistemas de búsqueda, entre otros
+Command: python3 002-comercial\ manual\ redes\ blog.py
+
+Result:
+
+======================================================================
+PROYECTO 1/1: /var/www/html/jocarsa-dictado
+======================================================================
+Proyecto: jocarsa-dictado | archivos: 10 | fragmentos: 15
+[1/15] README-v10.md (1/1)
+[2/15] README-v11.md (1/1)
+[3/15] README-v9.md (1/1)
+[4/15] README.md (1/1)
+[5/15] app.py (1/3)
+[6/15] app.py (2/3)
+[7/15] app.py (3/3)
+[8/15] requirements.txt (1/1)
+[9/15] seed_demo.py (1/2)
+[10/15] seed_demo.py (2/2)
+[11/15] static/app.js (1/2)
+[12/15] static/app.js (2/2)
+[13/15] static/style.css (1/2)
+[14/15] static/style.css (2/2)
+[15/15] templates/index.html (1/1)
+[Módulo 1/49] Actualización sin pérdida de datos
+[Módulo 2/49] Base de datos
+[Módulo 3/49] Base de datos SQLite
+[Módulo 4/49] Buscador
+[Módulo 5/49] Búsqueda de contenido
+[Módulo 6/49] Chat
+[Módulo 7/49] Compartir contenido
+[Módulo 8/49] Correo
+[Módulo 9/49] Diagnóstico
+[Módulo 10/49] Diseño de interfaz
+[Módulo 11/49] Edición de texto
+[Módulo 12/49] Editor de dictado
+[Módulo 13/49] Estado del sistema
+[Módulo 14/49] Estructura del editor
+[Módulo 15/49] Flask
+[Módulo 16/49] Formateo de texto
+[Módulo 17/49] Formato de texto
+[Módulo 18/49] Gestión de mensajes
+[Módulo 19/49] Grabación de audio
+[Módulo 20/49] Incorporación de ejemplos
+[Módulo 21/49] Indicadores de procesamiento
+[Módulo 22/49] Instalación
+[Módulo 23/49] Instalación nueva
+[Módulo 24/49] Integración de Ollama
+[Módulo 25/49] Integración de Whisper
+[Módulo 26/49] Interfaz de usuario
+[Módulo 27/49] Logo y favicon
+[Módulo 28/49] Mensajes demostrativos
+[Módulo 29/49] Modelo de procesamiento
+[Módulo 30/49] Paleta de colores
+[Módulo 31/49] Panel de administración
+[Módulo 32/49] Panel de administrador
+[Módulo 33/49] Procesamiento
+[Módulo 34/49] Proyecto completo
+[Módulo 35/49] Recarga de la interfaz
+[Módulo 36/49] Reproducción de audio
+[Módulo 37/49] Reproductor
+[Módulo 38/49] Reproductor de audio
+[Módulo 39/49] Resumen
+[Módulo 40/49] Tarjeta de transcripción
+[Módulo 41/49] Tarjeta final
+[Módulo 42/49] Transcripción
+[Módulo 43/49] Transcripción de audio
+[Módulo 44/49] Visualización de audio
+[Módulo 45/49] app.py
+    Error intento 1/3: Salida truncada por límite de tokens
+[Módulo 46/49] app.py
+[Módulo 47/49] faster-whisper
+[Módulo 48/49] mensajes
+[Módulo 49/49] requests
+[Comercial] Presentación del producto
+[Comercial] Problemas que resuelve
+[Comercial] Beneficios para las empresas
+[Comercial] Perfiles de usuario y escenarios de uso
+[Comercial] Valor diferencial y conclusión
+[Publicación] redes
+[Publicación] blog
+DOCUMENTO: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/003-Tablas de contenidos, índices, sistemas de búsqueda, entre otros/doc/comercial/jocarsa | dictado.md
+DOCUMENTO: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/003-Tablas de contenidos, índices, sistemas de búsqueda, entre otros/doc/manual/jocarsa | dictado.md
+DOCUMENTO: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/003-Tablas de contenidos, índices, sistemas de búsqueda, entre otros/doc/redes/jocarsa | dictado.md
+DOCUMENTO: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/003-Tablas de contenidos, índices, sistemas de búsqueda, entre otros/doc/blog/jocarsa | dictado.md
+CATÁLOGO: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/003-Tablas de contenidos, índices, sistemas de búsqueda, entre otros/.comercial_ollama/jocarsa-dictado-f90cfbbb/catalogo_funcional.json
+ERRORES: 0
+
+FIN: 4 documentos generados; 0 proyectos fallidos.
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarr
+ollo de interfaces/006-Documentación de aplicaciones/003-Tablas de contenidos, índices, sistemas de búsqueda, entre otros$ 

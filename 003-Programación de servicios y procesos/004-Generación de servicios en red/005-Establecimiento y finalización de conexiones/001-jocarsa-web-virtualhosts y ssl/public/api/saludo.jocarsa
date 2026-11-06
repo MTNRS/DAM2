@@ -1,0 +1,2 @@
+nombre = peticion_get("nombre")
+escribir("Hola " + nombre)

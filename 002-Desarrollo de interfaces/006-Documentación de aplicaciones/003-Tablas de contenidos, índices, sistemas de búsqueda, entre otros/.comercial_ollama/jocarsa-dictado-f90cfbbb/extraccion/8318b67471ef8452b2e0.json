@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de mensajes",
+    "descripcion": "Permite almacenar mensajes en una base de datos SQLite con múltiples campos como título, contenido original y formateado.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "CREATE TABLE IF NOT EXISTS mensajes",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "gestión de columnas dinámica",
+    "descripcion": "Añade nuevas columnas a la tabla de mensajes si no existen, manteniendo la integridad de los datos.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "ALTER TABLE mensajes ADD COLUMN",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "inserción de ejemplos",
+    "descripcion": "Inserta una serie de ejemplos de mensajes en la base de datos, incluyendo diferentes tipos como email y WhatsApp.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "EXAMPLES = [('Planificación de la evaluación inicial', 'email', ...), ...]",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "soporte para múltiples canales",
+    "descripcion": "Permite almacenar mensajes de diferentes canales como email, WhatsApp y social media.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "c.execute(\"CREATE TABLE IF NOT EXISTS mensajes (...)\")",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "gestión de estados",
+    "descripcion": "Permite gestionar diferentes estados de los mensajes, como 'borrador' y otros posibles estados.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "estado TEXT NOT NULL DEFAULT 'borrador'",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "soporte para múltiples idiomas",
+    "descripcion": "Permite almacenar mensajes en diferentes idiomas, con un campo específico para el idioma de salida.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "idioma_salida TEXT NOT NULL DEFAULT 'es'",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de emociones",
+    "descripcion": "Permite almacenar información sobre las emociones asociadas a los mensajes en formato JSON.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "emociones_json TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de tipo de texto",
+    "descripcion": "Permite almacenar el tipo de texto del mensaje, como 'email', 'whatsapp' o 'social'.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "tipo_texto TEXT NOT NULL DEFAULT 'email'",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de dictado",
+    "descripcion": "Permite almacenar el texto dictado en un campo específico.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "dictado TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "gestión de fechas",
+    "descripcion": "Permite almacenar y gestionar las fechas de creación y actualización de los mensajes.",
+    "usuarios": "administradores",
+    "confianza": "verificada",
+    "evidencia": "created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de asunto",
+    "descripcion": "Permite almacenar el asunto del mensaje en un campo específico.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "asunto TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  },
+  {
+    "modulo": "mensajes",
+    "funcion": "almacenamiento de contenido formateado",
+    "descripcion": "Permite almacenar el contenido del mensaje en formato original y formateado.",
+    "usuarios": "administradores, usuarios finales",
+    "confianza": "verificada",
+    "evidencia": "original TEXT NOT NULL DEFAULT '', formateado TEXT NOT NULL DEFAULT ''",
+    "archivo": "seed_demo.py",
+    "fragmento": 1
+  }
+]

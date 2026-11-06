@@ -1,0 +1,2 @@
+nombre = peticion_post("nombre")
+escribir("Recibido: " + nombre)

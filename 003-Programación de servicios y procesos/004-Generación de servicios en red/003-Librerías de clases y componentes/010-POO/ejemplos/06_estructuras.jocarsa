@@ -1,0 +1,30 @@
+# Fase 6: colecciones
+numeros = [10, 20, 30]
+escribir(numeros)
+escribir(numeros[0])
+numeros[1] = 25
+escribir(numeros)
+escribir(longitud(numeros))
+coordenadas = (10, 20, 30)
+escribir(coordenadas)
+escribir(coordenadas[2])
+persona = {"nombre": "Jose Vicente", "edad": 48}
+escribir(persona["nombre"])
+persona["edad"] = 49
+persona["ciudad"] = "Valencia"
+escribir(persona)
+escribir(claves(persona))
+escribir(valores(persona))
+unicos = conjunto([1, 2, 2, 3])
+escribir(unicos)
+escribir(longitud(unicos))
+anidados = [{"nombre": "Ana"}, {"nombre": "Luis"}]
+escribir(anidados[0]["nombre"])
+numeros.agregar(50)
+numeros.eliminar(10)
+escribir(numeros)
+unicos.agregar(5)
+unicos.eliminar(2)
+escribir(unicos)
+persona.eliminar("edad")
+escribir(persona)

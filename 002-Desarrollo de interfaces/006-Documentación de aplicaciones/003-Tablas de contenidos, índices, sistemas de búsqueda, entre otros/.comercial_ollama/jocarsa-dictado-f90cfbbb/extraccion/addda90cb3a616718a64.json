@@ -1,0 +1,122 @@
+[
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Grabación de audio",
+    "descripcion": "Permite al usuario grabar su voz.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botonvoz",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Transcripción automática",
+    "descripcion": "Transcribe el audio grabado utilizando Whisper local.",
+    "usuarios": "Usuario final",
+    "confianza": "inferida",
+    "evidencia": "Whisper large-v3 local",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Formateo de texto",
+    "descripcion": "Transforma la transcripción en un mensaje listo para enviar utilizando Ollama.",
+    "usuarios": "Usuario final",
+    "confianza": "inferida",
+    "evidencia": "Ollama",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Edición de transcripción",
+    "descripcion": "Permite al usuario revisar y corregir la transcripción antes de su formateo.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "textarea id=\"entrada\"",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Guardado de mensajes",
+    "descripcion": "Permite al usuario guardar el mensaje final.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botonguardar",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Eliminación de mensajes",
+    "descripcion": "Permite al usuario eliminar el mensaje actual.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botoneliminar",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Visualización de mensajes guardados",
+    "descripcion": "Muestra una lista de todos los mensajes guardados.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "admin-table",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Creación de nuevos mensajes",
+    "descripcion": "Permite al administrador crear un nuevo mensaje.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "admin-new",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Eliminación de mensajes guardados",
+    "descripcion": "Permite al administrador eliminar un mensaje guardado.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "data-admin-delete",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Panel de administrador",
+    "funcion": "Abrir mensajes guardados",
+    "descripcion": "Permite al administrador abrir un mensaje guardado para su revisión.",
+    "usuarios": "Administrador",
+    "confianza": "verificada",
+    "evidencia": "data-admin-open",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Editor de dictado",
+    "funcion": "Envío de mensajes",
+    "descripcion": "Permite al usuario enviar el mensaje final a través de correo o documentos.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "botonenviarcorreo, botonenviardocumentos",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  },
+  {
+    "modulo": "Buscador",
+    "funcion": "Búsqueda de mensajes guardados",
+    "descripcion": "Permite al usuario buscar entre los mensajes guardados.",
+    "usuarios": "Usuario final",
+    "confianza": "verificada",
+    "evidencia": "search-input, search-button",
+    "archivo": "templates/index.html",
+    "fragmento": 1
+  }
+]

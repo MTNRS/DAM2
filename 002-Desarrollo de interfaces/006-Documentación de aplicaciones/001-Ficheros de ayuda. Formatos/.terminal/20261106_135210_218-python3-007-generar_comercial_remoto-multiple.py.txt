@@ -1,0 +1,78 @@
+Datetime: 2026-11-06T12:52:10.218Z
+Working directory: /var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos
+Command: python3 007-generar_comercial_remoto\ multiple.py
+
+Result:
+
+======================================================================
+PROYECTO 1/2: /var/www/html/jocarsa-alumnos
+======================================================================
+Proyecto: jocarsa-alumnos | archivos: 14 | fragmentos: 58
+Analista: qwen2.5-coder:14b | Redactor: qwen2.5:14b-instruct
+[1/58] README.md (1/1)
+    12 funcionalidades
+[2/58] api.php (1/5)
+    10 funcionalidades
+[3/58] api.php (2/5)
+    12 funcionalidades
+[4/58] api.php (3/5)
+    11 funcionalidades
+[5/58] api.php (4/5)
+    12 funcionalidades
+[6/58] api.php (5/5)
+^CTraceback (most recent call last):
+  File "/var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos/007-generar_comercial_remoto multiple.py", line 413, in <module>
+    main()
+  File "/var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos/007-generar_comercial_remoto multiple.py", line 401, in main
+    procesar_proyecto(args, raiz, ollama)
+  File "/var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos/007-generar_comercial_remoto multiple.py", line 297, in procesar_proyecto
+    datos = extraer(ollama,args.modelo_analista,nombre,bloque,i,total,args.trabajo,args.rehacer_extraccion)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos/007-generar_comercial_remoto multiple.py", line 202, in extraer
+    respuesta = ollama.generar(modelo, instrucciones, salida_tokens=1600, json_mode=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/www/html/tame2627dam2/002-Desarrollo de interfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos/007-generar_comercial_remoto multiple.py", line 150, in generar
+    respuesta = self.session.post(self.url, json=payload, timeout=(15, self.timeout))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/sessions.py", line 637, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 791, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 461, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+josevicente@josevicenteportatil:/var/www/html/tame2627dam2/002-Desarrollo de i
+nterfaces/006-Documentación de aplicaciones/001-Ficheros de ayuda. Formatos$ 

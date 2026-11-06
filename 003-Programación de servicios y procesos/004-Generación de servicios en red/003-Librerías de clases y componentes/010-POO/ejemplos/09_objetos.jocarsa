@@ -1,0 +1,23 @@
+clase Persona:
+    funcion iniciar(yo, nombre, edad = 0):
+        yo.nombre = nombre
+        yo.edad = edad
+
+    funcion saludar(yo):
+        retornar "Hola " + yo.nombre
+
+    funcion cumplir(yo):
+        yo.edad = yo.edad + 1
+
+clase Alumno(Persona):
+    funcion presentacion(yo):
+        retornar yo.saludar()
+
+p = Persona("Ana", 25)
+escribir(p.nombre)
+escribir(p.saludar())
+p.cumplir()
+escribir(p.edad)
+a = Alumno("Luis", 20)
+escribir(a.nombre)
+escribir(a.saludar())

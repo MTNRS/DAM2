@@ -1,0 +1,12 @@
+# Comentario de una linea
+escribir("Hola mundo") # Comentario al final de una instruccion
+
+/* Comentario multilinea
+   que ocupa varias lineas
+   y no se ejecuta. */
+escribir("Segundo mensaje")
+
+escribir("/* esto es texto, no comentario */")
+
+/* Comentario intercalado */ escribir(10 + 20)
+escribir(40 /* comentario en expresion */ + 2)

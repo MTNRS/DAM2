@@ -1,0 +1,11 @@
+# jocarsa | lenguaje - salidas
+escribir("Hola mundo")
+escribir("Bienvenido a jocarsa | lenguaje")
+numero = 42
+escribir(numero)
+resultado = 10 + 20
+escribir(resultado)
+nombre = "Jose Vicente"
+escribir("Hola " + nombre)
+escribir(10 > 5)
+escribir(10 < 5)
